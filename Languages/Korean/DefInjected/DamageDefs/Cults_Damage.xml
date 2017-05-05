@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <Cults_Psionic.label>정신 공격</Cults_Psionic.label>
+    <Cults_Psionic.deathMessage>{0}(은)는 뇌가 버티질 못하고 사망했습니다.</Cults_Psionic.deathMessage>
+
+</LanguageData>

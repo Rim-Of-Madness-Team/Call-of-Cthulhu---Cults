@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+
+  <!--=============================== Tier 4: Hi-tech research bench with multi-analyzer ===================================-->
+
+  <ResearchProjectDef Name="ForbiddenKnowledgeResearch" Abstract="True">
+    <requiredResearchBuilding>ForbiddenKnowledgeCenter</requiredResearchBuilding>
+	<techLevel>Neolithic</techLevel>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+    <defName>Forbidden_Studies</defName>
+    <label>[Occult] Decipher strange symbols</label>
+    <description>Deciphers some of the materials language to make further research possible.</description>
+    <baseCost>50</baseCost>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+    <defName>Forbidden_Deities</defName>
+    <label>[Occult] Probe occult deities</label>
+    <description>Repeatable research to discover occult deities to worship.</description>
+    <baseCost>30</baseCost>
+	<prerequisites>
+	<li>Forbidden_Studies</li>
+	</prerequisites>
+  </ResearchProjectDef>  
+  
+  <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+    <defName>Forbidden_Lore</defName>
+    <label>[Occult] Study successful cults</label>
+    <description>Repeatable research to improve the researcher's cult mindedness and social skills during the research process.\n\nThis research is recommended for pawns looking to become preachers.</description>
+    <baseCost>3000</baseCost>
+	<prerequisites>
+	<li>Forbidden_Studies</li>
+	</prerequisites>
+  </ResearchProjectDef>  
+  
+  <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+    <defName>Forbidden_Attire</defName>
+    <label>[Occult] Ritual Attire</label>
+    <description>Allows for the design and creation of occult robes, hoods, and various masks. Wearing proper clothing increases chances of successful sacrifices.</description>
+    <baseCost>30</baseCost>
+	<prerequisites>
+	<li>Forbidden_Studies</li>
+	</prerequisites>
+  </ResearchProjectDef>  
+  
+  
+  <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+    <defName>Forbidden_Sculptures</defName>
+    <label>[Occult] Sculptures</label>
+    <description>Allows for the design and creation of occult sculptures dedicated to otherworldly entities.</description>
+    <baseCost>30</baseCost>
+	<prerequisites>
+	<li>Forbidden_Studies</li>
+	</prerequisites>
+  </ResearchProjectDef>  
+ 
+  <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+    <defName>Forbidden_Obelisks</defName>
+    <label>[Occult] Obelisk Construction</label>
+    <description>Allows for the design and construction of occult obelisks.</description>
+    <baseCost>100</baseCost>
+	<prerequisites>
+	<li>Forbidden_Sculptures</li>
+	</prerequisites>
+  </ResearchProjectDef>   
+  
+  <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+    <defName>Forbidden_Altar</defName>
+    <label>[Occult] Altar</label>
+    <description>Allows the creation of an altar of worship to conduct rituals for beings beyond this world.</description>
+    <baseCost>30</baseCost>
+	<prerequisites>
+	<li>Forbidden_Studies</li>
+	</prerequisites>
+  </ResearchProjectDef>  
+
+  <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+    <defName>Forbidden_Sacrifice</defName>
+    <label>[Occult] Altar of Sacrifice</label>
+    <description>Allows you to upgrade an altar to an altar of sacrifice to show greater appreciation of extradimensional beings.</description>
+    <baseCost>50</baseCost>
+	<prerequisites>
+	<li>Forbidden_Altar</li>
+	<li>Forbidden_Studies</li>
+	</prerequisites>
+  </ResearchProjectDef>  
+  
+  <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+    <defName>Forbidden_Human</defName>
+    <label>[Occult] Human Sacrifice</label>
+    <description>Allows you to upgrade an altar to an altar of human sacrifice, allowing for impressive benefits from cosmic entities.</description>
+    <baseCost>100</baseCost>
+	<prerequisites>
+	<li>Forbidden_Sacrifice</li>
+	<li>Forbidden_Altar</li>
+	<li>Forbidden_Studies</li>
+	</prerequisites>
+  </ResearchProjectDef>  
+  
+</ResearchProjectDefs>

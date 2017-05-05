@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <PruneAndRepair.reportString>TargetA를 가지치기 혹은 수리 중.</PruneAndRepair.reportString>
+
+    <EnterTransporterPawn.reportString>TargetA에 들어가는 중.</EnterTransporterPawn.reportString>
+
+    <MidnightInquisition.reportString>스스로 일을 해결 중.</MidnightInquisition.reportString>
+
+    <GiveOffering.reportString>TargetA에서 헌금 모으는 중.</GiveOffering.reportString>
+
+    <ReflectOnOffering.reportString>제안에 반영함.</ReflectOnOffering.reportString>
+
+    <HoldSacrifice.reportString>번제에 참가하는 중.</HoldSacrifice.reportString>
+
+    <AttendSacrifice.reportString>번제에 참가하는 중.</AttendSacrifice.reportString>
+
+    <ReflectOnResult.reportString>결과를 반영함.</ReflectOnResult.reportString>
+
+    <WaitTiedDown.reportString>구속됨.</WaitTiedDown.reportString>
+
+    <HoldWorship.reportString>설교를 듣고.</HoldWorship.reportString>
+
+    <AttendWorship.reportString>설교를 들으며.</AttendWorship.reportString>
+
+    <ReflectOnWorship.reportString>예배에 반영함.</ReflectOnWorship.reportString>
+
+    <Investigate.reportString>TargetB 조사 중.</Investigate.reportString>
+
+    <WriteTheBook.reportString>착란에 빠짐.</WriteTheBook.reportString>
+
+</LanguageData>

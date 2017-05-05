@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <SignOfDagon.label>다곤의 계약진</SignOfDagon.label>
+    <SignOfDagon.Description>수호자가 배회할 수 있는 지점을 지정합니다. 이 마법의 원을 식민지 외부에 두는 것이 좋습니다. 그들이 도착하면, 보호자들은 죽을때까지 그 지점을 방어할 것입니다. 식민지 주민을 해당 지역에 가까이 가지 않도록 주의하세요.</SignOfDagon.Description>
+
+    <PewLinkable.label>숭배자용 연결의자</PewLinkable.label>
+    <PewLinkable.description>숭배자들이 앉아 의식을 관찰할 수 있도록 설계된 연결 가능한 벤치입니다.</PewLinkable.description>
+
+    <ForbiddenKnowledgeCenter.label>금기의 지식 연구대</ForbiddenKnowledgeCenter.label>
+    <ForbiddenKnowledgeCenter.description>기괴한 상징, 노트 및 금지된 지식으로 덮여 있습니다. 숭배자는 여기에서 힘을 얻기 위해 일합니다. 장기간 일하게 되면 정신 상실이 초래하지만 보상은 그 가치가 있을 겁니다.</ForbiddenKnowledgeCenter.description>
+
+    <Cult_SacrificialAltar.label>종교 제단</Cult_SacrificialAltar.label>
+    <Cult_SacrificialAltar.Description>우주 외적 존재의 연설을 전달하기 위한 제단입니다.</Cult_SacrificialAltar.Description>
+
+    <Cult_AnimalSacrificeAltar.label>번제단</Cult_AnimalSacrificeAltar.label>
+    <Cult_AnimalSacrificeAltar.Description>사소하고 강력한 존재를위해 제물을 바치는 제단입니다. 혈액을 채취하고 수집하도록 특별히 고안되었습니다.</Cult_AnimalSacrificeAltar.Description>
+
+    <Cult_HumanSacrificeAltar.label>번제단(인간)</Cult_HumanSacrificeAltar.label>
+    <Cult_HumanSacrificeAltar.Description>사소하고 강력한 존재를위해 제물을 바치는 제단입니다. 혈액을 채취하고 수집하도록 특별히 고안되었습니다.</Cult_HumanSacrificeAltar.Description>
+
+</LanguageData>

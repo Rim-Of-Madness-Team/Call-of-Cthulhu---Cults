@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <CultSeedIncident_TreeOfNightmares.label>악몽의 나무(Tree Of Nightmare)</CultSeedIncident_TreeOfNightmares.label>
+    <CultSeedIncident_TreeOfNightmares.description>이게 뭐야?</CultSeedIncident_TreeOfNightmares.description>
+    <CultSeedIncident_TreeOfNightmares.letterLabel>악몽의 나무(Tree Of Nightmare)</CultSeedIncident_TreeOfNightmares.letterLabel>
+    <CultSeedIncident_TreeOfNightmares.letterText>그것은 영혼을 통하여 모든것을 꿰뚫어 보는 것 같습니다.</CultSeedIncident_TreeOfNightmares.letterText>
+
+    <CultSeedIncident_NightmareMonolith.label>모노리스(Monolith)</CultSeedIncident_NightmareMonolith.label>
+    <CultSeedIncident_NightmareMonolith.description>이게 뭐야?</CultSeedIncident_NightmareMonolith.description>
+    <CultSeedIncident_NightmareMonolith.letterLabel>모노리스(Monolith)</CultSeedIncident_NightmareMonolith.letterLabel>
+    <CultSeedIncident_NightmareMonolith.letterText>그것은 영혼을 통하여 모든것을 꿰뚫어 보는 것 같습니다.</CultSeedIncident_NightmareMonolith.letterText>
+
+</LanguageData>

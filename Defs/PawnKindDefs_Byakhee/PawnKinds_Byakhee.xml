@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- BYAKHEE -->
+  <!-- KIND DEFS -->
+  <PawnKindDef Name="Cults_ByakheeBase" Abstract="True">
+    <bodyGraphicData>
+      <shaderType>Cutout</shaderType>
+    </bodyGraphicData>
+    <dessicatedBodyGraphicData>
+      <shaderType>Cutout</shaderType>
+    </dessicatedBodyGraphicData>
+  </PawnKindDef>
+  <PawnKindDef>
+    <defName>Cults_Byakhee</defName>
+    <label>byakhee</label>
+    <race>Cults_ByakheeRace</race>
+    <combatPower>160</combatPower>
+    <defaultFactionType>SpacerHostile</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Byakhee/Byakhee</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>4.5</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Byakhee/Byakhee</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>5.0</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Byakhee/Byakhee</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>5.5</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Byakhee/Byakhee</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>6.0</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+  <!-- RACE DEFS -->
+  <ThingDef Class="CultOfCthulhu.PawnFlyerDef" ParentName="BaseCultHorrorRace">
+    <defName>Cults_ByakheeRace</defName>
+    <thingClass>CultOfCthulhu.PawnFlyer</thingClass>	
+    <label>byakhee</label>
+    <description>Interstellar predators that can travel through the vacuum of space by means of an organ known as the "hune," Byakhee are said to be servants of Hastur the Unspeakable. Through this servitude, Byakhee have been observed being mounted by the faithful to the Yellow Sign.</description>
+    <statBases>
+      <MoveSpeed>7.0</MoveSpeed>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+	  <MeatAmount>0</MeatAmount>
+	  <CarryingCapacity>150</CarryingCapacity>
+      <MarketValue>3000</MarketValue>	  
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>2.5</defaultCooldownTime>
+        <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
+        <meleeDamageDef>ToxicBite</meleeDamageDef>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>2.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>24</meleeDamageBaseAmount>
+        <meleeDamageDef>ToxicBite</meleeDamageDef>
+        <linkedBodyPartsGroup>Cults_Stinger</linkedBodyPartsGroup>
+      </li>	  
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.5</defaultCooldownTime>
+        <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.5</defaultCooldownTime>
+        <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>3</defaultCooldownTime>
+        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>Cults_Wings</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <wildness>0.95</wildness>	
+      <intelligence>Animal</intelligence>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <body>Cults_ByakheeBody</body>
+      <leatherColor>(54,125,54)</leatherColor>
+      <leatherLabel>byakhee chitin</leatherLabel>
+      <leatherStatFactors>
+        <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+        <ArmorRating_Blunt>2.0</ArmorRating_Blunt>
+        <ArmorRating_Heat>1.5</ArmorRating_Heat>
+        <ArmorRating_Electric>4.0</ArmorRating_Electric>
+      </leatherStatFactors>
+      <leatherMarketValueFactor>1.5</leatherMarketValueFactor>
+      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+      <baseBodySize>2.0</baseBodySize>
+      <baseHealthScale>4.0</baseHealthScale>
+      <lifeExpectancy>600</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>Cults_Spawn</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>Cults_FullyFormed</def>
+          <minAge>5</minAge>
+          <soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
+          <soundCall>Pawn_Mech_Centipede_Call</soundCall>
+        </li>
+        <li>
+          <def>Cults_Ancient</def>
+          <minAge>600</minAge>
+        </li>
+        <li>
+          <def>Cults_Eldritch</def>
+          <minAge>700</minAge>
+        </li>
+      </lifeStageAges>
+      <nameGenerator>NamerAnimalGenericMale</nameGenerator>
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>	  
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_LaunchablePawn"/>
+      <li Class="CultOfCthulhu.CompProperties_TransporterPawn"/>
+    </comps>	
+    <recipes>
+      <li>Euthanize</li>
+    </recipes>
+	<flightSpeed>0.000035</flightSpeed>
+	<flightPawnLimit>2</flightPawnLimit>
+	<flyableDistance>30</flyableDistance>
+	<leavingDef>ByakheeLeaving</leavingDef>
+	<travelingDef>ByakheeTraveling</travelingDef>
+	<incomingDef>ByakheeIncoming</incomingDef>
+	<landedDef>ByakheeLanded</landedDef>
+	<takeOffSound>ByakheeTakeOff</takeOffSound>
+	<landingSound>ByakheeLanding</landingSound>
+	<dismountSound>Pawn_Mech_Centipede_Call</dismountSound>
+	<landedTale>RodeByakhee</landedTale>
+  </ThingDef>
+  
+<!-- Cosmic Horror Base -->
+
+  <ThingDef ParentName="BaseCultHorrorRaceInit" Name="BaseCultHorrorRace" Abstract="True">  
+    <statBases>
+      <Mass>75</Mass>	
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-950</ComfyTemperatureMin>
+      <ComfyTemperatureMax>950</ComfyTemperatureMax>
+	  <MeatAmount>25</MeatAmount>
+      <LeatherAmount>20</LeatherAmount>	  
+    </statBases>
+    <race>
+      <bloodDef>FilthBloodInsect</bloodDef>	
+      <meatColor>(160,150,140)</meatColor>
+      <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+      <useMeatFrom>Megaspider</useMeatFrom>	  
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>1</manhunterOnTameFailChance>	  
+      <needsRest>true</needsRest>
+      <hasGenders>true</hasGenders>
+      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+      <leatherInsulation>0.70</leatherInsulation>
+      <leatherMarketValueFactor>3</leatherMarketValueFactor>
+	  <hediffGiverSets>
+		<li>OrganicStandard</li>
+	  </hediffGiverSets>
+    </race>
+  </ThingDef>  
+  
+<!-- Cosmic Horror Init -->  
+ <ThingDef Name="BaseCultHorrorRaceInit" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+    
+  
+</Defs>

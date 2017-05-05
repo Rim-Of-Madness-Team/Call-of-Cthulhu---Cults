@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <!-- Cultist Sculptures -->
+  
+  <ThingDef ParentName="CultBuildingBase" Name="CultSculptureBase" Abstract="True">
+    <thingClass>Building_Art</thingClass>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_Sculpture</nameMaker>
+        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <recipeMaker>
+      <researchPrerequisite>Forbidden_Sculptures</researchPrerequisite>	
+      <workSpeedStat>SculptingSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li>TableSculpting</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+    <ThingDef ParentName="CultSculptureBase">
+    <defName>YigSculptureLarge</defName>
+    <label>large serpent humanoid sculpture</label>
+    <description>A person-sized piece of material in the shape of a snake man sculpted into an artistic form.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Building/YigSculpture/yig_statue</texPath>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Beauty>65</Beauty>
+      <WorkToMake>40000</WorkToMake>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>145</costStuffCount>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="CultSculptureBase">
+    <defName>SculptureCthulhu</defName>
+    <label>monstrous octopoid sculpture</label>
+    <description>A car-sized piece of material sculpted into the stylised form of a giant bulbous head. Tentacles snake out from where a mouth would be and glare down in contempt.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Building/CthulhuSculpture/CthulhuSculpture</texPath>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <size>(3,2)</size>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Beauty>140</Beauty>
+      <WorkToMake>90000</WorkToMake>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>260</costStuffCount>
+    <comps>
+	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+	  <deities>
+	  <li>
+	    <deityDef>Entity_Cthulhu</deityDef>
+	  </li>
+	  </deities>
+    </li>
+    </comps>	
+  </ThingDef>
+
+  
+  <ThingDef ParentName="CultSculptureBase">
+    <defName>SculptureDagon</defName>
+    <label>monstrous fish-headed sculpture</label>
+    <description>A car-sized piece of material sculpted into the face of a deep one. Its eyes are large and toadish and stare out, blankly. The teeth are almost as long as your arm. If it were real, it could swallow you with one bite. </description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Building/DagonSculpture/DagonSculpture</texPath>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <size>(3,2)</size>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Beauty>140</Beauty>
+      <WorkToMake>90000</WorkToMake>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>320</costStuffCount>
+    <comps>
+	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+	  <deities>
+	  <li>
+	    <deityDef>Entity_Dagon</deityDef>
+	  </li>
+	  </deities>
+    </li>
+    </comps>	
+  </ThingDef>
+  
+  <ThingDef ParentName="CultSculptureBase">
+    <defName>SculptureNyarlathotep</defName>
+    <label>monstrous hooded sculpture</label>
+    <description>A car-sized piece of material sculpted into the shape of a cloaked figure wreathed in shapes that seem ordered at first but is then betrayed by an underlying chaos.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Building/NyarlathotepSculpture/NyarlathotepSculpture</texPath>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <size>(3,2)</size>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Beauty>140</Beauty>
+      <WorkToMake>90000</WorkToMake>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>320</costStuffCount>
+    <comps>
+	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+	  <deities>
+	  <li>
+	    <deityDef>Entity_Nyarlathotep</deityDef>
+	  </li>
+	  </deities>
+    </li>
+    </comps>		
+  </ThingDef>
+  
+  
+  <ThingDef ParentName="CultSculptureBase">
+    <defName>SculptureShub</defName>
+    <label>monstrous goat-like sculpture</label>
+    <description>A car-sized piece of material sculpted into the stylised form of a goat's head. Behind which is a mass of vines or tentacles writhing around one another and menacing the onlooker.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Building/ShubSculpture/ShubSculpture</texPath>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <size>(3,2)</size>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Beauty>140</Beauty>
+      <WorkToMake>96000</WorkToMake>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>320</costStuffCount>
+    <comps>
+	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+	  <deities>
+	  <li>
+	    <deityDef>Entity_Shub</deityDef>
+	  </li>
+	  </deities>
+    </li>
+    </comps>		
+  </ThingDef>
+  
+</ThingDefs>

@@ -1,0 +1,5 @@
+C:\Users\mattw\Documents\Visual Studio 2015\Projects\IndustrialAgePack\RimWorld_ExampleProjectDLL\bin\Debug\ArkhamEstate.dll
+C:\Users\mattw\Documents\Visual Studio 2015\Projects\IndustrialAgePack\RimWorld_ExampleProjectDLL\bin\Debug\ArkhamEstate.pdb
+C:\Users\mattw\Documents\Visual Studio 2015\Projects\IndustrialAgePack\RimWorld_ExampleProjectDLL\obj\Debug\ArkhamEstate.csprojResolveAssemblyReference.cache
+C:\Users\mattw\Documents\Visual Studio 2015\Projects\IndustrialAgePack\RimWorld_ExampleProjectDLL\obj\Debug\ArkhamEstate.dll
+C:\Users\mattw\Documents\Visual Studio 2015\Projects\IndustrialAgePack\RimWorld_ExampleProjectDLL\obj\Debug\ArkhamEstate.pdb

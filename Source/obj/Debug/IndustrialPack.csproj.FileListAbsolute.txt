@@ -1,0 +1,5 @@
+C:\Users\mattw\Documents\Visual Studio 2015\Projects\IndustrialAgePack\RimWorld_ExampleProjectDLL\obj\Debug\IndustrialPack.csprojResolveAssemblyReference.cache
+C:\Users\mattw\Documents\Visual Studio 2015\Projects\IndustrialAgePack\RimWorld_ExampleProjectDLL\bin\Debug\IndustrialAge.dll
+C:\Users\mattw\Documents\Visual Studio 2015\Projects\IndustrialAgePack\RimWorld_ExampleProjectDLL\bin\Debug\IndustrialAge.pdb
+C:\Users\mattw\Documents\Visual Studio 2015\Projects\IndustrialAgePack\RimWorld_ExampleProjectDLL\obj\Debug\IndustrialAge.dll
+C:\Users\mattw\Documents\Visual Studio 2015\Projects\IndustrialAgePack\RimWorld_ExampleProjectDLL\obj\Debug\IndustrialAge.pdb

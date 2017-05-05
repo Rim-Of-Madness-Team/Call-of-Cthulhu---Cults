@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef ParentName="CultBenchBase">
+    <DefName>Cult_NightmareSacrificeAltar</DefName>
+    <label>corrupted altar</label>
+    <ThingClass>CultOfCthulhu.Building_SacrificialAltar</ThingClass>
+    <Description>A corpse has sprung up as a tree that corrupts your altar. It will need repairs and a lot of pruning.</Description>
+    <tickerType>Rare</tickerType>	
+    <graphicData>
+      <texPath>Building/NightmareAltar/NightmareAltar</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.0,8.0)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>	
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <socialPropernessMatters>true</socialPropernessMatters>	
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>	  
+    </stuffCategories>
+    <costStuffCount>125</costStuffCount>
+    <AltitudeLayer>Building</AltitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>12500</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>10</Beauty>
+      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+    </statBases>
+    <Size>(3,1)</Size>
+    <Passability>PassThroughOnly</Passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>CultOfCthulhu.ITab_Sacrifice</li>
+	  <li>CultOfCthulhu.ITab_Worship</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	<watchBuildingStandDistanceRange>
+		<min>1</min>
+		<max>9</max>
+	</watchBuildingStandDistanceRange>
+	<watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>   	
+    </building>
+	<researchPrerequisites><li>Forbidden_Human</li></researchPrerequisites>
+<placeWorkers>
+        <li>PlaceWorker_WatchArea</li>
+    </placeWorkers>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>	
+    <designationHotKey>Misc2</designationHotKey>
+  </ThingDef>
+
+  <ThingDef ParentName="CultBuildingBase">
+    <defName>BurstingTentacle</defName>
+    <label>bursting tentacle</label>
+    <description>OH GOD</description>
+	<thingClass>CultOfCthulhu.Building_BurstingTentacle</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Building/BurstingTentacle</texPath>
+      <graphicClass>Graphic_Flicker</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>35</pathCost>
+    <blockWind>false</blockWind>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.50</fillPercent>
+    <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-20</Beauty>
+      <WorkToMake>12000</WorkToMake>
+    </statBases>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <killedLeavings>
+      <ChunkSlagSteel>6</ChunkSlagSteel>
+    </killedLeavings>
+    <costList>
+      <Component>20</Component>
+      <Steel>80</Steel>
+	  <Plasteel>16</Plasteel>
+    </costList>
+    <building>
+      <claimable>false</claimable>
+      <alwaysDeconstructible>false</alwaysDeconstructible>
+    </building>
+    <selectable>true</selectable>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />	
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+	<tickerType>Normal</tickerType>
+    <repairEffect>ConstructMetal</repairEffect>
+  </ThingDef>  
+  
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>WombBetweenWorlds</defName>
+    <label>Womb Between Worlds</label>
+    <description>.</description>
+    <thingClass>CultOfCthulhu.Building_WombBetweenWorlds</thingClass>
+    <graphicData>
+      <texPath>Building/WombBetweenWorlds/WombBetweenWorlds</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,12)</drawSize>
+    </graphicData>
+	<size>(4,5)</size>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <pathCost>10</pathCost>
+    <blockWind>true</blockWind>
+    <tickerType>Rare</tickerType>
+    <passability>Impassable</passability>
+    <comps>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>7</heatPerSecond>
+        <heatPushMaxTemperature>38</heatPushMaxTemperature>
+      </li>
+      <li Class="CompProperties_TemperatureDamaged">
+        <safeTemperatureRange>
+          <min>-20</min>
+          <max>9999</max>
+        </safeTemperatureRange>
+        <damagePerTickRare>8</damagePerTickRare>
+      </li>
+      <li Class="CompProperties_SpawnerFilth">
+        <filthDef>FilthSlime</filthDef>
+        <spawnCountOnSpawn>10</spawnCountOnSpawn>
+        <spawnMtbHours>4</spawnMtbHours>
+        <spawnRadius>5</spawnRadius>
+      </li>
+    </comps>
+  </ThingDef> 
+  
+  
+ </ThingDefs>

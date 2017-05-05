@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="CultsPlantBase" Abstract="True">
+    <category>Plant</category>
+    <thingClass>Plant</thingClass>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <Flammability>0.8</Flammability>
+    </statBases>
+    <tickerType>Long</tickerType>
+    <selectable>False</selectable>
+    <neverMultiSelect>True</neverMultiSelect>
+    <drawerType>MapMeshOnly</drawerType>
+    <pathCostIgnoreRepeat>false</pathCostIgnoreRepeat>
+    <graphicData>
+      <shaderType>CutoutPlant</shaderType>
+    </graphicData>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>RawBad</preferability>
+    </ingestible>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>	
+    <plant>
+      <harvestDestroys>true</harvestDestroys>
+      <soundHarvesting>Harvest_Standard</soundHarvesting>
+      <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
+      <harvestWork>190</harvestWork>
+      <sowWork>260</sowWork>
+			<fertilityMin>0.5</fertilityMin>
+			<fertilitySensitivity>1.0</fertilitySensitivity>
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>
+        <min>0.3</min>
+        <max>1.00</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="CultsPlantBase" Name="CultsTreeBase" Abstract="True">
+    <statBases>
+      <MaxHitPoints>800</MaxHitPoints>
+    </statBases>
+    <description>A tree.</description>
+    <altitudeLayer>Building</altitudeLayer>
+    <selectable>true</selectable>
+    <fillPercent>0.43</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <pathCost>130</pathCost>
+    <blockWind>true</blockWind>
+    <ingestible>
+      <foodType>Tree</foodType>
+      <preferability>RawBad</preferability>
+      <nutrition>0.01</nutrition>
+    </ingestible>
+    <plant>
+      <soundHarvesting>Harvest_Tree</soundHarvesting>
+      <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
+      <harvestWork>1600</harvestWork>
+      <harvestDestroys>true</harvestDestroys>
+      <harvestedThingDef>WoodLog</harvestedThingDef>
+      <harvestYield>200</harvestYield>
+      <harvestTag>Wood</harvestTag>
+      <harvestMinGrowth>0.40</harvestMinGrowth>
+      <harvestFailable>false</harvestFailable>
+      <visualSizeRange>
+        <min>1.3</min>
+        <max>2.0</max>
+      </visualSizeRange>
+      <fertilityMin>0.3</fertilityMin>
+      <topWindExposure>0.25</topWindExposure>
+			<fertilitySensitivity>1.0</fertilitySensitivity>
+      <wildClusterSizeRange>
+        <min>8</min>
+        <max>30</max>
+      </wildClusterSizeRange>
+      <wildClusterRadius>8</wildClusterRadius>
+    </plant>
+  </ThingDef>
+  
+  <ThingDef ParentName="CultsTreeBase">
+    <defName>PlantTreeNightmare</defName>
+    <thingClass>CultOfCthulhu.Building_TreeOfMadness</thingClass>
+    <label>eerie tree</label>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+	<passability>Impassable</passability>
+	<description>An ominous tree with an indescibable aura. Approaching this tree causes most colonists a great deal of anxiety. Drawing closer, colonists swear they can hear voices speaking in strange tongues.</description>
+    <graphicData>
+      <texPath>Building/NightmareTree/NightmareTree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <statBases>
+      <Beauty>10</Beauty>
+    </statBases>
+    <plant>
+      <leaflessGraphicPath>Building/NightmareTree/NightmareTree</leaflessGraphicPath>
+      <growDays>1928</growDays>
+      <fertilityMin>0.0</fertilityMin>
+      <harvestWork>1000</harvestWork>
+      <harvestYield>50</harvestYield>
+      <visualSizeRange>
+        <min>3.5</min>
+        <max>4.5</max>
+      </visualSizeRange>
+    </plant>
+	<building>
+		<soundAmbient>RitualChanting</soundAmbient>
+	</building>
+    <staticSunShadowHeight>1.2</staticSunShadowHeight>
+  </ThingDef>
+
+
+</Defs>  

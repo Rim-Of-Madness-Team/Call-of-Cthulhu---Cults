@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <SpellOrbitalInsanityWave.label>궤도 밖 광기 파동</SpellOrbitalInsanityWave.label>
+    <SpellOrbitalInsanityWave.rulePack.rulesStrings.0>tale_noun-&gt;크툴루(Cthulhu)께서 하늘에서 우주선을 추락시킨 사건</SpellOrbitalInsanityWave.rulePack.rulesStrings.0>
+    <SpellOrbitalInsanityWave.rulePack.rulesStrings.1>image-&gt;웅장한 첨탑 위에 자리 잡은 크툴루(Cthulhu)는 자신의 커다란 발톱을 한번 휘두르자, [circumstance_group] 우주선이 하늘에서 떨어지기 시작합니다.</SpellOrbitalInsanityWave.rulePack.rulesStrings.1>
+    <SpellOrbitalInsanityWave.rulePack.rulesStrings.2>circumstance_phrase-&gt;영광스러운 불덩어리가 일며</SpellOrbitalInsanityWave.rulePack.rulesStrings.2>
+    <SpellOrbitalInsanityWave.rulePack.rulesStrings.3>circumstance_phrase-&gt;엄청난 속도로</SpellOrbitalInsanityWave.rulePack.rulesStrings.3>
+    <SpellOrbitalInsanityWave.rulePack.rulesStrings.4>desc_sentence-&gt;탈출 포드는 절대적인 광기에 빠져 비명을 지르는 사람들로 가득 차있습니다.</SpellOrbitalInsanityWave.rulePack.rulesStrings.4>
+    <SpellOrbitalInsanityWave.rulePack.rulesStrings.5>desc_sentence-&gt;그들이 광기에 빠진 탈출 포트에서 부상당한 탈출자들 사이에 피와 소름끼치는 촉수가 나타납니다.</SpellOrbitalInsanityWave.rulePack.rulesStrings.5>
+
+    <SpellBountyOfTheSea.label>바다의 현상금</SpellBountyOfTheSea.label>
+    <SpellBountyOfTheSea.rulePack.rulesStrings.0>tale_noun-&gt;하늘에서 우주선이 떨어진 사건</SpellBountyOfTheSea.rulePack.rulesStrings.0>
+    <SpellBountyOfTheSea.rulePack.rulesStrings.1>image-&gt;살아있는 영혼으로 가득 찬 우주선 전체가 무너지면서, [circumstance_group] 하늘에서 추락고 있는 모습</SpellBountyOfTheSea.rulePack.rulesStrings.1>
+    <SpellBountyOfTheSea.rulePack.rulesStrings.2>circumstance_phrase-&gt;사람들에게 공포를 주며</SpellBountyOfTheSea.rulePack.rulesStrings.2>
+    <SpellBountyOfTheSea.rulePack.rulesStrings.3>circumstance_phrase-&gt;관중들이 기뻐하며 보는 와중에</SpellBountyOfTheSea.rulePack.rulesStrings.3>
+    <SpellBountyOfTheSea.rulePack.rulesStrings.4>desc_sentence-&gt;우주선이 지면과 충돌하면서 수 많은 사람들이 거칠게 뻗어 나옵니다.</SpellBountyOfTheSea.rulePack.rulesStrings.4>
+    <SpellBountyOfTheSea.rulePack.rulesStrings.5>desc_sentence-&gt;내부에는 갑판원들이 조심스럽게 지키던 수 많은 현대 귀중품들이 있습니다.</SpellBountyOfTheSea.rulePack.rulesStrings.5>
+
+    <SpellFertilityRitual.label>풍요 의식</SpellFertilityRitual.label>
+    <SpellFertilityRitual.rulePack.rulesStrings.0>tale_noun-&gt;슈브 니구라스(Shub-Niggurath)께서 풍요 토템을 하사한 기념일</SpellFertilityRitual.rulePack.rulesStrings.0>
+    <SpellFertilityRitual.rulePack.rulesStrings.1>image-&gt;검은 염소의 어머니는 천개의 촉수를 통해 말씀하시길, [circumstance_group] 기일 [circumstance_group]</SpellFertilityRitual.rulePack.rulesStrings.1>
+    <SpellFertilityRitual.rulePack.rulesStrings.2>circumstance_phrase-&gt;그녀의 상처로부터 끔찍한 우상이 풀려나, 풍요를 약속한</SpellFertilityRitual.rulePack.rulesStrings.2>
+    <SpellFertilityRitual.rulePack.rulesStrings.3>circumstance_phrase-&gt;땅에서 토템이 희생자의 시체에서 제단으로부터 자라며 풍요를 약속한</SpellFertilityRitual.rulePack.rulesStrings.3>
+    <SpellFertilityRitual.rulePack.rulesStrings.4>desc_sentence-&gt;토템은 마치 신석기 조각처럼 보입니다.</SpellFertilityRitual.rulePack.rulesStrings.4>
+    <SpellFertilityRitual.rulePack.rulesStrings.5>desc_sentence-&gt;토템의 눈 앞에 염소 두개골 뒤에는 시체가 묻혀있는 땅이 있습니다.</SpellFertilityRitual.rulePack.rulesStrings.5>
+    <SpellFertilityRitual.rulePack.rulesStrings.6>desc_sentence-&gt;검은 염소의 어머니는 불타는 눈빛으로 집행자를 쳐다보고 있습니다.</SpellFertilityRitual.rulePack.rulesStrings.6>
+
+    <SpellMotherOfGoats.label>염소의 어머니</SpellMotherOfGoats.label>
+    <SpellMotherOfGoats.rulePack.rulesStrings.0>tale_noun-&gt;검은 염소때의 출현의 시기</SpellMotherOfGoats.rulePack.rulesStrings.0>
+    <SpellMotherOfGoats.rulePack.rulesStrings.1>image-&gt;검은 염소의 어머니는 천개의 촉수를 통해 [circumstance_group] 말씀하셨던 기일 </SpellMotherOfGoats.rulePack.rulesStrings.1>
+    <SpellMotherOfGoats.rulePack.rulesStrings.2>circumstance_phrase-&gt;수평선으로부터 수 많은 검은 염소가 정착지 쪽으로 질주해 올 것이라고</SpellMotherOfGoats.rulePack.rulesStrings.2>
+    <SpellMotherOfGoats.rulePack.rulesStrings.3>circumstance_phrase-&gt;그녀의 신임을 얻은 곳에서부터 천 마리의 검은 염소 새싹이 잘아날 것이라고</SpellMotherOfGoats.rulePack.rulesStrings.3>
+    <SpellMotherOfGoats.rulePack.rulesStrings.4>desc_sentence-&gt;염소의 털이 열리고 촉수로 된 방언이 드러납니다.</SpellMotherOfGoats.rulePack.rulesStrings.4>
+    <SpellMotherOfGoats.rulePack.rulesStrings.5>desc_sentence-&gt;어떤 염소는 두 발로 서 있습니다.</SpellMotherOfGoats.rulePack.rulesStrings.5>
+    <SpellMotherOfGoats.rulePack.rulesStrings.6>desc_sentence-&gt;검은 염소의 어머니는 불타는 눈빛으로 자식들을 쳐다보며 명령하고 있습니다.</SpellMotherOfGoats.rulePack.rulesStrings.6>
+
+    <SpellPsionicGrowth.label>신앙의 성장</SpellPsionicGrowth.label>
+    <SpellPsionicGrowth.rulePack.rulesStrings.0>tale_noun-&gt;[pawn_nameFull]의 신을 부르던 사건</SpellPsionicGrowth.rulePack.rulesStrings.0>
+    <SpellPsionicGrowth.rulePack.rulesStrings.1>image-&gt;크툴루(Cthulhu), 그 웅대하고 위풍 당당한, [circumstance_group]</SpellPsionicGrowth.rulePack.rulesStrings.1>
+    <SpellPsionicGrowth.rulePack.rulesStrings.2>circumstance_phrase-&gt;촉수로 [pawn_nameShortDef]의 몸을 움켜 쥐었던 모습</SpellPsionicGrowth.rulePack.rulesStrings.2>
+    <SpellPsionicGrowth.rulePack.rulesStrings.3>circumstance_phrase-&gt;촉수로 [pawn_nameShortDef]의 두개골을 박살내는 모습</SpellPsionicGrowth.rulePack.rulesStrings.3>
+    <SpellPsionicGrowth.rulePack.rulesStrings.4>desc_sentence-&gt;[pawn_nameShortDef]의 두개골은 [pawn_possessive] 머리가 [pawn_possessive] 어깨위에 간신히 지지할 수 있을 있는 때까지 부풀어 오릅니다.</SpellPsionicGrowth.rulePack.rulesStrings.4>
+    <SpellPsionicGrowth.rulePack.rulesStrings.5>desc_sentence-&gt;그들 뒤에는 벽처럼 무수한 촉수가 깔려있습니다.</SpellPsionicGrowth.rulePack.rulesStrings.5>
+    <SpellPsionicGrowth.rulePack.rulesStrings.6>desc_sentence-&gt;거대한 현무함 탑은 크툴루(Cthulhu)께서 왕국과 현실의 경계를 분리하기 위한 힘을 분명히 하고 있습니다.</SpellPsionicGrowth.rulePack.rulesStrings.6>
+
+    <SpellRatsInTheWalls.label>벽 안의 쥐</SpellRatsInTheWalls.label>
+    <SpellRatsInTheWalls.rulePack.rulesStrings.0>tale_noun-&gt;쥐들의 기적</SpellRatsInTheWalls.rulePack.rulesStrings.0>
+    <SpellRatsInTheWalls.rulePack.rulesStrings.1>image-&gt;[circumstance_group] 수천 마리의 쥐가 벽에서 쏟아져 나오는 모습</SpellRatsInTheWalls.rulePack.rulesStrings.1>
+    <SpellRatsInTheWalls.rulePack.rulesStrings.2>circumstance_phrase-&gt;핏빛으로 물든 눈을 한</SpellRatsInTheWalls.rulePack.rulesStrings.2>
+    <SpellRatsInTheWalls.rulePack.rulesStrings.3>circumstance_phrase-&gt;꼬리가 한대 섞여 매듭이 지어진</SpellRatsInTheWalls.rulePack.rulesStrings.3>
+    <SpellRatsInTheWalls.rulePack.rulesStrings.4>desc_sentence-&gt;그것들은 서로 충돌하면서 으르렁 거립니다.</SpellRatsInTheWalls.rulePack.rulesStrings.4>
+    <SpellRatsInTheWalls.rulePack.rulesStrings.5>desc_sentence-&gt;심지어 그 혼란 속에서조차 계속해서 더 많은 수의 쥐들이 뿜어져 나옵니다.</SpellRatsInTheWalls.rulePack.rulesStrings.5>
+    <SpellRatsInTheWalls.rulePack.rulesStrings.6>desc_sentence-&gt;바닥과 벽의 틈새 안쪽에서 그들의 날카로운 치아와 눈빛이 번쩍입니다.</SpellRatsInTheWalls.rulePack.rulesStrings.6>
+
+    <SpellReanimator.label>부활의 의식</SpellReanimator.label>
+    <SpellReanimator.rulePack.rulesStrings.0>tale_noun-&gt;[pawn_nameFull](이)가 죽은 자들 가운데서 일어난 사건</SpellReanimator.rulePack.rulesStrings.0>
+    <SpellReanimator.rulePack.rulesStrings.1>image-&gt;[pawn_nameFull](은)는 [circumstance_group] 주위 사람들의 경악하는 가운데 일어났던 모습. </SpellReanimator.rulePack.rulesStrings.1>
+    <SpellReanimator.rulePack.rulesStrings.2>circumstance_phrase-&gt;머리가 실종되었음에도 불구하고</SpellReanimator.rulePack.rulesStrings.2>
+    <SpellReanimator.rulePack.rulesStrings.3>circumstance_phrase-&gt;치명적인 상처에도 불구하고</SpellReanimator.rulePack.rulesStrings.3>
+    <SpellReanimator.rulePack.rulesStrings.4>desc_sentence-&gt;[pawn_pronoun] [pawn_possessive] 부자연스러운 모습에도 불구하고 텅빈 눈으로 미소를 짓습니다.</SpellReanimator.rulePack.rulesStrings.4>
+    <SpellReanimator.rulePack.rulesStrings.5>desc_sentence-&gt;[pawn_pronoun] [pawn_possessive] 집행자에게 손가락으로 가리키고 있습니다.</SpellReanimator.rulePack.rulesStrings.5>
+    <SpellReanimator.rulePack.rulesStrings.6>desc_sentence-&gt;[pawn_pronoun] 구멍이 숭숭 뚫려있는 눈과 초록색 피부를 가지고 있습니다.</SpellReanimator.rulePack.rulesStrings.6>
+
+    <SpellReincarnation.label>재생</SpellReincarnation.label>
+    <SpellReincarnation.rulePack.rulesStrings.0>tale_noun-&gt;[pawn_nameFull](이)가 광기의 나무로 변한 사건</SpellReincarnation.rulePack.rulesStrings.0>
+    <SpellReincarnation.rulePack.rulesStrings.1>image-&gt;[pawn_nameFull](은)는 악몽의 나무 밑에서 그 몸이 산산조각이 나있는 모습.</SpellReincarnation.rulePack.rulesStrings.1>
+    <SpellReincarnation.rulePack.rulesStrings.2>circumstance_phrase-&gt;[pawn_possessive] 표정은 흐트러 지지 않은 체 </SpellReincarnation.rulePack.rulesStrings.2>
+    <SpellReincarnation.rulePack.rulesStrings.3>circumstance_phrase-&gt;[pawn_possessive] 신체 부위에 나뭇가지가 흩어져 있는 체</SpellReincarnation.rulePack.rulesStrings.3>
+    <SpellReincarnation.rulePack.rulesStrings.4>desc_sentence-&gt;그 나무는 이 지역의 어떤 나무보다 컸습니다.</SpellReincarnation.rulePack.rulesStrings.4>
+    <SpellReincarnation.rulePack.rulesStrings.5>desc_sentence-&gt;나무의 앞면은 고대의 에너지를 방출하는 기괴한 언어로 덮여 있습니다.</SpellReincarnation.rulePack.rulesStrings.5>
+    <SpellReincarnation.rulePack.rulesStrings.6>desc_sentence-&gt;나뭇가지들은 주변의 공간을 구부릴 것 같은 나선의 모양으로 말려 있습니다.</SpellReincarnation.rulePack.rulesStrings.6>
+
+    <SpellStarryWisdom.label>별빛의 지혜</SpellStarryWisdom.label>
+    <SpellStarryWisdom.rulePack.rulesStrings.0>tale_noun-&gt;[pawn_nameFull](이)가 니알라토텝(Nyarlathotep)의 의해 감동한 사건</SpellStarryWisdom.rulePack.rulesStrings.0>
+    <SpellStarryWisdom.rulePack.rulesStrings.1>image-&gt;[pawn_nameFull](이)가 [circumstance_group] 그림 앞에 무뤂을 끓고 있는 모습 </SpellStarryWisdom.rulePack.rulesStrings.1>
+    <SpellStarryWisdom.rulePack.rulesStrings.2>circumstance_phrase-&gt;고대 이집트 파라오의 왕권을 가진 신의 모습이 그려진</SpellStarryWisdom.rulePack.rulesStrings.2>
+    <SpellStarryWisdom.rulePack.rulesStrings.3>circumstance_phrase-&gt;염소 뿔이 있는 신의 모습이 그려진</SpellStarryWisdom.rulePack.rulesStrings.3>
+    <SpellStarryWisdom.rulePack.rulesStrings.4>desc_sentence-&gt;그 그림은 [pawn_nameShortDef]의 의마에 약간의 힘을 얹어 주고 있습니다.</SpellStarryWisdom.rulePack.rulesStrings.4>
+    <SpellStarryWisdom.rulePack.rulesStrings.5>desc_sentence-&gt;그 그림은 한 손에 검게 칠한 마스크를 들고 있습니다.</SpellStarryWisdom.rulePack.rulesStrings.5>
+    <SpellStarryWisdom.rulePack.rulesStrings.6>desc_sentence-&gt;[pawn_nameShortDef](는)은 열혈한 관중에게 둘러쌓여 있습니다.</SpellStarryWisdom.rulePack.rulesStrings.6>
+
+    <SpellStarVampireVisit.label>별을 마시는 흡혈귀의 방문</SpellStarVampireVisit.label>
+    <SpellStarVampireVisit.rulePack.rulesStrings.0>tale_noun-&gt;별을 마시는 흡혈귀가 차원의 문을 열었던 사건</SpellStarVampireVisit.rulePack.rulesStrings.0>
+    <SpellStarVampireVisit.rulePack.rulesStrings.1>image-&gt;별을 마시는 흡혈귀가 두꺼운 촉수로 설교자를 잡은 뒤, 대규모 포털이 제단 뒤에 열려 있고 그 모습에 [circumstance_group]</SpellStarVampireVisit.rulePack.rulesStrings.1>
+    <SpellStarVampireVisit.rulePack.rulesStrings.2>circumstance_phrase-&gt;사람들은 공포에 질려 있는 모습</SpellStarVampireVisit.rulePack.rulesStrings.2>
+    <SpellStarVampireVisit.rulePack.rulesStrings.3>circumstance_phrase-&gt;사람들이 기쁨에 넘쳐 있는 모습</SpellStarVampireVisit.rulePack.rulesStrings.3>
+    <SpellStarVampireVisit.rulePack.rulesStrings.4>desc_sentence-&gt;별을 마시는 흡혈귀는 희생자의 피를 통해서만 보입니다.</SpellStarVampireVisit.rulePack.rulesStrings.4>
+    <SpellStarVampireVisit.rulePack.rulesStrings.5>desc_sentence-&gt;피해자의 얼굴은 짐승의 머리처럼 변해가고, 다른 손은 강한 촉수로 변이됩니다. </SpellStarVampireVisit.rulePack.rulesStrings.5>
+    <SpellStarVampireVisit.rulePack.rulesStrings.6>desc_sentence-&gt;주위 사람들 중 한명은, 소란스러움 속에서 괴물의 모습을 그려내려 하고 있습니다.</SpellStarVampireVisit.rulePack.rulesStrings.6>
+
+    <SpellSunkenShip.label>침몰한 배</SpellSunkenShip.label>
+    <SpellSunkenShip.rulePack.rulesStrings.0>tale_noun-&gt;하늘에서 우주선이 떨어졌던 사건</SpellSunkenShip.rulePack.rulesStrings.0>
+    <SpellSunkenShip.rulePack.rulesStrings.1>image-&gt;거대한 문이 하늘에서 열리고, [circumstance_group] 배의 덩어리가 그대로 지면을 향해 곤두박질 치는 모습</SpellSunkenShip.rulePack.rulesStrings.1>
+    <SpellSunkenShip.rulePack.rulesStrings.2>circumstance_phrase-&gt;모든 사람들이 공포에 떨고 있는 와중에</SpellSunkenShip.rulePack.rulesStrings.2>
+    <SpellSunkenShip.rulePack.rulesStrings.3>circumstance_phrase-&gt;모든 사람들이 기쁨에 떨고 있는 와중에</SpellSunkenShip.rulePack.rulesStrings.3>
+    <SpellSunkenShip.rulePack.rulesStrings.4>desc_sentence-&gt;추락한 우주선은 거대한 고대의 잔해로 되어 있습니다.</SpellSunkenShip.rulePack.rulesStrings.4>
+    <SpellSunkenShip.rulePack.rulesStrings.5>desc_sentence-&gt;그 안에는 수 많은 빛나는 보석, 반짝이는 동전 및 고대로부터 잃어버린 다른 보물들이 있습니다.</SpellSunkenShip.rulePack.rulesStrings.5>
+    <SpellSunkenShip.rulePack.rulesStrings.6>desc_sentence-&gt;두개의 거대한 닻이 우주선 잔해 앞에서 교차하고 있습니다.</SpellSunkenShip.rulePack.rulesStrings.6>
+
+</LanguageData>

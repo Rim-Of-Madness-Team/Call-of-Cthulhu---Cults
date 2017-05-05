@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <Cults_Grimoire.label>신비한 마도서</Cults_Grimoire.label>
+    <Cults_Grimoire.description>...</Cults_Grimoire.description>
+
+    <Cults_TheKingInYellow.label>노란옷의 왕</Cults_TheKingInYellow.label>
+    <Cults_TheKingInYellow.description>노란옷의 왕의 신화가 적혀있는 책입니다.첫 액트의 내용은 지루하고 재미없게 느껴질 수 있으나, 첫 액트를 넘어가서 진행하다보면 광기와, 고대의 상징이 간단한 옐로우 사인으로 묘사된 컬트적 집착을 유발하게 될 것입니다. </Cults_TheKingInYellow.description>
+    <Cults_TheKingInYellow.comps.2.useLabel>활성</Cults_TheKingInYellow.comps.2.useLabel>
+
+</LanguageData>

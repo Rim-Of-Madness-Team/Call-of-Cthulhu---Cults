@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThoughtDefs>
+
+  <!-- Cult social interactions -->
+
+  <ThoughtDef>
+    <defName>SafePreach</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+	<stackLimit>300</stackLimit>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+	<stackedEffectMultiplier>0.85</stackedEffectMultiplier>	
+    <stages>
+      <li>
+        <label>shared beliefs</label>
+        <baseOpinionOffset>15</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>DangerPreach</defName>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+	<stackLimit>300</stackLimit>
+    <stackLimitPerPawn>10</stackLimitPerPawn>
+	<stackedEffectMultiplier>0.95</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>offended beliefs</label>
+        <baseOpinionOffset>-5</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThoughtDef>
+    <defName>MidnightInquisition</defName>
+    <durationDays>10</durationDays>
+	<nullifyingTraits>
+      <li>Psychopath</li>
+      <li>Bloodlust</li>
+    </nullifyingTraits>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>attacked preacher</label>
+        <description>We had to take matters into our own hands. A cult? That should be stopped.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</ThoughtDefs>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<NameMakerDefs>
+  
+  <RulePackDef>
+    <defName>NamerCults</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->Order of [deity]</li>
+		<li>name->Church of [ideal]</li>
+        <li>name->Esoteric Order of [deity]</li>
+		<li>name->Gatekeepers of [deity]</li>
+		<li>name->Temple of [deity]</li>
+		<li>name->Children of [ideal]</li>
+      </rulesStrings>
+	  <rulesRaw>
+		<li Class="Rule_File">
+		<keyword>deity</keyword>
+		<path>NameBanks/Names_Deities</path>
+		</li>
+		<li Class="Rule_File">
+		<keyword>ideal</keyword>
+		<path>NameBanks/Names_Ideals</path>
+		</li>
+	  </rulesRaw>	  
+    </rulePack>
+  </RulePackDef>
+
+</NameMakerDefs>

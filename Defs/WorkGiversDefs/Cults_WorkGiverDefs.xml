@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<WorkGivers>
+  
+	<WorkGiverDef>
+		<defName>LoadTransportersPawn</defName>
+		<label>load transporters</label>
+		<giverClass>CultOfCthulhu.WorkGiver_LoadTransportersPawn</giverClass>
+		<workType>Hauling</workType>
+		<verb>load</verb>
+		<gerund>loading</gerund>
+		<priorityInType>110</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+    <WorkGiverDef>
+		<defName>PruneAndRepair</defName>
+		<label>repair damaged things</label>
+		<giverClass>CultOfCthulhu.WorkGiver_PruneAndRepair</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>81</priorityInType>
+		<verb>prune and repair</verb>
+		<gerund>pruning and repairing</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<canBeDoneByNonColonists>true</canBeDoneByNonColonists>
+	</WorkGiverDef>
+	
+
+	
+</WorkGivers>

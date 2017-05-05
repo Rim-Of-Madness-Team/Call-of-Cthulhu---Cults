@@ -1,0 +1,5 @@
+C:\Users\mattw\Downloads\ExampleDllMod-master\ExampleDllMod-master\RimWorld_ExampleProjectDLL\bin\Debug\CosmicHorrors.dll
+C:\Users\mattw\Downloads\ExampleDllMod-master\ExampleDllMod-master\RimWorld_ExampleProjectDLL\bin\Debug\CosmicHorrors.pdb
+C:\Users\mattw\Downloads\ExampleDllMod-master\ExampleDllMod-master\RimWorld_ExampleProjectDLL\obj\Debug\CosmicHorrors.dll
+C:\Users\mattw\Downloads\ExampleDllMod-master\ExampleDllMod-master\RimWorld_ExampleProjectDLL\obj\Debug\CosmicHorrors.pdb
+C:\Users\mattw\Downloads\ExampleDllMod-master\ExampleDllMod-master\RimWorld_ExampleProjectDLL\obj\Debug\CosmicHorrors.csprojResolveAssemblyReference.cache

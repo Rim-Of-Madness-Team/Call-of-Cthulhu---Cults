@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <DeepOneAlt.label>딥 원(Deep Ones)</DeepOneAlt.label>
+    <DeepOneAlt.description>...</DeepOneAlt.description>
+    <DeepOneAlt.pawnsPlural>딥 원(Deep Ones)</DeepOneAlt.pawnsPlural>
+    <DeepOneAlt.fixedName>곤충들</DeepOneAlt.fixedName>
+
+    <Cults_Sailors.label>선원들</Cults_Sailors.label>
+    <Cults_Sailors.description>바다 근처 육지에서 일하는 사람들</Cults_Sailors.description>
+    <Cults_Sailors.pawnsPlural>선원들</Cults_Sailors.pawnsPlural>
+    <Cults_Sailors.fixedName>선원</Cults_Sailors.fixedName>
+
+</LanguageData>

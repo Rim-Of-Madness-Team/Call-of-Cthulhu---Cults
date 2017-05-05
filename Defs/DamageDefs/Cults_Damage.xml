@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef Name="PsionicInjuryBase" Abstract="True">
+    <workerClass>DamageWorker_AddInjury</workerClass>
+  </DamageDef>
+
+  <DamageDef ParentName="PsionicInjuryBase">
+    <defName>Cults_Psionic</defName>
+    <label>pscychic attack</label>
+    <externalViolence>true</externalViolence>	
+    <makesBlood>false</makesBlood>
+    <harmsHealth>false</harmsHealth>	
+    <deathMessage>{0} has died from brain death.</deathMessage>
+    <hediff>Cults_Psionic</hediff>
+    <impactSoundType>Electric</impactSoundType>
+    <armorCategory>Electric</armorCategory>
+    <additionalHediffs>
+      <li>
+        <hediff>IntracranialPressureBuildup</hediff>
+        <severityPerDamageDealt>0.016</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <explosionCellMote>Mote_BlastFlame</explosionCellMote>	
+    <incapChanceMultiplier>1.5</incapChanceMultiplier>	
+  </DamageDef>
+</Defs>

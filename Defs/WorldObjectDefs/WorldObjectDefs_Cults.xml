@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  
+  <WorldObjectDef>
+    <defName>Cults_UtilityWorldObject</defName>
+    <worldObjectClass>CultOfCthulhu.UtilityWorldObject_GlobalCultTracker</worldObjectClass>
+    <canHaveFaction>false</canHaveFaction>
+	<selectable>false</selectable>
+	<neverMultiSelect>true</neverMultiSelect>
+	<useDynamicDrawer>true</useDynamicDrawer>
+  </WorldObjectDef>
+  
+</Defs>

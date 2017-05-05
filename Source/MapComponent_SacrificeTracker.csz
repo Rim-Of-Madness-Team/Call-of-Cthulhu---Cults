@@ -1,0 +1,146 @@
+﻿// ----------------------------------------------------------------------
+// These are basic usings. Always let them be here.
+// ----------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+
+// ----------------------------------------------------------------------
+// These are RimWorld-specific usings. Activate/Deactivate what you need:
+// ----------------------------------------------------------------------
+using UnityEngine;         // Always needed
+//using VerseBase;         // Material/Graphics handling functions are found here
+using Verse;               // RimWorld universal objects are here (like 'Building')
+using Verse.AI;          // Needed when you do something with the AI
+using Verse.AI.Group;
+using Verse.Sound;       // Needed when you do something with Sound
+using Verse.Noise;       // Needed when you do something with Noises
+using RimWorld;            // RimWorld specific functions are found here (like 'Building_Battery')
+using RimWorld.Planet;   // RimWorld specific functions for world creation
+//using RimWorld.SquadAI;  // RimWorld specific functions for squad brains 
+
+namespace CultOfCthulhu
+{
+    class MapComponent_SacrificeTracker : MapComponent
+    {
+        public CultUtility.SacrificeResult lastResult = CultUtility.SacrificeResult.none; // Default
+        public Building_SacrificialAltar lastUsedAltar = null; //Default
+        public IncidentDef lastSideEffect = null;
+        public IntVec3 lastLocation = IntVec3.Invalid;
+        public bool wasDoubleTheFun = false;
+        public IncidentDef lastDoubleSideEffect = null;
+
+        public static MapComponent_SacrificeTracker Get
+        {
+            get
+            {
+                MapComponent_SacrificeTracker mapComponent_SacrificeTracker = Find.Map.components.OfType<MapComponent_SacrificeTracker>().FirstOrDefault<MapComponent_SacrificeTracker>();
+                bool flag = mapComponent_SacrificeTracker == null;
+                if (flag)
+                {
+                    mapComponent_SacrificeTracker = new MapComponent_SacrificeTracker();
+                    Find.Map.components.Add(mapComponent_SacrificeTracker);
+                }
+                return mapComponent_SacrificeTracker;
+            }
+        }
+
+        public void ClearVariables()
+        {
+            lastUsedAltar.tempSacrifice = null;
+            lastResult = CultUtility.SacrificeResult.none; // Default
+            lastUsedAltar = null; //Default
+            lastSideEffect = null;
+            lastLocation = IntVec3.Invalid;
+            wasDoubleTheFun = false;
+            lastDoubleSideEffect = null;
+        }
+
+
+
+        public string GenerateFailureString()
+        {
+            StringBuilder s = new StringBuilder();
+            int ran = Rand.Range(1, 40);
+            string message = "SacrificeFailMessage" + ran.ToString();
+            string messageObject = message.Translate(new object[]
+            {
+                    lastUsedAltar.executioner
+            });
+            s.Append(messageObject);
+            return s.ToString();
+        }
+
+        public void GenerateSacrificeMessage()
+        {
+            StringBuilder s = new StringBuilder();
+            s.Append("SacrificeIntro".Translate());
+            s.Append(" " + lastUsedAltar.currentSacrificeDeity.Label);
+            s.Append(" " + lastUsedAltar.currentSpell.letterLabel + ". ");
+            if (lastResult != CultUtility.SacrificeResult.success)
+                s.Append(GenerateFailureString());
+            if ((int)lastResult <= 3 && (int)lastResult > 1)
+            {
+                s.Append(" " + lastSideEffect.letterText);
+                if (wasDoubleTheFun)
+                {
+                    s.Append(" " + lastDoubleSideEffect.letterText);
+                }
+            }
+            if (lastResult == CultUtility.SacrificeResult.mixedsuccess)
+            {
+                List<string> buts = new List<string> {
+                    "Even so",
+                    "Fortunately",
+                    "Despite this setback",
+                    "Luckily"
+                };
+                s.Append(". " + buts.RandomElement<string>() +", ");
+            }
+            if ((int)lastResult > 2)
+                s.Append(lastUsedAltar.executioner.ToString() + " " + lastUsedAltar.currentSpell.letterText + ".");
+            s.Append(" The ritual was a ");
+
+            LetterType letterType = LetterType.BadNonUrgent;
+            switch (lastResult)
+            {
+                case CultUtility.SacrificeResult.success:
+                    s.Append("complete success.");
+                    letterType = LetterType.Good;
+                    break;
+                case CultUtility.SacrificeResult.mixedsuccess:
+                    letterType = LetterType.Good;
+                    s.Append("mixed success.");
+                    break;
+                case CultUtility.SacrificeResult.failure:
+                    s.Append("failure.");
+                    break;
+                case CultUtility.SacrificeResult.criticalfailure:
+                    s.Append("complete failure.");
+                    break;
+                case CultUtility.SacrificeResult.none:
+                    s.Append("this should never happen");
+                    break;
+            }
+
+            string labelToTranslate = "SacrificeLabel" + lastResult.ToString();
+            string textLabel = labelToTranslate.Translate();
+            Log.Message(textLabel);
+            Find.LetterStack.ReceiveLetter(textLabel, s.ToString(), letterType, lastLocation);
+        }
+   
+        public override void ExposeData()
+        {
+            Scribe_Values.LookValue<CultUtility.SacrificeResult>(ref this.lastResult, "lastResult", CultUtility.SacrificeResult.none, false);
+            Scribe_References.LookReference<Building_SacrificialAltar>(ref this.lastUsedAltar, "lastUsedAltar", false);
+            Scribe_Defs.LookDef<IncidentDef>(ref this.lastSideEffect, "lastSideEffect");
+            Scribe_Values.LookValue<bool>(ref this.wasDoubleTheFun, "wasDoubleTheFun", false, false);
+            Scribe_Values.LookValue<IntVec3>(ref this.lastLocation, "lastLocation", IntVec3.Invalid, false);
+            Scribe_Defs.LookDef<IncidentDef>(ref this.lastDoubleSideEffect, "lastDoubleSideEffect");
+            base.ExposeData();
+
+        }
+    }
+}

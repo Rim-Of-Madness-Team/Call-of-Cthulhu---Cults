@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyPartGroupDef>
+    <defName>Cults_Wings</defName>
+    <label>both wings</label>
+  </BodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>Cults_Claws</defName>
+    <label>claws</label>
+  </BodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>Cults_Hooves</defName>
+    <label>hooves</label>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+    <defName>Cults_Tentacles</defName>
+    <label>mass of tentacles</label>
+  </BodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>Cults_Stinger</defName>
+    <label>stinger</label>
+  </BodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>Cults_Mind</defName>
+    <label>overwhelming mind</label>
+  </BodyPartGroupDef>
+
+  <!-- Byakhee -->
+    
+  <BodyPartDef>
+    <defName>Cults_Stinger</defName>
+    <label>stinger</label>
+    <hitPoints>15</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <bleedingRateMultiplier>0</bleedingRateMultiplier>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_Hune</defName>
+    <label>hune</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
+    <skinCovered>false</skinCovered>
+    <activities>
+      <li>Breathing_main</li>
+    </activities>
+  </BodyPartDef>
+  
+  
+  <BodyPartDef>
+    <defName>Cults_AirSac</defName>
+    <label>air sac</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
+    <skinCovered>false</skinCovered>
+    <activities>
+      <li>Breathing_main</li>
+    </activities>
+  </BodyPartDef>
+  
+  
+  <!-- Cosmic Horror Parts -->
+  
+  <BodyPartDef>
+    <defName>Cults_LeftClaw</defName>
+	<label>left claw</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Manipulation_way2</li>
+    </activities>	
+  </BodyPartDef>
+  <BodyPartDef>
+  
+  <defName>Cults_RightClaw</defName>
+    <label>right claw</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>    	
+    <activities>
+      <li>Manipulation_way2</li>
+    </activities>	
+  </BodyPartDef>  
+
+  <BodyPartDef>
+    <defName>Cults_LeftFlipper</defName>
+    <label>left flipper</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Moving_way2</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Cults_RightFlipper</defName>
+    <label>right flipper</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Moving_way2</li>
+    </activities>
+  </BodyPartDef>
+    
+  <BodyPartDef>
+    <defName>Cults_Leg</defName>
+    <label>leg</label>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Moving_leftWay</li>
+      <li>Moving_rightWay</li>
+    </activities>
+  </BodyPartDef>
+
+  
+  <BodyPartDef>
+    <defName>Cults_Hoof</defName>
+    <label>hoof</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>6</frostbiteVulnerability>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Moving_tool</li>
+    </activities>
+  </BodyPartDef>
+  
+  
+  <BodyPartDef>
+    <defName>Cults_Gills</defName>
+    <label>gills</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Breathing_way</li>
+    </activities>
+  </BodyPartDef>
+    
+  <BodyPartDef>
+    <defName>Cults_DorsalFin</defName>
+    <label>dorsal fin</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>0.6</frostbiteVulnerability>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+  </BodyPartDef>
+    
+  
+  <BodyPartDef>
+    <defName>Cults_Tentacle</defName>
+    <label>tentacle</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+  
+    <BodyPartDef>
+    <defName>Cults_TentacleFlight</defName>
+    <label>tentacle</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Manipulation_tool</li>
+	  <li>Moving_tool</li>
+    </activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_LeftWing</defName>
+    <label>left wing</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Moving_tool</li>
+    </activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_RightWing</defName>
+    <label>right wing</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Moving_tool</li>
+    </activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_Nostril</defName>
+    <label>nostril</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Internal_LeftEar</defName>
+    <label>internal left ear</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0.024</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <activities>
+      <li>Hearing_source</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Internal_RightEar</defName>
+    <label>internal left ear</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0.024</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <activities>
+      <li>Hearing_source</li>
+    </activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_Maw</defName>
+    <label>maw</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Eating_source</li>
+      <li>Talking_source</li>
+    </activities>
+  </BodyPartDef>  
+  
+  <BodyPartDef>
+    <defName>Cults_MawHuge</defName>
+    <label>massive maw</label>
+    <hitPoints>40</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <activities>
+      <li>Eating_source</li>
+      <li>Talking_source</li>
+    </activities>
+  </BodyPartDef>
+  
+  
+  <BodyPartDef>
+    <defName>Cults_ShapeshiftingOrgan</defName>
+    <label>shapeshifting organ</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <activities>
+	  <li>Hearing_source</li>
+      <li>Metabolism</li>
+      <li>Breathing_main</li>	  
+      <li>BloodFiltration_liver</li>
+      <li>BloodFiltration_kidney</li>	  
+      <li>Eating_digestion</li>	  
+      <li>BloodPumping</li>
+      <li>Consciousness_brain</li>
+      <li>Sight_brain</li>
+      <li>Hearing_brain</li>
+      <li>Moving_brain</li>
+      <li>Manipulation_brain</li>
+      <li>Talking_brain</li>
+    </activities>	
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+  
+    <BodyPartDef>
+    <defName>Cults_Kidney</defName>
+    <label>kidney</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
+    <skinCovered>false</skinCovered>
+    <activities>
+      <li>BloodFiltration_kidney</li>
+    </activities>
+    <spawnThingOnRemoved>Kidney</spawnThingOnRemoved>
+  </BodyPartDef>
+  
+    <BodyPartDef>
+    <defName>Cults_Lung</defName>
+    <label>lung</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
+    <skinCovered>false</skinCovered>
+    <activities>
+      <li>Breathing_main</li>
+    </activities>
+    <spawnThingOnRemoved>Lung</spawnThingOnRemoved>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_Eye</defName>
+    <label>eye</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <useDestroyedOutLabel>true</useDestroyedOutLabel>
+    <beautyRelated>true</beautyRelated>
+    <activities>
+      <li>Sight_source</li>
+    </activities>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+  </BodyPartDef>
+
+    <BodyPartDef>
+    <defName>Cults_Feeler</defName>
+    <label>feeler</label>
+    <hitPoints>5</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <useDestroyedOutLabel>true</useDestroyedOutLabel>
+    <beautyRelated>true</beautyRelated>
+    <activities>
+      <li>Sight_source</li>
+	  <li>Hearing_source</li>	  
+    </activities>
+  </BodyPartDef>
+
+
+ <BodyPartDef>
+    <defName>Cults_SporeHead</defName>
+    <label>spore structure</label>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <activities>
+      <li>Sight_source</li>
+	  <li>Hearing_source</li>
+    </activities>	
+    <skinCovered>false</skinCovered>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_Sucker</defName>
+    <label>sucker</label>
+    <hitPoints>5</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <beautyRelated>true</beautyRelated>
+    <activities>
+      <li>Eating_source</li>
+    </activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_PsionicLobe</defName>
+    <label>psionic cortex</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+	<activities>
+      <li>Consciousness_brain</li>
+      <li>Talking_source</li>
+	  <li>Hearing_source</li>
+      <li>Sight_source</li>	  
+	</activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_FrontalLobe</defName>
+    <label>frontal lobe</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+	<activities>
+      <li>Consciousness_brain</li>	
+	  <li>Talking_brain</li>
+      <li>Moving_brain</li>	
+	</activities>
+  </BodyPartDef>
+ 
+  <BodyPartDef>
+    <defName>Cults_ParietalLobe</defName>
+    <label>parietal lobe</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+	<activities>
+      <li>Manipulation_brain</li>	
+      <li>Moving_brain</li>		
+    </activities>	  
+  </BodyPartDef>
+ 
+  <BodyPartDef>
+    <defName>Cults_OccipitalLobe</defName>
+    <label>occipital lobe</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <activities>
+      <li>Sight_brain</li>	
+    </activities>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+ 
+  <BodyPartDef>
+    <defName>Cults_TemporalLobe</defName>
+    <label>temporal lobe</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <activities>
+      <li>Consciousness_brain</li>	
+      <li>Talking_brain</li>
+      <li>Hearing_brain</li>	
+    </activities>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+ 
+  <BodyPartDef>
+    <defName>Cults_BrainStem</defName>
+    <label>brain stem</label>
+    <hitPoints>30</hitPoints>
+    <oldInjuryBaseChance>1</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <activities>
+      <li>Consciousness_brain</li>	  
+      <li>Moving_brain</li>
+      <li>Manipulation_brain</li>
+    </activities>
+    <dontSuggestAmputation>true</dontSuggestAmputation>
+  </BodyPartDef>
+ 
+   <BodyPartDef>
+    <defName>Cults_FlightOrgan</defName>
+    <label>flight organ</label>
+    <hitPoints>40</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <activities>
+	  <li>Moving_way1</li>
+      <li>Moving_way2</li>
+    </activities>
+  </BodyPartDef>
+  
+  <!-- Chthonian -->
+  
+  <BodyPartDef>
+    <defName>Cults_ChthonianFirstRing</defName>
+    <label>first body ring</label>
+    <hitPoints>100</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>true</isAlive>
+    <activities>
+	  <li>Hearing_source</li>
+      <li>Metabolism</li>
+      <li>Breathing_main</li>	  
+      <li>BloodFiltration_liver</li>
+      <li>BloodFiltration_kidney</li>	  
+      <li>Eating_digestion</li>	  
+      <li>BloodPumping</li>
+      <li>Consciousness_brain</li>
+      <li>Sight_brain</li>
+      <li>Hearing_brain</li>
+      <li>Moving_brain</li>
+      <li>Manipulation_brain</li>
+      <li>Talking_brain</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Cults_ChthonianSecondRing</defName>
+    <label>second body ring</label>
+    <hitPoints>100</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>true</isAlive>
+    <activities>
+	  <li>Hearing_source</li>
+      <li>Metabolism</li>
+      <li>Breathing_main</li>	  
+      <li>BloodFiltration_liver</li>
+      <li>BloodFiltration_kidney</li>	  
+      <li>Eating_digestion</li>	  
+      <li>BloodPumping</li>
+      <li>Consciousness_brain</li>
+      <li>Sight_brain</li>
+      <li>Hearing_brain</li>
+      <li>Moving_brain</li>
+      <li>Manipulation_brain</li>
+      <li>Talking_brain</li>
+    </activities>
+  </BodyPartDef>
+
+
+  <BodyPartDef>
+    <defName>Cults_ChthonianThirdRing</defName>
+    <label>third body ring</label>
+    <hitPoints>100</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>true</isAlive>
+    <activities>
+	  <li>Hearing_source</li>
+      <li>Metabolism</li>
+      <li>Breathing_main</li>	  
+      <li>BloodFiltration_liver</li>
+      <li>BloodFiltration_kidney</li>	  
+      <li>Eating_digestion</li>	  
+      <li>BloodPumping</li>
+      <li>Consciousness_brain</li>
+      <li>Sight_brain</li>
+      <li>Hearing_brain</li>
+      <li>Moving_brain</li>
+      <li>Manipulation_brain</li>
+      <li>Talking_brain</li>
+    </activities>
+  </BodyPartDef>
+  
+  
+  <BodyPartDef>
+    <defName>Cults_ChthonianFourthRing</defName>
+    <label>fourth body ring</label>
+    <hitPoints>100</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>true</isAlive>
+    <activities>
+	  <li>Hearing_source</li>
+      <li>Metabolism</li>
+      <li>Breathing_main</li>	  
+      <li>BloodFiltration_liver</li>
+      <li>BloodFiltration_kidney</li>	  
+      <li>Eating_digestion</li>	  
+      <li>BloodPumping</li>
+      <li>Consciousness_brain</li>
+      <li>Sight_brain</li>
+      <li>Hearing_brain</li>
+      <li>Moving_brain</li>
+      <li>Manipulation_brain</li>
+      <li>Talking_brain</li>
+    </activities>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_ChthonianFifthRing</defName>
+    <label>fourth body ring</label>
+    <hitPoints>100</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>true</isAlive>
+    <activities>
+	  <li>Hearing_source</li>
+      <li>Metabolism</li>
+      <li>Breathing_main</li>	  
+      <li>BloodFiltration_liver</li>
+      <li>BloodFiltration_kidney</li>	  
+      <li>Eating_digestion</li>	  
+      <li>BloodPumping</li>
+      <li>Consciousness_brain</li>
+      <li>Sight_brain</li>
+      <li>Hearing_brain</li>
+      <li>Moving_brain</li>
+      <li>Manipulation_brain</li>
+      <li>Talking_brain</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Cults_ChthonianSixthRing</defName>
+    <label>fourth body ring</label>
+    <hitPoints>100</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>true</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>true</isAlive>
+    <activities>
+	  <li>Hearing_source</li>
+      <li>Metabolism</li>
+      <li>Breathing_main</li>	  
+      <li>BloodFiltration_liver</li>
+      <li>BloodFiltration_kidney</li>	  
+      <li>Eating_digestion</li>	  
+      <li>BloodPumping</li>
+      <li>Consciousness_brain</li>
+      <li>Sight_brain</li>
+      <li>Hearing_brain</li>
+      <li>Moving_brain</li>
+      <li>Manipulation_brain</li>
+      <li>Talking_brain</li>
+    </activities>
+  </BodyPartDef>  
+  
+</Defs>

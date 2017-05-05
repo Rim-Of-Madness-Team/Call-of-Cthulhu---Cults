@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+	<defName>Entity_Cthulhu</defName>
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+	<label>Cthulhu</label>
+	<version>6</version>
+	<description>He who waits dreaming.</description>
+    <symbol>Mote/Symbols/Cthulhu</symbol>	
+	<tier1SpellDefs>
+		<li>SpellFavor</li>
+		<li>SpellOrbitalInsanityWave</li>	
+		<li>SpellAspectOfCthulhu</li>
+	</tier1SpellDefs>
+	<tier2SpellDefs>
+		<li>SpellPsionicGrowth</li>
+	</tier2SpellDefs>
+	<tier3SpellDefs>
+		<li>SpellTerrestrialInsanityWave</li>
+	</tier3SpellDefs>
+	<finalSpellDef>SpellAwakenCthulhu</finalSpellDef>
+	<favoredApparel>
+		<li>Apparel_CthulhuMaskHood</li>
+	</favoredApparel>
+</ThingDef>
+
+<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+	<defName>Entity_Dagon</defName>
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+	<label>Dagon</label>
+	<version>5</version>
+	<description>The Ur - Deep One, grown large and powerful over the millennia.</description>
+    <symbol>Mote/Symbols/Dagon</symbol>	
+	<tier1SpellDefs>
+		<li>SpellFavor</li>	
+		<li>SpellSunkenShip</li>
+		<li>SpellTreasuresOfTheDeep</li>
+	</tier1SpellDefs>
+	<tier2SpellDefs>
+		<li>SpellDefendTheBrood</li>
+	</tier2SpellDefs>
+	<tier3SpellDefs>
+		<li>SpellBountyOfTheSea</li>
+	</tier3SpellDefs>
+	<finalSpellDef>SpellOrthogenesis</finalSpellDef>
+</ThingDef>
+
+
+<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+	<defName>Entity_Shub</defName>
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+	<label>Shub-Niggurath</label>
+	<version>6</version>
+	<description>The Black Goat of the Woods with a Thousand Young.</description>
+	<favorsOutdoorWorship>true</favorsOutdoorWorship>
+    <symbol>Mote/Symbols/Shub</symbol>		
+	<tier1SpellDefs>
+		<li>SpellFavor</li>	
+		<li>SpellFertility</li>
+		<li>SpellMotherOfGoats</li>
+	</tier1SpellDefs>
+	<tier2SpellDefs>
+		<li>SpellForbiddenKnowledge</li>	
+	</tier2SpellDefs>
+	<tier3SpellDefs>
+		<li>SpellWombBetweenWorlds</li>
+	</tier3SpellDefs>
+	<finalSpellDef>SpellTransdimensionalConvergence</finalSpellDef>	
+</ThingDef>
+
+
+<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+	<defName>Entity_Nyarlathotep</defName>
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+	<label>Nyarlathotep</label>
+	<version>6</version>
+	<description>The messenger, heart and soul of the Outer Gods.</description>
+    <symbol>Mote/Symbols/Nyarlathotep</symbol>	
+	<tier1SpellDefs>
+		<li>SpellFavor</li>	
+		<li>SpellStarryWisdom</li>
+		<li>SpellForbiddenKnowledge</li>		
+	</tier1SpellDefs>
+	<tier2SpellDefs>
+		<li>SpellChaosTheory</li>
+	</tier2SpellDefs>
+	<tier3SpellDefs>
+		<li>SpellDarkEmissary</li>
+	</tier3SpellDefs>
+	<finalSpellDef>SpellPilgrimageToKadath</finalSpellDef>
+	<favoredApparel>
+		<li>Apparel_NyarlathotepHood</li>
+	</favoredApparel>	
+</ThingDef>
+
+<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+	<defName>Entity_Hastur</defName>
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+	<label>Hastur</label>
+	<version>2</version>
+	<description>From His Yellow Kingdom, the Unspeakable One watches.</description>
+    <symbol>Mote/Symbols/Hastur</symbol>	
+	<tier1SpellDefs>
+		<li>SpellFavor</li>	
+		<li>SpellTheKingInYellow</li>
+		<li>SpellSummonByakhee</li>		
+	</tier1SpellDefs>
+	<tier2SpellDefs>
+		<li>SpellVisionsOfCarcosa</li>
+	</tier2SpellDefs>
+	<tier3SpellDefs>
+		<li>SpellUnspeakableOath</li>
+	</tier3SpellDefs>	
+	<finalSpellDef>SpellAbsorptionByCarcosa</finalSpellDef>
+	<favoredApparel>
+		<li>Apparel_CultistHood</li>
+	</favoredApparel>	
+</ThingDef>
+
+</Defs>

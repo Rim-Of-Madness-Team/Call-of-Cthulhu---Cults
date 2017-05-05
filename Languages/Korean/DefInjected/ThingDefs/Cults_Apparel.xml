@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <Apparel_CultistRobes.description>깨달은 자들의 의복입니다.
+		</Apparel_CultistRobes.description>
+    <Apparel_CultistRobes.label>광신도의 예복</Apparel_CultistRobes.label>
+
+    <Apparel_SailorUniform.description>선원들을 위한 옷입니다.
+		</Apparel_SailorUniform.description>
+    <Apparel_SailorUniform.label>세일러 유니폼</Apparel_SailorUniform.label>
+
+    <Apparel_CultistHood.label>광신도의 후드 (가려짐)</Apparel_CultistHood.label>
+    <Apparel_CultistHood.description>비밀스러운 정칙민을 위한 후드.</Apparel_CultistHood.description>
+
+    <Apparel_CthulhuMaskHood.label>광신도의 후드 (크툴루 가면)</Apparel_CthulhuMaskHood.label>
+    <Apparel_CthulhuMaskHood.description>이 가면은 신을 더 기쁘게 하기 위한 목적으로 디자인되었습니다. 착용하는 것으로 당신의 노래는 더 신앙적이며, 신의 속삭임에 더 가까워집니다.</Apparel_CthulhuMaskHood.description>
+
+    <Apparel_NyarlathotepHood.label>광신도의 후드 (니알라토텝)</Apparel_NyarlathotepHood.label>
+    <Apparel_NyarlathotepHood.description>니알라토텝의 숭배자들을 위해, 이 두건은 그 목적에 알맞게 디자인되었습니다. 그것으로 당시느이 노래는 더욱 신앙적이며, 그의 음흉한 속삭임은 더욱 더 가까워집니다.</Apparel_NyarlathotepHood.description>
+
+    <Apparel_DagonMitre.label>광신도의 후드 (다곤 가면)</Apparel_DagonMitre.label>
+    <Apparel_DagonMitre.description>다곤의 숭배자들을 위해, 이 두건은 그 목적에 알맞게 디자인되었습니다. 그것으로 당시느이 노래는 더욱 신앙적이며, 그의 음흉한 속삭임은 더욱 더 가까워집니다.</Apparel_DagonMitre.description>
+
+    <Apparel_ShubMask.label>광신도의 후드 (슈브 니구라스 가면)</Apparel_ShubMask.label>
+    <Apparel_ShubMask.description>슈브 니구라스의 숭배자들을 위해, 이 두건은 그 목적에 알맞게 디자인되었습니다. 그것으로 당시느이 노래는 더욱 신앙적이며, 그의 음흉한 속삭임은 더욱 더 가까워집니다.</Apparel_ShubMask.description>
+
+    <Apparel_StandardHood.label>광신도의 후드 (일반)</Apparel_StandardHood.label>
+    <Apparel_StandardHood.description>비밀스러운 정착민을 위한 후드.</Apparel_StandardHood.description>
+
+    <Apparel_SailorsCap.label>세일러 캡</Apparel_SailorsCap.label>
+    <Apparel_SailorsCap.description>선원 모자</Apparel_SailorsCap.description>
+
+</LanguageData>

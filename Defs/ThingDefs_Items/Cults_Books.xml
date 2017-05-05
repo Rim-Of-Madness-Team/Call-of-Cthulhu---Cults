@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+
+  <ThingDef Name="Cults_Grimoire">
+	<defName>Cults_Grimoire</defName>
+    <thingClass>CultOfCthulhu.ThingWithComps_CultGrimoire</thingClass>
+	<label>grimoire of the occult</label>
+	<description></description>
+    <graphicData>
+      <texPath>Item/Resource/Grimoire/Grimoire</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>	
+    <category>Item</category>
+    <pathCost>10</pathCost>
+    <useHitPoints>true</useHitPoints>
+	<selectable>true</selectable>	
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>20</MarketValue>	
+      <MaxHitPoints>20</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <SellPriceFactor>0.25</SellPriceFactor>
+    </statBases>
+    <costList>
+      <WoodLog>1</WoodLog>
+    </costList>
+    <tradeNeverStack>true</tradeNeverStack>	
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>Artifacts</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Artifact</li>
+    </tradeTags>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>	
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>	
+    </comps>
+  </ThingDef>
+  
+
+  <ThingDef Name="Cults_TheKingInYellow">
+	<defName>Cults_TheKingInYellow</defName>
+    <thingClass>ThingWithComps</thingClass>
+	<label>The King in Yellow</label>
+	<description>The King in Yellow appears as a mysterious, glowing book. The contents of which are mundane during the first act of the play, however proceeding beyond the first act of the play causes madness and a cult-like obsession with an ancient symbol described simply as The Yellow Sign. </description>
+    <graphicData>
+      <texPath>Item/Resource/TheKingInYellow/TheKingInYellow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>	
+    <category>Item</category>
+    <pathCost>10</pathCost>
+    <useHitPoints>true</useHitPoints>
+	<selectable>true</selectable>	
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <Mass>0.5</Mass>	
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>20</MarketValue>	
+      <MaxHitPoints>20</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <SellPriceFactor>0.25</SellPriceFactor>
+    </statBases>
+    <costList>
+      <WoodLog>1</WoodLog>
+    </costList>	
+    <tradeability>Sellable</tradeability>	
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>	
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(255,255,0,0)</glowColor>
+      </li>	
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Usable">
+        <useJob>UseArtifact</useJob>
+        <useLabel>Activate</useLabel>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>CompUseEffect_Artifact</compClass>
+      </li>	  
+      <li Class="CompProperties_Targetable">
+        <compClass>CompTargetable_SinglePawn</compClass>
+        <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
+      </li>
+      <li>
+        <compClass>CultOfCthulhu.CompTargetEffect_CultMinded</compClass>
+      </li>
+      <li>
+        <compClass>CompTargetEffect_GoodwillImpact</compClass>
+      </li>	  
+    </comps>
+  </ThingDef>
+  
+  
+</Resources>

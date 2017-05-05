@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <Cult_NightmareSacrificeAltar.label>타락한 제단</Cult_NightmareSacrificeAltar.label>
+    <Cult_NightmareSacrificeAltar.Description>시체가 당신의 제단을 타락시키는 나무처럼 솟아났습니다. 가지를 잘라 수리할 필요가 있습니다.</Cult_NightmareSacrificeAltar.Description>
+
+    <BurstingTentacle.label>폭발하는 촉수</BurstingTentacle.label>
+    <BurstingTentacle.description>오, 신이시여</BurstingTentacle.description>
+
+    <WombBetweenWorlds.label>세계의 자궁</WombBetweenWorlds.label>
+    <WombBetweenWorlds.description>.</WombBetweenWorlds.description>
+
+</LanguageData>

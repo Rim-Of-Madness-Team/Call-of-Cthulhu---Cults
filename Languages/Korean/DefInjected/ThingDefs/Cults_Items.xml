@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <Cults_PsionicBrain.label>싸이오닉 뇌</Cults_PsionicBrain.label>
+    <Cults_PsionicBrain.description>작은 염력인 초능력을 부여하는 신비한 종양 덩어리입니다.</Cults_PsionicBrain.description>
+
+    <Cults_MonstrousBrain.label>괴물 뇌</Cults_MonstrousBrain.label>
+    <Cults_MonstrousBrain.description>고등 지능을 부여한 신비한 종양 덩어리입니다.</Cults_MonstrousBrain.description>
+
+    <Cults_MonstrousBody.label>괴물 몸</Cults_MonstrousBody.label>
+    <Cults_MonstrousBody.description>크기가 매우 커진 괴물같은 몸입니다.</Cults_MonstrousBody.description>
+
+    <Cults_TentacleArm.label>촉수</Cults_TentacleArm.label>
+    <Cults_TentacleArm.description>마치 몸부림 치는 듯한 특이한 운동 패턴을 지닌 부속물 입니다.</Cults_TentacleArm.description>
+
+    <Cults_CthulhidTentacle.label>크툴리드 촉수</Cults_CthulhidTentacle.label>
+    <Cults_CthulhidTentacle.description>마치 몸부림 치는 듯한 특이한 운동 패턴을 지닌 부속물 입니다.</Cults_CthulhidTentacle.description>
+
+    <Cults_CthulhidEyestalk.label>소름끼치는 눈자루</Cults_CthulhidEyestalk.label>
+    <Cults_CthulhidEyestalk.description>마치 몸부림 치는 듯한 특이한 운동 패턴을 지닌 눈 부속물 입니다.</Cults_CthulhidEyestalk.description>
+
+</LanguageData>

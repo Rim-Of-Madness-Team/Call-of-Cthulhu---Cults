@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <BondedWithAnimal.label>유대의 성장</BondedWithAnimal.label>
+    <BondedWithAnimal.rulePack.rulesStrings.0>tale_noun-&gt;[human_nameShortDef](와)과 [animal_nameShortDef]의 유대</BondedWithAnimal.rulePack.rulesStrings.0>
+    <BondedWithAnimal.rulePack.rulesStrings.1>image-&gt;[circumstance_group] [human_nameFull](와)과 [animal_nameFull]는 유대감이 형성한 모습</BondedWithAnimal.rulePack.rulesStrings.1>
+    <BondedWithAnimal.rulePack.rulesStrings.2>image-&gt;[human_nameFull](은)는 [circumstance_group] [animal_nameFull](와)과 깊은 유대감을 형성하는 모습</BondedWithAnimal.rulePack.rulesStrings.2>
+    <BondedWithAnimal.rulePack.rulesStrings.3>image-&gt;[human_nameFull](은)는 [circumstance_group] [human_possessive] 사랑을 [animal_nameFull]에게 전달하려는 모습</BondedWithAnimal.rulePack.rulesStrings.3>
+    <BondedWithAnimal.rulePack.rulesStrings.4>circumstance_phrase-&gt;다른 동물들이 주위에서 계속 바라보는 중에 </BondedWithAnimal.rulePack.rulesStrings.4>
+    <BondedWithAnimal.rulePack.rulesStrings.5>circumstance_phrase-&gt;[animal_nameShortDef]의 눈을 들여다 보면서 </BondedWithAnimal.rulePack.rulesStrings.5>
+    <BondedWithAnimal.rulePack.rulesStrings.6>circumstance_phrase-&gt;만족해 보이는 모습으로 </BondedWithAnimal.rulePack.rulesStrings.6>
+    <BondedWithAnimal.rulePack.rulesStrings.7>desc_sentence-&gt;[animal_nameShortDef](은)는 [human_nameShortDef]의 품에 안겨 있는 모습입니다.</BondedWithAnimal.rulePack.rulesStrings.7>
+    <BondedWithAnimal.rulePack.rulesStrings.8>desc_sentence-&gt;[animal_nameShortDef](은)는 사랑에 취한 듯한 모습입니다.</BondedWithAnimal.rulePack.rulesStrings.8>
+    <BondedWithAnimal.rulePack.rulesStrings.9>desc_sentence-&gt;[animal_nameShortDef](은)는 고상한 표정을 뽐내고 있는 모습입니다.</BondedWithAnimal.rulePack.rulesStrings.9>
+    <BondedWithAnimal.rulePack.rulesStrings.10>desc_sentence-&gt;[animal_nameShortDef](은)는 기쁜듯이 반응하고 있는 모습입니다.</BondedWithAnimal.rulePack.rulesStrings.10>
+
+    <BecameLover.label>연인</BecameLover.label>
+    <BecameLover.rulePack.rulesStrings.0>tale_noun-&gt;[firstPawn_nameShortDef](와)과 [secondPawn_nameShortDef](이)가 서로 눈이 맞은 모습</BecameLover.rulePack.rulesStrings.0>
+    <BecameLover.rulePack.rulesStrings.1>image-&gt;[firstPawn_nameFull](이)가 [secondPawn_nameFull]의 귀에 [circumstance_group] 사랑을 속삭이는 모습</BecameLover.rulePack.rulesStrings.1>
+    <BecameLover.rulePack.rulesStrings.2>image-&gt;[firstPawn_nameFull](이)가 손으로 [secondPawn_nameFull](을)를 어루만지고 있는 모습</BecameLover.rulePack.rulesStrings.2>
+    <BecameLover.rulePack.rulesStrings.3>image-&gt;[firstPawn_nameFull](와)과 [secondPawn_nameFull](이)가 [circumstance_group] 거사를 치루고 있는 모습</BecameLover.rulePack.rulesStrings.3>
+    <BecameLover.rulePack.rulesStrings.4>image-&gt;[firstPawn_nameFull](와)과 [secondPawn_nameFull](이)가 [circumstance_group] 딥키스를 하는 모습</BecameLover.rulePack.rulesStrings.4>
+    <BecameLover.rulePack.rulesStrings.5>circumstance_phrase-&gt;비현실적으로 큰 침대에서</BecameLover.rulePack.rulesStrings.5>
+    <BecameLover.rulePack.rulesStrings.6>circumstance_phrase-&gt;시트를 서로의 사이에 두고</BecameLover.rulePack.rulesStrings.6>
+    <BecameLover.rulePack.rulesStrings.7>circumstance_phrase-&gt;반쯤 벗은 채로</BecameLover.rulePack.rulesStrings.7>
+    <BecameLover.rulePack.rulesStrings.8>circumstance_phrase-&gt;서로 땀에 젖어 있는 채로</BecameLover.rulePack.rulesStrings.8>
+    <BecameLover.rulePack.rulesStrings.9>desc_sentence-&gt;[firstPawn_nameShortDef](와)과 [secondPawn_nameShortDef](은)는 서로 안고, 안기고 있습니다.</BecameLover.rulePack.rulesStrings.9>
+    <BecameLover.rulePack.rulesStrings.10>desc_sentence-&gt;[firstPawn_nameShortDef](은)는 [secondPawn_nameShortDef]의 눈을 가리고 있습니다.</BecameLover.rulePack.rulesStrings.10>
+    <BecameLover.rulePack.rulesStrings.11>desc_sentence-&gt;[firstPawn_nameShortDef](은)는 [secondPawn_nameShortDef]에게 바람을 불고 있습니다.</BecameLover.rulePack.rulesStrings.11>
+    <BecameLover.rulePack.rulesStrings.12>desc_sentence-&gt;[firstPawn_nameShortDef](와)과 [secondPawn_nameShortDef](은)는 서로 어울려 보입니다.</BecameLover.rulePack.rulesStrings.12>
+    <BecameLover.rulePack.rulesStrings.13>desc_sentence-&gt;[firstPawn_nameShortDef](와)과 [secondPawn_nameShortDef]의 관계는 마치 거울을 보듯 자연스럽습니다..</BecameLover.rulePack.rulesStrings.13>
+    <BecameLover.rulePack.rulesStrings.14>desc_sentence-&gt;[firstPawn_nameShortDef](은)는 과격하게 [secondPawn_nameShortDef]의 몸을 스킨쉽 하고 있습니다.</BecameLover.rulePack.rulesStrings.14>
+
+    <Breakup.label>이별</Breakup.label>
+    <Breakup.rulePack.rulesStrings.0>tale_noun-&gt;[firstPawn_nameShortDef](와)과 [secondPawn_nameShortDef]의 이별</Breakup.rulePack.rulesStrings.0>
+    <Breakup.rulePack.rulesStrings.1>image-&gt;[circumstance_group] [firstPawn_nameFull](은)는 앉아서 [secondPawn_nameFull]에게 불쾌한 말을 위 아래로 쏟아내고 있는 모습</Breakup.rulePack.rulesStrings.1>
+    <Breakup.rulePack.rulesStrings.2>image-&gt;[circumstance_group] [firstPawn_nameFull](은)는 [secondPawn_nameFull](와)과 멀리 거리를 두고 있는 모습</Breakup.rulePack.rulesStrings.2>
+    <Breakup.rulePack.rulesStrings.3>image-&gt;[circumstance_group] [firstPawn_nameFull](은)는 [secondPawn_nameFull](을)를 침대에서 밀어내는 모습</Breakup.rulePack.rulesStrings.3>
+    <Breakup.rulePack.rulesStrings.4>image-&gt;[circumstance_group] [firstPawn_nameFull] rejecting a hug from [secondPawn_nameFull] [circumstance_group]</Breakup.rulePack.rulesStrings.4>
+    <Breakup.rulePack.rulesStrings.5>circumstance_phrase-&gt;많이 슬퍼보이는 모습으로</Breakup.rulePack.rulesStrings.5>
+    <Breakup.rulePack.rulesStrings.6>circumstance_phrase-&gt;다른 사람들이 어색하게 보는 와중에</Breakup.rulePack.rulesStrings.6>
+    <Breakup.rulePack.rulesStrings.7>circumstance_phrase-&gt;다른 사람들이 보는 곳에서</Breakup.rulePack.rulesStrings.7>
+    <Breakup.rulePack.rulesStrings.8>desc_sentence-&gt;[secondPawn_nameShortDef](은)는 서럽게 흐느껴 울고 있습니다.</Breakup.rulePack.rulesStrings.8>
+    <Breakup.rulePack.rulesStrings.9>desc_sentence-&gt;[secondPawn_nameShortDef]의 눈은 울고있지만, 입은 비웃고 있습니다.</Breakup.rulePack.rulesStrings.9>
+    <Breakup.rulePack.rulesStrings.10>desc_sentence-&gt;[secondPawn_nameShortDef](은)는 충격을 받고 자리에서 도망치고 있습니다.</Breakup.rulePack.rulesStrings.10>
+    <Breakup.rulePack.rulesStrings.11>desc_sentence-&gt;[firstPawn_nameShortDef](은)는 서로 가치관이 맞지 않아 [secondPawn_nameShortDef](와)과 이별했습니다.</Breakup.rulePack.rulesStrings.11>
+    <Breakup.rulePack.rulesStrings.12>desc_sentence-&gt;[secondPawn_nameShortDef](은)는 떨며 바닥에 주저앉았습니다.</Breakup.rulePack.rulesStrings.12>
+    <Breakup.rulePack.rulesStrings.13>desc_sentence-&gt;[secondPawn_nameShortDef](은)는 [firstPawn_nameShortDef]의 행동에 매우 화가난 모습입니다.</Breakup.rulePack.rulesStrings.13>
+
+    <Marriage.label>결혼</Marriage.label>
+    <Marriage.rulePack.rulesStrings.0>tale_noun-&gt;[firstPawn_nameShortDef](와)과 [secondPawn_nameShortDef]의 결혼</Marriage.rulePack.rulesStrings.0>
+    <Marriage.rulePack.rulesStrings.1>image-&gt;[circumstance_group] [firstPawn_nameFull](와)과 [secondPawn_nameFull]는 결혼식을 올리는 모습</Marriage.rulePack.rulesStrings.1>
+    <Marriage.rulePack.rulesStrings.2>image-&gt;[circumstance_group] [firstPawn_nameFull](은)는 [secondPawn_nameFull](와)과 결혼 사약을 맺는 모습</Marriage.rulePack.rulesStrings.2>
+    <Marriage.rulePack.rulesStrings.3>image-&gt;[circumstance_group] [firstPawn_nameFull](와)과 [secondPawn_nameFull](은)는 축복 속에서 통로를 걷고 있는 모습</Marriage.rulePack.rulesStrings.3>
+    <Marriage.rulePack.rulesStrings.4>image-&gt;[circumstance_group] [firstPawn_nameFull](은)는 [secondPawn_nameFull]의 손을 꼭 잡고 결혼식에 참석하는 모습</Marriage.rulePack.rulesStrings.4>
+    <Marriage.rulePack.rulesStrings.5>circumstance_phrase-&gt;위엄있는 엄숙한 의식 속에서</Marriage.rulePack.rulesStrings.5>
+    <Marriage.rulePack.rulesStrings.6>circumstance_phrase-&gt;둘다 환하게 웃으며</Marriage.rulePack.rulesStrings.6>
+    <Marriage.rulePack.rulesStrings.7>circumstance_phrase-&gt;다른 사람들이 주위에서 엄숙하게 자리잡고 있는 곳에서</Marriage.rulePack.rulesStrings.7>
+    <Marriage.rulePack.rulesStrings.8>desc_sentence-&gt;[firstPawn_nameShortDef](와)과 [secondPawn_nameShortDef](은)는 서로 껴안고 있습니다.</Marriage.rulePack.rulesStrings.8>
+    <Marriage.rulePack.rulesStrings.9>desc_sentence-&gt;[firstPawn_nameShortDef](와)과 [secondPawn_nameShortDef](은)는 서로 눈을 마주하고 있습니다.</Marriage.rulePack.rulesStrings.9>
+    <Marriage.rulePack.rulesStrings.10>desc_sentence-&gt;[firstPawn_nameShortDef](은)는 [secondPawn_nameShortDef]에게 자신의 마음을 전하고 있습니다.</Marriage.rulePack.rulesStrings.10>
+    <Marriage.rulePack.rulesStrings.11>desc_sentence-&gt;[firstPawn_nameShortDef](와)과 [secondPawn_nameShortDef](은)는 마치 운명처럼 잘 어울리는 모습입니다.</Marriage.rulePack.rulesStrings.11>
+    <Marriage.rulePack.rulesStrings.12>desc_sentence-&gt;[firstPawn_nameShortDef](와)과 [secondPawn_nameShortDef](은)는 마치 거울을 보는 것처럼 서로 닮았습니다.</Marriage.rulePack.rulesStrings.12>
+    <Marriage.rulePack.rulesStrings.13>desc_sentence-&gt;[firstPawn_nameShortDef](은)는 과격하게 [secondPawn_nameShortDef]의 몸을 스킨쉽 하고 있습니다.</Marriage.rulePack.rulesStrings.13>
+
+</LanguageData>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Resources>
+
+  <ThingDef Name="Cults_Test">
+	<defName>Cults_Test</defName>
+    <thingClass>ThingWithComps</thingClass>
+	<label>TestObject</label>
+	<description></description>
+    <graphicData>
+      <texPath>Item/Test/Test</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>	
+    <category>Item</category>
+    <pathCost>10</pathCost>
+    <useHitPoints>true</useHitPoints>
+	<selectable>true</selectable>	
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MaxHitPoints>20</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <MarketValue>0</MarketValue>
+    </statBases>
+    <costList>
+      <WoodLog>1</WoodLog>
+    </costList>	
+    <tradeability>Never</tradeability>	
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>	
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>	
+    </comps>
+  </ThingDef>
+  
+</Resources>

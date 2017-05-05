@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Misc -->
+	
+  <JobDef>
+    <defName>PruneAndRepair</defName>
+    <driverClass>CultOfCthulhu.JobDriver_PruneAndRepair</driverClass>
+    <reportString>pruning and repairing TargetA.</reportString>
+  </JobDef>
+
+	<!-- PawnFlying -->
+	
+  <JobDef>
+    <defName>EnterTransporterPawn</defName>
+    <driverClass>CultOfCthulhu.JobDriver_EnterTransporterPawn</driverClass>
+    <reportString>entering TargetA.</reportString>
+  </JobDef>
+	
+
+	<!-- Special -->
+
+    <JobDef>
+        <defName>MidnightInquisition</defName>
+        <driverClass>CultOfCthulhu.JobDriver_MidnightInquisition</driverClass>
+        <reportString>Taking matters into their own hands.</reportString>
+        <joyDuration>400</joyDuration>
+        <joyGainRate>1</joyGainRate>
+        <joyMaxParticipants>20</joyMaxParticipants>
+        <joyKind>Worship</joyKind>
+    </JobDef>	
+		
+
+	<!-- Offerings -->
+	
+	  <JobDef>
+		<defName>GiveOffering</defName>
+		<driverClass>CultOfCthulhu.JobDriver_GiveOffering</driverClass>
+		<reportString>gathering an offering at TargetA.</reportString>
+		<suspendable>false</suspendable>
+	  </JobDef>
+	  
+    <JobDef>
+        <defName>ReflectOnOffering</defName>
+        <driverClass>CultOfCthulhu.JobDriver_ReflectOnOffering</driverClass>
+        <reportString>reflecting on the offering.</reportString>
+        <joyDuration>400</joyDuration>
+        <joyGainRate>1</joyGainRate>
+        <joyMaxParticipants>20</joyMaxParticipants>
+        <joyKind>Worship</joyKind>
+    </JobDef>	
+	
+
+	<!-- Sacrifice -->
+     <JobDef>
+        <defName>HoldSacrifice</defName>
+        <driverClass>CultOfCthulhu.JobDriver_HoldSacrifice</driverClass>
+        <reportString>holding a sacrifice.</reportString>
+        <joyDuration>1600</joyDuration>
+        <joyGainRate>2</joyGainRate>
+		<alwaysShowWeapon>true</alwaysShowWeapon>
+        <joyMaxParticipants>20</joyMaxParticipants>
+        <joyKind>Worship</joyKind>
+    </JobDef>
+
+    <JobDef>
+        <defName>AttendSacrifice</defName>
+        <driverClass>CultOfCthulhu.JobDriver_AttendSacrifice</driverClass>
+        <reportString>attending a sacrifice.</reportString>
+        <joyDuration>250</joyDuration>
+        <joyGainRate>1</joyGainRate>
+        <joyMaxParticipants>20</joyMaxParticipants>
+        <joyKind>Worship</joyKind>
+    </JobDef>
+	
+    <JobDef>
+        <defName>ReflectOnResult</defName>
+        <driverClass>CultOfCthulhu.JobDriver_ReflectOnResult</driverClass>
+        <reportString>reflecting on results.</reportString>
+        <joyDuration>400</joyDuration>
+        <joyGainRate>1</joyGainRate>
+        <joyMaxParticipants>20</joyMaxParticipants>
+        <joyKind>Worship</joyKind>
+    </JobDef>	
+	
+   <JobDef>
+		<defName>WaitTiedDown</defName>
+		<driverClass>CultOfCthulhu.JobDriver_TiedDown</driverClass>
+		<reportString>tied down.</reportString>
+	</JobDef> 
+
+
+	<!-- Worship -->
+     <JobDef>
+        <defName>HoldWorship</defName>
+        <driverClass>CultOfCthulhu.JobDriver_HoldWorship</driverClass>
+        <reportString>holding a sermon.</reportString>
+        <joyDuration>1600</joyDuration>
+        <joyGainRate>2</joyGainRate>
+        <joyMaxParticipants>20</joyMaxParticipants>
+        <joyKind>Worship</joyKind>
+    </JobDef>
+
+    <JobDef>
+        <defName>AttendWorship</defName>
+        <driverClass>CultOfCthulhu.JobDriver_AttendWorship</driverClass>
+        <reportString>attending a sermon.</reportString>
+        <joyDuration>250</joyDuration>
+        <joyGainRate>1</joyGainRate>
+        <joyMaxParticipants>20</joyMaxParticipants>
+        <joyKind>Worship</joyKind>
+    </JobDef>
+	
+    <JobDef>
+        <defName>ReflectOnWorship</defName>
+        <driverClass>CultOfCthulhu.JobDriver_ReflectOnWorship</driverClass>
+        <reportString>reflecting on worship.</reportString>
+        <joyDuration>400</joyDuration>
+        <joyGainRate>1</joyGainRate>
+        <joyMaxParticipants>20</joyMaxParticipants>
+        <joyKind>Worship</joyKind>
+    </JobDef>	
+
+<!-- Let's go -->
+
+
+    <JobDef>
+        <defName>Investigate</defName>
+        <driverClass>CultOfCthulhu.JobDriver_Investigate</driverClass>
+        <reportString>investigating TargetB.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joyGainRate>1</joyGainRate>
+		<joySkill>Research</joySkill>
+		<joyXpPerTick>0.002</joyXpPerTick>
+		<joyKind>Meditative</joyKind>
+	</JobDef>
+	
+  
+	  <JobDef>
+		<defName>WriteTheBook</defName>
+		<driverClass>CultOfCthulhu.JobDriver_WriteTheBook</driverClass>
+		<reportString>writing in a frenzy.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joyGainRate>1</joyGainRate>
+		<joySkill>Research</joySkill>
+		<joyXpPerTick>0.002</joyXpPerTick>
+		<joyKind>Meditative</joyKind>
+	  </JobDef>
+			
+	
+</Defs>

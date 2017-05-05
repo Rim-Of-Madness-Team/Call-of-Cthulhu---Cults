@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <OtherPrisonerWasSacrificed.stages.0.label>다른 죄수가 제물로 바쳐짐</OtherPrisonerWasSacrificed.stages.0.label>
+    <OtherPrisonerWasSacrificed.stages.0.description>안돼! 여기서 나가야 해! 다음엔 내가 죽을거야!</OtherPrisonerWasSacrificed.stages.0.description>
+
+    <ExecutedFamily.stages.0.label>{0}명을 처형함</ExecutedFamily.stages.0.label>
+    <ExecutedFamily.stages.0.description>나는 믿음이라는 이름으로 무엇을 했지? 아... 내 가족이여...</ExecutedFamily.stages.0.description>
+
+    <ExecutedPet.stages.0.label>{0}명과 {1}명을 처형함.</ExecutedPet.stages.0.label>
+    <ExecutedPet.stages.0.description>나는 우리의 신앙 때문에 그들을 죽였어. 마치 속이 텅 빈것 같아.</ExecutedPet.stages.0.description>
+
+    <ExecutedFriend.stages.0.label>친구를 {0}번 처형함</ExecutedFriend.stages.0.label>
+    <ExecutedFriend.stages.0.description>그는 대의를 위해 희생되었어. 하지만 이 슬픔은 뭘까.</ExecutedFriend.stages.0.description>
+
+    <SacrificedFamily.stages.0.label>내 가족 구성원 {0}이 희생됨</SacrificedFamily.stages.0.label>
+    <SacrificedFamily.stages.0.description>우린 괴물이야.</SacrificedFamily.stages.0.description>
+
+    <SacrificedFriend.stages.0.label>내 친구 {0}이 희생됨</SacrificedFriend.stages.0.label>
+    <SacrificedFriend.stages.0.description>우린 대체 무엇이 되고 싶은걸까?</SacrificedFriend.stages.0.description>
+
+    <SacrificedPet.stages.0.label>내 애완 동물 {0}이 (가) 희생됨</SacrificedPet.stages.0.label>
+    <SacrificedPet.stages.0.description>They killed them. Those heartless bastards.</SacrificedPet.stages.0.description>
+
+    <SacrificedRival.stages.0.label>내 라이벌 {0}이 희생됨</SacrificedRival.stages.0.label>
+    <SacrificedRival.stages.0.description>이 얼마나 위대한 일인가! 그들이 사라져서 다행이야.</SacrificedRival.stages.0.description>
+
+    <WitnessedSacrificeBloodlust.stages.0.label>제물이 바쳐지는 것을 목격함</WitnessedSacrificeBloodlust.stages.0.label>
+    <WitnessedSacrificeBloodlust.stages.0.description>피가 마구 흘러. 아! 아!!</WitnessedSacrificeBloodlust.stages.0.description>
+
+    <AttendedSuccessfulSacrifice.stages.0.label>번제의 성공</AttendedSuccessfulSacrifice.stages.0.label>
+    <AttendedSuccessfulSacrifice.stages.0.description>정말 영광스러운 일이야!</AttendedSuccessfulSacrifice.stages.0.description>
+
+    <AttendedFailedSacrifice.stages.0.label>번제의 실패</AttendedFailedSacrifice.stages.0.label>
+    <AttendedFailedSacrifice.stages.0.description>영광스러운 희생이 되었어야 했는데, 실패했어.</AttendedFailedSacrifice.stages.0.description>
+
+    <InnocentAttendedSuccessfulSacrifice.stages.0.label>번제의 성공</InnocentAttendedSuccessfulSacrifice.stages.0.label>
+    <InnocentAttendedSuccessfulSacrifice.stages.0.description>우리가 뭐 했지?</InnocentAttendedSuccessfulSacrifice.stages.0.description>
+
+    <InnocentAttendedFailedSacrifice.stages.0.label>번제의 실패</InnocentAttendedFailedSacrifice.stages.0.label>
+    <InnocentAttendedFailedSacrifice.stages.0.description>우리가 괴물이라고? 우린 아무것도 죽이지 않았어!</InnocentAttendedFailedSacrifice.stages.0.description>
+
+    <HeldSermon.stages.0.label>설교함</HeldSermon.stages.0.label>
+    <HeldSermon.stages.0.description>신의 말씀을 전달하는 것이 반드시 필요해. 바라건대 다른 사람들도 즐겼기를</HeldSermon.stages.0.description>
+
+    <AttendedIncredibleSermonAsCultist.stages.0.label>놀라운 설교</AttendedIncredibleSermonAsCultist.stages.0.label>
+    <AttendedIncredibleSermonAsCultist.stages.0.description>잠시동안, 마치 우리 사이에서 그 신성한 영혼을 느꼈어.</AttendedIncredibleSermonAsCultist.stages.0.description>
+
+    <AttendedGreatSermonAsCultist.stages.0.label>굉장한 설교</AttendedGreatSermonAsCultist.stages.0.label>
+    <AttendedGreatSermonAsCultist.stages.0.description>그것은 위대한 설교였어!</AttendedGreatSermonAsCultist.stages.0.description>
+
+    <AttendedGoodSermonAsCultist.stages.0.label>좋은 설교</AttendedGoodSermonAsCultist.stages.0.label>
+    <AttendedGoodSermonAsCultist.stages.0.description>이 세상 너머의 무언가를 느낄 수 있었어.</AttendedGoodSermonAsCultist.stages.0.description>
+
+    <AttendedDecentSermonAsCultist.stages.0.label>예의 바른 설교</AttendedDecentSermonAsCultist.stages.0.label>
+    <AttendedDecentSermonAsCultist.stages.0.description>라! 라! 아주 칭찬해!</AttendedDecentSermonAsCultist.stages.0.description>
+
+    <AttendedAwfulSermonAsCultist.stages.0.label>끔찍한 설교</AttendedAwfulSermonAsCultist.stages.0.label>
+    <AttendedAwfulSermonAsCultist.stages.0.description>내가 그것보다 더 잘하겠다!</AttendedAwfulSermonAsCultist.stages.0.description>
+
+    <AttendedIncredibleSermonAsInnocent.stages.0.label>끔찍한 설교를 목격</AttendedIncredibleSermonAsInnocent.stages.0.label>
+    <AttendedIncredibleSermonAsInnocent.stages.0.description>설교자의 목소리로 IT 부서에 전화하는 것이 생각났습니다. 그게 뭐야? 나 졸은거야? \n\nMeta Info: 좋은 설교는 정착림들의 종교 정신을 천천히 증가시킵니다.</AttendedIncredibleSermonAsInnocent.stages.0.description>
+
+    <AttendedGreatSermonAsInnocent.stages.0.label>위압적인 설교를 목격</AttendedGreatSermonAsInnocent.stages.0.label>
+    <AttendedGreatSermonAsInnocent.stages.0.description>설교자가 말한 것들... 그들은 사실 일 수 없어. 하지만 만약 그들이 옳다면? 나는 정말 잘못된 것일까? \n\nMeta Info: 좋은 설교는 정착림들의 종교 정신을 천천히 증가시킵니다.</AttendedGreatSermonAsInnocent.stages.0.description>
+
+    <AttendedGoodSermonAsInnocent.stages.0.label>불길한 설교를 목격</AttendedGoodSermonAsInnocent.stages.0.label>
+    <AttendedGoodSermonAsInnocent.stages.0.description>그 말에 반박할 수는 없지만, 받아들일 수도 없어. \n\nMeta Info: 좋은 설교는 정착림들의 종교 정신을 천천히 증가시킵니다.</AttendedGoodSermonAsInnocent.stages.0.description>
+
+    <AttendedDecentSermonAsInnocent.stages.0.label>불길한 설교를 목격</AttendedDecentSermonAsInnocent.stages.0.label>
+    <AttendedDecentSermonAsInnocent.stages.0.description>그들의 말이 사실일 지는 몰라도, 그들이 말하는 방식에는 동의할 수 없어. 그 자신감은 아주 칭찬해. \n\nMeta Info: 좋은 설교는 정착림들의 종교 정신을 천천히 증가시킵니다.</AttendedDecentSermonAsInnocent.stages.0.description>
+
+    <AttendedAwfulSermonAsInnocent.stages.0.label>심한 설교를 목격</AttendedAwfulSermonAsInnocent.stages.0.label>
+    <AttendedAwfulSermonAsInnocent.stages.0.description>정말로 이 말을 믿는거야? 미친거지?</AttendedAwfulSermonAsInnocent.stages.0.description>
+
+    <PrayedInImpressiveTemple.stages.5.label>인상적인 신전</PrayedInImpressiveTemple.stages.5.label>
+    <PrayedInImpressiveTemple.stages.5.description>좋은 신전이었어.</PrayedInImpressiveTemple.stages.5.description>
+    <PrayedInImpressiveTemple.stages.6.label>인상적인 신전</PrayedInImpressiveTemple.stages.6.label>
+    <PrayedInImpressiveTemple.stages.6.description>인상적인 신전이었지.</PrayedInImpressiveTemple.stages.6.description>
+    <PrayedInImpressiveTemple.stages.7.label>아주 인상적인 신전</PrayedInImpressiveTemple.stages.7.label>
+    <PrayedInImpressiveTemple.stages.7.description>아주 인상적인 신전이었어.</PrayedInImpressiveTemple.stages.7.description>
+    <PrayedInImpressiveTemple.stages.8.label>매우 인상적인 신전</PrayedInImpressiveTemple.stages.8.label>
+    <PrayedInImpressiveTemple.stages.8.description>매우 인상적인 신전에서 약간의 시간을 보냈어. 그곳에 영원히 있고 싶어.</PrayedInImpressiveTemple.stages.8.description>
+    <PrayedInImpressiveTemple.stages.9.label>믿을 수 없을만큼 인상적인 신전</PrayedInImpressiveTemple.stages.9.label>
+    <PrayedInImpressiveTemple.stages.9.description>믿을 수 없을 정도로 인상적인 신전에서 약간의 시간을 보냈어. 영원히 그곳에 머물 고 싶어.</PrayedInImpressiveTemple.stages.9.description>
+    <PrayedInImpressiveTemple.stages.10.label>기적적으로 멋진 신전</PrayedInImpressiveTemple.stages.10.label>
+    <PrayedInImpressiveTemple.stages.10.description>기적적으로 훌륭한 성전에서 시간을 보냈어. 영원히 그곳에 머물고 싶어.</PrayedInImpressiveTemple.stages.10.description>
+    <PrayedInImpressiveTemple.stages.11.label>세계의 경이</PrayedInImpressiveTemple.stages.11.label>
+    <PrayedInImpressiveTemple.stages.11.description>내가 상상할 수 있는 최고의 성전에서 기도했어. 영원히 그곳에 머물고 싶어.</PrayedInImpressiveTemple.stages.11.description>
+
+    <SawAurora.stages.0.label>아름다운 오로라</SawAurora.stages.0.label>
+    <SawAurora.stages.0.description>이 얼마나 놀라운 광경인가!</SawAurora.stages.0.description>
+
+</LanguageData>
