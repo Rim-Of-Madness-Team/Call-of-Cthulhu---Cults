@@ -21,7 +21,6 @@
         <severityPerDamageDealt>0.016</severityPerDamageDealt>
       </li>
     </additionalHediffs>
-    <explosionCellMote>Mote_BlastFlame</explosionCellMote>	
-    <incapChanceMultiplier>1.5</incapChanceMultiplier>	
+    <explosionCellMote>Mote_BlastFlame</explosionCellMote>
   </DamageDef>
 </Defs>

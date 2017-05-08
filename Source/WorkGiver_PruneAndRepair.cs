@@ -45,7 +45,7 @@ namespace CultOfCthulhu
             return NightmareAltars(pawn).Count<Thing>() == 0;
         }
 
-        public override bool HasJobOnThing(Pawn pawn, Thing t)
+        public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced=false)
         {
             Building_SacrificialAltar building = t as Building_SacrificialAltar;
             if (building == null)
@@ -69,9 +69,9 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override Job JobOnThing(Pawn pawn, Thing t)
+        public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            return new Job(CultDefOfs.PruneAndRepair, t);
+            return new Job(CultsDefOfs.Cults_PruneAndRepair, t);
         }
     }
 }

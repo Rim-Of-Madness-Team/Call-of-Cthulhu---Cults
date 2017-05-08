@@ -34,11 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>Source-DLLs\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="HugsLib">
-      <HintPath>..\..\..\HugsLib\HugsLib.dll</HintPath>
+      <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -61,13 +57,13 @@
     <Compile Include="Building_TotemFertility.cs" />
     <Compile Include="Building_TreasureChest.cs" />
     <Compile Include="Building_TreeOfMadness.cs" />
-    <Compile Include="HugsModOptionalCode.cs" />
+    <Compile Include="ModSettings.cs" />
     <Compile Include="IncidentWorker_MakeCultMapCondition.cs" />
     <Compile Include="JobDriver_PruneAndRepair.cs" />
     <Compile Include="CompFavoredObject.cs" />
     <Compile Include="CompProperties_FavoredObject.cs" />
-    <Compile Include="MapCondition_StarsAreRight.cs" />
-    <Compile Include="MapCondition_StarsAreWrong.cs" />
+    <Compile Include="GameCondition_StarsAreRight.cs" />
+    <Compile Include="GameCondition_StarsAreWrong.cs" />
     <Compile Include="MentalBreaks\MentalStateWorker_Disillusioned.cs" />
     <Compile Include="MentalBreaks\JobGiver_Disillusioned.cs" />
     <Compile Include="MentalBreaks\MentalState_Disillusioned.cs" />
@@ -114,7 +110,7 @@
     <Compile Include="IncidentWorker_CultSeed_NightmareTree.cs" />
     <Compile Include="JobDriver_AttendSacrifice.cs" />
     <Compile Include="Building_SacrificialAltar.cs" />
-    <Compile Include="CultDefOfs.cs" />
+    <Compile Include="CultsDefOfs.cs" />
     <Compile Include="CosmicEntity.cs" />
     <Compile Include="JobDriver_AttendWorship.cs" />
     <Compile Include="JobDriver_HoldSacrifice.cs" />
@@ -130,7 +126,7 @@
     <Compile Include="MapComponent_FertilityMods.cs" />
     <Compile Include="MapComponent_SacrificeTracker.cs" />
     <Compile Include="MapComponent_TransmogrifyTracker.cs" />
-    <Compile Include="MapCondition_AuroraEffect.cs" />
+    <Compile Include="GameCondition_AuroraEffect.cs" />
     <Compile Include="PawnFlyer\PawnFlyer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReanimatedPawn.cs" />
@@ -190,9 +186,8 @@
     <Compile Include="UI\ITab_AltarWorship.cs" />
     <Compile Include="UI\ITab_AltarWorshipCardUtility.cs" />
     <Compile Include="UtilityWorldObject.cs" />
-    <Compile Include="UtilityWorldObjectManager.cs" />
-    <Compile Include="UtilityWorldObject_CosmicDeities.cs" />
-    <Compile Include="UtilityWorldObject_GlobalCultTracker.cs" />
+    <Compile Include="WorldComponent_CosmicDeities.cs" />
+    <Compile Include="WorldComponent_GlobalCultTracker.cs" />
     <Compile Include="WorkGiver_PruneAndRepair.cs" />
   </ItemGroup>
   <ItemGroup />

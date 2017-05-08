@@ -58,7 +58,7 @@ namespace CultOfCthulhu
 
         public override void ExposeData()
         {
-            Scribe_References.LookReference<Pawn>(ref this.setPreacher, "setPreacher");
+            Scribe_References.Look<Pawn>(ref this.setPreacher, "setPreacher");
             base.ExposeData();
         }
 

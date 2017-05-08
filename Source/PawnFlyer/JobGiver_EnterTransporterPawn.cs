@@ -47,7 +47,7 @@ namespace CultOfCthulhu
             {
                 return null;
             }
-            return new Job(CultDefOfs.EnterTransporterPawn, compTransporter.parent);
+            return new Job(CultsDefOfs.Cults_EnterTransporterPawn, compTransporter.parent);
         }
 
         private CompTransporterPawn FindMyTransporter(List<CompTransporterPawn> transporters, Pawn me)

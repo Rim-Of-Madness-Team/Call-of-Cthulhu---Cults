@@ -4,10 +4,11 @@ using UnityEngine;
 using Verse;
 using Verse.Sound;
 using RimWorld;
+using System.Collections.Generic;
 
 namespace CultOfCthulhu
 {
-    public class PawnFlyersIncoming : Thing, IActiveDropPod, IThingContainerOwner
+    public class PawnFlyersIncoming : Thing, IActiveDropPod, IThingHolder
     {
         public PawnFlyer pawnFlyer;
 
@@ -61,7 +62,12 @@ namespace CultOfCthulhu
             }
         }
 
-        public ThingContainer GetInnerContainer()
+        public void GetChildHolders(List<IThingHolder> outChildren)
+        {
+            ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, this.GetDirectlyHeldThings());
+        }
+
+        public ThingOwner GetDirectlyHeldThings()
         {
             return this.contents.innerContainer;
         }
@@ -86,11 +92,11 @@ namespace CultOfCthulhu
         {
             base.ExposeData();
             //PawnFlyer
-            Scribe_References.LookReference<PawnFlyer>(ref this.pawnFlyer, "pawnFlyer");
+            Scribe_References.Look<PawnFlyer>(ref this.pawnFlyer, "pawnFlyer");
 
             //Vanilla
-            Scribe_Values.LookValue<int>(ref this.ticksToImpact, "ticksToImpact", 0, false);
-            Scribe_Deep.LookDeep<ActiveDropPodInfo>(ref this.contents, "contents", new object[]
+            Scribe_Values.Look<int>(ref this.ticksToImpact, "ticksToImpact", 0, false);
+            Scribe_Deep.Look<ActiveDropPodInfo>(ref this.contents, "contents", new object[]
             {
                 this
             });
@@ -149,7 +155,7 @@ namespace CultOfCthulhu
         }
         
 
-        public override void DrawAt(Vector3 drawLoc)
+        public override void DrawAt(Vector3 drawLoc, bool flipped)
         {
             if (drawLoc.InBounds(Map))
             {

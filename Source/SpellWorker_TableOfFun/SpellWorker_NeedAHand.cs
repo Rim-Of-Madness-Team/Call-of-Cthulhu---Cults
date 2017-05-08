@@ -111,7 +111,7 @@ namespace CultOfCthulhu
                 return false;
             }
 
-            pawn.health.AddHediff(CultDefOfs.Cults_TentacleArm, tempRecord, null);
+            pawn.health.AddHediff(CultsDefOfs.Cults_TentacleArm, tempRecord, null);
             Messages.Message(pawn.LabelShort + "'s " + tempRecord.def.label + " has been replaced with an otherworldly tentacle appendage.", MessageSound.Benefit);
 
             return true;

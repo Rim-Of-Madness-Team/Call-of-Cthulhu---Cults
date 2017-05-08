@@ -24,7 +24,7 @@ namespace CultOfCthulhu
 
         public override void ExposeData()
         {
-            Scribe_Values.LookValue<int>(ref this.transportersGroup, "transportersGroup", 0, false);
+            Scribe_Values.Look<int>(ref this.transportersGroup, "transportersGroup", 0, false);
         }
 
         public override StateGraph CreateGraph()

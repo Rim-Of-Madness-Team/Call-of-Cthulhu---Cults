@@ -34,7 +34,7 @@ namespace CultOfCthulhu
                 return false;
             }
             parms.spawnCenter = intVec;
-            Cthulhu.Utility.SpawnPawnsOfCountAt(CultDefOfs.Cults_Byakhee, intVec, map, 1, Faction.OfPlayer);
+            Cthulhu.Utility.SpawnPawnsOfCountAt(CultsDefOfs.Cults_Byakhee, intVec, map, 1, Faction.OfPlayer);
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
             return true;

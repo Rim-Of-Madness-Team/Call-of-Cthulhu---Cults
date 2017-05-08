@@ -59,9 +59,9 @@ namespace CultOfCthulhu
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<float>(ref this.workLeft, "workLeft", 0f, false);
-            Scribe_Values.LookValue<int>(ref this.billStartTick, "billStartTick", 0, false);
-            Scribe_Values.LookValue<int>(ref this.ticksSpentDoingRecipeWork, "ticksSpentDoingRecipeWork", 0, false);
+            Scribe_Values.Look<float>(ref this.workLeft, "workLeft", 0f, false);
+            Scribe_Values.Look<int>(ref this.billStartTick, "billStartTick", 0, false);
+            Scribe_Values.Look<int>(ref this.ticksSpentDoingRecipeWork, "ticksSpentDoingRecipeWork", 0, false);
         }
 
         [DebuggerHidden]
@@ -129,7 +129,7 @@ namespace CultOfCthulhu
             CultUtility.remainingDuration = CultUtility.ritualDuration;
             chantingTime.defaultDuration = CultUtility.remainingDuration - 360;
             chantingTime.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
-            chantingTime.PlaySustainerOrSound(CultDefOfs.RitualChanting);
+            chantingTime.PlaySustainerOrSound(CultsDefOfs.RitualChanting);
             Texture2D deitySymbol = ((CosmicEntityDef)DropAltar.currentOfferingDeity.def).Symbol;
             chantingTime.initAction = delegate
             {

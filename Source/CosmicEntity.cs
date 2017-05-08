@@ -188,14 +188,14 @@ namespace CultOfCthulhu
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Collections.LookList<IncidentDef>(ref this.tier1Spells, "tier1spells");
-            Scribe_Collections.LookList<IncidentDef>(ref this.tier2Spells, "tier2spells");
-            Scribe_Collections.LookList<IncidentDef>(ref this.tier3Spells, "tier3spells");
-            Scribe_Defs.LookDef<IncidentDef>(ref this.finalSpell, "finalSpell");
-            Scribe_Values.LookValue<bool>(ref this.hostileToPlayer, "hostileToPlayer", false, false);
-            Scribe_Values.LookValue<float>(ref this.favor, "favor", 0f, false);
-            Scribe_Values.LookValue<bool>(ref this.discovered, "discovered", false, false);
-            //Scribe_Deep.LookDeep<KidnappedPawnsTracker>(ref this.kidnapped, "kidnapped", new object[]
+            Scribe_Collections.Look<IncidentDef>(ref this.tier1Spells, "tier1spells");
+            Scribe_Collections.Look<IncidentDef>(ref this.tier2Spells, "tier2spells");
+            Scribe_Collections.Look<IncidentDef>(ref this.tier3Spells, "tier3spells");
+            Scribe_Defs.Look<IncidentDef>(ref this.finalSpell, "finalSpell");
+            Scribe_Values.Look<bool>(ref this.hostileToPlayer, "hostileToPlayer", false, false);
+            Scribe_Values.Look<float>(ref this.favor, "favor", 0f, false);
+            Scribe_Values.Look<bool>(ref this.discovered, "discovered", false, false);
+            //Scribe_Deep.Look<KidnappedPawnsTracker>(ref this.kidnapped, "kidnapped", new object[]
             //{
             //    this
             //});
@@ -314,7 +314,7 @@ namespace CultOfCthulhu
                 if (ex.relations.FamilyByBlood.Contains(sacrifice))
                 {
                     result += sacrifice.MarketValue * 3; //Three times the value for family members
-                    ex.needs.mood.thoughts.memories.TryGainMemoryThought(ThoughtDefOf.WitnessedDeathFamily, null);
+                    ex.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.WitnessedDeathFamily, null);
                     s.AppendLine();
 
                     PawnRelationDef def = ex.GetMostImportantRelation(sacrifice);

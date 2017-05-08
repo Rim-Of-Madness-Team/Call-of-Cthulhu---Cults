@@ -19,7 +19,7 @@ namespace CultOfCthulhu
         public const int OneDay = 60000;
         public const int ThreeDays = 180000;
         
-        UtilityWorldObject_GlobalCultTracker globalCultTracker = Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_GlobalCultTracker>();
+        WorldComponent_GlobalCultTracker globalCultTracker = Find.World.GetComponent<WorldComponent_GlobalCultTracker>();
 
         public CultSeedState CurrentSeedState { get { return globalCultTracker.currentSeedState; } set { globalCultTracker.currentSeedState = value; } }
         public List<Pawn> antiCultists { get { return globalCultTracker.antiCultists; } }
@@ -155,13 +155,14 @@ namespace CultOfCthulhu
 
             foreach (Pawn antiCultist in assailants)
             {
+                if (antiCultist == preacher) continue;
                 if (antiCultist == null) continue;
                 if (!Cthulhu.Utility.IsActorAvailable(antiCultist)) continue;
-                antiCultist.needs.mood.thoughts.memories.TryGainMemoryThought(DefDatabase<ThoughtDef>.GetNamed("MidnightInquisition"));
-                Job J = new Job(CultDefOfs.MidnightInquisition, antiCultist, preacher);
+                antiCultist.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_MidnightInquisitionThought);
+                Job J = new Job(CultsDefOfs.Cults_MidnightInquisition, antiCultist, preacher);
                 //antiCultist.MentalState.ForceHostileTo(Faction.OfPlayer);
-                antiCultist.QueueJob(J);
-                antiCultist.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                antiCultist.jobs.TryTakeOrderedJob(J);
+                //antiCultist.jobs.EndCurrentJob(JobCondition.InterruptForced);
             }
         }
 
@@ -208,7 +209,7 @@ namespace CultOfCthulhu
 
                 if (repeatableResearch != null)
                 {
-                    if (HugsModOptionalCode.cultsStudySuccessfulCultsIsRepeatable() == true)
+                    if (ModSettings_Data.cultsStudySuccessfulCultsIsRepeatable == true)
                     {
                         if (repeatableResearch.IsFinished)
                         {
@@ -323,11 +324,11 @@ namespace CultOfCthulhu
                 case CultSeedState.FinishedSeeing:
                     return;
                 case CultSeedState.NeedSeeing:
-                    CanDoJob(CultDefOfs.Investigate, CurrentSeedPawn, CurrentSeedTarget);
+                    CanDoJob(CultsDefOfs.Cults_Investigate, CurrentSeedPawn, CurrentSeedTarget);
                     return;
 
                 case CultSeedState.NeedWriting:
-                    CanDoJob(CultDefOfs.WriteTheBook, CurrentSeedPawn);
+                    CanDoJob(CultsDefOfs.Cults_WriteTheBook, CurrentSeedPawn);
                     return;
                 case CultSeedState.FinishedWriting:
                 case CultSeedState.NeedTable:
@@ -351,10 +352,10 @@ namespace CultOfCthulhu
         {
             if (pawn == null) return false;
             
-            if (HugsModOptionalCode.cultsForcedInvestigation() == false && job != CultDefOfs.WriteTheBook) return false;
+            if (ModSettings_Data.cultsForcedInvestigation == false && job != CultsDefOfs.Cults_WriteTheBook) return false;
 
             //Toxic Fallout? Let's not force the colonist to do this job.
-            if (this.map.mapConditionManager.GetActiveCondition(MapConditionDefOf.ToxicFallout) != null) return false;
+            if (this.map.GameConditionManager.GetActiveCondition(GameConditionDefOf.ToxicFallout) != null) return false;
 
             if (ticksToSpawnCultSeed > 0)
             {
@@ -365,8 +366,8 @@ namespace CultOfCthulhu
             {
                 Job J = new Job(job, pawn);
                 if (CurrentSeedTarget != null) J.SetTarget(TargetIndex.B, target);
-                pawn.QueueJob(J);
-                pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                pawn.jobs.TryTakeOrderedJob(J);
+                //pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
                 ticksToTryJobAgain = OneMinute;
                 return true;
             }
@@ -376,16 +377,16 @@ namespace CultOfCthulhu
         public override void ExposeData()
         {
             //Cult Variables
-            Scribe_Values.LookValue<bool>(ref this.needPreacher, "needPreacher", false, false);
-            Scribe_Values.LookValue<bool>(ref this.doingInquisition, "doingInquisition", false, false);
-            Scribe_Values.LookValue<int>(ref this.ticksToSpawnHelpfulPreacher, "ticksToSpawnHelpfulPreacher", 0, false);
-            Scribe_Values.LookValue<int>(ref this.ticksToCheckCultists, "ticksToCheckCultists", 0, false);
-            Scribe_Values.LookValue<int>(ref this.ticksUntilInquisition, "ticksUntilInquisition", 0, false);
+            Scribe_Values.Look<bool>(ref this.needPreacher, "needPreacher", false, false);
+            Scribe_Values.Look<bool>(ref this.doingInquisition, "doingInquisition", false, false);
+            Scribe_Values.Look<int>(ref this.ticksToSpawnHelpfulPreacher, "ticksToSpawnHelpfulPreacher", 0, false);
+            Scribe_Values.Look<int>(ref this.ticksToCheckCultists, "ticksToCheckCultists", 0, false);
+            Scribe_Values.Look<int>(ref this.ticksUntilInquisition, "ticksUntilInquisition", 0, false);
 
             //Cult Seed Variables
-            Scribe_References.LookReference<Pawn>(ref this.CurrentSeedPawn, "CurrentSeedPawn", false);
-            Scribe_References.LookReference<Thing>(ref this.CurrentSeedTarget, "CurrentSeedTarget", false);
-            Scribe_Values.LookValue<int>(ref this.ticksToSpawnCultSeed, "ticksToSpawnCultSeed", 0, false);
+            Scribe_References.Look<Pawn>(ref this.CurrentSeedPawn, "CurrentSeedPawn", false);
+            Scribe_References.Look<Thing>(ref this.CurrentSeedTarget, "CurrentSeedTarget", false);
+            Scribe_Values.Look<int>(ref this.ticksToSpawnCultSeed, "ticksToSpawnCultSeed", 0, false);
             base.ExposeData();
         }
     }

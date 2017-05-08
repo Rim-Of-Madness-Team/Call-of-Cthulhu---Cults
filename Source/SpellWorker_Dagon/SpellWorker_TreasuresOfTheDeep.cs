@@ -45,7 +45,7 @@ namespace CultOfCthulhu
             //this.EndOnDespawnedOrNull(this.pawn, JobCondition.Incompletable);
             for (int i = 0; i < Rand.Range(1,3); i++)
             {
-                Building_TreasureChest thing = (Building_TreasureChest)ThingMaker.MakeThing(CultDefOfs.TreasureChest, null);
+                Building_TreasureChest thing = (Building_TreasureChest)ThingMaker.MakeThing(CultsDefOfs.Cults_TreasureChest, null);
                 GenPlace.TryPlaceThing(thing, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
             }
 

@@ -45,7 +45,7 @@
   </ThingDef>
 
   <ThingDef ParentName="CultBuildingBase">
-    <defName>SunkenShipChunk</defName>
+    <defName>Cults_SunkenShipChunk</defName>
     <label>sunken ship chunk</label>
     <description>A chunk of a naval craft. Can be deconstructed to discover treasures within.</description>
     <category>Building</category>
@@ -94,7 +94,7 @@
   </ThingDef>  
   
   <ThingDef ParentName="CultBuildingBase">
-    <defName>TreasureChest</defName>
+    <defName>Cults_TreasureChest</defName>
     <label>treasure chest</label>
     <thingClass>CultOfCthulhu.Building_TreasureChest</thingClass>
     <graphicData>
@@ -136,7 +136,7 @@
   </ThingDef>
   
   <ThingDef ParentName="CultBuildingBase">
-    <defName>TreasureChest_Relic</defName>
+    <defName>Cults_TreasureChest_Relic</defName>
     <label>relic chest</label>
     <thingClass>CultOfCthulhu.Building_TreasureChest</thingClass>
     <graphicData>
@@ -234,7 +234,7 @@
   </ThingDef>
   
   <ThingDef ParentName="CultBuildingBase">
-    <defName>MonolithNightmare</defName>
+    <defName>Cults_MonolithNightmare</defName>
     <label>Monolith</label>
     <description>A mysterious upright standing block of stone. It has an insidious aura.</description>
     <thingClass>CultOfCthulhu.Building_Monolith</thingClass>

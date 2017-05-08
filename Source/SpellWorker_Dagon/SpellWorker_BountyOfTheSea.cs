@@ -47,13 +47,13 @@ namespace CultOfCthulhu
                 return false;
             }
             //Spawn 1 relic
-            Building_LandedShip thing = (Building_LandedShip)ThingMaker.MakeThing(CultDefOfs.Cults_LandedShip, null);
+            Building_LandedShip thing = (Building_LandedShip)ThingMaker.MakeThing(CultsDefOfs.Cults_LandedShip, null);
             GenPlace.TryPlaceThing(thing, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
 
             //Spawn 2 treasure chest
-            Building_TreasureChest thing2 = (Building_TreasureChest)ThingMaker.MakeThing(CultDefOfs.TreasureChest, null);
+            Building_TreasureChest thing2 = (Building_TreasureChest)ThingMaker.MakeThing(CultsDefOfs.Cults_TreasureChest, null);
             GenPlace.TryPlaceThing(thing2, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
-            Building_TreasureChest thing3 = (Building_TreasureChest)ThingMaker.MakeThing(CultDefOfs.TreasureChest, null);
+            Building_TreasureChest thing3 = (Building_TreasureChest)ThingMaker.MakeThing(CultsDefOfs.Cults_TreasureChest, null);
             GenPlace.TryPlaceThing(thing3, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;

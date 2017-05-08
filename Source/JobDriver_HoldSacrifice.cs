@@ -107,7 +107,7 @@ namespace CultOfCthulhu
                         this.Takee.Position = DropAltar.GetLyingSlotPos();
                         this.Takee.Notify_Teleported(false);
                         this.Takee.stances.CancelBusyStanceHard();
-                        Job job = new Job(CultDefOfs.WaitTiedDown, DropAltar);
+                        Job job = new Job(CultsDefOfs.Cults_WaitTiedDown, DropAltar);
                         this.Takee.jobs.StartJob(job);
 
                     }
@@ -121,7 +121,7 @@ namespace CultOfCthulhu
             CultUtility.remainingDuration = CultUtility.ritualDuration;
             chantingTime.defaultDuration = CultUtility.remainingDuration - 360;
             chantingTime.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
-            chantingTime.PlaySustainerOrSound(CultDefOfs.RitualChanting);
+            chantingTime.PlaySustainerOrSound(CultsDefOfs.RitualChanting);
             Texture2D deitySymbol = ((CosmicEntityDef)DropAltar.currentSacrificeDeity.def).Symbol;
             chantingTime.initAction = delegate
             {
@@ -145,7 +145,7 @@ namespace CultOfCthulhu
                     this.Takee.TakeDamage(new DamageInfo(DamageDefOf.ExecutionCut, 99999, -1f, this.pawn, Cthulhu.Utility.GetHeart(this.Takee.health.hediffSet)));
                     if (!this.Takee.Dead)
                     {
-                        this.Takee.health.Kill(null, null);
+                        this.Takee.Kill(null);
                     }
                     //ThoughtUtility.GiveThoughtsForPawnExecuted(this.Takee, PawnExecutionKind.GenericHumane);
                     TaleRecorder.RecordTale(TaleDefOf.ExecutedPrisoner, new object[]

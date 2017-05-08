@@ -370,8 +370,8 @@ namespace CultOfCthulhu
                 //this.SaveFertility();
             }
 
-            Scribe_Collections.LookDictionary<IntVec3, TerrainDef>(ref this.oldTerrainSaveList, "oldTerrainList");
-            Scribe_Collections.LookDictionary<IntVec3, TerrainDef>(ref this.newTerrainSaveList, "newTerrainList");
+            Scribe_Collections.Look<IntVec3, TerrainDef>(ref this.oldTerrainSaveList, "oldTerrainList");
+            Scribe_Collections.Look<IntVec3, TerrainDef>(ref this.newTerrainSaveList, "newTerrainList");
             base.ExposeData();
             
             if (Scribe.mode == LoadSaveMode.PostLoadInit)

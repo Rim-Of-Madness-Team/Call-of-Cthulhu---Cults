@@ -201,7 +201,7 @@ namespace CultOfCthulhu
 
         public void StartChoosingDestination()
         {
-            Find.MainTabsRoot.SetCurrentTab(MainTabDefOf.World, true);
+            CameraJumper.TryJump(CameraJumper.GetWorldTarget(this.parent));
             Find.WorldSelector.ClearSelection();
             int tile = this.parent.Map.Tile;
             Find.WorldTargeter.BeginTargeting(new Func<GlobalTargetInfo, bool>(this.ChoseWorldTarget), true, CompLaunchablePawn.TargeterMouseAttachment, true, delegate
@@ -288,7 +288,7 @@ namespace CultOfCthulhu
                             return;
                         }
                         this.TryLaunch(target, PawnsArriveMode.Undecided, false);
-                        JumpToTargetUtility.CloseWorldTab();
+                        CameraJumper.TryHideWorld();
                     }, MenuOptionPriority.Default, null, null, 0f, null, null));
                 }
                 list.Add(new FloatMenuOption("DropAtEdge".Translate(), delegate
@@ -298,7 +298,7 @@ namespace CultOfCthulhu
                         return;
                     }
                     this.TryLaunch(target, PawnsArriveMode.EdgeDrop, true);
-                    JumpToTargetUtility.CloseWorldTab();
+                    CameraJumper.TryHideWorld();
                 }, MenuOptionPriority.Default, null, null, 0f, null, null));
                 list.Add(new FloatMenuOption("DropInCenter".Translate(), delegate
                 {
@@ -307,7 +307,7 @@ namespace CultOfCthulhu
                         return;
                     }
                     this.TryLaunch(target, PawnsArriveMode.CenterDrop, true);
-                    JumpToTargetUtility.CloseWorldTab();
+                    CameraJumper.TryHideWorld();
                 }, MenuOptionPriority.Default, null, null, 0f, null, null));
                 Find.WindowStack.Add(new FloatMenu(list));
                 return true;
@@ -362,9 +362,10 @@ namespace CultOfCthulhu
                 pawnFlyerLeaving.destinationCell = target.Cell;
                 pawnFlyerLeaving.arriveMode = arriveMode;
                 pawnFlyerLeaving.attackOnArrival = attackOnArrival;
-                ThingContainer innerContainer = compTransporter.GetInnerContainer();
+                ThingOwner innerContainer = compTransporter.GetDirectlyHeldThings();
                 pawnFlyerLeaving.Contents = new ActiveDropPodInfo();
-                pawnFlyerLeaving.Contents.innerContainer.TryAddMany(innerContainer);
+                innerContainer.TryTransferAllToContainer(pawnFlyerLeaving.Contents.innerContainer);
+                //pawnFlyerLeaving.Contents.innerContainer. //TryAddMany(innerContainer);
                 innerContainer.Clear();
                 compTransporter.CleanUpLoadingVars(map);
                 pawnFlyerLeaving.Contents.innerContainer.TryAdd(compTransporter.parent);

@@ -65,7 +65,7 @@ namespace CultOfCthulhu
             //Check if their brain is already upgraded.
             foreach (Hediff current in pawn(map).health.hediffSet.hediffs)
             {
-                if (current.def == CultDefOfs.Cults_PsionicBrain)
+                if (current.def == CultsDefOfs.Cults_PsionicBrain)
                 {
                     Messages.Message(pawn(map).LabelShort + " already posesses a brain with psionic power.", MessageSound.RejectInput);
                     return false;
@@ -120,7 +120,7 @@ namespace CultOfCthulhu
                 }
             }
 
-            pawn(map).health.AddHediff(CultDefOfs.Cults_PsionicBrain, pawn(map).health.hediffSet.GetBrain(), null);
+            pawn(map).health.AddHediff(CultsDefOfs.Cults_PsionicBrain, pawn(map).health.hediffSet.GetBrain(), null);
             Messages.Message(pawn(map).LabelShort + "'s brain has been enhanced with great psionic power.", MessageSound.Benefit);
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = pawn(map).Position;

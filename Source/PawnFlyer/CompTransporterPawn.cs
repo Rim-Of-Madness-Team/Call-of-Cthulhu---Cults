@@ -11,11 +11,11 @@ using System.Linq;
 namespace CultOfCthulhu
 {
     [StaticConstructorOnStartup]
-    public class CompTransporterPawn : ThingComp, IThingContainerOwner
+    public class CompTransporterPawn : ThingComp, IThingHolder
     {
         public int groupID = -1;
 
-        private ThingContainer innerContainer;
+        private ThingOwner innerContainer;
 
         public List<TransferableOneWay> leftToLoad;
 
@@ -101,7 +101,7 @@ namespace CultOfCthulhu
                 {
                     return null;
                 }
-                TransferableOneWay transferableOneWay = this.leftToLoad.Find((TransferableOneWay x) => x.countToTransfer != 0 && x.HasAnyThing);
+                TransferableOneWay transferableOneWay = this.leftToLoad.Find((TransferableOneWay x) => x.CountToTransfer != 0 && x.HasAnyThing);
                 if (transferableOneWay != null)
                 {
                     return transferableOneWay.AnyThing;
@@ -129,21 +129,26 @@ namespace CultOfCthulhu
 
         public CompTransporterPawn()
         {
-            this.innerContainer = new ThingContainer(this);
+            this.innerContainer = new ThingOwner<Thing>(this, false);
         }
 
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.LookValue<int>(ref this.groupID, "groupID", 0, false);
-            Scribe_Deep.LookDeep<ThingContainer>(ref this.innerContainer, "innerContainer", new object[]
+            Scribe_Values.Look<int>(ref this.groupID, "groupID", 0, false);
+            Scribe_Deep.Look<ThingOwner>(ref this.innerContainer, "innerContainer", new object[]
             {
                 this
             });
-            Scribe_Collections.LookList<TransferableOneWay>(ref this.leftToLoad, "leftToLoad", LookMode.Deep, new object[0]);
+            Scribe_Collections.Look<TransferableOneWay>(ref this.leftToLoad, "leftToLoad", LookMode.Deep, new object[0]);
         }
 
-        public ThingContainer GetInnerContainer()
+        public void GetChildHolders(List<IThingHolder> outChildren)
+        {
+            ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, this.GetDirectlyHeldThings());
+        }
+
+        public ThingOwner GetDirectlyHeldThings()
         {
             return this.innerContainer;
         }
@@ -273,17 +278,17 @@ namespace CultOfCthulhu
             TransferableOneWay transferableOneWay = new TransferableOneWay();
             this.leftToLoad.Add(transferableOneWay);
             transferableOneWay.things.AddRange(t.things);
-            transferableOneWay.countToTransfer = count;
+            transferableOneWay.AdjustTo(count);
         }
 
-        public void Notify_DepositedThingInContainer(Thing t)
+        public void Notify_ThingAdded(Thing t)
         {
-            this.SubtractFromToLoadList(t);
+            this.SubtractFromToLoadList(t, t.stackCount);
         }
 
         public void Notify_PawnEnteredTransporterOnHisOwn(Pawn p)
         {
-            this.SubtractFromToLoadList(p);
+            this.SubtractFromToLoadList(p, 1);
         }
 
         public bool CancelLoad()
@@ -345,7 +350,7 @@ namespace CultOfCthulhu
             }
         }
 
-        private void SubtractFromToLoadList(Thing t)
+        private void SubtractFromToLoadList(Thing t, int count)
         {
             if (this.leftToLoad == null)
             {
@@ -356,8 +361,8 @@ namespace CultOfCthulhu
             {
                 return;
             }
-            transferableOneWay.countToTransfer -= t.stackCount;
-            if (transferableOneWay.countToTransfer <= 0)
+            transferableOneWay.AdjustBy(-count);
+            if (transferableOneWay.CountToTransfer <= 0)
             {
                 this.leftToLoad.Remove(transferableOneWay);
             }
@@ -371,7 +376,7 @@ namespace CultOfCthulhu
         {
             List<CompTransporterPawn> list = this.TransportersInGroup(this.Map);
             int num = list.IndexOf(this);
-            JumpToTargetUtility.TryJumpAndSelect(list[GenMath.PositiveMod(num - 1, list.Count)].parent);
+            CameraJumper.TryJumpAndSelect(list[GenMath.PositiveMod(num - 1, list.Count)].parent);
         }
 
         private void SelectAllInGroup()
@@ -389,7 +394,7 @@ namespace CultOfCthulhu
         {
             List<CompTransporterPawn> list = this.TransportersInGroup(this.Map);
             int num = list.IndexOf(this);
-            JumpToTargetUtility.TryJumpAndSelect(list[(num + 1) % list.Count].parent);
+            CameraJumper.TryJumpAndSelect(list[(num + 1) % list.Count].parent);
         }
     }
 }

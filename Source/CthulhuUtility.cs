@@ -57,9 +57,9 @@ namespace Cthulhu
         public static bool loadedFactions = false;
 
 
-        public static bool IsMorning(Map map) { return GenLocalDate.HourInt(map) > 6 && GenLocalDate.HourInt(map) < 10; }
-        public static bool IsEvening(Map map) { return GenLocalDate.HourInt(map) > 18 && GenLocalDate.HourInt(map) < 22; }
-        public static bool IsNight(Map map) { return GenLocalDate.HourInt(map) > 22; }
+        public static bool IsMorning(Map map) { return GenLocalDate.HourInteger(map) > 6 && GenLocalDate.HourInteger(map) < 10; }
+        public static bool IsEvening(Map map) { return GenLocalDate.HourInteger(map) > 18 && GenLocalDate.HourInteger(map) < 22; }
+        public static bool IsNight(Map map) { return GenLocalDate.HourInteger(map) > 22; }
 
         public static bool isCosmicHorror(Pawn thing)
         {
@@ -367,9 +367,9 @@ namespace Cthulhu
         {
             foreach (BodyPartRecord current in set.GetNotMissingParts(BodyPartHeight.Undefined, BodyPartDepth.Undefined))
             {
-                for (int i = 0; i < current.def.Activities.Count; i++)
+                for (int i = 0; i < current.def.tags.Count; i++)
                 {
-                    if (current.def.Activities[i].First == PawnCapacityDefOf.BloodPumping)
+                    if (current.def.tags[i] == "BloodPumpingSource")
                     {
                         return current;
                     }
@@ -548,7 +548,7 @@ namespace Cthulhu
 
         public static int GetResearchSkill(Pawn p)
         {
-            return p.skills.GetSkill(SkillDefOf.Research).Level;
+            return p.skills.GetSkill(SkillDefOf.Intellectual).Level;
         }
 
         public static bool IsCosmicHorrorsLoaded()
@@ -658,7 +658,7 @@ namespace Cthulhu
 
         public static void DebugReport(string x)
         {
-            if (Prefs.DevMode && CultOfCthulhu.HugsModOptionalCode.cultsShowDebugCode())
+            if (Prefs.DevMode && CultOfCthulhu.ModSettings_Data.cultsShowDebugCode)
             {
                 Log.Message(Prefix + x);
             }

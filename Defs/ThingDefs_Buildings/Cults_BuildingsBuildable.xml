@@ -42,7 +42,7 @@
   </ThingDef>  
   -->
   <ThingDef ParentName="CultBuildingBase">
-    <defName>SignOfDagon</defName>
+    <defName>Cults_SignOfDagon</defName>
     <label>sign of Dagon</label>
     <Description>Designates a spot where the guardians of the deep may roam. It's recommended to keep these magic circles outside of the colony. Once they arrive, the guardians will defend the spot the circle originated at until their death. Avoid bringing colonists near their circle.</Description>
     <thingClass>CultOfCthulhu.Building_SignOfDagon</thingClass>
@@ -69,7 +69,7 @@
   
   
   <ThingDef ParentName="CultBuildingBase">
-    <defName>PewLinkable</defName>
+    <defName>Cults_PewLinkable</defName>
     <label>linkable pews</label>
     <uiIconPath>Building/SimplePew/pew_menuicon</uiIconPath>
 	<graphicData>
@@ -119,7 +119,7 @@
   
   
   <ThingDef ParentName="CultBenchBase">
-    <defName>ForbiddenKnowledgeCenter</defName>
+    <defName>Cults_ForbiddenKnowledgeCenter</defName>
     <label>forbidden knowledge center</label>
     <description>A simplistic table covered in strange symbols, notes, and a tome of forbidden knowledge. Researchers work here to uncover forces beyond. Prolonged usage will result in sanity loss, yet the rewards will be worthwhile.</description>
     <thingClass>CultOfCthulhu.Building_ForbiddenReserachCenter</thingClass>
@@ -426,7 +426,7 @@
   </ThingDef>
   
   <ThingDef ParentName="ObeliskBase">
-    <defName>ObeliskConstructed_Red</defName>
+    <defName>Cults_ObeliskConstructed_Red</defName>
     <label>obelisk (red)</label>
     <description>A mysterious upright standing block of stone. It has been specially blessed with a red aura.</description>
     <comps>
@@ -438,7 +438,7 @@
   </ThingDef>  
 
   <ThingDef ParentName="ObeliskBase">
-    <defName>ObeliskConstructed_Green</defName>
+    <defName>Cults_ObeliskConstructed_Green</defName>
     <label>obelisk (green)</label>
     <description>A mysterious upright standing block of stone. It has been specially blessed with a green aura.</description>
     <graphicData>
@@ -460,7 +460,7 @@
   </ThingDef>  
 
   <ThingDef ParentName="ObeliskBase">
-    <defName>ObeliskConstructed_Blue</defName>
+    <defName>Cults_ObeliskConstructed_Blue</defName>
     <label>obelisk (blue)</label>
     <description>A mysterious upright standing block of stone. It has been specially blessed with a blue aura.</description>
     <graphicData>
@@ -482,7 +482,7 @@
   </ThingDef>  
   
   <ThingDef ParentName="ObeliskBase">
-    <defName>ObeliskConstructed_Yellow</defName>
+    <defName>Cults_ObeliskConstructed_Yellow</defName>
     <label>obelisk (yellow)</label>
     <description>A mysterious upright standing block of stone. It has been specially blessed with a yellow aura.</description>
     <graphicData>

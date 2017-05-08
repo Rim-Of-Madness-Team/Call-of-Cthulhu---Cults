@@ -10,7 +10,7 @@ using RimWorld;
 
 namespace CultOfCthulhu
 {
-    public class PawnFlyersLeaving : Thing, IActiveDropPod, IThingContainerOwner
+    public class PawnFlyersLeaving : Thing, IActiveDropPod, IThingHolder
     {
         public PawnFlyer pawnFlyer;
 
@@ -58,6 +58,16 @@ namespace CultOfCthulhu
             }
         }
 
+        public void GetChildHolders(List<IThingHolder> outChildren)
+        {
+            ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, this.GetDirectlyHeldThings());
+        }
+
+        public ThingOwner GetDirectlyHeldThings()
+        {
+            return this.contents.innerContainer;
+        }
+
         public ActiveDropPodInfo Contents
         {
             get
@@ -76,11 +86,6 @@ namespace CultOfCthulhu
                 }
                 this.contents = value;
             }
-        }
-
-        public ThingContainer GetInnerContainer()
-        {
-            return this.contents.innerContainer;
         }
 
         public IntVec3 GetPosition()
@@ -104,21 +109,21 @@ namespace CultOfCthulhu
             base.ExposeData();
 
             //PawnFlyer
-            Scribe_References.LookReference<PawnFlyer>(ref this.pawnFlyer, "pawnFlyer");
+            Scribe_References.Look<PawnFlyer>(ref this.pawnFlyer, "pawnFlyer");
 
             //Vanilla
-            Scribe_Values.LookValue<int>(ref this.groupID, "groupID", 0, false);
-            Scribe_Values.LookValue<int>(ref this.destinationTile, "destinationTile", 0, false);
-            Scribe_Values.LookValue<IntVec3>(ref this.destinationCell, "destinationCell", default(IntVec3), false);
-            Scribe_Values.LookValue<PawnsArriveMode>(ref this.arriveMode, "arriveMode", PawnsArriveMode.Undecided, false);
-            Scribe_Values.LookValue<bool>(ref this.attackOnArrival, "attackOnArrival", false, false);
-            Scribe_Values.LookValue<int>(ref this.ticksSinceStart, "ticksSinceStart", 0, false);
-            Scribe_Deep.LookDeep<ActiveDropPodInfo>(ref this.contents, "contents", new object[]
+            Scribe_Values.Look<int>(ref this.groupID, "groupID", 0, false);
+            Scribe_Values.Look<int>(ref this.destinationTile, "destinationTile", 0, false);
+            Scribe_Values.Look<IntVec3>(ref this.destinationCell, "destinationCell", default(IntVec3), false);
+            Scribe_Values.Look<PawnsArriveMode>(ref this.arriveMode, "arriveMode", PawnsArriveMode.Undecided, false);
+            Scribe_Values.Look<bool>(ref this.attackOnArrival, "attackOnArrival", false, false);
+            Scribe_Values.Look<int>(ref this.ticksSinceStart, "ticksSinceStart", 0, false);
+            Scribe_Deep.Look<ActiveDropPodInfo>(ref this.contents, "contents", new object[]
             {
                 this
             });
-            Scribe_Values.LookValue<bool>(ref this.alreadyLeft, "alreadyLeft", false, false);
-            Scribe_Values.LookValue<bool>(ref this.soundPlayed, "soundPlayed", false, false);
+            Scribe_Values.Look<bool>(ref this.alreadyLeft, "alreadyLeft", false, false);
+            Scribe_Values.Look<bool>(ref this.soundPlayed, "soundPlayed", false, false);
         }
 
         public override void Tick()
@@ -143,7 +148,7 @@ namespace CultOfCthulhu
             }
         }
 
-        public override void DrawAt(Vector3 drawLoc)
+        public override void DrawAt(Vector3 drawLoc, bool flip)
         {
             if (drawLoc.InBounds(Map))
             {

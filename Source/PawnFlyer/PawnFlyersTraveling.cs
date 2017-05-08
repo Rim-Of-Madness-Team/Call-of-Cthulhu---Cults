@@ -104,7 +104,7 @@ namespace CultOfCthulhu
             {
                 for (int i = 0; i < this.pods.Count; i++)
                 {
-                    ThingContainer innerContainer = this.pods[i].innerContainer;
+                    ThingOwner innerContainer = this.pods[i].innerContainer;
                     for (int j = 0; j < innerContainer.Count; j++)
                     {
                         Pawn pawn = innerContainer[j] as Pawn;
@@ -124,7 +124,7 @@ namespace CultOfCthulhu
             {
                 for (int i = 0; i < this.pods.Count; i++)
                 {
-                    ThingContainer innerContainer = this.pods[i].innerContainer;
+                    ThingOwner innerContainer = this.pods[i].innerContainer;
                     for (int j = 0; j < innerContainer.Count; j++)
                     {
                         Pawn pawn = innerContainer[j] as Pawn;
@@ -147,17 +147,17 @@ namespace CultOfCthulhu
         {
             base.ExposeData();
             //Pawn
-            Scribe_References.LookReference<PawnFlyer>(ref this.pawnFlyer, "pawnFlyer");
+            Scribe_References.Look<PawnFlyer>(ref this.pawnFlyer, "pawnFlyer");
 
             //Vanilla
-            Scribe_Collections.LookList<ActiveDropPodInfo>(ref this.pods, "pods", LookMode.Deep, new object[0]);
-            Scribe_Values.LookValue<int>(ref this.destinationTile, "destinationTile", 0, false);
-            Scribe_Values.LookValue<IntVec3>(ref this.destinationCell, "destinationCell", default(IntVec3), false);
-            Scribe_Values.LookValue<PawnsArriveMode>(ref this.arriveMode, "arriveMode", PawnsArriveMode.Undecided, false);
-            Scribe_Values.LookValue<bool>(ref this.attackOnArrival, "attackOnArrival", false, false);
-            Scribe_Values.LookValue<bool>(ref this.arrived, "arrived", false, false);
-            Scribe_Values.LookValue<int>(ref this.initialTile, "initialTile", 0, false);
-            Scribe_Values.LookValue<float>(ref this.traveledPct, "traveledPct", 0f, false);
+            Scribe_Collections.Look<ActiveDropPodInfo>(ref this.pods, "pods", LookMode.Deep, new object[0]);
+            Scribe_Values.Look<int>(ref this.destinationTile, "destinationTile", 0, false);
+            Scribe_Values.Look<IntVec3>(ref this.destinationCell, "destinationCell", default(IntVec3), false);
+            Scribe_Values.Look<PawnsArriveMode>(ref this.arriveMode, "arriveMode", PawnsArriveMode.Undecided, false);
+            Scribe_Values.Look<bool>(ref this.attackOnArrival, "attackOnArrival", false, false);
+            Scribe_Values.Look<bool>(ref this.arrived, "arrived", false, false);
+            Scribe_Values.Look<int>(ref this.initialTile, "initialTile", 0, false);
+            Scribe_Values.Look<float>(ref this.traveledPct, "traveledPct", 0f, false);
         }
 
         public override void PostAdd()
@@ -181,7 +181,7 @@ namespace CultOfCthulhu
         {
             contents.parent = null;
             this.pods.Add(contents);
-            ThingContainer innerContainer = contents.innerContainer;
+            ThingOwner innerContainer = contents.innerContainer;
             for (int i = 0; i < innerContainer.Count; i++)
             {
                 Pawn pawn = innerContainer[i] as Pawn;
@@ -261,33 +261,41 @@ namespace CultOfCthulhu
             }
             else if (!this.PodsHaveAnyPotentialCaravanOwner)
             {
-                for (int i = 0; i < this.pods.Count; i++)
+                Caravan caravan = Find.WorldObjects.PlayerControlledCaravanAt(this.destinationTile);
+                if (caravan != null)
                 {
-                    this.pods[i].innerContainer.ClearAndDestroyContentsOrPassToWorld(DestroyMode.Vanish);
+                    this.GivePodContentsToCaravan(caravan);
                 }
-                this.RemoveAllPods();
-                Find.WorldObjects.Remove(this);
-                Messages.Message("MessageTransportPodsArrivedAndLost".Translate(), new GlobalTargetInfo(this.destinationTile), MessageSound.Negative);
+                else
+                {
+                    for (int i = 0; i < this.pods.Count; i++)
+                    {
+                        this.pods[i].innerContainer.ClearAndDestroyContentsOrPassToWorld(DestroyMode.Vanish);
+                    }
+                    this.RemoveAllPods();
+                    Find.WorldObjects.Remove(this);
+                    Messages.Message("MessageTransportPodsArrivedAndLost".Translate(), new GlobalTargetInfo(this.destinationTile), MessageSound.Negative);
+                }
             }
             else
             {
-                FactionBase factionBase = Find.WorldObjects.FactionBases.Find((FactionBase x) => x.Tile == this.destinationTile);
-                if (factionBase != null && factionBase.Faction != Faction.OfPlayer && this.attackOnArrival)
+                MapParent mapParent = Find.WorldObjects.MapParentAt(this.destinationTile);
+                if (mapParent != null && mapParent.TransportPodsCanLandAndGenerateMap && this.attackOnArrival)
                 {
                     LongEventHandler.QueueLongEvent(delegate
                     {
-                        Map map2 = AttackCaravanArrivalActionUtility.GenerateFactionBaseMap(factionBase);
+                        Map orGenerateMap = GetOrGenerateMapUtility.GetOrGenerateMap(mapParent.Tile, null);
                         string extraMessagePart = null;
-                        if (!factionBase.Faction.HostileTo(Faction.OfPlayer))
+                        if (!mapParent.Faction.HostileTo(Faction.OfPlayer))
                         {
-                            factionBase.Faction.SetHostileTo(Faction.OfPlayer, true);
+                            mapParent.Faction.SetHostileTo(Faction.OfPlayer, true);
                             extraMessagePart = "MessageTransportPodsArrived_BecameHostile".Translate(new object[]
                             {
-                                factionBase.Faction.Name
+                                mapParent.Faction.Name
                             }).CapitalizeFirst();
                         }
                         Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
-                        this.SpawnDropPodsInMap(map2, extraMessagePart);
+                        this.SpawnDropPodsInMap(mapParent.Map, extraMessagePart);
                     }, "GeneratingMapForNewEncounter", false, null);
                 }
                 else
@@ -341,12 +349,53 @@ namespace CultOfCthulhu
             Messages.Message(text, new TargetInfo(intVec, map, false), MessageSound.Benefit);
         }
 
+        private void GivePodContentsToCaravan(Caravan caravan)
+        {
+            for (int i = 0; i < this.pods.Count; i++)
+            {
+                List<Thing> tmpContainedThings = new List<Thing>();
+                //PawnFlyersTraveling.tmpContainedThing.Clear();
+                tmpContainedThings.AddRange(this.pods[i].innerContainer);
+                for (int j = 0; j < tmpContainedThings.Count; j++)
+                {
+                    this.pods[i].innerContainer.Remove(tmpContainedThings[j]);
+                    Pawn pawn = tmpContainedThings[j] as Pawn;
+                    PawnFlyer pawnFlyer = tmpContainedThings[j] as PawnFlyer;
+                    if (pawn != null)
+                    {
+                        caravan.AddPawn(pawn, true);
+                    }
+                    else if (pawnFlyer != null)
+                    {
+                        caravan.AddPawn(pawnFlyer, true);
+                    }
+                    else
+                    {
+                        Pawn pawn2 = CaravanInventoryUtility.FindPawnToMoveInventoryTo(tmpContainedThings[j], caravan.PawnsListForReading, null, null);
+                        bool flag = false;
+                        if (pawn2 != null)
+                        {
+                            flag = pawn2.inventory.innerContainer.TryAdd(tmpContainedThings[j], true);
+                        }
+                        if (!flag)
+                        {
+                            tmpContainedThings[j].Destroy(DestroyMode.Vanish);
+                        }
+                    }
+                }
+            }
+            this.RemoveAllPods();
+            Find.WorldObjects.Remove(this);
+            Messages.Message("MessageTransportPodsArrivedAndAddedToCaravan".Translate(), caravan, MessageSound.Benefit);
+        }
+
+
         private void SpawnCaravanAtDestinationTile()
         {
             PawnFlyersTraveling.tmpPawns.Clear();
             for (int i = 0; i < this.pods.Count; i++)
             {
-                ThingContainer innerContainer = this.pods[i].innerContainer;
+                ThingOwner innerContainer = this.pods[i].innerContainer;
                 for (int j = 0; j < innerContainer.Count; j++)
                 {
                     Pawn pawn = innerContainer[j] as Pawn;
@@ -370,7 +419,7 @@ namespace CultOfCthulhu
             o.AddPawn((Pawn)pawnFlyer, false);
             for (int k = 0; k < this.pods.Count; k++)
             {
-                ThingContainer innerContainer2 = this.pods[k].innerContainer;
+                ThingOwner innerContainer2 = this.pods[k].innerContainer;
                 for (int l = 0; l < innerContainer2.Count; l++)
                 {
                     if (!(innerContainer2[l] is Pawn))
@@ -398,7 +447,7 @@ namespace CultOfCthulhu
         {
             for (int i = 0; i < this.pods.Count; i++)
             {
-                ThingContainer innerContainer = this.pods[i].innerContainer;
+                ThingOwner innerContainer = this.pods[i].innerContainer;
                 for (int j = 0; j < innerContainer.Count; j++)
                 {
                     Pawn pawn = innerContainer[j] as Pawn;

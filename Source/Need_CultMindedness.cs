@@ -25,11 +25,12 @@ namespace CultOfCthulhu
         public int ticksUntilBaseSet = 500;
         private int lastGainTick;
 
-        UtilityWorldObject_GlobalCultTracker globalCultTracker = Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_GlobalCultTracker>();
+        WorldComponent_GlobalCultTracker globalCultTracker = Find.World.GetComponent<WorldComponent_GlobalCultTracker>();
 
         static Need_CultMindedness()
         {
-            //ColanderThingDef = DefDatabase<ThingDef>.GetNamed("Apparel_Colander");
+            //ColanderThingDef = 
+            //<ThingDef>.GetNamed("Apparel_Colander");
         }
         
         public override int GUIChangeArrow
@@ -115,8 +116,8 @@ namespace CultOfCthulhu
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<bool>(ref this.baseSet, "baseSet", false, false);
-            Scribe_Values.LookValue<int>(ref this.ticksUntilBaseSet, "ticksUntilBaseSet", 1000, false);
+            Scribe_Values.Look<bool>(ref this.baseSet, "baseSet", false, false);
+            Scribe_Values.Look<int>(ref this.ticksUntilBaseSet, "ticksUntilBaseSet", 1000, false);
         }
 
 

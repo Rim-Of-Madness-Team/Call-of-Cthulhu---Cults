@@ -7,7 +7,7 @@ using Verse;
 
 namespace CultOfCthulhu
 {
-    public class Building_TreasureChest : Building_Casket, IStoreSettingsParent
+    public class Building_TreasureChest : Building_Casket, IStoreSettingsParent, IThingHolder
     {
         private StorageSettings storageSettings;
 
@@ -36,7 +36,7 @@ namespace CultOfCthulhu
         public override void PostMake()
         {
             base.PostMake();
-            this.innerContainer = new ThingContainer(this, false, LookMode.Deep);
+            this.innerContainer = new ThingOwner<Thing>(this, false);
             this.storageSettings = new StorageSettings(this);
             if (this.def.building.defaultStorageSettings != null)
             {
@@ -116,20 +116,20 @@ namespace CultOfCthulhu
         //Industrial Level Legendary Armor
         private bool HandlesArmorDefs(ThingDef td)
         {
-            return td == ThingDefOf.Apparel_PersonalShield || (td.tradeability == Tradeability.Stockable && td.techLevel <= TechLevel.Industrial && td.IsApparel && (td.GetStatValueAbstract(StatDefOf.ArmorRating_Blunt, null) > 0.15f || td.GetStatValueAbstract(StatDefOf.ArmorRating_Sharp, null) > 0.15f));
+            return td == ThingDefOf.Apparel_ShieldBelt || (td.tradeability == Tradeability.Stockable && td.techLevel <= TechLevel.Industrial && td.IsApparel && (td.GetStatValueAbstract(StatDefOf.ArmorRating_Blunt, null) > 0.15f || td.GetStatValueAbstract(StatDefOf.ArmorRating_Sharp, null) > 0.15f));
         }
 
         public override void TickRare()
         {
             base.TickRare();
-            this.innerContainer.ThingContainerTickRare();
+            this.innerContainer.ThingOwnerTickRare();
         }
 
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<bool>(ref this.SpawnedStorage, "SpawnedStorage", false);
-            Scribe_Deep.LookDeep<StorageSettings>(ref this.storageSettings, "storageSettings", new object[]
+            Scribe_Values.Look<bool>(ref this.SpawnedStorage, "SpawnedStorage", false);
+            Scribe_Deep.Look<StorageSettings>(ref this.storageSettings, "storageSettings", new object[]
             {
                 this
             });

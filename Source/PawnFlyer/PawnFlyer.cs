@@ -15,12 +15,12 @@ namespace CultOfCthulhu
 
         private CompLaunchablePawn compLaunchablePawn;
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
             compTransporterPawn = this.TryGetComp<CompTransporterPawn>();
             compLaunchablePawn = this.TryGetComp<CompLaunchablePawn>();
             base.DecrementMapIndex();
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
         }
 
         public override IEnumerable<Gizmo> GetGizmos()

@@ -3,10 +3,11 @@ using Verse;
 using Verse.Sound;
 using RimWorld;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace CultOfCthulhu
 {
-    public class PawnFlyersLanded : Thing, IActiveDropPod, IThingContainerOwner
+    public class PawnFlyersLanded : Thing, IActiveDropPod, IThingHolder
     {
         public int age;
 
@@ -18,6 +19,16 @@ namespace CultOfCthulhu
             {
                 return pawnFlyer.def as PawnFlyerDef;
             }
+        }
+
+        public void GetChildHolders(List<IThingHolder> outChildren)
+        {
+            ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, this.GetDirectlyHeldThings());
+        }
+
+        public ThingOwner GetDirectlyHeldThings()
+        {
+            return this.contents.innerContainer;
         }
 
         private ActiveDropPodInfo contents;
@@ -46,19 +57,14 @@ namespace CultOfCthulhu
         {
             base.ExposeData();
             //Pawn
-            Scribe_References.LookReference<PawnFlyer>(ref this.pawnFlyer, "pawnFlyer");
+            Scribe_References.Look<PawnFlyer>(ref this.pawnFlyer, "pawnFlyer");
 
             //Vanilla
-            Scribe_Values.LookValue<int>(ref this.age, "age", 0, false);
-            Scribe_Deep.LookDeep<ActiveDropPodInfo>(ref this.contents, "contents", new object[]
+            Scribe_Values.Look<int>(ref this.age, "age", 0, false);
+            Scribe_Deep.Look<ActiveDropPodInfo>(ref this.contents, "contents", new object[]
             {
                 this
             });
-        }
-
-        public ThingContainer GetInnerContainer()
-        {
-            return this.contents.innerContainer;
         }
 
         public IntVec3 GetPosition()
@@ -71,7 +77,7 @@ namespace CultOfCthulhu
             return base.MapHeld;
         }
 
-        public override void DrawAt(Vector3 drawLoc)
+        public override void DrawAt(Vector3 drawLoc, bool flipped)
         {
             if (drawLoc.InBounds(Map))
             {
@@ -93,7 +99,7 @@ namespace CultOfCthulhu
             this.contents.innerContainer.ClearAndDestroyContents(DestroyMode.Vanish);
             Map map = base.Map;
             base.Destroy(mode);
-            if (mode == DestroyMode.Kill)
+            if (mode == DestroyMode.KillFinalize)
             {
                 for (int i = 0; i < 1; i++)
                 {
@@ -178,5 +184,7 @@ namespace CultOfCthulhu
             }
             this.Destroy(DestroyMode.Vanish);
         }
+
+
     }
 }

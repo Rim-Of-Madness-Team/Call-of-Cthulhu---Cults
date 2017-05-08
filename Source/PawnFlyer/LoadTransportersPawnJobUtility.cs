@@ -46,7 +46,7 @@ namespace CultOfCthulhu
             Thing thing = LoadTransportersPawnJobUtility.FindThingToLoad(p, transporter);
             return new Job(JobDefOf.HaulToContainer, thing, transporter.parent)
             {
-                count = Mathf.Min(TransferableUtility.TransferableMatching<TransferableOneWay>(thing, transporter.leftToLoad).countToTransfer, thing.stackCount),
+                count = Mathf.Min(TransferableUtility.TransferableMatching<TransferableOneWay>(thing, transporter.leftToLoad).CountToTransfer, thing.stackCount),
                 ignoreForbidden = true
             };
         }
@@ -68,7 +68,7 @@ namespace CultOfCthulhu
                 for (int i = 0; i < leftToLoad.Count; i++)
                 {
                     TransferableOneWay transferableOneWay = leftToLoad[i];
-                    if (transferableOneWay.countToTransfer > 0)
+                    if (transferableOneWay.CountToTransfer > 0)
                     {
                         for (int j = 0; j < transferableOneWay.things.Count; j++)
                         {

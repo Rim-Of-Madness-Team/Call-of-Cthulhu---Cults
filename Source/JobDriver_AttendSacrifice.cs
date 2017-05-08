@@ -59,7 +59,7 @@ namespace CultOfCthulhu
 
         public override void ExposeData()
         {
-            Scribe_References.LookReference<Pawn>(ref this.setExecutioner, "setExecutioner");
+            Scribe_References.Look<Pawn>(ref this.setExecutioner, "setExecutioner");
             base.ExposeData();
         }
 

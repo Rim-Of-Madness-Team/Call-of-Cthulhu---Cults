@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CultOfCthulhu
 {
-    public class MapCondition_StarsAreRight : MapCondition
+    public class GameCondition_StarsAreRight : GameCondition
     {
         public override float PlantDensityFactor()
         {

@@ -59,7 +59,7 @@ namespace CultOfCthulhu
 
             Map map = parms.target as Map;
             float chance = Rand.Range(1, 100);
-            ThingContainer container = new ThingContainer();
+            List<Thing> container = new List<Thing>();
             string label = "LetterLabelRefugeePodCrash".Translate();
             string text = "RefugeePodCrash".Translate();
 
@@ -111,10 +111,10 @@ namespace CultOfCthulhu
                 label = "LetterLabelForcedCrashCombatSuplier".Translate();
                 text = "ForcedCrashCombatSuplier".Translate();
 
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Silver, Rand.Range(40, 60))); //Orig 4000-6000
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Component, Rand.Range(-1, 10))); //Original -1~10
-                container.TryAddMany(ThingsToAdd(ThingDefOf.MortarShell, Rand.Range(5, 10))); //Original 30-60
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Medicine, Rand.Range(5, 15))); //Original 30-50
+                container.AddRange(ThingsToAdd(ThingDefOf.Silver, Rand.Range(40, 60))); //Orig 4000-6000
+                container.AddRange(ThingsToAdd(ThingDefOf.Component, Rand.Range(-1, 10))); //Original -1~10
+                container.AddRange(ThingsToAdd(ThingDefOf.MortarShell, Rand.Range(5, 10))); //Original 30-60
+                container.AddRange(ThingsToAdd(ThingDefOf.Medicine, Rand.Range(5, 15))); //Original 30-50
                 AddThingsToContainerByTag(container, "BodyPartOrImplant", Rand.Range(-8, 2)); //Original 0~5
                 AddThingsToContainerByTag(container, "Drugs", Rand.Range(-2, 2)); //Original 0~5
                 int randomInRange = Rand.Range(3, 6); //Orig 4~8 guns
@@ -136,7 +136,7 @@ namespace CultOfCthulhu
                                  select st).RandomElementByWeight((ThingDef st) => st.stuffProps.commonality);
                     }
                     ThingWithComps thingWithComps = (ThingWithComps)ThingMaker.MakeThing(def, stuff);
-                    container.TryAdd(thingWithComps);
+                    container.Add(thingWithComps);
                 }
                 //Weapons Melee
                 randomInRange = Rand.Range(1, 3); //Orig 3~5 guns
@@ -157,7 +157,7 @@ namespace CultOfCthulhu
                                  select st).RandomElementByWeight((ThingDef st) => st.stuffProps.commonality);
                     }
                     ThingWithComps thingWithComps = (ThingWithComps)ThingMaker.MakeThing(def, stuff);
-                    container.TryAdd(thingWithComps);
+                    container.Add(thingWithComps);
                 }
                 //Armor
                 randomInRange = Rand.Range(1, 2); //Orig 2~4 armor
@@ -178,7 +178,7 @@ namespace CultOfCthulhu
                                  select st).RandomElementByWeight((ThingDef st) => st.stuffProps.commonality);
                     }
                     ThingWithComps thingWithComps = (ThingWithComps)ThingMaker.MakeThing(def, stuff);
-                    container.TryAdd(thingWithComps);
+                    container.Add(thingWithComps);
                 }
 
                     //Clothes
@@ -200,7 +200,7 @@ namespace CultOfCthulhu
                                  select st).RandomElementByWeight((ThingDef st) => st.stuffProps.commonality);
                     }
                     ThingWithComps thingWithComps = (ThingWithComps)ThingMaker.MakeThing(def, stuff);
-                    container.TryAdd(thingWithComps);
+                    container.Add(thingWithComps);
                 }
             }
 
@@ -210,27 +210,27 @@ namespace CultOfCthulhu
                 text = "ForcedCrashBulkGoods".Translate();
 
                 //Basic Stuff
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Silver, Rand.Range(20, 100))); //Original 4000-6000
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Component, Rand.Range(5, 15))); //Original 5-30
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Steel, Rand.Range(20, 100))); //Original 800-1500
+                container.AddRange(ThingsToAdd(ThingDefOf.Silver, Rand.Range(20, 100))); //Original 4000-6000
+                container.AddRange(ThingsToAdd(ThingDefOf.Component, Rand.Range(5, 15))); //Original 5-30
+                container.AddRange(ThingsToAdd(ThingDefOf.Steel, Rand.Range(20, 100))); //Original 800-1500
 
                 //Luxury Goods
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Gold, Rand.Range(5, 50))); //Original 500-2000
-                container.TryAddMany(ThingsToAdd(CultDefOfs.Neutroamine, Rand.Range(5, 15))); //Original 400-800
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Plasteel, Rand.Range(5, 15))); //Original 300-700
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Beer, Rand.Range(-70, 30))); //Original -700-2000
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Chocolate, Rand.Range(-70, 30))); //Original -700-2000
+                container.AddRange(ThingsToAdd(ThingDefOf.Gold, Rand.Range(5, 50))); //Original 500-2000
+                container.AddRange(ThingsToAdd(CultsDefOfs.Neutroamine, Rand.Range(5, 15))); //Original 400-800
+                container.AddRange(ThingsToAdd(ThingDefOf.Plasteel, Rand.Range(5, 15))); //Original 300-700
+                container.AddRange(ThingsToAdd(ThingDefOf.Beer, Rand.Range(-70, 30))); //Original -700-2000
+                container.AddRange(ThingsToAdd(ThingDefOf.Chocolate, Rand.Range(-70, 30))); //Original -700-2000
                 AddThingsToContainerByTag(container, "Furniture", Rand.Range(0, 1)); //(0-3 kinds) Furniture -1~2
 
                 //Sensitive Materials
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Cloth, Rand.Range(-20, 50))); //Original -200-600
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Medicine, Rand.Range(1, 5))); //Original 10-30
+                container.AddRange(ThingsToAdd(ThingDefOf.Cloth, Rand.Range(-20, 50))); //Original -200-600
+                container.AddRange(ThingsToAdd(ThingDefOf.Medicine, Rand.Range(1, 5))); //Original 10-30
                 AddThingsToContainerByTag(container, "Apparel", Rand.Range(4, 8)); //Original 10-20
-                container.TryAddMany(ThingsToAdd(ThingDefOf.WoodLog, Rand.Range(10, 60))); //Original 800-1500
+                container.AddRange(ThingsToAdd(ThingDefOf.WoodLog, Rand.Range(10, 60))); //Original 800-1500
 
                 //Foodstuffs
-                container.TryAddMany(ThingsToAdd(ThingDef.Named("Pemmican"), Rand.Range(-20, 40))); //NA
-                container.TryAddMany(ThingsToAdd(ThingDef.Named("Kibble"), Rand.Range(-20, 40))); //NA
+                container.AddRange(ThingsToAdd(ThingDef.Named("Pemmican"), Rand.Range(-20, 40))); //NA
+                container.AddRange(ThingsToAdd(ThingDef.Named("Kibble"), Rand.Range(-20, 40))); //NA
                 //Food meals 2-4
                 //AddThingsToContainerByTag(container, "", Rand.Range(0, 1)); //ResourcesRaw 1500 - 3000
                 //AddThingsToContainerByTag(container, "", Rand.Range(0, 1)); //(2-8 kinds) FoodRaw 1600 - 5000
@@ -239,12 +239,12 @@ namespace CultOfCthulhu
 
                 //Textiles - Original 2200 - 4000.
                 //New Range - 270 - 1100
-                container.TryAddMany(ThingsToAdd(CultDefOfs.BlocksSlate, Rand.Range(-100, 200)));
-                container.TryAddMany(ThingsToAdd(CultDefOfs.BlocksLimestone, Rand.Range(-100, 200)));
-                container.TryAddMany(ThingsToAdd(CultDefOfs.BlocksMarble, Rand.Range(-100, 200)));
-                container.TryAddMany(ThingsToAdd(ThingDef.Named("BlocksGranite"), Rand.Range(-100, 200)));
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Plasteel, Rand.Range(-20, 20)));
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Steel, Rand.Range(-100, 200)));
+                container.AddRange(ThingsToAdd(CultsDefOfs.BlocksSlate, Rand.Range(-100, 200)));
+                container.AddRange(ThingsToAdd(CultsDefOfs.BlocksLimestone, Rand.Range(-100, 200)));
+                container.AddRange(ThingsToAdd(CultsDefOfs.BlocksMarble, Rand.Range(-100, 200)));
+                container.AddRange(ThingsToAdd(ThingDef.Named("BlocksGranite"), Rand.Range(-100, 200)));
+                container.AddRange(ThingsToAdd(ThingDefOf.Plasteel, Rand.Range(-20, 20)));
+                container.AddRange(ThingsToAdd(ThingDefOf.Steel, Rand.Range(-100, 200)));
             }
             //Exotic
             else
@@ -252,14 +252,14 @@ namespace CultOfCthulhu
                 label = "LetterLabelForcedCrashExotic".Translate();
                 text = "ForcedCrashExotic".Translate();
                                
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Silver, Rand.Range(50, 100))); //Original 1500-3000
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Component, Rand.Range(6, 20))); //Original 6-20
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Plasteel, Rand.Range(10, 30))); //Original 50-150
-                container.TryAddMany(ThingsToAdd(ThingDefOf.Gold, Rand.Range(10, 20))); //Original 100-300
-                container.TryAddMany(ThingsToAdd(CultDefOfs.Neutroamine, Rand.Range(5, 20))); //Original 25-100
-                container.TryAddMany(ThingsToAdd(CultDefOfs.Penoxycyline, Rand.Range(-25, 25))); //Original (0)
-                container.TryAddMany(ThingsToAdd(ThingDefOf.GlitterworldMedicine, Rand.Range(-10, 4))); //Original -5 - 4
-                container.TryAddMany(ThingsToAdd(ThingDef.Named("Telescope"), Rand.Range(-3, 2))); //Original -2 - 2
+                container.AddRange(ThingsToAdd(ThingDefOf.Silver, Rand.Range(50, 100))); //Original 1500-3000
+                container.AddRange(ThingsToAdd(ThingDefOf.Component, Rand.Range(6, 20))); //Original 6-20
+                container.AddRange(ThingsToAdd(ThingDefOf.Plasteel, Rand.Range(10, 30))); //Original 50-150
+                container.AddRange(ThingsToAdd(ThingDefOf.Gold, Rand.Range(10, 20))); //Original 100-300
+                container.AddRange(ThingsToAdd(CultsDefOfs.Neutroamine, Rand.Range(5, 20))); //Original 25-100
+                container.AddRange(ThingsToAdd(CultsDefOfs.Penoxycyline, Rand.Range(-25, 25))); //Original (0)
+                container.AddRange(ThingsToAdd(ThingDefOf.GlitterworldMedicine, Rand.Range(-10, 4))); //Original -5 - 4
+                container.AddRange(ThingsToAdd(ThingDef.Named("Telescope"), Rand.Range(-3, 2))); //Original -2 - 2
                 //AddThingsToContainerByTag(container, "Television", Rand.Range(-2, 2)); //Original -2~2
                 AddThingsToContainerByTag(container, "BodyPartOrImplant", Rand.Range(1, 2)); //Original 2~4
                 //AddThingsToContainerByTag(container, "StandardAnimal", Rand.Range(1, 2));  //Animals - Original 1-3 kinds, 2-6 number. Wildness 0.6 
@@ -274,24 +274,24 @@ namespace CultOfCthulhu
 
 
             //Misc ship crash pieces.
-            container.TryAddMany(ThingsToAdd(ThingDefOf.Steel, Rand.Range(20, 100)));
-            container.TryAddMany(ThingsToAdd(ThingDefOf.Component, Rand.Range(10, 20)));
-            container.TryAddMany(ThingsToAdd(ThingDefOf.Steel, Rand.Range(20, 100)));
+            container.AddRange(ThingsToAdd(ThingDefOf.Steel, Rand.Range(20, 100)));
+            container.AddRange(ThingsToAdd(ThingDefOf.Component, Rand.Range(10, 20)));
+            container.AddRange(ThingsToAdd(ThingDefOf.Steel, Rand.Range(20, 100)));
 
             //PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref text, ref label, pawn);
 
-            Find.LetterStack.ReceiveLetter(label, text, LetterType.Good, new TargetInfo(intVec, map), null);
-            DropPodUtility.MakeDropPodAt(intVec, map, new ActiveDropPodInfo
+            Find.LetterStack.ReceiveLetter(label, text, LetterDefOf.Good, new TargetInfo(intVec, map), null);
+            ActiveDropPodInfo adpInfo = new ActiveDropPodInfo();
+            foreach (Thing thing in container)
             {
-                innerContainer = container,
-                openDelay = 180,
-                leaveSlag = true
-            });
+                adpInfo.innerContainer.TryAdd(thing);
+            }
+            DropPodUtility.MakeDropPodAt(intVec, map, adpInfo);
             Cthulhu.Utility.ApplyTaleDef("SpellOrbitalInsanityWave", map);
             return true;
         }
 
-        public void AddThingsToContainerByTag(ThingContainer container, string tag, int counter)
+        public void AddThingsToContainerByTag(List<Thing> container, string tag, int counter)
         {
             if (counter <= 0) return;
             for (int i = 0; i < counter; i++)
@@ -311,7 +311,7 @@ namespace CultOfCthulhu
                              select st).RandomElementByWeight((ThingDef st) => st.stuffProps.commonality);
                 }
                 ThingWithComps thingWithComps = (ThingWithComps)ThingMaker.MakeThing(def, stuff);
-                container.TryAdd(thingWithComps);
+                container.Add(thingWithComps);
             }
         }
 

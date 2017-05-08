@@ -25,7 +25,7 @@
     <recoveryMessage>{0} has awoken from HIS deep sleep.</recoveryMessage>
     <beginLetterLabel>deep sleep</beginLetterLabel>
     <beginLetter>{0} is visiting the lost city of Carcosa in HIS dreams.</beginLetter>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <baseInspectLine>Mental state: Deep Sleep</baseInspectLine>
     <allowBeatfire>false</allowBeatfire>
   </MentalStateDef>

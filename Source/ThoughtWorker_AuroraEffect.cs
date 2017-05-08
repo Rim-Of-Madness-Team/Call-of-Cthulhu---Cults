@@ -27,7 +27,7 @@ namespace CultOfCthulhu
     {
         protected override ThoughtState CurrentStateInternal(Pawn p)
         {
-            MapCondition_AuroraEffect activeCondition = p.Map.mapConditionManager.GetActiveCondition<MapCondition_AuroraEffect>();
+            GameCondition_AuroraEffect activeCondition = p.Map.GameConditionManager.GetActiveCondition<GameCondition_AuroraEffect>();
             if (activeCondition != null)
             {
                 return ThoughtState.ActiveAtStage(0);

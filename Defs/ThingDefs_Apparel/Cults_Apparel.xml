@@ -101,7 +101,7 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			<commonality>0</commonality>
+			 
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
@@ -190,7 +190,7 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			<commonality>0</commonality>
+			 
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
@@ -277,7 +277,7 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			<commonality>0</commonality>
+			 
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
@@ -366,7 +366,7 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			<commonality>0</commonality>
+			 
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
@@ -454,7 +454,7 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			<commonality>0</commonality>
+			 
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
@@ -542,7 +542,7 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			<commonality>0</commonality>
+			 
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
@@ -627,7 +627,7 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			<commonality>0.01</commonality>
+			 
 			<tags>
 				<li>CallOfCthulhu_Sailor</li>
 			</tags>
@@ -670,7 +670,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-      <commonality>0</commonality>
+       
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -748,7 +748,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-      <commonality>0</commonality>
+       
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -807,7 +807,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-      <commonality>0</commonality>
+       
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -868,7 +868,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-      <commonality>0</commonality>
+       
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -929,7 +929,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-      <commonality>0</commonality>
+       
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -988,7 +988,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-      <commonality>0</commonality>
+       
       <tags>
 		<li>CallOfCthulhu_TownsfolkPolice</li>	
       </tags>
@@ -1064,7 +1064,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-      <commonality>0.01</commonality>
+       
     </apparel>
   </ThingDef>
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
+using RimWorld.Planet;
 
 namespace CultOfCthulhu
 {
@@ -17,7 +18,7 @@ namespace CultOfCthulhu
         NeedTable = 5
     }
 
-    class UtilityWorldObject_GlobalCultTracker : Cthulhu.UtilityWorldObject
+    class WorldComponent_GlobalCultTracker : WorldComponent
     {
         public List<ResearchProjectDef> cultResearch = new List<ResearchProjectDef>()
         {
@@ -40,6 +41,10 @@ namespace CultOfCthulhu
         public CultSeedState currentSeedState = CultSeedState.NeedSeed;
         public int numHumanSacrifices = 0;
 
+        public WorldComponent_GlobalCultTracker(World world) : base(world)
+        {
+        }
+
         public void InitializeCult(Pawn founder)
         {
             Map map = founder.Map;
@@ -59,7 +64,7 @@ namespace CultOfCthulhu
                 });
             }
             //The founder will remember that, too.
-            founder.needs.mood.thoughts.memories.TryGainMemoryThought(DefDatabase<ThoughtDef>.GetNamed("FoundedCult"));
+            founder.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_FoundedCult);
             map.GetComponent<MapComponent_LocalCultTracker>().ResolveTerribleCultFounder(founder);
         }
         
@@ -180,13 +185,13 @@ namespace CultOfCthulhu
         {
             base.ExposeData();
 
-            Scribe_Values.LookValue<string>(ref this.cultName, "cultName", "Unnamed Cult", false);
-            Scribe_Collections.LookList<Pawn>(ref this.cultMembers, "cultMembers", LookMode.Reference, new object[0]);
-            Scribe_Collections.LookList<Pawn>(ref this.antiCultists, "antiCultists", LookMode.Reference, new object[0]);
-            Scribe_Values.LookValue<bool>(ref this.doesCultExist, "doesCultExist", false, false);
-            Scribe_Values.LookValue<int>(ref this.numHumanSacrifices, "numHumanSacrifices", 0, false);
+            Scribe_Values.Look<string>(ref this.cultName, "cultName", "Unnamed Cult", false);
+            Scribe_Collections.Look<Pawn>(ref this.cultMembers, "cultMembers", LookMode.Reference, new object[0]);
+            Scribe_Collections.Look<Pawn>(ref this.antiCultists, "antiCultists", LookMode.Reference, new object[0]);
+            Scribe_Values.Look<bool>(ref this.doesCultExist, "doesCultExist", false, false);
+            Scribe_Values.Look<int>(ref this.numHumanSacrifices, "numHumanSacrifices", 0, false);
 
-            Scribe_Values.LookValue<CultSeedState>(ref this.currentSeedState, "CurrentSeedState", CultSeedState.NeedSeed, false);
+            Scribe_Values.Look<CultSeedState>(ref this.currentSeedState, "CurrentSeedState", CultSeedState.NeedSeed, false);
         }
     }
 

@@ -198,11 +198,11 @@ namespace CultOfCthulhu
                     }
 
                 }
-                if (sourceCorpse.holdingContainer != null)
+                if (sourceCorpse.holdingOwner != null)
                 {
-                    if (sourceCorpse.holdingContainer.owner != null)
+                    if (sourceCorpse.holdingOwner.Owner != null)
                     {
-                        Building_Casket casket = sourceCorpse.holdingContainer.owner as Building_Casket;
+                        Building_Casket casket = sourceCorpse.holdingOwner.Owner as Building_Casket;
                         if (casket != null)
                         {
                             casket.EjectContents();
@@ -245,7 +245,7 @@ namespace CultOfCthulhu
             StringBuilder s = new StringBuilder();
             string labelToTranslate = "Error";
             string textLabel = "Error";
-            LetterType letterType = LetterType.BadNonUrgent;
+            LetterDef letterDef = LetterDefOf.BadNonUrgent;
             s.Append("SacrificeIntro".Translate());
             s.Append(" " + lastUsedAltar.currentSacrificeDeity.Label);
 
@@ -299,10 +299,10 @@ namespace CultOfCthulhu
                 {
                     case CultUtility.SacrificeResult.success:
                         s.Append("complete success.");
-                        letterType = LetterType.Good;
+                        letterDef = LetterDefOf.Good;
                         break;
                     case CultUtility.SacrificeResult.mixedsuccess:
-                        letterType = LetterType.Good;
+                        letterDef = LetterDefOf.Good;
                         s.Append("mixed success.");
                         break;
                     case CultUtility.SacrificeResult.failure:
@@ -359,28 +359,28 @@ namespace CultOfCthulhu
             }
             textLabel = labelToTranslate.Translate();
             LetterStack:
-            Find.LetterStack.ReceiveLetter(textLabel, s.ToString(), letterType, new TargetInfo(lastLocation, map));
+            Find.LetterStack.ReceiveLetter(textLabel, s.ToString(), letterDef, new TargetInfo(lastLocation, map));
         }
         #endregion Reports
         
         public override void ExposeData()
         {
             //Unspeakable Oath Spell
-            Scribe_Collections.LookStack<Corpse>(ref this.toBeResurrected, "toBeResurrected", LookMode.Reference);
-            Scribe_Values.LookValue<int>(ref this.ticksUntilResurrection, "ticksUntilResurrection", -999);
-            Scribe_Collections.LookList<Pawn>(ref this.unspeakableOathPawns, "unspeakableOathPawns", LookMode.Reference, new object[0]);
+            Scribe_Collections.Look<Corpse>(ref this.toBeResurrected, "toBeResurrected", LookMode.Reference);
+            Scribe_Values.Look<int>(ref this.ticksUntilResurrection, "ticksUntilResurrection", -999);
+            Scribe_Collections.Look<Pawn>(ref this.unspeakableOathPawns, "unspeakableOathPawns", LookMode.Reference, new object[0]);
             
             //Defend the Brood Spell
-            Scribe_Collections.LookList<Pawn>(ref this.defendTheBroodPawns, "defendTheBroodPawns", LookMode.Reference, new object[0]);
+            Scribe_Collections.Look<Pawn>(ref this.defendTheBroodPawns, "defendTheBroodPawns", LookMode.Reference, new object[0]);
             
             //Sacrifice Variables
-            Scribe_Values.LookValue<CultUtility.SacrificeResult>(ref this.lastResult, "lastResult", CultUtility.SacrificeResult.none, false);
-            Scribe_References.LookReference<Building_SacrificialAltar>(ref this.lastUsedAltar, "lastUsedAltar", false);
-            Scribe_Defs.LookDef<IncidentDef>(ref this.lastSideEffect, "lastSideEffect");
-            Scribe_Values.LookValue<bool>(ref this.wasDoubleTheFun, "wasDoubleTheFun", false, false);
-            Scribe_Values.LookValue<IntVec3>(ref this.lastLocation, "lastLocation", IntVec3.Invalid, false);
-            Scribe_Defs.LookDef<IncidentDef>(ref this.lastDoubleSideEffect, "lastDoubleSideEffect");
-            Scribe_Defs.LookDef<IncidentDef>(ref this.lastSpell, "lastSpell");
+            Scribe_Values.Look<CultUtility.SacrificeResult>(ref this.lastResult, "lastResult", CultUtility.SacrificeResult.none, false);
+            Scribe_References.Look<Building_SacrificialAltar>(ref this.lastUsedAltar, "lastUsedAltar", false);
+            Scribe_Defs.Look<IncidentDef>(ref this.lastSideEffect, "lastSideEffect");
+            Scribe_Values.Look<bool>(ref this.wasDoubleTheFun, "wasDoubleTheFun", false, false);
+            Scribe_Values.Look<IntVec3>(ref this.lastLocation, "lastLocation", IntVec3.Invalid, false);
+            Scribe_Defs.Look<IncidentDef>(ref this.lastDoubleSideEffect, "lastDoubleSideEffect");
+            Scribe_Defs.Look<IncidentDef>(ref this.lastSpell, "lastSpell");
             base.ExposeData();
 
         }

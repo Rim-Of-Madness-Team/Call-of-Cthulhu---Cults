@@ -4,14 +4,19 @@ using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
+using RimWorld.Planet;
 
 namespace CultOfCthulhu
 {
-    class UtilityWorldObject_CosmicDeities : Cthulhu.UtilityWorldObject
+    public class WorldComponent_CosmicDeities : WorldComponent
     {
         public Dictionary<CosmicEntity, int> DeityCache = new Dictionary<CosmicEntity, int>();
         public bool AreDeitiesSpawned = false;
         public bool WasCultMindednessInitialized = false;
+
+        public WorldComponent_CosmicDeities(World world) : base(world)
+        {
+        }
 
         public CosmicEntity GetCache(CosmicEntity deity)
         {
@@ -58,11 +63,11 @@ namespace CultOfCthulhu
             return;
         }
 
-        public override void Tick()
+        public override void WorldComponentTick()
         {
-            base.Tick();
             GenerateCosmicEntitiesIntoWorld();
             RevealDeityCheck();
+            base.WorldComponentTick();
         }
 
         public List<CosmicEntity> undiscoveredEntities()
@@ -179,9 +184,9 @@ namespace CultOfCthulhu
 
         public override void ExposeData()
         {
-            Scribe_Collections.LookDictionary<CosmicEntity, int>(ref this.DeityCache, "Deities", LookMode.Deep, LookMode.Value);
-            //Scribe_Collections.LookList<CosmicEntity>(ref this.DeityCache, "Deities", LookMode.Deep, new object[0]);
-            Scribe_Values.LookValue<bool>(ref this.AreDeitiesSpawned, "AreDeitiesSpawned", false, false);
+            Scribe_Collections.Look<CosmicEntity, int>(ref this.DeityCache, "Deities", LookMode.Deep, LookMode.Value);
+            //Scribe_Collections.Look<CosmicEntity>(ref this.DeityCache, "Deities", LookMode.Deep, new object[0]);
+            Scribe_Values.Look<bool>(ref this.AreDeitiesSpawned, "AreDeitiesSpawned", false, false);
             base.ExposeData();
             if (DeityCache == null)
             {

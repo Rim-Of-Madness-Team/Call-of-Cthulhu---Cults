@@ -37,7 +37,7 @@ namespace CultOfCthulhu
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<bool>(ref this.wasColonist, "wasColonist", false, false);
+            Scribe_Values.Look<bool>(ref this.wasColonist, "wasColonist", false, false);
             //if (Scribe.mode == LoadSaveMode.LoadingVars)
             //{
             //    Cthulhu.Utility.GiveZombieSkinEffect(this);

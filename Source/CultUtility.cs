@@ -126,7 +126,7 @@ namespace CultOfCthulhu
             if (map == null) map = Find.VisibleMap;
             if (map == null) return false;
             IntVec3 loc;
-            if (!CellFinder.TryFindRandomEdgeCellWith((IntVec3 c) => map.reachability.CanReachColony(c), map, out loc))
+            if (!CellFinder.TryFindRandomEdgeCellWith((IntVec3 c) => map.reachability.CanReachColony(c), map, CellFinder.EdgeRoadChance_Neutral, out loc))
             {
                 return false;
             }
@@ -149,7 +149,7 @@ namespace CultOfCthulhu
             });
             text = text.AdjustedFor(p);
             string label = "LetterLabelCultistJoin".Translate();
-            if (showMessage) Find.LetterStack.ReceiveLetter(label, text, LetterType.Good);
+            if (showMessage) Find.LetterStack.ReceiveLetter(label, text, LetterDefOf.Good);
             PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref text, ref label, p);
             return true;
         }
@@ -171,7 +171,7 @@ namespace CultOfCthulhu
                 for (int i = 0; i < 999; i++)
                 {
                     p = null;
-                    request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map, false, false, false, false, true, true, 20f, false, true, true, null, null, null, null, null, null);
+                    request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, null, null, null, null);
                     p = PawnGenerator.GeneratePawn(request);
 
                     if (p.skills.GetSkill(SkillDefOf.Social).TotallyDisabled) continue;
@@ -188,7 +188,7 @@ namespace CultOfCthulhu
             //If it's a dark emissary of Nyarlathotep, we need to add clothing.
             else if (type == CultistType.DarkEmmisary)
             {
-                request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map, false, false, false, false, true, true, 20f, false, true, true, null, null, null, null, null, null);
+                request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, null, null, null, null);
                 p = PawnGenerator.GeneratePawn(request);
                 Thing tHood = ThingMaker.MakeThing(ThingDef.Named("Apparel_NyarlathotepHood"), ThingDef.Named("DevilstrandCloth"));
                 Thing tRobe = ThingMaker.MakeThing(ThingDef.Named("Apparel_CultistRobes"), ThingDef.Named("DevilstrandCloth"));
@@ -199,7 +199,7 @@ namespace CultOfCthulhu
             }
             else
             {
-                request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map, false, false, false, false, true, true, 20f, false, true, true, null, null, null, null, null, null);
+                request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, null, null, null, null);
                 p = PawnGenerator.GeneratePawn(request);
             }
             //We need psychopathic cannibals
@@ -292,7 +292,7 @@ namespace CultOfCthulhu
 
                             //Difficulty modifiers
                             failDifficulty += SpellCalc_TierDifficulty(altar, s); //Tier 2 +10, Tier 3 + 20, Final +50
-                            failDifficulty += SpellCalc_MapConditions(altar, s); //+50 stars are wrong / -20 stars are right
+                            failDifficulty += SpellCalc_GameConditions(altar, s); //+50 stars are wrong / -20 stars are right
                             s.AppendLine("Adjusted Failure Difficulty: " + failDifficulty.ToString());
 
                             //Success modifiers
@@ -327,11 +327,11 @@ namespace CultOfCthulhu
             return SacrificeResult.criticalfailure;
         }
 
-        private static int SpellCalc_MapConditions(Building_SacrificialAltar altar, StringBuilder s)
+        private static int SpellCalc_GameConditions(Building_SacrificialAltar altar, StringBuilder s)
         {
             int modifier = 0;
-            MapCondition_StarsAreRight starsAreRight = altar.Map.mapConditionManager.GetActiveCondition<MapCondition_StarsAreRight>();
-            MapCondition_StarsAreWrong starsAreWrong = altar.Map.mapConditionManager.GetActiveCondition<MapCondition_StarsAreWrong>();
+            GameCondition_StarsAreRight starsAreRight = altar.Map.GameConditionManager.GetActiveCondition<GameCondition_StarsAreRight>();
+            GameCondition_StarsAreWrong starsAreWrong = altar.Map.GameConditionManager.GetActiveCondition<GameCondition_StarsAreWrong>();
             bool bstarsAreRight = (starsAreRight != null);
             bool bstarsAreWrong = (starsAreWrong != null);
             if (bstarsAreRight)
@@ -426,7 +426,7 @@ namespace CultOfCthulhu
             Room temple = altar.GetRoom();
             if (temple != null)
             {
-                List<Thing> sculptures = temple.AllContainedThings.FindAll((Thing x) => x.def != null && x.def.minifiedDef != null && x.def.minifiedDef.defName == "MinifiedSculpture");
+                List<Thing> sculptures = temple.ContainedAndAdjacentThings.FindAll((Thing x) => x.def != null && x.def.minifiedDef != null && x.def.minifiedDef.defName == "MinifiedSculpture");
                 if (sculptures != null && sculptures.Count > 0)
                 {
                     bool statueOfDeityExists = false;
@@ -614,9 +614,9 @@ namespace CultOfCthulhu
                         }
                     }
                 }
-                if (member.equipment.AllEquipment != null && member.equipment.AllEquipment.Count > 0)
+                if (member.equipment.AllEquipmentListForReading != null && member.equipment.AllEquipmentListForReading.Count > 0)
                 {
-                    foreach (ThingWithComps eq in member.equipment.AllEquipment)
+                    foreach (ThingWithComps eq in member.equipment.AllEquipmentListForReading)
                     {
                         if (eq.def.defName == "") { sacrificialDagger = true; result += 0.005f; s.AppendLine(member.LabelShort + " is wielding a sacrificial dagger."); }
                     }
@@ -646,8 +646,8 @@ namespace CultOfCthulhu
         {
             altar.ChangeState(Building_SacrificialAltar.State.sacrificing, Building_SacrificialAltar.SacrificeState.finishing);
 
-            MapCondition_StarsAreRight starsAreRight = altar.Map.mapConditionManager.GetActiveCondition<MapCondition_StarsAreRight>();
-            MapCondition_StarsAreWrong starsAreWrong = altar.Map.mapConditionManager.GetActiveCondition<MapCondition_StarsAreWrong>();
+            GameCondition_StarsAreRight starsAreRight = altar.Map.GameConditionManager.GetActiveCondition<GameCondition_StarsAreRight>();
+            GameCondition_StarsAreWrong starsAreWrong = altar.Map.GameConditionManager.GetActiveCondition<GameCondition_StarsAreWrong>();
             bool bstarsAreRight = (starsAreRight != null);
             bool bstarsAreWrong = (starsAreWrong != null);
 
@@ -715,7 +715,7 @@ namespace CultOfCthulhu
                             {
                                 if (prisoner.needs != null)
                                 {
-                                    prisoner.needs.mood.thoughts.memories.TryGainMemoryThought(CultDefOfs.OtherPrisonerWasSacrificed);
+                                    prisoner.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_OtherPrisonerWasSacrificed);
                                 }
                             }
                         }
@@ -726,7 +726,7 @@ namespace CultOfCthulhu
 
             }
             //Increase the tally
-            Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_GlobalCultTracker>().numHumanSacrifices++;
+            Find.World.GetComponent<WorldComponent_GlobalCultTracker>().numHumanSacrifices++;
         }
         public static void WorshipComplete(Pawn preacher, Building_SacrificialAltar altar, CosmicEntity deity)
         {
@@ -759,10 +759,10 @@ namespace CultOfCthulhu
 
             if (Cthulhu.Utility.IsActorAvailable(offerer))
             {
-                Job job = new Job(CultDefOfs.ReflectOnOffering);
+                Job job = new Job(CultsDefOfs.Cults_ReflectOnOffering);
                 job.targetA = altar;
-                offerer.QueueJob(job);
-                offerer.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                offerer.jobs.TryTakeOrderedJob(job);
+                //offerer.jobs.EndCurrentJob(JobCondition.InterruptForced);
             }
             FactionBase factionBase = (FactionBase)altar.Map.info.parent;
 
@@ -990,7 +990,7 @@ namespace CultOfCthulhu
                 });
             }
             //Internal memory
-            pawn.needs.mood.thoughts.memories.TryGainMemoryThought(DefDatabase<ThoughtDef>.GetNamed("MadeInvestigation"));
+            pawn.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_MadeInvestigation);
 
             Cthulhu.Utility.ApplySanityLoss(pawn);
             AffectCultMindedness(pawn, 0.10f);
@@ -999,7 +999,7 @@ namespace CultOfCthulhu
         }
         public static void FinishedTheBook(Pawn pawn)
         {
-            pawn.needs.mood.thoughts.memories.TryGainMemoryThought(DefDatabase<ThoughtDef>.GetNamed("BlackoutBook"));
+            pawn.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_BlackoutBook);
             Cthulhu.Utility.ApplySanityLoss(pawn);
             pawn.Map.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedState = CultSeedState.NeedTable;
             pawn.Map.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedPawn = pawn;
@@ -1008,7 +1008,7 @@ namespace CultOfCthulhu
             IntVec3 spawnLoc = pawn.Position + GenAdj.AdjacentCells[(int)Direction8Way.South];
             Thing cultSeed = pawn.Map.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedTarget;
 
-            ThingWithComps thing = (ThingWithComps)ThingMaker.MakeThing(CultDefOfs.Cults_Grimoire, null);
+            ThingWithComps thing = (ThingWithComps)ThingMaker.MakeThing(CultsDefOfs.Cults_Grimoire, null);
             //thing.SetFaction(Faction.OfPlayer);
             GenPlace.TryPlaceThing(thing, spawnLoc, pawn.Map, ThingPlaceMode.Near);
             Find.WindowStack.Add(new Dialog_MessageBox("CultBookSummary".Translate(new object[]
@@ -1033,17 +1033,17 @@ namespace CultOfCthulhu
             ThoughtDef newThought = CultUtility.GetAttendWorshipThoughts(preacher, pawn);
             if (newThought != null)
             {
-                pawn.needs.mood.thoughts.memories.TryGainMemoryThought(newThought);
+                pawn.needs.mood.thoughts.memories.TryGainMemory(newThought);
             }
         }
         public static void HoldWorshipTickCheckEnd(Pawn preacher)
         {
             if (preacher == null) return;
             TryGainTempleRoomThought(preacher);
-            ThoughtDef newThought = DefDatabase<ThoughtDef>.GetNamed("HeldSermon");
+            ThoughtDef newThought = CultsDefOfs.Cults_HeldSermon; // DefDatabase<ThoughtDef>.GetNamed("HeldSermon");
             if (newThought != null)
             {
-                preacher.needs.mood.thoughts.memories.TryGainMemoryThought(newThought);
+                preacher.needs.mood.thoughts.memories.TryGainMemory(newThought);
             }
         }
 
@@ -1065,22 +1065,22 @@ namespace CultOfCthulhu
                         case SacrificeResult.success:
                             if (IsCultMinded(attendee))
                             {
-                                resultThought = CultDefOfs.AttendedSuccessfulSacrifice;
+                                resultThought = CultsDefOfs.Cults_AttendedSuccessfulSacrifice;
                             }
-                            else resultThought = CultDefOfs.InnocentAttendedSuccessfulSacrifice;
+                            else resultThought = CultsDefOfs.Cults_InnocentAttendedSuccessfulSacrifice;
                             break;
                         case SacrificeResult.failure:
                         case SacrificeResult.criticalfailure:
                             if (IsCultMinded(attendee))
                             {
-                                resultThought = CultDefOfs.AttendedFailedSacrifice;
+                                resultThought = CultsDefOfs.Cults_AttendedFailedSacrifice;
                             }
-                            else resultThought = CultDefOfs.InnocentAttendedFailedSacrifice;
+                            else resultThought = CultsDefOfs.Cults_InnocentAttendedFailedSacrifice;
                             break;
                         case SacrificeResult.none:
                             break;
                     }
-                    attendee.needs.mood.thoughts.memories.TryGainMemoryThought(resultThought);
+                    attendee.needs.mood.thoughts.memories.TryGainMemory(resultThought);
 
                     //Relationship Thoughts
                     if (other != null)
@@ -1093,10 +1093,10 @@ namespace CultOfCthulhu
                         ThoughtDef familyThought = null;
                         if (attendee.relations.FamilyByBlood.Contains(other as Pawn))
                         {
-                            if (isExcutioner) familyThought = CultDefOfs.ExecutedFamily;
-                            else familyThought = CultDefOfs.SacrificedFamily;
+                            if (isExcutioner) familyThought = CultsDefOfs.Cults_ExecutedFamily;
+                            else familyThought = CultsDefOfs.Cults_SacrificedFamily;
                         }
-                        if (familyThought != null) attendee.needs.mood.thoughts.memories.TryGainMemoryThought(familyThought);
+                        if (familyThought != null) attendee.needs.mood.thoughts.memories.TryGainMemory(familyThought);
 
                         //Friends and Rivals
                         ThoughtDef relationThought = null;
@@ -1104,20 +1104,20 @@ namespace CultOfCthulhu
                         if (num >= 20)
                         {
                             if (isExcutioner) relationThought = ThoughtDefOf.KilledMyFriend;
-                            else relationThought = CultDefOfs.SacrificedFriend;
+                            else relationThought = CultsDefOfs.Cults_SacrificedFriend;
                         }
                         else if (num <= -20)
                         {
                             if (isExcutioner) relationThought = ThoughtDefOf.KilledMyRival;
-                            else relationThought = CultDefOfs.SacrificedRival;
+                            else relationThought = CultsDefOfs.Cults_SacrificedRival;
                         }
-                        if (relationThought != null) attendee.needs.mood.thoughts.memories.TryGainMemoryThought(relationThought);
+                        if (relationThought != null) attendee.needs.mood.thoughts.memories.TryGainMemory(relationThought);
 
                         //Bloodlust
                         if (attendee.story.traits.HasTrait(TraitDefOf.Bloodlust))
                         {
-                            if (isExcutioner) attendee.needs.mood.thoughts.memories.TryGainMemoryThought(ThoughtDefOf.KilledHumanlikeBloodlust, other as Pawn);
-                            else attendee.needs.mood.thoughts.memories.TryGainMemoryThought(ThoughtDefOf.WitnessedDeathBloodlust, other as Pawn);
+                            if (isExcutioner) attendee.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.KilledHumanlikeBloodlust, other as Pawn);
+                            else attendee.needs.mood.thoughts.memories.TryGainMemory(ThoughtDefOf.WitnessedDeathBloodlust, other as Pawn);
                         }
                     }
                 }
@@ -1136,8 +1136,8 @@ namespace CultOfCthulhu
                             //Pet checker
                             if (((Pawn)other).relations.GetFirstDirectRelationPawn(PawnRelationDefOf.Bond) == attendee)
                             {
-                                if (isExcutioner) attendee.needs.mood.thoughts.memories.TryGainMemoryThought(CultDefOfs.ExecutedPet, other as Pawn);
-                                else attendee.needs.mood.thoughts.memories.TryGainMemoryThought(CultDefOfs.SacrificedPet, other as Pawn);
+                                if (isExcutioner) attendee.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_ExecutedPet, other as Pawn);
+                                else attendee.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_SacrificedPet, other as Pawn);
                             }
                         }
                     }
@@ -1168,10 +1168,10 @@ namespace CultOfCthulhu
                     if (IsCultMinded(attendee))
                     {
                         CultUtility.AffectCultMindedness(attendee, S_Effect + CultistMod);
-                        return CultDefOfs.AttendedIncredibleSermonAsCultist;
+                        return CultsDefOfs.Cults_AttendedIncredibleSermonAsCultist;
                     }
                     CultUtility.AffectCultMindedness(attendee, S_Effect + InnocentMod);
-                    return CultDefOfs.AttendedIncredibleSermonAsInnocent;
+                    return CultsDefOfs.Cults_AttendedIncredibleSermonAsInnocent;
                 }
                 //A-Ranked Sermon: Fantastic
                 if (num <= 20 && num > 15)
@@ -1179,10 +1179,10 @@ namespace CultOfCthulhu
                     if (IsCultMinded(attendee))
                     {
                         CultUtility.AffectCultMindedness(attendee, A_Effect + CultistMod);
-                        return CultDefOfs.AttendedGreatSermonAsCultist;
+                        return CultsDefOfs.Cults_AttendedGreatSermonAsCultist;
                     }
                     CultUtility.AffectCultMindedness(attendee, A_Effect + InnocentMod);
-                    return CultDefOfs.AttendedGreatSermonAsInnocent;
+                    return CultsDefOfs.Cults_AttendedGreatSermonAsInnocent;
                 }
                 //B-Ranked Sermon: Alright
                 if (num <= 15 && num > 10)
@@ -1190,10 +1190,10 @@ namespace CultOfCthulhu
                     if (IsCultMinded(attendee))
                     {
                         CultUtility.AffectCultMindedness(attendee, B_Effect + CultistMod);
-                        return CultDefOfs.AttendedGoodSermonAsCultist;
+                        return CultsDefOfs.Cults_AttendedGoodSermonAsCultist;
                     }
                     CultUtility.AffectCultMindedness(attendee, B_Effect + InnocentMod);
-                    return CultDefOfs.AttendedGoodSermonAsInnocent;
+                    return CultsDefOfs.Cults_AttendedGoodSermonAsInnocent;
                 }
                 //C-Ranked Sermon: Average
                 if (num <= 10 && num > 5)
@@ -1201,10 +1201,10 @@ namespace CultOfCthulhu
                     if (IsCultMinded(attendee))
                     {
                         CultUtility.AffectCultMindedness(attendee, C_Effect + CultistMod);
-                        return CultDefOfs.AttendedDecentSermonAsCultist;
+                        return CultsDefOfs.Cults_AttendedDecentSermonAsCultist;
                     }
                     CultUtility.AffectCultMindedness(attendee, C_Effect + InnocentMod);
-                    return CultDefOfs.AttendedDecentSermonAsInnocent;
+                    return CultsDefOfs.Cults_AttendedDecentSermonAsInnocent;
                 }
                 //F-Ranked Sermon: Garbage
                 else
@@ -1212,10 +1212,10 @@ namespace CultOfCthulhu
                     if (IsCultMinded(attendee))
                     {
                         CultUtility.AffectCultMindedness(attendee, F_Effect + CultistMod);
-                        return CultDefOfs.AttendedAwfulSermonAsCultist;
+                        return CultsDefOfs.Cults_AttendedAwfulSermonAsCultist;
                     }
                     CultUtility.AffectCultMindedness(attendee, F_Effect + InnocentMod);
-                    return CultDefOfs.AttendedAwfulSermonAsInnocent;
+                    return CultsDefOfs.Cults_AttendedAwfulSermonAsInnocent;
                 }
             }
             return null;
@@ -1233,7 +1233,7 @@ namespace CultOfCthulhu
             {
                 int scoreStageIndex = RoomStatDefOf.Impressiveness.GetScoreStageIndex(room.GetStat(RoomStatDefOf.Impressiveness));
                 if (def.stages[scoreStageIndex] == null) return;
-                pawn.needs.mood.thoughts.memories.TryGainMemoryThought(ThoughtMaker.MakeThought(def, scoreStageIndex), null);
+                pawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtMaker.MakeThought(def, scoreStageIndex), null);
             }
         }
 
@@ -1273,29 +1273,29 @@ namespace CultOfCthulhu
             {
                 IntVec3 newPos = chair.Position + GenAdj.CardinalDirections[dir];
 
-                Job J = new Job(CultDefOfs.AttendSacrifice, altar, newPos, chair);
+                Job J = new Job(CultsDefOfs.Cults_AttendSacrifice, altar, newPos, chair);
                 J.playerForced = true;
                 J.ignoreJoyTimeAssignment = true;
                 J.expiryInterval = 9999;
                 J.ignoreDesignations = true;
                 J.ignoreForbidden = true;
                 //Cthulhu.Utility.DebugReport("Cults :: Original Position " + chair.Position.ToString() + " :: Modded Position " + newPos.ToString());
-                attendee.QueueJob(J);
-                attendee.jobs.EndCurrentJob(JobCondition.Incompletable);
+                attendee.jobs.TryTakeOrderedJob(J);
+                //attendee.jobs.EndCurrentJob(JobCondition.Incompletable);
             }
             else
             {
                 IntVec3 newPos = result + GenAdj.CardinalDirections[dir];
 
-                Job J = new Job(CultDefOfs.AttendSacrifice, altar, newPos, result);
+                Job J = new Job(CultsDefOfs.Cults_AttendSacrifice, altar, newPos, result);
                 J.playerForced = true;
                 J.ignoreJoyTimeAssignment = true;
                 J.expiryInterval = 9999;
                 J.ignoreDesignations = true;
                 J.ignoreForbidden = true;
                 //Cthulhu.Utility.DebugReport("Cults :: Original Position " + result.ToString() + " :: Modded Position " + newPos.ToString());
-                attendee.QueueJob(J);
-                attendee.jobs.EndCurrentJob(JobCondition.Incompletable);
+                attendee.jobs.TryTakeOrderedJob(J);
+                //attendee.jobs.EndCurrentJob(JobCondition.Incompletable);
             }
         }
         #endregion Sacrifice
@@ -1352,29 +1352,29 @@ namespace CultOfCthulhu
             {
                 IntVec3 newPos = chair.Position + GenAdj.CardinalDirections[dir];
 
-                Job J = new Job(CultDefOfs.AttendWorship, altar, newPos, chair);
+                Job J = new Job(CultsDefOfs.Cults_AttendWorship, altar, newPos, chair);
                 J.playerForced = true;
                 J.ignoreJoyTimeAssignment = true;
                 J.expiryInterval = 9999;
                 J.ignoreDesignations = true;
                 J.ignoreForbidden = true;
                 //Cthulhu.Utility.DebugReport("Cults :: Original Position " + chair.Position.ToString() + " :: Modded Position " + newPos.ToString());
-                attendee.QueueJob(J);
-                attendee.jobs.EndCurrentJob(JobCondition.Incompletable);
+                attendee.jobs.TryTakeOrderedJob(J);
+                //attendee.jobs.EndCurrentJob(JobCondition.Incompletable);
             }
             else
             {
                 IntVec3 newPos = result + GenAdj.CardinalDirections[dir];
 
-                Job J = new Job(CultDefOfs.AttendWorship, altar, newPos, result);
+                Job J = new Job(CultsDefOfs.Cults_AttendWorship, altar, newPos, result);
                 J.playerForced = true;
                 J.ignoreJoyTimeAssignment = true;
                 J.expiryInterval = 9999;
                 J.ignoreDesignations = true;
                 J.ignoreForbidden = true;
                 //Cthulhu.Utility.DebugReport("Cults :: Original Position " + result.ToString() + " :: Modded Position " + newPos.ToString());
-                attendee.QueueJob(J);
-                attendee.jobs.EndCurrentJob(JobCondition.Incompletable);
+                attendee.jobs.TryTakeOrderedJob(J);
+                //attendee.jobs.EndCurrentJob(JobCondition.Incompletable);
             }
         }
         public static void AbortCongregation(Building_SacrificialAltar altar)
@@ -1417,10 +1417,10 @@ namespace CultOfCthulhu
             }
             if (Cthulhu.Utility.IsActorAvailable(executioner))
             {
-                Job job = new Job(CultDefOfs.ReflectOnResult);
+                Job job = new Job(CultsDefOfs.Cults_ReflectOnResult);
                 job.targetA = altar;
-                executioner.QueueJob(job);
-                executioner.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                executioner.jobs.TryTakeOrderedJob(job);
+                //executioner.jobs.EndCurrentJob(JobCondition.InterruptForced);
             }
             altar.ChangeState(Building_SacrificialAltar.State.sacrificing, Building_SacrificialAltar.SacrificeState.finished);
             //altar.currentState = Building_SacrificialAltar.State.finished;

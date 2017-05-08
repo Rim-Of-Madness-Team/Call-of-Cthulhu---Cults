@@ -6,14 +6,14 @@ using Verse;
 
 namespace CultOfCthulhu
 {
-    public class IncidentWorker_MakeCultMapCondition : IncidentWorker_MakeMapCondition
+    public class IncidentWorker_MakeCultGameCondition : IncidentWorker_MakeGameCondition
     {
         protected override bool CanFireNowSub(IIncidentTarget target)
         {
             Map map = (Map)target;
             MapComponent_LocalCultTracker localCultTracker = map.GetComponent<MapComponent_LocalCultTracker>();
-            MapCondition_StarsAreRight starsAreRight = map.mapConditionManager.GetActiveCondition<MapCondition_StarsAreRight>();
-            MapCondition_StarsAreWrong starsAreWrong = map.mapConditionManager.GetActiveCondition<MapCondition_StarsAreWrong>();
+            GameCondition_StarsAreRight starsAreRight = map.GameConditionManager.GetActiveCondition<GameCondition_StarsAreRight>();
+            GameCondition_StarsAreWrong starsAreWrong = map.GameConditionManager.GetActiveCondition<GameCondition_StarsAreWrong>();
             bool cultAvailable = false;
             bool cultConditionInctive = false;
             if (localCultTracker != null)

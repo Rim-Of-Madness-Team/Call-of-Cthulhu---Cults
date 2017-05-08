@@ -27,7 +27,7 @@
     <recoveryMessage>{0} has recovered from their struggle with their inner faith.</recoveryMessage>
     <beginLetterLabel>disillusionment</beginLetterLabel>
     <beginLetter>Either the truth is too horrible for {0}, or HE is becoming empowered with a sudden realization. Even so, HE has started to abandon any strange or occult ideas.</beginLetter>
-    <beginLetterType>BadNonUrgent</beginLetterType>
+    <beginLetterDef>BadNonUrgent</beginLetterDef>
     <baseInspectLine>Mental state: Disillusionment</baseInspectLine>
     <allowBeatfire>false</allowBeatfire>
   </MentalStateDef>

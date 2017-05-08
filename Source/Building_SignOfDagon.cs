@@ -10,9 +10,9 @@ namespace CultOfCthulhu
 {
     public class Building_SignOfDagon : Building
     {
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
             Building_SignOfDagon toDestroy = null;
             foreach (Building bld in map.listerBuildings.allBuildingsColonist)
             {

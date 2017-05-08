@@ -36,7 +36,7 @@
   <!-- ====================================================== -->
 
   <ThingDef ParentName="AnimalThingBase">
-    <defName>BlackIbex</defName>
+    <defName>Cults_BlackGoat</defName>
     <label>black goat</label>
     <description>Black goats are mysterious creatures that live in almost any climate. Their diet is also unknown. Legends tell about them being the spawn of some obscene monstrosity known as the Black Goat Mother that exists outside of the reality we understand as our dimension.</description>
     <statBases>
@@ -108,9 +108,9 @@
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
-    <defName>BlackIbex</defName>
+    <defName>Cults_BlackGoat</defName>
     <label>black goat</label>
-    <race>BlackIbex</race>
+    <race>Cults_BlackGoat</race>
     <combatPower>50</combatPower>
     <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
     <wildSpawn_EcoSystemWeight>0.7</wildSpawn_EcoSystemWeight>

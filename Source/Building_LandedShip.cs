@@ -24,18 +24,18 @@ namespace CultOfCthulhu
         
         private static HashSet<IntVec3> reachableCells = new HashSet<IntVec3>();
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
             TrySpawnMadSailors();
         }
 
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<float>(ref this.pointsLeft, "pointsLeft", 0f, false);
-            Scribe_Values.LookValue<int>(ref this.age, "age", 0, false);
-            Scribe_References.LookReference<Lord>(ref this.lord, "defenseLord", false);
+            Scribe_Values.Look<float>(ref this.pointsLeft, "pointsLeft", 0f, false);
+            Scribe_Values.Look<int>(ref this.age, "age", 0, false);
+            Scribe_References.Look<Lord>(ref this.lord, "defenseLord", false);
         }
 
         public override string GetInspectString()
@@ -58,7 +58,7 @@ namespace CultOfCthulhu
         private void TrySpawnMadSailors()
         {
             List<Pawn> lordList = new List<Pawn>();
-            Faction faction = Find.FactionManager.FirstFactionOfDef(CultDefOfs.Cults_Sailors);
+            Faction faction = Find.FactionManager.FirstFactionOfDef(CultsDefOfs.Cults_Sailors);
             Cthulhu.Utility.DebugReport(faction.ToString());
             LordJob_DefendPoint lordJob = new LordJob_DefendPoint(this.Position);
             if (this.pointsLeft <= 0f)
@@ -76,7 +76,7 @@ namespace CultOfCthulhu
                      where cell.Walkable(Map)
                      select cell).TryRandomElement(out center))
                 {
-                        PawnGenerationRequest request = new PawnGenerationRequest(CultDefOfs.Cults_Sailor, faction, PawnGenerationContext.NonPlayer, Map, false, false, false, false, true, true, 20f, false, true, true, null, null, null, null, null, null);
+                        PawnGenerationRequest request = new PawnGenerationRequest(CultsDefOfs.Cults_Sailor, faction, PawnGenerationContext.NonPlayer, Map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, null, null, null, null);
                         Pawn pawn = PawnGenerator.GeneratePawn(request);
                         if (GenPlace.TryPlaceThing(pawn, center, Map, ThingPlaceMode.Near, null))
                         {

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <ModMetaData>
-	<name>Call of Cthulhu - Cults A16</name>
+	<name>Call of Cthulhu - Cults</name>
 	<author>Jecrell</author>
-	<targetVersion>0.16.1393</targetVersion>
-	<description>V1.3.3
+	<targetVersion>0.17.0</targetVersion>
+	<description>V1.17.0
 	Gameplay expansion for RimWorld.
 	
 	You can now:

@@ -142,7 +142,7 @@ namespace CultOfCthulhu
             LordJob_DefendPoint lordJob = new LordJob_DefendPoint(chillSpot);
             Cthulhu.Utility.TemporaryGoodwill(parms.faction, false);
             LordMaker.MakeNewLord(parms.faction, lordJob, map, list);
-            //Find.LetterStack.ReceiveLetter("DeepOnesArrive".Translate(), "DeepOnesArriveDesc".Translate(), LetterType.Good, list[0]);
+            //Find.LetterStack.ReceiveLetter("DeepOnesArrive".Translate(), "DeepOnesArriveDesc".Translate(), letterDef.Good, list[0]);
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = list[0].Position;
             map.GetComponent<MapComponent_SacrificeTracker>().defendTheBroodPawns.AddRange(list);
 

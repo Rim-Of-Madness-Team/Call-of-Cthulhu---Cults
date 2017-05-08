@@ -135,8 +135,8 @@ namespace CultOfCthulhu
                 return false;
             }
 
-            if (isEye) pawn.health.AddHediff(CultDefOfs.Cults_CthulhidEyestalk, tempRecord, null);
-            else pawn.health.AddHediff(CultDefOfs.Cults_CthulhidTentacle, tempRecord, null);
+            if (isEye) pawn.health.AddHediff(CultsDefOfs.Cults_CthulhidEyestalk, tempRecord, null);
+            else pawn.health.AddHediff(CultsDefOfs.Cults_CthulhidTentacle, tempRecord, null);
             Messages.Message(pawn.LabelShort + "'s " + tempRecord.def.label + " has been replaced with an otherworldly tentacle appendage.", MessageSound.Benefit);
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = pawn.Position;
             return true;

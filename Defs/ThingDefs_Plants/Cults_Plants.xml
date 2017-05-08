@@ -24,7 +24,6 @@
     <interactionCellOffset>(1,0,0)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>	
     <plant>
-      <harvestDestroys>true</harvestDestroys>
       <soundHarvesting>Harvest_Standard</soundHarvesting>
       <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
       <harvestWork>190</harvestWork>
@@ -59,7 +58,6 @@
       <soundHarvesting>Harvest_Tree</soundHarvesting>
       <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
       <harvestWork>1600</harvestWork>
-      <harvestDestroys>true</harvestDestroys>
       <harvestedThingDef>WoodLog</harvestedThingDef>
       <harvestYield>200</harvestYield>
       <harvestTag>Wood</harvestTag>
@@ -81,7 +79,7 @@
   </ThingDef>
   
   <ThingDef ParentName="CultsTreeBase">
-    <defName>PlantTreeNightmare</defName>
+    <defName>Cults_PlantTreeNightmare</defName>
     <thingClass>CultOfCthulhu.Building_TreeOfMadness</thingClass>
     <label>eerie tree</label>
     <altitudeLayer>MoteOverhead</altitudeLayer>

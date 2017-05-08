@@ -20,10 +20,10 @@ namespace CultOfCthulhu
         private static readonly FloatRange QuietIntervalDays = new FloatRange(1.5f, 2.5f);
         
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
             ticksUntilQuiet += (int)(QuietIntervalDays.RandomInRange * 60000f);
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
             SoundInfo info = SoundInfo.InMap(this, MaintenanceType.None);
             this.sustainerAmbient = this.def.building.soundAmbient.TrySpawnSustainer(info);
         }
@@ -60,7 +60,7 @@ namespace CultOfCthulhu
             if (this.StoringBuilding() == null)
             {
                 Thought_MemoryObservation thought_MemoryObservation;
-                thought_MemoryObservation = (Thought_MemoryObservation)ThoughtMaker.MakeThought(DefDatabase<ThoughtDef>.GetNamed("ObservedNightmareTree"));
+                thought_MemoryObservation = (Thought_MemoryObservation)ThoughtMaker.MakeThought(DefDatabase<ThoughtDef>.GetNamed("Cults_ObservedNightmareTree"));
                 thought_MemoryObservation.Target = this;
                 Pawn Dave = thought_MemoryObservation.pawn;
                 if (Dave == null) return null;
@@ -68,7 +68,7 @@ namespace CultOfCthulhu
                 else
                 {
                     if (Dave.needs.TryGetNeed<Need_CultMindedness>().CurLevel > 0.7)
-                        thought_MemoryObservation = (Thought_MemoryObservation)ThoughtMaker.MakeThought(DefDatabase<ThoughtDef>.GetNamed("ObservedNightmareTreeCultist"));
+                        thought_MemoryObservation = (Thought_MemoryObservation)ThoughtMaker.MakeThought(DefDatabase<ThoughtDef>.GetNamed("Cults_ObservedNightmareTreeCultist"));
                 }
                 return thought_MemoryObservation;
             }
@@ -92,10 +92,10 @@ namespace CultOfCthulhu
                 {
                     Action action0 = delegate
                     {
-                        Job job = new Job(CultDefOfs.Investigate, myPawn, this);
+                        Job job = new Job(CultsDefOfs.Cults_Investigate, myPawn, this);
                         job.playerForced = true;
-                        myPawn.QueueJob(job);
-                        myPawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                        myPawn.jobs.TryTakeOrderedJob(job);
+                        //myPawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
                     };
                     yield return new FloatMenuOption("Investigate", action0, MenuOptionPriority.Default, null, null, 0f, null);
                 }
@@ -146,7 +146,7 @@ namespace CultOfCthulhu
         {
             base.ExposeData();
             // Save and load the work variables, so they don't default after loading
-            Scribe_Values.LookValue<bool>(ref isMuted, "isMuted", false);
+            Scribe_Values.Look<bool>(ref isMuted, "isMuted", false);
 
         }
     }

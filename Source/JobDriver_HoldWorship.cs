@@ -108,7 +108,7 @@ namespace CultOfCthulhu
             CultUtility.remainingDuration = CultUtility.ritualDuration;
             chantingTime.defaultDuration = CultUtility.remainingDuration - 360;
             chantingTime.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
-            chantingTime.PlaySustainerOrSound(CultDefOfs.RitualChanting);
+            chantingTime.PlaySustainerOrSound(CultsDefOfs.RitualChanting);
             chantingTime.initAction = delegate
             {
                 report = "praying to " + deityLabel;

@@ -37,7 +37,8 @@ namespace CultOfCthulhu
                 {
                     Cthulhu.Utility.DebugReport("EnterTransporterPawn Called");
                     CompTransporterPawn transporter = this.Transporter;
-                    transporter.GetInnerContainer().TryAdd(this.pawn, true);
+                    this.pawn.DeSpawn();
+                    transporter.GetDirectlyHeldThings().TryAdd(this.pawn, true);
                     transporter.Notify_PawnEnteredTransporterOnHisOwn(this.pawn);
                 }
             };

@@ -25,7 +25,7 @@ namespace CultOfCthulhu
             }
         }
 
-        public override bool HasJobOnThing(Pawn pawn, Thing t)
+        public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             if (t == null) return false;
 
@@ -44,7 +44,7 @@ namespace CultOfCthulhu
             return LoadTransportersPawnJobUtility.HasJobOnTransporter(pawn, transporter);
         }
 
-        public override Job JobOnThing(Pawn pawn, Thing t)
+        public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             CompTransporterPawn transporter = t.TryGetComp<CompTransporterPawn>();
             if (t == null) return null;

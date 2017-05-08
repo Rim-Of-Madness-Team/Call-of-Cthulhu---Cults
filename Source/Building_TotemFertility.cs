@@ -54,9 +54,9 @@ namespace CultOfCthulhu
         {
             base.ExposeData();
                         
-            Scribe_Values.LookValue<float>(ref this.ticksUntilDestroyed, "ticksUntilDestroyed", -1f, false);
-            Scribe_Values.LookValue<float>(ref this.daysUntilDestroyed, "daysUntilDestroyed", 7f, false);
-            Scribe_Values.LookValue<float>(ref this.fertilityBonus, "fertilityBonus", 1.5f, false);
+            Scribe_Values.Look<float>(ref this.ticksUntilDestroyed, "ticksUntilDestroyed", -1f, false);
+            Scribe_Values.Look<float>(ref this.daysUntilDestroyed, "daysUntilDestroyed", 7f, false);
+            Scribe_Values.Look<float>(ref this.fertilityBonus, "fertilityBonus", 1.5f, false);
         }
 
         public override void Tick()
@@ -93,9 +93,9 @@ namespace CultOfCthulhu
             return stringBuilder.ToString();
         }
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
             List<IntVec3> temp = new List<IntVec3>();
             foreach (IntVec3 vec in GrowableCells)
             {

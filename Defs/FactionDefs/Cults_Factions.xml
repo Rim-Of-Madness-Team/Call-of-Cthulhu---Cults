@@ -2,7 +2,7 @@
 <Defs>
 
   <FactionDef>
-    <defName>DeepOneAlt</defName>
+    <defName>ROM_DeepOneAlt</defName>
     <label>deep ones</label>
     <description>...</description>
     <pawnsPlural>deep ones</pawnsPlural>

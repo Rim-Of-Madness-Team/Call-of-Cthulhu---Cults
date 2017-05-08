@@ -23,7 +23,7 @@ using RimWorld.Planet;   // RimWorld specific functions for world creation
 
 namespace CultOfCthulhu
 {
-    public class MapCondition_AuroraEffect : MapCondition
+    public class GameCondition_AuroraEffect : GameCondition
     {
         private int LerpTicks = 200;
         private static ColorInt colorInt = new ColorInt(0, 141, 153); //Green
@@ -43,18 +43,18 @@ namespace CultOfCthulhu
 
         public override float SkyTargetLerpFactor()
         {
-            return MapConditionUtility.LerpInOutValue((float)base.TicksPassed, (float)base.TicksLeft, (float)this.LerpTicks, 1f);
+            return GameConditionUtility.LerpInOutValue((float)base.TicksPassed, (float)base.TicksLeft, (float)this.LerpTicks, 1f);
         }
 
-        public override void MapConditionTick()
+        public override void GameConditionTick()
         {
-            base.MapConditionTick();
+            base.GameConditionTick();
 
             if (firstTick)
             {
                 foreach (Pawn pawn in Map.mapPawns.FreeColonistsAndPrisoners)
                 {
-                    pawn.needs.mood.thoughts.memories.TryGainMemoryThought(CultDefOfs.SawAurora);
+                    pawn.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_SawAurora);
                 }
                 firstTick = false;
             }
@@ -112,7 +112,7 @@ namespace CultOfCthulhu
 
         public override SkyTarget? SkyTarget()
         {
-            return new SkyTarget?(new SkyTarget(this.AuroraSkyColors));
+            return new SkyTarget?(new SkyTarget(0.85f, this.AuroraSkyColors, 1f, 1f));
         }
     }
 }

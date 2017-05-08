@@ -17,13 +17,13 @@ namespace CultOfCthulhu
             IntVec3 intVec;
             
 
-            if (!Cthulhu.Utility.TryFindSpawnCell(CultDefOfs.PlantTreeNightmare, map.Center, map, 60, out intVec))
+            if (!Cthulhu.Utility.TryFindSpawnCell(CultsDefOfs.Cults_PlantTreeNightmare, map.Center, map, 60, out intVec))
             {
                 return false;
             }
 
             //Spawn in the nightmare tree.
-            Plant thing = (Plant)ThingMaker.MakeThing(CultDefOfs.PlantTreeNightmare, null);
+            Plant thing = (Plant)ThingMaker.MakeThing(CultsDefOfs.Cults_PlantTreeNightmare, null);
             thing.Growth = 1f;
             GenPlace.TryPlaceThing(thing, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
 
@@ -32,13 +32,13 @@ namespace CultOfCthulhu
 
             //Clear all jobs for the researcher.
             //Give them a new job to investigate the nightmare tree.
-            if (HugsModOptionalCode.cultsForcedInvestigation()) //If forced investigation is allowed.
+            if (ModSettings_Data.cultsForcedInvestigation) //If forced investigation is allowed.
             {
-                Job J = new Job(CultDefOfs.Investigate, researcher, thing);
-                researcher.QueueJob(J);
-                researcher.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                Job J = new Job(CultsDefOfs.Cults_Investigate, researcher, thing);
+                researcher.jobs.TryTakeOrderedJob(J);
+                //researcher.jobs.EndCurrentJob(JobCondition.InterruptForced);
             }
-            Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_GlobalCultTracker>().currentSeedState = CultSeedState.NeedSeeing;
+            Find.World.GetComponent<WorldComponent_GlobalCultTracker>().currentSeedState = CultSeedState.NeedSeeing;
             map.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedPawn = researcher;
             map.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedTarget = thing;
             

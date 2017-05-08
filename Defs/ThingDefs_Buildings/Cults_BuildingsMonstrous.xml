@@ -70,7 +70,7 @@
   </ThingDef>
 
   <ThingDef ParentName="CultBuildingBase">
-    <defName>BurstingTentacle</defName>
+    <defName>Cults_BurstingTentacle</defName>
     <label>bursting tentacle</label>
     <description>OH GOD</description>
 	<thingClass>CultOfCthulhu.Building_BurstingTentacle</thingClass>
@@ -113,7 +113,7 @@
   </ThingDef>  
   
   <ThingDef ParentName="BuildingNaturalBase">
-    <defName>WombBetweenWorlds</defName>
+    <defName>Cults_WombBetweenWorlds</defName>
     <label>Womb Between Worlds</label>
     <description>.</description>
     <thingClass>CultOfCthulhu.Building_WombBetweenWorlds</thingClass>

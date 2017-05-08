@@ -50,9 +50,9 @@ namespace CultOfCthulhu
             }
         }
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
             if (base.Faction == null)
             {
                 this.SetFaction(Faction.OfInsects, null);
@@ -142,10 +142,10 @@ namespace CultOfCthulhu
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<bool>(ref this.active, "active", false, false);
-            Scribe_Values.LookValue<int>(ref this.nextPawnSpawnTick, "nextPawnSpawnTick", 0, false);
-            Scribe_Collections.LookList<Pawn>(ref this.spawnedPawns, "spawnedPawns", LookMode.Reference, new object[0]);
-            Scribe_Values.LookValue<int>(ref this.ticksToSpawnInitialPawns, "ticksToSpawnInitialPawns", 0, false);
+            Scribe_Values.Look<bool>(ref this.active, "active", false, false);
+            Scribe_Values.Look<int>(ref this.nextPawnSpawnTick, "nextPawnSpawnTick", 0, false);
+            Scribe_Collections.Look<Pawn>(ref this.spawnedPawns, "spawnedPawns", LookMode.Reference, new object[0]);
+            Scribe_Values.Look<int>(ref this.ticksToSpawnInitialPawns, "ticksToSpawnInitialPawns", 0, false);
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 this.spawnedPawns.RemoveAll((Pawn x) => x == null);

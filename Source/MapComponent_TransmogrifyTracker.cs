@@ -142,7 +142,7 @@ namespace CultOfCthulhu
         {
             newDef.race.body = oldDef.race.body;
 
-            newDef.race.trainableIntelligence = TrainableIntelligence.Advanced;
+            newDef.race.intelligence = Intelligence.ToolUser;
             newDef.race.foodType = FoodTypeFlags.CarnivoreAnimalStrict;
             newDef.race.predator = true;
 
@@ -193,20 +193,20 @@ namespace CultOfCthulhu
             //Check if they are already upgraded.
             foreach (Hediff current in newPawn.health.hediffSet.hediffs)
             {
-                if (current.def == CultDefOfs.Cults_MonstrousBody)
+                if (current.def == CultsDefOfs.Cults_MonstrousBody)
                 {
-                    Messages.Message(newPawn.LabelShort + " already posesses " + CultDefOfs.Cults_MonstrousBody.label, MessageSound.Negative);
+                    Messages.Message(newPawn.LabelShort + " already posesses " + CultsDefOfs.Cults_MonstrousBody.label, MessageSound.Negative);
                     return;
                 }
-                if (current.def == CultDefOfs.Cults_MonstrousBrain)
+                if (current.def == CultsDefOfs.Cults_MonstrousBrain)
                 {
-                    Messages.Message(newPawn.LabelShort + " already posesses " + CultDefOfs.Cults_MonstrousBrain.label, MessageSound.Negative);
+                    Messages.Message(newPawn.LabelShort + " already posesses " + CultsDefOfs.Cults_MonstrousBrain.label, MessageSound.Negative);
                     return;
                 }
             }
             
-            newPawn.health.AddHediff(CultDefOfs.Cults_MonstrousBody, tempRecord2, null);
-            newPawn.health.AddHediff(CultDefOfs.Cults_MonstrousBrain, tempRecord, null);
+            newPawn.health.AddHediff(CultsDefOfs.Cults_MonstrousBody, tempRecord2, null);
+            newPawn.health.AddHediff(CultsDefOfs.Cults_MonstrousBrain, tempRecord, null);
 
         }
 
@@ -349,7 +349,7 @@ namespace CultOfCthulhu
 
             base.ExposeData();
             
-            Scribe_Collections.LookDictionary<int, ThingDef>(ref this.newDefList, "newDefList", LookMode.Value, LookMode.Def);
+            Scribe_Collections.Look<int, ThingDef>(ref this.newDefList, "newDefList", LookMode.Value, LookMode.Def);
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {

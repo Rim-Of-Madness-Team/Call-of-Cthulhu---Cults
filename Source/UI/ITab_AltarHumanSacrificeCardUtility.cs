@@ -282,7 +282,7 @@ namespace CultOfCthulhu
         //        altar.tempCurrentSacrificeDeity = null;
         //    }, MenuOptionPriority.Default, null, null, 0f, null));
 
-        //    foreach (CosmicEntity current in Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_CosmicDeities>().DeityCache.Keys)
+        //    foreach (CosmicEntity current in Find.World.GetComponent<WorldComponent_CosmicDeities>().DeityCache.Keys)
         //    {
         //        if (current.discovered == false) continue;
         //        Action action;

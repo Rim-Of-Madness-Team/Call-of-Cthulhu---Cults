@@ -30,7 +30,7 @@ namespace CultOfCthulhu
         {
             //Cthulhu.Utility.DebugReport("CanFire: " + this.def.defName);
             Map map = target as Map;
-            return !map.mapConditionManager.ConditionIsActive(CultDefOfs.Cults_Aurora);
+            return !map.GameConditionManager.ConditionIsActive(CultsDefOfs.Cults_Aurora);
         }
         
         public override bool TryExecute(IncidentParms parms)
@@ -44,7 +44,7 @@ namespace CultOfCthulhu
         {
             Map map = target as Map;
             //Cthulhu.Utility.DebugReport("Generating Map Condition");
-            MapCondition_AuroraEffect mapCondition = (MapCondition_AuroraEffect)MapConditionMaker.MakeCondition(CultDefOfs.Cults_Aurora, duration, 0);
+            GameCondition_AuroraEffect GameCondition = (GameCondition_AuroraEffect)GameConditionMaker.MakeCondition(CultsDefOfs.Cults_Aurora, duration, 0);
             string text3 = "";
             //Cthulhu.Utility.DebugReport("Getting coords.");
             Vector2 coords = Find.WorldGrid.LongLatOf(map.Tile);
@@ -62,10 +62,10 @@ namespace CultOfCthulhu
                 text3
             });
             //Cthulhu.Utility.DebugReport("Registering Conditions");
-            map.mapConditionManager.RegisterCondition(mapCondition);
+            map.GameConditionManager.RegisterCondition(GameCondition);
             string textDesc = "LetterIncidentAurora".Translate();
             //Cthulhu.Utility.DebugReport("Sending letter");
-            Find.LetterStack.ReceiveLetter(textLabel, textDesc, LetterType.BadNonUrgent, null);
+            Find.LetterStack.ReceiveLetter(textLabel, textDesc, LetterDefOf.BadNonUrgent, null);
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = IntVec3.Invalid;
         }
     }

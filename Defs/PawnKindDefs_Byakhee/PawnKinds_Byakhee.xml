@@ -2,14 +2,7 @@
 <Defs>
   <!-- BYAKHEE -->
   <!-- KIND DEFS -->
-  <PawnKindDef Name="Cults_ByakheeBase" Abstract="True">
-    <bodyGraphicData>
-      <shaderType>Cutout</shaderType>
-    </bodyGraphicData>
-    <dessicatedBodyGraphicData>
-      <shaderType>Cutout</shaderType>
-    </dessicatedBodyGraphicData>
-  </PawnKindDef>
+
   <PawnKindDef>
     <defName>Cults_Byakhee</defName>
     <label>byakhee</label>
@@ -115,7 +108,7 @@
       <wildness>0.95</wildness>	
       <intelligence>Animal</intelligence>
       <thinkTreeMain>Animal</thinkTreeMain>
-      <body>Cults_ByakheeBody</body>
+      <body>ROM_Cults_ByakheeBody</body>
       <leatherColor>(54,125,54)</leatherColor>
       <leatherLabel>byakhee chitin</leatherLabel>
       <leatherStatFactors>

@@ -44,7 +44,7 @@ namespace CultOfCthulhu
             //Spawn a Dark Young
             if (Cthulhu.Utility.IsCosmicHorrorsLoaded())
             {
-                Cthulhu.Utility.SpawnPawnsOfCountAt(DefDatabase<PawnKindDef>.GetNamed("CosmicHorror_StarVampire"), altar(map).Position, map, 1, Find.World.factionManager.FirstFactionOfDef(FactionDefOf.SpacerHostile));
+                Cthulhu.Utility.SpawnPawnsOfCountAt(DefDatabase<PawnKindDef>.GetNamed("ROM_StarVampire"), altar(map).Position, map, 1, Find.World.factionManager.FirstFactionOfDef(FactionDefOf.SpacerHostile));
             }
             else
             {

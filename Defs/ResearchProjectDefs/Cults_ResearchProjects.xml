@@ -4,8 +4,9 @@
   <!--=============================== Tier 4: Hi-tech research bench with multi-analyzer ===================================-->
 
   <ResearchProjectDef Name="ForbiddenKnowledgeResearch" Abstract="True">
-    <requiredResearchBuilding>ForbiddenKnowledgeCenter</requiredResearchBuilding>
+    <requiredResearchBuilding>Cults_ForbiddenKnowledgeCenter</requiredResearchBuilding>
 	<techLevel>Neolithic</techLevel>
+	<tab>Cults_ResearchTab</tab>
   </ResearchProjectDef>
 
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">

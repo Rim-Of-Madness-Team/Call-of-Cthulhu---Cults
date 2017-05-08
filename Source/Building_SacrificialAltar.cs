@@ -280,7 +280,8 @@ namespace CultOfCthulhu
                 {
                     if (pawn.CurJob != null)
                     {
-                        if (pawn.jobs.curDriver.layingDown)
+                        if (pawn.jobs.curDriver.layingDown == LayingDownState.LayingInBed ||
+                            pawn.jobs.curDriver.layingDown == LayingDownState.LayingSurface)
                         {
                             return pawn;
                         }
@@ -313,12 +314,12 @@ namespace CultOfCthulhu
         #endregion Bed-Like
 
         #region Spawn
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
 
             if (RoomName == null) RoomName = "Unnamed Temple";
-            Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_CosmicDeities>().GenerateCosmicEntitiesIntoWorld();
+            Find.World.GetComponent<WorldComponent_CosmicDeities>().GenerateCosmicEntitiesIntoWorld();
             if (this.def.defName == "Cult_AnimalSacrificeAltar") currentFunction = Function.Level2;
             if (this.def.defName == "Cult_HumanSacrificeAltar") currentFunction = Function.Level3;
             if (this.def.defName == "Cult_NightmareSacrificeAltar") currentFunction = Function.Nightmare;
@@ -329,27 +330,27 @@ namespace CultOfCthulhu
         {
             base.ExposeData();
         
-            Scribe_Values.LookValue<string>(ref this.RoomName, "RoomName", null);
-            Scribe_References.LookReference<CosmicEntity>(ref this.currentSacrificeDeity, "currentSacrificeDeity");
-            Scribe_References.LookReference<Pawn>(ref this.sacrifice, "sacrifice");
-            Scribe_References.LookReference<Pawn>(ref this.executioner, "executioner");
-            Scribe_Defs.LookDef<IncidentDef>(ref this.currentSpell, "currentSpell");
-            Scribe_Values.LookValue<State>(ref this.currentState, "currentState", State.notinuse);
-            Scribe_Values.LookValue<SacrificeState>(ref this.currentSacrificeState, "currentSacrificeState", SacrificeState.off);
-            Scribe_Values.LookValue<Function>(ref this.lastFunction, "lastFunction", Function.Level1);
-            Scribe_Values.LookValue<Function>(ref this.currentFunction, "currentFunction", Function.Level1);
+            Scribe_Values.Look<string>(ref this.RoomName, "RoomName", null);
+            Scribe_References.Look<CosmicEntity>(ref this.currentSacrificeDeity, "currentSacrificeDeity");
+            Scribe_References.Look<Pawn>(ref this.sacrifice, "sacrifice");
+            Scribe_References.Look<Pawn>(ref this.executioner, "executioner");
+            Scribe_Defs.Look<IncidentDef>(ref this.currentSpell, "currentSpell");
+            Scribe_Values.Look<State>(ref this.currentState, "currentState", State.notinuse);
+            Scribe_Values.Look<SacrificeState>(ref this.currentSacrificeState, "currentSacrificeState", SacrificeState.off);
+            Scribe_Values.Look<Function>(ref this.lastFunction, "lastFunction", Function.Level1);
+            Scribe_Values.Look<Function>(ref this.currentFunction, "currentFunction", Function.Level1);
             ///Worship values
-            Scribe_References.LookReference<CosmicEntity>(ref this.currentWorshipDeity, "currentWorshipDeity");
-            Scribe_References.LookReference<CosmicEntity>(ref this.tempCurrentWorshipDeity, "tempCurrentWorshipDeity");
-            Scribe_References.LookReference<Pawn>(ref this.preacher, "preacher");
-            Scribe_References.LookReference<Pawn>(ref this.tempPreacher, "tempPreacher");
-            Scribe_Values.LookValue<WorshipState>(ref this.currentWorshipState, "currentWorshipState", WorshipState.off);
-            Scribe_Values.LookValue<bool>(ref this.OptionMorning, "OptionMorning", false);
-            Scribe_Values.LookValue<bool>(ref this.OptionEvening, "OptionEvening", false);
-            Scribe_Values.LookValue<bool>(ref this.didMorningRitual, "didMorningRitual", false);
-            Scribe_Values.LookValue<bool>(ref this.didEveningRitual, "didEveningRitual", false);
+            Scribe_References.Look<CosmicEntity>(ref this.currentWorshipDeity, "currentWorshipDeity");
+            Scribe_References.Look<CosmicEntity>(ref this.tempCurrentWorshipDeity, "tempCurrentWorshipDeity");
+            Scribe_References.Look<Pawn>(ref this.preacher, "preacher");
+            Scribe_References.Look<Pawn>(ref this.tempPreacher, "tempPreacher");
+            Scribe_Values.Look<WorshipState>(ref this.currentWorshipState, "currentWorshipState", WorshipState.off);
+            Scribe_Values.Look<bool>(ref this.OptionMorning, "OptionMorning", false);
+            Scribe_Values.Look<bool>(ref this.OptionEvening, "OptionEvening", false);
+            Scribe_Values.Look<bool>(ref this.didMorningRitual, "didMorningRitual", false);
+            Scribe_Values.Look<bool>(ref this.didEveningRitual, "didEveningRitual", false);
             //Misc
-            Scribe_Values.LookValue<bool>(ref this.toBePrunedAndRepaired, "tobePrunedAndRepaired", false);
+            Scribe_Values.Look<bool>(ref this.toBePrunedAndRepaired, "tobePrunedAndRepaired", false);
     }
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
@@ -445,7 +446,7 @@ namespace CultOfCthulhu
                         {
                             if (this.executioner.CurJob != null)
                             {
-                                if (this.executioner.CurJob.def != CultDefOfs.HoldSacrifice)
+                                if (this.executioner.CurJob.def != CultsDefOfs.Cults_HoldSacrifice)
                                 {
                                     CultUtility.AbortCongregation(this, "Executioner".Translate() + "IsUnavailable".Translate());
                                     return;
@@ -465,7 +466,7 @@ namespace CultOfCthulhu
                         {
                             if (this.executioner.CurJob != null)
                             {
-                                if (this.executioner.CurJob.def != CultDefOfs.ReflectOnResult) return;
+                                if (this.executioner.CurJob.def != CultsDefOfs.Cults_ReflectOnResult) return;
                             }
                         }
                         GetSacrificeGroup(this, Map);
@@ -490,7 +491,7 @@ namespace CultOfCthulhu
                             CultUtility.AbortCongregation(this, "Offerer".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        else if (this.offerer.CurJob.def != CultDefOfs.GiveOffering)
+                        else if (this.offerer.CurJob.def != CultsDefOfs.Cults_GiveOffering)
                         {
                             CultUtility.AbortCongregation(this, "Offerer is not performing the task at hand.");
                             return;
@@ -502,7 +503,7 @@ namespace CultOfCthulhu
                             CultUtility.AbortCongregation(this, "Offerer".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        else if (this.offerer.CurJob.def != CultDefOfs.GiveOffering)
+                        else if (this.offerer.CurJob.def != CultsDefOfs.Cults_GiveOffering)
                         {
                             Cthulhu.Utility.DebugReport(this.offerer.CurJob.def.defName);
                             CultUtility.AbortCongregation(this, "Offerer is not performing the task at hand.");
@@ -530,7 +531,7 @@ namespace CultOfCthulhu
                             CultUtility.AbortCongregation(this, "Preacher".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        if (this.preacher.CurJob.def != CultDefOfs.HoldWorship)
+                        if (this.preacher.CurJob.def != CultsDefOfs.Cults_HoldWorship)
                         {
                             CultUtility.AbortCongregation(this, "Preacher".Translate() + "IsUnavailable".Translate());
                             return;
@@ -544,7 +545,7 @@ namespace CultOfCthulhu
                             CultUtility.AbortCongregation(this, "Preacher".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        if (this.preacher.CurJob.def != CultDefOfs.ReflectOnWorship)
+                        if (this.preacher.CurJob.def != CultsDefOfs.Cults_ReflectOnWorship)
                             return;
                         GetWorshipGroup(this, Map);
                         Cthulhu.Utility.DebugReport("Finishing yay");
@@ -569,7 +570,7 @@ namespace CultOfCthulhu
                         {
                             if (Cthulhu.Utility.IsActorAvailable(this.sacrifice, true))
                             {
-                                if (this.executioner.CurJob.def != CultDefOfs.HoldSacrifice)
+                                if (this.executioner.CurJob.def != CultsDefOfs.Cults_HoldSacrifice)
                                     CultUtility.AbortCongregation(this, "Executioner".Translate() + "IsUnavailable".Translate());
                                 return;
                             }
@@ -607,7 +608,7 @@ namespace CultOfCthulhu
                     case WorshipState.gathering:
                         if (Cthulhu.Utility.IsActorAvailable(this.preacher))
                         {
-                            if (this.preacher.CurJob.def != CultDefOfs.HoldWorship)
+                            if (this.preacher.CurJob.def != CultsDefOfs.Cults_HoldWorship)
                             {
                                 CultUtility.AbortCongregation(this, "Preacher".Translate() + "IsUnavailable".Translate());
                                 return;
@@ -778,7 +779,7 @@ namespace CultOfCthulhu
                     defaultLabel = "Debug: Discover All Deities",
                     action = delegate
                     {
-                        foreach (CosmicEntity entity in Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_CosmicDeities>().DeityCache.Keys)
+                        foreach (CosmicEntity entity in Find.World.GetComponent<WorldComponent_CosmicDeities>().DeityCache.Keys)
                         {
                             entity.discovered = true;
                         }
@@ -791,7 +792,7 @@ namespace CultOfCthulhu
                     defaultLabel = "Debug: All Favor to 0",
                     action = delegate
                     {
-                        foreach (CosmicEntity entity in Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_CosmicDeities>().DeityCache.Keys)
+                        foreach (CosmicEntity entity in Find.World.GetComponent<WorldComponent_CosmicDeities>().DeityCache.Keys)
                         {
                             entity.ResetFavor();
                         }
@@ -825,7 +826,7 @@ namespace CultOfCthulhu
                     defaultLabel = "Debug: Unlock All Spells",
                     action = delegate
                     {
-                        foreach (CosmicEntity entity in Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_CosmicDeities>().DeityCache.Keys)
+                        foreach (CosmicEntity entity in Find.World.GetComponent<WorldComponent_CosmicDeities>().DeityCache.Keys)
                         {
                             entity.AffectFavor(9999999);
                         }
@@ -1066,7 +1067,7 @@ namespace CultOfCthulhu
             ChangeState(State.offering, OfferingState.started);
             Cthulhu.Utility.DebugReport("Make offering called.");
            
-            Job job2 = new Job(CultDefOfs.GiveOffering);
+            Job job2 = new Job(CultsDefOfs.Cults_GiveOffering);
             job2.playerForced = true;
             job2.targetA = this;
             job2.targetQueueB = new List<LocalTargetInfo>(this.determinedOfferings.Count);
@@ -1081,8 +1082,8 @@ namespace CultOfCthulhu
             job2.locomotionUrgency = LocomotionUrgency.Sprint;
             job2.bill = new Bill_Production(billRecipe);
             //return job2;
-            offerer.QueueJob(job2);
-            offerer.jobs.EndCurrentJob(JobCondition.InterruptForced);
+            offerer.jobs.TryTakeOrderedJob(job2);
+            //offerer.jobs.EndCurrentJob(JobCondition.InterruptForced);
             //GetSacrificeGroup(this);
             //Cthulhu.Utility.DebugReport("Sacrifice state set to gathering");
         }
@@ -1211,10 +1212,10 @@ namespace CultOfCthulhu
             Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation = new List<Pawn>();
 
             Cthulhu.Utility.DebugReport("Force Sacrifice called");
-            Job job = new Job(CultDefOfs.HoldSacrifice, sacrifice, this);
+            Job job = new Job(CultsDefOfs.Cults_HoldSacrifice, sacrifice, this);
             job.count = 1;
-            executioner.QueueJob(job);
-            executioner.jobs.EndCurrentJob(JobCondition.InterruptForced);
+            executioner.jobs.TryTakeOrderedJob(job);
+            //executioner.jobs.EndCurrentJob(JobCondition.InterruptForced);
             Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation.Add(executioner);
             GetSacrificeGroup(this, Map);
 
@@ -1256,7 +1257,7 @@ namespace CultOfCthulhu
         {
             int num = 100; //Forced for testing purposes
 
-            if (p.CurJob.def == CultDefOfs.AttendSacrifice)
+            if (p.CurJob.def == CultsDefOfs.Cults_AttendSacrifice)
             {
                 num = 0;
             }
@@ -1452,9 +1453,9 @@ namespace CultOfCthulhu
             //Map.GetComponent<MapComponent_SacrificeTracker>().lastResult = CultUtility.SacrificeResult.none;
 
             Cthulhu.Utility.DebugReport("Force worship called");
-            Job job = new Job(CultDefOfs.HoldWorship, this);
-            preacher.QueueJob(job);
-            preacher.jobs.EndCurrentJob(JobCondition.InterruptForced);
+            Job job = new Job(CultsDefOfs.Cults_HoldWorship, this);
+            preacher.jobs.TryTakeOrderedJob(job);
+            //preacher.jobs.EndCurrentJob(JobCondition.InterruptForced);
             GetWorshipGroup(this, Map, forced);
 
         }
@@ -1516,7 +1517,7 @@ namespace CultOfCthulhu
         {
             int num = 100; //Forced for testing purposes
 
-            if (p.CurJob.def == CultDefOfs.AttendWorship)
+            if (p.CurJob.def == CultsDefOfs.Cults_AttendWorship)
             {
                 num = 0;
             }

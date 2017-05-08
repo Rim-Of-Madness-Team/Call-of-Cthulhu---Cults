@@ -27,7 +27,7 @@ namespace CultOfCthulhu
         {
             for (int i = 0; i < this.lord.ownedPawns.Count; i++)
             {
-                PawnDuty pawnDuty = new PawnDuty(CultDefOfs.Cults_LoadAndEnterTransportersPawn);
+                PawnDuty pawnDuty = new PawnDuty(CultsDefOfs.Cults_LoadAndEnterTransportersPawn);
                 pawnDuty.transportersGroup = this.transportersGroup;
                 this.lord.ownedPawns[i].mindState.duty = pawnDuty;
             }

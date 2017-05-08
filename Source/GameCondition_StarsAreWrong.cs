@@ -6,7 +6,7 @@ using System.Text;
 
 namespace CultOfCthulhu
 {
-    public class MapCondition_StarsAreWrong : MapCondition
+    public class GameCondition_StarsAreWrong : GameCondition
     {
         //Nothing now
     }

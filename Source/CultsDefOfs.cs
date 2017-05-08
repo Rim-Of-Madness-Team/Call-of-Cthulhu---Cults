@@ -25,52 +25,54 @@ namespace CultOfCthulhu
 {
 
     [DefOf]
-    public class CultDefOfs
+    public class CultsDefOfs
     {
 
+        public static ThingDef Cults_ForbiddenKnowledgeCenter;
+
         // ============ DUTY DEFS =============
-        
+
         public static DutyDef Cults_LoadAndEnterTransportersPawn;
 
         // =============== JOBS ===============
 
         // Flying Pawn
 
-        public static JobDef EnterTransporterPawn;
+        public static JobDef Cults_EnterTransporterPawn;
 
         // Offering Related Defs
 
-        public static JobDef GiveOffering;
+        public static JobDef Cults_GiveOffering;
 
-        public static JobDef ReflectOnOffering;
+        public static JobDef Cults_ReflectOnOffering;
 
         // Sacrifice Related Defs
 
-        public static JobDef HoldSacrifice;
+        public static JobDef Cults_HoldSacrifice;
 
-        public static JobDef AttendSacrifice;
+        public static JobDef Cults_AttendSacrifice;
 
-        public static JobDef ReflectOnResult;
+        public static JobDef Cults_ReflectOnResult;
 
-        public static JobDef WaitTiedDown;
+        public static JobDef Cults_WaitTiedDown;
 
         // Worship Related Jobs
 
-        public static JobDef HoldWorship;
+        public static JobDef Cults_HoldWorship;
 
-        public static JobDef AttendWorship;
+        public static JobDef Cults_AttendWorship;
 
-        public static JobDef ReflectOnWorship;
+        public static JobDef Cults_ReflectOnWorship;
 
-        public static JobDef Investigate;
+        public static JobDef Cults_Investigate;
 
-        public static JobDef WriteTheBook;
+        public static JobDef Cults_WriteTheBook;
 
         // Misc Jobs
 
-        public static JobDef MidnightInquisition;
+        public static JobDef Cults_MidnightInquisition;
 
-        public static JobDef PruneAndRepair;
+        public static JobDef Cults_PruneAndRepair;
 
         // ============== FACTIONS =============
 
@@ -78,11 +80,11 @@ namespace CultOfCthulhu
 
         // =============== PAWNS ===============
 
-        public static PawnKindDef BlackIbex;
+        public static PawnKindDef Cults_BlackGoat;
 
         public static PawnKindDef Cults_Byakhee;
 
-        public static PawnKindDef Rat;
+
 
         public static PawnKindDef Cults_Sailor;
 
@@ -106,63 +108,73 @@ namespace CultOfCthulhu
         public static HediffDef Cults_CthulhidEyestalk;
 
         // =============== THOUGHTS ===============
-
+        
         // 1.2.2 New
-        public static ThoughtDef OtherPrisonerWasSacrificed;
+        public static ThoughtDef Cults_OtherPrisonerWasSacrificed;
+
+        public static ThoughtDef Cults_MadeInvestigation;
+
+        public static ThoughtDef Cults_BlackoutBook;
+
+        public static ThoughtDef Cults_HeldSermon;
+
+        public static ThoughtDef Cults_FoundedCult;
+
+        public static ThoughtDef Cults_MidnightInquisitionThought;
 
         //Sacrifice
 
-        public static ThoughtDef AttendedSuccessfulSacrifice;
+        public static ThoughtDef Cults_AttendedSuccessfulSacrifice;
 
-        public static ThoughtDef AttendedFailedSacrifice;
+        public static ThoughtDef Cults_AttendedFailedSacrifice;
 
-        public static ThoughtDef InnocentAttendedSuccessfulSacrifice;
+        public static ThoughtDef Cults_InnocentAttendedSuccessfulSacrifice;
 
-        public static ThoughtDef InnocentAttendedFailedSacrifice;
+        public static ThoughtDef Cults_InnocentAttendedFailedSacrifice;
 
         //Relationship Sacrifice Thoughts
 
-        public static ThoughtDef ExecutedFamily;
+        public static ThoughtDef Cults_ExecutedFamily;
 
-        public static ThoughtDef ExecutedPet;
+        public static ThoughtDef Cults_ExecutedPet;
 
-        public static ThoughtDef ExecutedFriend;
+        public static ThoughtDef Cults_ExecutedFriend;
 
-        public static ThoughtDef SacrificedFamily;
+        public static ThoughtDef Cults_SacrificedFamily;
 
-        public static ThoughtDef SacrificedPet;
+        public static ThoughtDef Cults_SacrificedPet;
 
-        public static ThoughtDef SacrificedFriend;
+        public static ThoughtDef Cults_SacrificedFriend;
 
-        public static ThoughtDef SacrificedRival;
+        public static ThoughtDef Cults_SacrificedRival;
 
-        public static ThoughtDef WitnessedSacrificeBloodlust;
+        public static ThoughtDef Cults_WitnessedSacrificeBloodlust;
 
         // Worship
 
-        public static ThoughtDef AttendedIncredibleSermonAsCultist;
+        public static ThoughtDef Cults_AttendedIncredibleSermonAsCultist;
 
-        public static ThoughtDef AttendedIncredibleSermonAsInnocent;
+        public static ThoughtDef Cults_AttendedIncredibleSermonAsInnocent;
 
-        public static ThoughtDef AttendedGreatSermonAsCultist;
+        public static ThoughtDef Cults_AttendedGreatSermonAsCultist;
 
-        public static ThoughtDef AttendedGreatSermonAsInnocent;
+        public static ThoughtDef Cults_AttendedGreatSermonAsInnocent;
 
-        public static ThoughtDef AttendedGoodSermonAsCultist;
+        public static ThoughtDef Cults_AttendedGoodSermonAsCultist;
 
-        public static ThoughtDef AttendedGoodSermonAsInnocent;
+        public static ThoughtDef Cults_AttendedGoodSermonAsInnocent;
 
-        public static ThoughtDef AttendedDecentSermonAsCultist;
+        public static ThoughtDef Cults_AttendedDecentSermonAsCultist;
 
-        public static ThoughtDef AttendedDecentSermonAsInnocent;
+        public static ThoughtDef Cults_AttendedDecentSermonAsInnocent;
 
-        public static ThoughtDef AttendedAwfulSermonAsCultist;
+        public static ThoughtDef Cults_AttendedAwfulSermonAsCultist;
 
-        public static ThoughtDef AttendedAwfulSermonAsInnocent;
+        public static ThoughtDef Cults_AttendedAwfulSermonAsInnocent;
 
         // Misc
 
-        public static ThoughtDef SawAurora;
+        public static ThoughtDef Cults_SawAurora;
 
         // =============== SOUNDS ===============
 
@@ -172,13 +184,13 @@ namespace CultOfCthulhu
 
         public static ThingDef Cults_FertilityTotem;
 
-        public static ThingDef TreasureChest;
+        public static ThingDef Cults_TreasureChest;
 
-        public static ThingDef TreasureChest_Relic;
+        public static ThingDef Cults_TreasureChest_Relic;
 
-        public static ThingDef SunkenShipChunk;
+        public static ThingDef Cults_SunkenShipChunk;
 
-        public static ThingDef MonolithNightmare;
+        public static ThingDef Cults_MonolithNightmare;
 
         public static ThingDef Cults_LandedShip;
 
@@ -186,9 +198,9 @@ namespace CultOfCthulhu
         
         public static ThingDef Cults_ByakheeRace;
 
-        public static ThingDef WombBetweenWorlds;
+        public static ThingDef Cults_WombBetweenWorlds;
 
-        public static ThingDef PlantTreeNightmare;
+        public static ThingDef Cults_PlantTreeNightmare;
 
         public static ThingDef Cults_Grimoire;
 
@@ -196,9 +208,9 @@ namespace CultOfCthulhu
 
         // ============== MAP CONDITIONS ==============
 
-        public static MapConditionDef Cults_Aurora;
+        public static GameConditionDef Cults_Aurora;
 
-        // ============= VANILLA OBJECTS ==============
+        // ============= CORE REFERENCES ==============
         
         public static ThingDef Penoxycyline;
 
@@ -212,8 +224,8 @@ namespace CultOfCthulhu
 
         public static ThingDef Jade;
 
-        // ============= MENTAL STATES ===============
-
+        public static PawnKindDef Rat;
+        
         public static MentalStateDef FireStartingSpree;
 
         public static MentalStateDef WanderConfused;

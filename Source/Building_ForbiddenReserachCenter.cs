@@ -21,13 +21,14 @@ namespace CultOfCthulhu
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_References.LookReference<Pawn>(ref this.storedPawn, "storedPawn", false);
+            Scribe_References.Look<Pawn>(ref this.storedPawn, "storedPawn", false);
         }
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
-            Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_CosmicDeities>().GenerateCosmicEntitiesIntoWorld();
+            base.SpawnSetup(map, bla);
+            Find.World.GetComponent<WorldComponent_CosmicDeities>().GenerateCosmicEntitiesIntoWorld();
+            //Find.World.GetComponent<WorldComponent_CosmicDeities>().GenerateCosmicEntitiesIntoWorld();
         }
         
         public Pawn InteractingPawn
@@ -82,7 +83,7 @@ namespace CultOfCthulhu
             if (currentProject == null) return;
 
             if (interactingPawn == null) return;
-            if (Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_GlobalCultTracker>().cultResearch == null) return;
+            if (Find.World.GetComponent<WorldComponent_GlobalCultTracker>().cultResearch == null) return;
             //Are we using this for the correct project type?
             this.SetForbidden(false);
             if (IsThisCultistResearch(currentProject)) return;
@@ -124,8 +125,8 @@ namespace CultOfCthulhu
             //Okay, assign a job over there instead of here.
             Job J = new Job(JobDefOf.Research, bench);
             Map.reservationManager.ReleaseAllClaimedBy(interactingPawn);
-            interactingPawn.QueueJob(J);
-            interactingPawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
+            interactingPawn.jobs.TryTakeOrderedJob(J);
+            //interactingPawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
         }
 
         private void CancelResearch(string reason)
@@ -138,7 +139,7 @@ namespace CultOfCthulhu
 
         private bool IsThisCultistResearch(ResearchProjectDef currentProject)
         {
-            foreach (ResearchProjectDef def in Cthulhu.UtilityWorldObjectManager.GetUtilityWorldObject<UtilityWorldObject_GlobalCultTracker>().cultResearch)
+            foreach (ResearchProjectDef def in Find.World.GetComponent<WorldComponent_GlobalCultTracker>().cultResearch)
             {
                 if (currentProject == def) return true;
             }

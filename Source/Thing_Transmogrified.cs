@@ -37,16 +37,16 @@ namespace CultOfCthulhu
             return;
         }
 
-        public override void SpawnSetup(Map map)
+        public override void SpawnSetup(Map map, bool bla)
         {
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, bla);
         }
 
 
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<ThingDef>(ref this.originalDef, "originalDef", null, false);
+            Scribe_Values.Look<ThingDef>(ref this.originalDef, "originalDef", null, false);
         }
 
     }

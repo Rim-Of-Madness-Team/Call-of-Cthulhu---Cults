@@ -4,7 +4,7 @@
   <!-- Cult social interactions -->
 
   <ThoughtDef>
-    <defName>SafePreach</defName>
+    <defName>Cults_SafePreach</defName>
     <thoughtClass>Thought_MemorySocial</thoughtClass>
     <durationDays>20</durationDays>
 	<stackLimit>300</stackLimit>
@@ -19,7 +19,7 @@
   </ThoughtDef>
   
   <ThoughtDef>
-    <defName>DangerPreach</defName>
+    <defName>Cults_DangerPreach</defName>
     <thoughtClass>Thought_MemorySocial</thoughtClass>
     <durationDays>20</durationDays>
 	<stackLimit>300</stackLimit>
@@ -34,7 +34,7 @@
   </ThoughtDef>
   
   <ThoughtDef>
-    <defName>MidnightInquisition</defName>
+    <defName>Cults_MidnightInquisitionThought</defName>
     <durationDays>10</durationDays>
 	<nullifyingTraits>
       <li>Psychopath</li>

@@ -94,14 +94,14 @@ namespace CultOfCthulhu
                     map.terrainGrid.RemoveTopLayer(intVec, false);
 
                 //Spawn the rat
-                Cthulhu.Utility.SpawnPawnsOfCountAt(CultDefOfs.Rat, intVec, map, Rand.Range(1, 5), null, false, true);
+                Cthulhu.Utility.SpawnPawnsOfCountAt(CultsDefOfs.Rat, intVec, map, Rand.Range(1, 5), null, false, true);
                 
                 num++;
             }
             if (num > 0)
             {
                 Find.CameraDriver.shaker.DoShake(1f);
-                Find.LetterStack.ReceiveLetter(this.def.letterLabel, this.def.letterText, this.def.letterType, new TargetInfo(map.GetComponent<MapComponent_SacrificeTracker>().lastLocation, map), null);
+                Find.LetterStack.ReceiveLetter(this.def.letterLabel, this.def.letterText, this.def.letterDef, new TargetInfo(map.GetComponent<MapComponent_SacrificeTracker>().lastLocation, map), null);
                 Messages.Message("Rats are bursting out from everywhere!", MessageSound.Negative);
                 Cthulhu.Utility.ApplyTaleDef("SpellRatsInTheWalls", map);
             }

@@ -139,7 +139,7 @@ namespace CultOfCthulhu
                 if (this.massUsageDirty)
                 {
                     this.massUsageDirty = false;
-                    this.cachedMassUsage = CollectionsMassCalculator.MassUsageTransferables(this.transferables, false, true, false);
+                    this.cachedMassUsage = CollectionsMassCalculator.MassUsageTransferables(this.transferables, IgnorePawnsInventoryMode.DontIgnore, true, false);
                 }
                 return this.cachedMassUsage;
             }
@@ -287,11 +287,11 @@ namespace CultOfCthulhu
             this.transferables = new List<TransferableOneWay>();
             this.AddPawnsToTransferables();
             this.AddItemsToTransferables();
-            this.pawnsTransfer = new TransferableOneWayWidget(null, Faction.OfPlayer.Name, this.TransportersLabelCap, "FormCaravanColonyThingCountTip".Translate(), true, false, true, () => this.MassCapacity - this.MassUsage, 24f, false, true);
+            this.pawnsTransfer = new TransferableOneWayWidget(null, Faction.OfPlayer.Name, this.TransportersLabelCap, "FormCaravanColonyThingCountTip".Translate(), true, IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true, () => this.MassCapacity - this.MassUsage, 24f, false, true);
             CaravanUIUtility.AddPawnsSections(this.pawnsTransfer, this.transferables);
             this.itemsTransfer = new TransferableOneWayWidget(from x in this.transferables
                                                               where x.ThingDef.category != ThingCategory.Pawn
-                                                              select x, Faction.OfPlayer.Name, this.TransportersLabelCap, "FormCaravanColonyThingCountTip".Translate(), true, false, true, () => this.MassCapacity - this.MassUsage, 24f, false, true);
+                                                              select x, Faction.OfPlayer.Name, this.TransportersLabelCap, "FormCaravanColonyThingCountTip".Translate(), true, IgnorePawnsInventoryMode.IgnoreIfAssignedToUnload, true, () => this.MassCapacity - this.MassUsage, 24f, false, true);
             this.CountToTransferChanged();
         }
 
@@ -301,9 +301,9 @@ namespace CultOfCthulhu
             int i;
             for (i = 0; i < this.transferables.Count; i++)
             {
-                TransferableUtility.Transfer(this.transferables[i].things, this.transferables[i].countToTransfer, delegate (Thing splitPiece, Thing originalThing)
+                TransferableUtility.Transfer(this.transferables[i].things, this.transferables[i].CountToTransfer, delegate (Thing splitPiece, IThingHolder originalThing)
                 {
-                    this.transporters[i % this.transporters.Count].GetInnerContainer().TryAdd(splitPiece, true);
+                    this.transporters[i % this.transporters.Count].GetDirectlyHeldThings().TryAdd(splitPiece, true);
                 });
             }
             return true;
@@ -342,15 +342,15 @@ namespace CultOfCthulhu
         private void AssignTransferablesToRandomTransporters()
         {
             Cthulhu.Utility.DebugReport("AssignTransferablesToRandomTransporters Called");
-            TransferableOneWay transferableOneWay = this.transferables.MaxBy((TransferableOneWay x) => x.countToTransfer);
+            TransferableOneWay transferableOneWay = this.transferables.MaxBy((TransferableOneWay x) => x.CountToTransfer);
             int num = 0;
             for (int i = 0; i < this.transferables.Count; i++)
             {
                 if (this.transferables[i] != transferableOneWay)
                 {
-                    if (this.transferables[i].countToTransfer > 0)
+                    if (this.transferables[i].CountToTransfer > 0)
                     {
-                        this.transporters[num % this.transporters.Count].AddToTheToLoadList(this.transferables[i], this.transferables[i].countToTransfer);
+                        this.transporters[num % this.transporters.Count].AddToTheToLoadList(this.transferables[i], this.transferables[i].CountToTransfer);
                         num++;
                     }
                 }
@@ -389,7 +389,7 @@ namespace CultOfCthulhu
 
         private bool CheckForErrors(List<Pawn> pawns)
         {
-            if (!this.transferables.Any((TransferableOneWay x) => x.countToTransfer != 0))
+            if (!this.transferables.Any((TransferableOneWay x) => x.CountToTransfer != 0))
             {
                 Messages.Message("CantSendEmptyTransportPods".Translate(), MessageSound.RejectInput);
                 return false;
@@ -423,7 +423,7 @@ namespace CultOfCthulhu
             {
                 if (this.transferables[i].ThingDef.category == ThingCategory.Item)
                 {
-                    int countToTransfer = this.transferables[i].countToTransfer;
+                    int countToTransfer = this.transferables[i].CountToTransfer;
                     int num = 0;
                     if (countToTransfer > 0)
                     {
@@ -492,8 +492,8 @@ namespace CultOfCthulhu
         {
             for (int i = 0; i < this.transferables.Count; i++)
             {
-                this.transferables[i].SetToTransferMaxToDest();
-                TransferableUIUtility.ClearEditBuffer(this.transferables[i]);
+                this.transferables[i].AdjustTo(this.transferables[i].GetMaximum());// SetToTransferMaxToDest();
+                //TransferableUIUtility.ClearEditBuffer(this.transferables[i]);
             }
             this.CountToTransferChanged();
         }

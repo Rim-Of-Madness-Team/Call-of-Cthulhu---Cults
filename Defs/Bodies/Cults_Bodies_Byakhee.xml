@@ -5,7 +5,7 @@
 <!-- Byakhee -->
 <!-- 2 Hearts, 2 Wings, 2 arms, 2 legs, internal ears -->
   <BodyDef>
-    <defName>Cults_ByakheeBody</defName>
+    <defName>ROM_Cults_ByakheeBody</defName>
     <label>byakhee anatomy</label>
     <corePart>
       <def>Torso</def>
