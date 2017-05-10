@@ -138,7 +138,7 @@ namespace CultOfCthulhu
             //Set up ticker. Give our plotters a day or two.
             if (ticksUntilInquisition == 0)
             {
-                int ran = Rand.Range(1, 2);
+                int ran = Rand.Range(1, 3);
                 ticksUntilInquisition = Find.TickManager.TicksGame + (GenDate.TicksPerDay * ran);
                 Cthulhu.Utility.DebugReport("Inquisition: Current Ticks: " + Find.TickManager.TicksGame.ToString() + " Ticker set to: " + ticksUntilInquisition.ToString());
             }
@@ -153,9 +153,9 @@ namespace CultOfCthulhu
             //Don't try another inquisition for a long time.
             ticksUntilInquisition = Find.TickManager.TicksGame + (GenDate.TicksPerDay * Rand.Range(7, 28));
 
+            if (assailants.Contains(preacher)) return;
             foreach (Pawn antiCultist in assailants)
             {
-                if (antiCultist == preacher) continue;
                 if (antiCultist == null) continue;
                 if (!Cthulhu.Utility.IsActorAvailable(antiCultist)) continue;
                 antiCultist.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_MidnightInquisitionThought);

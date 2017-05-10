@@ -124,7 +124,7 @@ namespace CultOfCthulhu
             Messages.Message(pawn(map).LabelShort + "'s brain has been enhanced with great psionic power.", MessageSound.Benefit);
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = pawn(map).Position;
-            Cthulhu.Utility.ApplyTaleDef("SpellPsionicGrowth", pawn(map));
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellPsionicGrowth", pawn(map));
 
             return true;
         }

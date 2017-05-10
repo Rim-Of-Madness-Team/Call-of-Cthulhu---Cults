@@ -52,7 +52,7 @@ namespace CultOfCthulhu
             }
             Messages.Message("A star vampire is unleashed.", MessageSound.SeriousAlert);
 
-            Cthulhu.Utility.ApplyTaleDef("SpellStarVampireVisit", map);
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellStarVampireVisit", map);
 
             return true;
         }

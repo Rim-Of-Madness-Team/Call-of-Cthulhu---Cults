@@ -85,7 +85,7 @@ namespace CultOfCthulhu
             ////rect6.x += 2f;
             //rect6.width = 210f;
             //rect6.yMax += 35f;
-            //Widgets.Label(rect6, "Spell".Translate() + ": ");
+            //Widgets.Label(rect6, "Cults_Spell".Translate() + ": ");
             //rect6.xMin = rect6.center.x - 15f;
             //string label5 = SpellLabel(altar);
             //if (Widgets.ButtonText(rect6, label5, true, false, true))

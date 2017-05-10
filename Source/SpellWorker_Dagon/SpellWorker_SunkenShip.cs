@@ -49,7 +49,7 @@ namespace CultOfCthulhu
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
             Messages.Message("MessageSunkenShipChunkDrop".Translate(), new TargetInfo(intVec, map), MessageSound.Standard);
 
-            Cthulhu.Utility.ApplyTaleDef("SpellSunkenShip", map);
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellSunkenShip", map);
 
             return true;
         }

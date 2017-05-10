@@ -54,7 +54,7 @@ namespace CultOfCthulhu
             //altar.innerSacrifice = thing;
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
             Messages.Message("The innerSacrifice reanimates and attacks.", MessageSound.SeriousAlert);
-            Cthulhu.Utility.ApplyTaleDef("SpellReanimator", pawn);
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellReanimator", pawn);
             return true;
         }
     }

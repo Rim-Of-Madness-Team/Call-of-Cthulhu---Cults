@@ -980,8 +980,8 @@ namespace CultOfCthulhu
                 pawn = listeners[i];
                 if (pawn.Faction == Faction.OfPlayer)
                 {
-                    if (pawn.CurJob.def.defName == "HoldOffering" ||
-                        pawn.CurJob.def.defName == "GiveOffering")
+                    //Hold Offering
+                    if (pawn.CurJob.def == CultsDefOfs.Cults_GiveOffering)
                     {
                         pawn.jobs.StopAll();
                     }
@@ -1103,10 +1103,10 @@ namespace CultOfCthulhu
                 pawn = listeners[i];
                 if (pawn.Faction == Faction.OfPlayer)
                 {
-                    if (pawn.CurJob.def.defName == "HoldSacrifice" ||
-                        pawn.CurJob.def.defName == "AttendSacrifice" ||
-                        pawn.CurJob.def.defName == "ReflectOnResult" ||
-                        pawn.CurJob.def.defName == "GiveOffering")
+                    if (pawn.CurJob.def == CultsDefOfs.Cults_HoldSacrifice ||
+                        pawn.CurJob.def == CultsDefOfs.Cults_AttendSacrifice ||
+                        pawn.CurJob.def == CultsDefOfs.Cults_ReflectOnResult ||
+                        pawn.CurJob.def == CultsDefOfs.Cults_GiveOffering)
                     {
                         pawn.jobs.StopAll();
                     }
@@ -1229,8 +1229,8 @@ namespace CultOfCthulhu
             if (room.Role != RoomRoleDefOf.PrisonBarracks && room.Role != RoomRoleDefOf.PrisonCell)
             {
                 List<Pawn> listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead &&
-                                                                                  x.CurJob.def.defName != "MidnightInquisition" &&
-                                                                                  x.CurJob.def.defName != "AttendSacrifice" &&
+                                                                                  x.CurJob.def != CultsDefOfs.Cults_MidnightInquisition &&
+                                                                                  x.CurJob.def != CultsDefOfs.Cults_AttendSacrifice &&
                                                                                   x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
                                                                                   x.CurJob.def != JobDefOf.Capture && // Capturing is pretty important
                                                                                   x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
@@ -1341,9 +1341,9 @@ namespace CultOfCthulhu
                 pawn = listeners[i];
                 if (pawn.Faction == Faction.OfPlayer)
                 {
-                    if (pawn.CurJob.def.defName == "HoldWorship" ||
-                        pawn.CurJob.def.defName == "AttendWorship" ||
-                        pawn.CurJob.def.defName == "ReflectOnWorship")
+                    if (pawn.CurJob.def == CultsDefOfs.Cults_HoldWorship ||
+                        pawn.CurJob.def == CultsDefOfs.Cults_AttendWorship ||
+                        pawn.CurJob.def == CultsDefOfs.Cults_ReflectOnWorship)
                     {
                         pawn.jobs.StopAll();
                     }
@@ -1470,10 +1470,10 @@ namespace CultOfCthulhu
                 if (forced)
                 {
                     listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead &&
-                                                                                  x.CurJob.def.defName != "MidnightInquisition" &&
-                                                                                  x.CurJob.def.defName != "AttendSacrifice" &&
-                                                                                  x.CurJob.def.defName != "ReflectOnWorship" &&
-                                                                                  x.CurJob.def.defName != "AttendWorship" &&
+                                                                                  x.CurJob.def != CultsDefOfs.Cults_MidnightInquisition &&
+                                                                                  x.CurJob.def != CultsDefOfs.Cults_AttendSacrifice &&
+                                                                                  x.CurJob.def != CultsDefOfs.Cults_ReflectOnWorship &&
+                                                                                  x.CurJob.def != CultsDefOfs.Cults_AttendWorship &&
                                                                                   x.CurJob.def != JobDefOf.Capture &&
                                                                                   x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
                                                                                   x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
@@ -1487,10 +1487,10 @@ namespace CultOfCthulhu
                 else
                 {
                     listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead &&
-                                                                                  x.CurJob.def.defName != "MidnightInquisition" &&
-                                                                                  x.CurJob.def.defName != "AttendSacrifice" &&
-                                                                                  x.CurJob.def.defName != "ReflectOnWorship" &&
-                                                                                  x.CurJob.def.defName != "AttendWorship" &&
+                                                                                  x.CurJob.def != CultsDefOfs.Cults_MidnightInquisition &&
+                                                                                  x.CurJob.def != CultsDefOfs.Cults_AttendSacrifice &&
+                                                                                  x.CurJob.def != CultsDefOfs.Cults_ReflectOnWorship &&
+                                                                                  x.CurJob.def != CultsDefOfs.Cults_AttendWorship &&
                                                                                   x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
                                                                                   x.CurJob.def != JobDefOf.Capture && 
                                                                                   x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important

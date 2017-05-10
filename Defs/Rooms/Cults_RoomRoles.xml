@@ -2,7 +2,7 @@
 <RoomRoleDefs>
 
   <RoomRoleDef>
-    <defName>Temple</defName>
+    <defName>Cults_Temple</defName>
     <label>temple</label>
     <workerClass>CultOfCthulhu.RoomRoleWorker_Temple</workerClass>
     <relatedStats>

@@ -287,7 +287,7 @@ namespace CultOfCthulhu
                 adpInfo.innerContainer.TryAdd(thing);
             }
             DropPodUtility.MakeDropPodAt(intVec, map, adpInfo);
-            Cthulhu.Utility.ApplyTaleDef("SpellOrbitalInsanityWave", map);
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellOrbitalInsanityWave", map);
             return true;
         }
 

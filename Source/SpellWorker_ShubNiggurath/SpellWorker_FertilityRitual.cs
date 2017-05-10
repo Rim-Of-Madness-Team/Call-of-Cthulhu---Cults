@@ -50,7 +50,7 @@ namespace CultOfCthulhu
             //Spawn a 
             Messages.Message("An idol of fertility rises from the corpse.", MessageSound.Benefit);
 
-            Cthulhu.Utility.ApplyTaleDef("SpellFertilityRitual", map);
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellFertilityRitual", map);
             return true;
         }
     }

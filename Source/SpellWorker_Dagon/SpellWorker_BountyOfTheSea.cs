@@ -58,7 +58,7 @@ namespace CultOfCthulhu
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
             Messages.Message("Treasures from the deep mysteriously appear.", new TargetInfo(intVec, map), MessageSound.Benefit);
-            Cthulhu.Utility.ApplyTaleDef("SpellBountyOfTheSea", map);
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellBountyOfTheSea", map);
             return true;
         }
     }

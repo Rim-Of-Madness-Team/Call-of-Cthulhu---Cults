@@ -76,14 +76,14 @@ namespace CultOfCthulhu
             rect6.x += 2f;
             rect6.width = ITab_AltarSacrificesCardUtility.ColumnSize;
             rect6.yMax += ITab_AltarSacrificesCardUtility.ButtonSize + 15f;
-            Widgets.Label(rect6, "Spell".Translate() + ": ");
+            Widgets.Label(rect6, "Cults_Spell".Translate() + ": ");
             rect6.xMin = rect6.center.x - 15f;
             string label5 = SpellLabel(altar);
             if (Widgets.ButtonText(rect6, label5, true, false, true))
             {
                 ITab_AltarHumanSacrificeCardUtility.OpenSpellSelectMenu(altar);
             }
-            TooltipHandler.TipRegion(rect6, "SpellDesc".Translate());
+            TooltipHandler.TipRegion(rect6, "Cults_SpellDesc".Translate());
             
             GUI.EndGroup();
         }

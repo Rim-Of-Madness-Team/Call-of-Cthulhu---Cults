@@ -65,9 +65,9 @@ namespace CultOfCthulhu
                 //Trigger the nightmare event on the altar
                 altar(SpellWorker_Reincarnation.map).NightmareEvent();
 
-                Cthulhu.Utility.ApplyTaleDef("SpellReincarnation", deadBody.InnerPawn);
+                Cthulhu.Utility.ApplyTaleDef("Cults_SpellReincarnation", deadBody.InnerPawn);
 
-            }, "SpellReincarnation", false, null);
+            }, "Cults_SpellReincarnation", false, null);
             return true;
         }
     }

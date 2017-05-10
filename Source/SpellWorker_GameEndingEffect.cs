@@ -77,7 +77,7 @@ namespace CultOfCthulhu
                 Find.MusicManagerPlay.ForceSilenceFor(999f);
                 ScreenFader.StartFade(Color.clear, 3f);
 
-            }, "SpellGameEndingEffect", false, null);
+            }, "Cults_SpellGameEndingEffect", false, null);
             return true;
 
         }

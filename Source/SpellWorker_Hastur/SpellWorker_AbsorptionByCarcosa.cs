@@ -77,7 +77,7 @@ namespace CultOfCthulhu
         //        Find.MusicManagerPlay.ForceSilenceFor(999f);
         //        ScreenFader.StartFade(Color.clear, 3f);
 
-        //    }, "SpellAbsorptionByCarcosa", false, null);
+        //    }, "Cults_SpellAbsorptionByCarcosa", false, null);
         //    return true;
 
         //}

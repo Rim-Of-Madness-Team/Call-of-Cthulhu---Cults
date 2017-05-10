@@ -286,7 +286,7 @@ namespace CultOfCthulhu
 
                     if (altar.currentSpell != null)
                     {
-                        if (altar.currentSpell.defName != "SpellFavor")
+                        if (altar.currentSpell.defName != "Cults_SpellFavor")
                         {
                             s.AppendLine("Initial Failure Difficulty: " + failDifficulty.ToString());
 
@@ -316,7 +316,7 @@ namespace CultOfCthulhu
                             if ((!Success) && TableOfFun) return SacrificeResult.failure;
                             if (Success && (!TableOfFun)) return SacrificeResult.success;
                         }
-                        else if (altar.currentSpell.defName == "SpellFavor")
+                        else if (altar.currentSpell.defName == "Cults_SpellFavor")
                         {
                             return SacrificeResult.success;
                         }
@@ -641,7 +641,7 @@ namespace CultOfCthulhu
         /// <param name="executioner"></param>
         /// <param name="altar"></param>
         /// <param name="deity"></param>
-        /// <param name="spell"></param>
+        /// <param name="Cults_Spell"></param>
         public static void SacrificeExecutionComplete(Pawn sacrifice, Pawn executioner, Building_SacrificialAltar altar, CosmicEntity deity, IncidentDef spell)
         {
             altar.ChangeState(Building_SacrificialAltar.State.sacrificing, Building_SacrificialAltar.SacrificeState.finishing);
@@ -1229,7 +1229,7 @@ namespace CultOfCthulhu
             if (room == null) return;
             if (room.Role == null) return;
             if (def == null) return;
-            if (room.Role.defName == "Temple")
+            if (room.Role == CultsDefOfs.Cults_Temple)
             {
                 int scoreStageIndex = RoomStatDefOf.Impressiveness.GetScoreStageIndex(room.GetStat(RoomStatDefOf.Impressiveness));
                 if (def.stages[scoreStageIndex] == null) return;
@@ -1250,8 +1250,8 @@ namespace CultOfCthulhu
             if (IsExecutioner(attendee)) return;
             if (IsSacrifice(attendee)) return;
             if (!Cthulhu.Utility.IsActorAvailable(attendee)) return;
-            if (attendee.jobs.curJob.def.defName == "ReflectOnResult") return;
-            if (attendee.jobs.curJob.def.defName == "AttendSacrifice") return;
+            if (attendee.jobs.curJob.def == CultsDefOfs.Cults_ReflectOnResult) return;
+            if (attendee.jobs.curJob.def == CultsDefOfs.Cults_AttendSacrifice) return;
             if (attendee.Drafted) return;
             if (attendee.IsPrisoner) return;
 
@@ -1396,7 +1396,7 @@ namespace CultOfCthulhu
             {
                 IncidentParms parms = StorytellerUtility.DefaultParmsNow(Find.Storyteller.def, spell.category, map as IIncidentTarget);
                 spell.Worker.TryExecute(parms);
-                Cthulhu.Utility.DebugReport("Spell cast: " + spell.ToString());
+                Cthulhu.Utility.DebugReport("Cults_Spell cast: " + spell.ToString());
             }
             if (fromAltar)
             {

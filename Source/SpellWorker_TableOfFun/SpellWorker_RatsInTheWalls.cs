@@ -103,7 +103,7 @@ namespace CultOfCthulhu
                 Find.CameraDriver.shaker.DoShake(1f);
                 Find.LetterStack.ReceiveLetter(this.def.letterLabel, this.def.letterText, this.def.letterDef, new TargetInfo(map.GetComponent<MapComponent_SacrificeTracker>().lastLocation, map), null);
                 Messages.Message("Rats are bursting out from everywhere!", MessageSound.Negative);
-                Cthulhu.Utility.ApplyTaleDef("SpellRatsInTheWalls", map);
+                Cthulhu.Utility.ApplyTaleDef("Cults_SpellRatsInTheWalls", map);
             }
             return num > 0;
         }

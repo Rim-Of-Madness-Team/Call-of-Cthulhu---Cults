@@ -9,17 +9,17 @@
 	<description>He who waits dreaming.</description>
     <symbol>Mote/Symbols/Cthulhu</symbol>	
 	<tier1SpellDefs>
-		<li>SpellFavor</li>
-		<li>SpellOrbitalInsanityWave</li>	
-		<li>SpellAspectOfCthulhu</li>
+		<li>Cults_SpellFavor</li>
+		<li>Cults_SpellOrbitalInsanityWave</li>	
+		<li>Cults_SpellAspectOfCthulhu</li>
 	</tier1SpellDefs>
 	<tier2SpellDefs>
-		<li>SpellPsionicGrowth</li>
+		<li>Cults_SpellPsionicGrowth</li>
 	</tier2SpellDefs>
 	<tier3SpellDefs>
-		<li>SpellTerrestrialInsanityWave</li>
+		<li>Cults_SpellTerrestrialInsanityWave</li>
 	</tier3SpellDefs>
-	<finalSpellDef>SpellAwakenCthulhu</finalSpellDef>
+	<finalSpellDef>Cults_SpellAwakenCthulhu</finalSpellDef>
 	<favoredApparel>
 		<li>Apparel_CthulhuMaskHood</li>
 	</favoredApparel>
@@ -33,17 +33,17 @@
 	<description>The Ur - Deep One, grown large and powerful over the millennia.</description>
     <symbol>Mote/Symbols/Dagon</symbol>	
 	<tier1SpellDefs>
-		<li>SpellFavor</li>	
-		<li>SpellSunkenShip</li>
-		<li>SpellTreasuresOfTheDeep</li>
+		<li>Cults_SpellFavor</li>	
+		<li>Cults_SpellSunkenShip</li>
+		<li>Cults_SpellTreasuresOfTheDeep</li>
 	</tier1SpellDefs>
 	<tier2SpellDefs>
-		<li>SpellDefendTheBrood</li>
+		<li>Cults_SpellDefendTheBrood</li>
 	</tier2SpellDefs>
 	<tier3SpellDefs>
-		<li>SpellBountyOfTheSea</li>
+		<li>Cults_SpellBountyOfTheSea</li>
 	</tier3SpellDefs>
-	<finalSpellDef>SpellOrthogenesis</finalSpellDef>
+	<finalSpellDef>Cults_SpellOrthogenesis</finalSpellDef>
 </ThingDef>
 
 
@@ -56,17 +56,17 @@
 	<favorsOutdoorWorship>true</favorsOutdoorWorship>
     <symbol>Mote/Symbols/Shub</symbol>		
 	<tier1SpellDefs>
-		<li>SpellFavor</li>	
-		<li>SpellFertility</li>
-		<li>SpellMotherOfGoats</li>
+		<li>Cults_SpellFavor</li>	
+		<li>Cults_SpellFertility</li>
+		<li>Cults_SpellMotherOfGoats</li>
 	</tier1SpellDefs>
 	<tier2SpellDefs>
-		<li>SpellForbiddenKnowledge</li>	
+		<li>Cults_SpellForbiddenKnowledge</li>	
 	</tier2SpellDefs>
 	<tier3SpellDefs>
-		<li>SpellWombBetweenWorlds</li>
+		<li>Cults_SpellWombBetweenWorlds</li>
 	</tier3SpellDefs>
-	<finalSpellDef>SpellTransdimensionalConvergence</finalSpellDef>	
+	<finalSpellDef>Cults_SpellTransdimensionalConvergence</finalSpellDef>	
 </ThingDef>
 
 
@@ -78,17 +78,17 @@
 	<description>The messenger, heart and soul of the Outer Gods.</description>
     <symbol>Mote/Symbols/Nyarlathotep</symbol>	
 	<tier1SpellDefs>
-		<li>SpellFavor</li>	
-		<li>SpellStarryWisdom</li>
-		<li>SpellForbiddenKnowledge</li>		
+		<li>Cults_SpellFavor</li>	
+		<li>Cults_SpellStarryWisdom</li>
+		<li>Cults_SpellForbiddenKnowledge</li>		
 	</tier1SpellDefs>
 	<tier2SpellDefs>
-		<li>SpellChaosTheory</li>
+		<li>Cults_SpellChaosTheory</li>
 	</tier2SpellDefs>
 	<tier3SpellDefs>
-		<li>SpellDarkEmissary</li>
+		<li>Cults_SpellDarkEmissary</li>
 	</tier3SpellDefs>
-	<finalSpellDef>SpellPilgrimageToKadath</finalSpellDef>
+	<finalSpellDef>Cults_SpellPilgrimageToKadath</finalSpellDef>
 	<favoredApparel>
 		<li>Apparel_NyarlathotepHood</li>
 	</favoredApparel>	
@@ -102,17 +102,17 @@
 	<description>From His Yellow Kingdom, the Unspeakable One watches.</description>
     <symbol>Mote/Symbols/Hastur</symbol>	
 	<tier1SpellDefs>
-		<li>SpellFavor</li>	
-		<li>SpellTheKingInYellow</li>
-		<li>SpellSummonByakhee</li>		
+		<li>Cults_SpellFavor</li>	
+		<li>Cults_SpellTheKingInYellow</li>
+		<li>Cults_SpellSummonByakhee</li>		
 	</tier1SpellDefs>
 	<tier2SpellDefs>
-		<li>SpellVisionsOfCarcosa</li>
+		<li>Cults_SpellVisionsOfCarcosa</li>
 	</tier2SpellDefs>
 	<tier3SpellDefs>
-		<li>SpellUnspeakableOath</li>
+		<li>Cults_SpellUnspeakableOath</li>
 	</tier3SpellDefs>	
-	<finalSpellDef>SpellAbsorptionByCarcosa</finalSpellDef>
+	<finalSpellDef>Cults_SpellAbsorptionByCarcosa</finalSpellDef>
 	<favoredApparel>
 		<li>Apparel_CultistHood</li>
 	</favoredApparel>	

@@ -71,7 +71,7 @@ namespace CultOfCthulhu
             //    p.story.traits.GainTrait(new Trait(traitToAdd));
             //}
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = p.Position;
-            Cthulhu.Utility.ApplyTaleDef("SpellStarryWisdom", p);
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellStarryWisdom", p);
 
             return true;
         }

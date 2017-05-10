@@ -50,7 +50,7 @@ namespace CultOfCthulhu
             //Spawn a 
             Messages.Message("The sacred play appears before the sacrificers.", MessageSound.Benefit);
 
-            //Cthulhu.Utility.ApplyTaleDef("SpellFertilityRitual", map);
+            //Cthulhu.Utility.ApplyTaleDef("Cults_SpellFertilityRitual", map);
             return true;
         }
     }

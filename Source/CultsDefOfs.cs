@@ -27,7 +27,9 @@ namespace CultOfCthulhu
     [DefOf]
     public class CultsDefOfs
     {
+        // ============= UNSORTED ============
 
+        public static RoomRoleDef Cults_Temple;
         public static ThingDef Cults_ForbiddenKnowledgeCenter;
 
         // ============ DUTY DEFS =============

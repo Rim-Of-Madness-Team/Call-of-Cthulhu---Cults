@@ -11,7 +11,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Favor</label>	
 		<description>Make a sacrifice without any worldly gains.</description>
-		<defName>SpellFavor</defName>
+		<defName>Cults_SpellFavor</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_Favor</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterLabel>to be noticed</letterLabel>
@@ -23,7 +23,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Psionic Growth</label>	
 		<description>Generates a tumorous growth within the brain of the colonist granting them a powerful psionic melee attack.</description>
-		<defName>SpellPsionicGrowth</defName>
+		<defName>Cults_SpellPsionicGrowth</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_PsionicGrowth</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterLabel>to be endowed with psychic power</letterLabel>
@@ -33,7 +33,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Aspect of Cthulhu</label>	
 		<description>The spell targets one of your colonists and remanifests one of their limbs as a powerful tentacle.</description>
-		<defName>SpellAspectOfCthulhu</defName>
+		<defName>Cults_SpellAspectOfCthulhu</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_AspectOfCthulhu</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterLabel>to be endowed with otherworldly parts</letterLabel>
@@ -43,7 +43,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Orbital Insanity Wave</label>
 		<description>Causes a massive wave through the orbital layer of the region. This will cause ships to crash in the vicinity.</description>
-		<defName>SpellOrbitalInsanityWave</defName>
+		<defName>Cults_SpellOrbitalInsanityWave</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_OrbitalInsanityWave</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>to send his dreams into the void as a beacon to those who pass</letterLabel>
@@ -53,7 +53,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Terrestrial Insanity Wave</label>
 		<description>Causes a massive wave through the terrestrial layer of the region. All enemy humanoid pawns will be riddled with a crippling form of insanity.</description>
-		<defName>SpellTerrestrialInsanityWave</defName>
+		<defName>Cults_SpellTerrestrialInsanityWave</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_TerrestrialInsanityWave</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>and ask that he sends your foes into disarray</letterLabel>
@@ -63,7 +63,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Awaken Cthulhu</label>
 		<description>[Game Ending Spell]\nThe effects of Cthulhu’s awakening are unknown.</description>
-		<defName>SpellAwakenCthulhu</defName>
+		<defName>Cults_SpellAwakenCthulhu</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_SummonCthulhu</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterLabel>to awaken him from his eon long slumber and start his reign over the physical world</letterLabel>
@@ -75,7 +75,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Sunken Ship</label>
 		<description>Delivers an ancient wreck from a distant seabed to your colony that can provide wood, steel, plasteel, and components when dismantled.</description>
-		<defName>SpellSunkenShip</defName>
+		<defName>Cults_SpellSunkenShip</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_SunkenShip</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>out of desperation or greed, to deliver wealth from the sea</letterLabel>
@@ -85,7 +85,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Treasures of the Deep</label>
 		<description>Brings forth lost treasure chests filled with valuable resources such as jade, silver, and gold from ancient ships lost to the abyssal seas.</description>
-		<defName>SpellTreasuresOfTheDeep</defName>
+		<defName>Cults_SpellTreasuresOfTheDeep</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_TreasuresOfTheDeep</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>out of desperation or greed, to deliver wealth from the sea</letterLabel>
@@ -95,7 +95,7 @@
 	  <IncidentDef ParentName="SpellDef">
 		<label>Defend the Brood</label>
 	    <description>Brings a gang of deep ones to stand guard over your colony. Placement of the Sign of Dagon before casting this spell is recommended.</description>
-		<defName>SpellDefendTheBrood</defName>
+		<defName>Cults_SpellDefendTheBrood</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_DefendTheBrood</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<category>AllyArrival</category>
@@ -108,7 +108,7 @@
     <!--<IncidentDef ParentName="SpellDef">
 		<label>Relics of the Deep</label>
 		<description>Brings forth a greater assortment of valuable resources such as jade, silver, and gold along with legendary weapons and armor lost to the abyssal seas.</description>
-		<defName>SpellRecoverArtifacts</defName>
+		<defName>Cults_SpellRecoverArtifacts</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_RelicsoftheDeep</workerClass>
         <letterLabel>out of desperation or greed, to deliver wealth from the sea</letterLabel>
         <letterText>is granted a vision of great relics washing up from ethereal yet non-existent waves</letterText>		
@@ -117,7 +117,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Bounty of the Sea</label>
 		<description>Dagon tears a ship from the surface of a distant ocean and delivers its fresh corpse.</description>
-		<defName>SpellBountyOfTheSea</defName>
+		<defName>Cults_SpellBountyOfTheSea</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_BountyOfTheSea</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>out of desperation or greed, to deliver wealth from the sea</letterLabel>
@@ -127,7 +127,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Orthogenesis</label>
 		<description>[Game Ending Spell]\nA path to the great cities of the Deep Ones will be revealed to your colony, and they can begin the merger with the Deep Ones and become one with Dagon’s flock.</description>
-		<defName>SpellOrthogenesis</defName>
+		<defName>Cults_SpellOrthogenesis</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_Orthogenesis</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterLabel> to deliver his blessing and grants an invitation to join him</letterLabel>
@@ -138,7 +138,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Fertility Ritual</label>
 		<description>Summons a fertility totem to support your colony’s fields through hard times.</description>
-		<defName>SpellFertility</defName>
+		<defName>Cults_SpellFertility</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_FertilityRitual</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>to bless their crops</letterLabel>
@@ -147,7 +147,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Mother Of Goats</label>
 		<description>Summons a herd of black goats to provide your hunters with ample prey to hunt.</description>
-		<defName>SpellMotherOfGoats</defName>
+		<defName>Cults_SpellMotherOfGoats</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_MotherOfGoats</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel> to bless them with prey</letterLabel>
@@ -157,7 +157,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Transmogrify Pets</label>
 		<description>Allow Shub-Niggurath to reseed the genetic structure of your beloved pet with extra-dimensional code worthy of Shub-Niggurath’s own spawn.</description>
-		<defName>SpellTransmogrifyPets</defName>
+		<defName>Cults_SpellTransmogrifyPets</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_TransmogrifyPets</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>to bless their beasts with a touch of its extra-dimensional biology</letterLabel>
@@ -167,7 +167,7 @@
 	<!--<IncidentDef ParentName="SpellDef">
 		<label>Dark Young</label>
 		<description>Summon the Dark Young monsters to serve you as their loyal master until Shub-Niggurath deems otherwise.</description>
-		<defName>SpellDarkYoung</defName>
+		<defName>Cults_SpellDarkYoung</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_DarkYoung</workerClass>
         <letterLabel>to summon powerful allies</letterLabel>
         <letterText>beholds the Dark Young of Shub Niggurath’s branches rising from the altar</letterText>
@@ -176,7 +176,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Womb Between Worlds</label>
 		<description>Summons a portal that spews Dark Young monsters to serve you as their loyal master until Shub-Niggurath deems otherwise.</description>
-		<defName>SpellWombBetweenWorlds</defName>
+		<defName>Cults_SpellWombBetweenWorlds</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_WombBetweenWorlds</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>to summon powerful allies</letterLabel>
@@ -186,7 +186,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Transdimensional Convergence</label>
 		<description>[Game Ending Spell]\nAllow Shub-Niggurath to enter this dimension fully-formed at the cost of mutating the biology of your entire region.</description>
-		<defName>SpellTransdimensionalConvergence</defName>
+		<defName>Cults_SpellTransdimensionalConvergence</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_TransdimensionalConvergence</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterLabel>and attempt to break down the barriers and open the way</letterLabel>
@@ -198,7 +198,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Starry Wisdom</label>
 		<description>Transforms your executioner’s mind into a psychopathic one. Psychopaths will also be turned cannibalistic.</description>
-		<defName>SpellStarryWisdom</defName>
+		<defName>Cults_SpellStarryWisdom</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_StarryWisdom</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>and give the dark one its toll of dreams in exchange for illumination</letterLabel>
@@ -208,7 +208,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Forbidden Knowledge</label>
 		<description>Grants a sizable bonus to your current research project.</description>
-		<defName>SpellForbiddenKnowledge</defName>
+		<defName>Cults_SpellForbiddenKnowledge</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_ForbiddenKnowledge</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>and ask that he grants forbidden knowledge</letterLabel>
@@ -218,7 +218,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Chaos Theory</label>
 		<description>Accept a deal from Nyarlathotep to live one’s life again. This removes all incapabilities from the executioner and changes their entire backstory.</description>
-		<defName>SpellChaosTheory</defName>
+		<defName>Cults_SpellChaosTheory</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_ChaosTheory</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>and petition for another chance to correct mistakes from the past</letterLabel>
@@ -228,7 +228,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Dark Emissary</label>
 		<description>A new cult member joins your colony.</description>
-		<defName>SpellDarkEmissary</defName>
+		<defName>Cults_SpellDarkEmissary</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_DarkEmissary</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>to bolster your ranks with his favoured</letterLabel>
@@ -238,7 +238,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Pilgrimage to Kadath</label>
 		<description>[Game Ending Spell]\nWill you join Nyarlathotep in the dreamworld?</description>
-		<defName>SpellPilgrimageToKadath</defName>
+		<defName>Cults_SpellPilgrimageToKadath</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_PilgrimageToKadath</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>and ask that he illuminate the path to one of his many thrones</letterLabel>
@@ -250,7 +250,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>The King in Yellow, Act I</label>
 		<description>Acquire a reproduction of the infamous play, "The King in Yellow." Those exposed to the contents therin are downed and become cult-minded instantly.</description>
-		<defName>SpellTheKingInYellow</defName>
+		<defName>Cults_SpellTheKingInYellow</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_TheKingInYellow</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>and petition him to whisper the tale of the the Visitor, who wears no mask, and the doom that followed</letterLabel>
@@ -260,7 +260,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Summon Byakhee</label>
 		<description>Summon a byakhee for defense and transport.</description>
-		<defName>SpellSummonByakhee</defName>
+		<defName>Cults_SpellSummonByakhee</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_SummonByakhee</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>and beseech that he sends one of his hideous star-dwelling steeds</letterLabel>
@@ -270,7 +270,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>The King in Yellow, Act II</label>
 		<description>A proportion of the inhabitants will fall to dream of the lost city of Carcosa for 5-6 hours and shall awaken deeply calmed for a season.</description>
-		<defName>SpellVisionsOfCarcosa</defName>
+		<defName>Cults_SpellVisionsOfCarcosa</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_VisionsOfCarcosa</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>and petition him for visions of the spires and balustrades of the distant and lost city of Carcosa</letterLabel>
@@ -280,7 +280,7 @@
     <IncidentDef ParentName="SpellDef">
 		<label>Unspeakable Oath</label>
 		<description>When the oathtaker dies, they return to life once again to serve.</description>
-		<defName>SpellUnspeakableOath</defName>
+		<defName>Cults_SpellUnspeakableOath</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_UnspeakableOath</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>and swear and an unbreakable oath on his unspoken name</letterLabel>
@@ -290,7 +290,7 @@
 	<IncidentDef ParentName="SpellDef">
 		<label>Absorption by Carcosa</label>
 		<description>[Game Ending Spell]\nThe small settlement is deemed worthy by Hastur to enter his realm and be absorbed by the city of Carcosa.</description>
-		<defName>SpellAbsorptionByCarcosa</defName>
+		<defName>Cults_SpellAbsorptionByCarcosa</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_AbsorptionByCarcosa</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterLabel>and cry out in supplication that he may gaze upon your small settlement and deem you worthy</letterLabel>
@@ -301,56 +301,56 @@
 	
     <IncidentDef ParentName="SpellDef">
 		<label>Double The Fun</label>
-		<defName>SpellDoubleTheFun</defName>	 
+		<defName>Cults_SpellDoubleTheFun</defName>	 
 		<workerClass>IncidentWorker_Flashstorm</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterText>A flashstorm has struck the region</letterText>		
 	</IncidentDef> 
     <IncidentDef ParentName="SpellDef">
 		<label>Reanimator</label>
-		<defName>SpellReanimator</defName>
+		<defName>Cults_SpellReanimator</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_Reanimator</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterText>Your sacrifice has risen from the dead</letterText>
 	</IncidentDef> 
     <IncidentDef ParentName="SpellDef">
 		<label>Flashstorm</label>
-		<defName>SpellFlashstorm</defName>
+		<defName>Cults_SpellFlashstorm</defName>
 		<workerClass>IncidentWorker_Flashstorm</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterText>A flashstorm has struck the region</letterText>		
 	</IncidentDef> 
     <IncidentDef ParentName="SpellDef">
 		<label>Ecstatic Frenzy</label>
-		<defName>SpellEcstaticFrenzy</defName>
+		<defName>Cults_SpellEcstaticFrenzy</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_EcstaticFrenzy</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterText>Through the fervor of their ritual, your cultists have gone wild, thrashing at one another like animals</letterText>		
 	</IncidentDef> 
     <IncidentDef ParentName="SpellDef">
 		<label>Summoned Star Vampire</label>
-		<defName>SpellStarVampireVisit</defName>
+		<defName>Cults_SpellStarVampireVisit</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_StarVampireVisit</workerClass>
 		<targetType>MapPlayerHome</targetType>
         <letterText>A star vampire pierces the veil of our reality</letterText>		
 	</IncidentDef> 
     <IncidentDef ParentName="SpellDef">
 		<label>Blight</label>
-		<defName>SpellBlight</defName>
+		<defName>Cults_SpellBlight</defName>
 		<workerClass>IncidentWorker_CropBlight</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterText>A blight strikes your fields</letterText>
 	</IncidentDef> 
     <IncidentDef ParentName="SpellDef">
 		<label>No Longer Domesticated </label>
-		<defName>SpellNoLongerDomesticated</defName>
+		<defName>Cults_SpellNoLongerDomesticated</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_NoLongerDomesticated</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterText>Some of your animals have gone feral with madness</letterText>
 	</IncidentDef> 
 	<IncidentDef ParentName="SpellDef">
 		<label>Eclipse</label>
-		<defName>SpellEclipse</defName>		
+		<defName>Cults_SpellEclipse</defName>		
 		<WorkerClass>IncidentWorker_MakeGameCondition</WorkerClass>
 		<targetType>MapPlayerHome</targetType>
 		<GameCondition>Eclipse</GameCondition>
@@ -364,21 +364,21 @@
     </IncidentDef>
     <IncidentDef ParentName="SpellDef">
 		<label>Food Spoilage</label>
-		<defName>SpellFoodSpoilage</defName>
+		<defName>Cults_SpellFoodSpoilage</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_FoodSpoilage</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterText>Some of your food stores have mysteriously become rotten and inedible</letterText>
 	</IncidentDef> 
     <IncidentDef ParentName="SpellDef">
 		<label>Reincarnation</label>
-		<defName>SpellReincarnation</defName>
+		<defName>Cults_SpellReincarnation</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_Reincarnation</workerClass>	
 		<targetType>MapPlayerHome</targetType> 
 		<letterText>The sacrifice has resurged with branches, trunk, and tree parts, destroying your altar. Upon its form is a wicked visage of the departed</letterText>
 	</IncidentDef>
     <IncidentDef ParentName="SpellDef">
 		<label>Aurora</label>
-		<defName>SpellAuroraEffect</defName>
+		<defName>Cults_SpellAuroraEffect</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_AuroraEffect</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<GameCondition>Cults_Aurora</GameCondition>
@@ -399,14 +399,14 @@
 	
     <IncidentDef ParentName="SpellDef">
 		<label>Need a Hand</label>
-		<defName>SpellNeedAHand</defName>
+		<defName>Cults_SpellNeedAHand</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_NeedAHand</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterText>One of the congregation finds, to their horror, that their body has been altered</letterText>
 	</IncidentDef> 
     <IncidentDef ParentName="SpellDef">
 		<label>Rats in the Walls</label>
-		<defName>SpellRatsInTheWalls</defName>
+		<defName>Cults_SpellRatsInTheWalls</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_RatsInTheWalls</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterText>Scutting, scratching sounds hail the arrival of countless rats bursting through the floorboards</letterText>
@@ -417,7 +417,7 @@
 
     <IncidentDef ParentName="SpellDef">
 		<label>Debug: Spawn Cult Preacher</label>
-		<defName>DebugSpawnCultPreacher</defName>
+		<defName>Cults_DebugSpawnCultPreacher</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_DebugSpawnCultPreacher</workerClass>
 		<targetType>MapPlayerHome</targetType>
 		<letterText>DEBUG - THIS SHOULD NEVER HAPPEN</letterText>

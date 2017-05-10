@@ -54,7 +54,7 @@ namespace CultOfCthulhu
             Messages.Message("A herd of black ibex have appeared on the overworld map", MessageSound.Benefit);
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
 
-            Cthulhu.Utility.ApplyTaleDef("SpellMotherOfGoats", map);
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellMotherOfGoats", map);
             return true;
         }
     }

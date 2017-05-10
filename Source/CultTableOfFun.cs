@@ -29,26 +29,26 @@ namespace CultOfCthulhu
         {
             TableOfFun = new List<FunSpell>
             {
-            new FunSpell("SpellDoubleTheFun", 1), // FINISHED
-            new FunSpell("SpellReanimator", 2), // FINISHED
-            new FunSpell("SpellFlashstorm", 10), // No code required
-            new FunSpell("SpellEcstaticFrenzy", 2), //FINISHED
-            new FunSpell("SpellStarVampireVisit", 5), //FINISHED
-            new FunSpell("SpellBlight", 10), // No code required
-            new FunSpell("SpellNoLongerDomesticated", 2), //FINISHED
-            new FunSpell("SpellEclipse", 10), //FINISHED
-            new FunSpell("SpellFoodSpoilage", 10), //FINISHED
-            new FunSpell("SpellReincarnation", 5), //FINISHED
-            new FunSpell("SpellAuroraEffect", 5), // FINISHED
-            new FunSpell("SpellNeedAHand", 5), // FINISHED
-            new FunSpell("SpellRatsInTheWalls", 5) // FINISHED
+            new FunSpell("Cults_SpellDoubleTheFun", 1), // FINISHED
+            new FunSpell("Cults_SpellReanimator", 2), // FINISHED
+            new FunSpell("Cults_SpellFlashstorm", 10), // No code required
+            new FunSpell("Cults_SpellEcstaticFrenzy", 2), //FINISHED
+            new FunSpell("Cults_SpellStarVampireVisit", 5), //FINISHED
+            new FunSpell("Cults_SpellBlight", 10), // No code required
+            new FunSpell("Cults_SpellNoLongerDomesticated", 2), //FINISHED
+            new FunSpell("Cults_SpellEclipse", 10), //FINISHED
+            new FunSpell("Cults_SpellFoodSpoilage", 10), //FINISHED
+            new FunSpell("Cults_SpellReincarnation", 5), //FINISHED
+            new FunSpell("Cults_SpellAuroraEffect", 5), // FINISHED
+            new FunSpell("Cults_SpellNeedAHand", 5), // FINISHED
+            new FunSpell("Cults_SpellRatsInTheWalls", 5) // FINISHED
             };
         }
         
         public void RollTableOfFun(Map map)
         {
             FunSpell result = GenCollection.RandomElementByWeight<FunSpell>(TableOfFun, GetWeight);
-            if (result.defName == "SpellDoubleTheFun")
+            if (result.defName == "Cults_SpellDoubleTheFun")
             {
                 Cthulhu.Utility.DebugReport("Double The Fun!");
                 DoubleTheFun(map);
@@ -68,14 +68,14 @@ namespace CultOfCthulhu
         private void DoubleTheFun(Map map)
         {
             FunSpell result = GenCollection.RandomElementByWeight<FunSpell>(TableOfFun, GetWeight);
-            while (result.defName == "SpellDoubleTheFun")
+            while (result.defName == "Cults_SpellDoubleTheFun")
             {
                 result = GenCollection.RandomElementByWeight<FunSpell>(TableOfFun, GetWeight);
             }
             IncidentDef temp = DefDatabase<IncidentDef>.GetNamed(result.defName);
 
             FunSpell result2 = GenCollection.RandomElementByWeight<FunSpell>(TableOfFun, GetWeight);
-            while (result2.defName == "SpellDoubleTheFun")
+            while (result2.defName == "Cults_SpellDoubleTheFun")
             {
                 result2 = GenCollection.RandomElementByWeight<FunSpell>(TableOfFun, GetWeight);
             }
