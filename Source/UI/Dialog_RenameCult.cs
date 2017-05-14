@@ -16,7 +16,7 @@ namespace CultOfCthulhu
             this.map = newMap;
             if (map != null)
             {
-                this.curName = map.GetComponent<MapComponent_LocalCultTracker>().CultName;
+                this.curName = CultTracker.Get.PlayerCult.name;
             }
             else
             {
@@ -42,7 +42,7 @@ namespace CultOfCthulhu
         {
             if (map != null)
             {
-                map.GetComponent<MapComponent_LocalCultTracker>().CultName = name;
+                CultTracker.Get.PlayerCult.name = name;
             }
             else
             {

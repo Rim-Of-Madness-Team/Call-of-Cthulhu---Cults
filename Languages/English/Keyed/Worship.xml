@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-<!-- 1.2.8 -->
+<!-- 1.17.0 New Versioning System-->
+
+  <Cults_Spell>Spell</Cults_Spell>
+  <Cults_SpellDesc>Choose an ideal result you would like from your sacrifice.</Cults_SpellDesc>
+  <Cults_AutoForbidWarning>Note: This will auto-forbid on normal research.</Cults_AutoForbidWarning>
+  <Cults_WaitingToStartSermon>Waiting to start sermon</Cults_WaitingToStartSermon>
+  <Cults_PreachingAbout>Preaching about {0}</Cults_PreachingAbout>
+  <Cults_PrayingTo>Praying to {0}</Cults_PrayingTo>
+  <Cults_AttendingSacrifice>Attending sacrifice</Cults_AttendingSacrifice>
+  <Cults_ReflectingOnSacrifice>Reflecting on sacrifice</Cults_ReflectingOnSacrifice>
+  <Cults_FoundedACultLabel>Cult Founded</Cults_FoundedACultLabel>
+  <Cults_FoundedACultDesc>{0} has founded a cult.\n\nResearch and build an altar to hold congregations to expand your cult.</Cults_FoundedACultDesc>
+  <Cults_DismantledACultLabel>Cult Disbanded</Cults_DismantledACultLabel>
+  <Cults_DismantledACultDesc>{0} has been dismantled.\n\nNot enough believers remain to continue the cult.</Cults_DismantledACultDesc>
+  <Cults_DiscoveredCultLabel>Cult Discovered</Cults_DiscoveredCultLabel>
+  <Cults_DiscoveredCultDesc>We have discovered {0}.\n\nThey are a cult from {1} founded by {2} and currenty led by {3}.</Cults_DiscoveredCultDesc>
+  <Cults_InitialExposureLabel>Occult Beginnings</Cults_InitialExposureLabel>
+  <Cults_InitialExposureDesc>Stirred with new possibilities, your colonists have caught some interest in recent occult events.\n\nTheir beliefs can be tracked in their Needs menu. This belief will slowly decrease over time. Using occult research, you can strengthen the cult and the beliefs of your colonists until they found a cult of their own.</Cults_InitialExposureDesc>
+
+<!-- 1.2.8 Old versioning system -->
 
   <Altar>Altar</Altar>
   <ForcedInvestigation>Forced Investigation</ForcedInvestigation>
@@ -120,8 +139,6 @@
   <CommandBuildFKCDesc>Set up a research center to further investigate the mysterious tome and its secrets.</CommandBuildFKCDesc>
   <Deity>Deity</Deity>
   <DeityDesc>Deities can be discovered at the forbidden research center.</DeityDesc>
-  <Spell>Spell</Spell>
-  <SpellDesc>Choose an ideal result you would like from your sacrifice.</SpellDesc>
   <FertilityTotemTimer>Fertilizing (Ends in {0})</FertilityTotemTimer>
   <Reanimated>Reanimated</Reanimated>
   <DarkYoungSpawnsIn>Dark Young Spawns in</DarkYoungSpawnsIn>

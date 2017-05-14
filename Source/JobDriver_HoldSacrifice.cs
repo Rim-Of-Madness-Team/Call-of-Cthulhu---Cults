@@ -171,18 +171,20 @@ namespace CultOfCthulhu
                 }
 
                 //When the ritual is finished -- then let's give the thoughts
+                /*
                 if (DropAltar.currentSacrificeState == Building_SacrificialAltar.SacrificeState.finished)
                 {
                     if (this.pawn == null) return;
                     if (DropAltar.sacrifice != null)
                     {
-                        CultUtility.AttendSacrificeTickCheckEnd(this.pawn, DropAltar.sacrifice);
+                        CultUtility.AttendSacrificeTickCheckEnd(this.pawn, DropAltar.sacrifice, true);
                     }
                     else
                     {
                         CultUtility.AttendSacrificeTickCheckEnd(this.pawn, null);
                     }
                 }
+                */
             });
 
 

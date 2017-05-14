@@ -8,6 +8,17 @@ using RimWorld.Planet;
 
 namespace CultOfCthulhu
 {
+    public static class DeityTracker
+    {
+        public static WorldComponent_CosmicDeities Get
+        {
+            get
+            {
+                return Find.World.GetComponent<WorldComponent_CosmicDeities>();
+            }
+        }
+    }
+
     public class WorldComponent_CosmicDeities : WorldComponent
     {
         public Dictionary<CosmicEntity, int> DeityCache = new Dictionary<CosmicEntity, int>();
@@ -42,7 +53,7 @@ namespace CultOfCthulhu
             return result;
         }
 
-        public void GenerateCosmicEntitiesIntoWorld()
+        public void orGenerate()
         {
             if (!AreDeitiesSpawned)
             {
@@ -65,7 +76,7 @@ namespace CultOfCthulhu
 
         public override void WorldComponentTick()
         {
-            GenerateCosmicEntitiesIntoWorld();
+            orGenerate();
             RevealDeityCheck();
             base.WorldComponentTick();
         }
@@ -194,7 +205,7 @@ namespace CultOfCthulhu
             }
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                GenerateCosmicEntitiesIntoWorld();
+                orGenerate();
                 CheckForUpdates();
             }
 

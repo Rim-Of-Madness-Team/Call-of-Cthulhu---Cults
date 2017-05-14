@@ -8,6 +8,17 @@ using RimWorld.Planet;
 
 namespace CultOfCthulhu
 {
+    public static class CultTracker
+    {
+        public static WorldComponent_GlobalCultTracker Get
+        {
+            get
+            {
+                return Find.World.GetComponent<WorldComponent_GlobalCultTracker>();
+            }
+        }
+    }
+
     public enum CultSeedState : int
     {
         NeedSeed = 0,
@@ -18,8 +29,29 @@ namespace CultOfCthulhu
         NeedTable = 5
     }
 
-    class WorldComponent_GlobalCultTracker : WorldComponent
+    public class WorldComponent_GlobalCultTracker : WorldComponent
     {
+        public bool needPreacher = false;
+        public bool doingInquisition = false;
+        public bool exposedToCults = false;
+        public bool ExposedToCults
+        {
+            get
+            {
+                return exposedToCults;
+            }
+            set
+            {
+                if (value != exposedToCults && value == true)
+                {
+                    Find.LetterStack.ReceiveLetter("Cults_InitialExposureLabel".Translate(), "Cults_InitialExposureDesc".Translate(), CultsDefOfs.Cults_StandardMessage, null);
+                }
+                exposedToCults = value;
+            }
+        }
+
+
+        #region stuff
         public List<ResearchProjectDef> cultResearch = new List<ResearchProjectDef>()
         {
             ResearchProjectDef.Named("Forbidden_Studies"),
@@ -33,18 +65,44 @@ namespace CultOfCthulhu
             ResearchProjectDef.Named("Forbidden_Obelisks")
         };
 
-        public string cultName = "Unnamed Cult";
-        public bool doesCultExist = false;
-        public List<Pawn> cultMembers = new List<Pawn>();
+        public List<Cult> worldCults = null;
         public List<Pawn> antiCultists = new List<Pawn>();
-        public Pawn cultFounder = null;
         public CultSeedState currentSeedState = CultSeedState.NeedSeed;
         public int numHumanSacrifices = 0;
 
-        public WorldComponent_GlobalCultTracker(World world) : base(world)
+        public Cult PlayerCult
         {
+            get
+            {
+                Cult result = null;
+                if (worldCults != null && worldCults.Count > 0)
+                {
+                    result = worldCults.FirstOrDefault((Cult x) => x.foundingFaction == Faction.OfPlayerSilentFail);
+                }
+                return result;
+            }
         }
 
+        public Cult LocalDominantCult(Map map)
+        {
+            Cult result = null;
+            Settlement settlement = Find.WorldObjects.SettlementAt(map.Tile);
+            if (settlement != null)
+            {
+                if (worldCults.Count > 0)
+                {
+                    result = worldCults.FirstOrDefault((Cult x) => x.influences.FirstOrDefault((CultInfluence y) => y.settlement == settlement && y.dominant) != null);
+                }
+            }
+            return result;
+        }
+
+        public WorldComponent_GlobalCultTracker(World world) : base(world)
+        {
+            worldCults = new List<Cult>();
+        }
+
+        /*
         public void InitializeCult(Pawn founder)
         {
             Map map = founder.Map;
@@ -131,6 +189,7 @@ namespace CultOfCthulhu
             }
             tempList = null;
         }
+        */
 
         public void RemoveInquisitor(Pawn inquisitor)
         {
@@ -173,25 +232,21 @@ namespace CultOfCthulhu
             //Add the anti-cultist to the list.
             antiCultists.Add(antiCultist);
             //If the cult already exists, show a message to initiate the pawn into the inquisitor faction.
-            if (doesCultExist)
+            if (PlayerCult != null && PlayerCult.active)
             {
-                Messages.Message(antiCultist.LabelShort + " has begun plotting against the local cult, " + cultName, MessageSound.Benefit);
+                Messages.Message(antiCultist.LabelShort + " has begun plotting against the local cult, " + PlayerCult.name, MessageSound.Benefit);
             }
         }
+        #endregion stuff
 
-
-
+        
         public override void ExposeData()
         {
             base.ExposeData();
-
-            Scribe_Values.Look<string>(ref this.cultName, "cultName", "Unnamed Cult", false);
-            Scribe_Collections.Look<Pawn>(ref this.cultMembers, "cultMembers", LookMode.Reference, new object[0]);
+            Scribe_Collections.Look<Cult>(ref this.worldCults, "worldCults", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<Pawn>(ref this.antiCultists, "antiCultists", LookMode.Reference, new object[0]);
-            Scribe_Values.Look<bool>(ref this.doesCultExist, "doesCultExist", false, false);
-            Scribe_Values.Look<int>(ref this.numHumanSacrifices, "numHumanSacrifices", 0, false);
-
             Scribe_Values.Look<CultSeedState>(ref this.currentSeedState, "CurrentSeedState", CultSeedState.NeedSeed, false);
+            Scribe_Values.Look<bool>(ref this.exposedToCults, "exposedToCults", false);
         }
     }
 

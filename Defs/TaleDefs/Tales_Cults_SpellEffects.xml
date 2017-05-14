@@ -3,7 +3,7 @@
 
 
   <TaleDef>
-    <defName>SpellOrbitalInsanityWave</defName>
+    <defName>Cults_SpellOrbitalInsanityWave</defName>
     <label>orbital insanity wave</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>
@@ -22,7 +22,7 @@
   
 
   <TaleDef>
-    <defName>SpellBountyOfTheSea</defName>
+    <defName>Cults_SpellBountyOfTheSea</defName>
     <label>bounty of the sea</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>
@@ -40,7 +40,7 @@
   </TaleDef>
   
   <TaleDef>
-    <defName>SpellFertilityRitual</defName>
+    <defName>Cults_SpellFertilityRitual</defName>
     <label>fertility ritual</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>
@@ -59,7 +59,7 @@
   </TaleDef>
   
   <TaleDef>
-    <defName>SpellMotherOfGoats</defName>
+    <defName>Cults_SpellMotherOfGoats</defName>
     <label>mother of goats</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>
@@ -78,7 +78,7 @@
   </TaleDef>
   
   <TaleDef>
-    <defName>SpellPsionicGrowth</defName>
+    <defName>Cults_SpellPsionicGrowth</defName>
     <label>psionic growth</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>
@@ -98,7 +98,7 @@
   
 
   <TaleDef>
-    <defName>SpellRatsInTheWalls</defName>
+    <defName>Cults_SpellRatsInTheWalls</defName>
     <label>rats in the walls</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>
@@ -118,7 +118,7 @@
 
   
   <TaleDef>
-    <defName>SpellReanimator</defName>
+    <defName>Cults_SpellReanimator</defName>
     <label>reanimator</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>
@@ -137,7 +137,7 @@
   </TaleDef>
   
   <TaleDef>
-    <defName>SpellReincarnation</defName>
+    <defName>Cults_SpellReincarnation</defName>
     <label>reincarnation</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>
@@ -157,7 +157,7 @@
   
   
   <TaleDef>
-    <defName>SpellStarryWisdom</defName>
+    <defName>Cults_SpellStarryWisdom</defName>
     <label>starry wisdom</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>
@@ -177,7 +177,7 @@
   
   
   <TaleDef>
-    <defName>SpellStarVampireVisit</defName>
+    <defName>Cults_SpellStarVampireVisit</defName>
     <label>star vampire visit</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>
@@ -197,7 +197,7 @@
   
   
   <TaleDef>
-    <defName>SpellSunkenShip</defName>
+    <defName>Cults_SpellSunkenShip</defName>
     <label>sunken ship</label>
     <taleClass>Tale_SinglePawn</taleClass>
 	<type>Volatile</type>

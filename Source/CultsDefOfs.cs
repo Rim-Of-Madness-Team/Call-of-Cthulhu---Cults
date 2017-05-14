@@ -31,6 +31,9 @@ namespace CultOfCthulhu
 
         public static RoomRoleDef Cults_Temple;
         public static ThingDef Cults_ForbiddenKnowledgeCenter;
+        public static LetterDef Cults_StandardMessage;
+        public static ThoughtDef Cults_PrayedInImpressiveTemple;
+
 
         // ============ DUTY DEFS =============
 

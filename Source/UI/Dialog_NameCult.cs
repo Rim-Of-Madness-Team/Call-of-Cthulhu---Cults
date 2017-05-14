@@ -78,7 +78,7 @@ namespace CultOfCthulhu
                 {
                     if (map != null)
                     {
-                        map.GetComponent<MapComponent_LocalCultTracker>().CultName = this.curName;
+                        CultTracker.Get.PlayerCult.name = this.curName;
                         //Faction.OfPlayer.Name = this.curName;
                         Find.WindowStack.TryRemove(this, true);
                         Messages.Message("CultGainsName".Translate(new object[]

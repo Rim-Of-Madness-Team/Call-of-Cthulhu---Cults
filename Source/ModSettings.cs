@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace CultOfCthulhu
@@ -44,6 +45,7 @@ namespace CultOfCthulhu
         public bool cultsForcedInvestigation = true;
         public bool cultsStudySuccessfulCultsIsRepeatable = true;
         public bool cultsShowDebugCode = false;
+
 
         public override void ExposeData()
         {

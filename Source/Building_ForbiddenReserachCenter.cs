@@ -17,6 +17,7 @@ namespace CultOfCthulhu
         private bool StartedUse = false;
         private WarningLevel warningLevel = WarningLevel.None;
         private Pawn storedPawn = null;
+        private bool initialTick = false;
 
         public override void ExposeData()
         {
@@ -27,8 +28,7 @@ namespace CultOfCthulhu
         public override void SpawnSetup(Map map, bool bla)
         {
             base.SpawnSetup(map, bla);
-            Find.World.GetComponent<WorldComponent_CosmicDeities>().GenerateCosmicEntitiesIntoWorld();
-            //Find.World.GetComponent<WorldComponent_CosmicDeities>().GenerateCosmicEntitiesIntoWorld();
+            DeityTracker.Get.orGenerate();
         }
         
         public Pawn InteractingPawn
@@ -52,10 +52,20 @@ namespace CultOfCthulhu
         public override void TickRare()
         {
             base.TickRare();
+            InitialTickHandler();
             ForbiddenChecker();
             ResolveNonOccultProjects();
             GiveInteractionSanityLoss();
         }
+        private void InitialTickHandler()
+        {
+            if (!initialTick)
+            {
+                initialTick = true;
+                CultTracker.Get.ExposedToCults = true;
+            }
+        }
+
         private void ForbiddenChecker()
         {
             ResearchProjectDef currentProject = Find.ResearchManager.currentProj;
@@ -68,10 +78,12 @@ namespace CultOfCthulhu
         public override string GetInspectString()
         {
             StringBuilder s = new StringBuilder();
-            s.Append(base.GetInspectString());
-            s.AppendLine();
-            s.Append("Note: This will auto-forbid on normal research.");
-            return s.ToString();
+            s.AppendLine(base.GetInspectString());
+            //s.AppendLine();
+            s.AppendLine("Cults_AutoForbidWarning".Translate());
+            string result = s.ToString();
+            result = result.TrimEndNewlines();
+            return result;
 
         }
 

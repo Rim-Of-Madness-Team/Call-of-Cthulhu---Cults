@@ -112,6 +112,8 @@ namespace CultOfCthulhu
         public Function lastFunction = Function.Level1;
         public bool toBePrunedAndRepaired = false;
 
+        public bool debugAlwaysSucceed = false;
+
 
         #region Bools
         public bool IsCongregating()
@@ -317,9 +319,9 @@ namespace CultOfCthulhu
         public override void SpawnSetup(Map map, bool bla)
         {
             base.SpawnSetup(map, bla);
-
+            CultTracker.Get.ExposedToCults = true;
             if (RoomName == null) RoomName = "Unnamed Temple";
-            Find.World.GetComponent<WorldComponent_CosmicDeities>().GenerateCosmicEntitiesIntoWorld();
+            DeityTracker.Get.orGenerate();
             if (this.def.defName == "Cult_AnimalSacrificeAltar") currentFunction = Function.Level2;
             if (this.def.defName == "Cult_HumanSacrificeAltar") currentFunction = Function.Level3;
             if (this.def.defName == "Cult_NightmareSacrificeAltar") currentFunction = Function.Nightmare;
@@ -779,7 +781,7 @@ namespace CultOfCthulhu
                     defaultLabel = "Debug: Discover All Deities",
                     action = delegate
                     {
-                        foreach (CosmicEntity entity in Find.World.GetComponent<WorldComponent_CosmicDeities>().DeityCache.Keys)
+                        foreach (CosmicEntity entity in DeityTracker.Get.DeityCache.Keys)
                         {
                             entity.discovered = true;
                         }
@@ -792,7 +794,7 @@ namespace CultOfCthulhu
                     defaultLabel = "Debug: All Favor to 0",
                     action = delegate
                     {
-                        foreach (CosmicEntity entity in Find.World.GetComponent<WorldComponent_CosmicDeities>().DeityCache.Keys)
+                        foreach (CosmicEntity entity in DeityTracker.Get.DeityCache.Keys)
                         {
                             entity.ResetFavor();
                         }
@@ -826,10 +828,43 @@ namespace CultOfCthulhu
                     defaultLabel = "Debug: Unlock All Spells",
                     action = delegate
                     {
-                        foreach (CosmicEntity entity in Find.World.GetComponent<WorldComponent_CosmicDeities>().DeityCache.Keys)
+                        foreach (CosmicEntity entity in DeityTracker.Get.DeityCache.Keys)
                         {
                             entity.AffectFavor(9999999);
                         }
+                    }
+                };
+
+                yield return new Command_Toggle
+                {
+                    defaultLabel = "Debug: Always Succeed",
+                    isActive = (() => debugAlwaysSucceed),
+                    toggleAction = delegate
+                    {
+                        debugAlwaysSucceed = !debugAlwaysSucceed;
+                    }
+                };
+
+                yield return new Command_Action
+                {
+                    defaultLabel = "Debug: Force Side Effect",
+                    action = delegate
+                    {
+                        List<FloatMenuOption> list = new List<FloatMenuOption>();
+                        CultTableOfFun table = new CultTableOfFun();
+                        foreach (FunSpell spell in table.TableOfFun)
+                        {
+                            IncidentDef currentDef = IncidentDef.Named(spell.defName);
+                            list.Add(new FloatMenuOption(currentDef.LabelCap, delegate
+                            {
+                                IncidentDef temp = DefDatabase<IncidentDef>.GetNamed(spell.defName);
+                                if (temp != null)
+                                {
+                                    CultUtility.CastSpell(temp, this.Map);
+                                }
+                            }));
+                        }
+                        Find.WindowStack.Add(new FloatMenu(list));
                     }
                 };
 
@@ -1228,7 +1263,7 @@ namespace CultOfCthulhu
             
             if (room.Role != RoomRoleDefOf.PrisonBarracks && room.Role != RoomRoleDefOf.PrisonCell)
             {
-                List<Pawn> listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead &&
+                List<Pawn> listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead && !x.InMentalState &&
                                                                                   x.CurJob.def != CultsDefOfs.Cults_MidnightInquisition &&
                                                                                   x.CurJob.def != CultsDefOfs.Cults_AttendSacrifice &&
                                                                                   x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
@@ -1469,7 +1504,7 @@ namespace CultOfCthulhu
                 List<Pawn> listeners = new List<Pawn>();
                 if (forced)
                 {
-                    listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead &&
+                    listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead && !x.InMentalState &&
                                                                                   x.CurJob.def != CultsDefOfs.Cults_MidnightInquisition &&
                                                                                   x.CurJob.def != CultsDefOfs.Cults_AttendSacrifice &&
                                                                                   x.CurJob.def != CultsDefOfs.Cults_ReflectOnWorship &&
@@ -1486,7 +1521,7 @@ namespace CultOfCthulhu
                 }
                 else
                 {
-                    listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead &&
+                    listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead && !x.InMentalState &&
                                                                                   x.CurJob.def != CultsDefOfs.Cults_MidnightInquisition &&
                                                                                   x.CurJob.def != CultsDefOfs.Cults_AttendSacrifice &&
                                                                                   x.CurJob.def != CultsDefOfs.Cults_ReflectOnWorship &&

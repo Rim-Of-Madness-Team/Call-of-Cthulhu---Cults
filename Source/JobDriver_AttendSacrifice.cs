@@ -50,7 +50,7 @@ namespace CultOfCthulhu
                 {
                     foreach (Pawn pawn in this.pawn.Map.mapPawns.FreeColonistsSpawned)
                     {
-                        if (pawn.CurJob.def.defName == "HoldSacrifice") { setExecutioner = pawn; return pawn; }
+                        if (pawn.CurJob.def == CultsDefOfs.Cults_HoldSacrifice) { setExecutioner = pawn; return pawn; }
                     }
                 }
                 return null;
@@ -90,11 +90,11 @@ namespace CultOfCthulhu
                     return JobCondition.Incompletable;
                 }
 
-                if (ExecutionerPawn.CurJob.def.defName == "ReflectOnSacrifice")
+                if (ExecutionerPawn.CurJob.def == CultsDefOfs.Cults_ReflectOnResult)
                 {
                     return JobCondition.Succeeded;
                 }
-                else if (ExecutionerPawn.CurJob.def.defName != "HoldSacrifice")
+                else if (ExecutionerPawn.CurJob.def != CultsDefOfs.Cults_HoldSacrifice)
                 {
                     return JobCondition.Incompletable;
                 }
@@ -105,7 +105,7 @@ namespace CultOfCthulhu
             this.EndOnDespawnedOrNull(Build, JobCondition.Incompletable);
 
 
-            yield return Toils_Reserve.Reserve(Spot, this.CurJob.def.joyMaxParticipants);
+            yield return Toils_Reserve.Reserve(Spot, 1, -1);
 
             //Toil 1: Go to the locations
             Toil gotoExecutioner;
@@ -128,12 +128,12 @@ namespace CultOfCthulhu
                 this.pawn.GainComfortFromCellIfPossible();
                 this.ticksLeftThisToil = 9999;
                 this.pawn.Drawer.rotator.FaceCell(TargetB.Cell);
-                if (report == "") report = "Attending sacrifice.";
+                if (report == "") report = "Cults_AttendingSacrifice".Translate();
                 if (ExecutionerPawn != null)
                 {
                     if (ExecutionerPawn.CurJob != null)
                     {
-                        if (ExecutionerPawn.CurJob.def.defName != "HoldSacrifice")
+                        if (ExecutionerPawn.CurJob.def != CultsDefOfs.Cults_HoldSacrifice)
                         {
                             this.ticksLeftThisToil = -1;
                         }
@@ -166,7 +166,7 @@ namespace CultOfCthulhu
             reflectingTime.defaultDuration = CultUtility.reflectDuration;
             reflectingTime.AddPreTickAction(() =>
             {
-                report = "Reflecting on sacrifice.";
+                report = "Cults_ReflectingOnSacrifice".Translate();
             });
             yield return reflectingTime;
 
@@ -190,11 +190,12 @@ namespace CultOfCthulhu
             this.AddFinishAction(() =>
             {
                 //When the ritual is finished -- then let's give the thoughts
+                /*
                 if (Altar.currentSacrificeState == Building_SacrificialAltar.SacrificeState.finished)
                 {
                     if (this.pawn == null) return;
                     if (Altar.sacrifice != null)
-                    {
+                    {                        
                         CultUtility.AttendSacrificeTickCheckEnd(this.pawn, Altar.sacrifice);
                     }
                     else
@@ -202,6 +203,7 @@ namespace CultOfCthulhu
                         CultUtility.AttendSacrificeTickCheckEnd(this.pawn, null);
                     }
                 }
+                */
                 if (this.TargetC.Cell.GetEdifice(this.pawn.Map) != null)
                 {
                     if (this.pawn.Map.reservationManager.ReservedBy(this.TargetC.Cell.GetEdifice(this.pawn.Map), this.pawn))

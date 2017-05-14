@@ -23,7 +23,7 @@
 
   <ThoughtDef>
     <defName>Cults_ExecutedFamily</defName>
-    <durationDays>80</durationDays>
+    <durationDays>30</durationDays>
     <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
     <stackLimit>5</stackLimit>
     <nullifyingTraits>
@@ -31,9 +31,9 @@
     </nullifyingTraits>
     <stages>
       <li>
-        <label>I executed {0}</label>
+        <label>executed {0}</label>
         <description>What have I done in the name of the faith? My own family...</description>
-        <baseMoodEffect>-35</baseMoodEffect>
+        <baseMoodEffect>-15</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
@@ -48,9 +48,9 @@
     </nullifyingTraits>
     <stages>
       <li>
-        <label>I executed my {0} {1}</label>
+        <label>sacrificed my pet {0}</label>
         <description>I killed them for our faith, and I feel hollow.</description>
-        <baseMoodEffect>-20</baseMoodEffect>
+        <baseMoodEffect>-15</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>  
@@ -65,7 +65,7 @@
     </nullifyingTraits>
     <stages>
       <li>
-        <label>I executed my friend {0}</label>
+        <label>executed my friend {0}</label>
         <description>They died serving a worthy cause. Even so, I feel so empty inside.</description>
         <baseMoodEffect>-10</baseMoodEffect>
       </li>
@@ -84,7 +84,7 @@
       <li>
         <label>my family member {0} was sacrified</label>
         <description>We're monsters.</description>
-        <baseMoodEffect>-15</baseMoodEffect>
+        <baseMoodEffect>-10</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
@@ -108,7 +108,7 @@
      
   <ThoughtDef>
     <defName>Cults_SacrificedPet</defName>
-    <durationDays>12</durationDays>
+    <durationDays>20</durationDays>
     <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
     <stackLimit>5</stackLimit>
     <nullifyingTraits>
@@ -125,7 +125,7 @@
   
   <ThoughtDef>
     <defName>Cults_SacrificedRival</defName>
-    <durationDays>10</durationDays>
+    <durationDays>15</durationDays>
     <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
     <stackLimit>5</stackLimit>
     <nullifyingTraits>
@@ -152,7 +152,7 @@
 		</requiredTraits>
 		<stages>
 			<li>
-				<label>witnessed sacrifice with bloodlust</label>
+				<label>witnessed sacrifice</label>
 				<description>Let the blood flow! Ia! Ia!</description>
 				<baseMoodEffect>12</baseMoodEffect>
 			</li>

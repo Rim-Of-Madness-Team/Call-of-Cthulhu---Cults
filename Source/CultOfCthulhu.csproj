@@ -33,6 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\Harmony1091\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="AbilityUser, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\mattw\Downloads\CompAbilityUser-A16\CompAbilityUser-A16\Assemblies\AbilityUser.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -57,6 +64,10 @@
     <Compile Include="Building_TotemFertility.cs" />
     <Compile Include="Building_TreasureChest.cs" />
     <Compile Include="Building_TreeOfMadness.cs" />
+    <Compile Include="CompPsionicUser.cs" />
+    <Compile Include="Cult.cs" />
+    <Compile Include="CultInfluence.cs" />
+    <Compile Include="HarmonyPatches.cs" />
     <Compile Include="ModSettings.cs" />
     <Compile Include="IncidentWorker_MakeCultMapCondition.cs" />
     <Compile Include="JobDriver_PruneAndRepair.cs" />
@@ -89,7 +100,6 @@
     <Compile Include="CompTargetEffect_CultMinded.cs" />
     <Compile Include="PawnFlyer\CompTransporterPawn.cs" />
     <Compile Include="CosmicEntityDef.cs" />
-    <Compile Include="CthulhuNoCCL.cs" />
     <Compile Include="CthulhuUtility.cs" />
     <Compile Include="Cults_Screen_Credits.cs" />
     <Compile Include="CultTableOfFun.cs" />

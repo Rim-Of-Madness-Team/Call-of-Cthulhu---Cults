@@ -299,10 +299,10 @@ namespace CultOfCthulhu
                 {
                     case CultUtility.SacrificeResult.success:
                         s.Append("complete success.");
-                        letterDef = LetterDefOf.Good;
+                        letterDef = CultsDefOfs.Cults_StandardMessage;
                         break;
                     case CultUtility.SacrificeResult.mixedsuccess:
-                        letterDef = LetterDefOf.Good;
+                        letterDef = CultsDefOfs.Cults_StandardMessage;
                         s.Append("mixed success.");
                         break;
                     case CultUtility.SacrificeResult.failure:

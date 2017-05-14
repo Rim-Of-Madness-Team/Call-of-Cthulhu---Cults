@@ -15,23 +15,36 @@ namespace CultOfCthulhu
     {
         public bool isQuiet = false;
         private bool isMuted = false;
+        private bool setup = false;
         private int ticksUntilQuiet = 960;
-        private Sustainer sustainerAmbient;
+        private Sustainer sustainerAmbient = null;
         private static readonly FloatRange QuietIntervalDays = new FloatRange(1.5f, 2.5f);
-        
 
         public override void SpawnSetup(Map map, bool bla)
         {
             ticksUntilQuiet += (int)(QuietIntervalDays.RandomInRange * 60000f);
             base.SpawnSetup(map, bla);
-            SoundInfo info = SoundInfo.InMap(this, MaintenanceType.None);
-            this.sustainerAmbient = this.def.building.soundAmbient.TrySpawnSustainer(info);
         }
 
         public override void Tick()
         {
             base.Tick();
+            Setup();
             DoTickWork();
+        }
+
+        public void Setup()
+        {
+            if (!setup)
+            {
+                setup = true;
+                if (!this.def.building.soundAmbient.NullOrUndefined() && this.sustainerAmbient == null)
+                {
+                    SoundInfo info = SoundInfo.InMap(this, MaintenanceType.None);
+                    this.sustainerAmbient = this.def.building.soundAmbient.TrySpawnSustainer(info);
+                }
+
+            }
         }
 
         public void DoTickWork()
@@ -106,17 +119,20 @@ namespace CultOfCthulhu
         public void MuteToggle()
         {
             this.isMuted = !this.isMuted;
-            if (isMuted)
+            if (sustainerAmbient != null && isMuted)
             {
-                sustainerAmbient.End();
+                    sustainerAmbient.End();
             }
-            else
+            else if (!this.def.building.soundAmbient.NullOrUndefined() && this.sustainerAmbient == null)
             {
-
-                    SoundInfo info = SoundInfo.InMap(this, MaintenanceType.None);
+                 SoundInfo info = SoundInfo.InMap(this, MaintenanceType.None);
                     sustainerAmbient = new Sustainer(this.def.building.soundAmbient, info);
 
 
+            }
+            else
+            {
+                Log.Warning("Cults :: Mute toggle threw an exception on the eerie tree.");
             }
         }
 
@@ -146,7 +162,7 @@ namespace CultOfCthulhu
         {
             base.ExposeData();
             // Save and load the work variables, so they don't default after loading
-            Scribe_Values.Look<bool>(ref isMuted, "isMuted", false);
+            //Scribe_Values.Look<bool>(ref isMuted, "isMuted", false);
 
         }
     }

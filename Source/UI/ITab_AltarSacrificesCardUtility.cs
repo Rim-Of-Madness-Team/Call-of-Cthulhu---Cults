@@ -57,7 +57,7 @@ namespace CultOfCthulhu
         {
             GUI.BeginGroup(inRect);
 
-            float cultLabelWidth = Text.CalcSize(MapComponent_LocalCultTracker.Get(altar.Map).CultName).x;
+            float cultLabelWidth = Text.CalcSize(CultTracker.Get.PlayerCult.name).x;
 
             Rect rect = new Rect(inRect);
             rect = rect.ContractedBy(14f);
@@ -75,7 +75,7 @@ namespace CultOfCthulhu
             rect2.xMin += 15f;
             rect2.width = cultLabelWidth + 5;
             //rect2.yMax -= 38f;
-            Widgets.Label(rect2, MapComponent_LocalCultTracker.Get(altar.Map).CultName);
+            Widgets.Label(rect2, CultTracker.Get.PlayerCult.name);
             if (Mouse.IsOver(rect2))
             {
                 Widgets.DrawHighlight(rect2);

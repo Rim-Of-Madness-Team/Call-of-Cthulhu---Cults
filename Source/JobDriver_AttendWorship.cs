@@ -49,7 +49,7 @@ namespace CultOfCthulhu
                 {
                     foreach (Pawn pawn in this.pawn.Map.mapPawns.FreeColonistsSpawned)
                     {
-                        if (pawn.CurJob.def.defName == "HoldWorship") { setPreacher = pawn; return pawn; }
+                        if (pawn.CurJob.def == CultsDefOfs.Cults_HoldWorship) { setPreacher = pawn; return pawn; }
                     }
                 }
                 return null;
@@ -68,11 +68,11 @@ namespace CultOfCthulhu
 
             this.AddEndCondition(delegate
             {
-                if (PreacherPawn.CurJob.def.defName == "ReflectOnWorship")
+                if (PreacherPawn.CurJob.def == CultsDefOfs.Cults_ReflectOnWorship)
                 {
                     return JobCondition.Succeeded;
                 }
-                else if (PreacherPawn.CurJob.def.defName != "HoldWorship")
+                else if (PreacherPawn.CurJob.def != CultsDefOfs.Cults_HoldWorship)
                 {
                     return JobCondition.Incompletable;
                 }
@@ -82,7 +82,7 @@ namespace CultOfCthulhu
             this.EndOnDespawnedOrNull(Build, JobCondition.Incompletable);
 
 
-            yield return Toils_Reserve.Reserve(Spot, this.CurJob.def.joyMaxParticipants);
+            yield return Toils_Reserve.Reserve(Spot, 1, -1);
             Toil gotoPreacher;
             if (this.TargetC.HasThing)
             {
@@ -102,7 +102,7 @@ namespace CultOfCthulhu
                 this.pawn.GainComfortFromCellIfPossible();
                 this.ticksLeftThisToil = 9999;
                 this.pawn.Drawer.rotator.FaceCell(TargetB.Cell);
-                if (PreacherPawn.CurJob.def.defName != "HoldWorship")
+                if (PreacherPawn.CurJob.def != CultsDefOfs.Cults_HoldWorship)
                 {
                     this.ticksLeftThisToil = -1;
                 }

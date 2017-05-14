@@ -76,7 +76,7 @@ namespace CultOfCthulhu
             waitingTime.defaultDuration = CultUtility.remainingDuration - 360;
             waitingTime.initAction = delegate
             {
-                report = "Waiting to start sermon.";
+                report = "Cults_WaitingToStartSermon".Translate();
                 DropAltar.ChangeState(Building_SacrificialAltar.State.worshipping, Building_SacrificialAltar.WorshipState.worshipping);
             };
 
@@ -89,7 +89,10 @@ namespace CultOfCthulhu
             preachingTime.defaultDuration = CultUtility.remainingDuration - 360;
             preachingTime.initAction = delegate
             {
-                report = "preaching about " + deityLabel;
+                report = "Cults_PreachingAbout".Translate(new object[]
+                {
+                    deityLabel
+                });
                 if (deitySymbol != null)
                     MoteMaker.MakeInteractionBubble(this.pawn, null, ThingDefOf.Mote_Speech, deitySymbol);
             };
@@ -111,7 +114,10 @@ namespace CultOfCthulhu
             chantingTime.PlaySustainerOrSound(CultsDefOfs.RitualChanting);
             chantingTime.initAction = delegate
             {
-                report = "praying to " + deityLabel;
+                report = "Cults_PrayingTo".Translate(new object[]
+                    {
+                        deityLabel
+                    });
                 if (deitySymbol != null)
                     MoteMaker.MakeInteractionBubble(this.pawn, null, ThingDefOf.Mote_Speech, deitySymbol);
             };

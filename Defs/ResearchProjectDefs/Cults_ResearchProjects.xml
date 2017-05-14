@@ -11,86 +11,102 @@
 
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Studies</defName>
-    <label>[Occult] Decipher strange symbols</label>
+    <label>Decipher strange symbols</label>
     <description>Deciphers some of the materials language to make further research possible.</description>
     <baseCost>50</baseCost>
+	<researchViewX>0</researchViewX>
+	<researchViewY>3</researchViewY>
   </ResearchProjectDef>
   
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Deities</defName>
-    <label>[Occult] Probe occult deities</label>
+    <label>Probe occult deities</label>
     <description>Repeatable research to discover occult deities to worship.</description>
     <baseCost>30</baseCost>
 	<prerequisites>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
+	<researchViewX>1</researchViewX>
+	<researchViewY>3</researchViewY>
   </ResearchProjectDef>  
   
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Lore</defName>
-    <label>[Occult] Study successful cults</label>
+    <label>Study successful cults</label>
     <description>Repeatable research to improve the researcher's cult mindedness and social skills during the research process.\n\nThis research is recommended for pawns looking to become preachers.</description>
     <baseCost>3000</baseCost>
 	<prerequisites>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
+	<researchViewX>1</researchViewX>
+	<researchViewY>2</researchViewY>	
   </ResearchProjectDef>  
   
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Attire</defName>
-    <label>[Occult] Ritual Attire</label>
+    <label>Ritual Attire</label>
     <description>Allows for the design and creation of occult robes, hoods, and various masks. Wearing proper clothing increases chances of successful sacrifices.</description>
     <baseCost>30</baseCost>
 	<prerequisites>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
+	<researchViewX>1</researchViewX>
+	<researchViewY>1</researchViewY>	
   </ResearchProjectDef>  
   
   
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Sculptures</defName>
-    <label>[Occult] Sculptures</label>
+    <label>Sculptures</label>
     <description>Allows for the design and creation of occult sculptures dedicated to otherworldly entities.</description>
     <baseCost>30</baseCost>
 	<prerequisites>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
+	<researchViewX>1</researchViewX>
+	<researchViewY>0</researchViewY>	
   </ResearchProjectDef>  
  
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Obelisks</defName>
-    <label>[Occult] Obelisk Construction</label>
+    <label>Obelisk Construction</label>
     <description>Allows for the design and construction of occult obelisks.</description>
     <baseCost>100</baseCost>
 	<prerequisites>
 	<li>Forbidden_Sculptures</li>
 	</prerequisites>
+	<researchViewX>2</researchViewX>
+	<researchViewY>0</researchViewY>	
   </ResearchProjectDef>   
   
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Altar</defName>
-    <label>[Occult] Altar</label>
+    <label>Altar</label>
     <description>Allows the creation of an altar of worship to conduct rituals for beings beyond this world.</description>
     <baseCost>30</baseCost>
 	<prerequisites>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
+	<researchViewX>1</researchViewX>
+	<researchViewY>4</researchViewY>	
   </ResearchProjectDef>  
 
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Sacrifice</defName>
-    <label>[Occult] Altar of Sacrifice</label>
+    <label>Altar of Sacrifice</label>
     <description>Allows you to upgrade an altar to an altar of sacrifice to show greater appreciation of extradimensional beings.</description>
     <baseCost>50</baseCost>
 	<prerequisites>
 	<li>Forbidden_Altar</li>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
+	<researchViewX>2</researchViewX>
+	<researchViewY>4</researchViewY>	
   </ResearchProjectDef>  
   
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Human</defName>
-    <label>[Occult] Human Sacrifice</label>
+    <label>Human Sacrifice</label>
     <description>Allows you to upgrade an altar to an altar of human sacrifice, allowing for impressive benefits from cosmic entities.</description>
     <baseCost>100</baseCost>
 	<prerequisites>
@@ -98,6 +114,8 @@
 	<li>Forbidden_Altar</li>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
+	<researchViewX>3</researchViewX>
+	<researchViewY>4</researchViewY>	
   </ResearchProjectDef>  
   
 </ResearchProjectDefs>

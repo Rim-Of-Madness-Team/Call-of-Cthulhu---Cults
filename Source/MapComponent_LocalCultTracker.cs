@@ -19,29 +19,29 @@ namespace CultOfCthulhu
         public const int OneDay = 60000;
         public const int ThreeDays = 180000;
         
-        WorldComponent_GlobalCultTracker globalCultTracker = Find.World.GetComponent<WorldComponent_GlobalCultTracker>();
+        //WorldComponent_GlobalCultTracker globalCultTracker = Find.World.GetComponent<WorldComponent_GlobalCultTracker>();
 
-        public CultSeedState CurrentSeedState { get { return globalCultTracker.currentSeedState; } set { globalCultTracker.currentSeedState = value; } }
-        public List<Pawn> antiCultists { get { return globalCultTracker.antiCultists; } }
-        public List<Pawn> CultMembers { get { return globalCultTracker.cultMembers; } }
-        public List<Pawn> LocalCultMembers {
-            get {
-                List<Pawn> locals = new List<Pawn>();
-                if (globalCultTracker.cultMembers != null)
-                {
-                    foreach (Pawn pawn in globalCultTracker.cultMembers)
-                    {
-                        if (pawn != null)
-                        {
-                            if (pawn.Map == this.map) locals.Add(pawn);
-                        }
-                    }
-                }
-                return locals;
-            }
-        }
-        public string CultName { get { return globalCultTracker.cultName; } set { globalCultTracker.cultName = value; } }
-        public bool DoesCultExist { get { return globalCultTracker.doesCultExist; } }
+        public CultSeedState CurrentSeedState { get { return CultTracker.Get.currentSeedState; } set { CultTracker.Get.currentSeedState = value; } }
+        public List<Pawn> antiCultists { get { return CultTracker.Get.antiCultists; } }
+        //public List<Pawn> CultMembers { get { return CultTracker.Get.cultMembers; } }
+        //public List<Pawn> LocalCultMembers {
+        //    get {
+        //        List<Pawn> locals = new List<Pawn>();
+        //        if (CultTracker.Get.cultMembers != null)
+        //        {
+        //            foreach (Pawn pawn in CultTracker.Get.cultMembers)
+        //            {
+        //                if (pawn != null)
+        //                {
+        //                    if (pawn.Map == this.map) locals.Add(pawn);
+        //                }
+        //            }
+        //        }
+        //        return locals;
+        //    }
+        //}
+        //public string CultName { get { return CultTracker.Get.cultName; } set { CultTracker.Get.cultName = value; } }
+        //public bool DoesCultExist { get { return CultTracker.Get.doesCultExist; } }
 
         public bool needPreacher = false;
         public bool doingInquisition = false;
@@ -62,16 +62,16 @@ namespace CultOfCthulhu
             IncidentDef.Named("CultSeedIncident_NightmareMonolith")
         };
 
-        public static MapComponent_LocalCultTracker Get(Map map)
-        {
-            MapComponent_LocalCultTracker MapComponent_CultInception = map.components.OfType<MapComponent_LocalCultTracker>().FirstOrDefault<MapComponent_LocalCultTracker>();
-            if (MapComponent_CultInception == null)
-            {
-                MapComponent_CultInception = new MapComponent_LocalCultTracker(map);
-                map.components.Add(MapComponent_CultInception);
-            }
-            return MapComponent_CultInception;
-        }
+        //public static MapComponent_LocalCultTracker Get(Map map)
+        //{
+        //    MapComponent_LocalCultTracker MapComponent_CultInception = map.components.OfType<MapComponent_LocalCultTracker>().FirstOrDefault<MapComponent_LocalCultTracker>();
+        //    if (MapComponent_CultInception == null)
+        //    {
+        //        MapComponent_CultInception = new MapComponent_LocalCultTracker(map);
+        //        map.components.Add(MapComponent_CultInception);
+        //    }
+        //    return MapComponent_CultInception;
+        //}
 
         public void ResolveTerribleCultFounder(Pawn founder)
         {
@@ -169,15 +169,18 @@ namespace CultOfCthulhu
         public bool TryFindPreacher(out Pawn preacher)
         {
             preacher = null;
-            List<Pawn> tempList = new List<Pawn>(globalCultTracker.cultMembers);
-            foreach (Pawn current in tempList.InRandomOrder<Pawn>())
+            if (CultTracker.Get.PlayerCult != null)
             {
-                if (current == null) continue;
-                if (current.Dead) { globalCultTracker.RemoveMember(current); continue; }
-                if (preacher == null) preacher = current;
-                if (current.skills.GetSkill(SkillDefOf.Social).Level > preacher.skills.GetSkill(SkillDefOf.Social).Level) preacher = current;
+                List<Pawn> tempList = new List<Pawn>(CultTracker.Get.PlayerCult.members);
+                foreach (Pawn current in tempList.InRandomOrder<Pawn>())
+                {
+                    if (current == null) continue;
+                    if (current.Dead) { CultTracker.Get.PlayerCult.RemoveMember(current); continue; }
+                    if (preacher == null) preacher = current;
+                    if (current.skills.GetSkill(SkillDefOf.Social).Level > preacher.skills.GetSkill(SkillDefOf.Social).Level) preacher = current;
+                }
+                if (preacher != null) return true;
             }
-            if (preacher != null) return true;
             return false;
         }
 
@@ -226,72 +229,55 @@ namespace CultOfCthulhu
 
         public void NewCultistCheck()
         {
-            //Log.Messag("1");
             if (CurrentSeedState < CultSeedState.FinishedWriting) return;
-            //Log.Messag("2");
             if (ticksToCheckCultists == 0) ticksToCheckCultists = Find.TickManager.TicksGame + 500;
-            //Log.Messag("3");
-
             if (ticksToCheckCultists < Find.TickManager.TicksGame)
             {
-                //Log.Messag("4");
-
                 ticksToCheckCultists = Find.TickManager.TicksGame + 500;
-            //Log.Messag("5");
-                //Cthulhu.Utility.DebugReport("Cultist Check: Tick");
                 IEnumerable<Pawn> spawnedColonyMembers = map.mapPawns.FreeColonistsAndPrisonersSpawned;
-                //Log.Messag("6");
-
+                Cult playerCult = CultTracker.Get.PlayerCult;
                 if (spawnedColonyMembers != null)
                 {
-                    //Log.Messag("7");
-
                     if (spawnedColonyMembers.Count<Pawn>() > 0)
                     {
-                        //Log.Messag("8");
-
                         foreach (Pawn colonist in map.mapPawns.FreeColonistsAndPrisonersSpawned)
                         {
-                            //Log.Messag("9");
-
-                            if (colonist.Dead)
-                            {
-                                //Log.Messag("9a");
-
-                                globalCultTracker.RemoveMember(colonist);
-                                //Log.Messag("9b");
-
-                                globalCultTracker.RemoveInquisitor(colonist);
-                                continue;
-                            }
-                            //Log.Messag("10");
-
+                            
                             Need_CultMindedness cultMind = colonist.needs.TryGetNeed<Need_CultMindedness>();
                             if (cultMind != null)
                             {
-                                //Log.Messag("11");
-
                                 if (cultMind.CurLevelPercentage > 0.7)
                                 {
-                                    //Log.Messag("11a");
-
-                                    globalCultTracker.SetMember(colonist);
+                                    if (playerCult == null)
+                                    {
+                                        playerCult = new Cult(colonist);
+                                    }
+                                    playerCult.SetMember(colonist);
                                 }
                                 else if (cultMind.CurInstantLevelPercentage > 0.3 &&
                                     cultMind.CurInstantLevelPercentage < 0.7)
                                 {
-                                    //Log.Messag("11b");
-
-                                    globalCultTracker.RemoveMember(colonist);
-                                    globalCultTracker.RemoveInquisitor(colonist);
+                                    if (playerCult != null)
+                                    {
+                                        playerCult.RemoveMember(colonist);
+                                        CultTracker.Get.RemoveInquisitor(colonist);
+                                    }
                                 }
                                 else if (cultMind.CurInstantLevelPercentage < 0.3)
                                 {
-                                    //Log.Messag("11c");
-
-                                    globalCultTracker.SetInquisitor(colonist);
+                                    CultTracker.Get.SetInquisitor(colonist);
                                 }
                             }
+                            if (colonist.Dead)
+                            {
+                                playerCult.RemoveMember(colonist);
+                                //Log.Messag("9b");
+
+                                CultTracker.Get.RemoveInquisitor(colonist);
+                                continue;
+                            }
+                            //Log.Messag("10");
+
                         }
                     }
                 }

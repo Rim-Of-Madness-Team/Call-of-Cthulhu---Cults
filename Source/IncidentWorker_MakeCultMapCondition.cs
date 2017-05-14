@@ -16,12 +16,9 @@ namespace CultOfCthulhu
             GameCondition_StarsAreWrong starsAreWrong = map.GameConditionManager.GetActiveCondition<GameCondition_StarsAreWrong>();
             bool cultAvailable = false;
             bool cultConditionInctive = false;
-            if (localCultTracker != null)
+            if (CultTracker.Get.PlayerCult != null && CultTracker.Get.PlayerCult.active)
             {
-                if (localCultTracker.DoesCultExist)
-                {
                     cultAvailable = true;
-                }
             }
             if (starsAreRight != null || starsAreWrong != null)
             {

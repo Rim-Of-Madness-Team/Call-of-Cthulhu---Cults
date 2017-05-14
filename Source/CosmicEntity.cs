@@ -357,7 +357,7 @@ namespace CultOfCthulhu
         public void ReceiveWorship(Pawn preacher)
         {
             int preacherSoc = preacher.skills.GetSkill(SkillDefOf.Social).Level;
-            List<Pawn> congregation = preacher.Map.GetComponent<MapComponent_LocalCultTracker>().LocalCultMembers;
+            List<Pawn> congregation = CultTracker.Get.PlayerCult.members; //preacher.Map.GetComponent<MapComponent_LocalCultTracker>().LocalCultMembers;
             if (preacher == null) Log.Error("Preacher is null.");
             if (congregation == null) Log.Error("Congregation is null");
             float value = (float)Math.Max(1, (preacherSoc));

@@ -33,7 +33,7 @@ namespace CultOfCthulhu
         {
             GUI.BeginGroup(rect);
 
-            float cultLabelWidth = Text.CalcSize(altar.Map.GetComponent<MapComponent_LocalCultTracker>().CultName).x + 15;
+            float cultLabelWidth = Text.CalcSize(CultTracker.Get.PlayerCult.name).x + 15;
 
             //Headings
             Rect rect1 = new Rect(rect);
@@ -53,7 +53,7 @@ namespace CultOfCthulhu
             rect2.width = cultLabelWidth + 5;
 
             //Esoteric Order of Dagon
-            Widgets.Label(rect2, altar.Map.GetComponent<MapComponent_LocalCultTracker>().CultName);
+            Widgets.Label(rect2, CultTracker.Get.PlayerCult.name);
             if (Mouse.IsOver(rect2))
             {
                 Widgets.DrawHighlight(rect2);
@@ -176,7 +176,7 @@ namespace CultOfCthulhu
                 altar.tempPreacher = CultUtility.DetermineBestPreacher(altar.Map);
             }, MenuOptionPriority.Default, null, null, 0f, null));
 
-            foreach (Pawn current in altar.Map.GetComponent<MapComponent_LocalCultTracker>().LocalCultMembers)
+            foreach (Pawn current in CultTracker.Get.PlayerCult.MembersAt(altar.Map))
             {
                 if (current.health.capacities.CapableOf(PawnCapacityDefOf.Talking) &&
                     current.health.capacities.CapableOf(PawnCapacityDefOf.Moving))
@@ -205,7 +205,7 @@ namespace CultOfCthulhu
                 altar.tempCurrentWorshipDeity = null;
             }, MenuOptionPriority.Default, null, null, 0f, null));
 
-            foreach (CosmicEntity current in Find.World.GetComponent<WorldComponent_CosmicDeities>().DeityCache.Keys)
+            foreach (CosmicEntity current in DeityTracker.Get.DeityCache.Keys)
             {
                 if (!current.discovered) continue;
                 Action action;
