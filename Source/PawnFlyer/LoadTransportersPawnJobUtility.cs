@@ -82,7 +82,7 @@ namespace CultOfCthulhu
                 return null;
             }
             Predicate<Thing> validator = (Thing x) => LoadTransportersPawnJobUtility.neededThings.Contains(x) && p.CanReserve(x, 1);
-            Thing thing = GenClosest.ClosestThingReachable(p.Position, p.Map, ThingRequest.ForGroup(ThingRequestGroup.HaulableEver), PathEndMode.Touch, TraverseParms.For(p, Danger.Deadly, TraverseMode.ByPawn, false), 9999f, validator, null, -1, false);
+            Thing thing = GenClosest.ClosestThingReachable(p.Position, p.Map, ThingRequest.ForGroup(ThingRequestGroup.HaulableEver), PathEndMode.Touch, TraverseParms.For(p, Danger.Deadly, TraverseMode.ByPawn, false), 9999f, validator);
             if (thing == null)
             {
                 foreach (Thing current in LoadTransportersPawnJobUtility.neededThings)

@@ -27,7 +27,7 @@ namespace CultOfCthulhu
             List<Pawn> sleepers = new List<Pawn>(map.mapPawns.FreeColonistsSpawned.InRandomOrder<Pawn>());
             for (int i = 0; i < numberToSleep; i++)
             {
-                 sleepers[i].mindState.mentalStateHandler.TryStartMentalState(CultsDefOfs.Cults_DeepSleepCarcosa, "Sacrifice".Translate(), false, true);
+                 sleepers[i].mindState.mentalStateHandler.TryStartMentalState(CultsDefOf.Cults_DeepSleepCarcosa, "Sacrifice".Translate(), false, true);
             }
             return true;
         }

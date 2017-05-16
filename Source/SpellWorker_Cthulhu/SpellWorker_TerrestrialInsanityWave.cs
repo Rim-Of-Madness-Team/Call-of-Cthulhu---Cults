@@ -69,7 +69,7 @@ namespace CultOfCthulhu
                                 defaultState = MentalStateDefOf.PanicFlee;
                                 break;
                             case 10:
-                                defaultState = CultsDefOfs.FireStartingSpree;
+                                defaultState = CultsDefOf.FireStartingSpree;
                                 break;
                         }
                         Cthulhu.Utility.ApplySanityLoss(pawn, 1.0f);

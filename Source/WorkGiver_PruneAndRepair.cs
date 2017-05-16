@@ -71,7 +71,7 @@ namespace CultOfCthulhu
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            return new Job(CultsDefOfs.Cults_PruneAndRepair, t);
+            return new Job(CultsDefOf.Cults_PruneAndRepair, t);
         }
     }
 }

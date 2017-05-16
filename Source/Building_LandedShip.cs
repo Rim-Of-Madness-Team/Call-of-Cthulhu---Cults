@@ -58,7 +58,7 @@ namespace CultOfCthulhu
         private void TrySpawnMadSailors()
         {
             List<Pawn> lordList = new List<Pawn>();
-            Faction faction = Find.FactionManager.FirstFactionOfDef(CultsDefOfs.Cults_Sailors);
+            Faction faction = Find.FactionManager.FirstFactionOfDef(CultsDefOf.Cults_Sailors);
             Cthulhu.Utility.DebugReport(faction.ToString());
             LordJob_DefendPoint lordJob = new LordJob_DefendPoint(this.Position);
             if (this.pointsLeft <= 0f)
@@ -76,7 +76,7 @@ namespace CultOfCthulhu
                      where cell.Walkable(Map)
                      select cell).TryRandomElement(out center))
                 {
-                        PawnGenerationRequest request = new PawnGenerationRequest(CultsDefOfs.Cults_Sailor, faction, PawnGenerationContext.NonPlayer, Map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, null, null, null, null);
+                        PawnGenerationRequest request = new PawnGenerationRequest(CultsDefOf.Cults_Sailor, faction, PawnGenerationContext.NonPlayer, Map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, null, null, null, null);
                         Pawn pawn = PawnGenerator.GeneratePawn(request);
                         if (GenPlace.TryPlaceThing(pawn, center, Map, ThingPlaceMode.Near, null))
                         {

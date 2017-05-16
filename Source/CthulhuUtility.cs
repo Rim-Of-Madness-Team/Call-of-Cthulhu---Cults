@@ -101,18 +101,7 @@ namespace Cthulhu
             if (pawn == null) return false;
             if (pawn.Dead) return false;
             if (pawn.Downed && !allowDowned) return false;
-            List<WorkTags> list = pawn.story.DisabledWorkTags.ToList<WorkTags>();
-            if (list.Count == 0)
-            {
-                return true;
-            }
-            else
-            {
-                foreach (WorkTags current in list)
-                {
-                    if (current == WorkTags.Violent) return false;
-                }
-            }
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Violent)) return false;
             return true;
         }
 

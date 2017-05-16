@@ -45,7 +45,7 @@ namespace CultOfCthulhu
             //Cthulhu.Utility.SpawnPawnsOfCountAt(CultDefOfs.BlackIbex, altar.Position, Rand.Range(2, 5), Faction.OfPlayer);
 
             //Spawn a fertility idol.
-            Cthulhu.Utility.SpawnThingDefOfCountAt(CultsDefOfs.Cults_TheKingInYellow, 1, new TargetInfo(altar(map).RandomAdjacentCell8Way(), map));
+            Cthulhu.Utility.SpawnThingDefOfCountAt(CultsDefOf.Cults_TheKingInYellow, 1, new TargetInfo(altar(map).RandomAdjacentCell8Way(), map));
 
             //Spawn a 
             Messages.Message("The sacred play appears before the sacrificers.", MessageSound.Benefit);

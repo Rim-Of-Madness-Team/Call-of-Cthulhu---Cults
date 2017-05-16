@@ -105,7 +105,7 @@ namespace CultOfCthulhu
                 {
                     Action action0 = delegate
                     {
-                        Job job = new Job(CultsDefOfs.Cults_Investigate, myPawn, this);
+                        Job job = new Job(CultsDefOf.Cults_Investigate, myPawn, this);
                         job.playerForced = true;
                         myPawn.jobs.TryTakeOrderedJob(job);
                         //myPawn.jobs.EndCurrentJob(JobCondition.InterruptForced);

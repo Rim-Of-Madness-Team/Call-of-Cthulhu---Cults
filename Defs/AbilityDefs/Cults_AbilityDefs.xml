@@ -48,7 +48,7 @@
      <!-- ===================== Psionic Blast =============================== -->
  
    <ThingDef Class="AbilityUser.AbilityDef" ParentName="BaseAbility">
-    <defName>Cults_PsonicBlast</defName>
+    <defName>Cults_PsionicBlast</defName>
     <label>Psionic Blast</label>
     <uiIconPath>UI/Icons/Commands/PsionicBlast</uiIconPath>
     <description>Pushes characters away by 8 tiles.</description>
@@ -61,7 +61,7 @@
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>Cults_PPsionicBlast</projectileDef>	
-		<abilityDef>Cults_PsonicBlast</abilityDef>
+		<abilityDef>Cults_PsionicBlast</abilityDef>
 		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>600.0</SecondsToRecharge>
@@ -88,9 +88,9 @@
   </ThingDef>     
   
    <ThingDef Class="AbilityUser.AbilityDef" ParentName="BaseAbility">
-    <defName>Cults_PsonicShock</defName>
+    <defName>Cults_PsionicShock</defName>
     <label>Psionic Shock</label>
-    <uiIconPath>UI/Icons/Commands/PsionicBlast</uiIconPath>
+    <uiIconPath>UI/Icons/Commands/PsionicShock</uiIconPath>
     <description>Paralyzes the brain of the target. On a critical success, the shock causes the head of the target to explode.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -101,7 +101,7 @@
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>Cults_PPsionicBlast</projectileDef>	
-		<abilityDef>Cults_PsonicShock</abilityDef>
+		<abilityDef>Cults_PsionicShock</abilityDef>
 		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>600.0</SecondsToRecharge>
@@ -115,6 +115,46 @@
 		  <li>
 		    <damage>5</damage>
 			<damageDef>Crush</damageDef>
+			<chance>0.5</chance>
+		  </li>
+		</extraDamages>
+	    <targetParams>
+		  <canTargetPawns>true</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetItems>false</canTargetItems>
+		  <canTargetSelf>false</canTargetSelf>
+		</targetParams>				
+    </MainVerb>
+  </ThingDef>  
+  
+   <ThingDef Class="AbilityUser.AbilityDef" ParentName="BaseAbility">
+    <defName>Cults_PsionicFlame</defName>
+    <label>Psionic Flame</label>
+    <uiIconPath>UI/Icons/Commands/PsionicFlame</uiIconPath>
+    <description>Starts a fire on the target.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Cults_PPsionicBlast</projectileDef>	
+		<abilityDef>Cults_PsionicFlame</abilityDef>
+		<isViolent>false</isViolent>		
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>600.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>Pawn_Mech_Scyther_Call</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+		<extraDamages>
+		  <li>
+		    <damage>5</damage>
+			<damageDef>Flame</damageDef>
 			<chance>0.5</chance>
 		  </li>
 		</extraDamages>

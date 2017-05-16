@@ -129,7 +129,7 @@ namespace CultOfCthulhu
             CultUtility.remainingDuration = CultUtility.ritualDuration;
             chantingTime.defaultDuration = CultUtility.remainingDuration - 360;
             chantingTime.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
-            chantingTime.PlaySustainerOrSound(CultsDefOfs.RitualChanting);
+            chantingTime.PlaySustainerOrSound(CultsDefOf.RitualChanting);
             Texture2D deitySymbol = ((CosmicEntityDef)DropAltar.currentOfferingDeity.def).Symbol;
             chantingTime.initAction = delegate
             {

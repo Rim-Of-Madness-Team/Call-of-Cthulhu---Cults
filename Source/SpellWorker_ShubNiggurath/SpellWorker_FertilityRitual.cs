@@ -45,7 +45,7 @@ namespace CultOfCthulhu
             //Cthulhu.Utility.SpawnPawnsOfCountAt(CultDefOfs.BlackIbex, altar.Position, Rand.Range(2, 5), Faction.OfPlayer);
 
             //Spawn a fertility idol.
-            Cthulhu.Utility.SpawnThingDefOfCountAt(CultsDefOfs.Cults_FertilityTotem, 1, new TargetInfo(altar(map).RandomAdjacentCell8Way(), map));
+            Cthulhu.Utility.SpawnThingDefOfCountAt(CultsDefOf.Cults_FertilityTotem, 1, new TargetInfo(altar(map).RandomAdjacentCell8Way(), map));
 
             //Spawn a 
             Messages.Message("An idol of fertility rises from the corpse.", MessageSound.Benefit);

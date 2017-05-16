@@ -50,7 +50,7 @@ namespace CultOfCthulhu
                 {
                     foreach (Pawn pawn in this.pawn.Map.mapPawns.FreeColonistsSpawned)
                     {
-                        if (pawn.CurJob.def == CultsDefOfs.Cults_HoldSacrifice) { setExecutioner = pawn; return pawn; }
+                        if (pawn.CurJob.def == CultsDefOf.Cults_HoldSacrifice) { setExecutioner = pawn; return pawn; }
                     }
                 }
                 return null;
@@ -90,11 +90,11 @@ namespace CultOfCthulhu
                     return JobCondition.Incompletable;
                 }
 
-                if (ExecutionerPawn.CurJob.def == CultsDefOfs.Cults_ReflectOnResult)
+                if (ExecutionerPawn.CurJob.def == CultsDefOf.Cults_ReflectOnResult)
                 {
                     return JobCondition.Succeeded;
                 }
-                else if (ExecutionerPawn.CurJob.def != CultsDefOfs.Cults_HoldSacrifice)
+                else if (ExecutionerPawn.CurJob.def != CultsDefOf.Cults_HoldSacrifice)
                 {
                     return JobCondition.Incompletable;
                 }
@@ -133,7 +133,7 @@ namespace CultOfCthulhu
                 {
                     if (ExecutionerPawn.CurJob != null)
                     {
-                        if (ExecutionerPawn.CurJob.def != CultsDefOfs.Cults_HoldSacrifice)
+                        if (ExecutionerPawn.CurJob.def != CultsDefOf.Cults_HoldSacrifice)
                         {
                             this.ticksLeftThisToil = -1;
                         }

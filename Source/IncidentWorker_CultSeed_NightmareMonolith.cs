@@ -16,13 +16,13 @@ namespace CultOfCthulhu
             Map map = parms.target as Map;
             //Create a spawn point for our nightmare Tree
             IntVec3 intVec;
-                if (!Cthulhu.Utility.TryFindSpawnCell(CultsDefOfs.Cults_MonolithNightmare, map.Center, map, 60, out intVec))
+                if (!Cthulhu.Utility.TryFindSpawnCell(CultsDefOf.Cults_MonolithNightmare, map.Center, map, 60, out intVec))
                 {
                     return false;
                 }
 
             //Spawn in the nightmare tree.
-            Building thing = (Building)ThingMaker.MakeThing(CultsDefOfs.Cults_MonolithNightmare, null);
+            Building thing = (Building)ThingMaker.MakeThing(CultsDefOf.Cults_MonolithNightmare, null);
             //thing.Growth = 1f;
             GenPlace.TryPlaceThing(thing, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
 
@@ -33,7 +33,7 @@ namespace CultOfCthulhu
             //Give them a new job to investigate the nightmare tree.
             if (ModSettings_Data.cultsForcedInvestigation) //ModSettings.cultsForcedInvestigation()) //If forced investigation is allowed.
             {
-                Job J = new Job(CultsDefOfs.Cults_Investigate, researcher, thing);
+                Job J = new Job(CultsDefOf.Cults_Investigate, researcher, thing);
                 researcher.jobs.TryTakeOrderedJob(J);
                 //researcher.jobs.EndCurrentJob(JobCondition.InterruptForced);
             }

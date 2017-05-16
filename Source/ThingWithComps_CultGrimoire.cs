@@ -16,7 +16,7 @@ namespace CultOfCthulhu
             {
                 yield return g;
             }
-            ThingDef buildable = CultsDefOfs.Cults_ForbiddenKnowledgeCenter; //ThingDef.Named("ForbiddenKnowledgeCenter");
+            ThingDef buildable = CultsDefOf.Cults_ForbiddenKnowledgeCenter; //ThingDef.Named("ForbiddenKnowledgeCenter");
             Designator_Build des = FindDesignator(buildable);
             ThingDef stuff = ThingDefOf.WoodLog;
             if (des == null)

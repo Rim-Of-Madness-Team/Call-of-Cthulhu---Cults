@@ -107,7 +107,7 @@ namespace CultOfCthulhu
                         this.Takee.Position = DropAltar.GetLyingSlotPos();
                         this.Takee.Notify_Teleported(false);
                         this.Takee.stances.CancelBusyStanceHard();
-                        Job job = new Job(CultsDefOfs.Cults_WaitTiedDown, DropAltar);
+                        Job job = new Job(CultsDefOf.Cults_WaitTiedDown, DropAltar);
                         this.Takee.jobs.StartJob(job);
 
                     }
@@ -121,7 +121,7 @@ namespace CultOfCthulhu
             CultUtility.remainingDuration = CultUtility.ritualDuration;
             chantingTime.defaultDuration = CultUtility.remainingDuration - 360;
             chantingTime.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
-            chantingTime.PlaySustainerOrSound(CultsDefOfs.RitualChanting);
+            chantingTime.PlaySustainerOrSound(CultsDefOf.RitualChanting);
             Texture2D deitySymbol = ((CosmicEntityDef)DropAltar.currentSacrificeDeity.def).Symbol;
             chantingTime.initAction = delegate
             {

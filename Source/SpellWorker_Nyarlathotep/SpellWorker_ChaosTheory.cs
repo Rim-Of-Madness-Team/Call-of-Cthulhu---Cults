@@ -28,17 +28,27 @@ namespace CultOfCthulhu
     public class SpellWorker_ChaosTheory : SpellWorker
     {
         
-        public bool hasIncapableWorkTags(Pawn pawn)
+        public bool HasIncapableWorkTags(Pawn pawn)
         {
-            List<WorkTags> list = pawn.story.DisabledWorkTags.ToList<WorkTags>();
-            if (list.Count != 0)
-            {
-                return true;
-            }
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Animals)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Artistic)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Caring)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Cleaning)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Cooking)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Crafting)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Firefighting)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Hauling)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Intellectual)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.ManualDumb)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.ManualSkilled)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Mining)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.PlantWork)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Social)) return true;
+            if (pawn.story.WorkTagIsDisabled(WorkTags.Violent)) return true;
             return false;
         }
 
-        public bool hasIncapableSkills(Pawn pawn)
+        public bool HasIncapableSkills(Pawn pawn)
         {
             Map map = pawn.Map;
             //Check if we have level 0 skills
@@ -69,7 +79,7 @@ namespace CultOfCthulhu
                     return false;
                 }
                 
-                if (!hasIncapableSkills(TempExecutioner(map)) && !hasIncapableWorkTags(TempExecutioner(map)))
+                if (!HasIncapableSkills(TempExecutioner(map)) && !HasIncapableWorkTags(TempExecutioner(map)))
                 {
                     Messages.Message("Executioner is already fully capable.", MessageSound.RejectInput);
                     return false;
@@ -87,7 +97,7 @@ namespace CultOfCthulhu
         {
             Map map = parms.target as Map;
             Pawn pawn = map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar.executioner;
-            if (hasIncapableWorkTags(pawn))
+            if (HasIncapableWorkTags(pawn))
             {
                 //Your childhood is out
                 bool fixedChildhood = false;
@@ -138,7 +148,7 @@ namespace CultOfCthulhu
                 SecondLeap:
                     Cthulhu.Utility.DebugReport("");
             }
-            if (hasIncapableSkills(pawn))
+            if (HasIncapableSkills(pawn))
             {
                 //pawn.story.GenerateSkillsFromBackstory();
                 List<SkillDef> allDefsListForReading = DefDatabase<SkillDef>.AllDefsListForReading;

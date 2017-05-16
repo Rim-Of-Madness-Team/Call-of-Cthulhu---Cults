@@ -46,10 +46,10 @@ namespace CultOfCthulhu
             IntVec3 intVec = DropCellFinder.RandomDropSpot((Map)parms.target);
 
             //Spawn Black Ibex
-            Cthulhu.Utility.SpawnPawnsOfCountAt(CultsDefOfs.Cults_BlackGoat, intVec, map, Rand.Range(6, 10));
+            Cthulhu.Utility.SpawnPawnsOfCountAt(CultsDefOf.Cults_BlackGoat, intVec, map, Rand.Range(6, 10));
 
             //Spawn some Black Ibex as player pets
-            Cthulhu.Utility.SpawnPawnsOfCountAt(CultsDefOfs.Cults_BlackGoat, intVec, map, Rand.Range(1, 2), Faction.OfPlayer);
+            Cthulhu.Utility.SpawnPawnsOfCountAt(CultsDefOf.Cults_BlackGoat, intVec, map, Rand.Range(1, 2), Faction.OfPlayer);
             
             Messages.Message("A herd of black ibex have appeared on the overworld map", MessageSound.Benefit);
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;

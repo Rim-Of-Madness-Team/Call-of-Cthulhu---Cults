@@ -44,7 +44,7 @@ namespace CultOfCthulhu
             {
                 return false;
             }
-            GenSpawn.Spawn(CultsDefOfs.Cults_SunkenShipChunk, intVec, map);
+            GenSpawn.Spawn(CultsDefOf.Cults_SunkenShipChunk, intVec, map);
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
             Messages.Message("MessageSunkenShipChunkDrop".Translate(), new TargetInfo(intVec, map), MessageSound.Standard);

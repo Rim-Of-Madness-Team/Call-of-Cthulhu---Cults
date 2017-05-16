@@ -46,7 +46,7 @@ namespace CultOfCthulhu
                 return false;
             }
             //Spawn 1 Womb Between Worlds
-            Building_WombBetweenWorlds thing = (Building_WombBetweenWorlds)ThingMaker.MakeThing(CultsDefOfs.Cults_WombBetweenWorlds, null);
+            Building_WombBetweenWorlds thing = (Building_WombBetweenWorlds)ThingMaker.MakeThing(CultsDefOf.Cults_WombBetweenWorlds, null);
             thing.SetFaction(Faction.OfPlayer);
             GenPlace.TryPlaceThing(thing, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
 

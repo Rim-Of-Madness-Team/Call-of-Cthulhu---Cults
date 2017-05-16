@@ -19,16 +19,20 @@ using Verse.Sound;       // Needed when you do something with Sound
 using Verse.Noise;       // Needed when you do something with Noises
 using RimWorld;            // RimWorld specific functions are found here (like 'Building_Battery')
 using RimWorld.Planet;   // RimWorld specific functions for world creation
+using AbilityUser;
 //using RimWorld.SquadAI;  // RimWorld specific functions for squad brains 
 
 namespace CultOfCthulhu
 {
 
     [DefOf]
-    public class CultsDefOfs
+    public class CultsDefOf
     {
         // ============= UNSORTED ============
 
+        public static AbilityDef Cults_PsionicBlast;
+        public static AbilityDef Cults_PsionicShock;
+        public static AbilityDef Cults_PsionicFlame;
         public static RoomRoleDef Cults_Temple;
         public static ThingDef Cults_ForbiddenKnowledgeCenter;
         public static LetterDef Cults_StandardMessage;

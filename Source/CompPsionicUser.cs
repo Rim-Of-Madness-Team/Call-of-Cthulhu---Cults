@@ -10,16 +10,24 @@ namespace CultOfCthulhu
 {
     public class CompPsionicUser : AbilityUser.CompAbilityUser
     {
-        AbilityDef Cults_PsionicBlast;
-        AbilityDef Cults_PsionicShock;
-
         public bool firstTick = false;
 
         public void PostInitializeTick()
         {
-            firstTick = true;
-            this.AddPawnAbility(PsionicBlast);
-            this.AddPawnAbility(PsionicShock);
+            if (this.abilityUser != null)
+            {
+                if (this.abilityUser.Spawned)
+                {
+                    if (this.abilityUser.story != null)
+                    {
+                        firstTick = true;
+                        this.Initialize();
+                        this.AddPawnAbility(CultsDefOf.Cults_PsionicBlast);
+                        this.AddPawnAbility(CultsDefOf.Cults_PsionicShock);
+                        this.AddPawnAbility(CultsDefOf.Cults_PsionicFlame);
+                    }
+                }
+            }
         }
 
         public override void CompTick()
@@ -50,7 +58,7 @@ namespace CultOfCthulhu
                     {
                         if (this.abilityUser.health.hediffSet != null)
                         {
-                            if (this.abilityUser.health.hediffSet.HasHediff(CultsDefOfs.Cults_PsionicBrain)) return true;
+                            if (this.abilityUser.health.hediffSet.HasHediff(CultsDefOf.Cults_PsionicBrain)) return true;
                         }
                     }
                 }

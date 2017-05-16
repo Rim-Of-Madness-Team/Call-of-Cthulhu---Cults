@@ -40,7 +40,7 @@ namespace CultOfCthulhu
             Find.LetterStack.ReceiveLetter("Cults_DismantledACultLabel".Translate(), "Cults_DismantledACultDesc".Translate(new object[]
             {
                 name
-            }), CultsDefOfs.Cults_StandardMessage);
+            }), CultsDefOf.Cults_StandardMessage);
         }
 
         public void SendCultLetterFounded(Pawn newFounder)
@@ -48,7 +48,7 @@ namespace CultOfCthulhu
             Find.LetterStack.ReceiveLetter("Cults_FoundedACultLabel".Translate(), "Cults_FoundedACultDesc".Translate(new object[]
             {
                 newFounder.LabelShort
-            }), CultsDefOfs.Cults_StandardMessage);
+            }), CultsDefOf.Cults_StandardMessage);
             if (foundingCity != null)
             {
                 Find.WindowStack.Add(new Dialog_NameCult(foundingCity.Map));
@@ -102,7 +102,7 @@ namespace CultOfCthulhu
                     });
                 }
                 //The founder will remember that, too.
-                newFounder.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_FoundedCult);
+                newFounder.needs.mood.thoughts.memories.TryGainMemory(CultsDefOf.Cults_FoundedCult);
                 map.GetComponent<MapComponent_LocalCultTracker>().ResolveTerribleCultFounder(newFounder);
             }
         }

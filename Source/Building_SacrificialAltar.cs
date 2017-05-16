@@ -448,7 +448,7 @@ namespace CultOfCthulhu
                         {
                             if (this.executioner.CurJob != null)
                             {
-                                if (this.executioner.CurJob.def != CultsDefOfs.Cults_HoldSacrifice)
+                                if (this.executioner.CurJob.def != CultsDefOf.Cults_HoldSacrifice)
                                 {
                                     CultUtility.AbortCongregation(this, "Executioner".Translate() + "IsUnavailable".Translate());
                                     return;
@@ -468,7 +468,7 @@ namespace CultOfCthulhu
                         {
                             if (this.executioner.CurJob != null)
                             {
-                                if (this.executioner.CurJob.def != CultsDefOfs.Cults_ReflectOnResult) return;
+                                if (this.executioner.CurJob.def != CultsDefOf.Cults_ReflectOnResult) return;
                             }
                         }
                         GetSacrificeGroup(this, Map);
@@ -493,7 +493,7 @@ namespace CultOfCthulhu
                             CultUtility.AbortCongregation(this, "Offerer".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        else if (this.offerer.CurJob.def != CultsDefOfs.Cults_GiveOffering)
+                        else if (this.offerer.CurJob.def != CultsDefOf.Cults_GiveOffering)
                         {
                             CultUtility.AbortCongregation(this, "Offerer is not performing the task at hand.");
                             return;
@@ -505,7 +505,7 @@ namespace CultOfCthulhu
                             CultUtility.AbortCongregation(this, "Offerer".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        else if (this.offerer.CurJob.def != CultsDefOfs.Cults_GiveOffering)
+                        else if (this.offerer.CurJob.def != CultsDefOf.Cults_GiveOffering)
                         {
                             Cthulhu.Utility.DebugReport(this.offerer.CurJob.def.defName);
                             CultUtility.AbortCongregation(this, "Offerer is not performing the task at hand.");
@@ -533,7 +533,7 @@ namespace CultOfCthulhu
                             CultUtility.AbortCongregation(this, "Preacher".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        if (this.preacher.CurJob.def != CultsDefOfs.Cults_HoldWorship)
+                        if (this.preacher.CurJob.def != CultsDefOf.Cults_HoldWorship)
                         {
                             CultUtility.AbortCongregation(this, "Preacher".Translate() + "IsUnavailable".Translate());
                             return;
@@ -547,7 +547,7 @@ namespace CultOfCthulhu
                             CultUtility.AbortCongregation(this, "Preacher".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        if (this.preacher.CurJob.def != CultsDefOfs.Cults_ReflectOnWorship)
+                        if (this.preacher.CurJob.def != CultsDefOf.Cults_ReflectOnWorship)
                             return;
                         GetWorshipGroup(this, Map);
                         Cthulhu.Utility.DebugReport("Finishing yay");
@@ -572,7 +572,7 @@ namespace CultOfCthulhu
                         {
                             if (Cthulhu.Utility.IsActorAvailable(this.sacrifice, true))
                             {
-                                if (this.executioner.CurJob.def != CultsDefOfs.Cults_HoldSacrifice)
+                                if (this.executioner.CurJob.def != CultsDefOf.Cults_HoldSacrifice)
                                     CultUtility.AbortCongregation(this, "Executioner".Translate() + "IsUnavailable".Translate());
                                 return;
                             }
@@ -610,7 +610,7 @@ namespace CultOfCthulhu
                     case WorshipState.gathering:
                         if (Cthulhu.Utility.IsActorAvailable(this.preacher))
                         {
-                            if (this.preacher.CurJob.def != CultsDefOfs.Cults_HoldWorship)
+                            if (this.preacher.CurJob.def != CultsDefOf.Cults_HoldWorship)
                             {
                                 CultUtility.AbortCongregation(this, "Preacher".Translate() + "IsUnavailable".Translate());
                                 return;
@@ -1016,7 +1016,7 @@ namespace CultOfCthulhu
                 if (pawn.Faction == Faction.OfPlayer)
                 {
                     //Hold Offering
-                    if (pawn.CurJob.def == CultsDefOfs.Cults_GiveOffering)
+                    if (pawn.CurJob.def == CultsDefOf.Cults_GiveOffering)
                     {
                         pawn.jobs.StopAll();
                     }
@@ -1102,7 +1102,7 @@ namespace CultOfCthulhu
             ChangeState(State.offering, OfferingState.started);
             Cthulhu.Utility.DebugReport("Make offering called.");
            
-            Job job2 = new Job(CultsDefOfs.Cults_GiveOffering);
+            Job job2 = new Job(CultsDefOf.Cults_GiveOffering);
             job2.playerForced = true;
             job2.targetA = this;
             job2.targetQueueB = new List<LocalTargetInfo>(this.determinedOfferings.Count);
@@ -1138,10 +1138,10 @@ namespace CultOfCthulhu
                 pawn = listeners[i];
                 if (pawn.Faction == Faction.OfPlayer)
                 {
-                    if (pawn.CurJob.def == CultsDefOfs.Cults_HoldSacrifice ||
-                        pawn.CurJob.def == CultsDefOfs.Cults_AttendSacrifice ||
-                        pawn.CurJob.def == CultsDefOfs.Cults_ReflectOnResult ||
-                        pawn.CurJob.def == CultsDefOfs.Cults_GiveOffering)
+                    if (pawn.CurJob.def == CultsDefOf.Cults_HoldSacrifice ||
+                        pawn.CurJob.def == CultsDefOf.Cults_AttendSacrifice ||
+                        pawn.CurJob.def == CultsDefOf.Cults_ReflectOnResult ||
+                        pawn.CurJob.def == CultsDefOf.Cults_GiveOffering)
                     {
                         pawn.jobs.StopAll();
                     }
@@ -1247,7 +1247,7 @@ namespace CultOfCthulhu
             Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation = new List<Pawn>();
 
             Cthulhu.Utility.DebugReport("Force Sacrifice called");
-            Job job = new Job(CultsDefOfs.Cults_HoldSacrifice, sacrifice, this);
+            Job job = new Job(CultsDefOf.Cults_HoldSacrifice, sacrifice, this);
             job.count = 1;
             executioner.jobs.TryTakeOrderedJob(job);
             //executioner.jobs.EndCurrentJob(JobCondition.InterruptForced);
@@ -1264,8 +1264,8 @@ namespace CultOfCthulhu
             if (room.Role != RoomRoleDefOf.PrisonBarracks && room.Role != RoomRoleDefOf.PrisonCell)
             {
                 List<Pawn> listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead && !x.InMentalState &&
-                                                                                  x.CurJob.def != CultsDefOfs.Cults_MidnightInquisition &&
-                                                                                  x.CurJob.def != CultsDefOfs.Cults_AttendSacrifice &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
                                                                                   x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
                                                                                   x.CurJob.def != JobDefOf.Capture && // Capturing is pretty important
                                                                                   x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
@@ -1292,7 +1292,7 @@ namespace CultOfCthulhu
         {
             int num = 100; //Forced for testing purposes
 
-            if (p.CurJob.def == CultsDefOfs.Cults_AttendSacrifice)
+            if (p.CurJob.def == CultsDefOf.Cults_AttendSacrifice)
             {
                 num = 0;
             }
@@ -1376,9 +1376,9 @@ namespace CultOfCthulhu
                 pawn = listeners[i];
                 if (pawn.Faction == Faction.OfPlayer)
                 {
-                    if (pawn.CurJob.def == CultsDefOfs.Cults_HoldWorship ||
-                        pawn.CurJob.def == CultsDefOfs.Cults_AttendWorship ||
-                        pawn.CurJob.def == CultsDefOfs.Cults_ReflectOnWorship)
+                    if (pawn.CurJob.def == CultsDefOf.Cults_HoldWorship ||
+                        pawn.CurJob.def == CultsDefOf.Cults_AttendWorship ||
+                        pawn.CurJob.def == CultsDefOf.Cults_ReflectOnWorship)
                     {
                         pawn.jobs.StopAll();
                     }
@@ -1488,7 +1488,7 @@ namespace CultOfCthulhu
             //Map.GetComponent<MapComponent_SacrificeTracker>().lastResult = CultUtility.SacrificeResult.none;
 
             Cthulhu.Utility.DebugReport("Force worship called");
-            Job job = new Job(CultsDefOfs.Cults_HoldWorship, this);
+            Job job = new Job(CultsDefOf.Cults_HoldWorship, this);
             preacher.jobs.TryTakeOrderedJob(job);
             //preacher.jobs.EndCurrentJob(JobCondition.InterruptForced);
             GetWorshipGroup(this, Map, forced);
@@ -1505,10 +1505,10 @@ namespace CultOfCthulhu
                 if (forced)
                 {
                     listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead && !x.InMentalState &&
-                                                                                  x.CurJob.def != CultsDefOfs.Cults_MidnightInquisition &&
-                                                                                  x.CurJob.def != CultsDefOfs.Cults_AttendSacrifice &&
-                                                                                  x.CurJob.def != CultsDefOfs.Cults_ReflectOnWorship &&
-                                                                                  x.CurJob.def != CultsDefOfs.Cults_AttendWorship &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
                                                                                   x.CurJob.def != JobDefOf.Capture &&
                                                                                   x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
                                                                                   x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
@@ -1522,10 +1522,10 @@ namespace CultOfCthulhu
                 else
                 {
                     listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead && !x.InMentalState &&
-                                                                                  x.CurJob.def != CultsDefOfs.Cults_MidnightInquisition &&
-                                                                                  x.CurJob.def != CultsDefOfs.Cults_AttendSacrifice &&
-                                                                                  x.CurJob.def != CultsDefOfs.Cults_ReflectOnWorship &&
-                                                                                  x.CurJob.def != CultsDefOfs.Cults_AttendWorship &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
                                                                                   x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
                                                                                   x.CurJob.def != JobDefOf.Capture && 
                                                                                   x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
@@ -1552,7 +1552,7 @@ namespace CultOfCthulhu
         {
             int num = 100; //Forced for testing purposes
 
-            if (p.CurJob.def == CultsDefOfs.Cults_AttendWorship)
+            if (p.CurJob.def == CultsDefOf.Cults_AttendWorship)
             {
                 num = 0;
             }

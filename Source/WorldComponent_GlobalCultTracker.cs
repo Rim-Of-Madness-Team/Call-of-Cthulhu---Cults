@@ -44,7 +44,7 @@ namespace CultOfCthulhu
             {
                 if (value != exposedToCults && value == true)
                 {
-                    Find.LetterStack.ReceiveLetter("Cults_InitialExposureLabel".Translate(), "Cults_InitialExposureDesc".Translate(), CultsDefOfs.Cults_StandardMessage, null);
+                    Find.LetterStack.ReceiveLetter("Cults_InitialExposureLabel".Translate(), "Cults_InitialExposureDesc".Translate(), CultsDefOf.Cults_StandardMessage, null);
                 }
                 exposedToCults = value;
             }

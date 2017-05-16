@@ -54,7 +54,7 @@ namespace CultOfCthulhu
             {
                 foreach (Pawn pawn in Map.mapPawns.FreeColonistsAndPrisoners)
                 {
-                    pawn.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_SawAurora);
+                    pawn.needs.mood.thoughts.memories.TryGainMemory(CultsDefOf.Cults_SawAurora);
                 }
                 firstTick = false;
             }

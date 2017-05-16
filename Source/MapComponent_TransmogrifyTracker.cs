@@ -193,20 +193,20 @@ namespace CultOfCthulhu
             //Check if they are already upgraded.
             foreach (Hediff current in newPawn.health.hediffSet.hediffs)
             {
-                if (current.def == CultsDefOfs.Cults_MonstrousBody)
+                if (current.def == CultsDefOf.Cults_MonstrousBody)
                 {
-                    Messages.Message(newPawn.LabelShort + " already posesses " + CultsDefOfs.Cults_MonstrousBody.label, MessageSound.Negative);
+                    Messages.Message(newPawn.LabelShort + " already posesses " + CultsDefOf.Cults_MonstrousBody.label, MessageSound.Negative);
                     return;
                 }
-                if (current.def == CultsDefOfs.Cults_MonstrousBrain)
+                if (current.def == CultsDefOf.Cults_MonstrousBrain)
                 {
-                    Messages.Message(newPawn.LabelShort + " already posesses " + CultsDefOfs.Cults_MonstrousBrain.label, MessageSound.Negative);
+                    Messages.Message(newPawn.LabelShort + " already posesses " + CultsDefOf.Cults_MonstrousBrain.label, MessageSound.Negative);
                     return;
                 }
             }
             
-            newPawn.health.AddHediff(CultsDefOfs.Cults_MonstrousBody, tempRecord2, null);
-            newPawn.health.AddHediff(CultsDefOfs.Cults_MonstrousBrain, tempRecord, null);
+            newPawn.health.AddHediff(CultsDefOf.Cults_MonstrousBody, tempRecord2, null);
+            newPawn.health.AddHediff(CultsDefOf.Cults_MonstrousBrain, tempRecord, null);
 
         }
 

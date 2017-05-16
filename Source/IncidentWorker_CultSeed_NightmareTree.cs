@@ -17,13 +17,13 @@ namespace CultOfCthulhu
             IntVec3 intVec;
             
 
-            if (!Cthulhu.Utility.TryFindSpawnCell(CultsDefOfs.Cults_PlantTreeNightmare, map.Center, map, 60, out intVec))
+            if (!Cthulhu.Utility.TryFindSpawnCell(CultsDefOf.Cults_PlantTreeNightmare, map.Center, map, 60, out intVec))
             {
                 return false;
             }
 
             //Spawn in the nightmare tree.
-            Plant thing = (Plant)ThingMaker.MakeThing(CultsDefOfs.Cults_PlantTreeNightmare, null);
+            Plant thing = (Plant)ThingMaker.MakeThing(CultsDefOf.Cults_PlantTreeNightmare, null);
             thing.Growth = 1f;
             GenPlace.TryPlaceThing(thing, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
 
@@ -34,7 +34,7 @@ namespace CultOfCthulhu
             //Give them a new job to investigate the nightmare tree.
             if (ModSettings_Data.cultsForcedInvestigation) //If forced investigation is allowed.
             {
-                Job J = new Job(CultsDefOfs.Cults_Investigate, researcher, thing);
+                Job J = new Job(CultsDefOf.Cults_Investigate, researcher, thing);
                 researcher.jobs.TryTakeOrderedJob(J);
                 //researcher.jobs.EndCurrentJob(JobCondition.InterruptForced);
             }

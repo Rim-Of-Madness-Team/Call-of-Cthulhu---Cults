@@ -216,7 +216,7 @@ namespace CultOfCthulhu
 
                 //Luxury Goods
                 container.AddRange(ThingsToAdd(ThingDefOf.Gold, Rand.Range(5, 50))); //Original 500-2000
-                container.AddRange(ThingsToAdd(CultsDefOfs.Neutroamine, Rand.Range(5, 15))); //Original 400-800
+                container.AddRange(ThingsToAdd(CultsDefOf.Neutroamine, Rand.Range(5, 15))); //Original 400-800
                 container.AddRange(ThingsToAdd(ThingDefOf.Plasteel, Rand.Range(5, 15))); //Original 300-700
                 container.AddRange(ThingsToAdd(ThingDefOf.Beer, Rand.Range(-70, 30))); //Original -700-2000
                 container.AddRange(ThingsToAdd(ThingDefOf.Chocolate, Rand.Range(-70, 30))); //Original -700-2000
@@ -239,9 +239,9 @@ namespace CultOfCthulhu
 
                 //Textiles - Original 2200 - 4000.
                 //New Range - 270 - 1100
-                container.AddRange(ThingsToAdd(CultsDefOfs.BlocksSlate, Rand.Range(-100, 200)));
-                container.AddRange(ThingsToAdd(CultsDefOfs.BlocksLimestone, Rand.Range(-100, 200)));
-                container.AddRange(ThingsToAdd(CultsDefOfs.BlocksMarble, Rand.Range(-100, 200)));
+                container.AddRange(ThingsToAdd(CultsDefOf.BlocksSlate, Rand.Range(-100, 200)));
+                container.AddRange(ThingsToAdd(CultsDefOf.BlocksLimestone, Rand.Range(-100, 200)));
+                container.AddRange(ThingsToAdd(CultsDefOf.BlocksMarble, Rand.Range(-100, 200)));
                 container.AddRange(ThingsToAdd(ThingDef.Named("BlocksGranite"), Rand.Range(-100, 200)));
                 container.AddRange(ThingsToAdd(ThingDefOf.Plasteel, Rand.Range(-20, 20)));
                 container.AddRange(ThingsToAdd(ThingDefOf.Steel, Rand.Range(-100, 200)));
@@ -256,8 +256,8 @@ namespace CultOfCthulhu
                 container.AddRange(ThingsToAdd(ThingDefOf.Component, Rand.Range(6, 20))); //Original 6-20
                 container.AddRange(ThingsToAdd(ThingDefOf.Plasteel, Rand.Range(10, 30))); //Original 50-150
                 container.AddRange(ThingsToAdd(ThingDefOf.Gold, Rand.Range(10, 20))); //Original 100-300
-                container.AddRange(ThingsToAdd(CultsDefOfs.Neutroamine, Rand.Range(5, 20))); //Original 25-100
-                container.AddRange(ThingsToAdd(CultsDefOfs.Penoxycyline, Rand.Range(-25, 25))); //Original (0)
+                container.AddRange(ThingsToAdd(CultsDefOf.Neutroamine, Rand.Range(5, 20))); //Original 25-100
+                container.AddRange(ThingsToAdd(CultsDefOf.Penoxycyline, Rand.Range(-25, 25))); //Original (0)
                 container.AddRange(ThingsToAdd(ThingDefOf.GlitterworldMedicine, Rand.Range(-10, 4))); //Original -5 - 4
                 container.AddRange(ThingsToAdd(ThingDef.Named("Telescope"), Rand.Range(-3, 2))); //Original -2 - 2
                 //AddThingsToContainerByTag(container, "Television", Rand.Range(-2, 2)); //Original -2~2

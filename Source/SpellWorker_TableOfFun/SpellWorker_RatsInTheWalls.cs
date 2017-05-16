@@ -94,7 +94,7 @@ namespace CultOfCthulhu
                     map.terrainGrid.RemoveTopLayer(intVec, false);
 
                 //Spawn the rat
-                Cthulhu.Utility.SpawnPawnsOfCountAt(CultsDefOfs.Rat, intVec, map, Rand.Range(1, 5), null, false, true);
+                Cthulhu.Utility.SpawnPawnsOfCountAt(CultsDefOf.Rat, intVec, map, Rand.Range(1, 5), null, false, true);
                 
                 num++;
             }

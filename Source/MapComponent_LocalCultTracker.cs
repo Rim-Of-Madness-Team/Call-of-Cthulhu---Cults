@@ -158,8 +158,8 @@ namespace CultOfCthulhu
             {
                 if (antiCultist == null) continue;
                 if (!Cthulhu.Utility.IsActorAvailable(antiCultist)) continue;
-                antiCultist.needs.mood.thoughts.memories.TryGainMemory(CultsDefOfs.Cults_MidnightInquisitionThought);
-                Job J = new Job(CultsDefOfs.Cults_MidnightInquisition, antiCultist, preacher);
+                antiCultist.needs.mood.thoughts.memories.TryGainMemory(CultsDefOf.Cults_MidnightInquisitionThought);
+                Job J = new Job(CultsDefOf.Cults_MidnightInquisition, antiCultist, preacher);
                 //antiCultist.MentalState.ForceHostileTo(Faction.OfPlayer);
                 antiCultist.jobs.TryTakeOrderedJob(J);
                 //antiCultist.jobs.EndCurrentJob(JobCondition.InterruptForced);
@@ -310,11 +310,11 @@ namespace CultOfCthulhu
                 case CultSeedState.FinishedSeeing:
                     return;
                 case CultSeedState.NeedSeeing:
-                    CanDoJob(CultsDefOfs.Cults_Investigate, CurrentSeedPawn, CurrentSeedTarget);
+                    CanDoJob(CultsDefOf.Cults_Investigate, CurrentSeedPawn, CurrentSeedTarget);
                     return;
 
                 case CultSeedState.NeedWriting:
-                    CanDoJob(CultsDefOfs.Cults_WriteTheBook, CurrentSeedPawn);
+                    CanDoJob(CultsDefOf.Cults_WriteTheBook, CurrentSeedPawn);
                     return;
                 case CultSeedState.FinishedWriting:
                 case CultSeedState.NeedTable:
@@ -338,7 +338,7 @@ namespace CultOfCthulhu
         {
             if (pawn == null) return false;
             
-            if (ModSettings_Data.cultsForcedInvestigation == false && job != CultsDefOfs.Cults_WriteTheBook) return false;
+            if (ModSettings_Data.cultsForcedInvestigation == false && job != CultsDefOf.Cults_WriteTheBook) return false;
 
             //Toxic Fallout? Let's not force the colonist to do this job.
             if (this.map.GameConditionManager.GetActiveCondition(GameConditionDefOf.ToxicFallout) != null) return false;

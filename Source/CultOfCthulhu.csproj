@@ -38,7 +38,7 @@
     </Reference>
     <Reference Include="AbilityUser, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\mattw\Downloads\CompAbilityUser-A16\CompAbilityUser-A16\Assemblies\AbilityUser.dll</HintPath>
+      <HintPath>..\..\..\CompAbilityUser\Assemblies\AbilityUser.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -103,7 +103,6 @@
     <Compile Include="CthulhuUtility.cs" />
     <Compile Include="Cults_Screen_Credits.cs" />
     <Compile Include="CultTableOfFun.cs" />
-    <Compile Include="DetourAttribute.cs" />
     <Compile Include="PawnFlyer\Dialog_LoadTransportersPawn.cs" />
     <Compile Include="IncidentWorker_CultSeed.cs" />
     <Compile Include="InteractionWorker_DangerPreach.cs" />
@@ -120,7 +119,7 @@
     <Compile Include="IncidentWorker_CultSeed_NightmareTree.cs" />
     <Compile Include="JobDriver_AttendSacrifice.cs" />
     <Compile Include="Building_SacrificialAltar.cs" />
-    <Compile Include="CultsDefOfs.cs" />
+    <Compile Include="CultsDefOf.cs" />
     <Compile Include="CosmicEntity.cs" />
     <Compile Include="JobDriver_AttendWorship.cs" />
     <Compile Include="JobDriver_HoldSacrifice.cs" />
