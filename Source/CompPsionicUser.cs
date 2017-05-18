@@ -24,7 +24,7 @@ namespace CultOfCthulhu
                         this.Initialize();
                         this.AddPawnAbility(CultsDefOf.Cults_PsionicBlast);
                         this.AddPawnAbility(CultsDefOf.Cults_PsionicShock);
-                        this.AddPawnAbility(CultsDefOf.Cults_PsionicFlame);
+                        this.AddPawnAbility(CultsDefOf.Cults_PsionicBurn);
                     }
                 }
             }

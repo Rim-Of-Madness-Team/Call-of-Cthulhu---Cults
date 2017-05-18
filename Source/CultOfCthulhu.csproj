@@ -67,6 +67,9 @@
     <Compile Include="CompPsionicUser.cs" />
     <Compile Include="Cult.cs" />
     <Compile Include="CultInfluence.cs" />
+    <Compile Include="DamageWorker_PsionicBlast.cs" />
+    <Compile Include="DamageWorker_PsionicBurn.cs" />
+    <Compile Include="DamageWorker_PsionicShock.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="ModSettings.cs" />
     <Compile Include="IncidentWorker_MakeCultMapCondition.cs" />

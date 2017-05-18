@@ -7,11 +7,11 @@
 
   <DamageDef ParentName="PsionicInjuryBase">
     <defName>Cults_Psionic</defName>
-    <label>pscychic attack</label>
+    <label>psionic attack</label>
     <externalViolence>true</externalViolence>	
     <makesBlood>false</makesBlood>
     <harmsHealth>false</harmsHealth>	
-    <deathMessage>{0} has died from brain death.</deathMessage>
+    <deathMessage>{0}'s head exploded.</deathMessage>
     <hediff>Cults_Psionic</hediff>
     <impactSoundType>Electric</impactSoundType>
     <armorCategory>Electric</armorCategory>

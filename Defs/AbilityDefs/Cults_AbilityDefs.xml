@@ -15,7 +15,7 @@
    <thingClass>AbilityUser.FlyingObject</thingClass>
    <label>flying object</label>
    <graphicData>
-		<texPath>UI/ForceUser/ForcePull</texPath>
+		<texPath>UI/Icons/Commands/PsionicBlast</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
    <projectile>
@@ -33,13 +33,46 @@
    <thingClass>AbilityUser.Projectile_Ability</thingClass>
    <label>psionic blast</label>
    <graphicData>
-		<texPath>UI/Icons/PsionicBlast</texPath>
+		<texPath>UI/Icons/Commands/PsionicBlast</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
    <projectile>
 		<flyOverhead>true</flyOverhead>
-		<damageDef>Stun</damageDef>
-		<damageAmountBase>0</damageAmountBase>
+		<damageDef>Cults_PsionicBlastDamage</damageDef>
+		<damageAmountBase>1</damageAmountBase>
+		<speed>9999</speed>
+   </projectile>
+   <HealFailChance>0.1</HealFailChance>
+ </ThingDef>
+ 
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="Cults_PPsionicShock">
+   <defName>Cults_PPsionicShock</defName>
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
+   <label>psionic blast</label>
+   <graphicData>
+		<texPath>UI/Icons/Commands/PsionicShock</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>true</flyOverhead>
+		<damageDef>Cults_PsionicShockDamage</damageDef>
+		<damageAmountBase>1</damageAmountBase>
+		<speed>9999</speed>
+   </projectile>
+   <HealFailChance>0.1</HealFailChance>
+ </ThingDef>
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="Cults_PPsionicBurn">
+   <defName>Cults_PPsionicBurn</defName>
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
+   <label>psionic burn</label>
+   <graphicData>
+		<texPath>UI/Icons/Commands/PsionicBurn</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>true</flyOverhead>
+		<damageDef>Cults_PsionicBurnDamage</damageDef>
+		<damageAmountBase>1</damageAmountBase>
 		<speed>9999</speed>
    </projectile>
    <HealFailChance>0.1</HealFailChance>
@@ -64,20 +97,13 @@
 		<abilityDef>Cults_PsionicBlast</abilityDef>
 		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>600.0</SecondsToRecharge>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>Pawn_Mech_Scyther_Call</soundCast>
+        <soundCast>Cults_PsionicCastSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-		<extraDamages>
-		  <li>
-		    <damage>5</damage>
-			<damageDef>Crush</damageDef>
-			<chance>0.5</chance>
-		  </li>
-		</extraDamages>
 	    <targetParams>
 		  <canTargetPawns>true</canTargetPawns>
 		  <canTargetBuildings>false</canTargetBuildings>
@@ -100,24 +126,17 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Cults_PPsionicBlast</projectileDef>	
+        <projectileDef>Cults_PPsionicShock</projectileDef>	
 		<abilityDef>Cults_PsionicShock</abilityDef>
 		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>600.0</SecondsToRecharge>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>Pawn_Mech_Scyther_Call</soundCast>
+        <soundCast>Cults_PsionicCastSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-		<extraDamages>
-		  <li>
-		    <damage>5</damage>
-			<damageDef>Crush</damageDef>
-			<chance>0.5</chance>
-		  </li>
-		</extraDamages>
 	    <targetParams>
 		  <canTargetPawns>true</canTargetPawns>
 		  <canTargetBuildings>false</canTargetBuildings>
@@ -128,9 +147,9 @@
   </ThingDef>  
   
    <ThingDef Class="AbilityUser.AbilityDef" ParentName="BaseAbility">
-    <defName>Cults_PsionicFlame</defName>
-    <label>Psionic Flame</label>
-    <uiIconPath>UI/Icons/Commands/PsionicFlame</uiIconPath>
+    <defName>Cults_PsionicBurn</defName>
+    <label>Psionic Burn</label>
+    <uiIconPath>UI/Icons/Commands/PsionicBurn</uiIconPath>
     <description>Starts a fire on the target.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -140,20 +159,20 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Cults_PPsionicBlast</projectileDef>	
-		<abilityDef>Cults_PsionicFlame</abilityDef>
+        <projectileDef>Cults_PPsionicBurn</projectileDef>	
+		<abilityDef>Cults_PsionicBurn</abilityDef>
 		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>600.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>Pawn_Mech_Scyther_Call</soundCast>
+        <soundCast>Cults_PsionicCastSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<extraDamages>
 		  <li>
-		    <damage>5</damage>
+		    <damage>8</damage>
 			<damageDef>Flame</damageDef>
 			<chance>0.5</chance>
 		  </li>

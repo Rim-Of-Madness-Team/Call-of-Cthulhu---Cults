@@ -30,9 +30,10 @@ namespace CultOfCthulhu
     {
         // ============= UNSORTED ============
 
+        public static DamageDef Cults_Psionic;
         public static AbilityDef Cults_PsionicBlast;
         public static AbilityDef Cults_PsionicShock;
-        public static AbilityDef Cults_PsionicFlame;
+        public static AbilityDef Cults_PsionicBurn;
         public static RoomRoleDef Cults_Temple;
         public static ThingDef Cults_ForbiddenKnowledgeCenter;
         public static LetterDef Cults_StandardMessage;

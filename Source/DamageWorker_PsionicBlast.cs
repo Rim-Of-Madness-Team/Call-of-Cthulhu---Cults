@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Verse;
+using RimWorld;
+using AbilityUser;
+using UnityEngine;
 
 namespace CultOfCthulhu
 {
-    public class DamageWorker_PsionicBlast : DamageWorker
+    class DamageWorker_PsionicBlast : DamageWorker
     {
-        public Vector3 PushResult(Thing thingToPush, int pushDist, out bool collision)
+        public Vector3 PushResult(Thing thingToPush, Thing Caster, int pushDist, out bool collision)
         {
             Vector3 origin = thingToPush.TrueCenter();
             Vector3 result = origin;
@@ -38,30 +41,25 @@ namespace CultOfCthulhu
             return result;
         }
 
-        public void PushEffect(Thing target, int distance, bool damageOnCollision = false)
+        public void PushEffect(Thing target, Thing instigator, int distance, bool damageOnCollision = false)
         {
+            Pawn Caster = instigator as Pawn;
             if (target != null && target is Pawn)
             {
                 bool applyDamage;
-                Vector3 loc = PushResult(target, distance, out applyDamage);
-                if (((Pawn)target).RaceProps.Humanlike) ((Pawn)target).needs.mood.thoughts.memories.TryGainMemory(ThoughtDef.Named("PJ_ThoughtPush"), null);
-                FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
+                Vector3 loc = PushResult(target, Caster, distance, out applyDamage);
+                //if (((Pawn)target).RaceProps.Humanlike) ((Pawn)target).needs.mood.thoughts.memories.TryGainMemory(ThoughtDef.Named("PJ_ThoughtPush"), null);
+                FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("Cults_PFlyingObject"), target.Position, target.Map);
                 if (applyDamage && damageOnCollision) flyingObject.Launch(Caster, new LocalTargetInfo(loc.ToIntVec3()), target, new DamageInfo(DamageDefOf.Blunt, Rand.Range(8, 10)));
                 else flyingObject.Launch(Caster, new LocalTargetInfo(loc.ToIntVec3()), target);
             }
         }
 
-        public override void ApprenticeEffect(Thing target)
+
+        public override float Apply(DamageInfo dinfo, Thing victim)
         {
-            PushEffect(target, 8);
-        }
-        public override void AdeptEffect(Thing target)
-        {
-            PushEffect(target, 10);
-        }
-        public override void MasterEffect(Thing target)
-        {
-            PushEffect(target, 12, true);
+            PushEffect(victim, dinfo.Instigator, Rand.Range(5, 8), true);
+            return 0f;
         }
     }
 }

@@ -9,9 +9,11 @@ namespace CultOfCthulhu
 {
     public class HediffComp_SanityLoss : HediffComp_SeverityPerDay
     {
-        public override void CompPostTick()
+
+        public override void CompPostTick(ref float severityAdjustment)
         {
-            base.CompPostTick();
+
+            base.CompPostTick(ref severityAdjustment);
             if (base.Pawn != null)
             {
                 if (base.Pawn.RaceProps != null)
@@ -32,6 +34,7 @@ namespace CultOfCthulhu
             }
         }
 
+        
         public void MakeSane()
         {
             this.parent.Severity -= 1f;

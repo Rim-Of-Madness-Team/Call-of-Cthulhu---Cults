@@ -46,7 +46,7 @@ namespace CultOfCthulhu
             for (int i = 0; i < listeners.Count; i++)
             {
                     pawn = listeners[i];
-                    if (pawn.Faction == Faction.OfPlayer || (!pawn.Faction.HostileTo(Faction.OfPlayer)))
+                    if (pawn.Faction == Faction.OfPlayer || (!pawn.Faction.HostileTo(Faction.OfPlayer)) || pawn.guest.IsPrisoner)
                     {
                         Cthulhu.Utility.ApplySanityLoss(pawn, Rand.Range(0.2f, 0.8f));
                     }
