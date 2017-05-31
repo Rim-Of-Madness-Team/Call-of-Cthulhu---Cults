@@ -125,6 +125,21 @@
       <Gold>5</Gold>
       <Steel>4</Steel>
     </costList>
+	<building>
+      <preventDeterioration>true</preventDeterioration>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>Weapons</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>	
     <comps>
       <li Class="CompProperties_Explosive">
         <explosiveRadius>2.66</explosiveRadius>

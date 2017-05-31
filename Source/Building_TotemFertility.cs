@@ -90,7 +90,9 @@ namespace CultOfCthulhu
                 TicksUntilDisappearing.ToStringTicksToPeriodVagueMax()
                 }));
             }
-            return stringBuilder.ToString();
+            string result = stringBuilder.ToString();
+            result = result.TrimEndNewlines();
+            return result;
         }
 
         public override void SpawnSetup(Map map, bool bla)

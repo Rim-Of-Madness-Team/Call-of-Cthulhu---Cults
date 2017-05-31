@@ -61,7 +61,7 @@ namespace CultOfCthulhu
             {
                 if (Cthulhu.Utility.IsCosmicHorrorsLoaded())
                 {
-                    Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("DeepOne"), parms.faction);
+                    Pawn pawn = PawnGenerator.GeneratePawn(PawnKindDef.Named("ROM_DeepOne"), parms.faction);
                     if (pawn == null) continue;
                     list.Add(pawn);
                 }
@@ -99,12 +99,12 @@ namespace CultOfCthulhu
         {
             if (Cthulhu.Utility.IsCosmicHorrorsLoaded())
             {
-                parms.faction = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("DeepOne"));
+                parms.faction = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("ROM_DeepOne"));
             }
             else
             {
                 Messages.Message("UsingInsectoidsInstead".Translate(), MessageSound.Negative);
-                parms.faction = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("DeepOneAlt"));
+                parms.faction = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("ROM_DeepOneAlt"));
             }
             return parms.faction != null;
         }
@@ -135,7 +135,7 @@ namespace CultOfCthulhu
 
             //If they have the sign of dagon, then use it.
             IntVec3 chillSpot2 = IntVec3.Invalid;
-            Building dagonSign = map.listerBuildings.allBuildingsColonist.FirstOrDefault((Building bld) => bld.def.defName.Equals("SignOfDagon"));
+            Building dagonSign = map.listerBuildings.allBuildingsColonist.FirstOrDefault((Building bld) => bld.def == CultsDefOf.Cults_SignOfDagon);
             if (dagonSign != null) chillSpot2 = dagonSign.Position;
             if (chillSpot2 != null) chillSpot = chillSpot2;
 

@@ -47,7 +47,7 @@ namespace Cthulhu
     static public class Utility
     {
         public enum SanLossSev { None = 0, Hidden, Initial, Minor, Major, Extreme };
-        public const string SanityLossDef = "CosmicHorror_SanityLoss";
+        public const string SanityLossDef = "ROM_SanityLoss";
         public const string AltSanityLossDef = "Cults_SanityLoss";
 
         public static bool modCheck = false;

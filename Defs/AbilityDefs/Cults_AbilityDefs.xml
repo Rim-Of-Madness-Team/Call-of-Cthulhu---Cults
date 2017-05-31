@@ -97,7 +97,7 @@
 		<abilityDef>Cults_PsionicBlast</abilityDef>
 		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <SecondsToRecharge>180.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
@@ -130,7 +130,7 @@
 		<abilityDef>Cults_PsionicShock</abilityDef>
 		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <SecondsToRecharge>200.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>

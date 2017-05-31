@@ -33,98 +33,113 @@ namespace CultOfCthulhu
         {
             GUI.BeginGroup(rect);
 
-            float cultLabelWidth = Text.CalcSize(CultTracker.Get.PlayerCult.name).x + 15;
-
-            //Headings
-            Rect rect1 = new Rect(rect);
-            rect1 = rect.ContractedBy(14f);
-            rect1.height = 30f;
-
-            //Unnamed Temple
-            Text.Font = GameFont.Medium;
-            Widgets.Label(rect1, altar.RoomName);
-            Text.Font = GameFont.Small;
-
-            //Rename Icon
-            ITab_AltarCardUtility.DrawRename(altar);
-            Rect rect2 = new Rect(rect1);
-            rect2.yMin = rect1.yMax + 10;
-            rect2.height = 25f;
-            rect2.width = cultLabelWidth + 5;
-
-            //Esoteric Order of Dagon
-            Widgets.Label(rect2, CultTracker.Get.PlayerCult.name);
-            if (Mouse.IsOver(rect2))
+            if (CultTracker.Get.PlayerCult != null)
             {
-                Widgets.DrawHighlight(rect2);
-            }
-            if (Mouse.IsOver(rect2) && Event.current.type == EventType.MouseDown)
-            {
-                Find.WindowStack.Add(new Dialog_RenameCult(altar.Map));
-            }
-            Widgets.DrawLineHorizontal(rect2.x - 10, rect2.yMax, rect.width - 15f);
-            //---------------------------------------------------------------------
+                float cultLabelWidth = Text.CalcSize(CultTracker.Get.PlayerCult.name).x + 15;
 
-            Rect rectMain = new Rect(0 + 15f, 0 + 30f, TempleCardSize.x, ITab_AltarSacrificesCardUtility.ButtonSize * 1.15f);
-            
-            //Deity -> Cthulhu
-            Rect rect4 = rectMain;
-            rect4.yMin = rectMain.yMax + 5f;
-            rect4.y = rectMain.yMax + 20f;
-            rect4.x += 5f;
-            rect4.width = ITab_AltarSacrificesCardUtility.ColumnSize;
-            rect4.height = ITab_AltarSacrificesCardUtility.ButtonSize;
-            Widgets.Label(rect4, "Deity".Translate() + ": ");
-            rect4.xMin = rect4.center.x;
-            string label4 = DeityLabel(altar);
-            if (Widgets.ButtonText(rect4, label4, true, false, true))
-            {
-                ITab_AltarWorshipCardUtility.OpenDeitySelectMenu(altar);
-            }
-            TooltipHandler.TipRegion(rect4, "DeityDesc".Translate());
+                //Headings
+                Rect rect1 = new Rect(rect);
+                rect1 = rect.ContractedBy(14f);
+                rect1.height = 30f;
 
-            //Cthulhu - He who waits dreaming.
-            ITab_AltarCardUtility.DrawDeity(altar.tempCurrentWorshipDeity, rect4, null, -30f);
-            
-            //Preacher
-            Rect rect5 = rect4;
-            rect5.y += ITab_AltarSacrificesCardUtility.ButtonSize + 15f;
-            //rect5.y = rect4.yMax + 30f;
-            rect5.x -= (rect4.x - 5);
-            rect5.x += 15f;
-            rect5.width = ITab_AltarSacrificesCardUtility.ColumnSize;
-            Widgets.Label(rect5, "Preacher".Translate() + ": ");
-            rect5.xMin = rect5.center.x;
-            string label2 = PreacherLabel(altar);
-            if (Widgets.ButtonText(rect5, label2, true, false, true))
-            {
-                ITab_AltarWorshipCardUtility.OpenPreacherSelectMenu(altar);
-            }
-            TooltipHandler.TipRegion(rect5, "PreacherDesc".Translate());
+                //Unnamed Temple
+                Text.Font = GameFont.Medium;
+                Widgets.Label(rect1, altar.RoomName);
+                Text.Font = GameFont.Small;
 
-            Rect rect6 = rect5;
-            rect6.y += ITab_AltarSacrificesCardUtility.ButtonSize + ITab_AltarSacrificesCardUtility.SpacingOffset;
-            rect6.height = ITab_AltarSacrificesCardUtility.ButtonSize;
-            rect6.width = ITab_AltarSacrificesCardUtility.ColumnSize;
-            rect6.x -= (rect5.x - 5);
-            rect6.x += 15f;
-            bool disabled = (altar.tempCurrentWorshipDeity == null);
-            Widgets.CheckboxLabeled(rect6.BottomHalf(), "MorningSermons".Translate(), ref altar.OptionMorning, disabled);
-            if (Mouse.IsOver(rect6) && Event.current.type == EventType.MouseDown && !disabled)
-            {
-                altar.TryChangeWorshipValues(Building_SacrificialAltar.ChangeWorshipType.MorningWorship, altar.OptionMorning);
+                //Rename Icon
+                ITab_AltarCardUtility.DrawRename(altar);
+                Rect rect2 = new Rect(rect1);
+                rect2.yMin = rect1.yMax + 10;
+                rect2.height = 25f;
+                rect2.width = cultLabelWidth + 5;
+
+                //Esoteric Order of Dagon
+                Widgets.Label(rect2, CultTracker.Get.PlayerCult.name);
+                if (Mouse.IsOver(rect2))
+                {
+                    Widgets.DrawHighlight(rect2);
+                }
+                if (Mouse.IsOver(rect2) && Event.current.type == EventType.MouseDown)
+                {
+                    Find.WindowStack.Add(new Dialog_RenameCult(altar.Map));
+                }
+                Widgets.DrawLineHorizontal(rect2.x - 10, rect2.yMax, rect.width - 15f);
+                //---------------------------------------------------------------------
+
+                Rect rectMain = new Rect(0 + 15f, 0 + 30f, TempleCardSize.x, ITab_AltarSacrificesCardUtility.ButtonSize * 1.15f);
+
+                //Deity -> Cthulhu
+                Rect rect4 = rectMain;
+                rect4.yMin = rectMain.yMax + 5f;
+                rect4.y = rectMain.yMax + 20f;
+                rect4.x += 5f;
+                rect4.width = ITab_AltarSacrificesCardUtility.ColumnSize;
+                rect4.height = ITab_AltarSacrificesCardUtility.ButtonSize;
+                Widgets.Label(rect4, "Deity".Translate() + ": ");
+                rect4.xMin = rect4.center.x;
+                string label4 = DeityLabel(altar);
+                if (Widgets.ButtonText(rect4, label4, true, false, true))
+                {
+                    ITab_AltarWorshipCardUtility.OpenDeitySelectMenu(altar);
+                }
+                TooltipHandler.TipRegion(rect4, "DeityDesc".Translate());
+
+                //Cthulhu - He who waits dreaming.
+                ITab_AltarCardUtility.DrawDeity(altar.tempCurrentWorshipDeity, rect4, null, -30f);
+
+                //Preacher
+                Rect rect5 = rect4;
+                rect5.y += ITab_AltarSacrificesCardUtility.ButtonSize + 15f;
+                //rect5.y = rect4.yMax + 30f;
+                rect5.x -= (rect4.x - 5);
+                rect5.x += 15f;
+                rect5.width = ITab_AltarSacrificesCardUtility.ColumnSize;
+                Widgets.Label(rect5, "Preacher".Translate() + ": ");
+                rect5.xMin = rect5.center.x;
+                string label2 = PreacherLabel(altar);
+                if (Widgets.ButtonText(rect5, label2, true, false, true))
+                {
+                    ITab_AltarWorshipCardUtility.OpenPreacherSelectMenu(altar);
+                }
+                TooltipHandler.TipRegion(rect5, "PreacherDesc".Translate());
+
+                Rect rect6 = rect5;
+                rect6.y += ITab_AltarSacrificesCardUtility.ButtonSize + ITab_AltarSacrificesCardUtility.SpacingOffset;
+                rect6.height = ITab_AltarSacrificesCardUtility.ButtonSize;
+                rect6.width = ITab_AltarSacrificesCardUtility.ColumnSize;
+                rect6.x -= (rect5.x - 5);
+                rect6.x += 15f;
+                bool disabled = (altar.tempCurrentWorshipDeity == null);
+                Widgets.CheckboxLabeled(rect6.BottomHalf(), "MorningSermons".Translate(), ref altar.OptionMorning, disabled);
+                if (Mouse.IsOver(rect6) && Event.current.type == EventType.MouseDown && !disabled)
+                {
+                    altar.TryChangeWorshipValues(Building_SacrificialAltar.ChangeWorshipType.MorningWorship, altar.OptionMorning);
+                }
+                Rect rect7 = rect6;
+                rect7.y += ITab_AltarSacrificesCardUtility.ButtonSize + ITab_AltarSacrificesCardUtility.SpacingOffset;
+                rect7.height = ITab_AltarSacrificesCardUtility.ButtonSize;
+                Widgets.CheckboxLabeled(rect7.TopHalf(), "EveningSermons".Translate(), ref altar.OptionEvening, disabled);
+                if (Mouse.IsOver(rect7) && Event.current.type == EventType.MouseDown && !disabled)
+                {
+                    altar.TryChangeWorshipValues(Building_SacrificialAltar.ChangeWorshipType.EveningWorship, altar.OptionEvening);
+                }
+
+                TooltipHandler.TipRegion(rect6, "MorningSermonsDesc".Translate());
+                TooltipHandler.TipRegion(rect7, "EveningSermonsDesc".Translate());
+
             }
-            Rect rect7 = rect6;
-            rect7.y += ITab_AltarSacrificesCardUtility.ButtonSize + ITab_AltarSacrificesCardUtility.SpacingOffset;
-            rect7.height = ITab_AltarSacrificesCardUtility.ButtonSize;
-            Widgets.CheckboxLabeled(rect7.TopHalf(), "EveningSermons".Translate(), ref altar.OptionEvening, disabled);
-            if (Mouse.IsOver(rect7) && Event.current.type == EventType.MouseDown && !disabled)
+            else
             {
-                altar.TryChangeWorshipValues(Building_SacrificialAltar.ChangeWorshipType.EveningWorship, altar.OptionEvening);
+                Rect newRect = new Rect(rect);
+                newRect = newRect.ContractedBy(14f);
+                newRect.height = 30f;
+
+                Text.Font = GameFont.Medium;
+                Widgets.Label(newRect, "Cults_NoPlayerCultAvailable".Translate());
+                Text.Font = GameFont.Small;
             }
 
-            TooltipHandler.TipRegion(rect6, "MorningSermonsDesc".Translate());
-            TooltipHandler.TipRegion(rect7, "EveningSermonsDesc".Translate());
             GUI.EndGroup();
         }
         

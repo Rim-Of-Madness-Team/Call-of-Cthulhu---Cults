@@ -312,13 +312,13 @@ namespace CultOfCthulhu
                 Find.WindowStack.Add(new FloatMenu(list));
                 return true;
             }
-            if (Find.World.Impassable(target.Tile))
+            else // if (Find.World.Impassable(target.Tile))
             {
                 Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageSound.RejectInput);
                 return false;
             }
-            this.TryLaunch(target, PawnsArriveMode.Undecided, false);
-            return true;
+            //this.TryLaunch(target, PawnsArriveMode.Undecided, false);
+            //return true;
         }
 
         private void TryLaunch(GlobalTargetInfo target, PawnsArriveMode arriveMode, bool attackOnArrival)
@@ -368,6 +368,7 @@ namespace CultOfCthulhu
                 //pawnFlyerLeaving.Contents.innerContainer. //TryAddMany(innerContainer);
                 innerContainer.Clear();
                 compTransporter.CleanUpLoadingVars(map);
+                compTransporter.parent.DeSpawn();
                 pawnFlyerLeaving.Contents.innerContainer.TryAdd(compTransporter.parent);
                 GenSpawn.Spawn(pawnFlyerLeaving, compTransporter.parent.Position, map);
             }

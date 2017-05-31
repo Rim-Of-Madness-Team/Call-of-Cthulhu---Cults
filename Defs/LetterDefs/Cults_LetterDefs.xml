@@ -4,7 +4,7 @@
   <LetterDef>
     <defName>Cults_StandardMessage</defName>
     <color>(129, 0, 0)</color>
-    <flashColor>(150, 10, 10)</flashColor>
+    <flashColor>(36, 151, 115)</flashColor>
     <flashInterval>32</flashInterval>
     <arriveSound>Cults_LetterArrive</arriveSound>
   </LetterDef>

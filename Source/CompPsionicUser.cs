@@ -12,13 +12,18 @@ namespace CultOfCthulhu
     {
         public bool firstTick = false;
 
+        public override bool TryTransformPawn()
+        {
+            return IsPsionic;
+        }
+
         public void PostInitializeTick()
         {
-            if (this.abilityUser != null)
+            if (this.AbilityUser != null)
             {
-                if (this.abilityUser.Spawned)
+                if (this.AbilityUser.Spawned)
                 {
-                    if (this.abilityUser.story != null)
+                    if (this.AbilityUser.story != null)
                     {
                         firstTick = true;
                         this.Initialize();
@@ -32,9 +37,9 @@ namespace CultOfCthulhu
 
         public override void CompTick()
         {
-            if (abilityUser != null)
+            if (AbilityUser != null)
             {
-                if (abilityUser.Spawned)
+                if (AbilityUser.Spawned)
                 {
                     if (Find.TickManager.TicksGame > 200)
                     {
@@ -52,13 +57,13 @@ namespace CultOfCthulhu
         {
             get
             {
-                if (this.abilityUser != null)
+                if (this.AbilityUser != null)
                 {
-                    if (this.abilityUser.health != null)
+                    if (this.AbilityUser.health != null)
                     {
-                        if (this.abilityUser.health.hediffSet != null)
+                        if (this.AbilityUser.health.hediffSet != null)
                         {
-                            if (this.abilityUser.health.hediffSet.HasHediff(CultsDefOf.Cults_PsionicBrain)) return true;
+                            if (this.AbilityUser.health.hediffSet.HasHediff(CultsDefOf.Cults_PsionicBrain)) return true;
                         }
                     }
                 }

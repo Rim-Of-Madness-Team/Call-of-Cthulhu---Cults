@@ -4,6 +4,7 @@
 	<IncidentDef Name="SpellDef" Abstract="True">
 	  <category>Misc</category>
 	  <baseChance>0</baseChance>
+	  <letterDef>Cults_StandardMessage</letterDef>
 	</IncidentDef>
 
 	<!-- Ideal Spells -->

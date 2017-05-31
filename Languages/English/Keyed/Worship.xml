@@ -3,6 +3,10 @@
 
 <!-- 1.17.0 New Versioning System-->
 
+  <Cults_NoPlayerCultAvailable>No Player Cult Available</Cults_NoPlayerCultAvailable>
+  <Cults_Monstrous>Monstrous {0}</Cults_Monstrous>
+  <Cults_TransmogrifyMessage>{0}'s form has been enhanced.</Cults_TransmogrifyMessage>
+  <Cults_RatsMessage>Rats are bursting out from everywhere!</Cults_RatsMessage>
   <Cults_Spell>Spell</Cults_Spell>
   <Cults_SpellDesc>Choose an ideal result you would like from your sacrifice.</Cults_SpellDesc>
   <Cults_AutoForbidWarning>Note: This will auto-forbid on normal research.</Cults_AutoForbidWarning>

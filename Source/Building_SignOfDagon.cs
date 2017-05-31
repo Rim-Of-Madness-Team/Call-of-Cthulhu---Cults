@@ -30,12 +30,12 @@ namespace CultOfCthulhu
                     Faction f = null;
                     if (Cthulhu.Utility.IsCosmicHorrorsLoaded())
                     {
-                        f = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("DeepOne"));
+                        f = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("ROM_DeepOne"));
                     }
                     else
                     {
                         Messages.Message("Cosmic horrors mod is not loaded. Using insectoids instead.", MessageSound.Negative);
-                        f = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("DeepOneAlt"));
+                        f = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("ROM_DeepOneAlt"));
                     }
 
                     Lord lord = null;

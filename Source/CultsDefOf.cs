@@ -30,6 +30,7 @@ namespace CultOfCthulhu
     {
         // ============= UNSORTED ============
 
+        public static ThingDef Cults_SignOfDagon;
         public static DamageDef Cults_Psionic;
         public static AbilityDef Cults_PsionicBlast;
         public static AbilityDef Cults_PsionicShock;

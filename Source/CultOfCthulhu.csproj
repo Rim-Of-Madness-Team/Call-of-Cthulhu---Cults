@@ -36,9 +36,9 @@
     <Reference Include="0Harmony">
       <HintPath>..\..\..\Harmony1091\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="AbilityUser, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\CompAbilityUser\Assemblies\AbilityUser.dll</HintPath>
+    <Reference Include="AbilityUser">
+      <HintPath>..\..\JecsTools\Assemblies\AbilityUser.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -65,6 +65,7 @@
     <Compile Include="Building_TreasureChest.cs" />
     <Compile Include="Building_TreeOfMadness.cs" />
     <Compile Include="CompPsionicUser.cs" />
+    <Compile Include="CompTransmogrified.cs" />
     <Compile Include="Cult.cs" />
     <Compile Include="CultInfluence.cs" />
     <Compile Include="DamageWorker_PsionicBlast.cs" />
@@ -137,7 +138,6 @@
     <Compile Include="MapComponent_LocalCultTracker.cs" />
     <Compile Include="MapComponent_FertilityMods.cs" />
     <Compile Include="MapComponent_SacrificeTracker.cs" />
-    <Compile Include="MapComponent_TransmogrifyTracker.cs" />
     <Compile Include="GameCondition_AuroraEffect.cs" />
     <Compile Include="PawnFlyer\PawnFlyer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

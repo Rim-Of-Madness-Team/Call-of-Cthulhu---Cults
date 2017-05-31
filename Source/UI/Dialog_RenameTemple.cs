@@ -18,7 +18,7 @@ namespace CultOfCthulhu
             this.curName = altar.RoomName;
             this.map = altar.Map;
         }
-
+        
         protected override AcceptanceReport NameIsValid(string name)
         {
             AcceptanceReport result = base.NameIsValid(name);

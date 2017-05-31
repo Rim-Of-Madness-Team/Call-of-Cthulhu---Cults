@@ -80,7 +80,18 @@ namespace CultOfCthulhu
 
             }
         }
-        
+
+        public Pawn Transmogrify(Pawn pawn = null, bool loadMode = false)
+        {
+            //No pawn? Okay, find one.
+            if (pawn == null)
+                pawn = PetsToTransmogrify.RandomElement<Pawn>();
+
+            Messages.Message(newPawn.LabelShort + "'s form has been enhanced.", MessageSound.Benefit);
+
+            return newPawn;
+        }
+
         public IEnumerable<ThingDef_Transmogrified> TransmogrifyDefs
         {
             get
@@ -92,6 +103,7 @@ namespace CultOfCthulhu
             }
         }
 
+        /*
         public Pawn Transmogrify(Pawn pawn=null, bool loadMode=false)
         {
             //No pawn? Okay, find one.
@@ -135,7 +147,7 @@ namespace CultOfCthulhu
             
             return newPawn;
         }
-
+        */
         
 
         public void TransmogrifyRacialValues(ThingDef oldDef, ThingDef newDef)

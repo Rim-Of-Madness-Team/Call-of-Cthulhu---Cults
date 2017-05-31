@@ -355,10 +355,13 @@ namespace CultOfCthulhu
             {
                 List<Thing> tmpContainedThings = new List<Thing>();
                 //PawnFlyersTraveling.tmpContainedThing.Clear();
+
                 tmpContainedThings.AddRange(this.pods[i].innerContainer);
+                //this.pods[i].innerContainer.
                 for (int j = 0; j < tmpContainedThings.Count; j++)
                 {
                     this.pods[i].innerContainer.Remove(tmpContainedThings[j]);
+                    tmpContainedThings[j].holdingOwner = null;
                     Pawn pawn = tmpContainedThings[j] as Pawn;
                     PawnFlyer pawnFlyer = tmpContainedThings[j] as PawnFlyer;
                     if (pawn != null)

@@ -159,18 +159,21 @@ namespace CultOfCthulhu
 
         private void GroupLeftMap()
         {
+
             if (this.groupID < 0)
             {
                 Log.Error("Drop pod left the map, but its group ID is " + this.groupID);
                 this.Destroy(DestroyMode.Vanish);
                 return;
             }
+
             if (this.destinationTile < 0)
             {
                 Log.Error("Drop pod left the map, but its destination tile is " + this.destinationTile);
                 this.Destroy(DestroyMode.Vanish);
                 return;
             }
+
             Lord lord = FindLord(this.groupID, base.Map);
             if (lord != null)
             {
@@ -199,6 +202,7 @@ namespace CultOfCthulhu
                     pawnFlyerLeaving.Destroy(DestroyMode.Vanish);
                 }
             }
+
         }
 
         // RimWorld.TransporterUtility

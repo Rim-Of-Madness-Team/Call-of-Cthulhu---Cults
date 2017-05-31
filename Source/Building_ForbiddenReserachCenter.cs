@@ -78,7 +78,7 @@ namespace CultOfCthulhu
         public override string GetInspectString()
         {
             StringBuilder s = new StringBuilder();
-            s.AppendLine(base.GetInspectString());
+            s.Append(base.GetInspectString());
             //s.AppendLine();
             s.AppendLine("Cults_AutoForbidWarning".Translate());
             string result = s.ToString();

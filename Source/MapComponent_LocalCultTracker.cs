@@ -310,7 +310,7 @@ namespace CultOfCthulhu
                 case CultSeedState.FinishedSeeing:
                     return;
                 case CultSeedState.NeedSeeing:
-                    CanDoJob(CultsDefOf.Cults_Investigate, CurrentSeedPawn, CurrentSeedTarget);
+                    CanDoJob(CultsDefOf.Cults_Investigate, CurrentSeedPawn, CurrentSeedTarget, true);
                     return;
 
                 case CultSeedState.NeedWriting:
@@ -334,9 +334,10 @@ namespace CultOfCthulhu
             }
         }
 
-        public bool CanDoJob(JobDef job, Pawn pawn, Thing target = null)
+        public bool CanDoJob(JobDef job, Pawn pawn, Thing target = null, bool targetRequired = false)
         {
             if (pawn == null) return false;
+            if (target == null && targetRequired) return false;
             
             if (ModSettings_Data.cultsForcedInvestigation == false && job != CultsDefOf.Cults_WriteTheBook) return false;
 

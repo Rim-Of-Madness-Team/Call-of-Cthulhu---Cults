@@ -51,7 +51,7 @@
 	<defName>Entity_Shub</defName>
     <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
 	<label>Shub-Niggurath</label>
-	<version>6</version>
+	<version>7</version>
 	<description>The Black Goat of the Woods with a Thousand Young.</description>
 	<favorsOutdoorWorship>true</favorsOutdoorWorship>
     <symbol>Mote/Symbols/Shub</symbol>		
@@ -61,7 +61,7 @@
 		<li>Cults_SpellMotherOfGoats</li>
 	</tier1SpellDefs>
 	<tier2SpellDefs>
-		<li>Cults_SpellForbiddenKnowledge</li>	
+		<li>Cults_SpellTransmogrifyPets</li>	
 	</tier2SpellDefs>
 	<tier3SpellDefs>
 		<li>Cults_SpellWombBetweenWorlds</li>
