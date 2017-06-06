@@ -88,7 +88,7 @@ namespace CultOfCthulhu
         public override void Tick()
         {
             this.age++;
-            if (this.age > this.contents.openDelay)
+            if ((this?.contents?.openDelay ?? -1) > -1 && this.age > this.contents.openDelay)
             {
                 this.DismountAll();
             }

@@ -1058,6 +1058,7 @@ namespace CultOfCthulhu
         {
             if (preacher == null) return;
             TryGainTempleRoomThought(preacher);
+            CultUtility.AffectCultMindedness(preacher, 0.1f);
             ThoughtDef newThought = CultsDefOf.Cults_HeldSermon; // DefDatabase<ThoughtDef>.GetNamed("HeldSermon");
             if (newThought != null)
             {

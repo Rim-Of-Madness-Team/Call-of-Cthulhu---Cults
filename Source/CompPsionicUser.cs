@@ -73,7 +73,7 @@ namespace CultOfCthulhu
 
         public override void PostExposeData()
         {
-            Scribe_Values.Look<bool>(ref this.firstTick, "fistTick", false);
+            //Scribe_Values.Look<bool>(ref this.firstTick, "fistTick", false);
             base.PostExposeData();
         }
     }
