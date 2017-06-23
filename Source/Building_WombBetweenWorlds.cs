@@ -204,27 +204,7 @@ namespace CultOfCthulhu
 
         private bool TrySpawnPawn(out Pawn pawn, Map map)
         {
-            List<PawnKindDef> list = new List<PawnKindDef>();
-            if (Cthulhu.Utility.IsCosmicHorrorsLoaded())
-            {
-                list.Add(PawnKindDef.Named("DarkYoung"));
-            }
-            else
-            {
-                //    list.Add(PawnKindDefOf.Megascarab);
-                //    list.Add(PawnKindDefOf.Spelopede);
-                list.Add(PawnKindDefOf.Megaspider);
-            }
-            float curPoints = this.SpawnedPawnsPoints;
-            IEnumerable<PawnKindDef> source = from x in list
-                                              where curPoints + x.combatPower <= 500f
-                                              select x;
-            PawnKindDef kindDef;
-            if (!source.TryRandomElement(out kindDef))
-            {
-                pawn = null;
-                return false;
-            }
+            var kindDef = (Cthulhu.Utility.IsCosmicHorrorsLoaded() ? PawnKindDef.Named("ROM_DarkYoung") : PawnKindDefOf.Megaspider);
             pawn = PawnGenerator.GeneratePawn(kindDef, base.Faction);
             try
             {
@@ -243,6 +223,8 @@ namespace CultOfCthulhu
                     }
                     lord.AddPawn(pawn);
                 }
+
+                Messages.Message("Cults_NewDarkYoung".Translate(), pawn, MessageSound.Benefit);
                 return true;
             }
             catch
