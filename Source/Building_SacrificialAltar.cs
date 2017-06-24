@@ -1386,7 +1386,7 @@ namespace CultOfCthulhu
             }
             ChangeState(State.notinuse);
             //this.currentState = State.off;
-            Messages.Message("Cancelling sermon.", MessageSound.Negative);
+            Messages.Message("Cults_CancellingSermon".Translate(), MessageSound.Negative);
         }
 
 
@@ -1394,7 +1394,7 @@ namespace CultOfCthulhu
         {
             if (tempCurrentWorshipDeity == null)
             {
-                Messages.Message("Cannot worship without a deity selected.",MessageSound.RejectInput);
+                Messages.Message("Cults_NoWorshipWithoutDeity".Translate(), MessageSound.RejectInput);
                 //CancelWorship();
                 return;
             }
@@ -1429,10 +1429,9 @@ namespace CultOfCthulhu
                     case WorshipState.off:
                         if (IsSacrificing())
                         {
-                            string timeOfDay = "morning";
-                            if (Cthulhu.Utility.IsEvening(Map)) timeOfDay = "evening";
-                            Messages.Message("The " + timeOfDay + " sermon was cancelled. The congregation was offering up a sacrifice.", MessageSound.RejectInput);
-                            //CancelSacrifice();
+                            string timeOfDay = "Cults_Morning".Translate();
+                            if (Cthulhu.Utility.IsEvening(Map)) timeOfDay = "Cults_Evening".Translate();
+                            Messages.Message("Cults_MorningEveningSermonInterrupted".Translate(timeOfDay), MessageSound.RejectInput);
                         }
                         StartToWorship(forced);
                         return;
@@ -1440,7 +1439,7 @@ namespace CultOfCthulhu
                     case WorshipState.started:
                     case WorshipState.gathering:
                     case WorshipState.finishing:
-                        Messages.Message("Your enclave is already gathering for a sermon.", TargetInfo.Invalid, MessageSound.RejectInput);
+                        Messages.Message("Cults_AlreadyGatheringForASermon".Translate(), TargetInfo.Invalid, MessageSound.RejectInput);
                         return;
                 }
             }
@@ -1448,14 +1447,14 @@ namespace CultOfCthulhu
 
         private bool CanGatherToWorshipNow()
         {
-            if (tempPreacher == null) return RejectMessage("No preacher selected.");
-            if (tempCurrentWorshipDeity == null) return RejectMessage("No cosmic entity selected.");
-            if (tempPreacher.Drafted) return RejectMessage("Preacher is drafted");
-            if (tempPreacher.Dead || this.tempPreacher.Downed) return RejectMessage("Select an able-bodied preacher.", this.tempPreacher);
-            if (!tempPreacher.CanReserve(this)) return RejectMessage("The altar is reserved by something else.");
+            if (tempPreacher == null) return RejectMessage("Cults_NoPreacher".Translate());
+            if (tempCurrentWorshipDeity == null) return RejectMessage("Cults_NoCosmicEntity".Translate());
+            if (tempPreacher.Drafted) return RejectMessage("Cults_NoPreacherDrafted".Translate());
+            if (tempPreacher.Dead || this.tempPreacher.Downed) return RejectMessage("Cults_SelectAblebodiedPreacher".Translate(), this.tempPreacher);
+            if (!tempPreacher.CanReserve(this)) return RejectMessage("Cults_AltarIsReserved".Translate());
             foreach (var thing in Position.GetThingList(Map))
             {
-                if (thing is Corpse) return RejectMessage("The altar needs to be cleared first.");
+                if (thing is Corpse) return RejectMessage("Cults_AltarNeedsToBeCleared".Translate());
             }
             return true;
         }

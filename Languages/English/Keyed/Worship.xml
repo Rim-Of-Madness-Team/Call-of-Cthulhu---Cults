@@ -2,6 +2,20 @@
 <LanguageData>
 
 
+  <!-- 6/24/17 -->
+  <Cults_Morning>morning</Cults_Morning>
+  <Cults_Evening>evening</Cults_Evening>
+  <Cults_NoPreacher>No preacher selected.</Cults_NoPreacher>
+  <Cults_NoCosmicEntity>No cosmic entity selected.</Cults_NoCosmicEntity>
+  <Cults_NoPreacherDrafted>Preacher is drafted.</Cults_NoPreacherDrafted>
+  <Cults_SelectAblebodiedPreacher>Select an able-bodied preacher.</Cults_SelectAblebodiedPreacher>
+  <Cults_AltarIsReserved>The altar is reserved by something else.</Cults_AltarIsReserved>
+  <Cults_AltarNeedsToBeCleared>The altar is reserved by something else.</Cults_AltarNeedsToBeCleared>
+  <Cults_MorningEveningSermonInterrupted>The {0} sermon was cancelled. The congregation was offering up a sacrifice.</Cults_MorningEveningSermonInterrupted>
+  <Cults_AlreadyGatheringForASermon>Your enclave is already gathering for a sermon.</Cults_AlreadyGatheringForASermon>
+  <Cults_CancellingSermon>Cancelling sermon.</Cults_CancellingSermon>
+  <Cults_NoWorshipWithoutDeity>Cannot worship without a deity selected</Cults_NoWorshipWithoutDeity>
+
   <!-- 1.17.3.1 -->
   <Cults_NewDarkYoung>A new-born dark young has crawled forth from the womb between worlds.</Cults_NewDarkYoung>
 
