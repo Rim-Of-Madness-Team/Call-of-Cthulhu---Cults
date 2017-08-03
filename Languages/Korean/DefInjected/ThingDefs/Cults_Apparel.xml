@@ -3,9 +3,29 @@
 
     <Apparel_CultistRobes.description>깨달은 자들의 의복입니다.
 		</Apparel_CultistRobes.description>
-    <Apparel_CultistRobes.label>광신도의 예복</Apparel_CultistRobes.label>
+    <Apparel_CultistRobes.label>신도복</Apparel_CultistRobes.label>
 
-    <Apparel_SailorUniform.description>선원들을 위한 옷입니다.
+    <Apparel_ROMFurRobes.description>같은 신도복이지만, 추운 환경을 위해 만들어졌습니다.
+		</Apparel_ROMFurRobes.description>
+    <Apparel_ROMFurRobes.label>신도복 (모피)</Apparel_ROMFurRobes.label>
+
+    <Apparel_ROMWrapRobes.description>신도들은 이 신성한 덮개로 단순하거나 저급한 생물로 변장해 더 큰 호소력으로 설교할 수 있습니다. 또한 해와 더위에 취약한 지역에서 더 나은 설교를 할 수 있습니다.
+		</Apparel_ROMWrapRobes.description>
+    <Apparel_ROMWrapRobes.label>신도복 (덮개)</Apparel_ROMWrapRobes.label>
+
+    <Apparel_ROMCthulhuRobes.description>가벼운 촉수로 장식된 이 신도복은 니알라토텝(Nyarlathotep) 또는 크툴루(Cthulhu)의 신도가 선호합니다.
+		</Apparel_ROMCthulhuRobes.description>
+    <Apparel_ROMCthulhuRobes.label>신도복 (촉수)</Apparel_ROMCthulhuRobes.label>
+
+    <Apparel_ROMDagonRobes.description>다곤(Dagon), 혹은 하스터(Hastur)의 환심을 사기 위한 주문으로 치장된 신도복입니다.
+		</Apparel_ROMDagonRobes.description>
+    <Apparel_ROMDagonRobes.label>신도복 (전통)</Apparel_ROMDagonRobes.label>
+
+    <Apparel_ROMShubRobes.description>슈브 니구라스(Shub-Niggurath)를 따르는 신도들이 신성한 나뭇가지로 치장한 예복입니다.
+		</Apparel_ROMShubRobes.description>
+    <Apparel_ROMShubRobes.label>신도복 (드루이드)</Apparel_ROMShubRobes.label>
+
+    <Apparel_SailorUniform.description>선원을 위한 제복.
 		</Apparel_SailorUniform.description>
     <Apparel_SailorUniform.label>세일러 유니폼</Apparel_SailorUniform.label>
 
@@ -29,5 +49,6 @@
 
     <Apparel_SailorsCap.label>세일러 캡</Apparel_SailorsCap.label>
     <Apparel_SailorsCap.description>선원 모자</Apparel_SailorsCap.description>
+
 
 </LanguageData>

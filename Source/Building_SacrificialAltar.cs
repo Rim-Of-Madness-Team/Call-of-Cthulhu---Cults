@@ -1496,44 +1496,51 @@ namespace CultOfCthulhu
 
         public static void GetWorshipGroup(Building_SacrificialAltar altar, Map map, bool forced=false)
         {
-            Room room = altar.GetRoom();
-
+            var cultFaction = altar.Faction;
+            var room = altar.GetRoom();
+            
             if (room.Role != RoomRoleDefOf.PrisonBarracks && room.Role != RoomRoleDefOf.PrisonCell)
             {
                 List<Pawn> listeners = new List<Pawn>();
                 if (forced)
                 {
-                    listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead && !x.InMentalState &&
-                                                                                  x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
-                                                                                  x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
-                                                                                  x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
-                                                                                  x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
-                                                                                  x.CurJob.def != JobDefOf.Capture &&
-                                                                                  x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
-                                                                                  x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
-                                                                                  x.CurJob.def != JobDefOf.TendPatient && //Saving lives is more important
-                                                                                  x.CurJob.def != JobDefOf.BeatFire && //Fire?! This is more important
-                                                                                  //x.CurJob.def != JobDefOf.Lovin && //Not ready~~
-                                                                                  //x.CurJob.def != JobDefOf.LayDown && //They're resting
-                                                                                  x.CurJob.def != JobDefOf.FleeAndCower && //They're not cowering
-                                                                                  !x.InAggroMentalState);
+                    listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.Faction == cultFaction &&
+                                                                          x.RaceProps.intelligence == Intelligence.Humanlike &&
+                                                                         !x.Downed && !x.Dead &&
+                                                                         !x.InMentalState && !x.InAggroMentalState &&
+                                                                          x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
+                                                                          x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
+                                                                          x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
+                                                                          x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
+                                                                          x.CurJob.def != JobDefOf.Capture &&
+                                                                          x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
+                                                                          x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
+                                                                          x.CurJob.def != JobDefOf.TendPatient && //Saving lives is more important
+                                                                          x.CurJob.def != JobDefOf.BeatFire && //Fire?! This is more important
+                                                                        //x.CurJob.def != JobDefOf.Lovin && //Not ready~~
+                                                                        //x.CurJob.def != JobDefOf.LayDown && //They're resting
+                                                                          x.CurJob.def != JobDefOf.FleeAndCower //They're not cowering
+                                                                          );
                 }
                 else
                 {
-                    listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead && !x.InMentalState &&
-                                                                                  x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
-                                                                                  x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
-                                                                                  x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
-                                                                                  x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
-                                                                                  x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
-                                                                                  x.CurJob.def != JobDefOf.Capture && 
-                                                                                  x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
-                                                                                  x.CurJob.def != JobDefOf.TendPatient && //Saving lives is more important
-                                                                                  x.CurJob.def != JobDefOf.BeatFire && //Fire?! This is more important
-                                                                                  x.CurJob.def != JobDefOf.Lovin && //Not ready~~
-                                                                                  x.CurJob.def != JobDefOf.LayDown && //They're resting
-                                                                                  x.CurJob.def != JobDefOf.FleeAndCower && //They're not cowering
-                                                                                  !x.InAggroMentalState);
+                    listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.Faction == cultFaction &&
+                                                                          x.RaceProps.intelligence == Intelligence.Humanlike &&
+                                                                         !x.Downed && !x.Dead &&
+                                                                         !x.InMentalState && !x.InAggroMentalState &&
+                                                                          x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
+                                                                          x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
+                                                                          x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
+                                                                          x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
+                                                                          x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
+                                                                          x.CurJob.def != JobDefOf.Capture && 
+                                                                          x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
+                                                                          x.CurJob.def != JobDefOf.TendPatient && //Saving lives is more important
+                                                                          x.CurJob.def != JobDefOf.BeatFire && //Fire?! This is more important
+                                                                          x.CurJob.def != JobDefOf.Lovin && //Not ready~~
+                                                                          x.CurJob.def != JobDefOf.LayDown && //They're resting
+                                                                          x.CurJob.def != JobDefOf.FleeAndCower //They're not cowering
+                                                                         );
                 }
                 bool[] flag = new bool[listeners.Count];
                 for (int i = 0; i < listeners.Count; i++)

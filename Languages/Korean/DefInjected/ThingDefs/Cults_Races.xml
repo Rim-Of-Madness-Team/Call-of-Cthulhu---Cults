@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-    <BlackIbex.label>검은 염소</BlackIbex.label>
-    <BlackIbex.description>검은 염소는 거의 모든 기후에 사는 불가사의한 생물입니다. 그들은 알려진 바가 거의 없습니다. 다만 현실의 바깥에 존재하는 까만 염소 어머니(Black Goat Mother)로 알려진 외설적인 괴물의 자손으로써 전설로 이어져 내려오고 있습니다.</BlackIbex.description>
-    <BlackIbex.race.leatherLabel>black goathide</BlackIbex.race.leatherLabel>
+    <Cults_BlackGoat.label>검은 염소</Cults_BlackGoat.label>
+    <Cults_BlackGoat.description>검은 염소는 거의 모든 기후에 사는 불가사의한 생물입니다. 그들은 알려진 바가 거의 없습니다. 다만 현실의 바깥에 존재하는 까만 염소 어머니(Black Goat Mother)로 알려진 외설적인 괴물의 자손으로써 전설로 이어져 내려오고 있습니다.</Cults_BlackGoat.description>
+    <Cults_BlackGoat.race.leatherLabel>black goathide</Cults_BlackGoat.race.leatherLabel>
 
     <ReanimatedCorpse.label>부활한 시체</ReanimatedCorpse.label>
     <ReanimatedCorpse.description>과학적 실험, 신비로운 간섭, 또는 희극, 우연이라 할지라도, 이들은 죽음에 버려진 가련한 영혼입니다.</ReanimatedCorpse.description>

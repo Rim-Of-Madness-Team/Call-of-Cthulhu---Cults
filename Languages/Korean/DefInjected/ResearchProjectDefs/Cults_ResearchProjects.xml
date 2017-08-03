@@ -16,6 +16,9 @@
     <Forbidden_Sculptures.label>[종교] 조각품</Forbidden_Sculptures.label>
     <Forbidden_Sculptures.description>외부의 존재에게 헌정하기 위핸 신비로운 조각품을 디자인하고 창작할 수 있습니다.</Forbidden_Sculptures.description>
 
+    <Forbidden_Obelisks.label>기념비(Obelisk) 건설</Forbidden_Obelisks.label>
+    <Forbidden_Obelisks.description>신비한 오벨리스크의 설계 및 제작이 가능해집니다.</Forbidden_Obelisks.description>
+
     <Forbidden_Altar.label>[종교] 제단</Forbidden_Altar.label>
     <Forbidden_Altar.description>이 세상 너머의 존재에 대한 의식을 행하는 에배 제단을 만들 수 있습니다.</Forbidden_Altar.description>
 

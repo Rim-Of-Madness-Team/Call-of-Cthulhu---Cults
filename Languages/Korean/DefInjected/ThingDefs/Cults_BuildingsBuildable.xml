@@ -1,22 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-    <SignOfDagon.label>다곤의 계약진</SignOfDagon.label>
-    <SignOfDagon.Description>수호자가 배회할 수 있는 지점을 지정합니다. 이 마법의 원을 식민지 외부에 두는 것이 좋습니다. 그들이 도착하면, 보호자들은 죽을때까지 그 지점을 방어할 것입니다. 식민지 주민을 해당 지역에 가까이 가지 않도록 주의하세요.</SignOfDagon.Description>
+    <Cults_SignOfDagon.label>다곤의 계약</Cults_SignOfDagon.label>
+    <Cults_SignOfDagon.Description>깊은 수호자가 배회할 수 있는 지점을 지정합니다. 이 마법의 원을 식민지 외부에 두는 것이 좋습니다. 그들이 도착하면, 보호자들은 죽을때까지 그 지점을 방어할 것입니다. 정착지 주민을 해당 지역에 가까이 가지 않도록 주의하세요.</Cults_SignOfDagon.Description>
 
-    <PewLinkable.label>숭배자용 연결의자</PewLinkable.label>
-    <PewLinkable.description>숭배자들이 앉아 의식을 관찰할 수 있도록 설계된 연결 가능한 벤치입니다.</PewLinkable.description>
+    <Cults_PewLinkable.label>신도 의자</Cults_PewLinkable.label>
+    <Cults_PewLinkable.description>숭배자들이 앉아 의식을 관찰할 수 있도록 설계된 연결 가능한 벤치.</Cults_PewLinkable.description>
 
-    <ForbiddenKnowledgeCenter.label>금기의 지식 연구대</ForbiddenKnowledgeCenter.label>
-    <ForbiddenKnowledgeCenter.description>기괴한 상징, 노트 및 금지된 지식으로 덮여 있습니다. 숭배자는 여기에서 힘을 얻기 위해 일합니다. 장기간 일하게 되면 정신 상실이 초래하지만 보상은 그 가치가 있을 겁니다.</ForbiddenKnowledgeCenter.description>
+    <Cults_ForbiddenKnowledgeCenter.label>금기의 지식 연구대</Cults_ForbiddenKnowledgeCenter.label>
+    <Cults_ForbiddenKnowledgeCenter.description>기괴한 상징, 노트 및 금지된 지식으로 덮여 있습니다. 숭배자는 여기에서 힘을 얻기 위해 일합니다. 장기간 일하게 되면 정신 상실이 초래하지만 보상은 그 가치가 있을 겁니다.</Cults_ForbiddenKnowledgeCenter.description>
 
     <Cult_SacrificialAltar.label>종교 제단</Cult_SacrificialAltar.label>
-    <Cult_SacrificialAltar.Description>우주 외적 존재의 연설을 전달하기 위한 제단입니다.</Cult_SacrificialAltar.Description>
+    <Cult_SacrificialAltar.Description>우주 외적 존재의 연설을 전달하기 위한 숭고한 제단입니다.</Cult_SacrificialAltar.Description>
 
     <Cult_AnimalSacrificeAltar.label>번제단</Cult_AnimalSacrificeAltar.label>
-    <Cult_AnimalSacrificeAltar.Description>사소하고 강력한 존재를위해 제물을 바치는 제단입니다. 혈액을 채취하고 수집하도록 특별히 고안되었습니다.</Cult_AnimalSacrificeAltar.Description>
+    <Cult_AnimalSacrificeAltar.Description>강력한 존재를 위해 사소한 존재를 희생시키는 제단입니다. 혈액을 채취하고 수집할 수 있도록 특별히 고안되었습니다.</Cult_AnimalSacrificeAltar.Description>
 
-    <Cult_HumanSacrificeAltar.label>번제단(인간)</Cult_HumanSacrificeAltar.label>
-    <Cult_HumanSacrificeAltar.Description>사소하고 강력한 존재를위해 제물을 바치는 제단입니다. 혈액을 채취하고 수집하도록 특별히 고안되었습니다.</Cult_HumanSacrificeAltar.Description>
+    <Cult_HumanSacrificeAltar.label>번제단</Cult_HumanSacrificeAltar.label>
+    <Cult_HumanSacrificeAltar.Description>강력한 존재를 위해 사소한 존재를 희생시키는 제단입니다. 혈액을 채취하고 수집할 수 있도록 특별히 고안되었습니다.</Cult_HumanSacrificeAltar.Description>
+
+    <Cults_ObeliskConstructed_Red.label>붉은 기념비(obelisk)</Cults_ObeliskConstructed_Red.label>
+    <Cults_ObeliskConstructed_Red.description>하늘을 향해 직립해 있는 석상입니다. 그것은 특별히 붉은 축복의 기운을 받았습니다.</Cults_ObeliskConstructed_Red.description>
+
+    <Cults_ObeliskConstructed_Green.label>녹색 기념비(obelisk)</Cults_ObeliskConstructed_Green.label>
+    <Cults_ObeliskConstructed_Green.description>하늘을 향해 직립해 있는 석상입니다. 그것은 특별히 녹색의 축복의 기운을 받았습니다.</Cults_ObeliskConstructed_Green.description>
+
+    <Cults_ObeliskConstructed_Blue.label>푸른 기념비(obelisk)</Cults_ObeliskConstructed_Blue.label>
+    <Cults_ObeliskConstructed_Blue.description>하늘을 향해 직립해 있는 석상입니다. 그것은 특별히 푸른색의 축복의 기운을 받았습니다.</Cults_ObeliskConstructed_Blue.description>
+
+    <Cults_ObeliskConstructed_Yellow.label>노란 기념비(obelisk)</Cults_ObeliskConstructed_Yellow.label>
+    <Cults_ObeliskConstructed_Yellow.description>하늘을 향해 직립해 있는 석상입니다. 그것은 특별히 노란색의 축복의 기운을 받았습니다.</Cults_ObeliskConstructed_Yellow.description>
 
 </LanguageData>

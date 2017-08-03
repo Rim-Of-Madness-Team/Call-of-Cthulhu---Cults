@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-    <PruneAndRepair.reportString>TargetA를 가지치기 혹은 수리 중.</PruneAndRepair.reportString>
+    <Cults_PruneAndRepair.reportString>TargetA를 가지치기 혹은 수리 중.</Cults_PruneAndRepair.reportString>
 
-    <EnterTransporterPawn.reportString>TargetA에 들어가는 중.</EnterTransporterPawn.reportString>
+    <Cults_EnterTransporterPawn.reportString>TargetA에 들어가는 중.</Cults_EnterTransporterPawn.reportString>
 
-    <MidnightInquisition.reportString>스스로 일을 해결 중.</MidnightInquisition.reportString>
+    <Cults_MidnightInquisition.reportString>스스로 일을 해결 중.</Cults_MidnightInquisition.reportString>
 
-    <GiveOffering.reportString>TargetA에서 헌금 모으는 중.</GiveOffering.reportString>
+    <Cults_GiveOffering.reportString>TargetA에서 헌금 모으는 중.</Cults_GiveOffering.reportString>
 
-    <ReflectOnOffering.reportString>제안에 반영함.</ReflectOnOffering.reportString>
+    <Cults_ReflectOnOffering.reportString>제안에 반영함.</Cults_ReflectOnOffering.reportString>
 
-    <HoldSacrifice.reportString>번제에 참가하는 중.</HoldSacrifice.reportString>
+    <Cults_HoldSacrifice.reportString>번제에 참가하는 중.</Cults_HoldSacrifice.reportString>
 
-    <AttendSacrifice.reportString>번제에 참가하는 중.</AttendSacrifice.reportString>
+    <Cults_AttendSacrifice.reportString>번제에 참가하는 중.</Cults_AttendSacrifice.reportString>
 
-    <ReflectOnResult.reportString>결과를 반영함.</ReflectOnResult.reportString>
+    <Cults_ReflectOnResult.reportString>결과를 반영함.</Cults_ReflectOnResult.reportString>
 
-    <WaitTiedDown.reportString>구속됨.</WaitTiedDown.reportString>
+    <Cults_WaitTiedDown.reportString>구속됨.</Cults_WaitTiedDown.reportString>
 
-    <HoldWorship.reportString>설교를 듣고.</HoldWorship.reportString>
+    <Cults_HoldWorship.reportString>설교를 듣고.</Cults_HoldWorship.reportString>
 
-    <AttendWorship.reportString>설교를 들으며.</AttendWorship.reportString>
+    <Cults_AttendWorship.reportString>설교를 들으며.</Cults_AttendWorship.reportString>
 
-    <ReflectOnWorship.reportString>예배에 반영함.</ReflectOnWorship.reportString>
+    <Cults_ReflectOnWorship.reportString>예배에 반영함.</Cults_ReflectOnWorship.reportString>
 
-    <Investigate.reportString>TargetB 조사 중.</Investigate.reportString>
+    <Cults_Investigate.reportString>TargetB 조사 중.</Cults_Investigate.reportString>
 
-    <WriteTheBook.reportString>착란에 빠짐.</WriteTheBook.reportString>
+    <Cults_WriteTheBook.reportString>착란에 빠짐.</Cults_WriteTheBook.reportString>
 
 </LanguageData>

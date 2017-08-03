@@ -29,7 +29,7 @@ namespace CultOfCthulhu
         public static int resurrectionTicks = 10000;
 
         /// Unspeakable Oath Variables
-        public Stack<Corpse> toBeResurrected = new Stack<Corpse>();
+        public List<Pawn> toBeResurrected = new List<Pawn>();
         public int ticksUntilResurrection = -999;
 
         /// Defend the Brood Variables
@@ -117,22 +117,17 @@ namespace CultOfCthulhu
             {
 
                 if (Find.TickManager.TicksGame % 100 != 0) return;
-                if (unspeakableOathPawns == null) return;
-                if (unspeakableOathPawns.Count <= 0) return;
+                if (unspeakableOathPawns.NullOrEmpty()) return;
                 List<Pawn> tempOathList = new List<Pawn>(unspeakableOathPawns);
-                if (tempOathList != null)
+                foreach (Pawn oathtaker in tempOathList)
                 {
-                    foreach (Pawn oathtaker in tempOathList)
+                    if (oathtaker.Dead)
                     {
-                        if (oathtaker.Dead)
-                        {
-                            if (unspeakableOathPawns != null) unspeakableOathPawns.Remove(oathtaker);
-                            if (toBeResurrected == null) toBeResurrected = new Stack<Corpse>();
-                            Corpse resurrectee = oathtaker.Corpse;
-                            toBeResurrected.Push(resurrectee);
-                            Cthulhu.Utility.DebugReport("Started Resurrection Process");
-                            ticksUntilResurrection = resurrectionTicks;
-                        }
+                        if (unspeakableOathPawns != null) unspeakableOathPawns.Remove(oathtaker);
+                        if ((toBeResurrected?.Count ?? 0) > 0) toBeResurrected = new List<Pawn>();
+                        toBeResurrected.Add(oathtaker);
+                        Cthulhu.Utility.DebugReport("Started Resurrection Process");
+                        ticksUntilResurrection = resurrectionTicks;
                     }
                 }
             }
@@ -163,57 +158,44 @@ namespace CultOfCthulhu
 
             //Do we still have colonists that need resurrection? If so, let's proceed with another round of resurrection.
             //Reset the timer, and let's get to work.
-            if (toBeResurrected != null)
+            if ((toBeResurrected?.Count ?? 0) > 0)
             {
-                if (toBeResurrected.Count > 0)
-                {
-                    ticksUntilResurrection = resurrectionTicks;
-                }
+                ticksUntilResurrection = resurrectionTicks;
             }
         }
 
         public void HasturResurrection()
         {
-            Corpse sourceCorpse = toBeResurrected.Pop();
+            Pawn sourceCorpse = toBeResurrected.RandomElement();
             IntVec3 spawnLoc = IntVec3.Invalid;
             Map map = null;
             
-            if (sourceCorpse.InnerPawn != null)
+            if (sourceCorpse.Corpse != null)
             {
                 map = sourceCorpse.MapHeld;
                 spawnLoc = sourceCorpse.PositionHeld;
                 if (spawnLoc == IntVec3.Invalid) spawnLoc = sourceCorpse.Position;
                 if (spawnLoc == IntVec3.Invalid) spawnLoc = DropCellFinder.RandomDropSpot(map);
 
-                ReanimatedPawn newPawn = ReanimatedPawnUtility.DoGenerateZombiePawnFromSource(sourceCorpse.InnerPawn, false, true);
+                ReanimatedPawn newPawn = ReanimatedPawnUtility.DoGenerateZombiePawnFromSource(sourceCorpse, false, true);
 
                 //Hops / Other storage buildings
-                Building building = StoreUtility.StoringBuilding(sourceCorpse);
-                if (building != null)
+                if (StoreUtility.StoringBuilding(sourceCorpse.Corpse) is Building building)
                 {
-                    Building_Storage buildingS = building as Building_Storage;
-                    if (buildingS != null)
+                    if (building is Building_Storage buildingS)
                     {
                         buildingS.Notify_LostThing(sourceCorpse);
                     }
 
                 }
-                if (sourceCorpse.holdingOwner != null)
+                if (sourceCorpse?.Corpse?.holdingOwner?.Owner is Building_Casket casket)
                 {
-                    if (sourceCorpse.holdingOwner.Owner != null)
-                    {
-                        Building_Casket casket = sourceCorpse.holdingOwner.Owner as Building_Casket;
-                        if (casket != null)
-                        {
-                            casket.EjectContents();
-                            Cthulhu.Utility.DebugReport("Resurection:: Casket/grave/sarcophogi opened.");
-                        }
-
-                    }
+                    casket.EjectContents();
+                    Cthulhu.Utility.DebugReport("Resurection:: Casket/grave/sarcophogi opened.");
                 }
 
                 Messages.Message("ReanimatedOath".Translate(new object[] {
-                    sourceCorpse.InnerPawn.Name
+                    sourceCorpse.Name
                 }), MessageSound.SeriousAlert);
                 //Log.Message(newPawn.NameStringShort);
                 //Log.Message(spawnLoc.ToString());
@@ -366,9 +348,9 @@ namespace CultOfCthulhu
         public override void ExposeData()
         {
             //Unspeakable Oath Spell
-            Scribe_Collections.Look<Corpse>(ref this.toBeResurrected, "toBeResurrected", LookMode.Reference);
             Scribe_Values.Look<int>(ref this.ticksUntilResurrection, "ticksUntilResurrection", -999);
-            Scribe_Collections.Look<Pawn>(ref this.unspeakableOathPawns, "unspeakableOathPawns", LookMode.Reference, new object[0]);
+            //Scribe_Collections.Look<Corpse>(ref this.toBeResurrected, "toBeResurrected", LookMode.Reference);
+            Scribe_Collections.Look<Pawn>(ref this.unspeakableOathPawns, "unspeakableOathPawns", LookMode.Reference);
             
             //Defend the Brood Spell
             Scribe_Collections.Look<Pawn>(ref this.defendTheBroodPawns, "defendTheBroodPawns", LookMode.Reference, new object[0]);

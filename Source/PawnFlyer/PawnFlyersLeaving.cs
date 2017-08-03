@@ -179,6 +179,7 @@ namespace CultOfCthulhu
             {
                 base.Map.lordManager.RemoveLord(lord);
             }
+
             PawnFlyersTraveling PawnFlyersTraveling = (PawnFlyersTraveling)WorldObjectMaker.MakeWorldObject(PawnFlyerDef.travelingDef);
             PawnFlyersTraveling.pawnFlyer = this.pawnFlyer;
             PawnFlyersTraveling.Tile = base.Map.Tile;

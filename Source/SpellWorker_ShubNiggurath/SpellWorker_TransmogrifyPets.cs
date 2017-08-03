@@ -44,20 +44,20 @@ namespace CultOfCthulhu
         {
                 //Get a pet with a master.
                 IEnumerable<Pawn> one = from Pawn pets in map.mapPawns.AllPawnsSpawned
-                                        where pets.RaceProps.Animal && pets.Faction == Faction.OfPlayer && !pets.Dead && !pets.Downed && pets.RaceProps.petness > 0f && pets.playerSettings.master != null
+                                        where !(pets?.GetComp<CompTransmogrified>()?.IsTransmogrified ?? true) && pets.RaceProps.Animal && pets.Faction == Faction.OfPlayer && !pets.Dead && !pets.Downed && pets.RaceProps.petness > 0f && pets.playerSettings.master != null
                                         select pets;
                 //No master? Okay, still search for pets.
                 if (one.Count<Pawn>() == 0)
                 {
                     one = from Pawn pets in map.mapPawns.AllPawnsSpawned
-                          where pets.RaceProps.Animal && pets.Faction == Faction.OfPlayer && !pets.Dead && !pets.Downed && pets.RaceProps.petness > 0f
+                          where !(pets?.GetComp<CompTransmogrified>()?.IsTransmogrified ?? true) && pets.RaceProps.Animal && pets.Faction == Faction.OfPlayer && !pets.Dead && !pets.Downed && pets.RaceProps.petness > 0f
                           select pets;
                 }
                 //No pets? Okay, search for player animals.
                 if (one.Count<Pawn>() == 0)
                 {
                     one = from Pawn pets in map.mapPawns.AllPawnsSpawned
-                          where pets.RaceProps.Animal && pets.Faction == Faction.OfPlayer && !pets.Dead && !pets.Downed
+                          where !(pets?.GetComp<CompTransmogrified>()?.IsTransmogrified ?? true) && pets.RaceProps.Animal && pets.Faction == Faction.OfPlayer && !pets.Dead && !pets.Downed
                           select pets;
                 }
                 //Return anything if we find anything, or return a null, it's all good.
@@ -68,13 +68,16 @@ namespace CultOfCthulhu
         public void Transmogrify(Map map, Pawn pawn = null)
         {
             //No pawn? Okay, find one.
+
             if (pawn == null)
+            {
                 pawn = PetsToTransmogrify(map).RandomElement<Pawn>();
+            }
 
             CompTransmogrified compTrans = pawn.GetComp<CompTransmogrified>();
             if (compTrans != null)
             {
-                compTrans.isTransmogrified = true;
+                compTrans.IsTransmogrified = true;
             }
 
             Messages.Message("Cults_TransmogrifyMessage".Translate(new object[]

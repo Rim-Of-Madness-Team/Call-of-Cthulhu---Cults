@@ -39,6 +39,7 @@ namespace CultOfCthulhu
         public static ThingDef Cults_ForbiddenKnowledgeCenter;
         public static LetterDef Cults_StandardMessage;
         public static ThoughtDef Cults_PrayedInImpressiveTemple;
+        public static ThingDef Cults_TransmogAura;
 
 
         // ============ DUTY DEFS =============
@@ -205,8 +206,9 @@ namespace CultOfCthulhu
 
         public static ThingDef Cults_LandedShip;
 
+
         // ============== THINGS ==============
-        
+
         public static ThingDef Cults_ByakheeRace;
 
         public static ThingDef Cults_WombBetweenWorlds;

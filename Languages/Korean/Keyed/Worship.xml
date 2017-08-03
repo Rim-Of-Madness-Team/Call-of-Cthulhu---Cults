@@ -1,6 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+
+  <!-- 6/24/17 -->
+  <Cults_Morning>아침</Cults_Morning>
+  <Cults_Evening>저녁</Cults_Evening>
+  <Cults_NoPreacher>설교자가 선택되지 않았습니다.</Cults_NoPreacher>
+  <Cults_NoCosmicEntity>신이 선택되지 않았습니다.</Cults_NoCosmicEntity>
+  <Cults_NoPreacherDrafted>설교자가 선택되었습니다.</Cults_NoPreacherDrafted>
+  <Cults_SelectAblebodiedPreacher>건강한 설교자를 고르세요.</Cults_SelectAblebodiedPreacher>
+  <Cults_AltarIsReserved>제단은 이미 사용중에 있습니다.</Cults_AltarIsReserved>
+  <Cults_AltarNeedsToBeCleared>제단은 이미 사용중에 있습니다.</Cults_AltarNeedsToBeCleared>
+  <Cults_MorningEveningSermonInterrupted> {0}의 설교가 취소되었습니다. 회중들은 제물을 바치고 있습니다.</Cults_MorningEveningSermonInterrupted>
+  <Cults_AlreadyGatheringForASermon>정착림들은 이미 예배를 열고 있습니다.</Cults_AlreadyGatheringForASermon>
+  <Cults_CancellingSermon>예배 취소 중.</Cults_CancellingSermon>
+  <Cults_NoWorshipWithoutDeity>선택한 신 없이 예배할 수 없습니다.</Cults_NoWorshipWithoutDeity>
+
+  <!-- 1.17.3.1 -->
+  <Cults_NewDarkYoung>세상의 경계의 자궁에서 새로운 다크 영(Dark Young)은 태어나 기어 나옵니다.</Cults_NewDarkYoung>
+
+<!-- 1.17.0 New Versioning System-->
+
+  <Cults_NoPlayerCultAvailable>종교사용 불가</Cults_NoPlayerCultAvailable>
+  <Cults_Monstrous>괴물같은 {0}</Cults_Monstrous>
+  <Cults_TransmogrifyMessage>{0}의 형식이 개선되었습니다.</Cults_TransmogrifyMessage>
+  <Cults_RatsMessage>쥐가 사방에서 쏟아져 나옵니다!</Cults_RatsMessage>
+  <Cults_Spell>주문</Cults_Spell>
+  <Cults_SpellDesc>희생을 통해, 얻고자 하는 이상적인 결과를 선택하십시오</Cults_SpellDesc>
+  <Cults_AutoForbidWarning>참고 : 자동 연구를 통해 신앙을 강화할 수 있습니다.</Cults_AutoForbidWarning>
+  <Cults_WaitingToStartSermon>설교를 기다림</Cults_WaitingToStartSermon>
+  <Cults_PreachingAbout>{0}에 대한 설교</Cults_PreachingAbout>
+  <Cults_PrayingTo>{0}에게 기도</Cults_PrayingTo>
+  <Cults_AttendingSacrifice>희생의식 참석</Cults_AttendingSacrifice>
+  <Cults_ReflectingOnSacrifice>희생을 되새기다.</Cults_ReflectingOnSacrifice>
+  <Cults_FoundedACultLabel>종교 설립</Cults_FoundedACultLabel>
+  <Cults_FoundedACultDesc>{0}(이)가 종교를 세웠습니다. \n\n 당신의 종교를 부흥시킬 모임을 가지기 위해 연구하며 제단을 건설하세요.</Cults_FoundedACultDesc>
+  <Cults_DismantledACultLabel>종교 해산</Cults_DismantledACultLabel>
+  <Cults_DismantledACultDesc>{0}(이)가 해산되었습니다.\n\n숭배할 수 있는 신자가 존재하지 않습니다.</Cults_DismantledACultDesc>
+  <Cults_DiscoveredCultLabel>종교 발견</Cults_DiscoveredCultLabel>
+  <Cults_DiscoveredCultDesc>우리는 {0}(을)를 발견했습니다.\n\n {1)(은)는 {2}에 의해 설립되었으며, 현재는 {3}에게 이끌리고 있습니다.</Cults_DiscoveredCultDesc>
+  <Cults_InitialExposureLabel>신비로운 시작</Cults_InitialExposureLabel>
+  <Cults_InitialExposureDesc>새로운 가능성으로 가득 찬 식민지 개척자들은 최근의 신비로운 사건에 관심을 갖습니다.\n\n그들의 신념은 욕구 메뉴에서 찾을 수 있습니다. 이 믿음은 시간이 지남에 따라 서서히 감소할 것입니다. 오컬트 리서치(Occult Research)를 사용하면 자신의 종교를 발견할 때까지 정착림의 신앙과 신념을 강화할 수 있습니다.</Cults_InitialExposureDesc>
+
+<!-- 1.2.8 Old versioning system -->
+
+  <Altar>제단</Altar>
+  <ForcedInvestigation>특별 조사</ForcedInvestigation>
+  <ForcedInvestigationDesc>이 기능을 사용하면, 최고의 연구원으 컬트 객체를 조사할 기회를 얻습니다.</ForcedInvestigationDesc>
+  <IsUnavailable>사용하지 않는다.</IsUnavailable>
+
 <!-- 1.2.4 -->
 
   <ShowDebugCode>Show Debug Code</ShowDebugCode>
@@ -30,9 +78,9 @@
 
   <OverPawnRiderLimit>탑승물이 너무 많습니다! 최대 값은 {0}입니다.</OverPawnRiderLimit>
 
-  <ReanimatedOath>{0}(이)가 맹세를 통해 하스터(Hastur)의 종으로 다시 살아났습니다.</ReanimatedOath>
+  <ReanimatedOath>{0}(이)가 맹세를 통해 하스터(Hastur)의 종으로 다시 태어났습니다.</ReanimatedOath>
 
-  <CompTargetEffectCultMinded>{0}(이)가 종교 광기에 빠져 세뇌되었습니다.</CompTargetEffectCultMinded>
+  <CompTargetEffectCultMinded>{0}(이)가 종교의 광기에 빠져 세뇌되었습니다.</CompTargetEffectCultMinded>
  	
   <GameOverAbsorptionByCarcosa>당신의 정착지의 장막이 걷혔습니다. 이 정착지 주민들은 처음으로 이 세상의 무대를 떠났습니다.:\n\n{0}</GameOverAbsorptionByCarcosa>
   

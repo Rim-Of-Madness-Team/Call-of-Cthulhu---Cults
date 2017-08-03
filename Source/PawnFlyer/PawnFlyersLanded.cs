@@ -128,27 +128,36 @@ namespace CultOfCthulhu
                     });
                 }
             }
-            for (int i = 0; i < this.contents.innerContainer.Count; i++)
+
+            foreach (Thing thing in this.contents.innerContainer.InRandomOrder())
             {
-                Thing thing = this.contents.innerContainer[i];
-                if (thing == this.pawnFlyer) continue; //Avoid errors. We already spawned our pawnFlyer.
+                //Log.Message("1");
+                if (thing.Spawned) continue; //Avoid errors. We already spawned our pawnFlyer.
+                //Log.Message("2");
 
                 Thing thing2;
+                //this.contents.innerContainer.TryDrop(thing, ThingPlaceMode.Near, out thing2);
+
                 GenPlace.TryPlaceThing(thing, base.Position, base.Map, ThingPlaceMode.Near, out thing2, delegate (Thing placedThing, int count)
                 {
+                    //Log.Message("3");
+
                     if (Find.TickManager.TicksGame < 1200 && TutorSystem.TutorialMode && placedThing.def.category == ThingCategory.Item)
                     {
                         Find.TutorialState.AddStartingItem(placedThing);
                     }
                 });
-                Pawn pawn = thing2 as Pawn;
-                if (pawn != null)
+                //Log.Message("4");
+
+                if (thing2 is Pawn pawn)
                 {
-                    if (!pawn.IsPrisoner)
-                    {
-                        if (pawn.Faction != pawnFlyer.Faction)
-                            pawn.SetFaction(pawnFlyer.Faction);
-                    }
+                    //Log.Message("5");
+
+                    //if (!pawn.IsPrisoner)
+                    //{
+                    //    if (pawn.Faction != pawnFlyer.Faction)
+                    //        pawn.SetFaction(pawnFlyer.Faction);
+                    //}
                     if (pawn.RaceProps.Humanlike)
                     {
                         if (PawnFlyerDef.landedTale != null)
@@ -165,7 +174,7 @@ namespace CultOfCthulhu
                     }
                 }
             }
-            this.contents.innerContainer.Clear();
+            
             if (this.contents.leaveSlag)
             {
                 for (int j = 0; j < 1; j++)
