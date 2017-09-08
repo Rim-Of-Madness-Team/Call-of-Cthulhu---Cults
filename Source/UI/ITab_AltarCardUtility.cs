@@ -236,11 +236,11 @@ namespace CultOfCthulhu
                 Cthulhu.Utility.ErrorReport("FreeColonistsSpawned Null Exception");
                 return;
             }
-            if (altar.Map.mapPawns.FreeColonistsSpawnedCount <= 0)
-            {
-                Cthulhu.Utility.ErrorReport("Colonist Count Less Than or Equal To 0 Exception");
-                return;
-            }
+            //if (altar.Map.mapPawns.FreeColonistsSpawnedCount <= 0)
+            //{
+            //    Cthulhu.Utility.ErrorReport("Colonist Count Less Than or Equal To 0 Exception");
+            //    return;
+            //}
 
             ///
             /// Get Actor List

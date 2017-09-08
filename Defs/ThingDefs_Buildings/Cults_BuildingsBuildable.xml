@@ -13,7 +13,7 @@
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <filthLeaving>BuildingRubble</filthLeaving>
   </ThingDef>
-  
+
   <!--
     <ThingDef ParentName="BuildingBase">
     <defName>ThreeTileMarriageSpot</defName>
@@ -39,7 +39,7 @@
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
     </building>
     <designationHotkey>Misc10</designationHotkey>
-  </ThingDef>  
+  </ThingDef>
   -->
   <ThingDef ParentName="CultBuildingBase">
     <defName>Cults_SignOfDagon</defName>
@@ -63,11 +63,11 @@
       <sowTag>SupportPlantsOnly</sowTag>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
     </building>
-	<researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>	
+	<researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
     <designationHotkey>Misc10</designationHotkey>
   </ThingDef>
-  
-  
+
+
   <ThingDef ParentName="CultBuildingBase">
     <defName>Cults_PewLinkable</defName>
     <label>linkable pews</label>
@@ -111,13 +111,13 @@
 		</building>
   </ThingDef>
 
-  
+
   <ThingDef Name="CultBenchBase" ParentName="CultBuildingBase" Abstract="True">
     <castEdgeShadows>true</castEdgeShadows>
     <staticSunShadowHeight>0.20</staticSunShadowHeight>
-  </ThingDef>  
-  
-  
+  </ThingDef>
+
+
   <ThingDef ParentName="CultBenchBase">
     <defName>Cults_ForbiddenKnowledgeCenter</defName>
     <label>forbidden knowledge center</label>
@@ -156,6 +156,7 @@
       <WorkToBuild>2800</WorkToBuild>
       <Flammability>1.0</Flammability>
       <ResearchSpeedFactor>0.6</ResearchSpeedFactor>
+      <Mass>90</Mass>
     </statBases>
     <fillPercent>0.5</fillPercent>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -168,13 +169,21 @@
       <li Class="CompProperties_Forbiddable" />
     </comps>
   </ThingDef>
-  
+
+  <!--
+   █████  ██   ████████  █████  ██████
+  ██   ██ ██      ██    ██   ██ ██   ██
+  ███████ ██      ██    ███████ ██████
+  ██   ██ ██      ██    ██   ██ ██   ██
+  ██   ██ ███████ ██    ██   ██ ██   ██
+-->
+
   <ThingDef ParentName="CultBenchBase">
     <DefName>Cult_SacrificialAltar</DefName>
     <label>cult altar</label>
     <ThingClass>CultOfCthulhu.Building_SacrificialAltar</ThingClass>
     <Description>A solid surface on which to elevate speeches of worship to extra-cosmic entities.</Description>
-    <tickerType>Rare</tickerType>	
+    <tickerType>Rare</tickerType>
     <graphicData>
       <texPath>Building/StandardAltar/StandardAltar</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -190,11 +199,11 @@
 	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <defaultPlacingRot>South</defaultPlacingRot>
     <minifiedDef>MinifiedFurniture</minifiedDef>
-    <socialPropernessMatters>true</socialPropernessMatters>	
+    <socialPropernessMatters>true</socialPropernessMatters>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
-      <li>Stony</li>	  
+      <li>Stony</li>
     </stuffCategories>
     <costStuffCount>125</costStuffCount>
     <AltitudeLayer>Building</AltitudeLayer>
@@ -206,6 +215,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>10</Beauty>
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <Mass>70</Mass>
     </statBases>
     <Size>(3,1)</Size>
     <DesignationCategory>Misc</DesignationCategory>
@@ -224,7 +234,7 @@
 		<min>1</min>
 		<max>9</max>
 	</watchBuildingStandDistanceRange>
-	<watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>   	
+	<watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
     </building>
 	<researchPrerequisites><li>Forbidden_Altar</li></researchPrerequisites>
 <placeWorkers>
@@ -234,16 +244,16 @@
       <li>
         <compClass>CompQuality</compClass>
       </li>
-    </comps>	
+    </comps>
     <designationHotKey>Misc2</designationHotKey>
   </ThingDef>
-  
+
   <ThingDef ParentName="CultBenchBase">
     <DefName>Cult_AnimalSacrificeAltar</DefName>
     <label>sacrificial altar</label>
     <ThingClass>CultOfCthulhu.Building_SacrificialAltar</ThingClass>
     <Description>A solid surface on which to sacrifice to beings both petty and powerful. Specially designed to channel and collect blood.</Description>
-    <tickerType>Rare</tickerType>	
+    <tickerType>Rare</tickerType>
     <graphicData>
       <texPath>Building/AnimalAltar/AnimalAltar</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -256,14 +266,14 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>	
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <defaultPlacingRot>South</defaultPlacingRot>
     <minifiedDef>MinifiedFurniture</minifiedDef>
-    <socialPropernessMatters>true</socialPropernessMatters>	
+    <socialPropernessMatters>true</socialPropernessMatters>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
-      <li>Stony</li>	  
+      <li>Stony</li>
     </stuffCategories>
     <costStuffCount>125</costStuffCount>
     <AltitudeLayer>Building</AltitudeLayer>
@@ -275,6 +285,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>10</Beauty>
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <Mass>70</Mass>
     </statBases>
     <Size>(3,1)</Size>
     <Passability>PassThroughOnly</Passability>
@@ -292,7 +303,7 @@
 		<min>1</min>
 		<max>9</max>
 	</watchBuildingStandDistanceRange>
-	<watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>   	
+	<watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
     </building>
 	<researchPrerequisites><li>Forbidden_Sacrifice</li></researchPrerequisites>
 <placeWorkers>
@@ -302,16 +313,16 @@
       <li>
         <compClass>CompQuality</compClass>
       </li>
-    </comps>	
+    </comps>
     <designationHotKey>Misc2</designationHotKey>
   </ThingDef>
-  
+
   <ThingDef ParentName="CultBenchBase">
     <DefName>Cult_HumanSacrificeAltar</DefName>
     <label>sacrificial altar</label>
     <ThingClass>CultOfCthulhu.Building_SacrificialAltar</ThingClass>
     <Description>A solid surface on which to sacrifice to beings both petty and powerful. Specially designed to channel and collect blood.</Description>
-    <tickerType>Rare</tickerType>	
+    <tickerType>Rare</tickerType>
     <graphicData>
       <texPath>Building/HumanAltar/HumanAltar</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -324,14 +335,14 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>	
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <defaultPlacingRot>South</defaultPlacingRot>
     <minifiedDef>MinifiedFurniture</minifiedDef>
-    <socialPropernessMatters>true</socialPropernessMatters>	
+    <socialPropernessMatters>true</socialPropernessMatters>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
-      <li>Stony</li>	  
+      <li>Stony</li>
     </stuffCategories>
     <costStuffCount>125</costStuffCount>
     <AltitudeLayer>Building</AltitudeLayer>
@@ -343,6 +354,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>10</Beauty>
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <Mass>75</Mass>
     </statBases>
     <Size>(3,1)</Size>
     <Passability>PassThroughOnly</Passability>
@@ -360,7 +372,7 @@
 		<min>1</min>
 		<max>9</max>
 	</watchBuildingStandDistanceRange>
-	<watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>   	
+	<watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
     </building>
 	<researchPrerequisites><li>Forbidden_Human</li></researchPrerequisites>
 <placeWorkers>
@@ -370,13 +382,22 @@
       <li>
         <compClass>CompQuality</compClass>
       </li>
-    </comps>	
+    </comps>
     <designationHotKey>Misc2</designationHotKey>
   </ThingDef>
-  
-  
+
+
+  <!--
+  ██      ██ ████████ ██   ██ ███████
+  ██      ██    ██    ██   ██ ██
+  ██      ██    ██    ███████ ███████
+  ██      ██    ██    ██   ██      ██
+  ███████ ██    ██    ██   ██ ███████
+-->
+
+
   <!-- BUILDABLE OBELISKS -->
-  
+
   <ThingDef Name="ObeliskBase" ParentName="CultBuildingBase" Abstract="true">
     <thingClass>CultOfCthulhu.Building_Monolith</thingClass>
     <category>Building</category>
@@ -407,24 +428,25 @@
       <WorkToMake>200</WorkToMake>
       <Flammability>0</Flammability>
       <Beauty>10</Beauty>
+      <Mass>80</Mass>
     </statBases>
     <selectable>true</selectable>
     <stuffCategories>
-      <li>Stony</li>	  
+      <li>Stony</li>
     </stuffCategories>
     <costStuffCount>300</costStuffCount>
     <hasInteractionCell>false</hasInteractionCell>
     <soundImpactDefault>BulletImpactGround</soundImpactDefault>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>0.5</resourcesFractionWhenDeconstructed>
-	<researchPrerequisites><li>Forbidden_Obelisks</li></researchPrerequisites>	
+	<researchPrerequisites><li>Forbidden_Obelisks</li></researchPrerequisites>
 	<building>
 		<soundAmbient>RitualChanting</soundAmbient>
 	</building>
     <designationHotKey>Misc10</designationHotKey>
-	<designationCategory>Misc</designationCategory>	
+	<designationCategory>Misc</designationCategory>
   </ThingDef>
-  
+
   <ThingDef ParentName="ObeliskBase">
     <defName>Cults_ObeliskConstructed_Red</defName>
     <label>obelisk (red)</label>
@@ -434,8 +456,8 @@
         <glowRadius>10</glowRadius>
         <glowColor>(200,0,0,0)</glowColor>
       </li>
-    </comps>	
-  </ThingDef>  
+    </comps>
+  </ThingDef>
 
   <ThingDef ParentName="ObeliskBase">
     <defName>Cults_ObeliskConstructed_Green</defName>
@@ -450,14 +472,14 @@
       <damageData>
         <rect>(0.35,0.35,0.3,0.3)</rect>
       </damageData>
-    </graphicData>	
+    </graphicData>
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>10</glowRadius>
         <glowColor>(0,200,0,0)</glowColor>
       </li>
-    </comps>	
-  </ThingDef>  
+    </comps>
+  </ThingDef>
 
   <ThingDef ParentName="ObeliskBase">
     <defName>Cults_ObeliskConstructed_Blue</defName>
@@ -472,15 +494,15 @@
       <damageData>
         <rect>(0.35,0.35,0.3,0.3)</rect>
       </damageData>
-    </graphicData>	
+    </graphicData>
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>10</glowRadius>
         <glowColor>(0,0,200,0)</glowColor>
       </li>
-    </comps>	
-  </ThingDef>  
-  
+    </comps>
+  </ThingDef>
+
   <ThingDef ParentName="ObeliskBase">
     <defName>Cults_ObeliskConstructed_Yellow</defName>
     <label>obelisk (yellow)</label>
@@ -494,13 +516,13 @@
       <damageData>
         <rect>(0.35,0.35,0.3,0.3)</rect>
       </damageData>
-    </graphicData>	
+    </graphicData>
     <comps>
       <li Class="CompProperties_Glower">
         <glowRadius>10</glowRadius>
         <glowColor>(200,200,0,0)</glowColor>
       </li>
-    </comps>	
-  </ThingDef>    
-  
+    </comps>
+  </ThingDef>
+
 </ThingDefs>

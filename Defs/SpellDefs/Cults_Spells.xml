@@ -19,6 +19,14 @@
 		<letterText>felt a supernatural presence connect with them from beyond space and time</letterText>
 	</IncidentDef>
 
+	<!--
+	 ██████ ████████ ██   ██ ██    ██ ██      ██   ██ ██    ██
+	██         ██    ██   ██ ██    ██ ██      ██   ██ ██    ██
+	██         ██    ███████ ██    ██ ██      ███████ ██    ██
+	██         ██    ██   ██ ██    ██ ██      ██   ██ ██    ██
+	 ██████    ██    ██   ██  ██████  ███████ ██   ██  ██████
+ -->
+
 	<!-- Cthulhu -->
 
     <IncidentDef ParentName="SpellDef">
@@ -71,7 +79,13 @@
 		<letterText>feels a clawing at their mind as the great Cthulhu awakens. Realities' skin stretches thinner and thinner.</letterText>
 	</IncidentDef>
 
-	<!-- Dagon -->
+	<!--
+██████   █████   ██████   ██████  ███    ██
+██   ██ ██   ██ ██       ██    ██ ████   ██
+██   ██ ███████ ██   ███ ██    ██ ██ ██  ██
+██   ██ ██   ██ ██    ██ ██    ██ ██  ██ ██
+██████  ██   ██  ██████   ██████  ██   ████
+ -->
 
     <IncidentDef ParentName="SpellDef">
 		<label>Sunken Ship</label>
@@ -135,7 +149,14 @@
         <letterText>hears the call, a long and deep croak, roll over the land. A call beckoning them back to the sea</letterText>
 	</IncidentDef>
 
-	<!-- Shub Niggurath -->
+	<!--
+███████ ██   ██ ██    ██ ██████
+██      ██   ██ ██    ██ ██   ██
+███████ ███████ ██    ██ ██████
+     ██ ██   ██ ██    ██ ██   ██
+███████ ██   ██  ██████  ██████
+ -->
+
     <IncidentDef ParentName="SpellDef">
 		<label>Fertility Ritual</label>
 		<description>Summons a fertility totem to support your colony’s fields through hard times.</description>
@@ -194,7 +215,13 @@
 		<letterText>rends the barriers and unfolds the higher dimensions, bringing the Mother Goddess into this lowly place</letterText>
 	</IncidentDef>
 
-	<!-- Nyarlathotep -->
+	<!--
+███    ██ ██    ██  █████  ██████
+████   ██  ██  ██  ██   ██ ██   ██
+██ ██  ██   ████   ███████ ██████
+██  ██ ██    ██    ██   ██ ██   ██
+██   ████    ██    ██   ██ ██   ██
+ -->
 
     <IncidentDef ParentName="SpellDef">
 		<label>Starry Wisdom</label>
@@ -246,7 +273,13 @@
         <letterText>finds themselves at the start of a long path, with a stranger ahead, beckoning</letterText>
 	</IncidentDef>
 
-	<!-- Hastur -->
+	<!--
+██   ██  █████  ███████ ████████ ██    ██ ██████
+██   ██ ██   ██ ██         ██    ██    ██ ██   ██
+███████ ███████ ███████    ██    ██    ██ ██████
+██   ██ ██   ██      ██    ██    ██    ██ ██   ██
+██   ██ ██   ██ ███████    ██     ██████  ██   ██
+ -->
 
     <IncidentDef ParentName="SpellDef">
 		<label>The King in Yellow, Act I</label>
@@ -298,7 +331,13 @@
         <letterText>dons a mask and so is free</letterText>
 	</IncidentDef>
 
-	<!-- Table of Fun -->
+	<!--
+███████ ██    ██ ███    ██
+██      ██    ██ ████   ██
+█████   ██    ██ ██ ██  ██
+██      ██    ██ ██  ██ ██
+██       ██████  ██   ████
+ -->
 
     <IncidentDef ParentName="SpellDef">
 		<label>Double The Fun</label>

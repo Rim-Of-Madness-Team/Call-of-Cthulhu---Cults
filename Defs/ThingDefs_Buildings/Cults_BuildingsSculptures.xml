@@ -2,7 +2,7 @@
 <ThingDefs>
 
   <!-- Cultist Sculptures -->
-  
+
   <ThingDef ParentName="CultBuildingBase" Name="CultSculptureBase" Abstract="True">
     <thingClass>Building_Art</thingClass>
     <altitudeLayer>Building</altitudeLayer>
@@ -26,7 +26,7 @@
       <li>ITab_Art</li>
     </inspectorTabs>
     <recipeMaker>
-      <researchPrerequisite>Forbidden_Sculptures</researchPrerequisite>	
+      <researchPrerequisite>Forbidden_Sculptures</researchPrerequisite>
       <workSpeedStat>SculptingSpeed</workSpeedStat>
       <workSkill>Artistic</workSkill>
       <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
@@ -54,6 +54,7 @@
       <MaxHitPoints>150</MaxHitPoints>
       <Beauty>65</Beauty>
       <WorkToMake>40000</WorkToMake>
+      <Mass>60</Mass>
     </statBases>
     <stuffCategories>
       <li>Metallic</li>
@@ -63,7 +64,7 @@
     <costStuffCount>145</costStuffCount>
   </ThingDef>
 
-  
+
   <ThingDef ParentName="CultSculptureBase">
     <defName>SculptureCthulhu</defName>
     <label>monstrous octopoid sculpture</label>
@@ -81,13 +82,14 @@
       <MaxHitPoints>350</MaxHitPoints>
       <Beauty>140</Beauty>
       <WorkToMake>90000</WorkToMake>
+      <Mass>80</Mass>
     </statBases>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
       <li>Stony</li>
     </stuffCategories>
-    <costStuffCount>260</costStuffCount>
+    <costStuffCount>320</costStuffCount>
     <comps>
 	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
 	  <deities>
@@ -96,10 +98,10 @@
 	  </li>
 	  </deities>
     </li>
-    </comps>	
+    </comps>
   </ThingDef>
 
-  
+
   <ThingDef ParentName="CultSculptureBase">
     <defName>SculptureDagon</defName>
     <label>monstrous fish-headed sculpture</label>
@@ -117,6 +119,7 @@
       <MaxHitPoints>350</MaxHitPoints>
       <Beauty>140</Beauty>
       <WorkToMake>90000</WorkToMake>
+      <Mass>80</Mass>
     </statBases>
     <stuffCategories>
       <li>Metallic</li>
@@ -132,9 +135,9 @@
 	  </li>
 	  </deities>
     </li>
-    </comps>	
+    </comps>
   </ThingDef>
-  
+
   <ThingDef ParentName="CultSculptureBase">
     <defName>SculptureNyarlathotep</defName>
     <label>monstrous hooded sculpture</label>
@@ -152,6 +155,7 @@
       <MaxHitPoints>350</MaxHitPoints>
       <Beauty>140</Beauty>
       <WorkToMake>90000</WorkToMake>
+      <Mass>80</Mass>
     </statBases>
     <stuffCategories>
       <li>Metallic</li>
@@ -167,10 +171,10 @@
 	  </li>
 	  </deities>
     </li>
-    </comps>		
+    </comps>
   </ThingDef>
-  
-  
+
+
   <ThingDef ParentName="CultSculptureBase">
     <defName>SculptureShub</defName>
     <label>monstrous goat-like sculpture</label>
@@ -188,6 +192,7 @@
       <MaxHitPoints>250</MaxHitPoints>
       <Beauty>140</Beauty>
       <WorkToMake>96000</WorkToMake>
+      <Mass>80</Mass>
     </statBases>
     <stuffCategories>
       <li>Metallic</li>
@@ -203,7 +208,7 @@
 	  </li>
 	  </deities>
     </li>
-    </comps>		
+    </comps>
   </ThingDef>
-  
+
 </ThingDefs>

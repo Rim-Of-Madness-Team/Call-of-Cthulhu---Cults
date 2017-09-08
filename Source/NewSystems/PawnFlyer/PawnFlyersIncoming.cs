@@ -178,7 +178,6 @@ namespace CultOfCthulhu
             pawnFlyerLanded.Contents = this.contents;
             if (!pawnFlyerLanded.Contents.innerContainer.Contains(this.pawnFlyer))
                 pawnFlyerLanded.Contents.innerContainer.TryAdd(this.pawnFlyer);
-            //activeDropPod.SetFaction(pawnFlyer.Faction);
             GenSpawn.Spawn(pawnFlyerLanded, base.Position, base.Map, base.Rotation);
             RoofDef roof = base.Position.GetRoof(base.Map);
             if (roof != null)

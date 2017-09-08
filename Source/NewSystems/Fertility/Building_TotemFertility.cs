@@ -27,14 +27,22 @@ namespace CultOfCthulhu
     {
         public float fertilityBonus = 0.5f;
         public float fertilityMax = 2.0f;
-        public float ticksUntilDestroyed = -1f;
-        public float daysUntilDestroyed = 7f;
+        public float ticksUntilDestroyed = float.MinValue;
+        public float daysUntilDestroyed = GenDate.DaysPerQuadrum * 2;
 
-        public IEnumerable<IntVec3> GrowableCells
+        public bool cellsDirty = false;
+
+        List<IntVec3> tempCells;
+        public List<IntVec3> GrowableCells
         {
             get
             {
-                return GenRadial.RadialCellsAround(base.Position, this.def.specialDisplayRadius, true);
+                if (tempCells.NullOrEmpty() || cellsDirty)
+                {
+                    cellsDirty = false;
+                    tempCells = new List<IntVec3>(GenRadial.RadialCellsAround(base.Position, this.def.specialDisplayRadius, true));
+                }
+                return tempCells;
             }
         }
         
@@ -42,9 +50,9 @@ namespace CultOfCthulhu
         {
             get
             {
-                if (ticksUntilDestroyed <= 0f)
+                if (ticksUntilDestroyed == float.MinValue)
                 {
-                    return Mathf.RoundToInt(this.ticksUntilDestroyed = this.daysUntilDestroyed * 60000f);
+                    ticksUntilDestroyed = this.ticksUntilDestroyed = this.daysUntilDestroyed * 60000f;
                 }
                 return Mathf.RoundToInt(this.ticksUntilDestroyed);
             }
@@ -79,20 +87,20 @@ namespace CultOfCthulhu
         public override string GetInspectString()
         {
             StringBuilder stringBuilder = new StringBuilder();
-
             // Add the inspections string from the base
             stringBuilder.Append(base.GetInspectString());
+            if (stringBuilder.Length != 0)
+            {
+                stringBuilder.AppendLine();
+            }
             if (!(stringBuilder.ToString().Contains("installed")))
             { 
-                stringBuilder.AppendLine();
-                stringBuilder.AppendLine("FertilityTotemTimer".Translate(new object[]
+                stringBuilder.Append("FertilityTotemTimer".Translate(new object[]
                 {
                 TicksUntilDisappearing.ToStringTicksToPeriodVagueMax()
                 }));
             }
-            string result = stringBuilder.ToString();
-            result = result.TrimEndNewlines();
-            return result;
+            return stringBuilder.ToString().TrimEndNewlines();
         }
 
         public override void SpawnSetup(Map map, bool bla)
@@ -103,9 +111,11 @@ namespace CultOfCthulhu
             {
                 temp.Add(vec);
             }
+            map.GetComponent<MapComponent_FertilityMods>().FertilityTotems.Add(this);
             map.GetComponent<MapComponent_FertilityMods>().FertilizeCells(temp);
-        }
+            cellsDirty = true;
 
+        }
 
         public override void DeSpawn()
         {
@@ -116,7 +126,9 @@ namespace CultOfCthulhu
             {
                 temp.Add(vec);
             }
+            map.GetComponent<MapComponent_FertilityMods>().FertilityTotems.Remove(this);
             map.GetComponent<MapComponent_FertilityMods>().UnfertilizeCells(temp);
+            cellsDirty = true;
 
         }
 

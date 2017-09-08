@@ -6,7 +6,7 @@
     <label>corrupted altar</label>
     <ThingClass>CultOfCthulhu.Building_SacrificialAltar</ThingClass>
     <Description>A corpse has sprung up as a tree that corrupts your altar. It will need repairs and a lot of pruning.</Description>
-    <tickerType>Rare</tickerType>	
+    <tickerType>Rare</tickerType>
     <graphicData>
       <texPath>Building/NightmareAltar/NightmareAltar</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -19,17 +19,16 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>	
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <defaultPlacingRot>South</defaultPlacingRot>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
-    <socialPropernessMatters>true</socialPropernessMatters>	
+    <socialPropernessMatters>true</socialPropernessMatters>
     <stuffCategories>
       <li>Metallic</li>
       <li>Woody</li>
-      <li>Stony</li>	  
+      <li>Stony</li>
     </stuffCategories>
     <costStuffCount>125</costStuffCount>
-    <AltitudeLayer>Building</AltitudeLayer>
+    <AltitudeLayer>Blueprint</AltitudeLayer>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
@@ -38,6 +37,7 @@
       <Flammability>1.0</Flammability>
       <Beauty>10</Beauty>
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <Mass>120</Mass>
     </statBases>
     <Size>(3,1)</Size>
     <Passability>PassThroughOnly</Passability>
@@ -55,7 +55,7 @@
 		<min>1</min>
 		<max>9</max>
 	</watchBuildingStandDistanceRange>
-	<watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>   	
+	<watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
     </building>
 	<researchPrerequisites><li>Forbidden_Human</li></researchPrerequisites>
 <placeWorkers>
@@ -65,7 +65,7 @@
       <li>
         <compClass>CompQuality</compClass>
       </li>
-    </comps>	
+    </comps>
     <designationHotKey>Misc2</designationHotKey>
   </ThingDef>
 
@@ -106,12 +106,12 @@
       <alwaysDeconstructible>false</alwaysDeconstructible>
     </building>
     <selectable>true</selectable>
-    <colorGenerator Class="ColorGenerator_StandardApparel" />	
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 	<tickerType>Normal</tickerType>
     <repairEffect>ConstructMetal</repairEffect>
-  </ThingDef>  
-  
+  </ThingDef>
+
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>Cults_WombBetweenWorlds</defName>
     <label>Womb Between Worlds</label>
@@ -152,7 +152,7 @@
         <spawnRadius>5</spawnRadius>
       </li>
     </comps>
-  </ThingDef> 
-  
-  
+  </ThingDef>
+
+
  </ThingDefs>

@@ -4,12 +4,12 @@
   <ThingDef ParentName="CultBuildingBase">
     <defName>Cults_FertilityTotem</defName>
     <label>fertility totem</label>
-    <description>Totem that increases growth rate of crops for one year.</description> 
+    <description>Totem that increases growth rate of crops for two quadrums.</description> 
     <thingClass>CultOfCthulhu.Building_TotemFertility</thingClass>
-    <tickerType>Normal</tickerType>	
+    <tickerType>Normal</tickerType>
     <category>Building</category>
-    <Fertility>2.0</Fertility>	
-    <specialDisplayRadius>5.8</specialDisplayRadius>	
+    <Fertility>2.0</Fertility>
+    <specialDisplayRadius>5.8</specialDisplayRadius>
 	<graphicData>
       <texPath>Building/Exotic/FertilityTotem/FertilityTotem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -19,7 +19,7 @@
       </shadowData>
       <damageData>
         <rect>(0.2,0.2,0.6,0.6)</rect>
-      </damageData>	  
+      </damageData>
     </graphicData>
     <designationHotKey>Misc11</designationHotKey>
     <comps>
@@ -91,8 +91,8 @@
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <drawerType>MapMeshOnly</drawerType>
     <repairEffect>ConstructMetal</repairEffect>
-  </ThingDef>  
-  
+  </ThingDef>
+
   <ThingDef ParentName="CultBuildingBase">
     <defName>Cults_TreasureChest</defName>
     <label>treasure chest</label>
@@ -139,7 +139,7 @@
     </building>
     <inspectorTabs>
       <li>ITab_Storage</li>
-    </inspectorTabs>	
+    </inspectorTabs>
     <comps>
       <li Class="CompProperties_Explosive">
         <explosiveRadius>2.66</explosiveRadius>
@@ -149,7 +149,7 @@
     </comps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
-  
+
   <ThingDef ParentName="CultBuildingBase">
     <defName>Cults_TreasureChest_Relic</defName>
     <label>relic chest</label>
@@ -188,10 +188,10 @@
         <explosiveDamageType>Flame</explosiveDamageType>
       </li>
       <li Class="CompProperties_Breakdownable"/>
-    </comps>	
+    </comps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
-  
+
   <ThingDef ParentName="CultBuildingBase" Name="CultShipPartBase" Abstract="True">
     <altitudeLayer>Building</altitudeLayer>
     <pathCost>150</pathCost>
@@ -220,7 +220,7 @@
       <roofCollapseDamageMultiplier>0.2</roofCollapseDamageMultiplier>
     </building>
   </ThingDef>
-  
+
   <ThingDef ParentName="CultShipPartBase">
     <defName>Cults_LandedShip</defName>
     <label>landed marine ship</label>
@@ -247,7 +247,7 @@
     </costList>
     <staticSunShadowHeight>0</staticSunShadowHeight>
   </ThingDef>
-  
+
   <ThingDef ParentName="CultBuildingBase">
     <defName>Cults_MonolithNightmare</defName>
     <label>Monolith</label>
@@ -303,5 +303,5 @@
     <designationHotKey>Misc10</designationHotKey>
   </ThingDef>
 
-    
+
  </ThingDefs>

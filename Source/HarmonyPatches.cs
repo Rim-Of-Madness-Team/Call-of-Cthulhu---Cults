@@ -23,7 +23,133 @@ namespace CultOfCthulhu
             harmony.Patch(AccessTools.Method(typeof(Pawn_DrawTracker), "DrawAt"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DrawAt_PostFix")), null);
             harmony.Patch(AccessTools.Method(typeof(PawnUtility), "IsTravelingInTransportPodWorldObject"), null, new HarmonyMethod(typeof(HarmonyPatches),
                 nameof(IsTravelingInTransportPodWorldObject_PostFix)));
+            harmony.Patch(AccessTools.Method(typeof(FertilityGrid), "CalculateFertilityAt"), null, new HarmonyMethod(typeof(HarmonyPatches),
+                nameof(CalculateFertilityAt)));
+            harmony.Patch(AccessTools.Method(typeof(MouseoverReadout), "MouseoverReadoutOnGUI"), new HarmonyMethod(typeof(HarmonyPatches),
+                nameof(MouseoverReadoutOnGUI)), null);
         }
+
+        public static string SpeedPercentString(float extraPathTicks)
+        {
+            float f = 13f / (extraPathTicks + 13f);
+            return f.ToStringPercent();
+        }
+
+        public static bool MouseoverReadoutOnGUI(MouseoverReadout __instance)
+        {
+            IntVec3 c = UI.MouseCell();
+            if (!c.InBounds(Find.VisibleMap) ||
+                Event.current.type != EventType.Repaint ||
+                Find.MainTabsRoot.OpenTab != null)
+            {
+                return false;
+            }
+            
+            if (Find.VisibleMap.GetComponent<MapComponent_FertilityMods>().Get is MapComponent_FertilityMods fert &&
+                fert.ActiveCells.Contains(c))
+            {
+                //Original Variables
+                Vector2 BotLeft = new Vector2(15f, 65f);
+
+                GenUI.DrawTextWinterShadow(new Rect(256f, (float)(UI.screenHeight - 256), -256f, 256f));
+                Text.Font = GameFont.Small;
+                GUI.color = new Color(1f, 1f, 1f, 0.8f);
+
+                float num = 0f;
+                Rect rect;
+                if (c.Fogged(Find.VisibleMap))
+                {
+                    rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
+                    Widgets.Label(rect, "Undiscovered".Translate());
+                    GUI.color = Color.white;
+                    return false;
+                }
+                rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
+                int num2 = Mathf.RoundToInt(Find.VisibleMap.glowGrid.GameGlowAt(c) * 100f);
+                string[] glowStrings = Traverse.Create(__instance).Field("glowStrings").GetValue<string[]>();
+                Widgets.Label(rect, glowStrings[num2]);
+                num += 19f;
+                rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
+                TerrainDef terrain = c.GetTerrain(Find.VisibleMap);
+                //string SpeedPercentString = Traverse.Create(__instance).Method("SpeedPercentString", (float)terrain.pathCost).GetValue<string>();
+                //TerrainDef cachedTerrain = Traverse.Create(__instance).Field("cachedTerrain").GetValue<TerrainDef>();
+                string cachedTerrainString = Traverse.Create(__instance).Field("cachedTerrainString").GetValue<string>();
+
+                //if (terrain != cachedTerrain)
+                //{
+                    float fertNum = Find.VisibleMap.fertilityGrid.FertilityAt(c);
+                    string str = ((double)fertNum <= 0.0001) ? string.Empty : (" " + "FertShort".Translate() + " " + fertNum.ToStringPercent());
+                    cachedTerrainString = terrain.LabelCap + ((terrain.passability == Traversability.Impassable) ? null : (" (" + "WalkSpeed".Translate(new object[]
+                    {
+                    SpeedPercentString((float)terrain.pathCost)
+                    }) + str + ")"));
+                    //cachedTerrain = terrain;
+                //}
+                Widgets.Label(rect, cachedTerrainString);
+                num += 19f;
+                Zone zone = c.GetZone(Find.VisibleMap);
+                if (zone != null)
+                {
+                    rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
+                    string label = zone.label;
+                    Widgets.Label(rect, label);
+                    num += 19f;
+                }
+                float depth = Find.VisibleMap.snowGrid.GetDepth(c);
+                if (depth > 0.03f)
+                {
+                    rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
+                    SnowCategory snowCategory = SnowUtility.GetSnowCategory(depth);
+                    string label2 = SnowUtility.GetDescription(snowCategory) + " (" + "WalkSpeed".Translate(new object[]
+                    {
+                    SpeedPercentString((float)SnowUtility.MovementTicksAddOn(snowCategory))
+                    }) + ")";
+                    Widgets.Label(rect, label2);
+                    num += 19f;
+                }
+                List<Thing> thingList = c.GetThingList(Find.VisibleMap);
+                for (int i = 0; i < thingList.Count; i++)
+                {
+                    Thing thing = thingList[i];
+                    if (thing.def.category != ThingCategory.Mote)
+                    {
+                        rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
+                        string labelMouseover = thing.LabelMouseover;
+                        Widgets.Label(rect, labelMouseover);
+                        num += 19f;
+                    }
+                }
+                RoofDef roof = c.GetRoof(Find.VisibleMap);
+                if (roof != null)
+                {
+                    rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
+                    Widgets.Label(rect, roof.LabelCap);
+                    num += 19f;
+                }
+                GUI.color = Color.white;
+                return false;
+            }
+            return true;
+
+        }
+
+
+        // RimWorld.FertilityGrid
+        public static void CalculateFertilityAt(ref float __result, FertilityGrid __instance, IntVec3 loc)
+        {
+            Map map = Traverse.Create(__instance).Field("map").GetValue<Map>();
+            if (map.GetComponent<MapComponent_FertilityMods>().Get is MapComponent_FertilityMods comp)
+            {
+                if (comp.ActiveCells.Contains(loc))
+                {
+                    //Log.Message("3");
+
+                    __result *= 2;
+                }
+            }
+        }
+
+
         // RimWorld.PawnUtility
         public static void IsTravelingInTransportPodWorldObject_PostFix(ref bool __result, Pawn pawn)
         {

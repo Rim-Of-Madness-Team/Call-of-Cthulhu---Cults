@@ -8,7 +8,7 @@ using Verse.AI;
 
 namespace CultOfCthulhu
 {
-    class MapComponent_LocalCultTracker : MapComponent
+    partial class MapComponent_LocalCultTracker : MapComponent
     {
         public MapComponent_LocalCultTracker(Map map) : base(map)
         {
@@ -23,25 +23,6 @@ namespace CultOfCthulhu
 
         public CultSeedState CurrentSeedState { get { return CultTracker.Get.currentSeedState; } set { CultTracker.Get.currentSeedState = value; } }
         public List<Pawn> antiCultists { get { return CultTracker.Get.antiCultists; } }
-        //public List<Pawn> CultMembers { get { return CultTracker.Get.cultMembers; } }
-        //public List<Pawn> LocalCultMembers {
-        //    get {
-        //        List<Pawn> locals = new List<Pawn>();
-        //        if (CultTracker.Get.cultMembers != null)
-        //        {
-        //            foreach (Pawn pawn in CultTracker.Get.cultMembers)
-        //            {
-        //                if (pawn != null)
-        //                {
-        //                    if (pawn.Map == this.map) locals.Add(pawn);
-        //                }
-        //            }
-        //        }
-        //        return locals;
-        //    }
-        //}
-        //public string CultName { get { return CultTracker.Get.cultName; } set { CultTracker.Get.cultName = value; } }
-        //public bool DoesCultExist { get { return CultTracker.Get.doesCultExist; } }
 
         public bool needPreacher = false;
         public bool doingInquisition = false;
@@ -62,17 +43,6 @@ namespace CultOfCthulhu
             IncidentDef.Named("CultSeedIncident_NightmareMonolith")
         };
 
-        //public static MapComponent_LocalCultTracker Get(Map map)
-        //{
-        //    MapComponent_LocalCultTracker MapComponent_CultInception = map.components.OfType<MapComponent_LocalCultTracker>().FirstOrDefault<MapComponent_LocalCultTracker>();
-        //    if (MapComponent_CultInception == null)
-        //    {
-        //        MapComponent_CultInception = new MapComponent_LocalCultTracker(map);
-        //        map.components.Add(MapComponent_CultInception);
-        //    }
-        //    return MapComponent_CultInception;
-        //}
-
         public void ResolveTerribleCultFounder(Pawn founder)
         {
             if (founder == null) return;
@@ -82,8 +52,6 @@ namespace CultOfCthulhu
             needPreacher = true;
             ticksToSpawnHelpfulPreacher = OneMinute + Rand.Range(OneMinute, OneDay);
         }
-
-
 
         public override void MapComponentTick()
         {
@@ -95,76 +63,6 @@ namespace CultOfCthulhu
             this.InquisitionCheck();
         }
 
-        public void InquisitionCheck()
-        {
-            //Can we have an inquisition?
-
-            //Are there any altars?
-            if (!CultUtility.AreAltarsAvailable(this.map)) return;
-
-            //Do we have enough colonists? 5 is a good number to allow for a purge
-            if (map.mapPawns.FreeColonistsSpawnedCount < 5) return;
-                
-            //We need inquisitors. At least 2.
-            if (antiCultists == null) return;
-            if (antiCultists.Count < 2) return;
-
-            //We need 2 violence-capable inquisitors.
-            List<Pawn> assailants = new List<Pawn>();
-            foreach (Pawn current in antiCultists)
-            {
-                if (Cthulhu.Utility.CapableOfViolence(current) && current.IsColonist) assailants.Add(current);
-            }
-            if (assailants == null) return;
-            if (assailants.Count < 2) return;
-
-            //We need night conditions.
-            if (!Cthulhu.Utility.IsNight(map)) return;
-
-            //We need a preacher
-            Pawn preacher;
-            if (!TryFindPreacher(out preacher))
-            {
-                Cthulhu.Utility.DebugReport("Inquisition: Unable to find preacher.");
-                return;
-            }
-
-            //Check if the assailants equal the preacher...
-            foreach (Pawn current in assailants)
-            {
-                if (current == preacher) return;
-            }
-
-            //Set up ticker. Give our plotters a day or two.
-            if (ticksUntilInquisition == 0)
-            {
-                int ran = Rand.Range(1, 3);
-                ticksUntilInquisition = Find.TickManager.TicksGame + (GenDate.TicksPerDay * ran);
-                Cthulhu.Utility.DebugReport("Inquisition: Current Ticks: " + Find.TickManager.TicksGame.ToString() + " Ticker set to: " + ticksUntilInquisition.ToString());
-            }
-            if (ticksUntilInquisition < Find.TickManager.TicksGame)
-            {
-                TryInquisition(assailants, preacher);
-            }
-        }
-
-        public void TryInquisition(List<Pawn> assailants, Pawn preacher)
-        {
-            //Don't try another inquisition for a long time.
-            ticksUntilInquisition = Find.TickManager.TicksGame + (GenDate.TicksPerDay * Rand.Range(7, 28));
-
-            if (assailants.Contains(preacher)) return;
-            foreach (Pawn antiCultist in assailants)
-            {
-                if (antiCultist == null) continue;
-                if (!Cthulhu.Utility.IsActorAvailable(antiCultist)) continue;
-                antiCultist.needs.mood.thoughts.memories.TryGainMemory(CultsDefOf.Cults_MidnightInquisitionThought);
-                Job J = new Job(CultsDefOf.Cults_MidnightInquisition, antiCultist, preacher);
-                //antiCultist.MentalState.ForceHostileTo(Faction.OfPlayer);
-                antiCultist.jobs.TryTakeOrderedJob(J);
-                //antiCultist.jobs.EndCurrentJob(JobCondition.InterruptForced);
-            }
-        }
 
         public bool TryFindPreacher(out Pawn preacher)
         {
@@ -281,56 +179,6 @@ namespace CultOfCthulhu
                         }
                     }
                 }
-            }
-        }
-
-        public void CultSeedCheck()
-        {
-            //Check for god-mode spawned things.
-            if (CurrentSeedState < CultSeedState.FinishedWriting)
-            {
-                if (CultUtility.AreOccultGrimoiresAvailable(map))
-                {
-                    CurrentSeedState = CultSeedState.FinishedWriting;
-                }
-            }
-            if (CurrentSeedState < CultSeedState.NeedTable)
-            {
-                if (map.listerBuildings.allBuildingsColonist.FirstOrDefault((Building bld) => bld is Building_SacrificialAltar || bld is Building_ForbiddenReserachCenter) != null)
-                {
-                    CurrentSeedState = CultSeedState.NeedTable;
-                }
-            }
-
-            switch (CurrentSeedState)
-            {
-                case CultSeedState.NeedSeed:
-                    NeedSeedCountDown();
-                    return;
-                case CultSeedState.FinishedSeeing:
-                    return;
-                case CultSeedState.NeedSeeing:
-                    CanDoJob(CultsDefOf.Cults_Investigate, CurrentSeedPawn, CurrentSeedTarget, true);
-                    return;
-
-                case CultSeedState.NeedWriting:
-                    CanDoJob(CultsDefOf.Cults_WriteTheBook, CurrentSeedPawn);
-                    return;
-                case CultSeedState.FinishedWriting:
-                case CultSeedState.NeedTable:
-                    return;
-            }
-        }
-
-        public void NeedSeedCountDown()
-        {
-            if (ticksToSpawnCultSeed > 0) ticksToSpawnCultSeed -= 1;
-            else
-            {
-                ticksToSpawnCultSeed = OneDay + Rand.Range(-20000, +20000);
-                IncidentDef seed = seedIncidents.RandomElement<IncidentDef>();
-                IncidentParms parms = StorytellerUtility.DefaultParmsNow(Find.Storyteller.def, seed.category, map);
-                seed.Worker.TryExecute(parms);
             }
         }
 
