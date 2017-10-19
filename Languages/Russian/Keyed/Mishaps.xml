@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <SacrificeFailMessage1>{0} чихает во время деликатного пения.</SacrificeFailMessage1>
+  <SacrificeFailMessage2>{0} забывает некоторые слова.</SacrificeFailMessage2>
+  <SacrificeFailMessage3>{0} начинает бесконтрольно кричать, как будто кто-то контролирует его(её) голос.</SacrificeFailMessage3>
+  <SacrificeFailMessage4>{0} понимает, что их прошение слушает кто-то другой.</SacrificeFailMessage4>
+  <SacrificeFailMessage5>{0} так стучит над жаровней, что чуть не поджег себя.</SacrificeFailMessage5>
+  <SacrificeFailMessage6>{0} отвлекается видениями грядущего - боль, огонь, тишина.</SacrificeFailMessage6>
+  <SacrificeFailMessage7>{0} отвлекается на видения базальтовых башен, извергающихся из земли под ногами.</SacrificeFailMessage7>
+  <SacrificeFailMessage8>{0} отвлекается на всех кого знает, мертвых, но не неподвижных.</SacrificeFailMessage8>
+  <SacrificeFailMessage9>{0} царапает зудящую часть тела.</SacrificeFailMessage9>
+  <SacrificeFailMessage10>{0} прорывается в бешеном песнопении на чужих языках.</SacrificeFailMessage10>
+  <SacrificeFailMessage11>{0} отвлекается на недостойность другого члена.</SacrificeFailMessage11>
+  <SacrificeFailMessage12>{0} временно ослеплен средним наказанием каким-то потусторонним цветом. </SacrificeFailMessage12>
+  <SacrificeFailMessage13>{0} дремает в середине ритуала, чтобы отпраздновать видения неевклидовой геометрии глубоко под волнами.</SacrificeFailMessage13>
+  <SacrificeFailMessage14>{0} видит видения людей в форме военно-морских сил, вырубаемых кошмарной рыбой.</SacrificeFailMessage14>
+  <SacrificeFailMessage15>{0} усердно трудится.</SacrificeFailMessage15>
+  <SacrificeFailMessage16>{0} начинает неудержимо смеяться.</SacrificeFailMessage16>
+  <SacrificeFailMessage17>{0} дремлет в середине ритуала и видит видение молодого бога, плачущего молниями.</SacrificeFailMessage17>
+  <SacrificeFailMessage18>{0} ужасается видением чудовищного грибоподобного существа, несущего свое собственное лицо глубоко в складках пористой материи.</SacrificeFailMessage18>
+  <SacrificeFailMessage19>{0} чувствует неестественный голод в середине ритуала и пытается укусить другого члена.</SacrificeFailMessage19>
+  <SacrificeFailMessage20>{0} галлюцинации, видение странных людей, возвышающихся над неописуемыми ужасами.</SacrificeFailMessage20>
+  <SacrificeFailMessage21>{0} не может не чувствовать, что один из них не считается достойным.</SacrificeFailMessage21>
+  <SacrificeFailMessage22>{0} начинает вспыхивать в поте лица и кричит, говоря, что они не могут совершить этот поступок.</SacrificeFailMessage22>
+  <SacrificeFailMessage23>{0} случайно пропускает страницу текста.</SacrificeFailMessage23>
+  <SacrificeFailMessage24>{0} страдает симптомами сердечного приступа и все же спустя некоторое время полностью невредим</SacrificeFailMessage24>
+  <SacrificeFailMessage25>{0} кричит, он в галлюцинации видит то, что их плоть поглощена чудовищным роем.</SacrificeFailMessage25>
+  <SacrificeFailMessage26>{0} яростно подбрасывает.</SacrificeFailMessage26>
+  <SacrificeFailMessage27>{0} проходит средний ритуал.</SacrificeFailMessage27>
+  <SacrificeFailMessage28>{0} желудок ворчит, когда они уходят, чтобы принести что-нибудь поесть.</SacrificeFailMessage28>
+  <SacrificeFailMessage29>{0} лицо насмешливо искажается и начинает говорить ужасным гортанным языком.</SacrificeFailMessage29>
+  <SacrificeFailMessage30>{0} чувствует присутствие другого, когда слышит отдаленное дыхание.</SacrificeFailMessage30>
+  <SacrificeFailMessage31>{0} чувствует, что присутствие другого проникает в их разум и мгновенно вытесняет их.</SacrificeFailMessage31>
+  <SacrificeFailMessage32>{0} говорит слова власти и прошения, но их сердце слабо без веры.</SacrificeFailMessage32>
+  <SacrificeFailMessage33>{0} видит, что тени удлиняются и закручиваются в издевательствах над человеческой формой.</SacrificeFailMessage33>
+  <SacrificeFailMessage34>{0} смотрит на жертву и на мгновение видит свое собственное лицо вместо жертвы.</SacrificeFailMessage34>
+  <SacrificeFailMessage35>{0} видит проблеск прозрения и видит этот мир, свой дом, свою жизнь, для чего он на самом деле.</SacrificeFailMessage35>
+  <SacrificeFailMessage36>{0} неконтролируемо кричит: «Остерегайтесь Собора Святой Жабы!»</SacrificeFailMessage36>
+  <SacrificeFailMessage37>{0} чувствует, как манящий писк из пустот позади, призывает их душу.</SacrificeFailMessage37>
+  <SacrificeFailMessage38>{0} останавливает свое пение, когда земля содрогается, словно каким-то рычанием.</SacrificeFailMessage38>
+  <SacrificeFailMessage39>{0} чувствует нарастающую проклятую силу внутри себя, безумную и едва контролируемую.</SacrificeFailMessage39>
+  <SacrificeFailMessage40>40</SacrificeFailMessage40>
+  
+  </LanguageData>

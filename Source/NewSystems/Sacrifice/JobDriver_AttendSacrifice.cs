@@ -122,11 +122,10 @@ namespace CultOfCthulhu
             //Toil 2: 'Attend'
             var altarToil = new Toil();
             altarToil.defaultCompleteMode = ToilCompleteMode.Delay;
-            altarToil.defaultDuration = 9999;
+            altarToil.defaultDuration = CultUtility.ritualDuration;
             altarToil.AddPreTickAction(() =>
             {
                 this.pawn.GainComfortFromCellIfPossible();
-                this.ticksLeftThisToil = 9999;
                 this.pawn.Drawer.rotator.FaceCell(TargetB.Cell);
                 if (report == "") report = "Cults_AttendingSacrifice".Translate();
                 if (ExecutionerPawn != null)
@@ -135,19 +134,12 @@ namespace CultOfCthulhu
                     {
                         if (ExecutionerPawn.CurJob.def != CultsDefOf.Cults_HoldSacrifice)
                         {
-                            this.ticksLeftThisToil = -1;
+                            this.ReadyForNextToil();
                         }
                     }
-                    else
-                    {
-                        this.ticksLeftThisToil = -1;
-                    }
-                }
-                else
-                {
-                    this.ticksLeftThisToil = -1;
                 }
             });
+            altarToil.JumpIf(() => ExecutionerPawn.CurJob.def == CultsDefOf.Cults_HoldSacrifice, altarToil);
             yield return altarToil;
             
             //ToDo -- Add random Ia! Ia!

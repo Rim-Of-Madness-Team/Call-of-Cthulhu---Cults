@@ -21,9 +21,10 @@ using RimWorld;            // RimWorld specific functions are found here (like '
 using RimWorld.Planet;   // RimWorld specific functions for world creation
 //using RimWorld.SquadAI;  // RimWorld specific functions for squad brains 
 
+
 namespace CultOfCthulhu
 {
-    public class SpellWorker_SunkenShip : SpellWorker
+    public class SpellWorker_CallToDarkness : SpellWorker_GameEndingEffect
     {
         protected override bool CanFireNowSub(IIncidentTarget target)
         {
@@ -36,22 +37,42 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        public override float GetDelay()
         {
-            Map map = parms.target as Map;
-            IntVec3 intVec;
-            if (!ShipChunkDropCellFinder.TryFindShipChunkDropCell(map.Center, map, 999999, out intVec))
-            {
-                return false;
-            }
-            GenSpawn.Spawn(CultsDefOf.Cults_SunkenShipChunk, intVec, map);
-
-            map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
-            Messages.Message("MessageSunkenShipChunkDrop".Translate(), new TargetInfo(intVec, map), MessageSound.Standard);
-
-            Cthulhu.Utility.ApplyTaleDef("Cults_SpellSunkenShip", map);
-
-            return true;
+            return 10f;
         }
+        public override string GetEndScreenText()
+        {
+            return "GameOverOrthogenesis";
+        }
+
+        //public override bool TryExecute(IncidentParms parms)
+        //{
+        //    Map map = parms.target as Map;
+        //    StringBuilder stringBuilder = new StringBuilder();
+        //    foreach (Pawn current2 in map.mapPawns.FreeColonists)
+        //    {
+        //        if (current2.Spawned)
+        //        {
+        //            stringBuilder.AppendLine("   " + current2.LabelCap);
+        //            current2.DeSpawn();
+        //        }
+        //    }
+        //    if (stringBuilder.Length == 0)
+        //    {
+        //        stringBuilder.AppendLine("Nobody".Translate().ToLower());
+        //    }
+        //    string preCreditsMessage = "GameOverOrthogenesis".Translate(new object[]
+        //    {
+        //        stringBuilder.ToString()
+        //    });
+        //    Cults_Screen_Credits screen_Credits = new Cults_Screen_Credits(preCreditsMessage, 10);
+        //    screen_Credits.wonGame = true;
+        //    Find.WindowStack.Add(screen_Credits);
+        //    Find.MusicManagerPlay.ForceSilenceFor(999f);
+        //    ScreenFader.StartFade(Color.clear, 3f);
+        //    return true;
+        //}
+
     }
 }

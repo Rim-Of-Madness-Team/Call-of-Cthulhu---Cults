@@ -29,16 +29,9 @@ namespace CultOfCthulhu
         private TargetIndex Facing = TargetIndex.B;
         private TargetIndex Spot = TargetIndex.C;
 
+        protected Building_SacrificialAltar Altar => (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.A).Thing;
+
         private Pawn setPreacher = null;
-
-        protected Building_SacrificialAltar Altar
-        {
-            get
-            {
-                return (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.A).Thing;
-            }
-        }
-
         protected Pawn PreacherPawn
         {
             get
@@ -96,19 +89,18 @@ namespace CultOfCthulhu
 
             Toil altarToil = new Toil();
             altarToil.defaultCompleteMode = ToilCompleteMode.Delay;
-            altarToil.defaultDuration = 9999;
+            altarToil.defaultDuration = CultUtility.ritualDuration;
             altarToil.AddPreTickAction(() =>
             {
                 this.pawn.GainComfortFromCellIfPossible();
-                this.ticksLeftThisToil = 9999;
                 this.pawn.Drawer.rotator.FaceCell(TargetB.Cell);
                 if (PreacherPawn.CurJob.def != CultsDefOf.Cults_HoldWorship)
                 {
-                    this.ticksLeftThisToil = -1;
+                    this.ReadyForNextToil();
                 }
             });
             yield return altarToil;
-            //yield return Toils_Jump.JumpIf(altarToil, () => PreacherPawn.CurJob.def.defName == "HoldWorship");
+            yield return Toils_Jump.JumpIf(altarToil, () => PreacherPawn.CurJob.def == CultsDefOf.Cults_HoldWorship);
             yield return Toils_Reserve.Release(Spot);
 
             this.AddFinishAction(() =>

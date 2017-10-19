@@ -229,9 +229,8 @@ namespace CultOfCthulhu
         }
         #endregion Pawn
 
-        public static int remainingDuration = 1100; // 15 second timer
-        public static int ritualDuration = 1100; // 15 seconds max
-        public static int reflectDuration = 600; // 10 seconds max
+        public static readonly int ritualDuration = 740; // 15 seconds max
+        public static readonly int reflectDuration = 600; // 10 seconds max
 
         #region GetResults
         public enum SacrificeResult

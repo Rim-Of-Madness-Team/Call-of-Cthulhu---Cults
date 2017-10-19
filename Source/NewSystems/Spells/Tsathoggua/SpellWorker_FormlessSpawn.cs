@@ -9,7 +9,7 @@ using System.Text;
 
 namespace CultOfCthulhu
 {
-    public class SpellWorker_DefendTheBrood : SpellWorker
+    public class SpellWorker_FormlessSpawn : SpellWorker
     {
         private const int NUMTOSPAWN = 3;
         private const int HARDLIMIT = 8;
@@ -42,7 +42,7 @@ namespace CultOfCthulhu
             //Cthulhu.Utility.DebugReport("CanFire: " + this.def.defName);
             return true;
         }
-        
+
 
         protected List<Pawn> SpawnPawns(IncidentParms parms)
         {
@@ -109,7 +109,7 @@ namespace CultOfCthulhu
             return parms.faction != null;
         }
 
-        
+
         public override bool TryExecute(IncidentParms parms)
         {
             if (!this.TrySetDeepOneFaction(parms))
@@ -149,6 +149,6 @@ namespace CultOfCthulhu
 
             return true;
         }
-        
+
     }
 }

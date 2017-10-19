@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+<!-- =====Coats===== -->
+
+  <Make_Apparel_CultistRobes.Label>Сделать робу культиста</Make_Apparel_CultistRobes.Label>
+  <Make_Apparel_CultistRobes.Description>Сделать робу культиста.</Make_Apparel_CultistRobes.Description>
+  <Make_Apparel_CultistRobes.jobString>Делает робу культиста.</Make_Apparel_CultistRobes.jobString>
+
+  <Make_Apparel_ROMFurRobes.Label>Сделать робу культиста (меховая)</Make_Apparel_ROMFurRobes.Label>
+  <Make_Apparel_ROMFurRobes.Description>Сделать робу культиста (меховая).</Make_Apparel_ROMFurRobes.Description>
+  <Make_Apparel_ROMFurRobes.jobString>Делает робу культиста (меховая).</Make_Apparel_ROMFurRobes.jobString>
+
+  <Make_Apparel_ROMWrapRobes.Label>Сделать культистское облачение (туника)</Make_Apparel_ROMWrapRobes.Label>
+  <Make_Apparel_ROMWrapRobes.Description>Сделать культистское облачение (туника).</Make_Apparel_ROMWrapRobes.Description>
+  <Make_Apparel_ROMWrapRobes.jobString>Делает культистское облачение (туника).</Make_Apparel_ROMWrapRobes.jobString>
+
+  <Make_Apparel_ROMCthulhuRobes.Label>Сделать культистское облачение (щупальца)</Make_Apparel_ROMCthulhuRobes.Label>
+  <Make_Apparel_ROMCthulhuRobes.Description>Сделать культистское облачение (щупальца).</Make_Apparel_ROMCthulhuRobes.Description>
+  <Make_Apparel_ROMCthulhuRobes.jobString>Делает культистское облачение (щупальца).</Make_Apparel_ROMCthulhuRobes.jobString>
+
+  <Make_Apparel_ROMDagonRobes.Label>Сделать культистское облачение (традиционное)</Make_Apparel_ROMDagonRobes.Label>
+  <Make_Apparel_ROMDagonRobes.Description>Сделать культистское облачение (традиционное).</Make_Apparel_ROMDagonRobes.Description>
+  <Make_Apparel_ROMDagonRobes.jobString>Делает культистское облачение (традиционное).</Make_Apparel_ROMDagonRobes.jobString>
+
+  <Make_Apparel_ROMShubRobes.Label>Сделать культистское облачение (друид)</Make_Apparel_ROMShubRobes.Label>
+  <Make_Apparel_ROMShubRobes.Description>Сделать культистское облачение (друид).</Make_Apparel_ROMShubRobes.Description>
+  <Make_Apparel_ROMShubRobes.jobString>Делает культистское облачение (друид).</Make_Apparel_ROMShubRobes.jobString>
+
+<!--==========================-->
+
+  <Make_Apparel_SailorUniform.Label>Сделать матросскую униформу</Make_Apparel_SailorUniform.Label>
+  <Make_Apparel_SailorUniform.Description>Сделать матросскую униформу.</Make_Apparel_SailorUniform.Description>
+  <Make_Apparel_SailorUniform.jobString>Делает матросскую униформу.</Make_Apparel_SailorUniform.jobString>
+
+<!-- =======Hats======== -->
+
+  <Make_Apparel_CultistHood.Label>Сделать капюшон культиста (скрывающий)</Make_Apparel_CultistHood.Label>
+  <Make_Apparel_CultistHood.Description>Сделать капюшон культиста (скрывающий).</Make_Apparel_CultistHood.Description>
+  <Make_Apparel_CultistHood.jobString>Делает капюшон культиста (скрывающий).</Make_Apparel_CultistHood.jobString>
+
+  <Make_Apparel_CthulhuMaskHood.Label>Сделать капюшон культиста (маска ктулху)</Make_Apparel_CthulhuMaskHood.Label>
+  <Make_Apparel_CthulhuMaskHood.Description>Сделать капюшон культиста (маска ктулху).</Make_Apparel_CthulhuMaskHood.Description>
+  <Make_Apparel_CthulhuMaskHood.jobString>Делает капюшон культиста (маска ктулху).</Make_Apparel_CthulhuMaskHood.jobString>
+
+  <Make_Apparel_NyarlathotepHood.Label>Сделать капюшон культиста (ньярлатотеп)</Make_Apparel_NyarlathotepHood.Label>
+  <Make_Apparel_NyarlathotepHood.Description>Сделать капюшон культиста (ньярлатотеп).</Make_Apparel_NyarlathotepHood.Description>
+  <Make_Apparel_NyarlathotepHood.jobString>Делает капюшон культиста (ньярлатотеп).</Make_Apparel_NyarlathotepHood.jobString>
+
+  <Make_Apparel_DagonMitre.Label>Сделать капюшон культиста (митра дагона)</Make_Apparel_DagonMitre.Label>
+  <Make_Apparel_DagonMitre.Description>Сделать капюшон культиста (митра дагона).</Make_Apparel_DagonMitre.Description>
+  <Make_Apparel_DagonMitre.jobString>Делает капюшон культиста (митра дагона).</Make_Apparel_DagonMitre.jobString>
+
+  <Make_Apparel_ShubMask.Label>Сделать капюшон культиста (маска шуб-ниггурата)</Make_Apparel_ShubMask.Label>
+  <Make_Apparel_ShubMask.Description>Сделать капюшон культиста (маска шуб-ниггурата).</Make_Apparel_ShubMask.Description>
+  <Make_Apparel_ShubMask.jobString>Делает капюшон культиста (маска шуб-ниггурата).</Make_Apparel_ShubMask.jobString>
+
+  <Make_Apparel_StandardHood.Label>Сделать капюшон культиста (простой)</Make_Apparel_StandardHood.Label>
+  <Make_Apparel_StandardHood.Description>Сделать капюшон культиста (простой).</Make_Apparel_StandardHood.Description>
+  <Make_Apparel_StandardHood.jobString>Делает капюшон культиста (простой).</Make_Apparel_StandardHood.jobString>
+
+  <Make_Apparel_SailorsCap.Label>Сделать матросская фуражка</Make_Apparel_SailorsCap.Label>
+  <Make_Apparel_SailorsCap.Description>Сделать матросская фуражка.</Make_Apparel_SailorsCap.Description>
+  <Make_Apparel_SailorsCap.jobString>Делает матросская фуражка.</Make_Apparel_SailorsCap.jobString>
+
+</LanguageData>

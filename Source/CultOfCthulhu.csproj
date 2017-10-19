@@ -58,6 +58,14 @@
   <ItemGroup>
     <Compile Include="NewSystems\AntiCult\MapComponent_LocalCultTracker_Inquisition.cs" />
     <Compile Include="NewSystems\Cult\Seed\MapComponent_LocalCultTracker_Seed.cs" />
+    <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_AbyssalRift.cs" />
+    <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_CallToDarkness.cs" />
+    <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_ElixerOfPower.cs" />
+    <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_FormlessSpawn.cs" />
+    <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_TsaIdol.cs" />
+    <Compile Include="NewSystems\Worship\Building_SacrificialAltar_Worship.cs" />
+    <Compile Include="NewSystems\Worship\CompProperties_WorshipCaller.cs" />
+    <Compile Include="NewSystems\Worship\CompWorshipCaller.cs" />
     <Compile Include="Unused\Building_BurstingTentacle.cs" />
     <Compile Include="NewSystems\Cult\Building_ForbiddenReserachCenter.cs" />
     <Compile Include="NewSystems\Spells\Dagon\Building_LandedShip.cs" />

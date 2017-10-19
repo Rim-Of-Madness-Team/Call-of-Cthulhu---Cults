@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- 7/3/17 -->
+  <Cults_TransmogrifiedLetter>Изменение</Cults_TransmogrifiedLetter>
+  <Cults_TransmogrifiedLetterDesc>Прикосновение к неизвестным силам, {0} больше не похоже на того самого и теперь обладает странной энергией и размером, не замеченным ранее в своем роде. {0} дергается со старой и беспокойной силой.</Cults_TransmogrifiedLetterDesc>
+
+  <!-- 6/24/17 -->
+  <Cults_Morning>утро</Cults_Morning>
+  <Cults_Evening>вечер</Cults_Evening>
+  <Cults_NoPreacher>Проповедник не выбран.</Cults_NoPreacher>
+  <Cults_NoCosmicEntity>Космическая сущность не выбрана.</Cults_NoCosmicEntity>
+  <Cults_NoPreacherDrafted>Проповедник призван.</Cults_NoPreacherDrafted>
+  <Cults_SelectAblebodiedPreacher>Выберите трудоспособного проповедника.</Cults_SelectAblebodiedPreacher>
+  <Cults_AltarIsReserved>Алтарь зарезервирован для чего-то другого.</Cults_AltarIsReserved>
+  <Cults_AltarNeedsToBeCleared>Алтарь зарезервирован для чего-то другого.</Cults_AltarNeedsToBeCleared>
+  <Cults_MorningEveningSermonInterrupted>Проповедь {0} отменена. Собрание приносило жертву.</Cults_MorningEveningSermonInterrupted>
+  <Cults_AlreadyGatheringForASermon>Ваш анклав уже собирается для проповеди.</Cults_AlreadyGatheringForASermon>
+  <Cults_CancellingSermon>Отмена проповеди.</Cults_CancellingSermon>
+  <Cults_NoWorshipWithoutDeity>Не могут поклоняться без избранного божества</Cults_NoWorshipWithoutDeity>
+
+  <!-- 1.17.3.1 -->
+  <Cults_NewDarkYoung>Новорожденная темноволосая вылезла из утробы между мирами.</Cults_NewDarkYoung>
+
+<!-- 1.17.0 New Versioning System-->
+
+  <Cults_NoPlayerCultAvailable>Нет доступного культа</Cults_NoPlayerCultAvailable>
+  <Cults_Monstrous>{0} чудовищный</Cults_Monstrous>
+  <Cults_TransmogrifyMessage>{0} форма была улучшена.</Cults_TransmogrifyMessage>
+  <Cults_RatsMessage>Крысы повсюду!</Cults_RatsMessage>
+  <Cults_Spell>Заклинания</Cults_Spell>
+  <Cults_SpellDesc>Выберите идеальный результат, который вы хотели бы получить от своей жертвы.</Cults_SpellDesc>
+  <Cults_AutoForbidWarning>Примечание. Это будет автоматически запрещено при нормальных исследованиях.</Cults_AutoForbidWarning>
+  <Cults_WaitingToStartSermon>Ожидание начала проповеди</Cults_WaitingToStartSermon>
+  <Cults_PreachingAbout>Проповедь о {0}</Cults_PreachingAbout>
+  <Cults_PrayingTo>Молясь {0}</Cults_PrayingTo>
+  <Cults_AttendingSacrifice>Посещение жертвы</Cults_AttendingSacrifice>
+  <Cults_ReflectingOnSacrifice>Размышление о жертве</Cults_ReflectingOnSacrifice>
+  <Cults_FoundedACultLabel>Культ основан</Cults_FoundedACultLabel>
+  <Cults_FoundedACultDesc>{0} основал культ.\n\nИсследуйте и постройте алтарь, чтобы держать паству и расширить свой культ.</Cults_FoundedACultDesc>
+  <Cults_DismantledACultLabel>Культ расформирован</Cults_DismantledACultLabel>
+  <Cults_DismantledACultDesc>{0} был распущен.\n\nНе осталось достаточно верующих, чтобы продолжать культ.</Cults_DismantledACultDesc>
+  <Cults_DiscoveredCultLabel>Обнаружен культ</Cults_DiscoveredCultLabel>
+  <Cults_DiscoveredCultDesc>Мы обнаружили {0}.\n\nЭто культ из {1}, основанный {2} и возглавляемый {3}.</Cults_DiscoveredCultDesc>
+  <Cults_InitialExposureLabel>Оккультные начинания</Cults_InitialExposureLabel>
+  <Cults_InitialExposureDesc>Возбужденные новыми возможностями, ваши колонисты уловили некоторый интерес к недавним оккультным событиям.\n\nИх убеждения можно отследить в меню их потребностей. С течением времени эта вера будет постепенно снижаться. Используя оккультные исследования, вы можете укрепить культ и убеждения своих колонистов, пока они не найдут свой собственный культ.</Cults_InitialExposureDesc>
+
+<!-- 1.2.8 Old versioning system -->
+
+  <Altar>Алтарь</Altar>
+  <ForcedInvestigation>Принудительное расследование</ForcedInvestigation>
+  <ForcedInvestigationDesc>Если этот параметр включен, ваш лучший исследователь будет стремиться исследовать объекты культа.</ForcedInvestigationDesc>
+  <IsUnavailable> недоступен.</IsUnavailable>
+
+<!-- 1.2.4 -->
+
+  <ShowDebugCode>Показать код отладки</ShowDebugCode>
+  <ShowDebugCodeDesc>В режиме разработчика показан отладочный код для культов. При этом отображается дополнительная информация по расчетам и процессам в процессе работы мода.</ShowDebugCodeDesc>
+
+<!-- 1.2.1 -->
+
+  <CallOfCthulhuCults>Зов Ктулху - Культы</CallOfCthulhuCults>
+  <StudySuccessfulCultsIsRepeatableDesc>Позволяет проводить повторяющиеся исследования. Когда отключено, это позволяет игрокам использовать моды, такие как tech GHXX's Tech Advancing.</StudySuccessfulCultsIsRepeatableDesc>
+  <StudySuccessfulCultsIsRepeatable>Повторное изучение успешных исследований культов</StudySuccessfulCultsIsRepeatable>
+  <RepeatableResearch>{0} теперь можно исследовать снова, чтобы укрепить единство культа.</RepeatableResearch>
+
+<!-- 1.2 -->
+  <WorshipCancelledCorruptionWarning>Запланированное поклонение отменено из-за поврежденного алтаря.</WorshipCancelledCorruptionWarning>
+
+  <PruningSuccessful>Обрезка и ремонт были успешно завершены.</PruningSuccessful>
+
+  <PruneAndRepair>Обрезка и Ремонт</PruneAndRepair>
+
+  <PruneAndRepairDesc>Переключите это, чтобы колонист смог выкорчевать поврежденное дерево из фундамента, разрезать его на куски и восстановить алтарь.</PruneAndRepairDesc>
+
+  <UpgradeCongregationWarning>Невозможно выполнить обновление во время собрания.</UpgradeCongregationWarning>
+
+  <UpgradeSuccessful>Успешное обновление</UpgradeSuccessful>
+
+  <CorruptedAltarWarning>Ваш алтарь был поврежден. Рассмотрим вопрос о его ремонте.</CorruptedAltarWarning>
+
+  <OverPawnRiderLimit>Слишком много рейдеров! Максимум равен {0}.</OverPawnRiderLimit>
+
+  <ReanimatedOath>{0} выполнил свою клятву и снова воскрес как слуга Хастура.</ReanimatedOath>
+
+  <CompTargetEffectCultMinded>{0} промыли мозги безумием культа.</CompTargetEffectCultMinded>
+
+  <GameOverAbsorptionByCarcosa>Занавес вашей колонии упал. Эти колонисты первыми покинули сцену этого мира:\n\n{0}</GameOverAbsorptionByCarcosa>
+
+
+<!-- 1.1e -->
+
+  <SacrificeGathering>{0} собираются для жертвоприношения.</SacrificeGathering>
+  <WorshipGathering>{0} собирается для проповеди.</WorshipGathering>
+  <WorshipFinished>{0} закончил поклонение.</WorshipFinished>
+
+  <!-- Cult Inception -->
+  <CultBookLabel>Гримуар завершен</CultBookLabel>
+  <CultSeed_NightmareTreeLabel>Изучает</CultSeed_NightmareTreeLabel>
+  <CultSeed_NightmareTreeSummary>{0} слышал о призрачном дереве неподалеку от колонии и отправился расследовать.</CultSeed_NightmareTreeSummary>
+  <WritingStrangeSymbols> начал одержимо писать страницы странных символов.</WritingStrangeSymbols>
+  <CultBookSummary>{0} не имеет воспоминаний о письме, которое все еще слегка влажное от пота его трудов. Это ужасная книга, наполненная странным чужеземным языком, который не совсем понятен.\n\nВ зловещих схемах ритуальных жертвоприношений и заклинаний в томе, некоторых колонистов встревожило её оккультный характер, тогда как другие предложили создать правильный исследовательский центр для дальнейшего изучения секретов, находящихся внутри.</CultBookSummary>
+  <OccultCenterWarningOne>По мере того как {0} исследует, {1} чувствует {3} здравомыслие начинает ускользать.</OccultCenterWarningOne>
+  <OccultCenterWarningTwo>По мере того как {0} исследует, {1} чувствует, что кто-то наблюдает за {2}.</OccultCenterWarningTwo>
+  <OccultCenterWarningThree>По мере того как {0} исследует, {1} чувствует себя очень расстроенным.</OccultCenterWarningThree>
+  <OccultCenterWarningFour>Во время исследования {0} начал произносить неестественные звуки вместо речи.</OccultCenterWarningFour>
+
+  <Mute>Заглушение</Mute>
+  <MuteDesc>Остановка / запуск окружающего шума.</MuteDesc>
+
+
+  <LetterLabelCultistJoin>Культист присоединяется</LetterLabelCultistJoin>
+  <CultistJoin>{0} с именем NAME прибыл и присоединился к колонии. HECAP - это {1}, одержимый присоединением к вашему новому культу.</CultistJoin>
+
+
+
+  <!-- Offering -->
+  <Offering>Подношение</Offering>
+  <OfferingDesc>Оферент соберет любую запрещенную пищу этого типа.</OfferingDesc>
+  <Offerer>Оферент</Offerer>
+  <OffererDesc>Выберите колониста, чтобы принести подношение.</OffererDesc>
+  <Amount>Количество</Amount>
+  <AmountDesc>Каждая сумма основана на значениях питательности.\nСкудное: 5\nСлавное: 10\nЗначительное: 20\nДостойное: 50\nВпечатляющее: 100</AmountDesc>
+  <Plants>Растительное</Plants>
+  <Meat>Мясо</Meat>
+  <Meals>Пища</Meals>
+  <Meagre>Скудно</Meagre>
+  <Decent>Славно</Decent>
+  <Sizable>Значительно</Sizable>
+  <Worthy>Достойно</Worthy>
+  <Impressive>Впечатляюще</Impressive>
+  <CommandOffering>Сделать подношение</CommandOffering>
+  <CommandOfferingDesc>Предлагайте ценные запасы в надежде привлечь внимание сил за пределами этого мира.</CommandOfferingDesc>
+  <CommandCancelOffering>Отменить подношение</CommandCancelOffering>
+
+
+  <!-- Sacrifice -->
+  <TabSacrifice>Жертвоприношение</TabSacrifice>
+  <Executioner>Палач</Executioner>
+  <ExecutionerDesc>Выберите колониста, чтобы совершить действие. Во время человеческих жертвоприношений этот колонист, если не указано иное, получает преимущества заклинания.</ExecutionerDesc>
+  <Sacrifice>Жертва</Sacrifice>
+  <SacrificeAnimalDesc>Выберите животное, чтобы предложить его жизнь.</SacrificeAnimalDesc>
+  <SacrificeDesc>Выберите заключенного, чтобы предложить его жизнь.</SacrificeDesc>
+  <HumanSacrificeWasFamily>{0} казнил {1} {2} {3}</HumanSacrificeWasFamily>
+  <Animal>Животное</Animal>
+  <Human>Человек</Human>
+  <AnimalSacrificeLabel>Жертвоприношение животного</AnimalSacrificeLabel>
+  <AnimalSacrificeReason>предложить скот от своего имени</AnimalSacrificeReason>
+  <ReadilyReceived>Жертва была охотно получена</ReadilyReceived>
+  <AnimalSacrificeWasPet>Жертвы таких невинно выглядящих животных, кажется, радует </AnimalSacrificeWasPet>
+  <AnimalSacrificeWasBonded>{0} разделил связь с {1} в течение своей жизни, добавив к её жертве ценности.</AnimalSacrificeWasBonded>
+  <AnimalSacrificeWasExcMaster>Кроме того, хозяин {0}, {1} совершил жертвоприношение</AnimalSacrificeWasExcMaster>
+  <GreedilyReceived>Эта жертва удовлетворена </GreedilyReceived>
+
+  <CommandUpgrade>Обновление алтаря</CommandUpgrade>
+  <UpgradeLevel2>Улучшенный алтарь. Теперь мы можем выполнять жертвоприношения животными во имя тех могущественных сил.</UpgradeLevel2>
+  <UpgradeLevel3>Улучшенный алтарь. Теперь мы можем приносить человеческие жертвы во имя тех могущественных сил.</UpgradeLevel3>
+  <CommandUpgradeDesc>Добавьте к вашему алтарю больше каналов крови и гравюр, чтобы подготовить его к более продвинутым ритуалам.</CommandUpgradeDesc>
+  <CommandCultSacrifice>Жертва</CommandCultSacrifice>
+  <CommandCultSacrificeDesc>Жертвуйте бедной душой космическим силам в надежде на великие награды.</CommandCultSacrificeDesc>
+  <CommandCultDisabled>Мы не знаем правильных ритуалов. Мы должны исследовать надлежащие обряды.</CommandCultDisabled>
+  <CommandCancelSacrifice>Отмените эту жертву.</CommandCancelSacrifice>
+  <CommandBuildFKC>Строительство станции</CommandBuildFKC>
+  <CommandBuildFKCDesc>Создайте исследовательский центр для дальнейшего изучения таинственного тома и его секретов.</CommandBuildFKCDesc>
+  <Deity>Божество</Deity>
+  <DeityDesc>Божества могут быть открыты в запрещенном исследовательском центре.</DeityDesc>
+  <FertilityTotemTimer>Плодородность (заканчивается в {0})</FertilityTotemTimer>
+  <Reanimated>Реанимированный</Reanimated>
+  <DarkYoungSpawnsIn>Темные молодые отродья в</DarkYoungSpawnsIn>
+
+  <SacrificeIntro>Ваши колонисты собрали жертву для</SacrificeIntro>
+
+  <!-- Worship -->
+  <TabWorship>Поклонение</TabWorship>
+  <RenameTemple>Переименовать храм</RenameTemple>
+  <NameTemple>Назовите свой храм</NameTemple>
+  <Standing>Постоянный</Standing>
+  <Tier>Уровень</Tier>
+  <TierStringZero>Игнорируемый
+  </TierStringZero>
+  <TierStringOne>Заметный
+  </TierStringOne>
+  <TierStringTwo>Наблюдаемый
+  </TierStringTwo>
+  <TierStringThree>Одобренный
+  </TierStringThree>
+  <TierStringFinal>Выбранный
+  </TierStringFinal>
+  <Favor>Благосклонность</Favor>
+  <FavorDescription>Благосклонность растет через неоднократные акты преданности. Высшие уровни разблокируют заклинания в обмен на человеческие жертвы.</FavorDescription>
+  <Preacher>Проповедник</Preacher>
+  <PreacherDesc>Этот колонист обращается к собранию. Рекомендуется использовать колонистов с сильными социальными навыками.</PreacherDesc>
+  <Auto>Авто</Auto>
+  <CommandForceWorship>Поклонение силам</CommandForceWorship>
+  <CommandForceWorshipDesc>Зовите свой анклав поклоняться, независимо от времени или места.</CommandForceWorshipDesc>
+  <MorningSermons>Утренние проповеди</MorningSermons>
+  <MorningSermonsDesc>Принимать услуги между часами 6 и 10 часов утра.</MorningSermonsDesc>
+  <EveningSermons>Вечерние проповеди</EveningSermons>
+  <EveningSermonsDesc>Принимать услуги между часами 6 и 10 часов ночи.</EveningSermonsDesc>
+  <CommandCancelWorship>Отменить проповедь.</CommandCancelWorship>
+
+  <!-- Cult Naming -->
+
+  <NameCultMessage>Культ начал формироваться в вашей колонии. {0} считает, что ты должен дать этому культу имя.\n\пКак он должен называться?</NameCultMessage> <NameCultMessageNullHandler>A cult has begun to form in your colony.\n\nWhat should it be called?</NameCultMessageNullHandler>
+  <CultGainsName>Местный культ теперь известен как {0}. Его можно переименовать на местном алтаре.</CultGainsName>
+
+  <!-- Sacrifice Result Strings -->
+  <SacrificeLabelsuccess>Успех</SacrificeLabelsuccess>
+  <SacrificeLabelmixedsuccess>Смешанный успех</SacrificeLabelmixedsuccess>
+  <SacrificeLabelfailure>Неудача</SacrificeLabelfailure>
+  <SacrificeLabelcriticalfailure>Незначительный провал</SacrificeLabelcriticalfailure>
+
+  <!-- Orbital Insanity Wave --> <LetterLabelForcedCrashCombatSuplier>Поставщик оружия разбился</LetterLabelForcedCrashCombatSuplier>
+  <ForcedCrashCombatSuplier>Движимый безумием, пилот крушения торговых кораблей неподалеку.</ForcedCrashCombatSuplier>
+
+  <LetterLabelForcedCrashExotic>Корабль с экзотикой разбился</LetterLabelForcedCrashExotic>
+  <ForcedCrashExotic>Движимый безумием, пилот крушения торговых кораблей неподалеку.</ForcedCrashExotic>
+
+  <LetterLabelForcedCrashBulkGoods>Крушение оптового корабля</LetterLabelForcedCrashBulkGoods>
+  <ForcedCrashBulkGoods>Движимый безумием, пилот крушения торговых кораблей неподалеку.</ForcedCrashBulkGoods>
+
+  <DeepOnesArrive>Глубинные стражи прибывают</DeepOnesArrive>
+  <DeepOnesArriveDesc>Из глубин моря появились глубинные стражи, чтобы защитить ваш анклав от внешних угроз.</DeepOnesArriveDesc>
+
+
+
+  <!-- Aurora -->
+  <LetterLabelAurora>Сияние {0}</LetterLabelAurora>
+  <Borealis>Северное сияние</Borealis>
+  <Australis>Южное сияние</Australis>
+  <LetterIncidentAurora>Каждый колонист в восторге от сияния.\n\nВ течение нескольких дней настроение некоторых людей будет улучшено.</LetterIncidentAurora>
+
+  <!-- Messages -->
+
+
+  <MessageSunkenShipChunkDrop>Рядом таинственно появился кусок затонувшего корабля.</MessageSunkenShipChunkDrop>
+
+  <!-- Game Over-->
+	<CoercionRole>Дизайн, арт</CoercionRole>
+	<DrynynRole>Дизайн, текст</DrynynRole>
+	<erdelfRole>Программирование</erdelfRole>
+	<JareixRole>Дизайн, арт</JareixRole>
+	<JecrellRole>Дизайн, арт, текст, программирование</JecrellRole>
+	<JunkyardJoeRole>Дизайн, текст, концепт-арт</JunkyardJoeRole>
+	<spoonshortageRole>арт</spoonshortageRole>
+	<SticksNTricksRole>арт, дизайн</SticksNTricksRole>
+	<PlymouthRole>арт</PlymouthRole>
+	<SeraRole>арт</SeraRole>
+	<NackbladRole>Дизайн, арт</NackbladRole>
+	<PatreonProducer>Продюсер</PatreonProducer>
+	<PatreonSupporter>Сторонники Patreon</PatreonSupporter>
+
+	<GameOverSummonCthulhu>На вершине ритуала вы чувствуете великую силу. Ваши песнопения усиливаются в пылкости и кажется, умножаются в количестве - как будто вы слышите, как просители из бесчисленных других миров повторяют ваше собственное пение.\n\nВ взгляде в прошлое вы не можете вспомнить, когда вы были успешны. Время, пространство, ваше чувство собственного достоинства перестали быть значимыми. Но теперь вы знаете, что великий человек возник! Ктулху теперь уже не дремлет в своем великом городе Р’льехе. Как существо, выходящее за рамки простой материи, его присутствие и форма многообразны. Будете ли вы считаться достаточно верными, чтобы быть достойными взглянуть на его физическое воплощение, прежде чем ваш разум будет разорван?\n\nДаже сейчас вы пытаетесь сохранить любой уровень ясности, как законы, с помощью которых вселенная действует в фантазии.\n\nВы вызвали Ктулху! Эти колонисты были уничтожены после его прихода:\n\n{0}</GameOverSummonCthulhu>
+
+    <GameOverOrthogenesis>Сначала изменения были медленными и тонкими. Потеря волос, небольшое увеличение глаз, растущая сероватая бледность кожи. Некоторые из них были более продвинутыми, чем другие, и появились маленькие жаберные щели. Было ясно, что ваша генетическая судьба не была ровня остальному человечеству.\n\nТеперь вы слышите отдаленное кваканье вашего новообретенного родственника. Этот звук, который однажды сделал ночь ужасной, теперь чувствуется знакомым и приветивым. Он зовет вас домой. Вы смотрите на свои вещи, но решаете оставить их позади. Они не понадобятся вам там, куда вы идете.\n\nПо благословению великого Отца и Матери, которые правят под волнами, вы теперь должны присоединиться к своим братьям.\n\nЭти колонисты были потеряны в волнах:\n\n{0}</GameOverOrthogenesis>
+
+    <GameOverTransdimensionalConvergence>Я делаю знаки, я говорю слова\nкоторые открывают дверь!\nКогда я говорю, я поворачиваю ключ\nСейчас! еще раз прогуляйся по Земле!\n\nНе в небесах вы видите туман, хотя, как будто через трещины в небе. Усики облачного вещества тянутся вниз, что порождает глаза, зубы и конечности в смеси биологического избытка.\n\nВы открыли путь для Шуба Ниггурата, чтобы завладеть своей Вселенной. Эти колонисты были уничтожены после его прихода\n\n{0}</GameOverTransdimensionalConvergence>
+
+    <GameOverPilgrimageToKadath>За последние несколько недель мечты становились все сильнее и ярче. В сравнении с этим реальный мир стал бледным. Вы бы закрыли глаза, чтобы увидеть его великолепные мраморные шпили и серебряные фонтаны - город мечты Кадат. Были те, кто думал, что эти видения не были реальными или что они были приманкой для какой-то ловушки. Даже если бы это было так, вы знаете, что вы все равно бы искали его.\n\nИ вот теперь Ньярлатотеп пришел, чтобы увести вас в этот рай.\n\nНьярлатотеп заставил ваших колонистов спать и побывать в Кадате. Вследствие этого эти колонисты рассматривали Азатота прежде, чем они были немедленно уничтожены из-за безумия:\n\n{0}</GameOverPilgrimageToKadath>
+
+
+</LanguageData>

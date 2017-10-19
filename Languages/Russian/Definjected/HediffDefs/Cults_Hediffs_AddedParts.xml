@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>
+
+  <Cults_PsionicBrain.Label>псионическая доля</Cults_PsionicBrain.Label>
+
+  <Cults_TentacleArm.Label>щупальце</Cults_TentacleArm.Label>
+
+  <Cults_CthulhidTentacle.Label>шупальце ктулху</Cults_CthulhidTentacle.Label>
+
+  <Cults_CthulhidEyestalk.Label>ужасающий говорящий глаз</Cults_CthulhidEyestalk.Label>
+
+  <Cults_MonstrousBrain.Label>чудовищный мозг</Cults_MonstrousBrain.Label>
+
+  <Cults_MonstrousBody.Label>ненормальное сердце</Cults_MonstrousBody.Label>
+
+</LanguageData>

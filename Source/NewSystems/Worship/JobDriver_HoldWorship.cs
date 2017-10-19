@@ -27,6 +27,12 @@ namespace CultOfCthulhu
     {
         private const TargetIndex AltarIndex = TargetIndex.A;
 
+        private Thing WorshipCaller = null;
+
+        public bool Forced => CurJob.playerForced;
+
+        public int TicksLeftInService = Int32.MaxValue;
+
         protected Building_SacrificialAltar DropAltar
         {
             get
@@ -34,7 +40,6 @@ namespace CultOfCthulhu
                 return (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.A).Thing;
             }
         }
-
 
         private string report = "";
         public override string GetReport()
@@ -66,14 +71,43 @@ namespace CultOfCthulhu
             var deitySymbol = ((CosmicEntityDef)DropAltar.currentWorshipDeity.def).Symbol;
             string deityLabel = DropAltar.currentWorshipDeity.Label;
 
+            Toil goToAltar = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
+
+            //Toil 0: Activate any nearby Worship Callers.
+            yield return new Toil
+            {
+                initAction = delegate
+                {
+                    Predicate<Thing> validator = (x => x.TryGetComp<CompWorshipCaller>() != null);
+                    Thing worshipCaller = GenClosest.ClosestThingReachable(DropAltar.Position, DropAltar.Map,
+                        ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial), PathEndMode.ClosestTouch,
+                        TraverseParms.For(this.pawn, Danger.None, TraverseMode.ByPawn), 9999, validator, null, 0, -1, false, RegionType.Set_Passable, false);
+                    if (worshipCaller != null)
+                    {
+                        WorshipCaller = worshipCaller;
+                        this.CurJob.SetTarget(TargetIndex.B, worshipCaller);
+                    }
+                    else
+                        base.JumpToToil(goToAltar);
+                }
+            };
+
+            yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch).JumpIfDespawnedOrNullOrForbidden(TargetIndex.B, goToAltar);
+            yield return new Toil
+            {
+                initAction = delegate
+                {
+                    WorshipCaller.TryGetComp<CompWorshipCaller>().Use(Forced);
+                }
+            }.JumpIfDespawnedOrNullOrForbidden(TargetIndex.B, goToAltar);
+
             //Toil 1: Go to the altar.
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
+            yield return goToAltar;
 
             //Toil 2: Wait a bit for stragglers.
             Toil waitingTime = new Toil();
             waitingTime.defaultCompleteMode = ToilCompleteMode.Delay;
-            CultUtility.remainingDuration = CultUtility.ritualDuration;
-            waitingTime.defaultDuration = CultUtility.remainingDuration - 360;
+            waitingTime.defaultDuration = CultUtility.ritualDuration;
             waitingTime.initAction = delegate
             {
                 report = "Cults_WaitingToStartSermon".Translate();
@@ -85,8 +119,7 @@ namespace CultOfCthulhu
             //Toil 3: Preach the sermon.
             Toil preachingTime = new Toil();
             preachingTime.defaultCompleteMode = ToilCompleteMode.Delay;
-            CultUtility.remainingDuration = CultUtility.ritualDuration;
-            preachingTime.defaultDuration = CultUtility.remainingDuration - 360;
+            preachingTime.defaultDuration = CultUtility.ritualDuration;
             preachingTime.initAction = delegate
             {
                 report = "Cults_PreachingAbout".Translate(new object[]
@@ -108,8 +141,7 @@ namespace CultOfCthulhu
             //Toil 4: Time to pray
             Toil chantingTime = new Toil();
             chantingTime.defaultCompleteMode = ToilCompleteMode.Delay;
-            CultUtility.remainingDuration = CultUtility.ritualDuration;
-            chantingTime.defaultDuration = CultUtility.remainingDuration - 360;
+            chantingTime.defaultDuration = CultUtility.ritualDuration;
             chantingTime.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
             chantingTime.PlaySustainerOrSound(CultsDefOf.RitualChanting);
             chantingTime.initAction = delegate

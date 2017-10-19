@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <Cults_Disillusioned.label>разочарование</Cults_Disillusioned.label>
+    <Cults_Disillusioned.recoveryMessage>{0} оправился(ась) от своей борьбы со своей внутренней верой.</Cults_Disillusioned.recoveryMessage>
+    <Cults_Disillusioned.beginLetterLabel>разочарование</Cults_Disillusioned.beginLetterLabel>
+    <Cults_Disillusioned.beginLetter>Либо истина слишком ужасна для {0}, либо он(а) становится наделенным(ой) неожиданным осознанием. Тем не менее, он(а) начал(а) отказываться от каких-либо странных или оккультных идей.</Cults_Disillusioned.beginLetter>
+    <Cults_Disillusioned.baseInspectLine>Психическое состояние: разочарование</Cults_Disillusioned.baseInspectLine>
+
+</LanguageData>

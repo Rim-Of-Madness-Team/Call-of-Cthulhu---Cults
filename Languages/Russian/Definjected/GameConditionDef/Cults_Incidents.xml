@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>
+
+  <CultGameCondition_StarsAreWrong.Label>звезды ошибаются</CultGameCondition_StarsAreWrong.Label>
+  <CultGameCondition_StarsAreWrong.Description>Непривязанные к правильному порядку упорядоченной системы, кажется сами звезды, жалят наши глаза с ненавистным презрением.</CultGameCondition_StarsAreWrong.Description>
+  <CultGameCondition_StarsAreWrong.endMessage>Звезды, как мы их знаем, вернулись</CultGameCondition_StarsAreWrong.endMessage>
+
+  <CultGameCondition_StarsAreRight.Label>звезды правы</CultGameCondition_StarsAreRight.Label>
+  <CultGameCondition_StarsAreRight.Description>Планеты системы выстроились в ряд. Потусторонние тела, похоже, зовут ваших колонистов.</CultGameCondition_StarsAreRight.Description>
+  <CultGameCondition_StarsAreRight.endMessage>парад планет закончился</CultGameCondition_StarsAreRight.endMessage>
+
+</LanguageData>

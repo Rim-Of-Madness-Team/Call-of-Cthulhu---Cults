@@ -33,46 +33,46 @@ namespace CultOfCthulhu
             return true;
         }
 
-        protected Pawn TestPawn(Map map)
-        {
-                IEnumerable<Pawn> list = PawnsToTransmogrify(map).InRandomOrder<Pawn>();
-                Pawn pawn;
-                if (!list.TryRandomElement<Pawn>(out pawn))
-                {
-                    if (altar(map) != null)
-                    {
-                        if (altar(map).executioner != null)
-                            return altar(map).executioner;
-                    }
-                }
-                return pawn;
-        }
+        //protected Pawn TestPawn(Map map)
+        //{
+        //        //IEnumerable<Pawn> list = PawnsToTransmogrify(map).InRandomOrder<Pawn>();
+        //        //Pawn pawn;
+        //        //if (!list.TryRandomElement<Pawn>(out pawn))
+        //        //{
+        //        //    if (altar(map) != null)
+        //        //    {
+        //        //        if (altar(map).executioner != null)
+        //                    return 
+        //        //    }
+        //        //}
+        //        //return pawn;
+        //}
 
 
-        public IEnumerable<Pawn> PawnsToTransmogrify(Map map)
-        {
-                //Get a colonist downed or bed-ridden incapable of moving
-                IEnumerable<Pawn> one = from Pawn peeps in map.mapPawns.FreeColonists
-                                        where (peeps.RaceProps.Humanlike && peeps.Faction == Faction.OfPlayer && !peeps.Dead) && (peeps.Downed || peeps.InBed()) && !peeps.health.capacities.CapableOf(PawnCapacityDefOf.Moving)
-                                        select peeps;
-                if (one.Count<Pawn>() > 0)
-                {
-                    return one;
-                }
+        //public IEnumerable<Pawn> PawnsToTransmogrify(Map map)
+        //{
+        //        //Get a colonist downed or bed-ridden incapable of moving
+        //        IEnumerable<Pawn> one = from Pawn peeps in map.mapPawns.FreeColonists
+        //                                where (peeps.RaceProps.Humanlike && peeps.Faction == Faction.OfPlayer && !peeps.Dead) && (peeps.Downed || peeps.InBed()) && !peeps.health.capacities.CapableOf(PawnCapacityDefOf.Moving)
+        //                                select peeps;
+        //        if (one.Count<Pawn>() > 0)
+        //        {
+        //            return one;
+        //        }
 
-                //Get a colonist.
-                IEnumerable<Pawn> two = from Pawn peeps in map.mapPawns.FreeColonists
-                                        where (peeps.RaceProps.Humanlike && peeps.Faction == Faction.OfPlayer && !peeps.Dead)
-                                        select peeps;
-                return two;
-        }
+        //        //Get a colonist.
+        //        IEnumerable<Pawn> two = from Pawn peeps in map.mapPawns.FreeColonists
+        //                                where (peeps.RaceProps.Humanlike && peeps.Faction == Faction.OfPlayer && !peeps.Dead)
+        //                                select peeps;
+        //        return two;
+        //}
         
 
 
         public override bool TryExecute(IncidentParms parms)
         {
             Map map = parms.target as Map;
-            Pawn pawn = TestPawn(map);
+            Pawn pawn = altar(map).executioner;
             BodyPartRecord tempRecord = null;
             bool isEye = false;
             foreach (BodyPartRecord current in pawn.RaceProps.body.AllParts.InRandomOrder<BodyPartRecord>())

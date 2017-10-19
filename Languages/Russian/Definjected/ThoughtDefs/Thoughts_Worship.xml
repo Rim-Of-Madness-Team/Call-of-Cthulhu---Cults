@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<!-- 1.2.2 Prisoner Sacrifice Thought -->
+
+    <Cults_OtherPrisonerWasSacrificed.stages.0.label>Другой заключенный был принесен в жертву</Cults_OtherPrisonerWasSacrificed.stages.0.label>
+    <Cults_OtherPrisonerWasSacrificed.stages.0.description>Я не могу быть здесь! Что если я следующий?!</Cults_OtherPrisonerWasSacrificed.stages.0.description>
+
+    <Cults_ExecutedFamily.stages.0.label>{0}казнен</Cults_ExecutedFamily.stages.0.label>
+    <Cults_ExecutedFamily.stages.0.description>Что я сделал(а) во имя веры? Моя собственная семья...</Cults_ExecutedFamily.stages.0.description>
+
+    <Cults_ExecutedPet.stages.0.label>Пожертвовал(а) своего питомца {0}</Cults_ExecutedPet.stages.0.label>
+    <Cults_ExecutedPet.stages.0.description>Я убил(а) их за нашу веру и чувствую себя пустым.</Cults_ExecutedPet.stages.0.description>
+
+    <Cults_ExecutedFriend.stages.0.label>Казнили моего друга {0}</Cults_ExecutedFriend.stages.0.label>
+    <Cults_ExecutedFriend.stages.0.description>Друг умер, служа достойному делу. Тем не менее, я чувствую себя таким(ой) пустым(ой) внутри.</Cults_ExecutedFriend.stages.0.description>
+
+    <Cults_SacrificedFamily.stages.0.label>Член моей семьи {0} был принесен(а) в жертву</Cults_SacrificedFamily.stages.0.label>
+    <Cults_SacrificedFamily.stages.0.description>Мы монстры.</Cults_SacrificedFamily.stages.0.description>
+
+    <Cults_SacrificedFriend.stages.0.label>Мой друг {0} был принесен в жертву</Cults_SacrificedFriend.stages.0.label>
+    <Cults_SacrificedFriend.stages.0.description>Кем мы стали?</Cults_SacrificedFriend.stages.0.description>
+
+    <Cults_SacrificedPet.stages.0.label>Мое домашнее животное {0} было принесено в жертву</Cults_SacrificedPet.stages.0.label>
+    <Cults_SacrificedPet.stages.0.description>Они убили их. Эти бессердечные ублюдки.</Cults_SacrificedPet.stages.0.description>
+
+    <Cults_SacrificedRival.stages.0.label>Мой соперник {0} был принесен в жертву</Cults_SacrificedRival.stages.0.label>
+    <Cults_SacrificedRival.stages.0.description>Какой великий поворот событий! Я рад(а), что они ушли.</Cults_SacrificedRival.stages.0.description>
+
+    <Cults_WitnessedSacrificeBloodlust.stages.0.label>Свидетель жертвоприношения</Cults_WitnessedSacrificeBloodlust.stages.0.label>
+    <Cults_WitnessedSacrificeBloodlust.stages.0.description>Пусть течет кровь! да! да!</Cults_WitnessedSacrificeBloodlust.stages.0.description>
+
+<!-- Sacrificial Thoughts -->
+
+    <Cults_AttendedSuccessfulSacrifice.stages.0.label>Успешное жертвоприношение</Cults_AttendedSuccessfulSacrifice.stages.0.label>
+    <Cults_AttendedSuccessfulSacrifice.stages.0.description>Какая славная демонстрация!</Cults_AttendedSuccessfulSacrifice.stages.0.description>
+
+    <Cults_AttendedFailedSacrifice.stages.0.label>Неудачное жертвоприношение</Cults_AttendedFailedSacrifice.stages.0.label>
+    <Cults_AttendedFailedSacrifice.stages.0.description>Такая славная жертва, потраченная впустую.</Cults_AttendedFailedSacrifice.stages.0.description>
+
+    <Cults_InnocentAttendedSuccessfulSacrifice.stages.0.label>Успешное жертвоприношение</Cults_InnocentAttendedSuccessfulSacrifice.stages.0.label>
+    <Cults_InnocentAttendedSuccessfulSacrifice.stages.0.description>Что мы наделали?</Cults_InnocentAttendedSuccessfulSacrifice.stages.0.description>
+
+    <Cults_InnocentAttendedFailedSacrifice.stages.0.label>Неудачное жертвоприношение</Cults_InnocentAttendedFailedSacrifice.stages.0.label>
+    <Cults_InnocentAttendedFailedSacrifice.stages.0.description>Мы стали монстрами? Мы убили их зря!</Cults_InnocentAttendedFailedSacrifice.stages.0.description>
+ 
+ <!-- Sermons --> 
+  
+    <Cults_HeldSermon.stages.0.label>Провел проповедь</Cults_HeldSermon.stages.0.label>
+    <Cults_HeldSermon.stages.0.description>Я чувствовал себя сильным, когда встал и провел службу. Надеюсь, другим понравилось.</Cults_HeldSermon.stages.0.description>
+
+    <Cults_AttendedIncredibleSermonAsCultist.stages.0.label>Невероятная проповедь</Cults_AttendedIncredibleSermonAsCultist.stages.0.label>
+    <Cults_AttendedIncredibleSermonAsCultist.stages.0.description>Когда слова дошли до моих ушей, мой разум, тело и душа были снесены в другой мир. Может быть, это земля обетованная?</Cults_AttendedIncredibleSermonAsCultist.stages.0.description>
+
+    <Cults_AttendedGreatSermonAsCultist.stages.0.label>Великая проповедь</Cults_AttendedGreatSermonAsCultist.stages.0.label>
+    <Cults_AttendedGreatSermonAsCultist.stages.0.description>На мгновение я почувствовал его божественное присутствие среди нас.</Cults_AttendedGreatSermonAsCultist.stages.0.description>
+
+    <Cults_AttendedGoodSermonAsCultist.stages.0.label>Хорошая проповедь</Cults_AttendedGoodSermonAsCultist.stages.0.label>
+    <Cults_AttendedGoodSermonAsCultist.stages.0.description>Я почти слышал что-то за пределами этого мира.</Cults_AttendedGoodSermonAsCultist.stages.0.description>
+
+    <Cults_AttendedDecentSermonAsCultist.stages.0.label>Достойная проповедь</Cults_AttendedDecentSermonAsCultist.stages.0.label>
+    <Cults_AttendedDecentSermonAsCultist.stages.0.description>Да! да! похвально!</Cults_AttendedDecentSermonAsCultist.stages.0.description>
+
+    <Cults_AttendedAwfulSermonAsCultist.stages.0.label>Ужасная проповедь</Cults_AttendedAwfulSermonAsCultist.stages.0.label>
+    <Cults_AttendedAwfulSermonAsCultist.stages.0.description>Я мог бы дать проповедь получше!</Cults_AttendedAwfulSermonAsCultist.stages.0.description>
+
+    <Cults_AttendedIncredibleSermonAsInnocent.stages.0.label>Свидетель проповеди</Cults_AttendedIncredibleSermonAsInnocent.stages.0.label>
+    <Cults_AttendedIncredibleSermonAsInnocent.stages.0.description>Я почувствовал, как ЭТО звало через голос проповедника. Что это было?! Это должно быть своего рода трюк.\n\nИнфо: Хорошие проповеди медленно увеличивают мышление культа других колонистов.</Cults_AttendedIncredibleSermonAsInnocent.stages.0.description>
+
+    <Cults_AttendedGreatSermonAsInnocent.stages.0.label>Свидетель угрожающей проповеди</Cults_AttendedGreatSermonAsInnocent.stages.0.label>
+    <Cults_AttendedGreatSermonAsInnocent.stages.0.description>То, что сказал проповедник... Это не может быть правдой... но что, если они есть? Я всю жизнь ошибался(ась)?\n\nИнфо: Хорошие проповеди медленно увеличивают мышление культа других колонистов.</Cults_AttendedGreatSermonAsInnocent.stages.0.description>
+
+    <Cults_AttendedGoodSermonAsInnocent.stages.0.label>Свидетель зловещей проповеди</Cults_AttendedGoodSermonAsInnocent.stages.0.label>
+    <Cults_AttendedGoodSermonAsInnocent.stages.0.description>Я не могу отвергать слова, но я и не могу принять их.\n\nИнфо: Хорошие проповеди медленно увеличивают мышление культа других колонистов.</Cults_AttendedGoodSermonAsInnocent.stages.0.description>
+
+    <Cults_AttendedDecentSermonAsInnocent.stages.0.label>Свидетель зловещей проповеди</Cults_AttendedDecentSermonAsInnocent.stages.0.label>
+    <Cults_AttendedDecentSermonAsInnocent.stages.0.description>Я сомневаюсь, что это было правдой, но это было что-то вроде того, о чем они говорили. Такая уверенность в безумии заслуживает похвалы. \n\nИнфо: Хорошие проповеди медленно увеличивают мышление культа других колонистов.</Cults_AttendedDecentSermonAsInnocent.stages.0.description>
+
+    <Cults_AttendedAwfulSermonAsInnocent.stages.0.label>Свидетель ужасной проповеди</Cults_AttendedAwfulSermonAsInnocent.stages.0.label>
+    <Cults_AttendedAwfulSermonAsInnocent.stages.0.description>Неужели люди действительно верят в это? Они сумасшедшие?</Cults_AttendedAwfulSermonAsInnocent.stages.0.description>
+
+<!-- Impressive Temple -->
+
+    <Cults_PrayedInImpressiveTemple.stages.5.label>Впечатляющий храм</Cults_PrayedInImpressiveTemple.stages.5.label>
+    <Cults_PrayedInImpressiveTemple.stages.5.description>Я провел некоторое время в впечатляющем храме.</Cults_PrayedInImpressiveTemple.stages.5.description>
+    <Cults_PrayedInImpressiveTemple.stages.6.label>Впечатляющий храм</Cults_PrayedInImpressiveTemple.stages.6.label>
+    <Cults_PrayedInImpressiveTemple.stages.6.description>Я провел некоторое время в впечатляющем храме.</Cults_PrayedInImpressiveTemple.stages.6.description>
+    <Cults_PrayedInImpressiveTemple.stages.7.label>Весьма впечатляющий храм</Cults_PrayedInImpressiveTemple.stages.7.label>
+    <Cults_PrayedInImpressiveTemple.stages.7.description>Я провел много времени в впечатляющем храме.</Cults_PrayedInImpressiveTemple.stages.7.description>
+    <Cults_PrayedInImpressiveTemple.stages.8.label>Чрезвычайно впечатляющий храм</Cults_PrayedInImpressiveTemple.stages.8.label>
+    <Cults_PrayedInImpressiveTemple.stages.8.description>Я провел некоторое время в чрезвычайно впечатляющем храме. Я мог бы остаться там навсегда.</Cults_PrayedInImpressiveTemple.stages.8.description>
+    <Cults_PrayedInImpressiveTemple.stages.9.label>Невероятно впечатляющий храм</Cults_PrayedInImpressiveTemple.stages.9.label>
+    <Cults_PrayedInImpressiveTemple.stages.9.description>Я провел некоторое время в чрезвычайно впечатляющем храме. Я мог бы остаться там навсегда.</Cults_PrayedInImpressiveTemple.stages.9.description>
+    <Cults_PrayedInImpressiveTemple.stages.10.label>Чудесный храм</Cults_PrayedInImpressiveTemple.stages.10.label>
+    <Cults_PrayedInImpressiveTemple.stages.10.description>Я провел некоторое время в чудесном храме. Я мог бы остаться там навсегда.</Cults_PrayedInImpressiveTemple.stages.10.description>
+    <Cults_PrayedInImpressiveTemple.stages.11.label>Чудо света</Cults_PrayedInImpressiveTemple.stages.11.label>
+    <Cults_PrayedInImpressiveTemple.stages.11.description>Я только молился в лучшем храме, который когда-либо мог себе представить. Я мог бы остаться там навсегда.</Cults_PrayedInImpressiveTemple.stages.11.description>
+
+<!-- Misc Thought Defs -->
+
+    <Cults_SawAurora.stages.0.label>Красивый рассвет</Cults_SawAurora.stages.0.label>
+    <Cults_SawAurora.stages.0.description>Какое удивительное зрелище!</Cults_SawAurora.stages.0.description>
+
+</LanguageData>

@@ -118,8 +118,7 @@ namespace CultOfCthulhu
             //Toil 6: Time to chant ominously
             Toil chantingTime = new Toil();
             chantingTime.defaultCompleteMode = ToilCompleteMode.Delay;
-            CultUtility.remainingDuration = CultUtility.ritualDuration;
-            chantingTime.defaultDuration = CultUtility.remainingDuration - 360;
+            chantingTime.defaultDuration = CultUtility.ritualDuration;
             chantingTime.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
             chantingTime.PlaySustainerOrSound(CultsDefOf.RitualChanting);
             Texture2D deitySymbol = ((CosmicEntityDef)DropAltar.currentSacrificeDeity.def).Symbol;

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <RodeByakhee.label>Оседлать бьякхи</RodeByakhee.label>
+    <RodeByakhee.rulePack.rulesStrings.0>tale_noun->[pawn_nameShortDef]полет на Бьякхи</RodeByakhee.rulePack.rulesStrings.0>
+    <RodeByakhee.rulePack.rulesStrings.1>image->[pawn_nameFull] летать с Бьякхи [circumstance_group]</RodeByakhee.rulePack.rulesStrings.1>
+    <RodeByakhee.rulePack.rulesStrings.2>image->[pawn_nameFull] парящий по небу на Бьякхи [circumstance_group]</RodeByakhee.rulePack.rulesStrings.2>
+    <RodeByakhee.rulePack.rulesStrings.3>image->[pawn_nameFull] проплывая сквозь облака на Бьякхи [circumstance_group]</RodeByakhee.rulePack.rulesStrings.3>
+    <RodeByakhee.rulePack.rulesStrings.4>image->[pawn_nameFull] верхом на Бьякхи [circumstance_group]</RodeByakhee.rulePack.rulesStrings.4>
+    <RodeByakhee.rulePack.rulesStrings.5>circumstance_phrase->перед [terrainfeature]</RodeByakhee.rulePack.rulesStrings.5>
+    <RodeByakhee.rulePack.rulesStrings.6>circumstance_phrase->с невероятной силой</RodeByakhee.rulePack.rulesStrings.6>
+    <RodeByakhee.rulePack.rulesStrings.7>circumstance_phrase->в шлейфе ветра и пыли</RodeByakhee.rulePack.rulesStrings.7>
+    <RodeByakhee.rulePack.rulesStrings.8>circumstance_phrase->с Бьякхи, ревущим на инопланетном языке</RodeByakhee.rulePack.rulesStrings.8>
+    <RodeByakhee.rulePack.rulesStrings.9>circumstance_phrase->точная посадка</RodeByakhee.rulePack.rulesStrings.9>
+    <RodeByakhee.rulePack.rulesStrings.10>desc_sentence->[pawn_pronoun] концентрируется на поводьях</RodeByakhee.rulePack.rulesStrings.10>
+    <RodeByakhee.rulePack.rulesStrings.11>desc_sentence->[pawn_pronoun] у [pawn_possessive] закрытые глаза и выглядит испуганным.</RodeByakhee.rulePack.rulesStrings.11>
+    <RodeByakhee.rulePack.rulesStrings.12>desc_sentence->[pawn_pronoun] без сознания, [pawn_possessive] язык вывалился, слюни капают.</RodeByakhee.rulePack.rulesStrings.12>
+    <RodeByakhee.rulePack.rulesStrings.13>desc_sentence->[pawn_pronoun] улыбается с мрачной радостью.</RodeByakhee.rulePack.rulesStrings.13>
+    <RodeByakhee.rulePack.rulesStrings.14>desc_sentence->[pawn_pronoun] похоже, не знает, что [pawn_pronoun] делает.</RodeByakhee.rulePack.rulesStrings.14>
+    <RodeByakhee.rulePack.rulesStrings.15>desc_sentence->[pawn_pronoun] застегивается с закрытыми глазами [pawn_possessive], совершенно беспомощный.</RodeByakhee.rulePack.rulesStrings.15>
+    <RodeByakhee.rulePack.rulesStrings.16>desc_sentence->Хьюн в Бьякхи горит неестественными цветами, которые соответствуют его бессердечным глазам.</RodeByakhee.rulePack.rulesStrings.16>
+    <RodeByakhee.rulePack.rulesStrings.17>desc_sentence->Близлежащий [animal] испуганно смотрит вверх.</RodeByakhee.rulePack.rulesStrings.17>
+    <RodeByakhee.rulePack.rulesStrings.18>desc_sentence->[animal] в ужасе бежит от Бьякхи.</RodeByakhee.rulePack.rulesStrings.18>
+    <RodeByakhee.rulePack.rulesStrings.19>desc_sentence->Надо же, там [terrainfeature] на заднем плане.</RodeByakhee.rulePack.rulesStrings.19>
+    <RodeByakhee.rulePack.rulesStrings.20>desc_sentence->[outlander] молча смотрит издалека.</RodeByakhee.rulePack.rulesStrings.20>
+
+</LanguageData>

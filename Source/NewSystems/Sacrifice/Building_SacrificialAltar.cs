@@ -24,7 +24,7 @@ using RimWorld.Planet;
 
 namespace CultOfCthulhu
 {
-    public class Building_SacrificialAltar : Building, IBillGiver
+    public partial class Building_SacrificialAltar : Building, IBillGiver
     {
         #region IBillGiver
         public BillStack billStack;
@@ -59,7 +59,7 @@ namespace CultOfCthulhu
             this.billStack = new BillStack(this);
         }
         #endregion IBillGiver
-    
+
         //Universal Variables
         public enum State { notinuse = 0, sacrificing, worshipping, offering };
         public enum Function { Level1 = 0, Level2 = 1, Level3 = 2, Nightmare = 3 };
@@ -200,6 +200,7 @@ namespace CultOfCthulhu
                 this.currentWorshipState = WorshipState.off;
                 this.currentSacrificeState = SacrificeState.off;
                 this.currentOfferingState = OfferingState.off;
+                this.availableWorshippers = null;
             }
             else Log.Error("Changed default state of Sacrificial Altar this should never happen.");
             ReportState();
@@ -327,11 +328,11 @@ namespace CultOfCthulhu
             if (this.def.defName == "Cult_NightmareSacrificeAltar") currentFunction = Function.Nightmare;
             //UpdateGraphics();
         }
-        
+
         public override void ExposeData()
         {
             base.ExposeData();
-        
+
             Scribe_Values.Look<string>(ref this.RoomName, "RoomName", null);
             Scribe_References.Look<CosmicEntity>(ref this.currentSacrificeDeity, "currentSacrificeDeity");
             Scribe_References.Look<Pawn>(ref this.sacrifice, "sacrifice");
@@ -353,7 +354,7 @@ namespace CultOfCthulhu
             Scribe_Values.Look<bool>(ref this.didEveningRitual, "didEveningRitual", false);
             //Misc
             Scribe_Values.Look<bool>(ref this.toBePrunedAndRepaired, "tobePrunedAndRepaired", false);
-    }
+        }
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
             // block further ticker work
@@ -455,7 +456,10 @@ namespace CultOfCthulhu
                                 }
                             }
                         }
-                        GetSacrificeGroup(this, Map);
+                        if (availableWorshippers == null)
+                        {
+                            GetSacrificeGroup();
+                        }
                         return;
 
                     case SacrificeState.finishing:
@@ -471,7 +475,7 @@ namespace CultOfCthulhu
                                 if (this.executioner.CurJob.def != CultsDefOf.Cults_ReflectOnResult) return;
                             }
                         }
-                        GetSacrificeGroup(this, Map);
+                        GetSacrificeGroup();
                         return;
 
                     case SacrificeState.finished:
@@ -514,7 +518,7 @@ namespace CultOfCthulhu
                         return;
                     case OfferingState.finished:
                     case OfferingState.off:
-                        currentState = State.notinuse;
+                        ChangeState(State.notinuse);
                         return;
                 }
             }
@@ -538,8 +542,11 @@ namespace CultOfCthulhu
                             CultUtility.AbortCongregation(this, "Preacher".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        GetWorshipGroup(this, Map);
-                        Cthulhu.Utility.DebugReport("Gathering yay");
+                        if (availableWorshippers == null)
+                        {
+                            GetWorshipGroup(this, GenRadial.RadialCellsAround(base.Position, GenRadial.MaxRadialPatternRadius - 1, true));
+                            Cthulhu.Utility.DebugReport("Gathering yay");
+                        }
                         return;
                     case WorshipState.finishing:
                         if (!Cthulhu.Utility.IsActorAvailable(this.preacher))
@@ -549,12 +556,12 @@ namespace CultOfCthulhu
                         }
                         if (this.preacher.CurJob.def != CultsDefOf.Cults_ReflectOnWorship)
                             return;
-                        GetWorshipGroup(this, Map);
+                        GetWorshipGroup(this, GenRadial.RadialCellsAround(base.Position, GenRadial.MaxRadialPatternRadius - 1, true));
                         Cthulhu.Utility.DebugReport("Finishing yay");
                         return;
                     case WorshipState.finished:
                     case WorshipState.off:
-                        currentState = State.notinuse;
+                        ChangeState(State.notinuse);
                         return;
                 }
             }
@@ -658,7 +665,7 @@ namespace CultOfCthulhu
                 Gizmo current = enumerator.Current;
                 yield return current;
             }
-            
+
             if (currentFunction < Function.Level3)
             {
                 Command_Action command_Upgrade = new Command_Action();
@@ -886,7 +893,7 @@ namespace CultOfCthulhu
         {
             this.toBePrunedAndRepaired = !this.toBePrunedAndRepaired;
         }
-        
+
         #endregion Gizmos
 
         #region LevelChangers
@@ -898,7 +905,7 @@ namespace CultOfCthulhu
                 Messages.Message("UpgradeCongregationWarning".Translate(), MessageSound.RejectInput);
                 return;
             }
-            Upgrade();        
+            Upgrade();
         }
 
         public void Upgrade()
@@ -1033,7 +1040,7 @@ namespace CultOfCthulhu
                 Messages.Message("A congregation is already gathering.", MessageSound.RejectInput);
                 return;
             }
-            
+
             if (CanGatherOfferingNow())
             {
                 if (!TryDetermineOffering(tempOfferingType, tempOfferingSize, tempOfferer, this, out tempDeterminedOfferings, out billRecipe))
@@ -1078,7 +1085,7 @@ namespace CultOfCthulhu
                 if (thing is Corpse) return RejectMessage("The altar needs to be cleared first.");
             }
             return true;
-            
+
         }
         public void StartOffering()
         {
@@ -1101,7 +1108,7 @@ namespace CultOfCthulhu
             Messages.Message("An offering is being gathered.", TargetInfo.Invalid, MessageSound.Standard);
             ChangeState(State.offering, OfferingState.started);
             Cthulhu.Utility.DebugReport("Make offering called.");
-           
+
             Job job2 = new Job(CultsDefOf.Cults_GiveOffering);
             job2.playerForced = true;
             job2.targetA = this;
@@ -1213,7 +1220,7 @@ namespace CultOfCthulhu
             executioner = tempExecutioner;
             currentSacrificeDeity = tempCurrentSacrificeDeity;
             currentSpell = tempCurrentSpell;
-            
+
             if (this.Destroyed || !this.Spawned)
             {
                 CultUtility.AbortCongregation(null, "The altar is unavailable.");
@@ -1252,39 +1259,60 @@ namespace CultOfCthulhu
             executioner.jobs.TryTakeOrderedJob(job);
             //executioner.jobs.EndCurrentJob(JobCondition.InterruptForced);
             Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation.Add(executioner);
-            GetSacrificeGroup(this, Map);
+            GetSacrificeGroup();
 
             Cthulhu.Utility.DebugReport("Sacrifice state set to gathering");
         }
 
-        public static void GetSacrificeGroup(Building_SacrificialAltar altar, Map map)
+        HashSet<Pawn> availableWorshippers;
+        public HashSet<Pawn> AvailableWorshippers
         {
-            Room room = altar.GetRoom();
-            
-            if (room.Role != RoomRoleDefOf.PrisonBarracks && room.Role != RoomRoleDefOf.PrisonCell)
+            get
             {
-                List<Pawn> listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike && !x.Downed && !x.Dead && !x.InMentalState &&
+                if (availableWorshippers == null || availableWorshippers.Count == 0)
+                {
+                    availableWorshippers = new HashSet<Pawn>(this.Map.mapPawns.AllPawnsSpawned.FindAll(y => y is Pawn x &&
+                                                                                  x.RaceProps.Humanlike &&
+                                                                                  !x.IsPrisoner &&
+                                                                                  x.Faction == this.Faction &&
+                                                                                  x.RaceProps.intelligence == Intelligence.Humanlike &&
+                                                                                 !x.Downed && !x.Dead &&
+                                                                                 !x.InMentalState && !x.InAggroMentalState &&
                                                                                   x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
                                                                                   x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
+                                                                                  x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
+                                                                                  x.CurJob.def != JobDefOf.Capture &&
                                                                                   x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
-                                                                                  x.CurJob.def != JobDefOf.Capture && // Capturing is pretty important
                                                                                   x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
                                                                                   x.CurJob.def != JobDefOf.TendPatient && //Saving lives is more important
                                                                                   x.CurJob.def != JobDefOf.BeatFire && //Fire?! This is more important
                                                                                   x.CurJob.def != JobDefOf.Lovin && //Not ready~~
-                                                                                  //x.CurJob.def != JobDefOf.LayDown && //They're resting
-                                                                                  x.CurJob.def != JobDefOf.FleeAndCower && //They're not cowering
-                                                                                  !x.InAggroMentalState);
-                bool[] flag = new bool[listeners.Count];
-                for (int i = 0; i < listeners.Count; i++)
-                {
-                    if (!flag[i] && CultUtility.ShouldAttendSacrifice(listeners[i], altar))
-                    {
-                        CultUtility.GiveAttendSacrificeJob(altar, listeners[i]);
-                        map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation.Add(listeners[i]);
-                        flag[i] = true;
-                    }
+                                                                                  x.CurJob.def != JobDefOf.LayDown && //They're resting
+                                                                                  x.CurJob.def != JobDefOf.FleeAndCower //They're not cowering
+                                                                                  ).ChangeType<List<Pawn>>());
                 }
+                return availableWorshippers;
+            }
+        }
+
+        public static void GetSacrificeGroup(Building_SacrificialAltar altar)
+        {
+            altar.GetSacrificeGroup();
+        }
+
+        public void GetSacrificeGroup()
+        {
+            Room room = this.GetRoom();
+
+            if (room.Role != RoomRoleDefOf.PrisonBarracks && room.Role != RoomRoleDefOf.PrisonCell)
+            {
+                if (AvailableWorshippers != null && AvailableWorshippers.Count > 0)
+                    foreach (Pawn p in AvailableWorshippers)
+                    {
+                        CultUtility.GiveAttendSacrificeJob(this, p);
+                        this.Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation.Add(p);
+                    }
             }
         }
 
@@ -1306,273 +1334,6 @@ namespace CultOfCthulhu
         }
 
         #endregion Sacrifice
-
-        #region Worship
-
-        public enum ChangeWorshipType
-        {
-            MorningWorship,
-            EveningWorship
-        };
-
-        public void TryChangeWorshipValues(ChangeWorshipType type, bool value)
-        {
-            Cthulhu.Utility.DebugReport("Attempting to change worship values: " + type.ToString() + " " + value.ToString());
-            //Disabling auto-worship is not a hard thing.
-            if (value == false)
-            {
-                if (type == ChangeWorshipType.EveningWorship) this.OptionEvening = false;
-                if (type == ChangeWorshipType.MorningWorship) this.OptionMorning = false;
-                return;
-            }
-
-            bool canChange = true;
-            //Check if another altar exists.
-            foreach (Building bld in Map.listerBuildings.allBuildingsColonist)
-            {
-                //Check all other altars
-                if (bld is Building_SacrificialAltar)
-                {
-                    Building_SacrificialAltar altar2 = bld as Building_SacrificialAltar;
-                    //You want to enable evening worship here?
-                    if (type == ChangeWorshipType.EveningWorship)
-                    {
-                        if (altar2.OptionEvening)
-                        {
-                            canChange = false;
-                        }
-                    }
-                    if (type == ChangeWorshipType.MorningWorship)
-                    {
-                        if (altar2.OptionMorning)
-                        {
-                            canChange = false;
-                        }
-                    }
-                }
-            }
-            if (canChange)
-            {
-                if (type == ChangeWorshipType.MorningWorship)
-                {
-                    this.OptionMorning = true;
-                }
-                if (type == ChangeWorshipType.EveningWorship)
-                {
-                    this.OptionEvening = true;
-                }
-            }
-        }
-
-
-
-        private void CancelWorship()
-        {
-            Pawn pawn = null;
-            List<Pawn> listeners = Map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike);
-            bool[] flag = new bool[listeners.Count];
-            for (int i = 0; i < listeners.Count; i++)
-            {
-                pawn = listeners[i];
-                if (pawn.Faction == Faction.OfPlayer)
-                {
-                    if (pawn.CurJob.def == CultsDefOf.Cults_HoldWorship ||
-                        pawn.CurJob.def == CultsDefOf.Cults_AttendWorship ||
-                        pawn.CurJob.def == CultsDefOf.Cults_ReflectOnWorship)
-                    {
-                        pawn.jobs.StopAll();
-                    }
-                }
-            }
-            ChangeState(State.notinuse);
-            //this.currentState = State.off;
-            Messages.Message("Cults_CancellingSermon".Translate(), MessageSound.Negative);
-        }
-
-
-        private void TryTimedWorship()
-        {
-            if (tempCurrentWorshipDeity == null)
-            {
-                Messages.Message("Cults_NoWorshipWithoutDeity".Translate(), MessageSound.RejectInput);
-                //CancelWorship();
-                return;
-            }
-            if (tempPreacher == null)
-            {
-                tempPreacher = CultUtility.DetermineBestPreacher(Map);
-            }
-            if (Cthulhu.Utility.IsMorning(Map))
-            {
-                didMorningRitual = true;
-            }
-            if (Cthulhu.Utility.IsEvening(Map))
-            {
-                didEveningRitual = true;
-            }
-            TryWorship();
-        }
-
-        private void TryWorshipForced()
-        {
-            TryWorship(true);
-        }
-
-        private void TryWorship(bool forced=false)
-        {
-
-            if (CanGatherToWorshipNow())
-            {
-                switch (currentWorshipState)
-                {
-                    case WorshipState.finished:
-                    case WorshipState.off:
-                        if (IsSacrificing())
-                        {
-                            string timeOfDay = "Cults_Morning".Translate();
-                            if (Cthulhu.Utility.IsEvening(Map)) timeOfDay = "Cults_Evening".Translate();
-                            Messages.Message("Cults_MorningEveningSermonInterrupted".Translate(timeOfDay), MessageSound.RejectInput);
-                        }
-                        StartToWorship(forced);
-                        return;
-
-                    case WorshipState.started:
-                    case WorshipState.gathering:
-                    case WorshipState.finishing:
-                        Messages.Message("Cults_AlreadyGatheringForASermon".Translate(), TargetInfo.Invalid, MessageSound.RejectInput);
-                        return;
-                }
-            }
-        }
-
-        private bool CanGatherToWorshipNow()
-        {
-            if (tempPreacher == null) return RejectMessage("Cults_NoPreacher".Translate());
-            if (tempCurrentWorshipDeity == null) return RejectMessage("Cults_NoCosmicEntity".Translate());
-            if (tempPreacher.Drafted) return RejectMessage("Cults_NoPreacherDrafted".Translate());
-            if (tempPreacher.Dead || this.tempPreacher.Downed) return RejectMessage("Cults_SelectAblebodiedPreacher".Translate(), this.tempPreacher);
-            if (!tempPreacher.CanReserve(this)) return RejectMessage("Cults_AltarIsReserved".Translate());
-            foreach (var thing in Position.GetThingList(Map))
-            {
-                if (thing is Corpse) return RejectMessage("Cults_AltarNeedsToBeCleared".Translate());
-            }
-            return true;
-        }
-
-
-        public void StartToWorship(bool forced=false)
-        {
-            preacher = tempPreacher;
-            currentWorshipDeity = tempCurrentWorshipDeity;
-
-            if (this.Destroyed || !this.Spawned)
-            {
-                CultUtility.AbortCongregation(null, "The altar is unavailable.");
-                return;
-            }
-            if (!Cthulhu.Utility.IsActorAvailable(this.preacher))
-            {
-                CultUtility.AbortCongregation(this, "The preacher, " + this.preacher.LabelShort + ", is unavaialable.");
-                this.preacher = null;
-                return;
-            }
-
-            FactionBase factionBase = (FactionBase)this.Map.info.parent;
-
-            Messages.Message("WorshipGathering".Translate(new object[] {
-                factionBase.Label
-        }), TargetInfo.Invalid, MessageSound.Standard);
-            ChangeState(State.worshipping, WorshipState.started);
-            //this.currentState = State.started;
-            //Map.GetComponent<MapComponent_SacrificeTracker>().lastResult = CultUtility.SacrificeResult.none;
-
-            Cthulhu.Utility.DebugReport("Force worship called");
-            Job job = new Job(CultsDefOf.Cults_HoldWorship, this);
-            preacher.jobs.TryTakeOrderedJob(job);
-            //preacher.jobs.EndCurrentJob(JobCondition.InterruptForced);
-            GetWorshipGroup(this, Map, forced);
-
-        }
-
-        public static void GetWorshipGroup(Building_SacrificialAltar altar, Map map, bool forced=false)
-        {
-            var cultFaction = altar.Faction;
-            var room = altar.GetRoom();
-            
-            if (room.Role != RoomRoleDefOf.PrisonBarracks && room.Role != RoomRoleDefOf.PrisonCell)
-            {
-                List<Pawn> listeners = new List<Pawn>();
-                if (forced)
-                {
-                    listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.Faction == cultFaction &&
-                                                                          x.RaceProps.intelligence == Intelligence.Humanlike &&
-                                                                         !x.Downed && !x.Dead &&
-                                                                         !x.InMentalState && !x.InAggroMentalState &&
-                                                                          x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
-                                                                          x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
-                                                                          x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
-                                                                          x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
-                                                                          x.CurJob.def != JobDefOf.Capture &&
-                                                                          x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
-                                                                          x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
-                                                                          x.CurJob.def != JobDefOf.TendPatient && //Saving lives is more important
-                                                                          x.CurJob.def != JobDefOf.BeatFire && //Fire?! This is more important
-                                                                        //x.CurJob.def != JobDefOf.Lovin && //Not ready~~
-                                                                        //x.CurJob.def != JobDefOf.LayDown && //They're resting
-                                                                          x.CurJob.def != JobDefOf.FleeAndCower //They're not cowering
-                                                                          );
-                }
-                else
-                {
-                    listeners = map.mapPawns.AllPawnsSpawned.FindAll(x => x.Faction == cultFaction &&
-                                                                          x.RaceProps.intelligence == Intelligence.Humanlike &&
-                                                                         !x.Downed && !x.Dead &&
-                                                                         !x.InMentalState && !x.InAggroMentalState &&
-                                                                          x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
-                                                                          x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
-                                                                          x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
-                                                                          x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
-                                                                          x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
-                                                                          x.CurJob.def != JobDefOf.Capture && 
-                                                                          x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
-                                                                          x.CurJob.def != JobDefOf.TendPatient && //Saving lives is more important
-                                                                          x.CurJob.def != JobDefOf.BeatFire && //Fire?! This is more important
-                                                                          x.CurJob.def != JobDefOf.Lovin && //Not ready~~
-                                                                          x.CurJob.def != JobDefOf.LayDown && //They're resting
-                                                                          x.CurJob.def != JobDefOf.FleeAndCower //They're not cowering
-                                                                         );
-                }
-                bool[] flag = new bool[listeners.Count];
-                for (int i = 0; i < listeners.Count; i++)
-                {
-                    if (!flag[i] && CultUtility.ShouldAttendWorship(listeners[i], altar))
-                    {
-                        CultUtility.GiveAttendWorshipJob(altar, listeners[i]);
-                        flag[i] = true;
-                    }
-                }
-            }
-        }
-
-        public static bool ShouldAttendWorship(Pawn p, Pawn preacher)
-        {
-            int num = 100; //Forced for testing purposes
-
-            if (p.CurJob.def == CultsDefOf.Cults_AttendWorship)
-            {
-                num = 0;
-            }
-
-            if ((Rand.RangeInclusive(0, 15) + num) >= 20)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-
-        #endregion Worship
 
         #region Misc
 
@@ -1697,7 +1458,6 @@ namespace CultOfCthulhu
         }
         public bool TryDetermineOffering(CultUtility.SacrificeType type, CultUtility.OfferingSize size, Pawn pawn, Building_SacrificialAltar altar, out List<ThingAmount> result, out RecipeDef resultRecipe)
         {
-
             result = null;
             resultRecipe = null;
             List<ThingAmount> list = new List<ThingAmount>();

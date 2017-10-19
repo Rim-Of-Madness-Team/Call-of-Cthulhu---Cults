@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+<CultOfCthulhu.CosmicEntityDef>
 	<defName>Entity_Cthulhu</defName>
-    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
 	<label>Cthulhu</label>
 	<version>6</version>
 	<description>He who waits dreaming.</description>
-    <symbol>Mote/Symbols/Cthulhu</symbol>	
+    <symbol>Mote/Symbols/Cthulhu</symbol>
 	<tier1SpellDefs>
 		<li>Cults_SpellFavor</li>
-		<li>Cults_SpellOrbitalInsanityWave</li>	
+		<li>Cults_SpellOrbitalInsanityWave</li>
 		<li>Cults_SpellAspectOfCthulhu</li>
 	</tier1SpellDefs>
 	<tier2SpellDefs>
@@ -23,17 +23,17 @@
 	<favoredApparel>
 		<li>Apparel_CthulhuMaskHood</li>
 	</favoredApparel>
-</ThingDef>
+</CultOfCthulhu.CosmicEntityDef>
 
-<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+<CultOfCthulhu.CosmicEntityDef>
 	<defName>Entity_Dagon</defName>
-    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
 	<label>Dagon</label>
 	<version>5</version>
 	<description>The Ur - Deep One, grown large and powerful over the millennia.</description>
-    <symbol>Mote/Symbols/Dagon</symbol>	
+    <symbol>Mote/Symbols/Dagon</symbol>
 	<tier1SpellDefs>
-		<li>Cults_SpellFavor</li>	
+		<li>Cults_SpellFavor</li>
 		<li>Cults_SpellSunkenShip</li>
 		<li>Cults_SpellTreasuresOfTheDeep</li>
 	</tier1SpellDefs>
@@ -44,43 +44,43 @@
 		<li>Cults_SpellBountyOfTheSea</li>
 	</tier3SpellDefs>
 	<finalSpellDef>Cults_SpellOrthogenesis</finalSpellDef>
-</ThingDef>
+</CultOfCthulhu.CosmicEntityDef>
 
 
-<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+<CultOfCthulhu.CosmicEntityDef>
 	<defName>Entity_Shub</defName>
-    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
 	<label>Shub-Niggurath</label>
 	<version>7</version>
 	<description>The Black Goat of the Woods with a Thousand Young.</description>
 	<favorsOutdoorWorship>true</favorsOutdoorWorship>
-    <symbol>Mote/Symbols/Shub</symbol>		
+    <symbol>Mote/Symbols/Shub</symbol>
 	<tier1SpellDefs>
-		<li>Cults_SpellFavor</li>	
+		<li>Cults_SpellFavor</li>
 		<li>Cults_SpellFertility</li>
 		<li>Cults_SpellMotherOfGoats</li>
 	</tier1SpellDefs>
 	<tier2SpellDefs>
-		<li>Cults_SpellTransmogrifyPets</li>	
+		<li>Cults_SpellTransmogrifyPets</li>
 	</tier2SpellDefs>
 	<tier3SpellDefs>
 		<li>Cults_SpellWombBetweenWorlds</li>
 	</tier3SpellDefs>
-	<finalSpellDef>Cults_SpellTransdimensionalConvergence</finalSpellDef>	
-</ThingDef>
+	<finalSpellDef>Cults_SpellTransdimensionalConvergence</finalSpellDef>
+</CultOfCthulhu.CosmicEntityDef>
 
 
-<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+<CultOfCthulhu.CosmicEntityDef>
 	<defName>Entity_Nyarlathotep</defName>
-    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
 	<label>Nyarlathotep</label>
 	<version>6</version>
 	<description>The messenger, heart and soul of the Outer Gods.</description>
-    <symbol>Mote/Symbols/Nyarlathotep</symbol>	
+    <symbol>Mote/Symbols/Nyarlathotep</symbol>
 	<tier1SpellDefs>
-		<li>Cults_SpellFavor</li>	
+		<li>Cults_SpellFavor</li>
 		<li>Cults_SpellStarryWisdom</li>
-		<li>Cults_SpellForbiddenKnowledge</li>		
+		<li>Cults_SpellForbiddenKnowledge</li>
 	</tier1SpellDefs>
 	<tier2SpellDefs>
 		<li>Cults_SpellChaosTheory</li>
@@ -91,31 +91,58 @@
 	<finalSpellDef>Cults_SpellPilgrimageToKadath</finalSpellDef>
 	<favoredApparel>
 		<li>Apparel_NyarlathotepHood</li>
-	</favoredApparel>	
-</ThingDef>
+	</favoredApparel>
+</CultOfCthulhu.CosmicEntityDef>
 
-<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+<CultOfCthulhu.CosmicEntityDef>
 	<defName>Entity_Hastur</defName>
-    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>	
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
 	<label>Hastur</label>
 	<version>2</version>
 	<description>From His Yellow Kingdom, the Unspeakable One watches.</description>
-    <symbol>Mote/Symbols/Hastur</symbol>	
+    <symbol>Mote/Symbols/Hastur</symbol>
 	<tier1SpellDefs>
-		<li>Cults_SpellFavor</li>	
+		<li>Cults_SpellFavor</li>
 		<li>Cults_SpellTheKingInYellow</li>
-		<li>Cults_SpellSummonByakhee</li>		
+		<li>Cults_SpellSummonByakhee</li>
 	</tier1SpellDefs>
 	<tier2SpellDefs>
 		<li>Cults_SpellVisionsOfCarcosa</li>
 	</tier2SpellDefs>
 	<tier3SpellDefs>
 		<li>Cults_SpellUnspeakableOath</li>
-	</tier3SpellDefs>	
+	</tier3SpellDefs>
 	<finalSpellDef>Cults_SpellAbsorptionByCarcosa</finalSpellDef>
 	<favoredApparel>
 		<li>Apparel_CultistHood</li>
-	</favoredApparel>	
+	</favoredApparel>
+</CultOfCthulhu.CosmicEntityDef>
+
+
+<!-- 9/15/2017
+<ThingDef Class="CultOfCthulhu.CosmicEntityDef">
+	<defName>Entity_Tsathoggua</defName>
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
+	<label>Tsathoggua</label>
+	<version>1</version>
+	<description>The ravenous Sleeper of N'Kai hungers for sacrifice.</description>
+    <symbol>Mote/Symbols/Hastur</symbol>
+	<tier1SpellDefs>
+		<li>Cults_SpellFavor</li>
+		<li>Cults_SpellTheKingInYellow</li>
+		<li>Cults_SpellSummonByakhee</li>
+	</tier1SpellDefs>
+	<tier2SpellDefs>
+		<li>Cults_SpellVisionsOfCarcosa</li>
+	</tier2SpellDefs>
+	<tier3SpellDefs>
+		<li>Cults_SpellUnspeakableOath</li>
+	</tier3SpellDefs>
+	<finalSpellDef>Cults_SpellAbsorptionByCarcosa</finalSpellDef>
+	<favoredApparel>
+		<li>Apparel_CultistHood</li>
+	</favoredApparel>
 </ThingDef>
+-->
 
 </Defs>

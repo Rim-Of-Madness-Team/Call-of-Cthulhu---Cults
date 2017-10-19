@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <Cults_FertilityTotem.label>Тотем плодородия</Cults_FertilityTotem.label>
+    <Cults_FertilityTotem.description>Тотем, который увеличивает темпы роста посевов.</Cults_FertilityTotem.description>
+
+    <Cults_SunkenShipChunk.label>Кусок затонувшего корабля</Cults_SunkenShipChunk.label>
+    <Cults_SunkenShipChunk.description>Кусок морского корабля. Может быть деконструирован, для открытия сокровищ внутри.</Cults_SunkenShipChunk.description>
+
+    <Cults_TreasureChest.label>Сундук с сокровищами</Cults_TreasureChest.label>
+    <Cults_TreasureChest.description>Запертый и запечатанный сундук, предназначенный для обеспечения безопасности товаров и ценностей как от человека, так и от природы.</Cults_TreasureChest.description>
+
+    <Cults_TreasureChest_Relic.label>Реликтовый сундук</Cults_TreasureChest_Relic.label>
+    <Cults_TreasureChest_Relic.description>Запертый и запечатанный сундук, предназначенный для обеспечения безопасности товаров и ценностей как от человека, так и от природы.</Cults_TreasureChest_Relic.description>
+
+    <Cults_LandedShip.label>Морской корабль севший на мель</Cults_LandedShip.label>
+    <Cults_LandedShip.description>Морской корабль, вырванный из океана дагоном. Он может содержать экзотические материалы, компьютеры или даже персональные ИИ. Ожидайте, что он будет окружен моряками, пораженными безумием.</Cults_LandedShip.description>
+
+    <Cults_MonolithNightmare.label>Монолит</Cults_MonolithNightmare.label>
+    <Cults_MonolithNightmare.description>Таинственный стоящий вертикально блок камня. У него есть коварная аура.</Cults_MonolithNightmare.description>
+
+</LanguageData>

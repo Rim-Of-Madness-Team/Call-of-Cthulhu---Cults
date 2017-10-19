@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>
+
+  <!-- Byakhee -->
+
+  <Cults_Stinger.Label>жало</Cults_Stinger.Label>
+
+  <Cults_Hune.Label>Хьюн</Cults_Hune.Label>
+
+  <Cults_AirSac.Label>воздушный мешок</Cults_AirSac.Label>
+
+  <!-- Cosmic Horror Parts -->
+
+  <Cults_LeftClaw.Label>левый коготь</Cults_LeftClaw.Label>
+
+  <Cults_RightClaw.Label>правый коготь</Cults_RightClaw.Label>
+
+  <Cults_LeftFlipper.Label>левый плавник</Cults_LeftFlipper.Label>
+
+  <Cults_RightFlipper.Label>правый плавник</Cults_RightFlipper.Label>
+
+  <Cults_Leg.Label>нога</Cults_Leg.Label>
+
+  <Cults_Hoof.Label>копыто</Cults_Hoof.Label>
+
+  <Cults_Gills.Label>жабры</Cults_Gills.Label>
+
+  <Cults_DorsalFin.Label>спинной плавник</Cults_DorsalFin.Label>
+
+  <Cults_Tentacle.Label>щупальце</Cults_Tentacle.Label>
+
+  <Cults_TentacleFlight.Label>щупальце</Cults_TentacleFlight.Label>
+
+  <Cults_LeftWing.Label>левое крыло</Cults_LeftWing.Label>
+
+  <Cults_RightWing.Label>правое крыло</Cults_RightWing.Label>
+
+  <Cults_Nostril.Label>ноздря</Cults_Nostril.Label>
+
+  <Internal_LeftEar.Label>внутреннее левое ухо</Internal_LeftEar.Label>
+
+  <Internal_RightEar.Label>внутреннее правое ухо</Internal_RightEar.Label>
+
+  <Cults_Maw.Label>пасть</Cults_Maw.Label>
+
+  <Cults_MawHuge.Label>массивная пасть</Cults_MawHuge.Label>
+
+  <Cults_ShapeshiftingOrgan.Label>формирующийся орган</Cults_ShapeshiftingOrgan.Label>
+
+  <Cults_Kidney.Label>почка</Cults_Kidney.Label>
+
+  <Cults_Lung.Label>легкое</Cults_Lung.Label>
+
+  <Cults_Eye.Label>глаз</Cults_Eye.Label>
+
+  <Cults_Feeler.Label>усик</Cults_Feeler.Label>
+
+  <Cults_SporeHead.Label>структура споры</Cults_SporeHead.Label>
+
+  <Cults_Sucker.Label>присоска</Cults_Sucker.Label>
+
+  <Cults_PsionicLobe.Label>псионическая кора головного мозга</Cults_PsionicLobe.Label>
+
+  <Cults_FrontalLobe.Label>лобная доля</Cults_FrontalLobe.Label>
+
+  <Cults_ParietalLobe.Label>теменная доля</Cults_ParietalLobe.Label>
+
+  <Cults_OccipitalLobe.Label>затылочная доля</Cults_OccipitalLobe.Label>
+
+  <Cults_TemporalLobe.Label>височная доля</Cults_TemporalLobe.Label>
+
+  <Cults_BrainStem.Label>мозговой ствол</Cults_BrainStem.Label>
+
+  <Cults_FlightOrgan.Label>полетный орган</Cults_FlightOrgan.Label>
+
+  </LanguageData>

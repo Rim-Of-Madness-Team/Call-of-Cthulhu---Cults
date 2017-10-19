@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <LoadTransportersPawn.label>загрузить транспортер</LoadTransportersPawn.label>
+    <LoadTransportersPawn.verb>загрузить</LoadTransportersPawn.verb>
+    <LoadTransportersPawn.gerund>загружает</LoadTransportersPawn.gerund>
+
+    <PruneAndRepair.label>починить поврежденные вещи</PruneAndRepair.label>
+    <PruneAndRepair.verb>обрезка и ремонт</PruneAndRepair.verb>
+    <PruneAndRepair.gerund>обрезает и ремонтирует</PruneAndRepair.gerund>
+
+</LanguageData>

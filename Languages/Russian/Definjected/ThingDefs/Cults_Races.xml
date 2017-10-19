@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <Cults_BlackGoat.label>черный козёл</Cults_BlackGoat.label>
+    <Cults_BlackGoat.description>Черные козы - таинственные существа, которые живут практически в любом климате. Их рацион также неизвестен. Легенды рассказывают о том, что они являются порождением какого-то непристойного чудовища, известного как Мать Черной Козы, которая существует за пределами реальности, которую мы понимаем как наше измерение.</Cults_BlackGoat.description>
+    <Cults_BlackGoat_Leather.label>шкура черного козла</Cults_BlackGoat_Leather.label>
+	<Cults_BlackGoat_Meat.label>Мясо черного козла</Cults_BlackGoat_Meat.label>
+    <Cults_BlackGoat_Corpse.label>Труп черного козла</Cults_BlackGoat_Corpse.label>
+    <Cults_BlackGoat_Corpse.description>Труп черного козла</Cults_BlackGoat_Corpse.description>
+
+    <!-- Zombie -->
+
+  <ReanimatedCorpse.label>Оживший труп</ReanimatedCorpse.label>
+    <ReanimatedCorpse.description>Будь то из-за научных экспериментов, оккультных вмешательств или комиксов, это бедные души, которых смерть отвергла.</ReanimatedCorpse.description>
+    <ReanimatedCorpse_Leather.label>Кожа ожившего трупа</ReanimatedCorpse_Leather.label>
+    <ReanimatedCorpse_Corpse.label>Мертвый оживший труп</ReanimatedCorpse_Corpse.label>
+    <ReanimatedCorpse_Corpse.description>Мертвый оживший труп</ReanimatedCorpse_Corpse.description>
+  
+</LanguageData>

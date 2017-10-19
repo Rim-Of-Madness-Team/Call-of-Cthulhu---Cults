@@ -42,19 +42,19 @@
       <recipeUsers>
         <li>ElectricTailoringBench</li>
         <li>HandTailoringBench</li>
-        <li>CraftingSpot</li>		
+        <li>CraftingSpot</li>
       </recipeUsers>
       <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
     </recipeMaker>
-    <tradeability>Sellable</tradeability>	
+    <tradeability>Sellable</tradeability>
   </ThingDef>
-  
+
 
   <ThingDef Name="HatMakeableBase" ParentName="ApparelMakeableBase" Abstract="True">
     <thingCategories>
       <li>Headgear</li>
     </thingCategories>
-    <tradeability>Sellable</tradeability>	
+    <tradeability>Sellable</tradeability>
   </ThingDef>
 
 	<!-- =====No Shirts===== -->
@@ -65,7 +65,7 @@
 		<defName>Apparel_CultistRobes</defName>
 		<description>For those with knowledge.
 		</description>
-		<label>cultist robes</label>		
+		<label>cultist robes</label>
 		<graphicData>
 			<texPath>Apparel/Display/CultistRobes</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -81,13 +81,13 @@
 		<statBases>
 			<MaxHitPoints>160</MaxHitPoints>
 			<WorkToMake>5000</WorkToMake>
-			<Mass>2.2</Mass>			
+			<Mass>2.2</Mass>
 			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
 			<Insulation_Cold>-38</Insulation_Cold>
 		</statBases>
 		<equippedStatOffsets>
-			<SocialImpact>0.15</SocialImpact>		
+			<SocialImpact>0.15</SocialImpact>
 			<ResearchSpeed>0.05</ResearchSpeed>
 		</equippedStatOffsets>
 		<apparel>
@@ -101,19 +101,19 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			 
+
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
 			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>			
+				<li>CallOfCthulhu_FrenziedCultist</li>
 			</defaultOutfitTags>
 		</apparel>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
 				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>				
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
 		</recipeMaker>
@@ -145,7 +145,7 @@
 		</comps>
 		<colorGenerator Class="ColorGenerator_StandardApparel" />
 	</ThingDef>
-	
+
 
 <!-- Fur Cultist Robes -->
 
@@ -153,7 +153,7 @@
 		<defName>Apparel_ROMFurRobes</defName>
 		<description>Similar to other robes that cultists wear, however, these ones are specifically made for colder environments.
 		</description>
-		<label>cultist robes (fur)</label>		
+		<label>cultist robes (fur)</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/FurRobes/ROMFurRobes</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -167,16 +167,16 @@
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-            <Mass>3.25</Mass>		
+            <Mass>3.25</Mass>
 			<MaxHitPoints>160</MaxHitPoints>
 			<WorkToMake>10000</WorkToMake>
 			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
 			<Insulation_Cold>-42</Insulation_Cold>
 			<Insulation_Heat>-5</Insulation_Heat>
-		</statBases> 
+		</statBases>
 		<equippedStatOffsets>
-			<SocialImpact>0.15</SocialImpact>		
+			<SocialImpact>0.15</SocialImpact>
 			<ResearchSpeed>0.05</ResearchSpeed>
 		</equippedStatOffsets>
 		<apparel>
@@ -190,19 +190,19 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			 
+
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
 			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>			
+				<li>CallOfCthulhu_FrenziedCultist</li>
 			</defaultOutfitTags>
 		</apparel>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
 				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>				
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
 		</recipeMaker>
@@ -233,7 +233,7 @@
 		  </li>
 		</comps>
 		<colorGenerator Class="ColorGenerator_StandardApparel" />
-	</ThingDef>	
+	</ThingDef>
 
 
 <!-- Toga Cultist Vestments -->
@@ -242,7 +242,7 @@
 		<defName>Apparel_ROMWrapRobes</defName>
 		<description>This sacred wrap allows priests to preach with greater appeal by appearing as a simple or lowly creature. It also tends to allow for better preaching in locations that face greater threat from the sun and heat.
 		</description>
-		<label>cultist vestments (wrap)</label>		
+		<label>cultist vestments (wrap)</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/NyarlathotepRobes/ROMNyarlathotepRobes</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -256,14 +256,14 @@
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-            <Mass>0.35</Mass>		
+            <Mass>0.35</Mass>
 			<MaxHitPoints>160</MaxHitPoints>
 			<WorkToMake>22000</WorkToMake>
 			<Insulation_Cold>-30</Insulation_Cold>
-			<Insulation_Heat>15</Insulation_Heat>			
-		</statBases> 
+			<Insulation_Heat>15</Insulation_Heat>
+		</statBases>
 		<equippedStatOffsets>
-			<SocialImpact>0.3</SocialImpact>		
+			<SocialImpact>0.3</SocialImpact>
 			<ResearchSpeed>0.05</ResearchSpeed>
 		</equippedStatOffsets>
 		<apparel>
@@ -277,19 +277,19 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			 
+
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
 			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>			
+				<li>CallOfCthulhu_FrenziedCultist</li>
 			</defaultOutfitTags>
 		</apparel>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
 				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>				
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
 		</recipeMaker>
@@ -321,15 +321,15 @@
 		</comps>
 		<colorGenerator Class="ColorGenerator_StandardApparel" />
 	</ThingDef>
-	
-	
+
+
 <!-- Tentacled Cultist Vestments -->
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_ROMCthulhuRobes</defName>
 		<description>Adorned with faux tentacles, this imposing robe is favored by priests of Nyarlathotep or Cthulhu.
 		</description>
-		<label>cultist vestments (tentacled)</label>		
+		<label>cultist vestments (tentacled)</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/CthulhuRobes/ROMCthulhuRobes</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -349,11 +349,11 @@
 			<ArmorRating_Sharp>0.085</ArmorRating_Sharp>
 			<Insulation_Cold>-38</Insulation_Cold>
 			<Insulation_Heat>-4</Insulation_Heat>
-		</statBases> 
+		</statBases>
 		<equippedStatOffsets>
-			<SocialImpact>0.3</SocialImpact>		
+			<SocialImpact>0.3</SocialImpact>
 			<ResearchSpeed>0.05</ResearchSpeed>
-            <MoveSpeed>-0.045</MoveSpeed>			
+            <MoveSpeed>-0.045</MoveSpeed>
 		</equippedStatOffsets>
 		<apparel>
 			<bodyPartGroups>
@@ -366,19 +366,19 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			 
+
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
 			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>			
+				<li>CallOfCthulhu_FrenziedCultist</li>
 			</defaultOutfitTags>
 		</apparel>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
 				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>				
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
 		</recipeMaker>
@@ -410,14 +410,14 @@
 		</comps>
 		<colorGenerator Class="ColorGenerator_StandardApparel" />
 	</ThingDef>
-	
+
 <!-- Traditional Cultist Vestments -->
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_ROMDagonRobes</defName>
 		<description>Impressive looking vestments preferred by orders of Dagon or Hastur.
 		</description>
-		<label>cultist vestments (traditional)</label>		
+		<label>cultist vestments (traditional)</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/DagonRobes/ROMDagonVestments</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -437,11 +437,11 @@
 			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
 			<Insulation_Cold>-38</Insulation_Cold>
 			<Insulation_Heat>-4</Insulation_Heat>
-		</statBases> 
+		</statBases>
 		<equippedStatOffsets>
-			<SocialImpact>0.3</SocialImpact>		
+			<SocialImpact>0.3</SocialImpact>
 			<ResearchSpeed>0.05</ResearchSpeed>
-            <MoveSpeed>-0.04</MoveSpeed>				
+            <MoveSpeed>-0.04</MoveSpeed>
 		</equippedStatOffsets>
 		<apparel>
 			<bodyPartGroups>
@@ -454,19 +454,19 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			 
+
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
 			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>			
+				<li>CallOfCthulhu_FrenziedCultist</li>
 			</defaultOutfitTags>
 		</apparel>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
 				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>				
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
 		</recipeMaker>
@@ -505,7 +505,7 @@
 		<defName>Apparel_ROMShubRobes</defName>
 		<description>These woodland priestly robes adorned with sacred twigs appeal to deities like Shub-Niggurath.
 		</description>
-		<label>cultist vestments (druidic)</label>		
+		<label>cultist vestments (druidic)</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/ShubRobes/ROMShubRobes</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -525,11 +525,11 @@
 			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
 			<Insulation_Cold>-38</Insulation_Cold>
 			<Insulation_Heat>-4</Insulation_Heat>
-		</statBases> 
+		</statBases>
 		<equippedStatOffsets>
-			<SocialImpact>0.2</SocialImpact>		
+			<SocialImpact>0.2</SocialImpact>
 			<ResearchSpeed>0.05</ResearchSpeed>
-            <MoveSpeed>-0.03</MoveSpeed>				
+            <MoveSpeed>-0.03</MoveSpeed>
 		</equippedStatOffsets>
 		<apparel>
 			<bodyPartGroups>
@@ -542,19 +542,19 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			 
+
 			<tags>
 				<li>CallOfCthulhu_FrenziedCultist</li>
 			</tags>
 			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>			
+				<li>CallOfCthulhu_FrenziedCultist</li>
 			</defaultOutfitTags>
 		</apparel>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
 				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>				
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
 		</recipeMaker>
@@ -588,7 +588,7 @@
 	</ThingDef>
 
 <!--==========================-->
-	
+
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_SailorUniform</defName>
 		<description>For the sailors.
@@ -602,7 +602,7 @@
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
-		</stuffCategories>		
+		</stuffCategories>
 		<thingCategories>
 			<li>Apparel</li>
 		</thingCategories>
@@ -613,7 +613,7 @@
 			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
 		</statBases>
 		<equippedStatOffsets>
-			<SocialImpact>0.15</SocialImpact>		
+			<SocialImpact>0.15</SocialImpact>
 			<ResearchSpeed>0.05</ResearchSpeed>
 		</equippedStatOffsets>
 		<apparel>
@@ -627,18 +627,18 @@
 			<layers>
 				<li>Shell</li>
 			</layers>
-			 
+
 			<tags>
 				<li>CallOfCthulhu_Sailor</li>
 			</tags>
 			<defaultOutfitTags>
-				<li>CallOfCthulhu_Sailor</li>			
+				<li>CallOfCthulhu_Sailor</li>
 			</defaultOutfitTags>
 		</apparel>
 	</ThingDef>
-	
+
 	<!-- =======Hats======== -->
-	
+
 
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_CultistHood</defName>
@@ -670,7 +670,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-       
+
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -703,16 +703,16 @@
 			  </li>
 			</deities>
 		  </li>
-		</comps>	
+		</comps>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
 				<li>HandTailoringBench</li>
 
-                <li>CraftingSpot</li>							 		
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>	
+		</recipeMaker>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
 
@@ -724,7 +724,7 @@
     <graphicData>
       <texPath>Apparel/Hats/CthulhuMaskHood/CthulhuMaskHood_front</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>	  
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>25</costStuffCount>
     <stuffCategories>
@@ -748,7 +748,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-       
+
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -765,13 +765,13 @@
 			  </li>
 			</deities>
 		  </li>
-		</comps>	
+		</comps>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
 				<li>HandTailoringBench</li>
 
-                <li>CraftingSpot</li>							 		
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
 		</recipeMaker>
@@ -807,7 +807,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-       
+
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -824,13 +824,13 @@
 			  </li>
 			</deities>
 		  </li>
-		</comps>		
+		</comps>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
 				<li>HandTailoringBench</li>
 
-                <li>CraftingSpot</li>							 		
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
 		</recipeMaker>
@@ -868,7 +868,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-       
+
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -885,19 +885,19 @@
 			  </li>
 			</deities>
 		  </li>
-		</comps>		
+		</comps>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
 				<li>HandTailoringBench</li>
 
-                <li>CraftingSpot</li>							 		
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
 		</recipeMaker>
   </ThingDef>
 
-  
+
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_ShubMask</defName>
     <label>cultist hood (shub-niggurath mask)</label>
@@ -905,7 +905,7 @@
     <graphicData>
       <texPath>Apparel/Hats/ShubMask/ROMShubMask_front</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>	  
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>25</costStuffCount>
     <stuffCategories>
@@ -929,7 +929,7 @@
       <layers>
         <li>Overhead</li>
       </layers>
-       
+
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -946,18 +946,18 @@
 			  </li>
 			</deities>
 		  </li>
-		</comps>		
+		</comps>
 		<recipeMaker>
 			<recipeUsers>
 				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li> 
+				<li>HandTailoringBench</li>
 
-                <li>CraftingSpot</li>							
+                <li>CraftingSpot</li>
 			</recipeUsers>
 			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
 		</recipeMaker>
   </ThingDef>
-  
+
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_StandardHood</defName>
     <label>cultist hood (simple)</label>
@@ -988,12 +988,12 @@
       <layers>
         <li>Overhead</li>
       </layers>
-       
+
       <tags>
-		<li>CallOfCthulhu_TownsfolkPolice</li>	
+		<li>CallOfCthulhu_TownsfolkPolice</li>
       </tags>
       <defaultOutfitTags>
-		<li>CallOfCthulhu_TownsfolkPolice</li>		
+		<li>CallOfCthulhu_TownsfolkPolice</li>
       </defaultOutfitTags>
     </apparel>
 		<comps>
@@ -1021,31 +1021,31 @@
 			  </li>
 			</deities>
 		  </li>
-		</comps>	
+		</comps>
 	<recipeMaker>
 		<recipeUsers>
 			<li>ElectricTailoringBench</li>
 			<li>HandTailoringBench</li>
-			
-                <li>CraftingSpot</li>			
+
+                <li>CraftingSpot</li>
 		</recipeUsers>
 		<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-	</recipeMaker>	
+	</recipeMaker>
   </ThingDef>
 
- 
+
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_SailorsCap</defName>
     <label>sailors cap</label>
     <description>For sailors</description>
     <graphicData>
-      <texPath>Apparel/Display/ROMSailorsCap</texPath>
+      <texPath>Apparel/Hats/SailorsCap/ROMSailorsCap</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
-    </stuffCategories>	
+    </stuffCategories>
 		<costStuffCount>25</costStuffCount>
     <statBases>
       <WorkToMake>1000</WorkToMake>
@@ -1064,9 +1064,9 @@
       <layers>
         <li>Overhead</li>
       </layers>
-       
+
     </apparel>
   </ThingDef>
 
-  
+
 </ThingDefs>

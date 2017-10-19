@@ -23,36 +23,35 @@ using RimWorld.Planet;   // RimWorld specific functions for world creation
 
 namespace CultOfCthulhu
 {
-    public class SpellWorker_TreasuresOfTheDeep : SpellWorker
+    public class SpellWorker_ElixerOfPower : SpellWorker
     {
+
+        public override bool CanSummonNow(Map map)
+        {
+            return true;
+        }
 
         protected override bool CanFireNowSub(IIncidentTarget target)
         {
 
-            //Cthulhu.Utility.DebugReport("
-            //: " + this.def.defName);
+            //Cthulhu.Utility.DebugReport("CanFire: " + this.def.defName);
             return true;
         }
 
         public override bool TryExecute(IncidentParms parms)
         {
             Map map = parms.target as Map;
-            IntVec3 intVec;
-            if (!ShipChunkDropCellFinder.TryFindShipChunkDropCell(map.Center, map, 999999, out intVec))
-            {
-                return false;
-            }
-            //this.EndOnDespawnedOrNull(this.pawn, JobCondition.Incompletable);
-            for (int i = 0; i < Rand.Range(1,3); i++)
-            {
-                Building_TreasureChest thing = (Building_TreasureChest)ThingMaker.MakeThing(CultsDefOf.Cults_TreasureChest, null);
-                GenPlace.TryPlaceThing(thing, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
-            }
+            //Spawn some goats
+            //Cthulhu.Utility.SpawnPawnsOfCountAt(CultDefOfs.BlackIbex, altar.Position, Rand.Range(2, 5), Faction.OfPlayer);
 
-            map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
-            Messages.Message("Treasures from the deep mysteriously appear.", new TargetInfo(intVec, map), MessageSound.Benefit);
+            //Spawn a fertility idol.
+            Cthulhu.Utility.SpawnThingDefOfCountAt(CultsDefOf.Cults_FertilityTotem, 1, new TargetInfo(altar(map).RandomAdjacentCell8Way(), map));
+
+            //Spawn a 
+            Messages.Message("An idol of fertility rises from the corpse.", MessageSound.Benefit);
+
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellFertilityRitual", map);
             return true;
         }
-
     }
 }
