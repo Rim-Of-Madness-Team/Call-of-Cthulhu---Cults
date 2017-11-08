@@ -26,11 +26,47 @@ namespace CultOfCthulhu
 
         private bool soundPlayed;
 
-        public override Vector3 DrawPos
+        private float angle;
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            // RimWorld.Skyfaller
+            base.SpawnSetup(map, respawningAfterLoad);
+            if (!respawningAfterLoad)
+            {
+                this.ticksToImpact = this.def.skyfaller.ticksToImpactRange.RandomInRange;
+                this.angle = -33.7f;
+                if (this.def.rotatable && this.TryGetInnerInteractableThingOwner().Any)
+                {
+                    base.Rotation = this.TryGetInnerInteractableThingOwner()[0].Rotation;
+                }
+            }
+        }
+
+    public override Vector3 DrawPos
         {
             get
             {
-                return DropPodAnimationUtility.DrawPosAt(this.ticksToImpact, base.Position);
+                Vector3 result;
+                //switch (this.def.skyfaller.movementType)
+                //{
+                //    case SkyfallerMovementType.Accelerate:
+                //        result = SkyfallerDrawPosUtility.DrawPos_Accelerate(base.DrawPos, this.ticksToImpact, this.angle, this.def.skyfaller.speed);
+                //        break;
+                //    case SkyfallerMovementType.ConstantSpeed:
+                //        result = SkyfallerDrawPosUtility.DrawPos_ConstantSpeed(base.DrawPos, this.ticksToImpact, this.angle, this.def.skyfaller.speed);
+                //        break;
+                //    case SkyfallerMovementType.Decelerate:
+                //        result = SkyfallerDrawPosUtility.DrawPos_Decelerate(base.DrawPos, this.ticksToImpact, this.angle, this.def.skyfaller.speed);
+                //        break;
+                //    default:
+                //        Log.ErrorOnce("SkyfallerMovementType not handled: " + this.def.skyfaller.movementType, this.thingIDNumber ^ 1948576711);
+                        result = SkyfallerDrawPosUtility.DrawPos_Accelerate(base.DrawPos, this.ticksToImpact, this.angle, this.def.skyfaller.speed);
+                        //break;
+                //}
+                return result;
+                //return DropPodAnimationUtility.DrawPosAt(this.ticksToImpact, base.Position);
             }
         }
 
@@ -153,14 +189,37 @@ namespace CultOfCthulhu
                 return edifice == null || !edifice.def.holdsRoof;
             }), base.Map);
         }
-        
+
+        // RimWorld.Skyfaller
+        private Material cachedShadowMaterial;
+
+        // RimWorld.Skyfaller
+        private Material ShadowMaterial
+        {
+            get
+            {
+                if (this.cachedShadowMaterial == null && !this.def.skyfaller.shadow.NullOrEmpty())
+                {
+                    this.cachedShadowMaterial = MaterialPool.MatFrom(this.def.skyfaller.shadow, ShaderDatabase.Transparent);
+                }
+                return this.cachedShadowMaterial;
+            }
+        }
+
 
         public override void DrawAt(Vector3 drawLoc, bool flipped)
         {
             if (drawLoc.InBounds(Map))
             {
                 this.pawnFlyer.Drawer.DrawAt(drawLoc);
-                DropPodAnimationUtility.DrawDropSpotShadow(this, this.ticksToImpact);
+
+                Material shadowMaterial = this.ShadowMaterial;
+                if (!(shadowMaterial == null))
+                {
+                    Skyfaller.DrawDropSpotShadow(base.DrawPos, base.Rotation, shadowMaterial, this.def.skyfaller.shadowSize, this.ticksToImpact);
+                }
+
+                //DropPodAnimationUtility.DrawDropSpotShadow(this, this.ticksToImpact);
             }
         }
 

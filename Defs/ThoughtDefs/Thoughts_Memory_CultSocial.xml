@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThoughtDefs>
+<Defs>
 
   <!-- Cult social interactions -->
 
@@ -50,4 +50,4 @@
     </stages>
   </ThoughtDef>
   
-</ThoughtDefs>
+</Defs>

@@ -79,13 +79,13 @@ namespace CultOfCthulhu
             }
             else if (failReason == Reason.NoBenches)
             {
-                Messages.Message("There are no research benches to be found.", MessageSound.RejectInput);
+                Messages.Message("There are no research benches to be found.", MessageTypeDefOf.RejectInput);
                 failReason = Reason.Null;
                 return false;
             }
             else if (failReason == Reason.NoResearchProject)
             {
-                Messages.Message("There are no research projects currently being researched.", MessageSound.RejectInput);
+                Messages.Message("There are no research projects currently being researched.", MessageTypeDefOf.RejectInput);
                 failReason = Reason.Null;
                 return false;
             }
@@ -94,7 +94,7 @@ namespace CultOfCthulhu
             return false;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
 
@@ -112,7 +112,7 @@ namespace CultOfCthulhu
 
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = executioner(map).Position;
-            Messages.Message("Nyarlathotep grants your colony forbidden knowledge.", MessageSound.Benefit);
+            Messages.Message("Nyarlathotep grants your colony forbidden knowledge.", MessageTypeDefOf.PositiveEvent);
 
             return true;
         }

@@ -56,10 +56,10 @@ namespace CultOfCthulhu
         }
 
 
-        public override float Apply(DamageInfo dinfo, Thing victim)
+        public override DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
             PushEffect(victim, dinfo.Instigator, Rand.Range(5, 8), true);
-            return 0f;
+            return DamageResult.MakeNew();
         }
     }
 }

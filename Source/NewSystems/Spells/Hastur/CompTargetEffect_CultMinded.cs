@@ -18,7 +18,7 @@ namespace CultOfCthulhu
             Messages.Message("CompTargetEffectCultMinded".Translate(new object[]
             {
                 pawn.Label
-            }), MessageSound.Standard);
+            }), MessageTypeDefOf.NeutralEvent);
             //pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, false, false, null);
         }
     }

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+  <!-- 11/8/17 -->
+  <Cults_Investigate>Investigate</Cults_Investigate>
+
   <!-- 7/3/17 -->
   <Cults_TransmogrifiedLetter>Transmogrified</Cults_TransmogrifiedLetter>
   <Cults_TransmogrifiedLetterDesc>Tapping into powers unknown, {0} no longer seems quite the same and now holds strange vigor and size not seen before in its kind. {0} twitches with old and restless power.</Cults_TransmogrifiedLetterDesc>

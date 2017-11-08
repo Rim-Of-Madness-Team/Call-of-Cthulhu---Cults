@@ -84,7 +84,7 @@ namespace CultOfCthulhu
                         Messages.Message("CultGainsName".Translate(new object[]
                         {
                         this.curName
-                        }), MessageSound.Benefit);
+                        }), MessageTypeDefOf.PositiveEvent);
                     }
                     else
                     {
@@ -93,7 +93,7 @@ namespace CultOfCthulhu
                 }
                 else
                 {
-                    Messages.Message("ColonyNameIsInvalid".Translate(), MessageSound.RejectInput);
+                    Messages.Message("ColonyNameIsInvalid".Translate(), MessageTypeDefOf.RejectInput);
                 }
                 Event.current.Use();
             }

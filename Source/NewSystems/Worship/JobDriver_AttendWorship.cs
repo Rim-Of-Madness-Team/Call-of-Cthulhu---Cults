@@ -25,11 +25,15 @@ namespace CultOfCthulhu
 {
     public class JobDriver_AttendWorship : JobDriver
     {
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
         private TargetIndex Build = TargetIndex.A;
         private TargetIndex Facing = TargetIndex.B;
         private TargetIndex Spot = TargetIndex.C;
 
-        protected Building_SacrificialAltar Altar => (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.A).Thing;
+        protected Building_SacrificialAltar Altar => (Building_SacrificialAltar)base.job.GetTarget(TargetIndex.A).Thing;
 
         private Pawn setPreacher = null;
         protected Pawn PreacherPawn
@@ -93,7 +97,7 @@ namespace CultOfCthulhu
             altarToil.AddPreTickAction(() =>
             {
                 this.pawn.GainComfortFromCellIfPossible();
-                this.pawn.Drawer.rotator.FaceCell(TargetB.Cell);
+                this.pawn.rotationTracker.FaceCell(TargetB.Cell);
                 if (PreacherPawn.CurJob.def != CultsDefOf.Cults_HoldWorship)
                 {
                     this.ReadyForNextToil();
@@ -112,16 +116,17 @@ namespace CultOfCthulhu
                     CultUtility.AttendWorshipTickCheckEnd(PreacherPawn, this.pawn);
                     Cthulhu.Utility.DebugReport("Called end tick check");
                 }
-                if (this.TargetC.HasThing)
-                {
-                    if (Map.reservationManager.IsReserved(this.CurJob.targetC.Thing, Faction.OfPlayer))
-                        Map.reservationManager.Release(this.CurJob.targetC.Thing, pawn);
-                }
-                else
-                {
-                    if (Map.reservationManager.IsReserved(this.CurJob.targetC.Cell, Faction.OfPlayer))
-                        Map.reservationManager.Release(this.CurJob.targetC.Cell, this.pawn);
-                }
+                pawn.ClearAllReservations();
+                //if (this.TargetC.HasThing && TargetC.Thing is Thing t)
+                //{
+                //    if (pawn.Res Map.reservationManager.IsReserved(this.job.targetC.Thing, Faction.OfPlayer))
+                //        Map.reservationManager.Release(this.job.targetC.Thing, pawn);
+                //}
+                //else
+                //{
+                //    if (Map.reservationManager.IsReserved(this.job.targetC.Cell, Faction.OfPlayer))
+                //        Map.reservationManager.Release(this.job.targetC.Cell, this.pawn);
+                //}
 
 
             });

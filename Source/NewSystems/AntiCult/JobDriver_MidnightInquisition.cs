@@ -25,6 +25,11 @@ namespace CultOfCthulhu
 {
     public class JobDriver_MidnightInquisition : JobDriver
     {
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
+
         private TargetIndex InquisitorIndex = TargetIndex.A;
         private TargetIndex PreacherIndex = TargetIndex.B;
 
@@ -32,7 +37,7 @@ namespace CultOfCthulhu
         {
             get
             {
-                return base.CurJob.GetTarget(TargetIndex.B).Thing as Pawn;
+                return base.job.GetTarget(TargetIndex.B).Thing as Pawn;
             }
         }
 
@@ -40,7 +45,7 @@ namespace CultOfCthulhu
         {
             get
             {
-                return (Pawn)base.CurJob.GetTarget(TargetIndex.A).Thing;
+                return (Pawn)base.job.GetTarget(TargetIndex.A).Thing;
             }
         }
 
@@ -66,7 +71,7 @@ namespace CultOfCthulhu
             this.EndOnDespawnedOrNull(InquisitorIndex, JobCondition.Incompletable);
             this.EndOnDespawnedOrNull(PreacherIndex, JobCondition.Incompletable);
             //this.EndOnDespawnedOrNull(Build, JobCondition.Incompletable);
-            yield return Toils_Reserve.Reserve(PreacherIndex, this.CurJob.def.joyMaxParticipants);
+            yield return Toils_Reserve.Reserve(PreacherIndex, this.job.def.joyMaxParticipants);
             Toil gotoPreacher;
             gotoPreacher = Toils_Goto.GotoThing(PreacherIndex, PathEndMode.ClosestTouch);
             yield return gotoPreacher;
@@ -75,10 +80,10 @@ namespace CultOfCthulhu
             {
                 Toil watchToil = new Toil();
                 watchToil.defaultCompleteMode = ToilCompleteMode.Delay;
-                watchToil.defaultDuration = this.CurJob.def.joyDuration;
+                watchToil.defaultDuration = this.job.def.joyDuration;
                 watchToil.AddPreTickAction(() =>
                 {
-                    this.pawn.Drawer.rotator.FaceCell(Preacher.Position);
+                    this.pawn.rotationTracker.FaceCell(Preacher.Position);
                     this.pawn.GainComfortFromCellIfPossible();
                 });
                 yield return watchToil;
@@ -88,7 +93,7 @@ namespace CultOfCthulhu
             {
                 Pawn prey = Preacher;
                 bool surpriseAttack = this.firstHit;
-                if (pawn.meleeVerbs.TryMeleeAttack(prey, this.CurJob.verbToUse, surpriseAttack))
+                if (pawn.meleeVerbs.TryMeleeAttack(prey, this.job.verbToUse, surpriseAttack))
                 {
                     if (!this.notifiedPlayer && PawnUtility.ShouldSendNotificationAbout(prey))
                     {
@@ -101,20 +106,20 @@ namespace CultOfCthulhu
                         {
                             prey.LabelShort,
                             this.pawn.LabelShort,
-                        }).CapitalizeFirst(), prey, MessageSound.SeriousAlert);
+                        }).CapitalizeFirst(), prey, MessageTypeDefOf.ThreatBig);
                     }
                     this.pawn.Map.attackTargetsCache.UpdateTarget(this.pawn);
                 }
                 this.firstHit = false;
             };
-            yield return Toils_Combat.FollowAndMeleeAttack(TargetIndex.A, hitAction).JumpIfDespawnedOrNull(TargetIndex.A, toil).FailOn(() => Find.TickManager.TicksGame > this.startTick + 5000 && (this.CurJob.GetTarget(TargetIndex.A).Cell - this.pawn.Position).LengthHorizontalSquared > 4f);
+            yield return Toils_Combat.FollowAndMeleeAttack(TargetIndex.A, hitAction).JumpIfDespawnedOrNull(TargetIndex.A, toil).FailOn(() => Find.TickManager.TicksGame > this.startTick + 5000 && (this.job.GetTarget(TargetIndex.A).Cell - this.pawn.Position).LengthHorizontalSquared > 4f);
             yield return toil;
 
             this.AddFinishAction(() =>
             {
                 //if (this.TargetB.HasThing)
                 //{
-                //    Find.Reservations.Release(this.CurJob.targetC.Thing, pawn);
+                //    Find.Reservations.Release(this.job.targetC.Thing, pawn);
                 //}
             });
         }

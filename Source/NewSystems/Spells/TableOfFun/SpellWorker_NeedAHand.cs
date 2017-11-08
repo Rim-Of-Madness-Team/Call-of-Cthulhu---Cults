@@ -62,7 +62,7 @@ namespace CultOfCthulhu
         }
 
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Pawn pawn = TestPawn((Map)parms.target);
             BodyPartRecord tempRecord = null;
@@ -112,7 +112,7 @@ namespace CultOfCthulhu
             }
 
             pawn.health.AddHediff(CultsDefOf.Cults_TentacleArm, tempRecord, null);
-            Messages.Message(pawn.LabelShort + "'s " + tempRecord.def.label + " has been replaced with an otherworldly tentacle appendage.", MessageSound.Benefit);
+            Messages.Message(pawn.LabelShort + "'s " + tempRecord.def.label + " has been replaced with an otherworldly tentacle appendage.", MessageTypeDefOf.PositiveEvent);
 
             return true;
 

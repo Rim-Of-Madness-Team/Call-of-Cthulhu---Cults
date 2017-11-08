@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThoughtDefs>
+<Defs>
 
   <!-- Cult Seed Incidents -->
   
@@ -165,4 +165,4 @@
   </ThoughtDef>
   
   
-</ThoughtDefs>
+</Defs>

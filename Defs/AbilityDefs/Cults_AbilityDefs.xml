@@ -91,7 +91,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Cults_PPsionicBlast</projectileDef>
+        <defaultProjectile>Cults_PPsionicBlast</defaultProjectile>
 		<abilityDef>Cults_PsionicBlast</abilityDef>
 		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>
@@ -124,7 +124,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Cults_PPsionicShock</projectileDef>
+        <defaultProjectile>Cults_PPsionicShock</defaultProjectile>
 		<abilityDef>Cults_PsionicShock</abilityDef>
 		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>
@@ -157,7 +157,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Cults_PPsionicBurn</projectileDef>
+        <defaultProjectile>Cults_PPsionicBurn</defaultProjectile>
 		<abilityDef>Cults_PsionicBurn</abilityDef>
 		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>

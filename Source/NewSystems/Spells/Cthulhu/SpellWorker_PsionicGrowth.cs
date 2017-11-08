@@ -51,14 +51,14 @@ namespace CultOfCthulhu
         {
             if (pawn(map) == null)
             {
-                Messages.Message("Executioner is missing.", MessageSound.RejectInput);
+                Messages.Message("Executioner is missing.", MessageTypeDefOf.RejectInput);
                 return false;
             }
 
             //If they have no brain... don't do this.
             if (pawn(map).health.hediffSet.GetBrain() == null)
             {
-                Messages.Message(pawn(map).LabelShort + " is missing a brain to enhance.", MessageSound.RejectInput);
+                Messages.Message(pawn(map).LabelShort + " is missing a brain to enhance.", MessageTypeDefOf.RejectInput);
                 return false;
             }
 
@@ -67,7 +67,7 @@ namespace CultOfCthulhu
             {
                 if (current.def == CultsDefOf.Cults_PsionicBrain)
                 {
-                    Messages.Message(pawn(map).LabelShort + " already posesses a brain with psionic power.", MessageSound.RejectInput);
+                    Messages.Message(pawn(map).LabelShort + " already posesses a brain with psionic power.", MessageTypeDefOf.RejectInput);
                     return false;
                 }
             }
@@ -76,7 +76,7 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
 
@@ -121,7 +121,7 @@ namespace CultOfCthulhu
             }
 
             pawn(map).health.AddHediff(CultsDefOf.Cults_PsionicBrain, pawn(map).health.hediffSet.GetBrain(), null);
-            Messages.Message(pawn(map).LabelShort + "'s brain has been enhanced with great psionic power.", MessageSound.Benefit);
+            Messages.Message(pawn(map).LabelShort + "'s brain has been enhanced with great psionic power.", MessageTypeDefOf.PositiveEvent);
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = pawn(map).Position;
             Cthulhu.Utility.ApplyTaleDef("Cults_SpellPsionicGrowth", pawn(map));

@@ -25,12 +25,15 @@ namespace CultOfCthulhu
 {
     class JobDriver_ReflectOnWorship : JobDriver
     {
-
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
         protected Building_SacrificialAltar altar
         {
             get
             {
-                return (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.A).Thing;
+                return (Building_SacrificialAltar)base.job.GetTarget(TargetIndex.A).Thing;
             }
         }
 

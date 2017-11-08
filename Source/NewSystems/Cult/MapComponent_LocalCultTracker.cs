@@ -117,7 +117,7 @@ namespace CultOfCthulhu
                             Cthulhu.Utility.ChangeResearchProgress(repeatableResearch, 0f, true);
                             Messages.Message("RepeatableResearch".Translate(new object[] {
                     repeatableResearch.LabelCap
-                }), MessageSound.Benefit);
+                }), MessageTypeDefOf.PositiveEvent);
                         }
                     }
                 }
@@ -202,7 +202,7 @@ namespace CultOfCthulhu
                 Job J = new Job(job, pawn);
                 if (CurrentSeedTarget != null) J.SetTarget(TargetIndex.B, target);
                 pawn.jobs.TryTakeOrderedJob(J);
-                //pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                //pawn.CurJob.EndCurrentJob(JobCondition.InterruptForced);
                 ticksToTryJobAgain = OneMinute;
                 return true;
             }

@@ -8,7 +8,11 @@
     <pawnsPlural>deep ones</pawnsPlural>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <fixedName>insects</fixedName>
-    <raidCommonality>0</raidCommonality>
+	<raidCommonalityFromPointsCurve>
+		<points>
+			<li>(0, 0)</li>
+		</points>
+	</raidCommonalityFromPointsCurve>
     <humanlikeFaction>false</humanlikeFaction>
     <hidden>true</hidden>
     <autoFlee>false</autoFlee>
@@ -35,6 +39,11 @@
     <label>sailors</label>
     <description>People working on the high seas that have washed upon the shores.</description>
     <pawnsPlural>sailors</pawnsPlural>
+	<raidCommonalityFromPointsCurve>
+	  <points>
+		<li>(0, 0)</li>
+	  </points>
+	</raidCommonalityFromPointsCurve>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <fixedName>Sailor</fixedName>
     <techLevel>Spacer</techLevel>

@@ -32,13 +32,13 @@ namespace CultOfCthulhu
             {
                 if (TempExecutioner(map) == null)
                 {
-                    Messages.Message("Null executioner.", MessageSound.RejectInput);
+                    Messages.Message("Null executioner.", MessageTypeDefOf.RejectInput);
                     return false;
                 }
                 if (TempExecutioner(map).story.traits.HasTrait(TraitDefOf.Psychopath) &&
                     TempExecutioner(map).story.traits.HasTrait(TraitDefOf.Cannibal))
                 {
-                    Messages.Message("The executioner already has both psychopath and cannibal traits.", MessageSound.RejectInput);
+                    Messages.Message("The executioner already has both psychopath and cannibal traits.", MessageTypeDefOf.RejectInput);
                     return false;
                 }
             }
@@ -49,7 +49,7 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             Pawn p = map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar.executioner;

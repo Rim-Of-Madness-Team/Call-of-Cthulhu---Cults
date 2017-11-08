@@ -69,7 +69,7 @@ namespace CultOfCthulhu
         
 
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             Pawn pawn = altar(map).executioner;
@@ -137,7 +137,7 @@ namespace CultOfCthulhu
 
             if (isEye) pawn.health.AddHediff(CultsDefOf.Cults_CthulhidEyestalk, tempRecord, null);
             else pawn.health.AddHediff(CultsDefOf.Cults_CthulhidTentacle, tempRecord, null);
-            Messages.Message(pawn.LabelShort + "'s " + tempRecord.def.label + " has been replaced with an otherworldly tentacle appendage.", MessageSound.Benefit);
+            Messages.Message(pawn.LabelShort + "'s " + tempRecord.def.label + " has been replaced with an otherworldly tentacle appendage.", MessageTypeDefOf.PositiveEvent);
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = pawn.Position;
             return true;
 

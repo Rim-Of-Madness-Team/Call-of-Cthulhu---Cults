@@ -32,7 +32,7 @@ namespace CultOfCthulhu
                 {
                     if (!this.transComp.Map.reachability.CanReach(this.transComp.parent.Position, this.transporters[j].parent, PathEndMode.Touch, TraverseParms.For(TraverseMode.PassDoors, Danger.Deadly, false)))
                     {
-                        Messages.Message("MessageTransporterUnreachable".Translate(), this.transporters[j].parent, MessageSound.RejectInput);
+                        Messages.Message("MessageTransporterUnreachable".Translate(), this.transporters[j].parent, MessageTypeDefOf.RejectInput);
                         return;
                     }
                 }

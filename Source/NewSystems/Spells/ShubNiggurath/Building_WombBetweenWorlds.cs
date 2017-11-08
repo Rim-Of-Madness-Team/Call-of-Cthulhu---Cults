@@ -224,7 +224,7 @@ namespace CultOfCthulhu
                     lord.AddPawn(pawn);
                 }
 
-                Messages.Message("Cults_NewDarkYoung".Translate(), pawn, MessageSound.Benefit);
+                Messages.Message("Cults_NewDarkYoung".Translate(), pawn, MessageTypeDefOf.PositiveEvent);
                 return true;
             }
             catch

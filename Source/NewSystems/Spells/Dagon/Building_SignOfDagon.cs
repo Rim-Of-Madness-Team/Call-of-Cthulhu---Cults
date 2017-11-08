@@ -34,7 +34,7 @@ namespace CultOfCthulhu
                     }
                     else
                     {
-                        Messages.Message("Cosmic horrors mod is not loaded. Using insectoids instead.", MessageSound.Negative);
+                        Messages.Message("Cosmic horrors mod is not loaded. Using insectoids instead.", MessageTypeDefOf.NegativeEvent);
                         f = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("ROM_DeepOneAlt"));
                     }
 

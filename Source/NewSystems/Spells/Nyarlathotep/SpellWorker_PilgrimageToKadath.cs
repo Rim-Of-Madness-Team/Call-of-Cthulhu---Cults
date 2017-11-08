@@ -47,7 +47,7 @@ namespace CultOfCthulhu
             return "GameOverPilgrimageToKadath";
         }
 
-        //public override bool TryExecute(IncidentParms parms)
+        //protected override bool TryExecuteWorker(IncidentParms parms)
         //{
         //    Map map = parms.target as Map;
         //    StringBuilder stringBuilder = new StringBuilder();

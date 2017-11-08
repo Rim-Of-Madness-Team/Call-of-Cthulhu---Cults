@@ -195,7 +195,7 @@ namespace CultOfCthulhu
             //    this.tab = Dialog_LoadTransportersPawn.Tab.Items;
             //}, this.tab == Dialog_LoadTransportersPawn.Tab.Items));
             inRect.yMin += 72f;
-            Widgets.DrawMenuSection(inRect, true);
+            Widgets.DrawMenuSection(inRect);
             TabDrawer.DrawTabs(inRect, Dialog_LoadTransportersPawn.tabsList);
             inRect = inRect.ContractedBy(17f);
             GUI.BeginGroup(inRect);
@@ -335,7 +335,7 @@ namespace CultOfCthulhu
                     }
                 }
             }
-            Messages.Message("MessageTransportersLoadingProcessStarted".Translate(), this.transporters[0].parent, MessageSound.Benefit);
+            Messages.Message("MessageTransportersLoadingProcessStarted".Translate(), this.transporters[0].parent, MessageTypeDefOf.PositiveEvent);
             return true;
         }
 
@@ -391,13 +391,13 @@ namespace CultOfCthulhu
         {
             if (!this.transferables.Any((TransferableOneWay x) => x.CountToTransfer != 0))
             {
-                Messages.Message("CantSendEmptyTransportPods".Translate(), MessageSound.RejectInput);
+                Messages.Message("CantSendEmptyTransportPods".Translate(), MessageTypeDefOf.RejectInput);
                 return false;
             }
             if (this.MassUsage > this.MassCapacity)
             {
                 this.FlashMass();
-                Messages.Message("TooBigTransportersMassUsage".Translate(), MessageSound.RejectInput);
+                Messages.Message("TooBigTransportersMassUsage".Translate(), MessageTypeDefOf.RejectInput);
                 return false;
             }
             if (pawns.Count > PawnCapacity)
@@ -405,7 +405,7 @@ namespace CultOfCthulhu
                 Messages.Message("OverPawnRiderLimit".Translate(new object[]
                     {
                         PawnCapacity.ToString()
-                    }), MessageSound.RejectInput);
+                    }), MessageTypeDefOf.RejectInput);
                 return false;
             }
 
@@ -415,7 +415,7 @@ namespace CultOfCthulhu
                 Messages.Message("PawnCantReachTransporters".Translate(new object[]
                 {
                     pawn.LabelShort
-                }).CapitalizeFirst(), MessageSound.RejectInput);
+                }).CapitalizeFirst(), MessageTypeDefOf.RejectInput);
                 return false;
             }
             Map map = this.transporters[0].parent.Map;
@@ -446,7 +446,7 @@ namespace CultOfCthulhu
                                 Messages.Message("TransporterItemIsUnreachableSingle".Translate(new object[]
                                 {
                                     this.transferables[i].ThingDef.label
-                                }), MessageSound.RejectInput);
+                                }), MessageTypeDefOf.RejectInput);
                             }
                             else
                             {
@@ -454,7 +454,7 @@ namespace CultOfCthulhu
                                 {
                                     countToTransfer,
                                     this.transferables[i].ThingDef.label
-                                }), MessageSound.RejectInput);
+                                }), MessageTypeDefOf.RejectInput);
                             }
                             return false;
                         }

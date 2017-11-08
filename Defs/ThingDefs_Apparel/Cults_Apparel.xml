@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <ThingDef Name="ApparelBase" Abstract="True">
     <thingClass>Apparel</thingClass>
@@ -97,7 +97,7 @@
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<worngraphicPath>Apparel/Bodywear_Clothing/CultistRobes/CultistRobes</worngraphicPath>
+			<wornGraphicPath>Apparel/Bodywear_Clothing/CultistRobes/CultistRobes</wornGraphicPath>
 			<layers>
 				<li>Shell</li>
 			</layers>
@@ -186,7 +186,7 @@
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<worngraphicPath>Apparel/Bodywear_Clothing/FurRobes/ROMFurRobes</worngraphicPath>
+			<wornGraphicPath>Apparel/Bodywear_Clothing/FurRobes/ROMFurRobes</wornGraphicPath>
 			<layers>
 				<li>Shell</li>
 			</layers>
@@ -273,7 +273,7 @@
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<worngraphicPath>Apparel/Bodywear_Clothing/NyarlathotepRobes/ROMNyarlathotepRobes</worngraphicPath>
+			<wornGraphicPath>Apparel/Bodywear_Clothing/NyarlathotepRobes/ROMNyarlathotepRobes</wornGraphicPath>
 			<layers>
 				<li>Shell</li>
 			</layers>
@@ -362,7 +362,7 @@
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<worngraphicPath>Apparel/Bodywear_Clothing/CthulhuRobes/ROMCthulhuRobes</worngraphicPath>
+			<wornGraphicPath>Apparel/Bodywear_Clothing/CthulhuRobes/ROMCthulhuRobes</wornGraphicPath>
 			<layers>
 				<li>Shell</li>
 			</layers>
@@ -450,7 +450,7 @@
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<worngraphicPath>Apparel/Bodywear_Clothing/DagonRobes/ROMDagonVestments</worngraphicPath>
+			<wornGraphicPath>Apparel/Bodywear_Clothing/DagonRobes/ROMDagonVestments</wornGraphicPath>
 			<layers>
 				<li>Shell</li>
 			</layers>
@@ -538,7 +538,7 @@
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<worngraphicPath>Apparel/Bodywear_Clothing/ShubRobes/ROMShubRobes</worngraphicPath>
+			<wornGraphicPath>Apparel/Bodywear_Clothing/ShubRobes/ROMShubRobes</wornGraphicPath>
 			<layers>
 				<li>Shell</li>
 			</layers>
@@ -623,7 +623,7 @@
 				<li>Arms</li>
 				<li>Legs</li>
 			</bodyPartGroups>
-			<worngraphicPath>Apparel/Bodywear_Clothing/SailorsUniform/ROMSailorsUniform</worngraphicPath>
+			<wornGraphicPath>Apparel/Bodywear_Clothing/SailorsUniform/ROMSailorsUniform</wornGraphicPath>
 			<layers>
 				<li>Shell</li>
 			</layers>
@@ -666,7 +666,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Apparel/Hats/CultistHood/CultistHood</worngraphicPath>
+      <wornGraphicPath>Apparel/Hats/CultistHood/CultistHood</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -744,7 +744,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Apparel/Hats/CthulhuMaskHood/CthulhuMaskHood</worngraphicPath>
+      <wornGraphicPath>Apparel/Hats/CthulhuMaskHood/CthulhuMaskHood</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -803,7 +803,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Apparel/Hats/NyMask/nymask</worngraphicPath>
+      <wornGraphicPath>Apparel/Hats/NyMask/nymask</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -864,7 +864,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Apparel/Hats/DagonHat/ROMDagonHat</worngraphicPath>
+      <wornGraphicPath>Apparel/Hats/DagonHat/ROMDagonHat</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -925,7 +925,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Apparel/Hats/ShubMask/ROMShubMask</worngraphicPath>
+      <wornGraphicPath>Apparel/Hats/ShubMask/ROMShubMask</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -984,7 +984,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Apparel/Hats/StandardHood/StandardHood</worngraphicPath>
+      <wornGraphicPath>Apparel/Hats/StandardHood/StandardHood</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -1060,7 +1060,7 @@
       <bodyPartGroups>
         <li>UpperHead</li>
       </bodyPartGroups>
-      <worngraphicPath>Apparel/Hats/SailorsCap/ROMSailorsCap</worngraphicPath>
+      <wornGraphicPath>Apparel/Hats/SailorsCap/ROMSailorsCap</wornGraphicPath>
       <layers>
         <li>Overhead</li>
       </layers>
@@ -1069,4 +1069,4 @@
   </ThingDef>
 
 
-</ThingDefs>
+</Defs>

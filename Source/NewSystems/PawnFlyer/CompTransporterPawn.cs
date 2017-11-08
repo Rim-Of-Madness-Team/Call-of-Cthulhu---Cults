@@ -256,7 +256,7 @@ namespace CultOfCthulhu
             base.PostDeSpawn(map);
             if (this.CancelLoad(map))
             {
-                Messages.Message("MessageTransportersLoadCanceled_TransporterDestroyed".Translate(), MessageSound.Negative);
+                Messages.Message("MessageTransportersLoadCanceled_TransporterDestroyed".Translate(), MessageTypeDefOf.NegativeEvent);
             }
         }
 
@@ -368,7 +368,7 @@ namespace CultOfCthulhu
             }
             if (!this.AnyInGroupHasAnythingLeftToLoad)
             {
-                Messages.Message("MessageFinishedLoadingTransporters".Translate(), this.parent, MessageSound.Benefit);
+                Messages.Message("MessageFinishedLoadingTransporters".Translate(), this.parent, MessageTypeDefOf.PositiveEvent);
             }
         }
 

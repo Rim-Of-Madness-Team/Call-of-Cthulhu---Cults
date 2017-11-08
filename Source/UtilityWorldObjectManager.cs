@@ -16,7 +16,7 @@ namespace Cthulhu
     [StaticConstructorOnStartup]
     public static class UtilityWorldObjectManager
     {
-        public const string InjectedDefName = "Cults_UtilityWorldObject";
+        public const string InjecteddefName = "Cults_UtilityWorldObject";
         public const int UtilityObjectTile = 0;
 
         // Returns an existing UWO or creates a new one, adding it to the world.
@@ -27,7 +27,7 @@ namespace Cthulhu
             var obj = (T)worldObjects.ObjectsAt(UtilityObjectTile).FirstOrDefault(o => o is T);
             if (obj == null)
             {
-                var def = DefDatabase<WorldObjectDef>.GetNamed(InjectedDefName);
+                var def = DefDatabase<WorldObjectDef>.GetNamed(InjecteddefName);
                 def.worldObjectClass = typeof(T);
                 obj = (T)WorldObjectMaker.MakeWorldObject(def);
                 def.worldObjectClass = typeof(WorldObject);
@@ -57,7 +57,7 @@ namespace Cthulhu
         {
             var def = new WorldObjectDef
             {
-                defName = InjectedDefName,
+                defName = InjecteddefName,
                 worldObjectClass = typeof(WorldObject),
                 canHaveFaction = false,
                 selectable = false,

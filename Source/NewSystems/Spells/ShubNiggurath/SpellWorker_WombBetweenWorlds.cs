@@ -31,17 +31,17 @@ namespace CultOfCthulhu
         {
             if (!Cthulhu.Utility.IsCosmicHorrorsLoaded())
             {
-                Messages.Message("Note: Cosmic Horrors mod isn't loaded. Megaspiders will be summoned instead.", MessageSound.Standard);
+                Messages.Message("Note: Cosmic Horrors mod isn't loaded. Megaspiders will be summoned instead.", MessageTypeDefOf.NeutralEvent);
             }
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             IntVec3 intVec;
             //Find a drop spot
-            if (!ShipChunkDropCellFinder.TryFindShipChunkDropCell(map.Center, map, 999999, out intVec))
+            if (!CultUtility.TryFindDropCell(map.Center, map, 999999, out intVec))
             {
                 return false;
             }
@@ -51,7 +51,7 @@ namespace CultOfCthulhu
             GenPlace.TryPlaceThing(thing, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
-            //Messages.Message(".", intVec, MessageSound.Benefit);
+            //Messages.Message(".", intVec, MessageTypeDefOf.PositiveEvent);
             return true;
         }
     }

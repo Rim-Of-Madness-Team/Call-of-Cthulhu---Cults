@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
 
   <ThingDef Name="CultBuildingBase" Abstract="True">
@@ -18,53 +18,53 @@
     <ThingDef ParentName="BuildingBase">
     <defName>ThreeTileMarriageSpot</defName>
     <label>marriage spot 3x1</label>
-    <Description>Designates a spot where marriage ceremonies will take place. Spectators can watch from either side. This one is designed for temples.</Description>
+    <description>Designates a spot where marriage ceremonies will take place. Spectators can watch from either side. This one is designed for temples.</description>
     <thingClass>Building_MarriageSpot</thingClass>
     <graphicData>
       <texPath>Things/Building/Misc/MarriageSpot</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(3,1)</drawSize>
     </graphicData>
-    <AltitudeLayer>FloorEmplacement</AltitudeLayer>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
     <statBases>
       <WorkToBuild>0</WorkToBuild>
     </statBases>
     <useHitPoints>False</useHitPoints>
 		<scatterableOnMapGen>false</scatterableOnMapGen>
-		<Size>(3,1)</Size>
-    <DesignationCategory>Misc</DesignationCategory>
-    <Passability>Standable</Passability>
+		<size>(3,1)</size>
+    <designationCategory>Misc</designationCategory>
+    <passability>Standable</passability>
     <building>
       <sowTag>SupportPlantsOnly</sowTag>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
     </building>
-    <designationHotkey>Misc10</designationHotkey>
+    <designationHotKey>Misc10</designationHotKey>
   </ThingDef>
   -->
   <ThingDef ParentName="CultBuildingBase">
     <defName>Cults_SignOfDagon</defName>
     <label>sign of Dagon</label>
-    <Description>Designates a spot where the guardians of the deep may roam. It's recommended to keep these magic circles outside of the colony. Once they arrive, the guardians will defend the spot the circle originated at until their death. Avoid bringing colonists near their circle.</Description>
+    <description>Designates a spot where the guardians of the deep may roam. It's recommended to keep these magic circles outside of the colony. Once they arrive, the guardians will defend the spot the circle originated at until their death. Avoid bringing colonists near their circle.</description>
     <thingClass>CultOfCthulhu.Building_SignOfDagon</thingClass>
     <graphicData>
       <texPath>Building/SignOfDagon/ROMSignOfDagon</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(3,3)</drawSize>
     </graphicData>
-    <AltitudeLayer>FloorEmplacement</AltitudeLayer>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
     <statBases>
       <WorkToBuild>50</WorkToBuild>
     </statBases>
     <useHitPoints>False</useHitPoints>
-    <Size>(3,3)</Size>
-    <DesignationCategory>Misc</DesignationCategory>
-    <Passability>Standable</Passability>
+    <size>(3,3)</size>
+    <designationCategory>Misc</designationCategory>
+    <passability>Standable</passability>
     <building>
       <sowTag>SupportPlantsOnly</sowTag>
       <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
     </building>
 	<researchPrerequisites><li>Forbidden_Studies</li></researchPrerequisites>
-    <designationHotkey>Misc10</designationHotkey>
+    <designationHotKey>Misc10</designationHotKey>
   </ThingDef>
 
 
@@ -179,10 +179,10 @@
 -->
 
   <ThingDef ParentName="CultBenchBase">
-    <DefName>Cult_SacrificialAltar</DefName>
+    <defName>Cult_SacrificialAltar</defName>
     <label>cult altar</label>
-    <ThingClass>CultOfCthulhu.Building_SacrificialAltar</ThingClass>
-    <Description>A solid surface on which to elevate speeches of worship to extra-cosmic entities.</Description>
+    <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
+    <description>A solid surface on which to elevate speeches of worship to extra-cosmic entities.</description>
     <tickerType>Rare</tickerType>
     <graphicData>
       <texPath>Building/StandardAltar/StandardAltar</texPath>
@@ -206,7 +206,7 @@
       <li>Stony</li>
     </stuffCategories>
     <costStuffCount>125</costStuffCount>
-    <AltitudeLayer>Building</AltitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
@@ -217,9 +217,9 @@
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
       <Mass>70</Mass>
     </statBases>
-    <Size>(3,1)</Size>
-    <DesignationCategory>Misc</DesignationCategory>
-    <Passability>PassThroughOnly</Passability>
+    <size>(3,1)</size>
+    <designationCategory>Misc</designationCategory>
+    <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -249,10 +249,10 @@
   </ThingDef>
 
   <ThingDef ParentName="CultBenchBase">
-    <DefName>Cult_AnimalSacrificeAltar</DefName>
+    <defName>Cult_AnimalSacrificeAltar</defName>
     <label>sacrificial altar</label>
-    <ThingClass>CultOfCthulhu.Building_SacrificialAltar</ThingClass>
-    <Description>A solid surface on which to sacrifice to beings both petty and powerful. Specially designed to channel and collect blood.</Description>
+    <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
+    <description>A solid surface on which to sacrifice to beings both petty and powerful. Specially designed to channel and collect blood.</description>
     <tickerType>Rare</tickerType>
     <graphicData>
       <texPath>Building/AnimalAltar/AnimalAltar</texPath>
@@ -276,7 +276,7 @@
       <li>Stony</li>
     </stuffCategories>
     <costStuffCount>125</costStuffCount>
-    <AltitudeLayer>Building</AltitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
@@ -287,8 +287,8 @@
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
       <Mass>70</Mass>
     </statBases>
-    <Size>(3,1)</Size>
-    <Passability>PassThroughOnly</Passability>
+    <size>(3,1)</size>
+    <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -318,10 +318,10 @@
   </ThingDef>
 
   <ThingDef ParentName="CultBenchBase">
-    <DefName>Cult_HumanSacrificeAltar</DefName>
+    <defName>Cult_HumanSacrificeAltar</defName>
     <label>sacrificial altar</label>
-    <ThingClass>CultOfCthulhu.Building_SacrificialAltar</ThingClass>
-    <Description>A solid surface on which to sacrifice to beings both petty and powerful. Specially designed to channel and collect blood.</Description>
+    <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
+    <description>A solid surface on which to sacrifice to beings both petty and powerful. Specially designed to channel and collect blood.</description>
     <tickerType>Rare</tickerType>
     <graphicData>
       <texPath>Building/HumanAltar/HumanAltar</texPath>
@@ -345,7 +345,7 @@
       <li>Stony</li>
     </stuffCategories>
     <costStuffCount>125</costStuffCount>
-    <AltitudeLayer>Building</AltitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
@@ -356,8 +356,8 @@
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
       <Mass>75</Mass>
     </statBases>
-    <Size>(3,1)</Size>
-    <Passability>PassThroughOnly</Passability>
+    <size>(3,1)</size>
+    <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -525,4 +525,4 @@
     </comps>
   </ThingDef>
 
-</ThingDefs>
+</Defs>

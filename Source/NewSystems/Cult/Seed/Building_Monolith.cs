@@ -61,7 +61,7 @@ namespace CultOfCthulhu
                                     Job job = new Job(CultsDefOf.Cults_Investigate, myPawn, this);
                                     job.playerForced = true;
                                     myPawn.jobs.TryTakeOrderedJob(job);
-                                    //myPawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                                    //mypawn.CurJob.EndCurrentJob(JobCondition.InterruptForced);
                                 };
                                 yield return new FloatMenuOption("Investigate", action0, MenuOptionPriority.Default, null, null, 0f, null);
                             }

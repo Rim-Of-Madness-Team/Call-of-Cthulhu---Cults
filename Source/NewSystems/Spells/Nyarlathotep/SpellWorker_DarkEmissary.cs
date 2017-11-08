@@ -34,7 +34,7 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             for (int i = 0; i < 2; i++)

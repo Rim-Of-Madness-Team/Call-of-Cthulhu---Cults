@@ -76,7 +76,7 @@ namespace CultOfCthulhu
                      where cell.Walkable(Map)
                      select cell).TryRandomElement(out center))
                 {
-                        PawnGenerationRequest request = new PawnGenerationRequest(CultsDefOf.Cults_Sailor, faction, PawnGenerationContext.NonPlayer, Map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, null, null, null, null);
+                        PawnGenerationRequest request = new PawnGenerationRequest(CultsDefOf.Cults_Sailor, faction, PawnGenerationContext.NonPlayer, Map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, false, false, null, null, null, null);
                         Pawn pawn = PawnGenerator.GeneratePawn(request);
                         if (GenPlace.TryPlaceThing(pawn, center, Map, ThingPlaceMode.Near, null))
                         {

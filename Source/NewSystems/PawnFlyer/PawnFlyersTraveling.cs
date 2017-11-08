@@ -274,7 +274,7 @@ namespace CultOfCthulhu
                     }
                     this.RemoveAllPods();
                     Find.WorldObjects.Remove(this);
-                    Messages.Message("MessageTransportPodsArrivedAndLost".Translate(), new GlobalTargetInfo(this.destinationTile), MessageSound.Negative);
+                    Messages.Message("MessageTransportPodsArrivedAndLost".Translate(), new GlobalTargetInfo(this.destinationTile), MessageTypeDefOf.NegativeEvent);
                 }
             }
             else
@@ -346,7 +346,7 @@ namespace CultOfCthulhu
             {
                 text = text + " " + extraMessagePart;
             }
-            Messages.Message(text, new TargetInfo(intVec, map, false), MessageSound.Benefit);
+            Messages.Message(text, new TargetInfo(intVec, map, false), MessageTypeDefOf.PositiveEvent);
         }
 
         private void GivePodContentsToCaravan(Caravan caravan)
@@ -389,7 +389,7 @@ namespace CultOfCthulhu
             }
             this.RemoveAllPods();
             Find.WorldObjects.Remove(this);
-            Messages.Message("MessageTransportPodsArrivedAndAddedToCaravan".Translate(), caravan, MessageSound.Benefit);
+            Messages.Message("MessageTransportPodsArrivedAndAddedToCaravan".Translate(), caravan, MessageTypeDefOf.PositiveEvent);
         }
 
 
@@ -443,7 +443,7 @@ namespace CultOfCthulhu
             }
             this.RemoveAllPods();
             Find.WorldObjects.Remove(this);
-            Messages.Message("MessageTransportPodsArrived".Translate(), o, MessageSound.Benefit);
+            Messages.Message("MessageTransportPodsArrived".Translate(), o, MessageTypeDefOf.PositiveEvent);
         }
 
         private void RemoveAllPawnsFromWorldPawns()

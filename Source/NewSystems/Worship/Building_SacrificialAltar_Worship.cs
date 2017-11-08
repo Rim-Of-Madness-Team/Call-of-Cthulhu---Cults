@@ -107,7 +107,7 @@ namespace CultOfCthulhu
             }
             ChangeState(State.notinuse);
             //this.currentState = State.off;
-            Messages.Message("Cults_CancellingSermon".Translate(), MessageSound.Negative);
+            Messages.Message("Cults_CancellingSermon".Translate(), MessageTypeDefOf.NegativeEvent);
         }
 
 
@@ -115,7 +115,7 @@ namespace CultOfCthulhu
         {
             if (tempCurrentWorshipDeity == null)
             {
-                Messages.Message("Cults_NoWorshipWithoutDeity".Translate(), MessageSound.RejectInput);
+                Messages.Message("Cults_NoWorshipWithoutDeity".Translate(), MessageTypeDefOf.RejectInput);
                 //CancelWorship();
                 return;
             }
@@ -152,7 +152,7 @@ namespace CultOfCthulhu
                         {
                             string timeOfDay = "Cults_Morning".Translate();
                             if (Cthulhu.Utility.IsEvening(Map)) timeOfDay = "Cults_Evening".Translate();
-                            Messages.Message("Cults_MorningEveningSermonInterrupted".Translate(timeOfDay), MessageSound.RejectInput);
+                            Messages.Message("Cults_MorningEveningSermonInterrupted".Translate(timeOfDay), MessageTypeDefOf.RejectInput);
                         }
                         StartToWorship(forced);
                         return;
@@ -160,7 +160,7 @@ namespace CultOfCthulhu
                     case WorshipState.started:
                     case WorshipState.gathering:
                     case WorshipState.finishing:
-                        Messages.Message("Cults_AlreadyGatheringForASermon".Translate(), TargetInfo.Invalid, MessageSound.RejectInput);
+                        Messages.Message("Cults_AlreadyGatheringForASermon".Translate(), TargetInfo.Invalid, MessageTypeDefOf.RejectInput);
                         return;
                 }
             }
@@ -202,7 +202,7 @@ namespace CultOfCthulhu
 
             Messages.Message("WorshipGathering".Translate(new object[] {
                 factionBase.Label
-        }), TargetInfo.Invalid, MessageSound.Standard);
+        }), TargetInfo.Invalid, MessageTypeDefOf.NeutralEvent);
             ChangeState(State.worshipping, WorshipState.started);
             //this.currentState = State.started;
             //Map.GetComponent<MapComponent_SacrificeTracker>().lastResult = CultUtility.SacrificeResult.none;

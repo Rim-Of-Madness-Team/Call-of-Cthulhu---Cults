@@ -54,7 +54,9 @@ namespace CultOfCthulhu
         {
             get
             {
-                return DropPodAnimationUtility.DrawPosAt(this.ticksSinceStart, base.Position);
+                return SkyfallerDrawPosUtility.DrawPos_Accelerate(base.DrawPos, this.ticksSinceStart, -33f, this.def.skyfaller.speed);
+
+                //return DropPodAnimationUtility.DrawPosAt(this.ticksSinceStart, base.Position);
             }
         }
 
@@ -148,12 +150,33 @@ namespace CultOfCthulhu
             }
         }
 
+        // RimWorld.Skyfaller
+        private Material cachedShadowMaterial;
+
+        // RimWorld.Skyfaller
+        private Material ShadowMaterial
+        {
+            get
+            {
+                if (this.cachedShadowMaterial == null && !this.def.skyfaller.shadow.NullOrEmpty())
+                {
+                    this.cachedShadowMaterial = MaterialPool.MatFrom(this.def.skyfaller.shadow, ShaderDatabase.Transparent);
+                }
+                return this.cachedShadowMaterial;
+            }
+        }
+
         public override void DrawAt(Vector3 drawLoc, bool flip)
         {
             if (drawLoc.InBounds(Map))
             {
                 this.pawnFlyer.Drawer.DrawAt(drawLoc);
-                DropPodAnimationUtility.DrawDropSpotShadow(this, this.ticksSinceStart);
+                Material shadowMaterial = this.ShadowMaterial;
+                if (!(shadowMaterial == null))
+                {
+                    Skyfaller.DrawDropSpotShadow(base.DrawPos, base.Rotation, shadowMaterial, this.def.skyfaller.shadowSize, this.ticksSinceStart);
+                }
+                //DropPodAnimationUtility.DrawDropSpotShadow(this, this.ticksSinceStart);
             }
         }
 

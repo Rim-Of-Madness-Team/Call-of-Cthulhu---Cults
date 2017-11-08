@@ -9,9 +9,10 @@ namespace CultOfCthulhu
 {
     class DamageWorker_PsionicBurn : DamageWorker
     {
-        public override float Apply(DamageInfo dinfo, Thing victim)
+        public override DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
-            return 0f;
+            DamageWorker.DamageResult result = DamageResult.MakeNew();
+            return result;
         }
     }
 }

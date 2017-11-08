@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ResearchProjectDefs>
-
-  <!--=============================== Tier 4: Hi-tech research bench with multi-analyzer ===================================-->
+<Defs>
 
   <ResearchProjectDef Name="ForbiddenKnowledgeResearch" Abstract="True">
     <requiredResearchBuilding>Cults_ForbiddenKnowledgeCenter</requiredResearchBuilding>
@@ -25,7 +23,7 @@
     <defName>Forbidden_Deities</defName>
     <label>Probe occult deities</label>
     <description>Repeatable research to discover occult deities to worship.</description>
-    <baseCost>30</baseCost>
+    <baseCost>100</baseCost>
 	<prerequisites>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
@@ -49,7 +47,7 @@
     <defName>Forbidden_Attire</defName>
     <label>Ritual Attire</label>
     <description>Allows for the design and creation of occult robes, hoods, and various masks. Wearing proper clothing increases chances of successful sacrifices.</description>
-    <baseCost>30</baseCost>
+    <baseCost>300</baseCost>
 	<prerequisites>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
@@ -62,7 +60,7 @@
     <defName>Forbidden_Sculptures</defName>
     <label>Sculptures</label>
     <description>Allows for the design and creation of occult sculptures dedicated to otherworldly entities.</description>
-    <baseCost>30</baseCost>
+    <baseCost>300</baseCost>
 	<prerequisites>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
@@ -74,7 +72,7 @@
     <defName>Forbidden_Obelisks</defName>
     <label>Obelisk Construction</label>
     <description>Allows for the design and construction of occult obelisks.</description>
-    <baseCost>100</baseCost>
+    <baseCost>600</baseCost>
 	<prerequisites>
 	<li>Forbidden_Sculptures</li>
 	</prerequisites>
@@ -86,7 +84,7 @@
     <defName>Forbidden_Altar</defName>
     <label>Altar</label>
     <description>Allows the creation of an altar of worship to conduct rituals for beings beyond this world.</description>
-    <baseCost>30</baseCost>
+    <baseCost>150</baseCost>
 	<prerequisites>
 	<li>Forbidden_Studies</li>
 	</prerequisites>
@@ -98,7 +96,7 @@
     <defName>Forbidden_Sacrifice</defName>
     <label>Altar of Sacrifice</label>
     <description>Allows you to upgrade an altar to an altar of sacrifice to show greater appreciation of extradimensional beings.</description>
-    <baseCost>50</baseCost>
+    <baseCost>250</baseCost>
 	<prerequisites>
 	<li>Forbidden_Altar</li>
 	<li>Forbidden_Studies</li>
@@ -111,7 +109,7 @@
     <defName>Forbidden_Human</defName>
     <label>Human Sacrifice</label>
     <description>Allows you to upgrade an altar to an altar of human sacrifice, allowing for impressive benefits from cosmic entities.</description>
-    <baseCost>100</baseCost>
+    <baseCost>400</baseCost>
 	<prerequisites>
 	<li>Forbidden_Sacrifice</li>
 	<li>Forbidden_Altar</li>
@@ -121,4 +119,4 @@
 	<researchViewY>4</researchViewY>
   </ResearchProjectDef>
 
-</ResearchProjectDefs>
+</Defs>

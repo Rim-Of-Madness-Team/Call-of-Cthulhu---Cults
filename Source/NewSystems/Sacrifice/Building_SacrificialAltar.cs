@@ -185,7 +185,7 @@ namespace CultOfCthulhu
         }
         private bool RejectMessage(string s, Pawn pawn = null)
         {
-            Messages.Message(s, TargetInfo.Invalid, MessageSound.RejectInput);
+            Messages.Message(s, TargetInfo.Invalid, MessageTypeDefOf.RejectInput);
             if (pawn != null) pawn = null;
             return false;
         }
@@ -902,7 +902,7 @@ namespace CultOfCthulhu
         {
             if (IsCongregating())
             {
-                Messages.Message("UpgradeCongregationWarning".Translate(), MessageSound.RejectInput);
+                Messages.Message("UpgradeCongregationWarning".Translate(), MessageTypeDefOf.RejectInput);
                 return;
             }
             Upgrade();
@@ -910,21 +910,21 @@ namespace CultOfCthulhu
 
         public void Upgrade()
         {
-            string newDefName = "";
+            string newdefName = "";
             switch (currentFunction)
             {
                 case Function.Level1:
-                    newDefName = "Cult_AnimalSacrificeAltar";
+                    newdefName = "Cult_AnimalSacrificeAltar";
                     break;
                 case Function.Level2:
-                    newDefName = "Cult_HumanSacrificeAltar";
+                    newdefName = "Cult_HumanSacrificeAltar";
                     break;
                 case Function.Level3:
                     Log.Error("Tried to upgrade fully functional altar. This should never happen.");
                     return;
             }
-            if (newDefName == "") return;
-            ReplaceAltarWith(newDefName);
+            if (newdefName == "") return;
+            ReplaceAltarWith(newdefName);
         }
 
         public void NightmareEvent()
@@ -936,32 +936,32 @@ namespace CultOfCthulhu
 
         public void NightmarePruned(Pawn pruner)
         {
-            string oldDefName = "";
+            string olddefName = "";
             switch (lastFunction)
             {
                 case Function.Level1:
-                    oldDefName = "Cult_SacrificialAltar";
+                    olddefName = "Cult_SacrificialAltar";
                     break;
                 case Function.Level2:
-                    oldDefName = "Cult_AnimalSacrificeAltar";
+                    olddefName = "Cult_AnimalSacrificeAltar";
                     break;
                 case Function.Level3:
-                    oldDefName = "Cult_HumanSacrificeAltar";
+                    olddefName = "Cult_HumanSacrificeAltar";
                     break;
             }
-            if (oldDefName == "") return;
-            Building_SacrificialAltar newAltar = ReplaceAltarWith(oldDefName);
+            if (olddefName == "") return;
+            Building_SacrificialAltar newAltar = ReplaceAltarWith(olddefName);
             Messages.Message("PruningSuccessful".Translate(new object[]
             {
                 pruner.LabelShort
-            }), MessageSound.Benefit);
+            }), MessageTypeDefOf.PositiveEvent);
             newAltar.Map.reservationManager.ReleaseAllForTarget(newAltar);
         }
 
-        private Building_SacrificialAltar ReplaceAltarWith(string newDefName)
+        private Building_SacrificialAltar ReplaceAltarWith(string newdefName)
         {
             Building_SacrificialAltar result = null;
-            if (newDefName == "")
+            if (newdefName == "")
             {
                 Cthulhu.Utility.ErrorReport("ReplaceAltarWith :: Null exception.");
                 return result;
@@ -988,7 +988,7 @@ namespace CultOfCthulhu
 
             this.Destroy(0);
             //Spawn the new altar over the other
-            Building_SacrificialAltar thing = (Building_SacrificialAltar)ThingMaker.MakeThing(ThingDef.Named(newDefName), currentStuff);
+            Building_SacrificialAltar thing = (Building_SacrificialAltar)ThingMaker.MakeThing(ThingDef.Named(newdefName), currentStuff);
             result = thing;
             thing.SetFaction(Faction.OfPlayer);
             thing.Rotation = currentRotation;
@@ -996,8 +996,8 @@ namespace CultOfCthulhu
             thing.Rotation = currentRotation;
             thing.TryGetComp<CompQuality>().SetQuality(qualityCat, ArtGenerationContext.Colony);
             thing.lastFunction = currentLastFunction;
-            if (currentFunction != Function.Nightmare) Messages.Message("UpgradeSuccessful".Translate(), new TargetInfo(currentLocation, Map), MessageSound.Benefit);
-            else Messages.Message("CorruptedAltarWarning".Translate(), MessageSound.Negative);
+            if (currentFunction != Function.Nightmare) Messages.Message("UpgradeSuccessful".Translate(), new TargetInfo(currentLocation, Map), MessageTypeDefOf.PositiveEvent);
+            else Messages.Message("CorruptedAltarWarning".Translate(), MessageTypeDefOf.NegativeEvent);
 
             //Pass worship values
             thing.RoomName = s1;
@@ -1031,13 +1031,13 @@ namespace CultOfCthulhu
             }
             ChangeState(State.notinuse);
             //this.currentState = State.off;
-            Messages.Message("Cancelling offering.", MessageSound.Negative);
+            Messages.Message("Cancelling offering.", MessageTypeDefOf.NegativeEvent);
         }
         private void TryOffering()
         {
             if (IsCongregating())
             {
-                Messages.Message("A congregation is already gathering.", MessageSound.RejectInput);
+                Messages.Message("A congregation is already gathering.", MessageTypeDefOf.RejectInput);
                 return;
             }
 
@@ -1065,7 +1065,7 @@ namespace CultOfCthulhu
 
                     case OfferingState.started:
                     case OfferingState.offering:
-                        Messages.Message("An offering is already happening.", TargetInfo.Invalid, MessageSound.RejectInput);
+                        Messages.Message("An offering is already happening.", TargetInfo.Invalid, MessageTypeDefOf.RejectInput);
                         return;
                 }
             }
@@ -1105,7 +1105,7 @@ namespace CultOfCthulhu
                 return;
             }
 
-            Messages.Message("An offering is being gathered.", TargetInfo.Invalid, MessageSound.Standard);
+            Messages.Message("An offering is being gathered.", TargetInfo.Invalid, MessageTypeDefOf.NeutralEvent);
             ChangeState(State.offering, OfferingState.started);
             Cthulhu.Utility.DebugReport("Make offering called.");
 
@@ -1156,13 +1156,13 @@ namespace CultOfCthulhu
             }
             ChangeState(State.notinuse);
             //this.currentState = State.off;
-            Messages.Message("Cancelling sacrifice.", MessageSound.Negative);
+            Messages.Message("Cancelling sacrifice.", MessageTypeDefOf.NegativeEvent);
         }
         private void TrySacrifice()
         {
             if (IsSacrificing())
             {
-                Messages.Message("A sacrifice is already gathering.", MessageSound.RejectInput);
+                Messages.Message("A sacrifice is already gathering.", MessageTypeDefOf.RejectInput);
                 return;
             }
 
@@ -1183,7 +1183,7 @@ namespace CultOfCthulhu
                     case SacrificeState.gathering:
                     case SacrificeState.sacrificing:
                     case SacrificeState.finishing:
-                        Messages.Message("A sacrifice is already gathering.", TargetInfo.Invalid, MessageSound.RejectInput);
+                        Messages.Message("A sacrifice is already gathering.", TargetInfo.Invalid, MessageTypeDefOf.RejectInput);
                         return;
                 }
             }
@@ -1245,7 +1245,7 @@ namespace CultOfCthulhu
 
             Messages.Message("SacrificeGathering".Translate(new object[] {
                 factionBase.Label
-        }), TargetInfo.Invalid, MessageSound.Standard);
+        }), TargetInfo.Invalid, MessageTypeDefOf.NeutralEvent);
 
             ChangeState(State.sacrificing, SacrificeState.started);
             //this.currentState = State.started;
@@ -1463,20 +1463,20 @@ namespace CultOfCthulhu
             List<ThingAmount> list = new List<ThingAmount>();
             RecipeDef recipe = null;
 
-            string recipeDefName = "OfferingOf";
+            string recipedefName = "OfferingOf";
             switch (type)
             {
                 case CultUtility.SacrificeType.plants:
-                    recipeDefName = recipeDefName + "Plants";
+                    recipedefName = recipedefName + "Plants";
                     Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeType = CultUtility.SacrificeType.plants;
                     break;
                 case CultUtility.SacrificeType.meat:
-                    recipeDefName = recipeDefName + "Meat";
+                    recipedefName = recipedefName + "Meat";
 
                     Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeType = CultUtility.SacrificeType.meat;
                     break;
                 case CultUtility.SacrificeType.meals:
-                    recipeDefName = recipeDefName + "Meals";
+                    recipedefName = recipedefName + "Meals";
 
                     Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeType = CultUtility.SacrificeType.meals;
                     break;
@@ -1484,33 +1484,42 @@ namespace CultOfCthulhu
             switch (size)
             {
                 case CultUtility.OfferingSize.meagre:
-                    recipeDefName = recipeDefName + "_Meagre";
+                    recipedefName = recipedefName + "_Meagre";
                     break;
                 case CultUtility.OfferingSize.decent:
-                    recipeDefName = recipeDefName + "_Decent";
+                    recipedefName = recipedefName + "_Decent";
                     break;
                 case CultUtility.OfferingSize.sizable:
-                    recipeDefName = recipeDefName + "_Sizable";
+                    recipedefName = recipedefName + "_Sizable";
                     break;
                 case CultUtility.OfferingSize.worthy:
-                    recipeDefName = recipeDefName + "_Worthy";
+                    recipedefName = recipedefName + "_Worthy";
                     break;
                 case CultUtility.OfferingSize.impressive:
-                    recipeDefName = recipeDefName + "_Impressive";
+                    recipedefName = recipedefName + "_Impressive";
                     break;
 
             }
-            recipe = DefDatabase<RecipeDef>.GetNamed(recipeDefName);
+            recipe = DefDatabase<RecipeDef>.GetNamed(recipedefName);
             resultRecipe = recipe;
             if (!TryFindBestOfferingIngredients(recipe, pawn, altar, list))
             {
-                Messages.Message("Failed to find offering ingredients", MessageSound.RejectInput);
+                Messages.Message("Failed to find offering ingredients", MessageTypeDefOf.RejectInput);
                 result = null;
                 return false;
             }
             result = list;
             return true;
         }
+
         #endregion Misc
+
+        public bool CurrentlyUsableForBills()
+        {
+            return true;
+        }
+
     }
+
+
 }

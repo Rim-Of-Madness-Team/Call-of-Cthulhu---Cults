@@ -25,6 +25,10 @@ namespace CultOfCthulhu
 {
     public class JobDriver_HoldSacrifice : JobDriver
     {
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
         private const TargetIndex TakeeIndex = TargetIndex.A;
         private const TargetIndex AltarIndex = TargetIndex.B;
 
@@ -32,7 +36,7 @@ namespace CultOfCthulhu
         {
             get
             {
-                return (Pawn)base.CurJob.GetTarget(TargetIndex.A).Thing;
+                return (Pawn)base.job.GetTarget(TargetIndex.A).Thing;
             }
         }
 
@@ -40,7 +44,7 @@ namespace CultOfCthulhu
         {
             get
             {
-                return (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.B).Thing;
+                return (Building_SacrificialAltar)base.job.GetTarget(TargetIndex.B).Thing;
             }
         }
 
@@ -65,21 +69,21 @@ namespace CultOfCthulhu
             };
 
             //Toil 1: Go to prisoner.
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.A).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOn(() => this.CurJob.def == JobDefOf.Arrest && !this.Takee.CanBeArrested()).FailOn(() => !this.pawn.CanReach(this.DropAltar, PathEndMode.OnCell, Danger.Deadly, false, TraverseMode.ByPawn)).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
+            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.A).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOn(() => this.job.def == JobDefOf.Arrest && !this.Takee.CanBeArrestedBy(this.pawn)).FailOn(() => !this.pawn.CanReach(this.DropAltar, PathEndMode.OnCell, Danger.Deadly, false, TraverseMode.ByPawn)).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
             yield return new Toil
             {
                 initAction = delegate
                 {
-                    if (this.CurJob.def.makeTargetPrisoner)
+                    if (this.job.def.makeTargetPrisoner)
                     {
-                        Pawn pawn = (Pawn)this.CurJob.targetA.Thing;
+                        Pawn pawn = (Pawn)this.job.targetA.Thing;
                         Lord lord = pawn.GetLord();
                         if (lord != null)
                         {
                             lord.Notify_PawnAttemptArrested(pawn);
                         }
                         GenClamor.DoClamor(pawn, 10f, ClamorType.Harm);
-                        if (this.CurJob.def == JobDefOf.Arrest && !pawn.CheckAcceptArrest(this.pawn))
+                        if (this.job.def == JobDefOf.Arrest && !pawn.CheckAcceptArrest(this.pawn))
                         {
 
                             this.pawn.jobs.EndCurrentJob(JobCondition.Incompletable);

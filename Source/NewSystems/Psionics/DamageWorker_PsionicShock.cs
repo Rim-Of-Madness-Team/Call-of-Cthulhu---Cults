@@ -9,8 +9,9 @@ namespace CultOfCthulhu
 {
     class DamageWorker_PsionicShock : DamageWorker
     {
-        public override float Apply(DamageInfo dinfo, Thing victim)
+        public override DamageWorker.DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
+            DamageWorker.DamageResult result = DamageResult.MakeNew();
             Pawn pawn = victim as Pawn;
             if (pawn != null)
             {
@@ -33,7 +34,7 @@ namespace CultOfCthulhu
                                     pawn2.TakeDamage(new DamageInfo(DamageDefOf.Stun, 60));
                                 }
                             }
-                            return 0f;
+                            return result;
                         }
                         else if (d20 <= 5)
                         {
@@ -46,19 +47,21 @@ namespace CultOfCthulhu
                                     pawn2.TakeDamage(new DamageInfo(DamageDefOf.Stun, 10));
                                 }
                             }
-                            return 0f;
+                            return result;
                         }
                         else if (d20 <= 10)
                         {
                             MoteMaker.ThrowText(dinfo.Instigator.DrawPos, dinfo.Instigator.Map, "Success", 12.0f);
                             pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.WanderPsychotic, "psionic shock");
-                            return 0f;
+
+                            return result;
                         }
                         else if (d20 <= 15)
                         {
                             MoteMaker.ThrowText(dinfo.Instigator.DrawPos, dinfo.Instigator.Map, "Success", 12.0f);
                             pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, "psionic shock");
-                            return 0f;
+
+                            return result;
                         }
                         else if (d20 < 18)
                         {
@@ -66,7 +69,8 @@ namespace CultOfCthulhu
                             BodyPartRecord part = pawn.health.hediffSet.GetBrain();
                             if (part == null) Log.ErrorOnce("Cults :: Missing Brain", 6781923);
                             pawn.TakeDamage(new DamageInfo(CultsDefOf.Cults_Psionic, Rand.Range(5, 8), -1, dinfo.Instigator, part));
-                            return 0f;
+
+                            return result;
                         }
                         else
                         {
@@ -74,14 +78,15 @@ namespace CultOfCthulhu
                             BodyPartRecord part = pawn.health.hediffSet.GetBrain();
                             if (part == null) Log.ErrorOnce("Cults :: Missing Brain", 6781923);
                             victim.TakeDamage(new DamageInfo(CultsDefOf.Cults_Psionic, 9999, -1, dinfo.Instigator, part));
-                            return 0f;
+
+                            return result;
                         }
                     }
 
                 }
             }
 
-            return 0f;
+            return result;
         }
     }
 }

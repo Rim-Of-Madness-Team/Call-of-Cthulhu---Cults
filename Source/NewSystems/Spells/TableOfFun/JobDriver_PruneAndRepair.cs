@@ -10,6 +10,10 @@ namespace CultOfCthulhu
 {
     public class JobDriver_PruneAndRepair : JobDriver
     {
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
         public static int remainingDuration = 20000; // 6 in-game hours
 
         private const float WarmupTicks = 80f;
@@ -23,7 +27,7 @@ namespace CultOfCthulhu
         {
             get
             {
-                return (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.A).Thing;
+                return (Building_SacrificialAltar)base.job.GetTarget(TargetIndex.A).Thing;
             }
         }
 

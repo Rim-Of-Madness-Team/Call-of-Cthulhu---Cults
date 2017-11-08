@@ -292,12 +292,12 @@ namespace CultOfCthulhu
 
                     if (altar.Map.mapPawns.PrisonersOfColonySpawned == null)
                     {
-                        Messages.Message("No prisoners available.", MessageSound.RejectInput);
+                        Messages.Message("No prisoners available.", MessageTypeDefOf.RejectInput);
                         return;
                     }
                     if (altar.Map.mapPawns.PrisonersOfColonySpawnedCount <= 0)
                     {
-                        Messages.Message("No prisoners available.", MessageSound.RejectInput);
+                        Messages.Message("No prisoners available.", MessageTypeDefOf.RejectInput);
                         return;
                     }
 
@@ -316,12 +316,12 @@ namespace CultOfCthulhu
 
                     if (altar.Map.mapPawns.AllPawnsSpawned == null)
                     {
-                        Messages.Message("No " + actorType.ToString() + "s available.", MessageSound.RejectInput);
+                        Messages.Message("No " + actorType.ToString() + "s available.", MessageTypeDefOf.RejectInput);
                         return;
                     }
                     if (altar.Map.mapPawns.AllPawnsSpawnedCount <= 0)
                     {
-                        Messages.Message("No " + actorType.ToString() + "s available.", MessageSound.RejectInput);
+                        Messages.Message("No " + actorType.ToString() + "s available.", MessageTypeDefOf.RejectInput);
                         return;
                     }
 
@@ -342,7 +342,7 @@ namespace CultOfCthulhu
             {
                 if (actorList.Count <= 0)
                 {
-                    Messages.Message("No " + actorType.ToString() + "s available.", MessageSound.RejectInput);
+                    Messages.Message("No " + actorType.ToString() + "s available.", MessageTypeDefOf.RejectInput);
                     return;
                 }
             }

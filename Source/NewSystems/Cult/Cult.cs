@@ -145,7 +145,7 @@ namespace CultOfCthulhu
             //If the cult already exists, show a message to initiate the pawn into the cult.
             if (active)
             {
-                Messages.Message(cultMember.LabelShort + " has been initiated into the cult, " + name, MessageSound.Benefit);
+                Messages.Message(cultMember.LabelShort + " has been initiated into the cult, " + name, MessageTypeDefOf.PositiveEvent);
                 return;
             }
             //If it doesn't already exist, then let's make it so!

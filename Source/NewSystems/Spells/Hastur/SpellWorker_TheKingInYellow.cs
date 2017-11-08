@@ -38,7 +38,7 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             //Spawn some goats
@@ -48,7 +48,7 @@ namespace CultOfCthulhu
             Cthulhu.Utility.SpawnThingDefOfCountAt(CultsDefOf.Cults_TheKingInYellow, 1, new TargetInfo(altar(map).RandomAdjacentCell8Way(), map));
 
             //Spawn a 
-            Messages.Message("The sacred play appears before the sacrificers.", MessageSound.Benefit);
+            Messages.Message("The sacred play appears before the sacrificers.", MessageTypeDefOf.PositiveEvent);
 
             //Cthulhu.Utility.ApplyTaleDef("Cults_SpellFertilityRitual", map);
             return true;

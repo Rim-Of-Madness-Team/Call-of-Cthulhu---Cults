@@ -37,12 +37,12 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             IntVec3 intVec;
             //Find a drop spot
-            if (!ShipChunkDropCellFinder.TryFindShipChunkDropCell(map.Center, map, 999999, out intVec))
+            if (!CultUtility.TryFindDropCell(map.Center, map, 999999, out intVec))
             {
                 return false;
             }
@@ -57,7 +57,7 @@ namespace CultOfCthulhu
             GenPlace.TryPlaceThing(thing3, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
-            Messages.Message("Treasures from the deep mysteriously appear.", new TargetInfo(intVec, map), MessageSound.Benefit);
+            Messages.Message("Treasures from the deep mysteriously appear.", new TargetInfo(intVec, map), MessageTypeDefOf.PositiveEvent);
             Cthulhu.Utility.ApplyTaleDef("Cults_SpellBountyOfTheSea", map);
             return true;
         }

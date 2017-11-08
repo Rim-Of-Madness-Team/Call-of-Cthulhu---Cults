@@ -10,6 +10,10 @@ namespace CultOfCthulhu
 {
     public class JobDriver_GiveOffering : JobDriver
     {
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
         public const TargetIndex BillGiverInd = TargetIndex.A;
 
         public const TargetIndex IngredientInd = TargetIndex.B;
@@ -101,17 +105,17 @@ namespace CultOfCthulhu
             {
                 initAction = delegate
                 {
-                    if (this.CurJob.targetQueueB != null && this.CurJob.targetQueueB.Count == 1)
+                    if (this.job.targetQueueB != null && this.job.targetQueueB.Count == 1)
                     {
-                        UnfinishedThing unfinishedThing = this.CurJob.targetQueueB[0].Thing as UnfinishedThing;
+                        UnfinishedThing unfinishedThing = this.job.targetQueueB[0].Thing as UnfinishedThing;
                         if (unfinishedThing != null)
                         {
-                            unfinishedThing.BoundBill = (Bill_ProductionWithUft)this.CurJob.bill;
+                            unfinishedThing.BoundBill = (Bill_ProductionWithUft)this.job.bill;
                         }
                     }
                 }
             };
-            yield return Toils_Jump.JumpIf(toil, () => this.CurJob.GetTargetQueue(TargetIndex.B).NullOrEmpty<LocalTargetInfo>());
+            yield return Toils_Jump.JumpIf(toil, () => this.job.GetTargetQueue(TargetIndex.B).NullOrEmpty<LocalTargetInfo>());
             Toil toil2 = Toils_JobTransforms.ExtractNextTargetFromQueue(TargetIndex.B);
             yield return toil2;
             Toil toil3 = Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOnSomeonePhysicallyInteracting(TargetIndex.B);
@@ -164,17 +168,17 @@ namespace CultOfCthulhu
             //{
             //    initAction = delegate
             //    {
-            //        if (this.CurJob.targetQueueB != null && this.CurJob.targetQueueB.Count == 1)
+            //        if (this.job.targetQueueB != null && this.job.targetQueueB.Count == 1)
             //        {
-            //            UnfinishedThing unfinishedThing = this.CurJob.targetQueueB[0].Thing as UnfinishedThing;
+            //            UnfinishedThing unfinishedThing = this.job.targetQueueB[0].Thing as UnfinishedThing;
             //            if (unfinishedThing != null)
             //            {
-            //                unfinishedThing.BoundBill = (Bill_ProductionWithUft)this.CurJob.bill;
+            //                unfinishedThing.BoundBill = (Bill_ProductionWithUft)this.job.bill;
             //            }
             //        }
             //    }
             //};
-            //yield return Toils_Jump.JumpIf(toil, () => this.CurJob.GetTargetQueue(TargetIndex.B).NullOrEmpty<LocalTargetInfo>());
+            //yield return Toils_Jump.JumpIf(toil, () => this.job.GetTargetQueue(TargetIndex.B).NullOrEmpty<LocalTargetInfo>());
             //Toil toil2 = Toils_JobTransforms.ExtractNextTargetFromQueue(TargetIndex.B);
             //yield return toil2;
             //Toil toil3 = Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOnSomeonePhysicallyInteracting(TargetIndex.B);

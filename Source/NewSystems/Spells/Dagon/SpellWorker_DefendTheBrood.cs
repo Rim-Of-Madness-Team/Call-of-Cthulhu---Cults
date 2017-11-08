@@ -30,7 +30,7 @@ namespace CultOfCthulhu
                 }
                 if ((Brood(map).Count + NUMTOSPAWN) > HARDLIMIT)
                 {
-                    Messages.Message("DefendTheBroodLimit".Translate(), MessageSound.RejectInput);
+                    Messages.Message("DefendTheBroodLimit".Translate(), MessageTypeDefOf.RejectInput);
                     return false;
                 }
             }
@@ -103,14 +103,14 @@ namespace CultOfCthulhu
             }
             else
             {
-                Messages.Message("UsingInsectoidsInstead".Translate(), MessageSound.Negative);
+                Messages.Message("UsingInsectoidsInstead".Translate(), MessageTypeDefOf.NegativeEvent);
                 parms.faction = Find.FactionManager.FirstFactionOfDef(FactionDef.Named("ROM_DeepOneAlt"));
             }
             return parms.faction != null;
         }
 
         
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             if (!this.TrySetDeepOneFaction(parms))
             {
@@ -119,7 +119,7 @@ namespace CultOfCthulhu
             Map map = parms.target as Map;
             IntVec3 intVec;
             //Find a drop spot
-            if (!ShipChunkDropCellFinder.TryFindShipChunkDropCell(map.Center, map, 70, out intVec))
+            if (!CultUtility.TryFindDropCell(map.Center, map, 70, out intVec))
             {
                 return false;
             }

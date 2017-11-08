@@ -48,7 +48,7 @@ namespace CultOfCthulhu
             return "GameOverAbsorptionByCarcosa";
         }
 
-        //public override bool TryExecute(IncidentParms parms)
+        //protected override bool TryExecuteWorker(IncidentParms parms)
         //{
         //    map = parms.target as Map;
         //    LongEventHandler.QueueLongEvent(delegate

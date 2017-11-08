@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<HediffDefs>
+<Defs>
 
   <HediffDef Name="InjuryBase" Abstract="True">
     <hediffClass>Hediff_Injury</hediffClass>
@@ -48,7 +48,7 @@
     <stages>
       <li>
         <label>initial-hidden</label>
-        <everVisible>false</everVisible>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li>
         <label>initial</label>
@@ -150,4 +150,4 @@
   </HediffDef>
 
 
-</HediffDefs>
+</Defs>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Resources>
+<Defs>
 
   <ThingDef Name="Cults_Grimoire">
 	<defName>Cults_Grimoire</defName>
@@ -11,7 +11,6 @@
       <graphicClass>Graphic_Single</graphicClass>
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>	
     <category>Item</category>
     <pathCost>10</pathCost>
     <useHitPoints>true</useHitPoints>
@@ -57,8 +56,7 @@
       <texPath>Item/Resource/TheKingInYellow/TheKingInYellow</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
-    </graphicData>
-    <soundInteract>InteractPistol</soundInteract>	
+    </graphicData>	
     <category>Item</category>
     <pathCost>10</pathCost>
     <useHitPoints>true</useHitPoints>
@@ -114,4 +112,4 @@
   </ThingDef>
   
   
-</Resources>
+</Defs>

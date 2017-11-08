@@ -25,7 +25,10 @@ namespace CultOfCthulhu
 {
     public class JobDriver_AttendSacrifice : JobDriver
     {
-        
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
         private TargetIndex Build = TargetIndex.A;
         private TargetIndex Facing = TargetIndex.B;
         private TargetIndex Spot = TargetIndex.C;
@@ -36,7 +39,7 @@ namespace CultOfCthulhu
         {
             get
             {
-                return (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.A).Thing;
+                return (Building_SacrificialAltar)base.job.GetTarget(TargetIndex.A).Thing;
             }
         }
 
@@ -126,7 +129,7 @@ namespace CultOfCthulhu
             altarToil.AddPreTickAction(() =>
             {
                 this.pawn.GainComfortFromCellIfPossible();
-                this.pawn.Drawer.rotator.FaceCell(TargetB.Cell);
+                this.pawn.rotationTracker.FaceCell(TargetB.Cell);
                 if (report == "") report = "Cults_AttendingSacrifice".Translate();
                 if (ExecutionerPawn != null)
                 {
@@ -199,12 +202,12 @@ namespace CultOfCthulhu
                 if (this.TargetC.Cell.GetEdifice(this.pawn.Map) != null)
                 {
                     if (this.pawn.Map.reservationManager.ReservedBy(this.TargetC.Cell.GetEdifice(this.pawn.Map), this.pawn))
-                        this.pawn.Map.reservationManager.Release(this.TargetC.Cell.GetEdifice(this.pawn.Map), pawn);
+                        this.pawn.ClearAllReservations(); // this.pawn.Map.reservationManager.Release(this.TargetC.Cell.GetEdifice(this.pawn.Map), pawn);
                 }
                 else
                 {
                     if (this.pawn.Map.reservationManager.ReservedBy(this.TargetC.Cell.GetEdifice(this.pawn.Map), this.pawn))
-                        this.pawn.Map.reservationManager.Release(this.CurJob.targetC.Cell, this.pawn);
+                        this.pawn.ClearAllReservations();  //this.pawn.Map.reservationManager.Release(this.job.targetC.Cell, this.pawn);
                 }
             });
         }

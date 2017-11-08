@@ -30,8 +30,13 @@ namespace CultOfCthulhu
         {
             get
             {
-                return (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.A).Thing;
+                return (Building_SacrificialAltar)base.job.GetTarget(TargetIndex.A).Thing;
             }
+        }
+
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
         }
 
         [DebuggerHidden]

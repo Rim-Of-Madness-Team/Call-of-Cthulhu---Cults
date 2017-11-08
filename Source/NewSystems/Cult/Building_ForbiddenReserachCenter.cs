@@ -127,7 +127,7 @@ namespace CultOfCthulhu
             {
                 CancelResearch("Cannot research this project at the forbidden center.");
             }
-            if (Map.reservationManager.IsReserved(bench, Faction.OfPlayer))
+            if (!interactingPawn.CanReserve(bench)) //Map.reservationManager.IsReserved(bench, Faction.OfPlayer))
             {
                 this.SetForbidden(true);
                 interactingPawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
@@ -138,15 +138,15 @@ namespace CultOfCthulhu
             Job J = new Job(JobDefOf.Research, bench);
             Map.reservationManager.ReleaseAllClaimedBy(interactingPawn);
             interactingPawn.jobs.TryTakeOrderedJob(J);
-            //interactingPawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
+            //interactingpawn.CurJob.EndCurrentJob(JobCondition.InterruptForced);
         }
 
         private void CancelResearch(string reason)
         {
-            if (reason != null) Messages.Message(reason, MessageSound.RejectInput);
+            if (reason != null) Messages.Message(reason, MessageTypeDefOf.RejectInput);
             Find.ResearchManager.currentProj = null;
             Find.ResearchManager.ReapplyAllMods();
-            Messages.Message("Research cancelled.", MessageSound.Silent);
+            Messages.Message("Research cancelled.", MessageTypeDefOf.SilentInput);
         }
 
         private bool IsThisCultistResearch(ResearchProjectDef currentProject)
@@ -196,7 +196,7 @@ namespace CultOfCthulhu
                     InteractingPawn.gender.GetPronoun(),
                     InteractingPawn.gender.GetObjective(),
                     InteractingPawn.gender.GetPossessive(),
-                    }), MessageSound.Standard);
+                    }), MessageTypeDefOf.NeutralEvent);
             }
         }
         private void SetWarningLevel(float sanityLevel)

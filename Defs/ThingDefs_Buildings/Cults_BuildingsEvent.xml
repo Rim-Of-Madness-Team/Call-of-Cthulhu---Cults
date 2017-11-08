@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <ThingDef ParentName="CultBuildingBase">
     <defName>Cults_FertilityTotem</defName>
@@ -8,7 +8,7 @@
     <thingClass>CultOfCthulhu.Building_TotemFertility</thingClass>
     <tickerType>Normal</tickerType>
     <category>Building</category>
-    <Fertility>2.0</Fertility>
+    <fertility>2.0</fertility>
     <specialDisplayRadius>5.8</specialDisplayRadius>
 	<graphicData>
       <texPath>Building/Exotic/FertilityTotem/FertilityTotem</texPath>
@@ -126,7 +126,6 @@
       <Steel>4</Steel>
     </costList>
 	<building>
-      <preventDeterioration>true</preventDeterioration>
       <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
       <defaultStorageSettings>
         <priority>Important</priority>
@@ -304,4 +303,4 @@
   </ThingDef>
 
 
- </ThingDefs>
+ </Defs>

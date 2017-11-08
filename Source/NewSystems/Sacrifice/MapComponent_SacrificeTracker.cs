@@ -128,7 +128,7 @@ namespace CultOfCthulhu
             StringBuilder s = new StringBuilder();
             string labelToTranslate = "Error";
             string textLabel = "Error";
-            LetterDef letterDef = LetterDefOf.BadNonUrgent;
+            LetterDef letterDef = LetterDefOf.ThreatSmall;
             s.Append("SacrificeIntro".Translate());
             s.Append(" " + lastUsedAltar.currentSacrificeDeity.Label);
 

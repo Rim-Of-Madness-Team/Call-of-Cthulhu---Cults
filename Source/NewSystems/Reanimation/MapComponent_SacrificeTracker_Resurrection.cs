@@ -115,7 +115,7 @@ namespace CultOfCthulhu
 
                 Messages.Message("ReanimatedOath".Translate(new object[] {
                     sourceCorpse.Name
-                }), MessageSound.SeriousAlert);
+                }), MessageTypeDefOf.ThreatBig);
                 //Log.Message(newPawn.NameStringShort);
                 //Log.Message(spawnLoc.ToString());
                 //Log.Message(map.ToString());

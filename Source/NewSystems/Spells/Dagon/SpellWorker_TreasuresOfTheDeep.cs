@@ -34,11 +34,11 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             IntVec3 intVec;
-            if (!ShipChunkDropCellFinder.TryFindShipChunkDropCell(map.Center, map, 999999, out intVec))
+            if (!CultUtility.TryFindDropCell(map.Center, map, 999999, out intVec))
             {
                 return false;
             }
@@ -50,7 +50,7 @@ namespace CultOfCthulhu
             }
 
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
-            Messages.Message("Treasures from the deep mysteriously appear.", new TargetInfo(intVec, map), MessageSound.Benefit);
+            Messages.Message("Treasures from the deep mysteriously appear.", new TargetInfo(intVec, map), MessageTypeDefOf.PositiveEvent);
             return true;
         }
 

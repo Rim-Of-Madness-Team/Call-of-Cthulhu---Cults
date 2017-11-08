@@ -10,7 +10,7 @@ namespace CultOfCthulhu
 {
     class IncidentWorker_CultSeed_NightmareTree : IncidentWorker_CultSeed
     {
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             //Create a spawn point for our nightmare Tree
@@ -27,20 +27,20 @@ namespace CultOfCthulhu
             thing.Growth = 1f;
             GenPlace.TryPlaceThing(thing, intVec.RandomAdjacentCell8Way(), map, ThingPlaceMode.Near);
 
-            //Find the best researcher
-            Pawn researcher = CultUtility.DetermineBestResearcher(map);
+            ////Find the best researcher
+            //Pawn researcher = CultUtility.DetermineBestResearcher(map);
 
-            //Clear all jobs for the researcher.
-            //Give them a new job to investigate the nightmare tree.
-            if (ModSettings_Data.cultsForcedInvestigation) //If forced investigation is allowed.
-            {
-                Job J = new Job(CultsDefOf.Cults_Investigate, researcher, thing);
-                researcher.jobs.TryTakeOrderedJob(J);
-                //researcher.jobs.EndCurrentJob(JobCondition.InterruptForced);
-            }
+            ////Clear all jobs for the researcher.
+            ////Give them a new job to investigate the nightmare tree.
+            //if (ModSettings_Data.cultsForcedInvestigation) //If forced investigation is allowed.
+            //{
+            //    Job J = new Job(CultsDefOf.Cults_Investigate, researcher, thing);
+            //    researcher.jobs.TryTakeOrderedJob(J);
+            //    //researcher.jobs.EndCurrentJob(JobCondition.InterruptForced);
+            //}
             Find.World.GetComponent<WorldComponent_GlobalCultTracker>().currentSeedState = CultSeedState.NeedSeeing;
-            map.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedPawn = researcher;
-            map.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedTarget = thing;
+            //map.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedPawn = researcher;
+            //map.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedTarget = thing;
             
             return true;
         }

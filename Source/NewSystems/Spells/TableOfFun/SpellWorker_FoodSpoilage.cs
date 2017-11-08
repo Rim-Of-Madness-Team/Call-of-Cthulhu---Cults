@@ -42,7 +42,7 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             for (int i = 0; i < Rand.Range(3,6); i++)
             {

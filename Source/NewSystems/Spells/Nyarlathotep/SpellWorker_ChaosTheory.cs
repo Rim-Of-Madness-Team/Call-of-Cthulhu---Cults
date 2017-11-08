@@ -75,13 +75,13 @@ namespace CultOfCthulhu
             {
                 if (TempExecutioner(map) == null)
                 {
-                    Messages.Message("Executioner does not exist.", MessageSound.RejectInput);
+                    Messages.Message("Executioner does not exist.", MessageTypeDefOf.RejectInput);
                     return false;
                 }
                 
                 if (!HasIncapableSkills(TempExecutioner(map)) && !HasIncapableWorkTags(TempExecutioner(map)))
                 {
-                    Messages.Message("Executioner is already fully capable.", MessageSound.RejectInput);
+                    Messages.Message("Executioner is already fully capable.", MessageTypeDefOf.RejectInput);
                     return false;
                 }
                 return true;
@@ -93,7 +93,7 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             Pawn pawn = map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar.executioner;
@@ -169,7 +169,7 @@ namespace CultOfCthulhu
             }
             typeof(Pawn_StoryTracker).GetField("cachedDisabledWorkTypes", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(pawn.story, null);
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = pawn.Position;
-            Messages.Message(pawn.Label + " has lived their entire life over again.", MessageSound.Benefit);
+            Messages.Message(pawn.Label + " has lived their entire life over again.", MessageTypeDefOf.PositiveEvent);
             return true;
         }
         

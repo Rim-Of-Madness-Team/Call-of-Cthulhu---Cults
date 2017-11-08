@@ -16,7 +16,7 @@ namespace CultOfCthulhu
         {
             get
             {
-                return (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.A).Thing;
+                return (Building_SacrificialAltar)base.job.GetTarget(TargetIndex.A).Thing;
             }
         }
 
@@ -28,7 +28,7 @@ namespace CultOfCthulhu
             {
                 initAction = delegate
                 {
-                    this.pawn.Map.pawnDestinationManager.ReserveDestinationFor(this.pawn, this.pawn.Position);
+                    this.pawn.Reserve(this.pawn.Position, this.job);// De ReserveDestinationFor(this.pawn, this.pawn.Position);
                     this.pawn.pather.StopDead();
                     JobDriver curDriver = this.pawn.jobs.curDriver;
                     curDriver.layingDown = LayingDownState.LayingSurface;
@@ -36,7 +36,7 @@ namespace CultOfCthulhu
                 },
                 tickAction = delegate
                 {
-                    if (this.CurJob.expiryInterval == -1 && this.CurJob.def == JobDefOf.WaitCombat && !this.pawn.Drafted)
+                    if (this.job.expiryInterval == -1 && this.job.def == JobDefOf.WaitCombat && !this.pawn.Drafted)
                     {
                         Log.Error(this.pawn + " in eternal WaitCombat without being drafted.");
                         this.ReadyForNextToil();

@@ -65,7 +65,7 @@ namespace CultOfCthulhu
                 JobFailReason.Is(WorkGiver_FixBrokenDownBuilding.NotInHomeAreaTrans);
                 return false;
             }
-            if (pawn.Map.reservationManager.IsReserved(t, pawn.Faction)) return false;
+            if (!pawn.CanReserve(t)) return false;// pawn.Map.reservationManager.IsReserved(t, pawn.Faction)) return false;
             return true;
         }
 

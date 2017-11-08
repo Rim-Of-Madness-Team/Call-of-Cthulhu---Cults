@@ -54,7 +54,7 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
 
             Map map = parms.target as Map;
@@ -113,7 +113,7 @@ namespace CultOfCthulhu
 
                 container.AddRange(ThingsToAdd(ThingDefOf.Silver, Rand.Range(40, 60))); //Orig 4000-6000
                 container.AddRange(ThingsToAdd(ThingDefOf.Component, Rand.Range(-1, 10))); //Original -1~10
-                container.AddRange(ThingsToAdd(ThingDefOf.MortarShell, Rand.Range(5, 10))); //Original 30-60
+                container.AddRange(ThingsToAdd(ThingDefOf.Shell_HighExplosive, Rand.Range(5, 10))); //Original 30-60
                 container.AddRange(ThingsToAdd(ThingDefOf.Medicine, Rand.Range(5, 15))); //Original 30-50
                 AddThingsToContainerByTag(container, "BodyPartOrImplant", Rand.Range(-8, 2)); //Original 0~5
                 AddThingsToContainerByTag(container, "Drugs", Rand.Range(-2, 2)); //Original 0~5
@@ -280,7 +280,7 @@ namespace CultOfCthulhu
 
             //PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref text, ref label, pawn);
 
-            Find.LetterStack.ReceiveLetter(label, text, LetterDefOf.Good, new TargetInfo(intVec, map), null);
+            Find.LetterStack.ReceiveLetter(label, text, LetterDefOf.PositiveEvent, new TargetInfo(intVec, map), null);
             ActiveDropPodInfo adpInfo = new ActiveDropPodInfo();
             foreach (Thing thing in container)
             {

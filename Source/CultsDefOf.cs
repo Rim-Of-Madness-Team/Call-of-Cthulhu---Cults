@@ -120,8 +120,12 @@ namespace CultOfCthulhu
         public static HediffDef Cults_CthulhidEyestalk;
 
         // =============== THOUGHTS ===============
-        
-        // 1.2.2 New
+
+        // 1.18.0.0
+        public static ThoughtDef Cults_ObservedNightmareMonolith;
+        public static ThoughtDef Cults_ObservedNightmareMonolithCultist;
+
+        // 1.2.2
         public static ThoughtDef Cults_OtherPrisonerWasSacrificed;
 
         public static ThoughtDef Cults_MadeInvestigation;

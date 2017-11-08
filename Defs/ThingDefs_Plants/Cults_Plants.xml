@@ -80,7 +80,7 @@
   
   <ThingDef ParentName="CultsTreeBase">
     <defName>Cults_PlantTreeNightmare</defName>
-    <thingClass>CultOfCthulhu.Building_TreeOfMadness</thingClass>
+    <thingClass>CultOfCthulhu.Plant_TreeOfMadness</thingClass>
     <label>eerie tree</label>
     <altitudeLayer>MoteOverhead</altitudeLayer>
 	<passability>Impassable</passability>

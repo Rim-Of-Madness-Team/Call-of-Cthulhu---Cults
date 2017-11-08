@@ -34,6 +34,11 @@ namespace CultOfCthulhu
             base.ExposeData();
         }
 
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
+
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.EndOnDespawnedOrNull(Executioner, JobCondition.Incompletable);
@@ -105,18 +110,18 @@ namespace CultOfCthulhu
                 if (atTypeWriter) altarToil.PlaySustainerOrSound(SoundDef.Named("Estate_SoundManualTypewriter"));
                 else altarToil.PlaySustainerOrSound(SoundDef.Named("PencilWriting"));
                 altarToil.WithProgressBarToilDelay(TargetIndex.A);
-                altarToil.defaultDuration = this.CurJob.def.joyDuration;
+                altarToil.defaultDuration = this.job.def.joyDuration;
                 altarToil.AddPreTickAction(() =>
                 {
                     if (Typewriter != null)
                     {
-                        this.pawn.Drawer.rotator.FaceCell(Typewriter.Position);
+                        this.pawn.rotationTracker.FaceCell(Typewriter.Position);
                         this.pawn.GainComfortFromCellIfPossible();
                     }
                 });
                 altarToil.AddPreInitAction(() =>
                 {
-                    Messages.Message(this.pawn.LabelCap + "WritingStrangeSymbols".Translate(), MessageSound.Standard);
+                    Messages.Message(this.pawn.LabelCap + "WritingStrangeSymbols".Translate(), MessageTypeDefOf.NeutralEvent);
                 });
                 yield return altarToil;
 

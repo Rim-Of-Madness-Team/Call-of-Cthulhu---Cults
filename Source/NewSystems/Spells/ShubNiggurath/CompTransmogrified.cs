@@ -17,7 +17,7 @@ namespace CultOfCthulhu
             {
                 if (value == true && isTransmogrified == false)
                 {
-                    Find.LetterStack.ReceiveLetter("Cults_TransmogrifiedLetter".Translate(), "Cults_TransmogrifiedLetterDesc".Translate(this.parent.LabelShort), LetterDefOf.Good, new RimWorld.Planet.GlobalTargetInfo(this.parent), null);
+                    Find.LetterStack.ReceiveLetter("Cults_TransmogrifiedLetter".Translate(), "Cults_TransmogrifiedLetterDesc".Translate(this.parent.LabelShort), LetterDefOf.PositiveEvent, new RimWorld.Planet.GlobalTargetInfo(this.parent), null);
                 }
                 isTransmogrified = value;
             }

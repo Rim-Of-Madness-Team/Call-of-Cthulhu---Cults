@@ -19,7 +19,7 @@ namespace CultOfCthulhu
                     if (sacrificeTracker.unspeakableOathPawns == null) sacrificeTracker.unspeakableOathPawns = new List<Pawn>();
                     if (sacrificeTracker.unspeakableOathPawns.Contains(TempExecutioner(map)))
                     {
-                        Messages.Message("Executioner has already taken an unspeakable oath.", MessageSound.RejectInput);
+                        Messages.Message("Executioner has already taken an unspeakable oath.", MessageTypeDefOf.RejectInput);
                         return false;
                     }
                     else
@@ -29,18 +29,18 @@ namespace CultOfCthulhu
                 }
                 else
                 {
-                    Messages.Message("Missing map component.", MessageSound.RejectInput);
+                    Messages.Message("Missing map component.", MessageTypeDefOf.RejectInput);
                     return false;
                 }
             }
             else
             {
-                Messages.Message("Executioner is unavailable.", MessageSound.RejectInput);
+                Messages.Message("Executioner is unavailable.", MessageTypeDefOf.RejectInput);
                 return false;
             }
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = (Map)parms.target;
             MapComponent_SacrificeTracker sacrificeTracker = map.GetComponent<MapComponent_SacrificeTracker>();
@@ -48,7 +48,7 @@ namespace CultOfCthulhu
             if (sacrificeTracker.unspeakableOathPawns == null) sacrificeTracker.unspeakableOathPawns = new List<Pawn>();
             if (!Cthulhu.Utility.IsActorAvailable(executioner(map)))
             {
-                Messages.Message("Executioner is unavailable.", MessageSound.RejectInput);
+                Messages.Message("Executioner is unavailable.", MessageTypeDefOf.RejectInput);
                 return false;
             }
             executioner(map).story.traits.GainTrait(new Trait(TraitDef.Named("Cults_OathtakerHastur")));

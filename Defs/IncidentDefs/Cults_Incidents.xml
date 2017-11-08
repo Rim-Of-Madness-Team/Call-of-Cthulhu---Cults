@@ -4,13 +4,15 @@
 	 <IncidentDef>
 	  <defName>CultIncident_StarsAreWrong</defName>
 	  <label>stars are wrong</label>
-	  <targetType>MapPlayerHome</targetType>
+		<targetTypes>
+		  <li>World</li>
+		</targetTypes>
 	  <category>Misc</category>
-	  <WorkerClass>CultOfCthulhu.IncidentWorker_MakeCultGameCondition</WorkerClass>
-	  <GameCondition>CultGameCondition_StarsAreWrong</GameCondition>
+	  <workerClass>CultOfCthulhu.IncidentWorker_MakeCultgameCondition</workerClass>
+	  <gameCondition>CultgameCondition_StarsAreWrong</gameCondition>
 	  <letterLabel>The Stars Are Wrong</letterLabel>
 	  <letterText>Unbound to the proper order of the cosmos, the stars themselves seem to sting our eyes with a hateful scorn.</letterText>
-	  <letterDef>BadNonUrgent</letterDef>
+	  <letterDef>NegativeEvent</letterDef>
 	  <baseChance>3</baseChance>
 	  <minRefireDays>30</minRefireDays>
 	  <durationDays>
@@ -18,25 +20,27 @@
 	    <max>3.0</max>
 	  </durationDays>
 	 </IncidentDef>
-    <GameConditionDef>
-      <defName>CultGameCondition_StarsAreWrong</defName>
-      <conditionClass>CultOfCthulhu.GameCondition_StarsAreWrong</conditionClass>
+    <gameConditionDef>
+      <defName>CultgameCondition_StarsAreWrong</defName>
+      <conditionClass>CultOfCthulhu.gameCondition_StarsAreWrong</conditionClass>
       <label>stars are wrong</label>
       <description>Unbound to the proper order of the cosmos, the stars themselves seem to sting our eyes with a hateful scorn. Sacrifices are discouraged during this period.</description>
       <endMessage>The stars as we know them have returned</endMessage>
       <canBePermanent>true</canBePermanent>
-    </GameConditionDef>
+    </gameConditionDef>
 
 	 <IncidentDef>
 	  <defName>CultIncident_StarsAreRight</defName>
 	  <label>stars are right</label>
-	  <targetType>MapPlayerHome</targetType>
+    <targetTypes>
+      <li>World</li>
+    </targetTypes>
 	  <category>Misc</category>
-	  <WorkerClass>CultOfCthulhu.IncidentWorker_MakeCultGameCondition</WorkerClass>
-	  <GameCondition>CultGameCondition_StarsAreRight</GameCondition>
+	  <workerClass>CultOfCthulhu.IncidentWorker_MakeCultgameCondition</workerClass>
+	  <gameCondition>CultgameCondition_StarsAreRight</gameCondition>
 	  <letterLabel>The Stars Are Right</letterLabel>
 	  <letterText>The planets of the system have aligned. Otherworldly bodies seem to call to your colonists.</letterText>
-	  <letterDef>Good</letterDef>
+	  <letterDef>PositiveEvent</letterDef>
 	  <baseChance>3</baseChance>
 	  <minRefireDays>30</minRefireDays>
 	  <durationDays>
@@ -44,14 +48,14 @@
 	    <max>3.0</max>
 	  </durationDays>
 	 </IncidentDef>
-    <GameConditionDef>
-      <defName>CultGameCondition_StarsAreRight</defName>
-      <conditionClass>CultOfCthulhu.GameCondition_StarsAreRight</conditionClass>
+    <gameConditionDef>
+      <defName>CultgameCondition_StarsAreRight</defName>
+      <conditionClass>CultOfCthulhu.gameCondition_StarsAreRight</conditionClass>
       <label>stars are right</label>
       <description>The planets of the system have auspiciously aligned. Plants and animals will flourish and cult sacrifices will receive bonuses.</description>
       <endMessage>Celestial bodies are no longer in alignment.</endMessage>
       <canBePermanent>true</canBePermanent>
-    </GameConditionDef>
+    </gameConditionDef>
 
 	<!-- Cult Seed Incidents -->
     <IncidentDef>
@@ -59,7 +63,10 @@
 		<description>What is this thing?</description>
 		<category>Misc</category>
 		<defName>CultSeedIncident_TreeOfNightmares</defName>
-		<workerClass>CultOfCthulhu.IncidentWorker_CultSeed_NightmareTree</workerClass>		<targetType>MapPlayerHome</targetType>
+		<workerClass>CultOfCthulhu.IncidentWorker_CultSeed_NightmareTree</workerClass>
+		<targetTypes>
+          <li>MapPlayerHome</li>
+        </targetTypes>
 		<letterLabel>Tree of Nightmares</letterLabel>
 		<letterText>It gazes through the souls of all that pass it.</letterText>
 	</IncidentDef> 
@@ -69,7 +76,10 @@
 		<description>What is this thing?</description>
 		<category>Misc</category>
 		<defName>CultSeedIncident_NightmareMonolith</defName>
-		<workerClass>CultOfCthulhu.IncidentWorker_CultSeed_NightmareMonolith</workerClass>		<targetType>MapPlayerHome</targetType>
+		<workerClass>CultOfCthulhu.IncidentWorker_CultSeed_NightmareMonolith</workerClass>
+        <targetTypes>
+          <li>MapPlayerHome</li>
+        </targetTypes>
 		<letterLabel>Monolith</letterLabel>
 		<letterText>It gazes through the souls of all that pass it.</letterText>
 	</IncidentDef> 

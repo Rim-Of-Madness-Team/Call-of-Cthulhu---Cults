@@ -21,7 +21,7 @@
     <stages>
       <li>
         <label>tense-hidden</label>
-		<everVisible>false</everVisible>
+		<becomeVisible>false</becomeVisible>
       </li>
       <li>
         <label>initial</label>

@@ -25,11 +25,15 @@ namespace CultOfCthulhu
 {
     public class JobDriver_HoldWorship : JobDriver
     {
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
         private const TargetIndex AltarIndex = TargetIndex.A;
 
         private Thing WorshipCaller = null;
 
-        public bool Forced => CurJob.playerForced;
+        public bool Forced => job.playerForced;
 
         public int TicksLeftInService = Int32.MaxValue;
 
@@ -37,7 +41,7 @@ namespace CultOfCthulhu
         {
             get
             {
-                return (Building_SacrificialAltar)base.CurJob.GetTarget(TargetIndex.A).Thing;
+                return (Building_SacrificialAltar)base.job.GetTarget(TargetIndex.A).Thing;
             }
         }
 
@@ -85,7 +89,7 @@ namespace CultOfCthulhu
                     if (worshipCaller != null)
                     {
                         WorshipCaller = worshipCaller;
-                        this.CurJob.SetTarget(TargetIndex.B, worshipCaller);
+                        this.job.SetTarget(TargetIndex.B, worshipCaller);
                     }
                     else
                         base.JumpToToil(goToAltar);

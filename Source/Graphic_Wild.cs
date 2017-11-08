@@ -20,8 +20,8 @@ namespace CultOfCthulhu
                 return this.subGraphics[Rand.Range(0, this.subGraphics.Length)].MatSingle;
             }
         }
-
-        public override void DrawWorker(Vector3 loc, Rot4 rot, ThingDef thingDef, Thing thing)
+        
+        public override void DrawWorker(Vector3 loc, Rot4 rot, ThingDef thingDef, Thing thing, float extraRotation)
         {
             if (thingDef == null)
             {

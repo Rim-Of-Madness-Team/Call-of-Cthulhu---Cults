@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<ThingDefs>
+<Defs>
 
   <ThingDef Name="BaseMeleeWeapon" Abstract="True">
     <category>Item</category>
@@ -85,25 +85,43 @@
       <texPath>Weapon/CultKris/CultKris</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
     <costStuffCount>40</costStuffCount>
     <statBases>
       <WorkToMake>6000</WorkToMake>
-      <MeleeWeapon_DamageAmount>8</MeleeWeapon_DamageAmount>
-      <MeleeWeapon_Cooldown>1.66</MeleeWeapon_Cooldown>
+	  <Mass>0.5</Mass>
+      <Weapon_Bulk>0.2</Weapon_Bulk>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
-    <verbs>
+    <tools>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <meleeDamageDef>Cut</meleeDamageDef>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2.5</cooldownTime>
       </li>
-    </verbs>
+      <li>
+        <label>blade</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>10.7</power>
+        <cooldownTime>1.6</cooldownTime>
+      </li>
+    </tools>	
   </ThingDef>
 
 
-</ThingDefs>
+</Defs>

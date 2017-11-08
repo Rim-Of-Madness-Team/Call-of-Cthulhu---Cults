@@ -109,7 +109,7 @@ namespace CultOfCthulhu
                     entity.discovered = true;
                     Cthulhu.Utility.DebugReport("Change research should be called.");
                     Cthulhu.Utility.ChangeResearchProgress(deityResearch, 0f, true);
-                    Messages.Message(entity.Label + " was discovered amongst the strange symbols.", MessageSound.Benefit);
+                    Messages.Message(entity.Label + " was discovered amongst the strange symbols.", MessageTypeDefOf.PositiveEvent);
                     break;
                 }
             }

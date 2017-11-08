@@ -52,10 +52,15 @@ namespace CultOfCthulhu
             if (ticksToSpawnCultSeed > 0) ticksToSpawnCultSeed -= 1;
             else
             {
-                ticksToSpawnCultSeed = OneDay + Rand.Range(-20000, +20000);
-                IncidentDef seed = seedIncidents.RandomElement<IncidentDef>();
-                IncidentParms parms = StorytellerUtility.DefaultParmsNow(Find.Storyteller.def, seed.category, map);
-                seed.Worker.TryExecute(parms);
+                if (GenLocalDate.HourInteger(map) > 21 || GenLocalDate.HourInteger(map) < 6)
+                {
+                    ticksToSpawnCultSeed = OneDay + Rand.Range(-20000, +20000);
+                    IncidentDef seed = seedIncidents.RandomElement<IncidentDef>();
+                    IncidentParms parms = StorytellerUtility.DefaultParmsNow(Find.Storyteller.def, seed.category, map);
+                    seed.Worker.TryExecute(parms);
+                    return;
+                }
+                ticksToSpawnCultSeed += GenDate.TicksPerHour;
             }
         }
 

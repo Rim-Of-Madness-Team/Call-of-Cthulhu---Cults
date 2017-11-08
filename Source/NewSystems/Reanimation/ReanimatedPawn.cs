@@ -63,7 +63,7 @@ namespace CultOfCthulhu
                     if (UnityEngine.Random.Range(0f, 100f) < 20f + num)
                     {
                         dinfo.SetAmount(999);
-                        dinfo.SetForcedHitPart(this.health.hediffSet.GetBrain());
+                        dinfo.SetHitPart(this.health.hediffSet.GetBrain());
                         dinfo.Def.Worker.Apply(dinfo, this);
                         return;
                     }
@@ -163,7 +163,7 @@ namespace CultOfCthulhu
                 if (base.Downed || this.health.Downed || this.health.InPainShock)
                 {
                     DamageInfo damageInfo = new DamageInfo(DamageDefOf.Blunt, 9999, -1f, this, null, null);
-                    damageInfo.SetForcedHitPart(this.health.hediffSet.GetBrain());
+                    damageInfo.SetHitPart(this.health.hediffSet.GetBrain());
                     //damageInfo.SetPart(new BodyPartDamageInfo(this.health.hediffSet.GetBrain(), false, HediffDefOf.Cut));
                     base.TakeDamage(damageInfo);
                 }

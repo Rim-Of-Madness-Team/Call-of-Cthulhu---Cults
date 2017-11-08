@@ -235,7 +235,7 @@ namespace CultOfCthulhu
             }
             if (!target.IsValid)
             {
-                Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageSound.RejectInput);
+                Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageTypeDefOf.RejectInput);
                 return false;
             }
             int num = Find.WorldGrid.TraversalDistanceBetween(this.parent.Map.Tile, target.Tile);
@@ -244,7 +244,7 @@ namespace CultOfCthulhu
                 //Messages.Message("MessageTransportPodsDestinationIsTooFar".Translate(new object[]
                 //{
                 //    CompLaunchable.FuelNeededToLaunchAtDist((float)num).ToString("0.#")
-                //}), MessageSound.RejectInput);
+                //}), MessageTypeDefOf.RejectInput);
                 return false;
             }
             MapParent mapParent = target.WorldObject as MapParent;
@@ -314,7 +314,7 @@ namespace CultOfCthulhu
             }
             else // if (Find.World.Impassable(target.Tile))
             {
-                Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageSound.RejectInput);
+                Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageTypeDefOf.RejectInput);
                 return false;
             }
             //this.TryLaunch(target, PawnsArriveMode.Undecided, false);
@@ -378,7 +378,7 @@ namespace CultOfCthulhu
         {
             if (this.Transporter.CancelLoad())
             {
-                Messages.Message("MessageTransportersLoadCanceled_FuelingPortGiverDeSpawned".Translate(), this.parent, MessageSound.Negative);
+                Messages.Message("MessageTransportersLoadCanceled_FuelingPortGiverDeSpawned".Translate(), this.parent, MessageTypeDefOf.NegativeEvent);
             }
         }
     }

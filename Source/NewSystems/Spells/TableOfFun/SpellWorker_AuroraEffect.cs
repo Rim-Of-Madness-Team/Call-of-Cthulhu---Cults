@@ -33,7 +33,7 @@ namespace CultOfCthulhu
             return !map.GameConditionManager.ConditionIsActive(CultsDefOf.Cults_Aurora);
         }
         
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             this.DoConditionAndLetter(Mathf.RoundToInt(this.def.durationDays.RandomInRange * 60000f), parms.target);
             SoundDefOf.PsychicPulseGlobal.PlayOneShotOnCamera();
@@ -65,7 +65,7 @@ namespace CultOfCthulhu
             map.GameConditionManager.RegisterCondition(GameCondition);
             string textDesc = "LetterIncidentAurora".Translate();
             //Cthulhu.Utility.DebugReport("Sending letter");
-            Find.LetterStack.ReceiveLetter(textLabel, textDesc, LetterDefOf.BadNonUrgent, null);
+            Find.LetterStack.ReceiveLetter(textLabel, textDesc, LetterDefOf.PositiveEvent, null);
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = IntVec3.Invalid;
         }
     }

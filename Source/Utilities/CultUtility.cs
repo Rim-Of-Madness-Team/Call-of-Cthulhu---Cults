@@ -35,6 +35,14 @@ namespace CultOfCthulhu
     }
     public class CultUtility
     {
+        // RimWorld.IncidentWorker_ShipChunkDrop
+        public static bool TryFindDropCell(IntVec3 nearLoc, Map map, int maxDist, out IntVec3 pos, ThingDef defToCheck = null)
+        {
+            if (defToCheck == null) defToCheck = ThingDefOf.ShipChunkIncoming;
+            return CellFinderLoose.TryFindSkyfallerCell(defToCheck, map, out pos, 10, nearLoc, maxDist, true, false, false, false, null);
+        }
+
+
         public static List<TraitDef> immoralistTraits = new List<TraitDef>()
         {
             TraitDefOf.Psychopath,
@@ -171,7 +179,7 @@ namespace CultOfCthulhu
                 for (int i = 0; i < 999; i++)
                 {
                     p = null;
-                    request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, null, null, null, null);
+                    request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false,false, false, null, null, null, null);
                     p = PawnGenerator.GeneratePawn(request);
 
                     if (p.skills.GetSkill(SkillDefOf.Social).TotallyDisabled) continue;
@@ -185,7 +193,7 @@ namespace CultOfCthulhu
             //If it's a dark emissary of Nyarlathotep, we need to add clothing.
             else if (type == CultistType.DarkEmmisary)
             {
-                request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, null, null, null, null);
+                request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, false, false, null, null, null, null);
                 p = PawnGenerator.GeneratePawn(request);
                 Thing tHood = ThingMaker.MakeThing(ThingDef.Named("Apparel_NyarlathotepHood"), ThingDef.Named("DevilstrandCloth"));
                 Thing tRobe = ThingMaker.MakeThing(ThingDef.Named("Apparel_CultistRobes"), ThingDef.Named("DevilstrandCloth"));
@@ -196,7 +204,7 @@ namespace CultOfCthulhu
             }
             else
             {
-                request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, null, null, null, null);
+                request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, false, false, null, null, null, null);
                 p = PawnGenerator.GeneratePawn(request);
             }
             //We need psychopathic cannibals
@@ -756,7 +764,7 @@ namespace CultOfCthulhu
 
             Messages.Message("WorshipFinished".Translate(new object[] {
                 factionBase.Label
-        }), TargetInfo.Invalid, MessageSound.Benefit);
+        }), TargetInfo.Invalid, MessageTypeDefOf.PositiveEvent);
         }
         public static void OfferingComplete(Pawn offerer, Building_SacrificialAltar altar, CosmicEntity deity)
         {
@@ -780,7 +788,7 @@ namespace CultOfCthulhu
 
             Messages.Message("WorshipFinished".Translate(new object[] {
                 factionBase.Label
-        }), TargetInfo.Invalid, MessageSound.Benefit);
+        }), TargetInfo.Invalid, MessageTypeDefOf.PositiveEvent);
         }
         #endregion GetResults
 
@@ -975,7 +983,7 @@ namespace CultOfCthulhu
         {
             if (Rand.Range(0, 100) < 20)
             {
-                Messages.Message("Tip: Wear cultist apparel for a worship bonus.", MessageSound.Silent);
+                Messages.Message("Tip: Wear cultist apparel for a worship bonus.", MessageTypeDefOf.SilentInput);
             }
         }
 
@@ -998,7 +1006,7 @@ namespace CultOfCthulhu
         {
             //It's a day to remember
             TaleDef taleToAdd = TaleDef.Named("ObservedNightmareMonolith");
-            if (investigatee is Building_TreeOfMadness) taleToAdd = TaleDef.Named("ObservedNightmareTree");
+            if (investigatee is Plant_TreeOfMadness) taleToAdd = TaleDef.Named("ObservedNightmareTree");
             if ((pawn.IsColonist || pawn.HostFaction == Faction.OfPlayer) && taleToAdd != null)
             {
                 TaleRecorder.RecordTale(taleToAdd, new object[]
@@ -1400,7 +1408,7 @@ namespace CultOfCthulhu
         public static void AbortCongregation(Building_SacrificialAltar altar, String reason)
         {
             if (altar != null) altar.ChangeState(Building_SacrificialAltar.State.notinuse);
-            Messages.Message(reason + " Aborting congregation.", MessageSound.Negative);
+            Messages.Message(reason + " Aborting congregation.", MessageTypeDefOf.NegativeEvent);
         }
         #endregion Worship
         #endregion AltarJobs

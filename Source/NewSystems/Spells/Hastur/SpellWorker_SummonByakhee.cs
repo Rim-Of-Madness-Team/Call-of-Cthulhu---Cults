@@ -24,12 +24,12 @@ namespace CultOfCthulhu
         }
 
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             IntVec3 intVec;
             //Find a drop spot
-            if (!ShipChunkDropCellFinder.TryFindShipChunkDropCell(map.Center, map, 70, out intVec))
+            if (!CultUtility.TryFindDropCell(map.Center, map, 70, out intVec))
             {
                 return false;
             }

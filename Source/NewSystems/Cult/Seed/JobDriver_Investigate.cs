@@ -23,8 +23,14 @@ using RimWorld.Planet;   // RimWorld specific functions for world creation
 
 namespace CultOfCthulhu
 {
+
     public class JobDriver_Investigate : JobDriver
     {
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
+
         private TargetIndex InvestigatorIndex = TargetIndex.A;
         private TargetIndex InvestigateeIndex = TargetIndex.B;
 
@@ -32,7 +38,7 @@ namespace CultOfCthulhu
         {
             get
             {
-                return base.CurJob.GetTarget(TargetIndex.B).Thing;
+                return base.job.GetTarget(TargetIndex.B).Thing;
             }
         }
 
@@ -40,7 +46,7 @@ namespace CultOfCthulhu
         {
             get
             {
-                return (Pawn)base.CurJob.GetTarget(TargetIndex.A).Thing;
+                return (Pawn)base.job.GetTarget(TargetIndex.A).Thing;
             }
         }
 
@@ -49,14 +55,12 @@ namespace CultOfCthulhu
             base.ExposeData();
         }
 
-        
-
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.EndOnDespawnedOrNull(InvestigatorIndex, JobCondition.Incompletable);
             this.EndOnDespawnedOrNull(InvestigateeIndex, JobCondition.Incompletable);
             //this.EndOnDespawnedOrNull(Build, JobCondition.Incompletable);
-            yield return Toils_Reserve.Reserve(InvestigateeIndex, this.CurJob.def.joyMaxParticipants);
+            yield return Toils_Reserve.Reserve(InvestigateeIndex, this.job.def.joyMaxParticipants);
             Toil gotoInvestigatee;
             gotoInvestigatee = Toils_Goto.GotoThing(InvestigateeIndex, PathEndMode.ClosestTouch);
             yield return gotoInvestigatee;
@@ -65,11 +69,11 @@ namespace CultOfCthulhu
 
             Toil watchToil = new Toil();
             watchToil.defaultCompleteMode = ToilCompleteMode.Delay;
-            watchToil.defaultDuration = this.CurJob.def.joyDuration;
+            watchToil.defaultDuration = this.job.def.joyDuration;
             watchToil.WithProgressBarToilDelay(InvestigatorIndex);
             watchToil.AddPreTickAction(() =>
             {
-                this.pawn.Drawer.rotator.FaceCell(this.TargetB.Cell);
+                this.pawn.rotationTracker.FaceCell(this.TargetB.Cell);
                 this.pawn.GainComfortFromCellIfPossible();
             });
             watchToil.AddFinishAction(() =>
@@ -88,7 +92,7 @@ namespace CultOfCthulhu
                 }
                 //if (this.TargetB.HasThing)
                 //{
-                //    Find.Reservations.Release(this.CurJob.targetC.Thing, pawn);
+                //    Find.Reservations.Release(this.job.targetC.Thing, pawn);
                 //}
             });
         }

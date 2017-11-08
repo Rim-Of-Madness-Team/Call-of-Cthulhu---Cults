@@ -31,14 +31,14 @@ namespace CultOfCthulhu
         {
             if (!Cthulhu.Utility.IsCosmicHorrorsLoaded())
             {
-                Messages.Message("Note: Cosmic Horrors mod isn't loaded. Megaspiders will be summoned instead.", MessageSound.Standard);
+                Messages.Message("Note: Cosmic Horrors mod isn't loaded. Megaspiders will be summoned instead.", MessageTypeDefOf.NeutralEvent);
             }
 
             //Cthulhu.Utility.DebugReport("CanFire: " + this.def.defName);
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             //Spawn a Dark Young
@@ -50,7 +50,7 @@ namespace CultOfCthulhu
             {
                 Cthulhu.Utility.SpawnPawnsOfCountAt(PawnKindDefOf.Megaspider, altar(map).Position, map, Rand.Range(1, 2), Find.FactionManager.FirstFactionOfDef(FactionDefOf.SpacerHostile), true);
             }
-            Messages.Message("A star vampire is unleashed.", MessageSound.SeriousAlert);
+            Messages.Message("A star vampire is unleashed.", MessageTypeDefOf.ThreatBig);
 
             Cthulhu.Utility.ApplyTaleDef("Cults_SpellStarVampireVisit", map);
 

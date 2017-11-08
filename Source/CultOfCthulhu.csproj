@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="NewSystems\AntiCult\MapComponent_LocalCultTracker_Inquisition.cs" />
     <Compile Include="NewSystems\Cult\Seed\MapComponent_LocalCultTracker_Seed.cs" />
+    <Compile Include="NewSystems\Cult\Seed\WorkGiver_Investigate.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_AbyssalRift.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_CallToDarkness.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_ElixerOfPower.cs" />
@@ -73,7 +74,7 @@
     <Compile Include="NewSystems\Spells\Dagon\Building_SignOfDagon.cs" />
     <Compile Include="NewSystems\Fertility\Building_TotemFertility.cs" />
     <Compile Include="NewSystems\Spells\Dagon\Building_TreasureChest.cs" />
-    <Compile Include="NewSystems\Cult\Seed\Building_TreeOfMadness.cs" />
+    <Compile Include="NewSystems\Cult\Seed\Plant_TreeOfMadness.cs" />
     <Compile Include="NewSystems\Psionics\CompPsionicUser.cs" />
     <Compile Include="NewSystems\Spells\ShubNiggurath\CompTransmogrified.cs" />
     <Compile Include="NewSystems\Cult\Cult.cs" />

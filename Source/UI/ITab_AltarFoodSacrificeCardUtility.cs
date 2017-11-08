@@ -221,13 +221,13 @@ namespace CultOfCthulhu
                     {
                         Job J = new Job(CorruptionDefOfs.AttendSermon, altar.preacher, altar, chair);
                         p.QueueJob(J);
-                        p.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                        p.CurJob.EndCurrentJob(JobCondition.InterruptForced);
                     }
                     else
                     {
                         Job J = new Job(CorruptionDefOfs.AttendSermon, altar.preacher, altar, result);
                         p.QueueJob(J);
-                        p.jobs.EndCurrentJob(JobCondition.InterruptForced);
+                        p.CurJob.EndCurrentJob(JobCondition.InterruptForced);
                     }
                 }
             }

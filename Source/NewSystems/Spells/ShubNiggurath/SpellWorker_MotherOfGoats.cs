@@ -38,7 +38,7 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
 
@@ -51,7 +51,7 @@ namespace CultOfCthulhu
             //Spawn some Black Ibex as player pets
             Cthulhu.Utility.SpawnPawnsOfCountAt(CultsDefOf.Cults_BlackGoat, intVec, map, Rand.Range(1, 2), Faction.OfPlayer);
             
-            Messages.Message("A herd of black ibex have appeared on the overworld map", MessageSound.Benefit);
+            Messages.Message("A herd of black ibex have appeared on the overworld map", MessageTypeDefOf.PositiveEvent);
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
 
             Cthulhu.Utility.ApplyTaleDef("Cults_SpellMotherOfGoats", map);

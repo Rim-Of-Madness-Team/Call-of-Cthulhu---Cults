@@ -27,11 +27,11 @@ namespace CultOfCthulhu
             //Cthulhu.Utility.DebugReport("CanFire: " + this.def.defName);
             if (PetsToTransmogrify(map).Count<Pawn>() > 0)
                 return true;
-            Messages.Message("No pets to transmogrify", MessageSound.RejectInput);
+            Messages.Message("No pets to transmogrify", MessageTypeDefOf.RejectInput);
             return false;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
             Transmogrify(map);
@@ -83,7 +83,7 @@ namespace CultOfCthulhu
             Messages.Message("Cults_TransmogrifyMessage".Translate(new object[]
                 {
                     pawn.LabelShort
-                }), MessageSound.Benefit);
+                }), MessageTypeDefOf.PositiveEvent);
         }
 
     }

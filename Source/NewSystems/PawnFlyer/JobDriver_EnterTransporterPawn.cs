@@ -16,13 +16,18 @@ namespace CultOfCthulhu
         {
             get
             {
-                Thing thing = base.CurJob.GetTarget(this.TransporterInd).Thing;
+                Thing thing = base.job.GetTarget(this.TransporterInd).Thing;
                 if (thing == null)
                 {
                     return null;
                 }
                 return thing.TryGetComp<CompTransporterPawn>();
             }
+        }
+
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
         }
 
         [DebuggerHidden]

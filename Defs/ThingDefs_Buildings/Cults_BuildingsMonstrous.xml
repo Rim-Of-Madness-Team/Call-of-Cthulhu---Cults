@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Defs>
 
   <ThingDef ParentName="CultBenchBase">
-    <DefName>Cult_NightmareSacrificeAltar</DefName>
+    <defName>Cult_NightmareSacrificeAltar</defName>
     <label>corrupted altar</label>
-    <ThingClass>CultOfCthulhu.Building_SacrificialAltar</ThingClass>
-    <Description>A corpse has sprung up as a tree that corrupts your altar. It will need repairs and a lot of pruning.</Description>
+    <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
+    <description>A corpse has sprung up as a tree that corrupts your altar. It will need repairs and a lot of pruning.</description>
     <tickerType>Rare</tickerType>
     <graphicData>
       <texPath>Building/NightmareAltar/NightmareAltar</texPath>
@@ -28,7 +28,7 @@
       <li>Stony</li>
     </stuffCategories>
     <costStuffCount>125</costStuffCount>
-    <AltitudeLayer>Blueprint</AltitudeLayer>
+    <altitudeLayer>Blueprint</altitudeLayer>
     <fillPercent>0.5</fillPercent>
     <useHitPoints>True</useHitPoints>
     <statBases>
@@ -39,8 +39,8 @@
       <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
       <Mass>120</Mass>
     </statBases>
-    <Size>(3,1)</Size>
-    <Passability>PassThroughOnly</Passability>
+    <size>(3,1)</size>
+    <passability>PassThroughOnly</passability>
     <pathCost>70</pathCost>
     <hasInteractionCell>true</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
@@ -155,4 +155,4 @@
   </ThingDef>
 
 
- </ThingDefs>
+ </Defs>

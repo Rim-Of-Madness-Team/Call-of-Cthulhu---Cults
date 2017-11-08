@@ -107,7 +107,7 @@ namespace CultOfCthulhu
         {
             Map map = founder.Map;
             doesCultExist = true;
-            Messages.Message(founder.LabelShort + " has founded a cult.", MessageSound.Benefit);
+            Messages.Message(founder.LabelShort + " has founded a cult.", MessageTypeDefOf.PositiveEvent);
             Find.WindowStack.Add(new Dialog_NameCult(map));
 
             cultFounder = founder;
@@ -129,7 +129,7 @@ namespace CultOfCthulhu
         public void DismantleCult()
         {
             doesCultExist = false;
-            Messages.Message(cultName + " has been dismantled.", MessageSound.Negative);
+            Messages.Message(cultName + " has been dismantled.", MessageTypeDefOf.NegativeEvent);
             cultName = "Unnamed Cult";
         }
 
@@ -157,7 +157,7 @@ namespace CultOfCthulhu
             //If the cult already exists, show a message to initiate the pawn into the cult.
             if (doesCultExist)
             {
-                Messages.Message(cultMember.LabelShort + " has been initiated into the cult, " + cultName, MessageSound.Benefit);
+                Messages.Message(cultMember.LabelShort + " has been initiated into the cult, " + cultName, MessageTypeDefOf.PositiveEvent);
                 return;
             }
             //If it doesn't already exist, then let's make it so!
@@ -234,7 +234,7 @@ namespace CultOfCthulhu
             //If the cult already exists, show a message to initiate the pawn into the inquisitor faction.
             if (PlayerCult != null && PlayerCult.active)
             {
-                Messages.Message(antiCultist.LabelShort + " has begun plotting against the local cult, " + PlayerCult.name, MessageSound.Benefit);
+                Messages.Message(antiCultist.LabelShort + " has begun plotting against the local cult, " + PlayerCult.name, MessageTypeDefOf.PositiveEvent);
             }
         }
         #endregion stuff

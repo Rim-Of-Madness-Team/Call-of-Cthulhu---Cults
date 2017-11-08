@@ -40,7 +40,7 @@ namespace CultOfCthulhu
             return true;
         }
 
-        public override bool TryExecute(IncidentParms parms)
+        protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
 
@@ -53,7 +53,7 @@ namespace CultOfCthulhu
             //Replace the innerSacrifice with the new pawn just in-case
             //altar.innerSacrifice = thing;
             map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = intVec;
-            Messages.Message("The innerSacrifice reanimates and attacks.", MessageSound.SeriousAlert);
+            Messages.Message("The innerSacrifice reanimates and attacks.", MessageTypeDefOf.ThreatBig);
             Cthulhu.Utility.ApplyTaleDef("Cults_SpellReanimator", pawn);
             return true;
         }
