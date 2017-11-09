@@ -125,7 +125,7 @@ namespace CultOfCthulhu
             chantingTime.defaultDuration = CultUtility.ritualDuration;
             chantingTime.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
             chantingTime.PlaySustainerOrSound(CultsDefOf.RitualChanting);
-            Texture2D deitySymbol = ((CosmicEntityDef)DropAltar.currentSacrificeDeity.def).Symbol;
+            Texture2D deitySymbol = ((CosmicEntityDef)DropAltar.SacrificeData.Entity.def).Symbol;
             chantingTime.initAction = delegate
             {
                 if (deitySymbol != null)
@@ -156,7 +156,7 @@ namespace CultOfCthulhu
                         this.pawn,
                         this.Takee
                     });
-                    CultUtility.SacrificeExecutionComplete(this.Takee, this.pawn, DropAltar, DropAltar.currentSacrificeDeity, DropAltar.currentSpell);
+                    CultUtility.SacrificeExecutionComplete(DropAltar);
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };

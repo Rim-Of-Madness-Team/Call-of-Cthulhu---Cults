@@ -21,12 +21,12 @@ namespace CultOfCthulhu
 
         public virtual Pawn executioner(Map map)
         {
-                return map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar.executioner;
+                return map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar.SacrificeData.Executioner;
         }
 
         public virtual Pawn sacrifice(Map map)
         {
-            return map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar.sacrifice;
+            return map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar.SacrificeData.Sacrifice;
         }
 
         public virtual Pawn TempExecutioner(Map map)

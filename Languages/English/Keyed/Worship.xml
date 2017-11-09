@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-  <!-- 11/8/17 -->
+  <!-- 11/10/17 -->
+  <Cults_AspectOfCthulhuDesc>{0}'s {1} has been replaced with an otherworldly tentacle appendage.</Cults_AspectOfCthulhuDesc>
+  
+  <Cults_AspectOfCthulhu_TargetACharacter>Target an organism to endow with Cthulhu's gifts.</Cults_AspectOfCthulhu_TargetACharacter>
+  <Cults_TransmogrifyAnimalsOnly>Target an animal to transmogrify.</Cults_TransmogrifyAnimalsOnly>
+  <Cults_Trans_HI_Body>Body Size: +{0}</Cults_Trans_HI_Body>
+  <Cults_Trans_HI_Health>Health Scale: +{0}</Cults_Trans_HI_Health>
+  <Cults_butsOne>Even so</Cults_butsOne>
+  <Cults_butsTwo>Fortunately</Cults_butsTwo>
+  <Cults_butsThree>Despite this setback</Cults_butsThree>
+  <Cults_butsFour>Luckily</Cults_butsFour>
+  <Cults_ritualWas>The ritual was a </Cults_ritualWas>
+  <Cults_ritualSuccess>complete success.</Cults_ritualSuccess>
+  <Cults_ritualMixedSuccess>mixed success.</Cults_ritualMixedSuccess>
+  <Cults_ritualFailure>failure.</Cults_ritualFailure>
+  <Cults_ritualCompleteFailure>complete failure.</Cults_ritualCompleteFailure>
+  
   <Cults_Investigate>Investigate</Cults_Investigate>
 
   <!-- 7/3/17 -->

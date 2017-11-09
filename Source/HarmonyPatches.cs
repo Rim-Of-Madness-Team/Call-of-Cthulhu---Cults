@@ -17,10 +17,10 @@ namespace CultOfCthulhu
         {
             HarmonyInstance harmony = HarmonyInstance.Create("rimworld.jecrell.cthulhu.cults");
             harmony.Patch(AccessTools.Method(typeof(ThingWithComps), "InitializeComps"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("InitializeComps_PostFix")), null);
-            harmony.Patch(AccessTools.Method(typeof(Pawn), "get_BodySize"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("get_BodySize_PostFix")));
-            harmony.Patch(AccessTools.Method(typeof(Pawn), "get_HealthScale"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("get_HealthScale_PostFix")));
-            harmony.Patch(AccessTools.Method(typeof(GenLabel), "BestKindLabel"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("BestKindLabel_PostFix")), null);
-            harmony.Patch(AccessTools.Method(typeof(Pawn_DrawTracker), "DrawAt"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DrawAt_PostFix")), null);
+            harmony.Patch(AccessTools.Method(typeof(Pawn), "get_BodySize"), null, new HarmonyMethod(typeof(HarmonyPatches), nameof(get_BodySize_PostFix)));
+            harmony.Patch(AccessTools.Method(typeof(Pawn), "get_HealthScale"), null, new HarmonyMethod(typeof(HarmonyPatches), nameof(get_HealthScale_PostFix)));
+            harmony.Patch(AccessTools.Method(typeof(GenLabel), "BestKindLabel"), null, new HarmonyMethod(typeof(HarmonyPatches), nameof(BestKindLabel_PostFix)), null);
+            harmony.Patch(AccessTools.Method(typeof(Pawn_DrawTracker), "DrawAt"), null, new HarmonyMethod(typeof(HarmonyPatches), nameof(DrawAt_PostFix)), null);
             harmony.Patch(AccessTools.Method(typeof(PawnUtility), "IsTravelingInTransportPodWorldObject"), null, new HarmonyMethod(typeof(HarmonyPatches),
                 nameof(IsTravelingInTransportPodWorldObject_PostFix)));
             harmony.Patch(AccessTools.Method(typeof(FertilityGrid), "CalculateFertilityAt"), null, new HarmonyMethod(typeof(HarmonyPatches),
@@ -167,9 +167,12 @@ namespace CultOfCthulhu
                 Material matSingle;
                 matSingle = CultsDefOf.Cults_TransmogAura.graphicData.Graphic.MatSingle;
 
-                Vector3 s = new Vector3(pawn.Drawer.renderer.graphics.nakedGraphic.drawSize.x, 1f, pawn.Drawer.renderer.graphics.nakedGraphic.drawSize.y);
+                float angle = 0f;
+                angle = pawn.Rotation.AsAngle + (compTrans.Hediff.UndulationTicks * 100);
+
+                Vector3 s = new Vector3((pawn.Drawer.renderer.graphics.nakedGraphic.drawSize.x + compTrans.Hediff.UndulationTicks) * compTrans.Hediff.graphicDiv, 1f, (pawn.Drawer.renderer.graphics.nakedGraphic.drawSize.y + compTrans.Hediff.UndulationTicks) * compTrans.Hediff.graphicDiv);
                 Matrix4x4 matrix = default(Matrix4x4);
-                matrix.SetTRS(loc, Quaternion.AngleAxis(1, Vector3.up), s);
+                matrix.SetTRS(loc, Quaternion.AngleAxis(angle, Vector3.up), s);
                 Graphics.DrawMesh(MeshPool.plane10Back, matrix, matSingle, 0);
             }
         }

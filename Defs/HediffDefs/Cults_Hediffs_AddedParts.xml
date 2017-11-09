@@ -157,28 +157,29 @@
   </HediffDef>
 
   
-  <HediffDef ParentName="AddedBodyPartBase">
+  <HediffDef>
     <defName>Cults_MonstrousBody</defName>
-    <label>abnormal heart</label>
-    <comps>
+    <label>monstrous body</label>
+        <hediffClass>CultOfCthulhu.Hediff_Transmogrified</hediffClass>
+    <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+	<comps>
       <li Class="HediffCompProperties_VerbGiver">
         <verbs>
           <li>
             <verbClass>Verb_MeleeAttack</verbClass>
             <defaultCooldownTime>1.5</defaultCooldownTime>
-            <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+            <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
             <meleeDamageDef>Blunt</meleeDamageDef>
           </li>
         </verbs>  
       </li>
     </comps>
-    <spawnThingOnRemoved>Cults_MonstrousBody</spawnThingOnRemoved>
     <stages>
       <li>
           <capMods>
             <li>
               <capacity>Manipulation</capacity>
-              <offset>0.2</offset>
+              <offset>0.15</offset>
             </li>
           </capMods>
       </li>

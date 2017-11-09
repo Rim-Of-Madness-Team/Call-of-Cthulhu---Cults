@@ -99,13 +99,17 @@ namespace CultOfCthulhu
         //Sacrifice Related Variables
         public enum SacrificeState { off = 0, started, gathering, sacrificing, finishing, finished };
         public SacrificeState currentSacrificeState = SacrificeState.off;
-        public Pawn sacrifice = null;                   // Current sacrifice
+
+        private Bill_Sacrifice sacrificeData = null;
+        public Bill_Sacrifice SacrificeData => sacrificeData;
+        
+        //public Pawn sacrifice = null;                   // Current sacrifice
         public Pawn tempSacrifice = null;
-        public Pawn executioner = null;                 // Current executioner
+        //public Pawn executioner = null;                 // Current executioner
         public Pawn tempExecutioner = null;
-        public CosmicEntity currentSacrificeDeity;      // Actual deity
+        //public CosmicEntity currentSacrificeDeity;      // Actual deity
         public CosmicEntity tempCurrentSacrificeDeity;
-        public IncidentDef currentSpell = null;
+        //public IncidentDef currentSpell = null;
         public IncidentDef tempCurrentSpell = null;
 
         //Misc Event Variables
@@ -334,10 +338,15 @@ namespace CultOfCthulhu
             base.ExposeData();
 
             Scribe_Values.Look<string>(ref this.RoomName, "RoomName", null);
-            Scribe_References.Look<CosmicEntity>(ref this.currentSacrificeDeity, "currentSacrificeDeity");
-            Scribe_References.Look<Pawn>(ref this.sacrifice, "sacrifice");
-            Scribe_References.Look<Pawn>(ref this.executioner, "executioner");
-            Scribe_Defs.Look<IncidentDef>(ref this.currentSpell, "currentSpell");
+            Scribe_Deep.Look<Bill_Sacrifice>(ref this.sacrificeData, "sacrificeData", new object[0]);
+            //Scribe_References.Look<CosmicEntity>(ref this.currentSacrificeDeity, "currentSacrificeDeity");
+            Scribe_References.Look<CosmicEntity>(ref this.tempCurrentSacrificeDeity, "tempCurrentSacrificeDeity");
+            //Scribe_References.Look<Pawn>(ref this.sacrifice, "sacrifice");
+            Scribe_References.Look<Pawn>(ref this.tempSacrifice, "tempSacrifice");
+            //Scribe_References.Look<Pawn>(ref this.executioner, "executioner");
+            Scribe_References.Look<Pawn>(ref this.tempExecutioner, "tempExecutioner");
+            //Scribe_Defs.Look<IncidentDef>(ref this.currentSpell, "currentSpell");
+            Scribe_Defs.Look<IncidentDef>(ref this.tempCurrentSpell, "tempCurrentSpell");
             Scribe_Values.Look<State>(ref this.currentState, "currentState", State.notinuse);
             Scribe_Values.Look<SacrificeState>(ref this.currentSacrificeState, "currentSacrificeState", SacrificeState.off);
             Scribe_Values.Look<Function>(ref this.lastFunction, "lastFunction", Function.Level1);
@@ -427,7 +436,7 @@ namespace CultOfCthulhu
         public void SacrificeRareTick()
         {
             if (!this.Spawned) return;
-            if (executioner == null) return;
+            if (SacrificeData?.Executioner == null) return;
             if (currentState == State.sacrificing)
             {
                 switch (currentSacrificeState)
@@ -435,21 +444,21 @@ namespace CultOfCthulhu
                     case SacrificeState.started:
                     case SacrificeState.gathering:
                     case SacrificeState.sacrificing:
-                        if (!Cthulhu.Utility.IsActorAvailable(this.executioner))
+                        if (!Cthulhu.Utility.IsActorAvailable(this.SacrificeData.Executioner))
                         {
                             CultUtility.AbortCongregation(this, "Executioner".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        else if (!Cthulhu.Utility.IsActorAvailable(this.sacrifice, true))
+                        else if (!Cthulhu.Utility.IsActorAvailable(this.SacrificeData.Sacrifice, true))
                         {
                             CultUtility.AbortCongregation(this, "Sacrifice".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        else if (this.executioner != null)
+                        else if (this.SacrificeData.Executioner != null)
                         {
-                            if (this.executioner.CurJob != null)
+                            if (this.SacrificeData.Executioner.CurJob != null)
                             {
-                                if (this.executioner.CurJob.def != CultsDefOf.Cults_HoldSacrifice)
+                                if (this.SacrificeData.Executioner.CurJob.def != CultsDefOf.Cults_HoldSacrifice)
                                 {
                                     CultUtility.AbortCongregation(this, "Executioner".Translate() + "IsUnavailable".Translate());
                                     return;
@@ -463,16 +472,16 @@ namespace CultOfCthulhu
                         return;
 
                     case SacrificeState.finishing:
-                        if (!Cthulhu.Utility.IsActorAvailable(this.executioner))
+                        if (!Cthulhu.Utility.IsActorAvailable(this.SacrificeData.Executioner))
                         {
                             CultUtility.AbortCongregation(this, "Executioner".Translate() + "IsUnavailable".Translate());
                             return;
                         }
-                        if (this.executioner != null)
+                        if (this.SacrificeData.Executioner != null)
                         {
-                            if (this.executioner.CurJob != null)
+                            if (this.SacrificeData.Executioner.CurJob != null)
                             {
-                                if (this.executioner.CurJob.def != CultsDefOf.Cults_ReflectOnResult) return;
+                                if (this.SacrificeData.Executioner.CurJob.def != CultsDefOf.Cults_ReflectOnResult) return;
                             }
                         }
                         GetSacrificeGroup();
@@ -575,11 +584,11 @@ namespace CultOfCthulhu
                     case SacrificeState.started:
                     case SacrificeState.gathering:
                     case SacrificeState.sacrificing:
-                        if (Cthulhu.Utility.IsActorAvailable(this.executioner))
+                        if (Cthulhu.Utility.IsActorAvailable(this.SacrificeData.Executioner))
                         {
-                            if (Cthulhu.Utility.IsActorAvailable(this.sacrifice, true))
+                            if (Cthulhu.Utility.IsActorAvailable(this.SacrificeData.Sacrifice, true))
                             {
-                                if (this.executioner.CurJob.def != CultsDefOf.Cults_HoldSacrifice)
+                                if (this.SacrificeData.Executioner.CurJob.def != CultsDefOf.Cults_HoldSacrifice)
                                     CultUtility.AbortCongregation(this, "Executioner".Translate() + "IsUnavailable".Translate());
                                 return;
                             }
@@ -590,7 +599,7 @@ namespace CultOfCthulhu
                         return;
 
                     case SacrificeState.finishing:
-                        if (!Cthulhu.Utility.IsActorAvailable(this.executioner))
+                        if (!Cthulhu.Utility.IsActorAvailable(this.SacrificeData.Executioner))
                         {
                             CultUtility.AbortCongregation(this, "Executioner".Translate() + "IsUnavailable".Translate());
                         }
@@ -910,21 +919,21 @@ namespace CultOfCthulhu
 
         public void Upgrade()
         {
-            string newdefName = "";
+            string newDefName = "";
             switch (currentFunction)
             {
                 case Function.Level1:
-                    newdefName = "Cult_AnimalSacrificeAltar";
+                    newDefName = "Cult_AnimalSacrificeAltar";
                     break;
                 case Function.Level2:
-                    newdefName = "Cult_HumanSacrificeAltar";
+                    newDefName = "Cult_HumanSacrificeAltar";
                     break;
                 case Function.Level3:
                     Log.Error("Tried to upgrade fully functional altar. This should never happen.");
                     return;
             }
-            if (newdefName == "") return;
-            ReplaceAltarWith(newdefName);
+            if (newDefName == "") return;
+            ReplaceAltarWith(newDefName);
         }
 
         public void NightmareEvent()
@@ -936,21 +945,21 @@ namespace CultOfCthulhu
 
         public void NightmarePruned(Pawn pruner)
         {
-            string olddefName = "";
+            string oldDefName = "";
             switch (lastFunction)
             {
                 case Function.Level1:
-                    olddefName = "Cult_SacrificialAltar";
+                    oldDefName = "Cult_SacrificialAltar";
                     break;
                 case Function.Level2:
-                    olddefName = "Cult_AnimalSacrificeAltar";
+                    oldDefName = "Cult_AnimalSacrificeAltar";
                     break;
                 case Function.Level3:
-                    olddefName = "Cult_HumanSacrificeAltar";
+                    oldDefName = "Cult_HumanSacrificeAltar";
                     break;
             }
-            if (olddefName == "") return;
-            Building_SacrificialAltar newAltar = ReplaceAltarWith(olddefName);
+            if (oldDefName == "") return;
+            Building_SacrificialAltar newAltar = ReplaceAltarWith(oldDefName);
             Messages.Message("PruningSuccessful".Translate(new object[]
             {
                 pruner.LabelShort
@@ -958,10 +967,10 @@ namespace CultOfCthulhu
             newAltar.Map.reservationManager.ReleaseAllForTarget(newAltar);
         }
 
-        private Building_SacrificialAltar ReplaceAltarWith(string newdefName)
+        private Building_SacrificialAltar ReplaceAltarWith(string newDefName)
         {
             Building_SacrificialAltar result = null;
-            if (newdefName == "")
+            if (newDefName == "")
             {
                 Cthulhu.Utility.ErrorReport("ReplaceAltarWith :: Null exception.");
                 return result;
@@ -988,7 +997,7 @@ namespace CultOfCthulhu
 
             this.Destroy(0);
             //Spawn the new altar over the other
-            Building_SacrificialAltar thing = (Building_SacrificialAltar)ThingMaker.MakeThing(ThingDef.Named(newdefName), currentStuff);
+            Building_SacrificialAltar thing = (Building_SacrificialAltar)ThingMaker.MakeThing(ThingDef.Named(newDefName), currentStuff);
             result = thing;
             thing.SetFaction(Faction.OfPlayer);
             thing.Rotation = currentRotation;
@@ -1216,50 +1225,49 @@ namespace CultOfCthulhu
         }
         public void StartSacrifice()
         {
-            sacrifice = tempSacrifice;
-            executioner = tempExecutioner;
-            currentSacrificeDeity = tempCurrentSacrificeDeity;
-            currentSpell = tempCurrentSpell;
-
             if (this.Destroyed || !this.Spawned)
             {
                 CultUtility.AbortCongregation(null, "The altar is unavailable.");
                 return;
             }
-            if (!Cthulhu.Utility.IsActorAvailable(this.executioner))
+            if (!Cthulhu.Utility.IsActorAvailable(this.tempExecutioner))
             {
-                CultUtility.AbortCongregation(this, "The executioner, " + this.executioner.LabelShort + " is unavaialable.");
-                this.executioner = null;
+                CultUtility.AbortCongregation(this, "The executioner, " + this.tempExecutioner.LabelShort + " is unavaialable.");
                 this.tempExecutioner = null;
                 return;
             }
-            if (!Cthulhu.Utility.IsActorAvailable(this.sacrifice, true))
+            if (!Cthulhu.Utility.IsActorAvailable(this.tempSacrifice, true))
             {
-                CultUtility.AbortCongregation(this, "The sacrifice, " + this.sacrifice.LabelShort + " is unavaialable.");
-                this.sacrifice = null;
+                CultUtility.AbortCongregation(this, "The sacrifice, " + this.tempSacrifice.LabelShort + " is unavaialable.");
                 this.tempSacrifice = null;
                 return;
             }
 
+            //sacrifice = tempSacrifice;
+            //executioner = tempExecutioner;
+            //currentSacrificeDeity = tempCurrentSacrificeDeity;
+            //currentSpell = tempCurrentSpell;
+            Map.GetComponent<MapComponent_SacrificeTracker>().lastResult = CultUtility.SacrificeResult.none;
+            //Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation = new List<Pawn>();
+            //Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation.Add(executioner);
+            
             FactionBase factionBase = (FactionBase)this.Map.info.parent;
-
             Messages.Message("SacrificeGathering".Translate(new object[] {
                 factionBase.Label
         }), TargetInfo.Invalid, MessageTypeDefOf.NeutralEvent);
 
             ChangeState(State.sacrificing, SacrificeState.started);
             //this.currentState = State.started;
-            Map.GetComponent<MapComponent_SacrificeTracker>().lastResult = CultUtility.SacrificeResult.none;
-
-            Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation = new List<Pawn>();
-
-            Cthulhu.Utility.DebugReport("Force Sacrifice called");
-            Job job = new Job(CultsDefOf.Cults_HoldSacrifice, sacrifice, this);
-            job.count = 1;
-            executioner.jobs.TryTakeOrderedJob(job);
             //executioner.jobs.EndCurrentJob(JobCondition.InterruptForced);
-            Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation.Add(executioner);
-            GetSacrificeGroup();
+
+            sacrificeData = new Bill_Sacrifice(tempSacrifice, tempExecutioner, tempCurrentSacrificeDeity, tempCurrentSpell);
+            Cthulhu.Utility.DebugReport("Force Sacrifice called");
+
+            Job job = new Job(CultsDefOf.Cults_HoldSacrifice, tempSacrifice, this);
+            job.count = 1;
+            tempExecutioner.jobs.TryTakeOrderedJob(job);
+
+            sacrificeData.Congregation = GetSacrificeGroup();
 
             Cthulhu.Utility.DebugReport("Sacrifice state set to gathering");
         }
@@ -1296,24 +1304,27 @@ namespace CultOfCthulhu
             }
         }
 
-        public static void GetSacrificeGroup(Building_SacrificialAltar altar)
+        public static List<Pawn> GetSacrificeGroup(Building_SacrificialAltar altar)
         {
-            altar.GetSacrificeGroup();
+            return altar.GetSacrificeGroup();
         }
 
-        public void GetSacrificeGroup()
+        public List<Pawn> GetSacrificeGroup()
         {
             Room room = this.GetRoom();
 
+            List<Pawn> pawns = new List<Pawn>();
             if (room.Role != RoomRoleDefOf.PrisonBarracks && room.Role != RoomRoleDefOf.PrisonCell)
             {
                 if (AvailableWorshippers != null && AvailableWorshippers.Count > 0)
                     foreach (Pawn p in AvailableWorshippers)
                     {
                         CultUtility.GiveAttendSacrificeJob(this, p);
-                        this.Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation.Add(p);
+                        pawns.Add(p);
+                        //this.Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation.Add(p);
                     }
             }
+            return pawns;
         }
 
         public static bool ShouldAttendSacrifice(Pawn p, Pawn executioner)
@@ -1463,20 +1474,20 @@ namespace CultOfCthulhu
             List<ThingAmount> list = new List<ThingAmount>();
             RecipeDef recipe = null;
 
-            string recipedefName = "OfferingOf";
+            string recipeDefName = "OfferingOf";
             switch (type)
             {
                 case CultUtility.SacrificeType.plants:
-                    recipedefName = recipedefName + "Plants";
+                    recipeDefName = recipeDefName + "Plants";
                     Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeType = CultUtility.SacrificeType.plants;
                     break;
                 case CultUtility.SacrificeType.meat:
-                    recipedefName = recipedefName + "Meat";
+                    recipeDefName = recipeDefName + "Meat";
 
                     Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeType = CultUtility.SacrificeType.meat;
                     break;
                 case CultUtility.SacrificeType.meals:
-                    recipedefName = recipedefName + "Meals";
+                    recipeDefName = recipeDefName + "Meals";
 
                     Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeType = CultUtility.SacrificeType.meals;
                     break;
@@ -1484,23 +1495,23 @@ namespace CultOfCthulhu
             switch (size)
             {
                 case CultUtility.OfferingSize.meagre:
-                    recipedefName = recipedefName + "_Meagre";
+                    recipeDefName = recipeDefName + "_Meagre";
                     break;
                 case CultUtility.OfferingSize.decent:
-                    recipedefName = recipedefName + "_Decent";
+                    recipeDefName = recipeDefName + "_Decent";
                     break;
                 case CultUtility.OfferingSize.sizable:
-                    recipedefName = recipedefName + "_Sizable";
+                    recipeDefName = recipeDefName + "_Sizable";
                     break;
                 case CultUtility.OfferingSize.worthy:
-                    recipedefName = recipedefName + "_Worthy";
+                    recipeDefName = recipeDefName + "_Worthy";
                     break;
                 case CultUtility.OfferingSize.impressive:
-                    recipedefName = recipedefName + "_Impressive";
+                    recipeDefName = recipeDefName + "_Impressive";
                     break;
 
             }
-            recipe = DefDatabase<RecipeDef>.GetNamed(recipedefName);
+            recipe = DefDatabase<RecipeDef>.GetNamed(recipeDefName);
             resultRecipe = recipe;
             if (!TryFindBestOfferingIngredients(recipe, pawn, altar, list))
             {

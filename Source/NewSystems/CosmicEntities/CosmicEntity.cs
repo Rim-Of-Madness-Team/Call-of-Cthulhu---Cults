@@ -28,6 +28,7 @@ namespace CultOfCthulhu
     {
         private const float MODIFIER_HUMAN  = 0.5f;
         private const float MODIFIER_ANIMAL = 0.2f;
+        private const float DIVIDER_HUMAN = 300f;
         private const float DIVIDER_FOOD = 700f;
 
         public List<IncidentDef> tier1Spells;
@@ -41,6 +42,8 @@ namespace CultOfCthulhu
 
         private bool hostileToPlayer = false;
         private float favor = 0f;
+        private float lastFavor = 0f;
+        public float LastFavor => lastFavor;
 
         public float favorMax = 50f;
         public float favorTier0Max { get { return (favorMax * 0.05f); } }
@@ -194,6 +197,7 @@ namespace CultOfCthulhu
             Scribe_Defs.Look<IncidentDef>(ref this.finalSpell, "finalSpell");
             Scribe_Values.Look<bool>(ref this.hostileToPlayer, "hostileToPlayer", false, false);
             Scribe_Values.Look<float>(ref this.favor, "favor", 0f, false);
+            Scribe_Values.Look<float>(ref this.lastFavor, "lastFavor", 0f, false);
             Scribe_Values.Look<bool>(ref this.discovered, "discovered", false, false);
             //Scribe_Deep.Look<KidnappedPawnsTracker>(ref this.kidnapped, "kidnapped", new object[]
             //{
@@ -294,7 +298,7 @@ namespace CultOfCthulhu
                         s.Append("Subtotal: " + result.ToString() + " Applied Bonded Modifier");
                         tracker.ASMwasBonded = true;
                     }
-                    if (tracker.lastUsedAltar.executioner.relations.DirectRelationExists(PawnRelationDefOf.Bond, sacrifice))
+                    if (tracker.lastUsedAltar.SacrificeData.Executioner.relations.DirectRelationExists(PawnRelationDefOf.Bond, sacrifice))
                     {
                         result += sacrifice.MarketValue * 2; //Even more sacrifice value for sacrificing one's own pet
                         s.AppendLine();
@@ -310,7 +314,7 @@ namespace CultOfCthulhu
                 result += (sacrifice.MarketValue * MODIFIER_HUMAN); // 50% bonus for human sacrifice
 
                 //Family bonus handling code
-                Pawn ex = tracker.lastUsedAltar.executioner;
+                Pawn ex = tracker.lastUsedAltar.SacrificeData.Executioner;
                 if (ex.relations.FamilyByBlood.Contains(sacrifice))
                 {
                     result += sacrifice.MarketValue * 3; //Three times the value for family members
@@ -347,10 +351,10 @@ namespace CultOfCthulhu
         public void ReceiveSacrifice(Pawn sacrifice, Map map, bool favorSpell = false, bool starsAreRight = false, bool starsAreWrong = false)
         {
             MapComponent_SacrificeTracker tracker = map.GetComponent<MapComponent_SacrificeTracker>();
-            float value = sacrifice.MarketValue + SacrificeBonus(sacrifice, map, favorSpell, starsAreRight, starsAreWrong);
+            float value = (sacrifice.MarketValue + SacrificeBonus(sacrifice, map, favorSpell, starsAreRight, starsAreWrong)) / DIVIDER_HUMAN;
             bool perfect = false;
             bool sacrificialDagger = false;
-            value += CultUtility.CongregationBonus(tracker.lastSacrificeCongregation, this, out perfect, out sacrificialDagger);
+            value += CultUtility.CongregationBonus(tracker.lastUsedAltar.SacrificeData.Congregation, this, out perfect, out sacrificialDagger);
             Cthulhu.Utility.DebugReport("Sacrifice Value: " + value.ToString());
             AffectFavor(value);
         }

@@ -30,9 +30,9 @@ namespace Cthulhu
 {
     public static class ModProps
     {
-        public const string main = "Cthulhu";
-        public const string mod = "Cults";
-        public const string version = "1.17.3.2";
+        public static string main = "Cthulhu";
+        public static string mod = "Cults";
+        public static string Version => Assembly.GetExecutingAssembly().GetName().Version.ToString();
     }
 
     public static class SanityLossSeverity
@@ -723,7 +723,7 @@ namespace Cthulhu
             return;
         }
 
-        public static string Prefix => ModProps.main + " :: " + ModProps.mod + " " + ModProps.version + " :: ";
+        public static string Prefix => ModProps.main + " :: " + ModProps.mod + " " + ModProps.Version + " :: ";
 
         public static void DebugReport(string x)
         {

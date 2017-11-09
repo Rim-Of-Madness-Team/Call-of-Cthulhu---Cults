@@ -59,6 +59,8 @@
     <Compile Include="NewSystems\AntiCult\MapComponent_LocalCultTracker_Inquisition.cs" />
     <Compile Include="NewSystems\Cult\Seed\MapComponent_LocalCultTracker_Seed.cs" />
     <Compile Include="NewSystems\Cult\Seed\WorkGiver_Investigate.cs" />
+    <Compile Include="NewSystems\Sacrifice\Bill_Sacrifice.cs" />
+    <Compile Include="NewSystems\Spells\ShubNiggurath\Hediff_Transmogrified.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_AbyssalRift.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_CallToDarkness.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_ElixerOfPower.cs" />

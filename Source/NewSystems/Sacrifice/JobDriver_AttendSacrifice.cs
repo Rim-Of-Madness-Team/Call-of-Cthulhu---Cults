@@ -48,7 +48,7 @@ namespace CultOfCthulhu
             get
             {
                 if (setExecutioner != null) return setExecutioner;
-                if (Altar.executioner != null) { setExecutioner = Altar.executioner; return Altar.executioner; }
+                if (Altar.SacrificeData.Executioner != null) { setExecutioner = Altar.SacrificeData.Executioner; return Altar.SacrificeData.Executioner; }
                 else
                 {
                     foreach (Pawn pawn in this.pawn.Map.mapPawns.FreeColonistsSpawned)

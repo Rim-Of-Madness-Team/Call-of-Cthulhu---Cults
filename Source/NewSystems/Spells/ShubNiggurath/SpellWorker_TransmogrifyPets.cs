@@ -65,8 +65,9 @@ namespace CultOfCthulhu
             
         }
 
-        public void Transmogrify(Map map, Pawn pawn = null)
+        public void Transmogrify(Map map, Pawn pawn = null, int count = 3)
         {
+            if (count <= 0) return;
             //No pawn? Okay, find one.
 
             if (pawn == null)
@@ -74,16 +75,49 @@ namespace CultOfCthulhu
                 pawn = PetsToTransmogrify(map).RandomElement<Pawn>();
             }
 
-            CompTransmogrified compTrans = pawn.GetComp<CompTransmogrified>();
-            if (compTrans != null)
-            {
-                compTrans.IsTransmogrified = true;
-            }
-
-            Messages.Message("Cults_TransmogrifyMessage".Translate(new object[]
+            Messages.Message("Cults_TransmogrifyAnimalsOnly".Translate(new object[]
                 {
                     pawn.LabelShort
-                }), MessageTypeDefOf.PositiveEvent);
+                }), MessageTypeDefOf.NeutralEvent);
+
+            
+                TargetingParameters parms = new TargetingParameters();
+                parms.canTargetPawns = true;
+            bool foundTarget = false;
+            int thisCount = count;
+
+            Find.Targeter.BeginTargeting(parms, delegate (LocalTargetInfo t)
+                {
+                    if (t.Thing is Pawn tP)
+                    {
+                        if (tP?.RaceProps?.Animal ?? false)
+                        {
+                            pawn = tP;
+                            CompTransmogrified compTrans = tP.GetComp<CompTransmogrified>();
+                            if (compTrans != null)
+                            {
+                                compTrans.IsTransmogrified = true;
+                                foundTarget = true;
+                                Messages.Message("Cults_TransmogrifyMessage".Translate(new object[] //Cults_AspectOfCthulhu_TargetACharacter
+                                    {
+                                        pawn.LabelShort
+                                    }), MessageTypeDefOf.PositiveEvent);
+                            }
+
+                        }
+                    }
+
+                }, null, delegate
+                {
+                    if (!foundTarget)
+                    {
+                        LongEventHandler.QueueLongEvent(delegate
+                        {
+                            this.Transmogrify(map, pawn, thisCount - 1);
+                        }, "transmogrify", false, null);
+                    }
+                }, null);
+
         }
 
     }

@@ -36,7 +36,7 @@ namespace CultOfCthulhu
         public List<Pawn> defendTheBroodPawns = new List<Pawn>();
 
         /// Sacrifice Tracker Variables
-        public List<Pawn> lastSacrificeCongregation = new List<Pawn>();
+        //public List<Pawn> lastSacrificeCongregation = new List<Pawn>();
         public List<Pawn> unspeakableOathPawns = new List<Pawn>();
 
 
@@ -87,7 +87,7 @@ namespace CultOfCthulhu
             lastLocation = IntVec3.Invalid;
             wasDoubleTheFun = false;
             lastDoubleSideEffect = null;
-            lastSacrificeCongregation = null;
+            //lastSacrificeCongregation = null;
             lastRelation = null;
             lastSacrificeName = "";
             ASMwasPet = false;
@@ -117,7 +117,7 @@ namespace CultOfCthulhu
             string message = "SacrificeFailMessage" + ran.ToString();
             string messageObject = message.Translate(new object[]
             {
-                    lastUsedAltar.executioner
+                    lastUsedAltar.SacrificeData.Executioner
             });
             s.Append(messageObject);
             return s.ToString();
@@ -130,24 +130,24 @@ namespace CultOfCthulhu
             string textLabel = "Error";
             LetterDef letterDef = LetterDefOf.ThreatSmall;
             s.Append("SacrificeIntro".Translate());
-            s.Append(" " + lastUsedAltar.currentSacrificeDeity.Label);
+            s.Append(" " + lastUsedAltar.SacrificeData.Entity.Label);
 
             //The sacrifice is human
-            if (lastSacrificeType == CultUtility.SacrificeType.human)
+            if (lastUsedAltar.SacrificeData.Type == CultUtility.SacrificeType.human)
             {
              
-                s.Append(" " + lastUsedAltar.currentSpell.letterLabel + ". ");
+                s.Append(" " + lastUsedAltar.SacrificeData.Spell.letterLabel + ". ");
 
                 //Was the executioner a family member?
                 if (HSMwasFamily)
                 {
-                    if (lastUsedAltar.executioner == null) Log.Error("Executioner null");
+                    if (lastUsedAltar.SacrificeData.Executioner == null) Log.Error("Executioner null");
                     if (lastRelation == null) Log.Error("Null relation");
                     if (lastSacrificeName == null) Log.Error("Null name");
                     string familyString = "HumanSacrificeWasFamily".Translate((new object[]
                     {
-                            lastUsedAltar.executioner.LabelShort,
-                            lastUsedAltar.executioner.gender.GetPossessive(),
+                            lastUsedAltar.SacrificeData.Executioner.LabelShort,
+                            lastUsedAltar.SacrificeData.Executioner.gender.GetPossessive(),
                             lastRelation.label,
                             lastSacrificeName
                     }));
@@ -167,32 +167,32 @@ namespace CultOfCthulhu
                 if (lastResult == CultUtility.SacrificeResult.mixedsuccess)
                 {
                     List<string> buts = new List<string> {
-                    "Even so",
-                    "Fortunately",
-                    "Despite this setback",
-                    "Luckily"
+                    "Cults_butsOne".Translate(),
+                    "Cults_butsTwo".Translate(),
+                    "Cults_butsThree".Translate(),
+                    "Cults_butsFour".Translate()
                 };
                     s.Append(". " + buts.RandomElement<string>() + ", ");
                 }
                 if ((int)lastResult > 2)
-                    s.Append(lastUsedAltar.executioner.ToString() + " " + lastUsedAltar.currentSpell.letterText + ".");
-                s.Append(" The ritual was a ");
+                    s.Append(lastUsedAltar.SacrificeData.Executioner.ToString() + " " + lastUsedAltar.SacrificeData.Spell.letterText + ".");
+                s.Append(" " + "Cults_ritualWas".Translate());
 
                 switch (lastResult)
                 {
                     case CultUtility.SacrificeResult.success:
-                        s.Append("complete success.");
+                        s.Append("Cults_ritualSuccess".Translate());
                         letterDef = CultsDefOf.Cults_StandardMessage;
                         break;
                     case CultUtility.SacrificeResult.mixedsuccess:
                         letterDef = CultsDefOf.Cults_StandardMessage;
-                        s.Append("mixed success.");
+                        s.Append("Cults_ritualMixedSuccess".Translate());
                         break;
                     case CultUtility.SacrificeResult.failure:
-                        s.Append("failure.");
+                        s.Append("Cults_ritualFailure".Translate());
                         break;
                     case CultUtility.SacrificeResult.criticalfailure:
-                        s.Append("complete failure.");
+                        s.Append("Cults_ritualCompleteFailure".Translate());
                         break;
                     case CultUtility.SacrificeResult.none:
                         s.Append("this should never happen");
@@ -200,16 +200,16 @@ namespace CultOfCthulhu
                 }
                 labelToTranslate = "SacrificeLabel" + lastResult.ToString();
             }
-            else if (lastSacrificeType == CultUtility.SacrificeType.animal)
+            else if (lastUsedAltar.SacrificeData.Type == CultUtility.SacrificeType.animal)
             {
                 s.Append(" " + "AnimalSacrificeReason".Translate() + ".");
-                if (ASMwasPet) s.Append(" " + "AnimalSacrificeWasPet".Translate() + lastUsedAltar.currentSacrificeDeity.Label + ".");
+                if (ASMwasPet) s.Append(" " + "AnimalSacrificeWasPet".Translate() + lastUsedAltar.SacrificeData.Entity.Label + ".");
                 if (ASMwasBonded)
                 {
                     string bondString = "AnimalSacrificeWasBonded".Translate((new object[]
                     {
                             lastSacrificeName,
-                            lastUsedAltar.executioner.LabelShort
+                            lastUsedAltar.SacrificeData.Executioner.LabelShort
                     }));
                     s.Append(" " + bondString +".");
                 }
@@ -218,13 +218,13 @@ namespace CultOfCthulhu
                     string bondString = "AnimalSacrificeWasExcMaster".Translate((new object[]
                     {
                             lastSacrificeName,
-                            lastUsedAltar.executioner.LabelShort
+                            lastUsedAltar.SacrificeData.Executioner.LabelShort
                     }));
                     s.Append(" " + bondString + ".");
                 }
                 if (ASMwasBonded || ASMwasPet || ASMwasExcMaster)
                 {
-                    s.Append(" " + "GreedilyReceived".Translate() + lastUsedAltar.currentSacrificeDeity.Label + ".");
+                    s.Append(" " + "GreedilyReceived".Translate() + lastUsedAltar.SacrificeData.Entity.Label + ".");
                 }
                 else
                 {
@@ -255,15 +255,24 @@ namespace CultOfCthulhu
             
             //Defend the Brood Spell
             Scribe_Collections.Look<Pawn>(ref this.defendTheBroodPawns, "defendTheBroodPawns", LookMode.Reference, new object[0]);
-            
+
             //Sacrifice Variables
-            Scribe_Values.Look<CultUtility.SacrificeResult>(ref this.lastResult, "lastResult", CultUtility.SacrificeResult.none, false);
-            Scribe_References.Look<Building_SacrificialAltar>(ref this.lastUsedAltar, "lastUsedAltar", false);
-            Scribe_Defs.Look<IncidentDef>(ref this.lastSideEffect, "lastSideEffect");
+            Scribe_Values.Look<string>(ref this.lastSacrificeName, "lastSacrificeName", "None", false);
             Scribe_Values.Look<bool>(ref this.wasDoubleTheFun, "wasDoubleTheFun", false, false);
+            Scribe_Values.Look<bool>(ref this.ASMwasPet, "ASMwasPet", false, false);
+            Scribe_Values.Look<bool>(ref this.ASMwasBonded, "ASMwasBonded", false, false);
+            Scribe_Values.Look<bool>(ref this.ASMwasExcMaster, "ASMwasExcMaster", false, false);
+            Scribe_Values.Look<bool>(ref this.HSMwasFamily, "HSMwasFamily", false, false);
+
             Scribe_Values.Look<IntVec3>(ref this.lastLocation, "lastLocation", IntVec3.Invalid, false);
+            Scribe_Defs.Look<PawnRelationDef>(ref this.lastRelation, "lastRelation");
             Scribe_Defs.Look<IncidentDef>(ref this.lastDoubleSideEffect, "lastDoubleSideEffect");
+            Scribe_Defs.Look<IncidentDef>(ref this.lastSideEffect, "lastSideEffect");
             Scribe_Defs.Look<IncidentDef>(ref this.lastSpell, "lastSpell");
+            Scribe_References.Look<Building_SacrificialAltar>(ref this.lastUsedAltar, "lastUsedAltar", false);
+            Scribe_Values.Look<CultUtility.SacrificeResult>(ref this.lastResult, "lastResult", CultUtility.SacrificeResult.none, false);
+            Scribe_Values.Look<CultUtility.SacrificeType>(ref this.lastSacrificeType, "lastSacrificeType", CultUtility.SacrificeType.none, false);
+            Scribe_Values.Look<CultUtility.OfferingSize>(ref this.lastOfferingSize, "lastOfferingSize", CultUtility.OfferingSize.none, false);
             base.ExposeData();
 
         }

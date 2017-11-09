@@ -320,7 +320,9 @@
 		<label>Double The Fun</label>
 		<defName>Cults_SpellDoubleTheFun</defName>
 		<workerClass>IncidentWorker_Flashstorm</workerClass>
-        <letterText>A flashstorm has struck the region</letterText>
+		<letterLabel>Flashstorm</letterLabel>
+		<letterText>A freak localized flashstorm is striking a small area with lightning. This can cause massive fires.</letterText>
+		<letterDef>ThreatSmall</letterDef>
 	</IncidentDef>
     <IncidentDef ParentName="SpellDef">
 		<label>Reanimator</label>
@@ -332,7 +334,9 @@
 		<label>Flashstorm</label>
 		<defName>Cults_SpellFlashstorm</defName>
 		<workerClass>IncidentWorker_Flashstorm</workerClass>
-        <letterText>A flashstorm has struck the region</letterText>
+		<letterLabel>Flashstorm</letterLabel>
+		<letterText>A freak localized flashstorm is striking a small area with lightning. This can cause massive fires.</letterText>
+		<letterDef>ThreatSmall</letterDef>
 	</IncidentDef>
     <IncidentDef ParentName="SpellDef">
 		<label>Ecstatic Frenzy</label>
@@ -350,7 +354,9 @@
 		<label>Blight</label>
 		<defName>Cults_SpellBlight</defName>
 		<workerClass>IncidentWorker_CropBlight</workerClass>
+		<letterLabel>Blight</letterLabel>
 		<letterText>A blight strikes your fields</letterText>
+		<letterDef>ThreatSmall</letterDef>
 	</IncidentDef>
     <IncidentDef ParentName="SpellDef">
 		<label>No Longer Domesticated </label>
@@ -375,13 +381,17 @@
 		<label>Food Spoilage</label>
 		<defName>Cults_SpellFoodSpoilage</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_FoodSpoilage</workerClass>
+		<letterLabel>Spoiled</letterLabel>
 		<letterText>Some of your food stores have mysteriously become rotten and inedible</letterText>
+		<letterDef>ThreatSmall</letterDef>
 	</IncidentDef>
     <IncidentDef ParentName="SpellDef">
 		<label>Reincarnation</label>
 		<defName>Cults_SpellReincarnation</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_Reincarnation</workerClass>
+		<letterLabel>Reincarnation</letterLabel>
 		<letterText>The sacrifice has resurged with branches, trunk, and tree parts, destroying your altar. Upon its form is a wicked visage of the departed</letterText>
+		<letterDef>ThreatSmall</letterDef>
 	</IncidentDef>
     <IncidentDef ParentName="SpellDef">
 		<label>Aurora</label>

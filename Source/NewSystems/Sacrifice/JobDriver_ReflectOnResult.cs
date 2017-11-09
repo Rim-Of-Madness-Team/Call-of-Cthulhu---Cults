@@ -45,9 +45,9 @@ namespace CultOfCthulhu
             //Toil 0 -- Go here first to reflect.
             if (altar != null)
             {
-                if (altar.executioner != null)
+                if (altar?.SacrificeData?.Executioner != null)
                 {
-                    if (this.pawn == altar.executioner)
+                    if (this.pawn == altar.SacrificeData.Executioner)
                     {
                         yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
                     }

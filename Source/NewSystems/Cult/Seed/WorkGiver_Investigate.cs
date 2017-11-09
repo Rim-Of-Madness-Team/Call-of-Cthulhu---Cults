@@ -93,7 +93,7 @@ namespace CultOfCthulhu
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            Log.Message("JobOnThing");
+            //Log.Message("JobOnThing");
 
             pawn.MapHeld.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedPawn = pawn;
             pawn.MapHeld.GetComponent<MapComponent_LocalCultTracker>().CurrentSeedTarget = t;

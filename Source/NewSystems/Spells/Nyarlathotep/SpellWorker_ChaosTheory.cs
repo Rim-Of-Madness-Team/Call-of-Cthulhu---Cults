@@ -96,7 +96,7 @@ namespace CultOfCthulhu
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
-            Pawn pawn = map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar.executioner;
+            Pawn pawn = map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar.SacrificeData.Executioner;
             if (HasIncapableWorkTags(pawn))
             {
                 //Your childhood is out

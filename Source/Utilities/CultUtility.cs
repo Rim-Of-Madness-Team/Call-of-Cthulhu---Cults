@@ -283,14 +283,14 @@ namespace CultOfCthulhu
 
             Building_SacrificialAltar altar = map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar;
 
-            if (altar != null)
+            if (altar != null && altar.SacrificeData != null)
             {
-                if (altar.currentSacrificeDeity != null)
+                if (altar.SacrificeData.Entity != null)
                 {
 
-                    if (altar.currentSpell != null)
+                    if (altar.SacrificeData.Spell != null)
                     {
-                        if (altar.currentSpell.defName != "Cults_SpellFavor")
+                        if (altar.SacrificeData.Spell.defName != "Cults_SpellFavor")
                         {
                             s.AppendLine("Initial Failure Difficulty: " + failDifficulty.ToString());
 
@@ -320,7 +320,7 @@ namespace CultOfCthulhu
                             if ((!Success) && TableOfFun) return SacrificeResult.failure;
                             if (Success && (!TableOfFun)) return SacrificeResult.success;
                         }
-                        else if (altar.currentSpell.defName == "Cults_SpellFavor")
+                        else if (altar.SacrificeData.Spell.defName == "Cults_SpellFavor")
                         {
                             return SacrificeResult.success;
                         }
@@ -360,7 +360,7 @@ namespace CultOfCthulhu
         private static int SpellCalc_TempleQuality(Building_SacrificialAltar altar, StringBuilder s)
         {
             int modifier = 0;
-            CosmicEntity deity = altar.currentSacrificeDeity;
+            CosmicEntity deity = altar.SacrificeData.Entity;
             if (!IsOutdoorsAt(altar.Map, altar.Position))
             {
                 Room temple = altar.GetRoom();
@@ -435,7 +435,7 @@ namespace CultOfCthulhu
                 {
                     bool statueOfDeityExists = false;
                     bool qualityExists = false;
-                    CosmicEntity deity = altar.currentSacrificeDeity;
+                    CosmicEntity deity = altar.SacrificeData.Entity;
                     foreach (Thing sculpture in sculptures)
                     {
                         CompFavoredObject compFavoredObject = sculpture.TryGetComp<CompFavoredObject>();
@@ -469,13 +469,13 @@ namespace CultOfCthulhu
         {
             int modifier = 0;
 
-            if (altar.Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation != null)
+            if (altar?.SacrificeData?.Congregation != null) //.Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation != null)
             {
-                CosmicEntity deity = altar.currentSacrificeDeity;
-                IncidentDef spell = altar.currentSpell;
+                CosmicEntity deity = altar.SacrificeData.Entity;
+                IncidentDef spell = altar.SacrificeData.Spell;
                 bool perfect = false;
                 bool sacrificialDagger = false;
-                float value = CongregationBonus(altar.Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation, deity, out perfect, out sacrificialDagger, debugLog);
+                float value = CongregationBonus(altar.SacrificeData.Congregation, deity, out perfect, out sacrificialDagger, debugLog);
                 if (value > 0)
                 {
                     modifier += 10;
@@ -502,11 +502,11 @@ namespace CultOfCthulhu
         {
             int modifier = 0;
 
-            if (altar.Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation != null)
+            if (altar?.SacrificeData?.Congregation != null) //Map.GetComponent<MapComponent_SacrificeTracker>().lastSacrificeCongregation != null)
             {
 
-                CosmicEntity deity = altar.currentSacrificeDeity;
-                IncidentDef spell = altar.currentSpell;
+                CosmicEntity deity = altar.SacrificeData.Entity;// currentSacrificeDeity;
+                IncidentDef spell = altar.SacrificeData.Spell; // currentSpell;
 
                 //Is tier 1?
                 foreach (IncidentDef current in deity.tier1Spells)
@@ -646,7 +646,7 @@ namespace CultOfCthulhu
         /// <param name="altar"></param>
         /// <param name="deity"></param>
         /// <param name="Cults_Spell"></param>
-        public static void SacrificeExecutionComplete(Pawn sacrifice, Pawn executioner, Building_SacrificialAltar altar, CosmicEntity deity, IncidentDef spell)
+        public static void SacrificeExecutionComplete(Building_SacrificialAltar altar)
         {
             altar.ChangeState(Building_SacrificialAltar.State.sacrificing, Building_SacrificialAltar.SacrificeState.finishing);
 
@@ -657,7 +657,7 @@ namespace CultOfCthulhu
 
 
 
-            deity.ReceiveSacrifice(sacrifice, altar.Map, bstarsAreRight, bstarsAreWrong);
+            altar.SacrificeData.Entity.ReceiveSacrifice(altar.SacrificeData.Sacrifice, altar.Map, bstarsAreRight, bstarsAreWrong);
 
 
             //New 1.2.2 -- Give all prisoners a horrible thought.
@@ -665,7 +665,7 @@ namespace CultOfCthulhu
 
             
             
-            altar.sacrifice = null;
+            //altar.SacrificeData.Sacrifice = null;
             
             float SuccessMod = Rand.Range(0.03f, 0.035f);
             float FailureMod = Rand.Range(-0.035f, 0.03f);
@@ -676,7 +676,7 @@ namespace CultOfCthulhu
                 tracker.lastUsedAltar = altar;
                 if (tracker.lastSacrificeType == SacrificeType.human)
                 {
-                    tracker.lastSpell = altar.currentSpell;
+                    tracker.lastSpell = altar.SacrificeData.Spell;
                     tracker.lastResult = altar.debugAlwaysSucceed ? SacrificeResult.success : GetSacrificeResult(altar.Map);
 
                     CultTableOfFun funTable = new CultTableOfFun();
@@ -686,25 +686,25 @@ namespace CultOfCthulhu
                     {
                         case SacrificeResult.success:
                             Cthulhu.Utility.DebugReport("Sacrifice: Success");
-                            CastSpell(spell, altar.Map, true);
-                            CultUtility.AffectCultMindedness(executioner, SuccessMod);
+                            CastSpell(altar.SacrificeData.Spell, altar.Map, true);
+                            CultUtility.AffectCultMindedness(altar.SacrificeData.Executioner, SuccessMod);
                             break;
                         case SacrificeResult.mixedsuccess:
                             Cthulhu.Utility.DebugReport("Sacrifice: Mixed Success");
-                            CastSpell(spell, altar.Map, true);
-                            CultUtility.AffectCultMindedness(executioner, SuccessMod);
+                            CastSpell(altar.SacrificeData.Spell, altar.Map, true);
+                            CultUtility.AffectCultMindedness(altar.SacrificeData.Executioner, SuccessMod);
                             funTable.RollTableOfFun(altar.Map);
                             break;
                         case SacrificeResult.failure:
                             Cthulhu.Utility.DebugReport("Sacrifice: Failure");
                             funTable.RollTableOfFun(altar.Map);
-                            CultUtility.AffectCultMindedness(executioner, FailureMod);
-                            SacrificeSpellComplete(executioner, altar);
+                            CultUtility.AffectCultMindedness(altar.SacrificeData.Executioner, FailureMod);
+                            SacrificeSpellComplete(altar.SacrificeData.Executioner, altar);
                             break;
                         case SacrificeResult.criticalfailure:
                             Cthulhu.Utility.DebugReport("Sacrifice: Critical failure");
-                            CultUtility.AffectCultMindedness(executioner, FailureMod);
-                            SacrificeSpellComplete(executioner, altar);
+                            CultUtility.AffectCultMindedness(altar.SacrificeData.Executioner, FailureMod);
+                            SacrificeSpellComplete(altar.SacrificeData.Executioner, altar);
                             break;
 
                     }
@@ -729,15 +729,15 @@ namespace CultOfCthulhu
                     }
                 }
                 //Tell the player!
-                MakeSacrificeThoughts(executioner, sacrifice, true);
-                if (tracker.lastSacrificeCongregation != null && tracker.lastSacrificeCongregation.Count > 0)
+                MakeSacrificeThoughts(altar.SacrificeData.Executioner, altar.SacrificeData.Sacrifice, true);
+                if (!altar.SacrificeData.Congregation.NullOrEmpty()) //tracker.lastSacrificeCongregation != null && tracker.lastSacrificeCongregation.Count > 0)
                 {
-                    foreach (Pawn pawn in tracker.lastSacrificeCongregation)
+                    foreach (Pawn pawn in altar.SacrificeData.Congregation)
                     {
-                        if (pawn.Spawned && !pawn.Dead && pawn != sacrifice)
+                        if (pawn.Spawned && !pawn.Dead && pawn != altar.SacrificeData.Sacrifice)
                         {
                             TryGainTempleRoomThought(pawn);
-                            if (pawn != executioner) MakeSacrificeThoughts(pawn, sacrifice);
+                            if (pawn != altar.SacrificeData.Executioner) MakeSacrificeThoughts(pawn, altar.SacrificeData.Sacrifice);
                         }
                     }
                 }
@@ -899,7 +899,7 @@ namespace CultOfCthulhu
             List<Thing> list = p.Map.listerThings.AllThings.FindAll(s => s.GetType() == typeof(Building_SacrificialAltar));
             foreach (Building_SacrificialAltar b in list)
             {
-                if (b.executioner == p) return true;
+                if (b?.SacrificeData?.Executioner == p) return true;
             }
             return false;
         }
@@ -908,7 +908,7 @@ namespace CultOfCthulhu
             List<Thing> list = p.Map.listerThings.AllThings.FindAll(s => s.GetType() == typeof(Building_SacrificialAltar));
             foreach (Building_SacrificialAltar b in list)
             {
-                if (b.sacrifice == p) return true;
+                if (b?.SacrificeData?.Sacrifice == p) return true;
             }
             return false;
         }
@@ -949,13 +949,13 @@ namespace CultOfCthulhu
         }
         public static bool ShouldAttendSacrifice(Pawn p, Building_SacrificialAltar altar)
         {
-            if (!Cthulhu.Utility.IsActorAvailable(altar.executioner))
+            if (!Cthulhu.Utility.IsActorAvailable(altar.SacrificeData.Executioner))
             {
                 AbortCongregation(altar);
                 return false;
             }
             //Everyone get over here!
-            if (p != altar.executioner && p != altar.sacrifice)
+            if (p != altar.SacrificeData.Executioner && p != altar.SacrificeData.Sacrifice)
             {
                 return true;
             }
@@ -1425,7 +1425,7 @@ namespace CultOfCthulhu
             if (fromAltar)
             {
                 Building_SacrificialAltar lastAltar = map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar;
-                SacrificeSpellComplete(lastAltar.executioner, lastAltar);
+                SacrificeSpellComplete(lastAltar.SacrificeData.Executioner, lastAltar);
             }
         }
         public static void SacrificeSpellComplete(Pawn executioner, Building_SacrificialAltar altar)
