@@ -162,7 +162,7 @@ namespace CultOfCthulhu
         public static void DrawAt_PostFix(Pawn_DrawTracker __instance, Vector3 loc)
         {
             Pawn pawn = (Pawn)AccessTools.Field(typeof(Pawn_DrawTracker), "pawn").GetValue(__instance);
-            if (pawn?.GetComp<CompTransmogrified>() is CompTransmogrified compTrans && compTrans.IsTransmogrified)
+            if (pawn?.GetComp<CompTransmogrified>() is CompTransmogrified compTrans && compTrans.IsTransmogrified && pawn.Spawned)
             {
                 Material matSingle;
                 matSingle = CultsDefOf.Cults_TransmogAura.graphicData.Graphic.MatSingle;
@@ -170,7 +170,15 @@ namespace CultOfCthulhu
                 float angle = 0f;
                 angle = pawn.Rotation.AsAngle + (compTrans.Hediff.UndulationTicks * 100);
 
-                Vector3 s = new Vector3((pawn.Drawer.renderer.graphics.nakedGraphic.drawSize.x + compTrans.Hediff.UndulationTicks) * compTrans.Hediff.graphicDiv, 1f, (pawn.Drawer.renderer.graphics.nakedGraphic.drawSize.y + compTrans.Hediff.UndulationTicks) * compTrans.Hediff.graphicDiv);
+                float xCap = pawn.kindDef.lifeStages[0].bodyGraphicData.drawSize.x + 0.5f;
+                float zCap = pawn.kindDef.lifeStages[0].bodyGraphicData.drawSize.y + 0.5f;
+
+                float x = pawn.kindDef.lifeStages[0].bodyGraphicData.drawSize.x;
+                float z = pawn.kindDef.lifeStages[0].bodyGraphicData.drawSize.y;
+                float drawX = Mathf.Clamp((x + compTrans.Hediff.UndulationTicks) * compTrans.Hediff.graphicDiv, 0.01f, xCap);
+                float drawY = Altitudes.AltitudeFor(AltitudeLayer.Terrain);
+                float drawZ = Mathf.Clamp((z + compTrans.Hediff.UndulationTicks) * compTrans.Hediff.graphicDiv, 0.01f, zCap);
+                Vector3 s = new Vector3(drawX, drawY, drawZ);
                 Matrix4x4 matrix = default(Matrix4x4);
                 matrix.SetTRS(loc, Quaternion.AngleAxis(angle, Vector3.up), s);
                 Graphics.DrawMesh(MeshPool.plane10Back, matrix, matSingle, 0);

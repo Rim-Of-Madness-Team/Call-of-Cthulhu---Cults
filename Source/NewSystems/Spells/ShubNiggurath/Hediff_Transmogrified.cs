@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 using Verse;
 
 namespace CultOfCthulhu
 {
-    public class Hediff_Transmogrified : HediffWithComps
+    public class Hediff_Transmogrified : Hediff_Implant
     {
         private float undulationTicks = 0.01f;
         public float UndulationTicks { get => undulationTicks; set => undulationTicks = value; }
 
         public static float tickMax = 2f;
-        public float graphicDiv = 0.5f;
+        public float graphicDiv = 0.75f;
         public static bool tickUp = true;
-        public static int tickRate = 5;
+        public static int tickRate = 8;
 
         public override void Tick()
         {
+            if (this.Part == null)
+                this.Part = this.pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(x => x.def == this.pawn.RaceProps.body.corePart.def);
+
             if (Find.TickManager.TicksGame % tickRate == 0)
             {
                 if (tickUp)
@@ -33,6 +37,7 @@ namespace CultOfCthulhu
                 {
                     tickUp = true;
                 }
+                undulationTicks = Mathf.Clamp(undulationTicks, 0.01f, tickMax);
             }
         }
 

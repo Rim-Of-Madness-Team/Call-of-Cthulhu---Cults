@@ -162,16 +162,19 @@
     <label>monstrous body</label>
         <hediffClass>CultOfCthulhu.Hediff_Transmogrified</hediffClass>
     <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
-	<comps>
+	    <isBad>false</isBad>
+    <comps>
       <li Class="HediffCompProperties_VerbGiver">
-        <verbs>
+        <tools>
           <li>
-            <verbClass>Verb_MeleeAttack</verbClass>
-            <defaultCooldownTime>1.5</defaultCooldownTime>
-            <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
-            <meleeDamageDef>Blunt</meleeDamageDef>
+            <label>body</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8</power>
+            <cooldownTime>1.65</cooldownTime>
           </li>
-        </verbs>  
+        </tools>
       </li>
     </comps>
     <stages>
