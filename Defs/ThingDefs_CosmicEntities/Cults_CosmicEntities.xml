@@ -29,7 +29,7 @@
 	<defName>Entity_Dagon</defName>
     <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
 	<label>Dagon</label>
-	<version>5</version>
+	<version>6</version>
 	<description>The Ur - Deep One, grown large and powerful over the millennia.</description>
     <symbol>Mote/Symbols/Dagon</symbol>
 	<tier1SpellDefs>
@@ -44,6 +44,19 @@
 		<li>Cults_SpellBountyOfTheSea</li>
 	</tier3SpellDefs>
 	<finalSpellDef>Cults_SpellOrthogenesis</finalSpellDef>
+	<pleasingOfferings>
+	  <HumanMeat>1.5</HumanMeat>
+	</pleasingOfferings>
+	<displeasingOfferings>
+	  <ROM_RawCHFood_DeepOneMeat>10.0</ROM_RawCHFood_DeepOneMeat>
+	</displeasingOfferings>
+	<favoredWorshipperRaces>
+	  <Human>1.0</Human>
+	  <ROM_DeepOneHybrid>1.5</ROM_DeepOneHybrid>
+	  <ROM_DeepOne>2.0</ROM_DeepOne>
+	  <ROM_DeepOneGreat>2.0</ROM_DeepOneGreat>
+	</favoredWorshipperRaces>
+	<hereticWorshipperRaces/>	
 </CultOfCthulhu.CosmicEntityDef>
 
 

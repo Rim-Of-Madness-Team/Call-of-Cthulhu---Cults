@@ -9,14 +9,6 @@ namespace CultOfCthulhu
 {
     public class WorkGiver_Investigate : WorkGiver_Scanner
     {
-        public override ThingRequest PotentialWorkThingRequest
-        {
-            get
-            {
-                return ThingRequest.ForGroup(ThingRequestGroup.BuildingArtificial);
-            }
-        }
-
         public IEnumerable<Thing> MysteriousObjects(Pawn pawn)
         {
             List<Thing> thingsToCheck = new List<Thing>(from Thing things in pawn.Map.spawnedThings
@@ -42,7 +34,6 @@ namespace CultOfCthulhu
 
         public override bool ShouldSkip(Pawn pawn)
         {
-
             return MysteriousObjects(pawn).Count<Thing>() == 0;
         }
 
@@ -50,6 +41,12 @@ namespace CultOfCthulhu
 
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
+            if (t.def != CultsDefOf.Cults_PlantTreeNightmare &&
+                t.def != CultsDefOf.Cults_MonolithNightmare)
+            {
+                return false;
+            }
+
             //Log.Message("1");
             MapComponent_LocalCultTracker cultTracker = pawn.MapHeld.GetComponent<MapComponent_LocalCultTracker>();
             if (t == null)

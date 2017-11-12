@@ -20,7 +20,7 @@
     </comps>	
     <stages>
       <li>
-        <label>tense-hidden</label>
+        <label>initial</label>
 		<becomeVisible>false</becomeVisible>
       </li>
       <li>

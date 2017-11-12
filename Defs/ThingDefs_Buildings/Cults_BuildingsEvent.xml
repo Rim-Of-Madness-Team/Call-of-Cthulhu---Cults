@@ -191,34 +191,6 @@
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
 
-  <ThingDef ParentName="CultBuildingBase" Name="CultShipPartBase" Abstract="True">
-    <altitudeLayer>Building</altitudeLayer>
-    <pathCost>150</pathCost>
-    <blockWind>true</blockWind>
-    <passability>Impassable</passability>
-    <fillPercent>1.0</fillPercent>
-    <size>(10,5)</size>
-    <statBases>
-      <MaxHitPoints>1200</MaxHitPoints>
-      <Flammability>0</Flammability>
-      <Beauty>-100</Beauty>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-    <rotatable>true</rotatable>
-    <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <drawerType>MapMeshOnly</drawerType>
-    <repairEffect>ConstructMetal</repairEffect>
-    <castEdgeShadows>false</castEdgeShadows>
-    <staticSunShadowHeight>1.0</staticSunShadowHeight>
-    <forceDebugSpawnable>true</forceDebugSpawnable>
-    <building>
-      <roofCollapseDamageMultiplier>0.2</roofCollapseDamageMultiplier>
-    </building>
-  </ThingDef>
 
   <ThingDef ParentName="CultShipPartBase">
     <defName>Cults_LandedShip</defName>
@@ -252,6 +224,7 @@
     <label>Monolith</label>
     <description>A mysterious upright standing block of stone. It has an insidious aura.</description>
     <thingClass>CultOfCthulhu.Building_Monolith</thingClass>
+	<stealable>false</stealable>
     <category>Building</category>
     <minifiedDef>MinifiedFurniture</minifiedDef>
     <graphicData>

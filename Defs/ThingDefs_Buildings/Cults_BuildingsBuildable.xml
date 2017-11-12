@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
-  <ThingDef Name="CultBuildingBase" Abstract="True">
-    <category>Building</category>
-    <thingClass>Building</thingClass>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <selectable>true</selectable>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <repairEffect>Repair</repairEffect>
-    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-    <filthLeaving>BuildingRubble</filthLeaving>
-  </ThingDef>
-
   <!--
     <ThingDef ParentName="BuildingBase">
     <defName>ThreeTileMarriageSpot</defName>
@@ -111,11 +98,6 @@
 		</building>
   </ThingDef>
 
-
-  <ThingDef Name="CultBenchBase" ParentName="CultBuildingBase" Abstract="True">
-    <castEdgeShadows>true</castEdgeShadows>
-    <staticSunShadowHeight>0.20</staticSunShadowHeight>
-  </ThingDef>
 
 
   <ThingDef ParentName="CultBenchBase">
@@ -402,6 +384,7 @@
     <thingClass>CultOfCthulhu.Building_Monolith</thingClass>
     <category>Building</category>
     <minifiedDef>MinifiedFurniture</minifiedDef>
+	<stealable>false</stealable>
     <graphicData>
       <texPath>Building/ObeliskConstructed/ObeliskConstructed_Red</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -36,6 +36,9 @@
 		<emergency>true</emergency>
 		<verb>investigate</verb>
 		<gerund>investigating</gerund>
+		<fixedBillGiverDefs>
+		  
+		</fixedBillGiverDefs>
 		<requiredCapacities>
 			<li>Manipulation</li>
 		</requiredCapacities>

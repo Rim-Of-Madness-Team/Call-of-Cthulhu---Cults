@@ -46,7 +46,7 @@ namespace CultOfCthulhu
                 yield return current;
             }
 
-            if (this.def != null)
+            if (this.def != null && this is Building_Monolith)
             {
                 if (this.def.hasInteractionCell)
                 {
