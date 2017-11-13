@@ -42,6 +42,13 @@ namespace CultOfCthulhu
         public static ThingDef Cults_TransmogAura;
 
 
+
+        // ============ GAME CONDITIONS =======
+
+        public static GameConditionDef CultgameCondition_StarsAreWrong;
+        public static GameConditionDef CultgameCondition_StarsAreRight;
+
+
         // ============ DUTY DEFS =============
 
         public static DutyDef Cults_LoadAndEnterTransportersPawn;
