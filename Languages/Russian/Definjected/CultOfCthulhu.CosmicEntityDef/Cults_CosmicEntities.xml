@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Entity_Cthulhu.label>Ктулху</Entity_Cthulhu.label>
+  <Entity_Cthulhu.description>Тот, кто ждет сновидения.</Entity_Cthulhu.description>
+
+  <Entity_Dagon.label>Дагон</Entity_Dagon.label>
+  <Entity_Dagon.description>Ур - глубокий, вырос очень крупным и могущественным за тысячелетия.</Entity_Dagon.description>
+
+  <Entity_Shub.label>Шуб-Ниггурат</Entity_Shub.label>
+  <Entity_Shub.description>Чёрный Козёл Лесов с Тысячью Младых</Entity_Shub.description>
+
+  <Entity_Nyarlathotep.label>Ньярлатотеп</Entity_Nyarlathotep.label>
+  <Entity_Nyarlathotep.description>Посланник, сердце и душа Внешних Богов.</Entity_Nyarlathotep.description>
+
+  <Entity_Hastur.label>Хастур</Entity_Hastur.label>
+  <Entity_Hastur.description>Из Его Жёлтого Королевства Невыразимый часовой.</Entity_Hastur.description>
+
+
+</LanguageData>

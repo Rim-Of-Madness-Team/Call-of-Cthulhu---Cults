@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Forbidden_Studies.label>Расшифровать странные символы</Forbidden_Studies.label>
+  <Forbidden_Studies.description>Расшифруйте некоторые из данных языка, чтобы сделать возможными дальнейшие исследования.</Forbidden_Studies.description>
+
+  <Forbidden_Deities.label>Исследовать оккультные божества</Forbidden_Deities.label>
+  <Forbidden_Deities.description>Повторяющиеся исследование нужно, чтобы открыть оккультные божества для поклонения.</Forbidden_Deities.description>
+
+  <Forbidden_Lore.label>Изучение успешных культов</Forbidden_Lore.label>
+  <Forbidden_Lore.description>Повторяющиеся исследование, направленное на совершенствование культового единомыслия исследователя и социальных навыков в ходе исследовательского процесса.\n\nЭто исследование рекомендуется для пешек, желающих стать проповедниками.</Forbidden_Lore.description>
+
+  <Forbidden_Attire.label>Ритуальный наряд</Forbidden_Attire.label>
+  <Forbidden_Attire.description>Позволяет создавать оккультные робы, капюшоны и различные маски. Ношение надлежащей одежды увеличивает шансы на успешные жертвоприношения.</Forbidden_Attire.description>
+
+  <Forbidden_Sculptures.label>Скульптуры</Forbidden_Sculptures.label>
+  <Forbidden_Sculptures.description>Позволяет создавать оккультные скульптуры, посвященные потусторонним существам.</Forbidden_Sculptures.description>
+
+  <Forbidden_Obelisks.label>Строительство обелиска</Forbidden_Obelisks.label>
+  <Forbidden_Obelisks.description>Позволяет проектировать и создавать оккультные обелиски.</Forbidden_Obelisks.description>
+
+  <Forbidden_Altar.label>Алтарь</Forbidden_Altar.label>
+  <Forbidden_Altar.description>Позволяет создать алтарь поклонения, чтобы проводить ритуалы для существ за пределами этого мира.</Forbidden_Altar.description>
+
+  <Forbidden_Sacrifice.label>Алтарь жертвоприношения</Forbidden_Sacrifice.label>
+  <Forbidden_Sacrifice.description>Позволяет вам модернизировать алтарь в алтарь жертвоприношения, чтобы показать большую признательность потусторонним существам.</Forbidden_Sacrifice.description>
+
+  <Forbidden_Human.label>Человеческая жертва</Forbidden_Human.label>
+  <Forbidden_Human.description>Позволяет вам модернизировать алтарь в алтарь человеческих жертвоприношений, позволяя получать впечатляющие выгоды от космических существ.</Forbidden_Human.description>
+
+
+</LanguageData>

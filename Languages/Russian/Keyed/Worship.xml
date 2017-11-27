@@ -1,5 +1,24 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
+
+  <!-- 11/10/17 -->
+  <Cults_AspectOfCthulhuDesc>{0}'s {1} has been replaced with an otherworldly tentacle appendage.</Cults_AspectOfCthulhuDesc>
+
+  <Cults_AspectOfCthulhu_TargetACharacter>Target an organism to endow with Cthulhu's gifts.</Cults_AspectOfCthulhu_TargetACharacter>
+  <Cults_TransmogrifyAnimalsOnly>Target an animal to transmogrify.</Cults_TransmogrifyAnimalsOnly>
+  <Cults_Trans_HI_Body>Body Size: +{0}</Cults_Trans_HI_Body>
+  <Cults_Trans_HI_Health>Health Scale: +{0}</Cults_Trans_HI_Health>
+  <Cults_butsOne>Even so</Cults_butsOne>
+  <Cults_butsTwo>Fortunately</Cults_butsTwo>
+  <Cults_butsThree>Despite this setback</Cults_butsThree>
+  <Cults_butsFour>Luckily</Cults_butsFour>
+  <Cults_ritualWas>The ritual was a </Cults_ritualWas>
+  <Cults_ritualSuccess>complete success.</Cults_ritualSuccess>
+  <Cults_ritualMixedSuccess>mixed success.</Cults_ritualMixedSuccess>
+  <Cults_ritualFailure>failure.</Cults_ritualFailure>
+  <Cults_ritualCompleteFailure>complete failure.</Cults_ritualCompleteFailure>
+
+  <Cults_Investigate>Investigate</Cults_Investigate>
 
   <!-- 7/3/17 -->
   <Cults_TransmogrifiedLetter>Изменение</Cults_TransmogrifiedLetter>
@@ -22,7 +41,7 @@
   <!-- 1.17.3.1 -->
   <Cults_NewDarkYoung>Новорожденная темноволосая вылезла из утробы между мирами.</Cults_NewDarkYoung>
 
-<!-- 1.17.0 New Versioning System-->
+  <!-- 1.17.0 New Versioning System-->
 
   <Cults_NoPlayerCultAvailable>Нет доступного культа</Cults_NoPlayerCultAvailable>
   <Cults_Monstrous>{0} чудовищный</Cults_Monstrous>
@@ -45,26 +64,26 @@
   <Cults_InitialExposureLabel>Оккультные начинания</Cults_InitialExposureLabel>
   <Cults_InitialExposureDesc>Возбужденные новыми возможностями, ваши колонисты уловили некоторый интерес к недавним оккультным событиям.\n\nИх убеждения можно отследить в меню их потребностей. С течением времени эта вера будет постепенно снижаться. Используя оккультные исследования, вы можете укрепить культ и убеждения своих колонистов, пока они не найдут свой собственный культ.</Cults_InitialExposureDesc>
 
-<!-- 1.2.8 Old versioning system -->
+  <!-- 1.2.8 Old versioning system -->
 
   <Altar>Алтарь</Altar>
   <ForcedInvestigation>Принудительное расследование</ForcedInvestigation>
   <ForcedInvestigationDesc>Если этот параметр включен, ваш лучший исследователь будет стремиться исследовать объекты культа.</ForcedInvestigationDesc>
   <IsUnavailable> недоступен.</IsUnavailable>
 
-<!-- 1.2.4 -->
+  <!-- 1.2.4 -->
 
   <ShowDebugCode>Показать код отладки</ShowDebugCode>
   <ShowDebugCodeDesc>В режиме разработчика показан отладочный код для культов. При этом отображается дополнительная информация по расчетам и процессам в процессе работы мода.</ShowDebugCodeDesc>
 
-<!-- 1.2.1 -->
+  <!-- 1.2.1 -->
 
   <CallOfCthulhuCults>Зов Ктулху - Культы</CallOfCthulhuCults>
   <StudySuccessfulCultsIsRepeatableDesc>Позволяет проводить повторяющиеся исследования. Когда отключено, это позволяет игрокам использовать моды, такие как tech GHXX's Tech Advancing.</StudySuccessfulCultsIsRepeatableDesc>
   <StudySuccessfulCultsIsRepeatable>Повторное изучение успешных исследований культов</StudySuccessfulCultsIsRepeatable>
   <RepeatableResearch>{0} теперь можно исследовать снова, чтобы укрепить единство культа.</RepeatableResearch>
 
-<!-- 1.2 -->
+  <!-- 1.2 -->
   <WorshipCancelledCorruptionWarning>Запланированное поклонение отменено из-за поврежденного алтаря.</WorshipCancelledCorruptionWarning>
 
   <PruningSuccessful>Обрезка и ремонт были успешно завершены.</PruningSuccessful>
@@ -88,7 +107,7 @@
   <GameOverAbsorptionByCarcosa>Занавес вашей колонии упал. Эти колонисты первыми покинули сцену этого мира:\n\n{0}</GameOverAbsorptionByCarcosa>
 
 
-<!-- 1.1e -->
+  <!-- 1.1e -->
 
   <SacrificeGathering>{0} собираются для жертвоприношения.</SacrificeGathering>
   <WorshipGathering>{0} собирается для проповеди.</WorshipGathering>
@@ -201,7 +220,7 @@
 
   <!-- Cult Naming -->
 
-  <NameCultMessage>Культ начал формироваться в вашей колонии. {0} считает, что ты должен дать этому культу имя.\n\пКак он должен называться?</NameCultMessage> <NameCultMessageNullHandler>A cult has begun to form in your colony.\n\nWhat should it be called?</NameCultMessageNullHandler>
+  <NameCultMessage>Культ начал формироваться в вашей колонии. {0} считает, что ты должен дать этому культу имя.\n\пКак он должен называться?</NameCultMessage>  <NameCultMessageNullHandler>A cult has begun to form in your colony.\n\nWhat should it be called?</NameCultMessageNullHandler>
   <CultGainsName>Местный культ теперь известен как {0}. Его можно переименовать на местном алтаре.</CultGainsName>
 
   <!-- Sacrifice Result Strings -->
@@ -210,7 +229,7 @@
   <SacrificeLabelfailure>Неудача</SacrificeLabelfailure>
   <SacrificeLabelcriticalfailure>Незначительный провал</SacrificeLabelcriticalfailure>
 
-  <!-- Orbital Insanity Wave --> <LetterLabelForcedCrashCombatSuplier>Поставщик оружия разбился</LetterLabelForcedCrashCombatSuplier>
+  <!-- Orbital Insanity Wave -->  <LetterLabelForcedCrashCombatSuplier>Поставщик оружия разбился</LetterLabelForcedCrashCombatSuplier>
   <ForcedCrashCombatSuplier>Движимый безумием, пилот крушения торговых кораблей неподалеку.</ForcedCrashCombatSuplier>
 
   <LetterLabelForcedCrashExotic>Корабль с экзотикой разбился</LetterLabelForcedCrashExotic>
@@ -236,27 +255,27 @@
   <MessageSunkenShipChunkDrop>Рядом таинственно появился кусок затонувшего корабля.</MessageSunkenShipChunkDrop>
 
   <!-- Game Over-->
-	<CoercionRole>Дизайн, арт</CoercionRole>
-	<DrynynRole>Дизайн, текст</DrynynRole>
-	<erdelfRole>Программирование</erdelfRole>
-	<JareixRole>Дизайн, арт</JareixRole>
-	<JecrellRole>Дизайн, арт, текст, программирование</JecrellRole>
-	<JunkyardJoeRole>Дизайн, текст, концепт-арт</JunkyardJoeRole>
-	<spoonshortageRole>арт</spoonshortageRole>
-	<SticksNTricksRole>арт, дизайн</SticksNTricksRole>
-	<PlymouthRole>арт</PlymouthRole>
-	<SeraRole>арт</SeraRole>
-	<NackbladRole>Дизайн, арт</NackbladRole>
-	<PatreonProducer>Продюсер</PatreonProducer>
-	<PatreonSupporter>Сторонники Patreon</PatreonSupporter>
+  <CoercionRole>Дизайн, арт</CoercionRole>
+  <DrynynRole>Дизайн, текст</DrynynRole>
+  <erdelfRole>Программирование</erdelfRole>
+  <JareixRole>Дизайн, арт</JareixRole>
+  <JecrellRole>Дизайн, арт, текст, программирование</JecrellRole>
+  <JunkyardJoeRole>Дизайн, текст, концепт-арт</JunkyardJoeRole>
+  <spoonshortageRole>арт</spoonshortageRole>
+  <SticksNTricksRole>арт, дизайн</SticksNTricksRole>
+  <PlymouthRole>арт</PlymouthRole>
+  <SeraRole>арт</SeraRole>
+  <NackbladRole>Дизайн, арт</NackbladRole>
+  <PatreonProducer>Продюсер</PatreonProducer>
+  <PatreonSupporter>Сторонники Patreon</PatreonSupporter>
 
-	<GameOverSummonCthulhu>На вершине ритуала вы чувствуете великую силу. Ваши песнопения усиливаются в пылкости и кажется, умножаются в количестве - как будто вы слышите, как просители из бесчисленных других миров повторяют ваше собственное пение.\n\nВ взгляде в прошлое вы не можете вспомнить, когда вы были успешны. Время, пространство, ваше чувство собственного достоинства перестали быть значимыми. Но теперь вы знаете, что великий человек возник! Ктулху теперь уже не дремлет в своем великом городе Р’льехе. Как существо, выходящее за рамки простой материи, его присутствие и форма многообразны. Будете ли вы считаться достаточно верными, чтобы быть достойными взглянуть на его физическое воплощение, прежде чем ваш разум будет разорван?\n\nДаже сейчас вы пытаетесь сохранить любой уровень ясности, как законы, с помощью которых вселенная действует в фантазии.\n\nВы вызвали Ктулху! Эти колонисты были уничтожены после его прихода:\n\n{0}</GameOverSummonCthulhu>
+  <GameOverSummonCthulhu>На вершине ритуала вы чувствуете великую силу. Ваши песнопения усиливаются в пылкости и кажется, умножаются в количестве - как будто вы слышите, как просители из бесчисленных других миров повторяют ваше собственное пение.\n\nВ взгляде в прошлое вы не можете вспомнить, когда вы были успешны. Время, пространство, ваше чувство собственного достоинства перестали быть значимыми. Но теперь вы знаете, что великий человек возник! Ктулху теперь уже не дремлет в своем великом городе Р’льехе. Как существо, выходящее за рамки простой материи, его присутствие и форма многообразны. Будете ли вы считаться достаточно верными, чтобы быть достойными взглянуть на его физическое воплощение, прежде чем ваш разум будет разорван?\n\nДаже сейчас вы пытаетесь сохранить любой уровень ясности, как законы, с помощью которых вселенная действует в фантазии.\n\nВы вызвали Ктулху! Эти колонисты были уничтожены после его прихода:\n\n{0}</GameOverSummonCthulhu>
 
-    <GameOverOrthogenesis>Сначала изменения были медленными и тонкими. Потеря волос, небольшое увеличение глаз, растущая сероватая бледность кожи. Некоторые из них были более продвинутыми, чем другие, и появились маленькие жаберные щели. Было ясно, что ваша генетическая судьба не была ровня остальному человечеству.\n\nТеперь вы слышите отдаленное кваканье вашего новообретенного родственника. Этот звук, который однажды сделал ночь ужасной, теперь чувствуется знакомым и приветивым. Он зовет вас домой. Вы смотрите на свои вещи, но решаете оставить их позади. Они не понадобятся вам там, куда вы идете.\n\nПо благословению великого Отца и Матери, которые правят под волнами, вы теперь должны присоединиться к своим братьям.\n\nЭти колонисты были потеряны в волнах:\n\n{0}</GameOverOrthogenesis>
+  <GameOverOrthogenesis>Сначала изменения были медленными и тонкими. Потеря волос, небольшое увеличение глаз, растущая сероватая бледность кожи. Некоторые из них были более продвинутыми, чем другие, и появились маленькие жаберные щели. Было ясно, что ваша генетическая судьба не была ровня остальному человечеству.\n\nТеперь вы слышите отдаленное кваканье вашего новообретенного родственника. Этот звук, который однажды сделал ночь ужасной, теперь чувствуется знакомым и приветивым. Он зовет вас домой. Вы смотрите на свои вещи, но решаете оставить их позади. Они не понадобятся вам там, куда вы идете.\n\nПо благословению великого Отца и Матери, которые правят под волнами, вы теперь должны присоединиться к своим братьям.\n\nЭти колонисты были потеряны в волнах:\n\n{0}</GameOverOrthogenesis>
 
-    <GameOverTransdimensionalConvergence>Я делаю знаки, я говорю слова\nкоторые открывают дверь!\nКогда я говорю, я поворачиваю ключ\nСейчас! еще раз прогуляйся по Земле!\n\nНе в небесах вы видите туман, хотя, как будто через трещины в небе. Усики облачного вещества тянутся вниз, что порождает глаза, зубы и конечности в смеси биологического избытка.\n\nВы открыли путь для Шуба Ниггурата, чтобы завладеть своей Вселенной. Эти колонисты были уничтожены после его прихода\n\n{0}</GameOverTransdimensionalConvergence>
+  <GameOverTransdimensionalConvergence>Я делаю знаки, я говорю слова\nкоторые открывают дверь!\nКогда я говорю, я поворачиваю ключ\nСейчас! еще раз прогуляйся по Земле!\n\nНе в небесах вы видите туман, хотя, как будто через трещины в небе. Усики облачного вещества тянутся вниз, что порождает глаза, зубы и конечности в смеси биологического избытка.\n\nВы открыли путь для Шуба Ниггурата, чтобы завладеть своей Вселенной. Эти колонисты были уничтожены после его прихода\n\n{0}</GameOverTransdimensionalConvergence>
 
-    <GameOverPilgrimageToKadath>За последние несколько недель мечты становились все сильнее и ярче. В сравнении с этим реальный мир стал бледным. Вы бы закрыли глаза, чтобы увидеть его великолепные мраморные шпили и серебряные фонтаны - город мечты Кадат. Были те, кто думал, что эти видения не были реальными или что они были приманкой для какой-то ловушки. Даже если бы это было так, вы знаете, что вы все равно бы искали его.\n\nИ вот теперь Ньярлатотеп пришел, чтобы увести вас в этот рай.\n\nНьярлатотеп заставил ваших колонистов спать и побывать в Кадате. Вследствие этого эти колонисты рассматривали Азатота прежде, чем они были немедленно уничтожены из-за безумия:\n\n{0}</GameOverPilgrimageToKadath>
+  <GameOverPilgrimageToKadath>За последние несколько недель мечты становились все сильнее и ярче. В сравнении с этим реальный мир стал бледным. Вы бы закрыли глаза, чтобы увидеть его великолепные мраморные шпили и серебряные фонтаны - город мечты Кадат. Были те, кто думал, что эти видения не были реальными или что они были приманкой для какой-то ловушки. Даже если бы это было так, вы знаете, что вы все равно бы искали его.\n\nИ вот теперь Ньярлатотеп пришел, чтобы увести вас в этот рай.\n\nНьярлатотеп заставил ваших колонистов спать и побывать в Кадате. Вследствие этого эти колонисты рассматривали Азатота прежде, чем они были немедленно уничтожены из-за безумия:\n\n{0}</GameOverPilgrimageToKadath>
 
 
 </LanguageData>

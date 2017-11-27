@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
   <SacrificeFailMessage1>{0} чихает во время деликатного пения.</SacrificeFailMessage1>
@@ -41,5 +41,5 @@
   <SacrificeFailMessage38>{0} останавливает свое пение, когда земля содрогается, словно каким-то рычанием.</SacrificeFailMessage38>
   <SacrificeFailMessage39>{0} чувствует нарастающую проклятую силу внутри себя, безумную и едва контролируемую.</SacrificeFailMessage39>
   <SacrificeFailMessage40>40</SacrificeFailMessage40>
-  
-  </LanguageData>
+
+</LanguageData>

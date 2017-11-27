@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Coats -->
+
+  <Apparel_CultistRobes.label>Роба культиста</Apparel_CultistRobes.label>
+  <Apparel_CultistRobes.description>Для тех, у кого есть знания.</Apparel_CultistRobes.description>
+
+
+  <!-- Fur Cultist Robes -->
+
+  <Apparel_ROMFurRobes.label>Роба культиста (меховая)</Apparel_ROMFurRobes.label>
+  <Apparel_ROMFurRobes.description>Однако, как и другие робы, которые носят культисты, они специально предназначены для более холодных климатов.</Apparel_ROMFurRobes.description>
+
+
+  <!-- Toga Cultist Vestments -->
+
+  <Apparel_ROMWrapRobes.label>Культистское облачение (туника)</Apparel_ROMWrapRobes.label>
+  <Apparel_ROMWrapRobes.description>Эта священная туника позволяет священникам проповедовать с большей привлекательностью, появляясь как простое или низкое существо. Она также позволяет лучше проповедовать в местах, с большой угрозой со стороны солнца и тепла.</Apparel_ROMWrapRobes.description>
+
+
+  <!-- Tentacled Cultist Vestments -->
+
+  <Apparel_ROMCthulhuRobes.label>Культистское облачение (щупальца)</Apparel_ROMCthulhuRobes.label>
+  <Apparel_ROMCthulhuRobes.description>Украшенное искусственными щупальцами, эту внушительную робу предпочитают жрецы Ньярлатотепа или Ктулху.</Apparel_ROMCthulhuRobes.description>
+
+
+  <!-- Traditional Cultist Vestments -->
+
+  <Apparel_ROMDagonRobes.label>Культистское облачение (традиционное)</Apparel_ROMDagonRobes.label>
+  <Apparel_ROMDagonRobes.description>Впечатляющие облачение привилегированное по приказу Дагона или Хастура.</Apparel_ROMDagonRobes.description>
+
+
+  <!-- Druidic Cultist Vestments -->
+
+  <Apparel_ROMShubRobes.label>Культистское облачение (друид)</Apparel_ROMShubRobes.label>
+  <Apparel_ROMShubRobes.description>Эти лесные священнические одежды, украшенные святыми веточками, для обращения к богам, таким как Шуб-Ниггурат.</Apparel_ROMShubRobes.description>
+
+  <Apparel_SailorUniform.label>Матросская униформа</Apparel_SailorUniform.label>
+  <Apparel_SailorUniform.description>Для моряков.</Apparel_SailorUniform.description>
+
+
+  <!-- Hats -->
+
+  <Apparel_CultistHood.label>Капюшон культиста (скрывающий)</Apparel_CultistHood.label>
+  <Apparel_CultistHood.description>Для скрытных колонистов.</Apparel_CultistHood.description>
+
+  <Apparel_CthulhuMaskHood.label>Капюшон культиста (маска ктулху)</Apparel_CthulhuMaskHood.label>
+  <Apparel_CthulhuMaskHood.description>Эта маска предназначена исключительно для того, чтобы выглядеть более приятным для вашего божества. С её помощью ваши песнопения и их коварный шепот кажутся более сильными.</Apparel_CthulhuMaskHood.description>
+
+  <Apparel_NyarlathotepHood.label>Капюшон культиста (ньярлатотеп)</Apparel_NyarlathotepHood.label>
+  <Apparel_NyarlathotepHood.description>Для поклонников ньярлатотепа этот капюшон предназначен исключительно для того, чтобы выглядеть более приятным для вашего божества. С его помощью ваши песнопения и их коварный шепот кажутся более сильными.</Apparel_NyarlathotepHood.description>
+
+  <Apparel_DagonMitre.label>Капюшон культиста (митра дагона)</Apparel_DagonMitre.label>
+  <Apparel_DagonMitre.description>Для поклонников дагона эта митра "колпак" предназначена для единственной цели выглядеть более приятным для вашего божества. С его помощью ваши песнопения и их коварный шепот кажутся более сильными.</Apparel_DagonMitre.description>
+
+  <Apparel_ShubMask.label>Капюшон культиста (маска шуб-ниггурата)</Apparel_ShubMask.label>
+  <Apparel_ShubMask.description>Для поклонников Шуб-Ниггурата эта маска предназначена исключительно для того, чтобы выглядеть более приятным для вашего божества. С её помощью ваши песнопения и их коварный шепот кажутся более сильными.</Apparel_ShubMask.description>
+
+  <Apparel_StandardHood.label>Капюшон культиста (простой)</Apparel_StandardHood.label>
+  <Apparel_StandardHood.description>Для скрытных колонистов.</Apparel_StandardHood.description>
+
+  <Apparel_SailorsCap.label>Матросская фуражка</Apparel_SailorsCap.label>
+  <Apparel_SailorsCap.description>Для моряков.</Apparel_SailorsCap.description>
+
+
+</LanguageData>
