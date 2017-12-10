@@ -23,4 +23,82 @@
     </additionalHediffs>
     <explosionCellMote>Mote_BlastFlame</explosionCellMote>
   </DamageDef>
+  
+  <DamageDef ParentName="Cults_LocalInjuryBase">
+    <defName>Cults_AcidBurn</defName>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <label>acid burn</label>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has melted to death.</deathMessage>
+    <hediff>Cults_AcidBurn</hediff>
+    <armorCategory>Heat</armorCategory>
+    <spreadOut>true</spreadOut>
+    <explosionDamage>10</explosionDamage>
+    <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+    <explosionCellMote>Mote_BlastFlame</explosionCellMote>
+    <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <combatLogRules>Damage_Flame</combatLogRules>
+  </DamageDef>
+  
+  
+  	<HediffDef ParentName="Cults_InjuryBase">
+		<defName>Cults_AcidBurn</defName>
+		<label>acid burn</label>
+    <labelNoun>an acid burn</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.25</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsOld">
+        <oldLabel>burn scar</oldLabel>
+      </li>
+    </comps>
+		<injuryProps>
+      <painPerSeverity>0.02075</painPerSeverity>
+      <averagePainPerSeverityOld>0.00625</averagePainPerSeverityOld>
+      <canMerge>true</canMerge>
+			<destroyedLabel>Burned off</destroyedLabel>
+			<destroyedOutLabel>Burned out</destroyedOutLabel>
+		</injuryProps>
+	</HediffDef>
+	
+  <ManeuverDef>
+    <defName>Cults_AcidTouch</defName>
+    <requiredCapacity>Cults_AcidTouch</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttack</verbClass>
+      <meleeDamageDef>Cults_AcidBurn</meleeDamageDef>
+    </verb>
+    <combatLogRules>Maneuver_Scratch</combatLogRules>
+  </ManeuverDef>
+	
+	
+  <ToolCapacityDef>
+    <defName>Cults_AcidTouch</defName>
+    <label>acid burning</label>
+  </ToolCapacityDef>
+
+	
+	
+  <HediffDef Name="Cults_InjuryBase" Abstract="True">
+    <hediffClass>Hediff_Injury</hediffClass>
+    <tendable>true</tendable>
+    <displayWound>true</displayWound>
+  </HediffDef>
+  
+  
+  <DamageDef Name="Cults_LocalInjuryBase" Abstract="True">
+    <workerClass>DamageWorker_AddInjury</workerClass>
+  </DamageDef>
+  
 </Defs>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <HediffDef Name="DiseaseBase" Abstract="True">
+  <HediffDef Name="Cults_DiseaseBase" Abstract="True">
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
   </HediffDef>
 
-  <HediffDef ParentName="DiseaseBase">
+  <HediffDef ParentName="Cults_DiseaseBase">
     <defName>Cults_SanityLoss</defName>
 	<label>sanity loss</label>
     <initialSeverity>0.001</initialSeverity>

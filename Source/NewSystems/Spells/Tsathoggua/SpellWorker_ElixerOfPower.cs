@@ -41,14 +41,10 @@ namespace CultOfCthulhu
         protected override bool TryExecuteWorker(IncidentParms parms)
         {
             Map map = parms.target as Map;
-            //Spawn some goats
-            //Cthulhu.Utility.SpawnPawnsOfCountAt(CultDefOfs.BlackIbex, altar.Position, Rand.Range(2, 5), Faction.OfPlayer);
 
-            //Spawn a fertility idol.
-            Cthulhu.Utility.SpawnThingDefOfCountAt(CultsDefOf.Cults_FertilityTotem, 1, new TargetInfo(altar(map).RandomAdjacentCell8Way(), map));
+            Cthulhu.Utility.SpawnThingDefOfCountAt(CultsDefOf.Cults_ElixerOfPower, 1, new TargetInfo(altar(map).RandomAdjacentCell8Way(), map));
 
-            //Spawn a 
-            Messages.Message("An idol of fertility rises from the corpse.", MessageTypeDefOf.PositiveEvent);
+            Messages.Message("Cults_ElixerOfPower_Spawns".Translate(), MessageTypeDefOf.PositiveEvent);
 
             Cthulhu.Utility.ApplyTaleDef("Cults_SpellFertilityRitual", map);
             return true;

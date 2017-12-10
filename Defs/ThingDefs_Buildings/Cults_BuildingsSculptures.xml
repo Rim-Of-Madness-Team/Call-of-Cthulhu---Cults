@@ -174,4 +174,80 @@
     </comps>
   </ThingDef>
 
+  
+  <ThingDef ParentName="CultSculptureBase">
+    <defName>SculptureTsathoggua</defName>
+    <label>monstrous abomination sculpture</label>
+    <description>A car-sized piece of material sculpted into the stylised form of a giant bulbous head. This wide squat-shaped amalgation of a bat, toad, and other creatures creates a unique and yet unsettling visage that glares with a ravenous hunger.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Building/TsathogguaSculpture/TsathogguaSculpture</texPath>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <size>(3,2)</size>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Beauty>140</Beauty>
+      <WorkToMake>95000</WorkToMake>
+      <Mass>80</Mass>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>320</costStuffCount>
+    <comps>
+	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+	  <deities>
+	  <li>
+	    <deityDef>Entity_Tsathoggua</deityDef>
+	  </li>
+	  </deities>
+    </li>
+    </comps>
+  </ThingDef>
+
+    
+  <ThingDef ParentName="CultSculptureBase">
+    <defName>SculptureHastur</defName>
+    <label>monstrous king sculpture</label>
+    <description>A car-sized piece of material sculpted into the stylised form of a giant bulbous head. An ominous king stands before a kingdom, staring downwards.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Building/HasturSculpture/HasturSculpture</texPath>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <size>(3,2)</size>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Beauty>140</Beauty>
+      <WorkToMake>95000</WorkToMake>
+      <Mass>80</Mass>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>320</costStuffCount>
+    <comps>
+	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+	  <deities>
+	  <li>
+	    <deityDef>Entity_Hastur</deityDef>
+	  </li>
+	  </deities>
+    </li>
+    </comps>
+  </ThingDef>
+
+  
+  
 </Defs>

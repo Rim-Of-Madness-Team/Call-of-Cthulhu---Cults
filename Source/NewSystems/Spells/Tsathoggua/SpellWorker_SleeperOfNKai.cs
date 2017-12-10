@@ -23,7 +23,7 @@ using RimWorld.Planet;   // RimWorld specific functions for world creation
 
 namespace CultOfCthulhu
 {
-    public class SpellWorker_TsaIdol : SpellWorker
+    public class SpellWorker_SleeperOfNKai : SpellWorker
     {
 
         public override bool CanSummonNow(Map map)
@@ -45,12 +45,12 @@ namespace CultOfCthulhu
             //Cthulhu.Utility.SpawnPawnsOfCountAt(CultDefOfs.BlackIbex, altar.Position, Rand.Range(2, 5), Faction.OfPlayer);
 
             //Spawn a fertility idol.
-            Cthulhu.Utility.SpawnThingDefOfCountAt(CultsDefOf.Cults_FertilityTotem, 1, new TargetInfo(altar(map).RandomAdjacentCell8Way(), map));
+            Cthulhu.Utility.SpawnThingDefOfCountAt(CultsDefOf.Cults_SleepTotem, 1, new TargetInfo(altar(map).RandomAdjacentCell8Way(), map));
 
             //Spawn a 
-            Messages.Message("An idol of fertility rises from the corpse.", MessageTypeDefOf.PositiveEvent);
+            Messages.Message("Cults_SleepTotem_Spawns".Translate(), MessageTypeDefOf.PositiveEvent);
 
-            Cthulhu.Utility.ApplyTaleDef("Cults_SpellFertilityRitual", map);
+            Cthulhu.Utility.ApplyTaleDef("Cults_SpellSleeperOfNKai", map);
             return true;
         }
     }

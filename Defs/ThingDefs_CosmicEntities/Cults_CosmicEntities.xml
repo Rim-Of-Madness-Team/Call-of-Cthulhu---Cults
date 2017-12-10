@@ -131,31 +131,28 @@
 	</favoredApparel>
 </CultOfCthulhu.CosmicEntityDef>
 
-
-<!-- 9/15/2017
 <ThingDef Class="CultOfCthulhu.CosmicEntityDef">
 	<defName>Entity_Tsathoggua</defName>
     <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
 	<label>Tsathoggua</label>
-	<version>1</version>
-	<description>The ravenous Sleeper of N'Kai hungers for sacrifice.</description>
-    <symbol>Mote/Symbols/Hastur</symbol>
+	<version>2</version>
+	<description>The ravenous toad-like god Tsathoggua lays in wait.</description>
+    <symbol>Mote/Symbols/Tsathoggua</symbol>
 	<tier1SpellDefs>
 		<li>Cults_SpellFavor</li>
-		<li>Cults_SpellTheKingInYellow</li>
-		<li>Cults_SpellSummonByakhee</li>
+		<li>Cults_SpellSleeperOfNKai</li>
+		<li>Cults_SpellBlackIchor</li>
 	</tier1SpellDefs>
 	<tier2SpellDefs>
-		<li>Cults_SpellVisionsOfCarcosa</li>
+		<li>Cults_SpellFormlessSpawn</li>
 	</tier2SpellDefs>
 	<tier3SpellDefs>
-		<li>Cults_SpellUnspeakableOath</li>
+		<li>Cults_SpellElixerOfPower</li>
 	</tier3SpellDefs>
-	<finalSpellDef>Cults_SpellAbsorptionByCarcosa</finalSpellDef>
+	<finalSpellDef>Cults_SpellCallToDarkness</finalSpellDef>
 	<favoredApparel>
 		<li>Apparel_CultistHood</li>
 	</favoredApparel>
 </ThingDef>
--->
 
 </Defs>

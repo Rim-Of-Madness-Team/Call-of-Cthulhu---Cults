@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="ROM_MealBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+			<Beauty>-4</Beauty>
+			<Mass>0.44</Mass>
+			<DeteriorationRate>10</DeteriorationRate>
+		</statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>10</stackLimit>
+    <tickerType>Rare</tickerType>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>FoodMeals</li>
+    </thingCategories>
+    <alwaysHaulable>true</alwaysHaulable>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Ingredients" />
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <pathCost>15</pathCost>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <ingestible>
+      <foodType>Meal</foodType>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="ROM_MealBase" Name="ROM_MealRottable" Abstract="True">
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MealRottable">
+    <defName>Cults_BlackIchorMeal</defName>
+    <label>black ichor</label>
+    <description>Ichor can be a liquid that runs through the veins of the gods. The true origin of this black ichor, however, is a mystery.\n\nIt is abysmal to behold, dark and black like a bottomless pit. Its texture is coagulated in places with the consistency of sausages hiding in very light sauces. The smell is not quite nauseating, as the smell bears just a hint of what one would find in a dark cave. Strangest of all is the taste. Once it touches the tongue, all of the irksome properties transform into a delightful honey-flavor, and the thickened portions taste of sweetmeats.\n\nThis thick soupy black ichor nourishes and invigorates followers of Tsathoggua at the cost of very little sanity loss.</description>
+    <graphicData>
+      <texPath>Item/Resource/BlackIchor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<tradeability>Never</tradeability>
+    <statBases>
+      <MarketValue>0</MarketValue>
+    </statBases>
+    <ingestible>
+      <preferability>MealFine</preferability>
+			<tasteThought>AteFineMeal</tasteThought>
+			<nutrition>0.90</nutrition>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+  
+</Defs>

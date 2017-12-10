@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- Cosmic Horror Base -->
+
+  <ThingDef ParentName="BaseCultHorrorRaceInit" Name="BaseCultHorrorRace" Abstract="True">  
+    <statBases>
+      <Mass>75</Mass>	
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-950</ComfyTemperatureMin>
+      <ComfyTemperatureMax>950</ComfyTemperatureMax>
+	  <MeatAmount>25</MeatAmount>
+      <LeatherAmount>20</LeatherAmount>	  
+    </statBases>
+    <race>
+      <bloodDef>FilthBloodInsect</bloodDef>	
+      <meatColor>(160,150,140)</meatColor>
+      <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+      <useMeatFrom>Megaspider</useMeatFrom>	  
+      <manhunterOnDamageChance>1</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>1</manhunterOnTameFailChance>	  
+      <needsRest>true</needsRest>
+      <hasGenders>true</hasGenders>
+      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+      <leatherInsulation>0.70</leatherInsulation>
+      <leatherMarketValueFactor>3</leatherMarketValueFactor>
+	  <hediffGiverSets>
+		<li>OrganicStandard</li>
+	  </hediffGiverSets>
+    </race>
+  </ThingDef>  
+  
+<!-- Cosmic Horror Init -->  
+ <ThingDef Name="BaseCultHorrorRaceInit" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Guest</li>
+	  <li>ITab_Pawn_Combat</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+    
+  
+</Defs>

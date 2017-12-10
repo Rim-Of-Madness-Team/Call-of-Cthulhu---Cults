@@ -61,11 +61,13 @@
     <Compile Include="NewSystems\Cult\Seed\WorkGiver_Investigate.cs" />
     <Compile Include="NewSystems\Sacrifice\Bill_Sacrifice.cs" />
     <Compile Include="NewSystems\Spells\ShubNiggurath\Hediff_Transmogrified.cs" />
-    <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_AbyssalRift.cs" />
+    <Compile Include="NewSystems\Spells\Tsathoggua\Building_TotemSleep.cs" />
+    <Compile Include="NewSystems\Spells\Tsathoggua\CompTargetEffect_ElixerOfPower.cs" />
+    <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_BlackIchor.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_CallToDarkness.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_ElixerOfPower.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_FormlessSpawn.cs" />
-    <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_TsaIdol.cs" />
+    <Compile Include="NewSystems\Spells\Tsathoggua\SpellWorker_SleeperOfNKai.cs" />
     <Compile Include="NewSystems\Worship\Building_SacrificialAltar_Worship.cs" />
     <Compile Include="NewSystems\Worship\CompProperties_WorshipCaller.cs" />
     <Compile Include="NewSystems\Worship\CompWorshipCaller.cs" />

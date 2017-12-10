@@ -2,6 +2,50 @@
 <Defs>
 
   <ThingDef ParentName="CultBuildingBase">
+    <defName>Cults_SleepTotem</defName>
+    <label>sleep totem</label>
+    <description>Totem that draws invaders towards it and induces them into an inescapable trance, where dreams devour dreamers. The effect is limited enough to delay intruders long enough to expose them to other hazards.</description> 
+    <thingClass>CultOfCthulhu.Building_TotemSleep</thingClass>
+    <tickerType>Rare</tickerType>
+    <category>Building</category>
+    <fertility>2.0</fertility>
+    <specialDisplayRadius>5.8</specialDisplayRadius>
+	<graphicData>
+      <texPath>Building/Exotic/SleepTotem/SleepTotem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <designationHotKey>Misc11</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>8</pathCost>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <rotatable>false</rotatable>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToMake>170</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+  </ThingDef>
+
+
+  <ThingDef ParentName="CultBuildingBase">
     <defName>Cults_FertilityTotem</defName>
     <label>fertility totem</label>
     <description>Totem that increases growth rate of crops for two quadrums.</description> 

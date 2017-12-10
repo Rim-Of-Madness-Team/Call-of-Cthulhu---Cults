@@ -215,4 +215,44 @@
     </rulePack>	
   </TaleDef>
   
+  
+  <TaleDef>
+    <defName>Cults_SpellSleeperOfNKai</defName>
+    <label>sleeper of n'kai</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+	<type>Volatile</type>
+    <baseInterest>2</baseInterest>	
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun->the time Tsathoggua granted us an idol</li>
+        <li>image->Tsathoggua sits in perpetual motionlessness with an aura of divine sloth </li>
+        <li>circumstance_phrase->and from its ichor oozed upwards from the earth came a small sculpture</li>
+        <li>circumstance_phrase->and tendris of is shapeless servants carried forth a small idol in his image through the earth</li>
+        <li>desc_sentence->The totem appears like a squat, fat toad-like creature with features of a bat and sloth.</li>
+        <li>desc_sentence->Behind the eyes of the totem can be seen a field of skulls beneath an unmoving god.</li>
+        <li>desc_sentence->The divine Tsathoggua beckons for more sacrifices with a gaping maw and searching tongue.</li>
+      </rulesStrings>
+    </rulePack>	
+  </TaleDef>
+  
+    <TaleDef>
+    <defName>Cults_SpellBlackIchor</defName>
+    <label>black ichor</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+	<type>Volatile</type>
+    <baseInterest>2</baseInterest>	
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun->the time Tsathoggua squeezed its black ichor into our realm</li>
+        <li>image->Tsathoggua sits in perpetual motionlessness with an aura of divine sloth </li>
+        <li>circumstance_phrase->and from its gaping maw, the black ichor trailed down its tongue</li>
+        <li>circumstance_phrase->and from its claws gripping tighly crushed skulls, black ichor oozed out of the cracks</li>
+        <li>desc_sentence->The ichor runs through the earth like lightning striking the world, and fills our colony with sustenance.</li>
+        <li>desc_sentence->The ichor makes a sloppy black fountain, pooling semi-solid ooze into edible clumps.</li>
+        <li>desc_sentence->The divine Tsathoggua waits for furher sacrifices bearing an expression of both hunger and divine sloth.</li>
+      </rulesStrings>
+    </rulePack>	
+  </TaleDef>
+  
+  
 </Defs>

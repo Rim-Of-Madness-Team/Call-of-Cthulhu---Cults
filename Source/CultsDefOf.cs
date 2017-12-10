@@ -30,6 +30,8 @@ namespace CultOfCthulhu
     {
         // ============= UNSORTED ============
 
+        public static ThingDef Cults_ElixerOfPower;
+        public static ThingDef Cults_BlackIchorMeal;
         public static ThingDef Cults_SignOfDagon;
         public static DamageDef Cults_Psionic;
         public static AbilityDef Cults_PsionicBlast;
@@ -103,7 +105,7 @@ namespace CultOfCthulhu
 
         public static PawnKindDef Cults_Byakhee;
 
-
+        public static PawnKindDef Cults_FormlessSpawn;
 
         public static PawnKindDef Cults_Sailor;
 
@@ -125,6 +127,8 @@ namespace CultOfCthulhu
         public static HediffDef Cults_CthulhidTentacle;
 
         public static HediffDef Cults_CthulhidEyestalk;
+
+        public static HediffDef Cults_SleepHediff;
 
         // =============== THOUGHTS ===============
 
@@ -204,6 +208,9 @@ namespace CultOfCthulhu
         public static SoundDef RitualChanting;
 
         // =============== BUILDINGS ===============
+
+        public static ThingDef Cults_SleepTotem;
+
 
         public static ThingDef Cults_FertilityTotem;
 

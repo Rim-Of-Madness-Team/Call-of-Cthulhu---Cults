@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+<!-- 12/6/17 -->
+
+<Cults_SleepTotem_StateAsleep>State: Asleep</Cults_SleepTotem_StateAsleep>
+<Cults_SleepTotem_StateDrowsy>State: Drowsy</Cults_SleepTotem_StateDrowsy>
+<Cults_SleepTotem_StateAwake>State: Awake</Cults_SleepTotem_StateAwake>
+
+<Cults_SleepTotem_FullyAwakensIn>Fully awakens in {0}</Cults_SleepTotem_FullyAwakensIn>
+
+<Cults_SleepTotem_Spawns>An idol of sleep forms from black ichor oozed upwards from the world below.</Cults_SleepTotem_Spawns>
+
+<Cults_BlackIchor_Spawns>Black ichor oozes out from the altar.</Cults_BlackIchor_Spawns>
+
+<Cults_ElixerOfPower_Spawns>An ornate flask solidifies from the altar.</Cults_ElixerOfPower_Spawns>
+
+<GameOverCallToDarkness>As the congregation continue their chant for what seems ages, the smell of earth begins to fill the air. Then without a sound, the earth splits apart.\n\nSluggishly, the temple begins to sloppily slide, carried along black muck -- ever downwards. With greater depth comes a loss of light and the sky above. The walls of earth begin to give way to thick stones and loose bones. A great time passes. They reach their final destination, nested in a mound of skeletons, and the only light is reflected from thousands of ravenous eyes. When the congregation lights a torch, the eyes scatter and leave only the cyclopian, unmoving visage of the Great Old One, Tsathoggua himself.\n\nThe silence breaks when black ichor wraps around the cultists from above and below, silent screams bubble inside thickened liquid. After a few moments the bubbles cease and silence again fills the void. In time, their now motionless forms will rise again, and the cult will continue to serve --\n\n--just not as they had imagined.</GameOverCallToDarkness>
+
+
   <!-- 11/10/17 -->
   <Cults_AspectOfCthulhuDesc>{0}'s {1} has been replaced with an otherworldly tentacle appendage.</Cults_AspectOfCthulhuDesc>
   

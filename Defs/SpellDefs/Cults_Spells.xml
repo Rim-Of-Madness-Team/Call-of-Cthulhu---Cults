@@ -308,6 +308,56 @@
         <letterText>dons a mask and so is free</letterText>
 	</IncidentDef>
 
+	
+	<!--
+
+ -->
+
+    <IncidentDef ParentName="SpellDef">
+		<label>Sleeper of N'Kai</label>
+		<description>Summons an unspeakably deformed idol that luls raiders to sleep.</description>
+		<defName>Cults_SpellSleeperOfNKai</defName>
+		<workerClass>CultOfCthulhu.SpellWorker_SleeperOfNKai</workerClass>
+        <letterLabel>to satiate his hunger in exchange for a totem of power</letterLabel>
+        <letterText>beholds tar-black tendrils ooze through the ground and pool into a small figure. which radiates a hypnotizing gaze shaded with an unnerving hunger</letterText>
+	</IncidentDef>
+
+	<IncidentDef ParentName="SpellDef">
+		<label>Black Ichor</label>
+		<description>Brings forth savory black ichor to satiate your colonists' gluttony and improve their mood.</description>
+		<defName>Cults_SpellBlackIchor</defName>
+		<workerClass>CultOfCthulhu.SpellWorker_BlackIchor</workerClass>
+        <letterLabel>and request for aid in fulfilling their own appetites</letterLabel>
+        <letterText>hears strange whispers from below as unearthly basins fill with black ooze from the earth</letterText>
+	</IncidentDef>
+
+	<IncidentDef ParentName="SpellDef">
+		<label>Summon Formless Spawn</label>
+		<description>Pull forth from the earth, the ichor-formed spawn of Tsathoggua to serve your colony.</description>
+		<defName>Cults_SpellFormlessSpawn</defName>
+		<workerClass>CultOfCthulhu.SpellWorker_FormlessSpawn</workerClass>
+        <letterLabel>and persuade him to lend a servant in exchange</letterLabel>
+        <letterText>sees the black ichor explode with writhing ferocity -- is it truly alive?</letterText>
+	</IncidentDef>
+
+    <IncidentDef ParentName="SpellDef">
+		<label>Elixir of Power</label>
+		<description>Bring forth a special ichor for mortal consumption that will bestow incredible power.</description>
+		<defName>Cults_SpellElixerOfPower</defName>
+		<workerClass>CultOfCthulhu.SpellWorker_ElixerOfPower</workerClass>
+        <letterLabel>and barters souls for incredible power</letterLabel>
+        <letterText>sees a special ichor flow from the walls, into a small vessel, pulsating with pangs of a great hunger and untold power</letterText>
+	</IncidentDef>
+
+	<IncidentDef ParentName="SpellDef">
+		<label>Call to Darkness</label>
+		<description>[Game Ending Spell]\nRepay your debts by heeding the call to darkness.</description>
+		<defName>Cults_SpellCallToDarkness</defName>
+		<workerClass>CultOfCthulhu.SpellWorker_CallToDarkness</workerClass>
+        <letterLabel>and yell for the final break of the earth to bring the cult to their master</letterLabel>
+        <letterText>instead of making the sleeper rise, breaks the foundations of the world, and causes a great collapse that brings the mortal realm beneath the unmoving toad god</letterText>
+	</IncidentDef>
+	
 	<!--
 ███████ ██    ██ ███    ██
 ██      ██    ██ ████   ██

@@ -43,36 +43,8 @@ namespace CultOfCthulhu
         }
         public override string GetEndScreenText()
         {
-            return "GameOverOrthogenesis";
+            return "GameOverCallToDarkness";
         }
-
-        //protected override bool TryExecuteWorker(IncidentParms parms)
-        //{
-        //    Map map = parms.target as Map;
-        //    StringBuilder stringBuilder = new StringBuilder();
-        //    foreach (Pawn current2 in map.mapPawns.FreeColonists)
-        //    {
-        //        if (current2.Spawned)
-        //        {
-        //            stringBuilder.AppendLine("   " + current2.LabelCap);
-        //            current2.DeSpawn();
-        //        }
-        //    }
-        //    if (stringBuilder.Length == 0)
-        //    {
-        //        stringBuilder.AppendLine("Nobody".Translate().ToLower());
-        //    }
-        //    string preCreditsMessage = "GameOverOrthogenesis".Translate(new object[]
-        //    {
-        //        stringBuilder.ToString()
-        //    });
-        //    Cults_Screen_Credits screen_Credits = new Cults_Screen_Credits(preCreditsMessage, 10);
-        //    screen_Credits.wonGame = true;
-        //    Find.WindowStack.Add(screen_Credits);
-        //    Find.MusicManagerPlay.ForceSilenceFor(999f);
-        //    ScreenFader.StartFade(Color.clear, 3f);
-        //    return true;
-        //}
 
     }
 }
