@@ -1,24 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+  <!-- 12/6/17 -->
+
+  <Cults_SleepTotem_StateAsleep>Состояние: Спящий</Cults_SleepTotem_StateAsleep>
+  <Cults_SleepTotem_StateDrowsy>Состояние: Сонливый</Cults_SleepTotem_StateDrowsy>
+  <Cults_SleepTotem_StateAwake>Состояние: Пробужденный</Cults_SleepTotem_StateAwake>
+
+  <Cults_SleepTotem_FullyAwakensIn>Полностью пробудиться в {0}</Cults_SleepTotem_FullyAwakensIn>
+
+  <Cults_SleepTotem_Spawns>Идол формы сна из чёрного ихора сочился вверх из мира внизу.</Cults_SleepTotem_Spawns>
+
+  <Cults_BlackIchor_Spawns>Из алтаря вырвался чёрный ихор.</Cults_BlackIchor_Spawns>
+
+  <Cults_ElixerOfPower_Spawns>На алтаре застывает богато украшенная колба.</Cults_ElixerOfPower_Spawns>
+
+  <GameOverCallToDarkness>По мере того как паства продолжает свое пение за то, что кажется веками, запах земли начинает наполнять воздух. Затем без звука земля расщепляется.\n\nНесозначно, храм начинает неряшливо скользить, несясь по чёрной гадости - куда-то вниз. С большей глубиной происходит потеря света и небо сверху. Стены земли начинают уступать толстым камням и рыхлым костям. Проходит много времени. Они достигают своего конечного назначения, вложенного в курган скелетов, и единственный свет отражается от тысяч хищных глаз. Когда паства зажигает факел, глаза рассеиваются и оставляют только циклопический, неподвижный вид Великого Старого, самого Цатоггуа.\n\nТишина ломается, когда чёрный ихор обертывает вокруг культистов сверху и снизу, тихий крик пузырится внутри утолщенной жидкости. Через несколько минут пузырьки прекращаются, и тишина снова заполняет пустоту. Со временем их неподвижные формы снова восстанут, и культ будет продолжать служить -\n\n- не так, как они себе представляли.</GameOverCallToDarkness>
+
+
   <!-- 11/10/17 -->
-  <Cults_AspectOfCthulhuDesc>{0}'s {1} has been replaced with an otherworldly tentacle appendage.</Cults_AspectOfCthulhuDesc>
+  <Cults_AspectOfCthulhuDesc>{0} {1} был заменён придатком потустороннего щупальца.</Cults_AspectOfCthulhuDesc>
 
-  <Cults_AspectOfCthulhu_TargetACharacter>Target an organism to endow with Cthulhu's gifts.</Cults_AspectOfCthulhu_TargetACharacter>
-  <Cults_TransmogrifyAnimalsOnly>Target an animal to transmogrify.</Cults_TransmogrifyAnimalsOnly>
-  <Cults_Trans_HI_Body>Body Size: +{0}</Cults_Trans_HI_Body>
-  <Cults_Trans_HI_Health>Health Scale: +{0}</Cults_Trans_HI_Health>
-  <Cults_butsOne>Even so</Cults_butsOne>
-  <Cults_butsTwo>Fortunately</Cults_butsTwo>
-  <Cults_butsThree>Despite this setback</Cults_butsThree>
-  <Cults_butsFour>Luckily</Cults_butsFour>
-  <Cults_ritualWas>The ritual was a </Cults_ritualWas>
-  <Cults_ritualSuccess>complete success.</Cults_ritualSuccess>
-  <Cults_ritualMixedSuccess>mixed success.</Cults_ritualMixedSuccess>
-  <Cults_ritualFailure>failure.</Cults_ritualFailure>
-  <Cults_ritualCompleteFailure>complete failure.</Cults_ritualCompleteFailure>
+  <Cults_AspectOfCthulhu_TargetACharacter>Укажите организм, чтобы наделить его дарами Ктулху.</Cults_AspectOfCthulhu_TargetACharacter>
+  <Cults_TransmogrifyAnimalsOnly>Укажите животное для трансформирования.</Cults_TransmogrifyAnimalsOnly>
+  <Cults_Trans_HI_Body>Размер тела: +{0}</Cults_Trans_HI_Body>
+  <Cults_Trans_HI_Health>Шкала здоровья: +{0}</Cults_Trans_HI_Health>
+  <Cults_butsOne>Несмотря на это</Cults_butsOne>
+  <Cults_butsTwo>К счастью</Cults_butsTwo>
+  <Cults_butsThree>Несмотря на эту неудачу</Cults_butsThree>
+  <Cults_butsFour>К счастью</Cults_butsFour>
+  <Cults_ritualWas>Ритуал был </Cults_ritualWas>
+  <Cults_ritualSuccess>Полный успех.</Cults_ritualSuccess>
+  <Cults_ritualMixedSuccess>Смешанный успех.</Cults_ritualMixedSuccess>
+  <Cults_ritualFailure>провал.</Cults_ritualFailure>
+  <Cults_ritualCompleteFailure>полный провал.</Cults_ritualCompleteFailure>
 
-  <Cults_Investigate>Investigate</Cults_Investigate>
+  <Cults_Investigate>Расследовать</Cults_Investigate>
 
   <!-- 7/3/17 -->
   <Cults_TransmogrifiedLetter>Изменение</Cults_TransmogrifiedLetter>

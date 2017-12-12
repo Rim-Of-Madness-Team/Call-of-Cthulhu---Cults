@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <CultGameCondition_StarsAreWrong.Label>звезды ошибаются</CultGameCondition_StarsAreWrong.Label>
-  <CultGameCondition_StarsAreWrong.Description>Непривязанные к правильному порядку упорядоченной системы, кажется сами звезды, жалят наши глаза с ненавистным презрением.</CultGameCondition_StarsAreWrong.Description>
-  <CultGameCondition_StarsAreWrong.endMessage>Звезды, как мы их знаем, вернулись</CultGameCondition_StarsAreWrong.endMessage>
+  <CultgameCondition_StarsAreWrong.label>звезды ошибаются</CultgameCondition_StarsAreWrong.label>
+  <CultgameCondition_StarsAreWrong.description>Непривязанные к правильному порядку упорядоченной системы, кажется сами звезды, жалят наши глаза с ненавистным презрением. Жертвы не рекомендуется в течение этого периода.</CultgameCondition_StarsAreWrong.description>
+  <CultgameCondition_StarsAreWrong.endMessage>Звезды, как мы их знаем, вернулись</CultgameCondition_StarsAreWrong.endMessage>
 
-  <CultGameCondition_StarsAreRight.Label>звезды правы</CultGameCondition_StarsAreRight.Label>
-  <CultGameCondition_StarsAreRight.Description>Планеты системы выстроились в ряд. Потусторонние тела, похоже, зовут ваших колонистов.</CultGameCondition_StarsAreRight.Description>
-  <CultGameCondition_StarsAreRight.endMessage>парад планет закончился</CultGameCondition_StarsAreRight.endMessage>
+  <CultgameCondition_StarsAreRight.label>звезды правы</CultgameCondition_StarsAreRight.label>
+  <CultgameCondition_StarsAreRight.description>Планеты системы благополучно выровнялись. Растения и животные будут процветать, а жертвы культа получат вознаграждение.</CultgameCondition_StarsAreRight.description>
+  <CultgameCondition_StarsAreRight.endMessage>парад планет закончился.</CultgameCondition_StarsAreRight.endMessage>
+
 
 </LanguageData>

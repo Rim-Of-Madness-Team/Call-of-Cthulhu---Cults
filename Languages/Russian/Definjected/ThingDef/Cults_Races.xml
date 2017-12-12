@@ -12,7 +12,7 @@
   <Cults_BlackGoat_Meat.label>Мясо черного козла</Cults_BlackGoat_Meat.label>
   <Cults_BlackGoat_Meat.description>Мясо черного козла.</Cults_BlackGoat_Meat.description>
   <Cults_BlackGoat_Corpse.label>Труп черного козла</Cults_BlackGoat_Corpse.label>
-  <Cults_BlackGoat_Corpse.description>Мёртвое тело черного козла.</Cults_BlackGoat_Corpse.description>
+  <Cults_BlackGoat_Corpse.description>Труп черного козла</Cults_BlackGoat_Corpse.description>
 
 
   <!-- Zombie -->
@@ -26,8 +26,8 @@
   <ReanimatedCorpse_Leather.description>Кожа ожившего трупа.</ReanimatedCorpse_Leather.description>
   <ReanimatedCorpse_Leather.stuffProps.stuffAdjective>Кожа ожившего трупа</ReanimatedCorpse_Leather.stuffProps.stuffAdjective>
   <!-- Meat Amount: 0 -->
-  <ReanimatedCorpse_Corpse.label>Труп ожившего мертвеца</ReanimatedCorpse_Corpse.label>
-  <ReanimatedCorpse_Corpse.description>Мёртвое тело ожившего мертвеца.</ReanimatedCorpse_Corpse.description>
+  <ReanimatedCorpse_Corpse.label>Мертвый оживший труп</ReanimatedCorpse_Corpse.label>
+  <ReanimatedCorpse_Corpse.description>Мертвый оживший труп</ReanimatedCorpse_Corpse.description>
 
 
 </LanguageData>

@@ -94,6 +94,14 @@
   <Make_SculptureShub.description>Сделать чудовищную козоподобную скульптуру.</Make_SculptureShub.description>
   <Make_SculptureShub.jobString>Делает чудовищную козоподобную скульптуру.</Make_SculptureShub.jobString>
 
+  <Make_SculptureTsathoggua.label>Сделать чудовищную скульптуру мерзости</Make_SculptureTsathoggua.label>
+  <Make_SculptureTsathoggua.description>Сделать чудовищную скульптуру мерзости.</Make_SculptureTsathoggua.description>
+  <Make_SculptureTsathoggua.jobString>Делает чудовищную скульптуру мерзости.</Make_SculptureTsathoggua.jobString>
+
+  <Make_SculptureHastur.label>Сделать чудовищную королевскую скульптуру</Make_SculptureHastur.label>
+  <Make_SculptureHastur.description>Сделать чудовищную королевскую скульптуру.</Make_SculptureHastur.description>
+  <Make_SculptureHastur.jobString>Делает чудовищную королевскую скульптуру.</Make_SculptureHastur.jobString>
+
 
   <!-- Recipe Users: ElectricSmithy, FueledSmithy -->
 

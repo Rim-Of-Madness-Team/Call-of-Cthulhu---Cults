@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+  <Cults_ElixerOfPower.label>элексир силы</Cults_ElixerOfPower.label>
+  <Cults_ElixerOfPower.description>Эта каменная колба обернута золотыми инкрустациями и бдительным оком из редкого драгоценного камня. Когда его держишь, кажется, что сердце бьется внутри. Когда откупоришь все, что видно, это черная жидкость. Надписи по всей линии, похоже указывают на то, что употребление этого эликсира принесет невероятные силы. Силы исчезнут со временем, возможно в течение сезона. В течение этого времени каждый вкушает божественной силы.</Cults_ElixerOfPower.description>
+  <Cults_ElixerOfPower.comps.1.useLabel>употребить элексир силы</Cults_ElixerOfPower.comps.1.useLabel>
+
   <Cults_Test.label>ТестовыйОбъект</Cults_Test.label>
   <Cults_Test.description></Cults_Test.description>
 

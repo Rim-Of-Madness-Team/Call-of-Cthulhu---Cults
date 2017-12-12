@@ -33,7 +33,7 @@ namespace CultOfCthulhu
         public const float Cultist = 0.7f;
         public const float PureCultist = 0.9f;
     }
-    public class CultUtility
+    public static class CultUtility
     {
         // RimWorld.IncidentWorker_ShipChunkDrop
         public static bool TryFindDropCell(IntVec3 nearLoc, Map map, int maxDist, out IntVec3 pos, ThingDef defToCheck = null)

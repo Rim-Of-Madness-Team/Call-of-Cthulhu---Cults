@@ -7,7 +7,6 @@ using RimWorld;
 using Verse.Sound;
 using Verse.AI;
 using UnityEngine;
-using System.Reflection;
 
 namespace CultOfCthulhu
 {

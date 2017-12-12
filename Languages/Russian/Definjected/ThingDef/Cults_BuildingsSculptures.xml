@@ -21,5 +21,13 @@
   <SculptureShub.description>Кусок материала размером с автомобиль, вылепленный в стилизованной форме головы козла. За этим стоит масса лоз или щупалец, извивающиеся друг вокруг друга и угрожающие наблюдателю.</SculptureShub.description>
   <SculptureShub_Blueprint_Install.label>Чудовищная козоподобная скульптура (проект)</SculptureShub_Blueprint_Install.label>
 
+  <SculptureTsathoggua.label>чудовищная скульптура мерзости</SculptureTsathoggua.label>
+  <SculptureTsathoggua.description>Кусок материала размером с автомобиль, вылепленный в стилизованной форме гигантской луковичной головы. Эта широкая приземистая амальгация летучей мыши, жабы и других существ создает неповторимый, но все же тревожный вид, который блистает жадным голодом.</SculptureTsathoggua.description>
+  <SculptureTsathoggua_Blueprint_Install.label>чудовищная скульптура мерзости (проект)</SculptureTsathoggua_Blueprint_Install.label>
+
+  <SculptureHastur.label>чудовищная королевская скульптура</SculptureHastur.label>
+  <SculptureHastur.description>Кусок материала размером с автомобиль, вылепленный в стилизованной форме гигантской луковичной головы. Злобный король стоит перед королевством, глядя вниз.</SculptureHastur.description>
+  <SculptureHastur_Blueprint_Install.label>чудовищная королевская скульптура (проект)</SculptureHastur_Blueprint_Install.label>
+
 
 </LanguageData>

@@ -11,6 +11,7 @@ using System.Linq;
 namespace CultOfCthulhu
 {
     [StaticConstructorOnStartup]
+
     public class CompTransporterPawn : ThingComp, IThingHolder
     {
         public int groupID = -1;

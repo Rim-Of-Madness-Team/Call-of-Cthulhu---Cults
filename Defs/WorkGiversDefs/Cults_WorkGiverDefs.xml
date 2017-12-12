@@ -27,11 +27,30 @@
 		</requiredCapacities>
 		<canBeDoneByNonColonists>true</canBeDoneByNonColonists>
 	</WorkGiverDef>
-	
+		
+		
     <WorkGiverDef>
 		<defName>ROM_InvestigateMysteriousObject</defName>
 		<label>investigate</label>
 		<giverClass>CultOfCthulhu.WorkGiver_Investigate</giverClass>
+		<workType>Research</workType>
+		<emergency>true</emergency>
+		<verb>investigate</verb>
+		<gerund>investigating</gerund>
+		<fixedBillGiverDefs>
+		  
+		</fixedBillGiverDefs>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<canBeDoneByNonColonists>false</canBeDoneByNonColonists>
+	</WorkGiverDef>
+	
+	
+    <WorkGiverDef>
+		<defName>ROM_InvestigateMysteriousObjectTree</defName>
+		<label>investigate</label>
+		<giverClass>CultOfCthulhu.WorkGiver_InvestigateTree</giverClass>
 		<workType>Research</workType>
 		<emergency>true</emergency>
 		<verb>investigate</verb>

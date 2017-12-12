@@ -8,6 +8,7 @@ using RimWorld;
 
 namespace CultOfCthulhu
 {
+
     [StaticConstructorOnStartup]
     public class CompLaunchablePawn : ThingComp
     {

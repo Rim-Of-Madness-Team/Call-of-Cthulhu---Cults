@@ -98,5 +98,23 @@
   <Cults_SpellSunkenShip.rulePack.rulesStrings.5>desc_sentence->Внутри него находятся бесчисленные сверкающие драгоценные камни, сверкающие монеты и другие сокровища, потерянные в древнем прошлом.</Cults_SpellSunkenShip.rulePack.rulesStrings.5>
   <Cults_SpellSunkenShip.rulePack.rulesStrings.6>desc_sentence->Перед обломком пересекаются два колоссальных якоря.</Cults_SpellSunkenShip.rulePack.rulesStrings.6>
 
+  <Cults_SpellSleeperOfNKai.label>спящий н'кай</Cults_SpellSleeperOfNKai.label>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.0>tale_noun->время, когда Цатоггу предоставил нам идола</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.0>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.1>image->Цатоггуа сидит в вечной неподвижности с аурой божественной лени </Cults_SpellSleeperOfNKai.rulePack.rulesStrings.1>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.2>circumstance_phrase->и от его ихора, сочившегося вверх от земли, появилась небольшая скульптура</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.2>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.3>circumstance_phrase->и усики бесформенных слуг несли маленького идола по его образу через землю</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.3>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.4>desc_sentence->Тотем появляется как приземистое, жирное жабоподобное существо с чертами летучей мыши и лени.</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.4>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.5>desc_sentence->За глазами тотема можно увидеть поле черепов под неподвижным богом.</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.5>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.6>desc_sentence->Божественный Цатоггуа манит для больших жертвоприношений с зияющей пастью и ищущим языком.</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.6>
+
+  <Cults_SpellBlackIchor.label>чёрный ихор</Cults_SpellBlackIchor.label>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.0>tale_noun->время, когда Цатоггуа выжал свой чёрный ихор в наше царство</Cults_SpellBlackIchor.rulePack.rulesStrings.0>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.1>image->Цатоггуа сидит в вечной неподвижности с аурой божественной лени </Cults_SpellBlackIchor.rulePack.rulesStrings.1>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.2>circumstance_phrase->и из его зияющей пасти, чёрный ихор свисает по его языку</Cults_SpellBlackIchor.rulePack.rulesStrings.2>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.3>circumstance_phrase->и из его когтей, плотно сжимающих раздавленные черепа, из щелей вытекает чёрный ихор</Cults_SpellBlackIchor.rulePack.rulesStrings.3>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.4>desc_sentence->Ихор пробегает по земле, как молния, поражающая мир, и наполняет нашу колонию пропитанием.</Cults_SpellBlackIchor.rulePack.rulesStrings.4>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.5>desc_sentence->Ихор создаёт неряшливый чёрный фонтан, объединяя полутвердый ил в съедобные комки.</Cults_SpellBlackIchor.rulePack.rulesStrings.5>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.6>desc_sentence->Божественный Цатоггуа ждет дальнейших жертвоприношений с выражением голода и божественной лени.</Cults_SpellBlackIchor.rulePack.rulesStrings.6>
+
 
 </LanguageData>

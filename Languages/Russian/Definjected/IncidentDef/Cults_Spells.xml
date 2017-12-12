@@ -58,6 +58,16 @@
   <Cults_SpellDefendTheBrood.letterLabel>и попросите его защитить своих</Cults_SpellDefendTheBrood.letterLabel>
   <Cults_SpellDefendTheBrood.description>Принести банду, для охраны вашей колонии. Рекомендуется использовать знак дагона перед тем, как наложить это заклинание.</Cults_SpellDefendTheBrood.description>
 
+
+  <!-- <IncidentDef ParentName="SpellDef">
+		<label>Relics of the Deep</label>
+		<description>Brings forth a greater assortment of valuable resources such as jade, silver, and gold along with legendary weapons and armor lost to the abyssal seas.</description>
+		<defName>Cults_SpellRecoverArtifacts</defName>
+		<workerClass>CultOfCthulhu.SpellWorker_RelicsoftheDeep</workerClass>
+        <letterLabel>out of desperation or greed, to deliver wealth from the sea</letterLabel>
+        <letterText>is granted a vision of great relics washing up from ethereal yet non-existent waves</letterText>
+	</IncidentDef> -->
+
   <Cults_SpellBountyOfTheSea.label>Щедрость моря</Cults_SpellBountyOfTheSea.label>
   <Cults_SpellBountyOfTheSea.letterText>слышит крушение, затем кричит, что приз доставлен</Cults_SpellBountyOfTheSea.letterText>
   <Cults_SpellBountyOfTheSea.letterLabel>из отчаяния или жадности, доставить богатство с моря</Cults_SpellBountyOfTheSea.letterLabel>
@@ -163,6 +173,31 @@
   <Cults_SpellAbsorptionByCarcosa.letterText>надевает маску и поэтому свободен</Cults_SpellAbsorptionByCarcosa.letterText>
   <Cults_SpellAbsorptionByCarcosa.letterLabel>и возопите в мольбе, чтобы он смотрел на ваше маленькое поселение и считал вас достойными</Cults_SpellAbsorptionByCarcosa.letterLabel>
   <Cults_SpellAbsorptionByCarcosa.description>[Game Ending Spell]\nМаленькое поселение считается достойным того, чтобы Хастур вошел в его царство и был поглощен городом Каркоза.</Cults_SpellAbsorptionByCarcosa.description>
+
+  <Cults_SpellSleeperOfNKai.label>спящий Н'Кай</Cults_SpellSleeperOfNKai.label>
+  <Cults_SpellSleeperOfNKai.letterText>видит, что смоляные-чёрные усики просачиваются сквозь землю и сливаются в маленькую фигуру. которая излучает гипнотизирующий взгляд, затененный неутолимым голодом</Cults_SpellSleeperOfNKai.letterText>
+  <Cults_SpellSleeperOfNKai.letterLabel>насытить его голод в обмен на тотем силы</Cults_SpellSleeperOfNKai.letterLabel>
+  <Cults_SpellSleeperOfNKai.description>Призывает неописуемо деформированного идола, который нападает на рейдеров.</Cults_SpellSleeperOfNKai.description>
+
+  <Cults_SpellBlackIchor.label>чёрный ихор</Cults_SpellBlackIchor.label>
+  <Cults_SpellBlackIchor.letterText>слышит странные шепоты снизу, как неземные бассейны заполняются черным илом с земли</Cults_SpellBlackIchor.letterText>
+  <Cults_SpellBlackIchor.letterLabel>и просит о помощи в удовлетворении собственных аппетитов</Cults_SpellBlackIchor.letterLabel>
+  <Cults_SpellBlackIchor.description>Приносит сочный чёрный ихор, чтобы насытить обжорство ваших колонистов и улучшить их настроение.</Cults_SpellBlackIchor.description>
+
+  <Cults_SpellFormlessSpawn.label>вызов бесформенного отродья</Cults_SpellFormlessSpawn.label>
+  <Cults_SpellFormlessSpawn.letterText>видит, что чёрный ихор взорвался с извивающейся жестокостью - действительно ли он жив?</Cults_SpellFormlessSpawn.letterText>
+  <Cults_SpellFormlessSpawn.letterLabel>и взамен убедить его одолжить вам слугу</Cults_SpellFormlessSpawn.letterLabel>
+  <Cults_SpellFormlessSpawn.description>Вытащите из земли, образованное ихором отродье Цатоггуа, для служения вашей колонии.</Cults_SpellFormlessSpawn.description>
+
+  <Cults_SpellElixerOfPower.label>эликсир силы</Cults_SpellElixerOfPower.label>
+  <Cults_SpellElixerOfPower.letterText>видит особый поток ихора со стен, в небольшой сосуд, пульсирующий от мук большого голода и невыразимой силы</Cults_SpellElixerOfPower.letterText>
+  <Cults_SpellElixerOfPower.letterLabel>и обменивает душу на невероятную силу</Cults_SpellElixerOfPower.letterLabel>
+  <Cults_SpellElixerOfPower.description>Принесите специальный ихор для потребления смертным, который даст невероятную силу.</Cults_SpellElixerOfPower.description>
+
+  <Cults_SpellCallToDarkness.label>зов тьмы</Cults_SpellCallToDarkness.label>
+  <Cults_SpellCallToDarkness.letterText>вместо того, чтобы заставить спящего встать, разрушает основы мира и вызывает большой крах, который приносит смертное царство под неподвижным богом жабы</Cults_SpellCallToDarkness.letterText>
+  <Cults_SpellCallToDarkness.letterLabel>и кричать для окончательного разрыва земли, чтобы принести культ своему хозяину</Cults_SpellCallToDarkness.letterLabel>
+  <Cults_SpellCallToDarkness.description>[Game Ending Spell]\nОплатите свои долги, направляя призыв к темноте.</Cults_SpellCallToDarkness.description>
 
 
   <!-- ███████ ██    ██ ███    ██

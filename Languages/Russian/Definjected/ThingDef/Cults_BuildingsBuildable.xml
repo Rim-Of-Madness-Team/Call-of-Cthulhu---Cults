@@ -1,10 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+  <Cults_Alcove.label>альков</Cults_Alcove.label>
+  <Cults_Alcove.description>Вырез в стене.</Cults_Alcove.description>
+  <Cults_Alcove_Blueprint.label>альков (проект)</Cults_Alcove_Blueprint.label>
+  <Cults_Alcove_Frame.label>альков (постройка)</Cults_Alcove_Frame.label>
+
+  <Cults_AlcoveTorch.label>альков (факел)</Cults_AlcoveTorch.label>
+  <Cults_AlcoveTorch.description>Вырез в стене с факелом, висящим внутри.</Cults_AlcoveTorch.description>
+  <Cults_AlcoveTorch_Blueprint.label>альков (факел) (проект)</Cults_AlcoveTorch_Blueprint.label>
+  <Cults_AlcoveTorch_Frame.label>альков (факел) (постройка)</Cults_AlcoveTorch_Frame.label>
+
   <Cults_SignOfDagon.label>Знак Дагона</Cults_SignOfDagon.label>
   <Cults_SignOfDagon.description>Назначает место, где могут перемещаться стражи глубин. Рекомендуется держать эти магические круги вне колонии. Как только они прибудут, стражи будут защищать место, где возник круг, до своей смерти. Избегайте приближения колонистов к их кругу.</Cults_SignOfDagon.description>
   <Cults_SignOfDagon_Blueprint.label>Знак Дагона (проект)</Cults_SignOfDagon_Blueprint.label>
   <Cults_SignOfDagon_Frame.label>Знак Дагона (постройка)</Cults_SignOfDagon_Frame.label>
+
+  <Cults_PrayerPillow.label>молитвенная подушка</Cults_PrayerPillow.label>
+  <Cults_PrayerPillow.description>Небольшое, мягкое, удобное место. Отлично подходит для медитации.</Cults_PrayerPillow.description>
+  <Cults_PrayerPillow_Blueprint.label>молитвенная подушка (проект)</Cults_PrayerPillow_Blueprint.label>
+  <Cults_PrayerPillow_Blueprint_Install.label>молитвенная подушка (проект)</Cults_PrayerPillow_Blueprint_Install.label>
+  <Cults_PrayerPillow_Frame.label>молитвенная подушка (постройка)</Cults_PrayerPillow_Frame.label>
 
   <Cults_PewLinkable.label>Связующая церковная скамья</Cults_PewLinkable.label>
   <Cults_PewLinkable.description>связующая скамья предназначена для сидения поклонников и наблюдения ритуалов.</Cults_PewLinkable.description>
@@ -14,7 +30,7 @@
   <Cults_ForbiddenKnowledgeCenter.label>Центр запрещенных знаний</Cults_ForbiddenKnowledgeCenter.label>
   <Cults_ForbiddenKnowledgeCenter.description>Простейший стол, покрытый странными символами, заметками и томом запрещенных знаний. Исследователи работают здесь, чтобы раскрыть силы за пределами. Длительное использование приведет к потере здравомыслия, но награды того стоят.</Cults_ForbiddenKnowledgeCenter.description>
   <Cults_ForbiddenKnowledgeCenter_Blueprint.label>Центр запрещенных знаний (проект)</Cults_ForbiddenKnowledgeCenter_Blueprint.label>
-  <Cults_ForbiddenKnowledgeCenter_Blueprint_Install.label>Центр запрещенных знаний ((проект)</Cults_ForbiddenKnowledgeCenter_Blueprint_Install.label>
+  <Cults_ForbiddenKnowledgeCenter_Blueprint_Install.label>Центр запрещенных знаний (проект)</Cults_ForbiddenKnowledgeCenter_Blueprint_Install.label>
   <Cults_ForbiddenKnowledgeCenter_Frame.label>Центр запрещенных знаний (постройка)</Cults_ForbiddenKnowledgeCenter_Frame.label>
 
 
@@ -32,11 +48,11 @@
 
   <Cult_AnimalSacrificeAltar.label>Жертвенный алтарь (животные)</Cult_AnimalSacrificeAltar.label>
   <Cult_AnimalSacrificeAltar.description>Твердая поверхность, на которой можно жертвовать существами как мелкими, так и сильными. Специально разработанный канал для сбора крови.</Cult_AnimalSacrificeAltar.description>
-  <Cult_AnimalSacrificeAltar_Blueprint_Install.label>Жертвенный алтарь (животные) ((проект)</Cult_AnimalSacrificeAltar_Blueprint_Install.label>
+  <Cult_AnimalSacrificeAltar_Blueprint_Install.label>Жертвенный алтарь (животные) (проект)</Cult_AnimalSacrificeAltar_Blueprint_Install.label>
 
   <Cult_HumanSacrificeAltar.label>Жертвенный алтарь (люди)</Cult_HumanSacrificeAltar.label>
   <Cult_HumanSacrificeAltar.description>Твердая поверхность, на которой можно жертвовать существами как мелкими, так и сильными. Специально разработанный канал для сбора крови.</Cult_HumanSacrificeAltar.description>
-  <Cult_HumanSacrificeAltar_Blueprint_Install.label>Жертвенный алтарь (люди) ((проект)</Cult_HumanSacrificeAltar_Blueprint_Install.label>
+  <Cult_HumanSacrificeAltar_Blueprint_Install.label>Жертвенный алтарь (люди) (проект)</Cult_HumanSacrificeAltar_Blueprint_Install.label>
 
 
   <!-- BUILDABLE OBELISKS -->
@@ -44,7 +60,7 @@
   <Cults_ObeliskConstructed_Red.label>Обелиск (красный)</Cults_ObeliskConstructed_Red.label>
   <Cults_ObeliskConstructed_Red.description>Таинственный вертикально стоящий блок камня. Он был специально благословлен красной аурой.</Cults_ObeliskConstructed_Red.description>
   <Cults_ObeliskConstructed_Red_Blueprint.label>Обелиск (красный) (проект)</Cults_ObeliskConstructed_Red_Blueprint.label>
-  <Cults_ObeliskConstructed_Red_Blueprint_Install.label>Обелиск (красный) ((проект)</Cults_ObeliskConstructed_Red_Blueprint_Install.label>
+  <Cults_ObeliskConstructed_Red_Blueprint_Install.label>Обелиск (красный) (проект)</Cults_ObeliskConstructed_Red_Blueprint_Install.label>
   <Cults_ObeliskConstructed_Red_Frame.label> Обелиск (красный)(постройка)</Cults_ObeliskConstructed_Red_Frame.label>
 
   <Cults_ObeliskConstructed_Green.label>Обелиск (зелёный)</Cults_ObeliskConstructed_Green.label>
@@ -56,13 +72,13 @@
   <Cults_ObeliskConstructed_Blue.label>Обелиск (синий)</Cults_ObeliskConstructed_Blue.label>
   <Cults_ObeliskConstructed_Blue.description>Таинственный вертикально стоящий блок камня. Он был специально благословлен синей аурой.</Cults_ObeliskConstructed_Blue.description>
   <Cults_ObeliskConstructed_Blue_Blueprint.label> Обелиск (синий)(проект)</Cults_ObeliskConstructed_Blue_Blueprint.label>
-  <Cults_ObeliskConstructed_Blue_Blueprint_Install.label>Обелиск (синий) ((проект)</Cults_ObeliskConstructed_Blue_Blueprint_Install.label>
+  <Cults_ObeliskConstructed_Blue_Blueprint_Install.label>Обелиск (синий) (проект)</Cults_ObeliskConstructed_Blue_Blueprint_Install.label>
   <Cults_ObeliskConstructed_Blue_Frame.label>Обелиск (синий) (постройка)</Cults_ObeliskConstructed_Blue_Frame.label>
 
   <Cults_ObeliskConstructed_Yellow.label>Обелиск (жёлтый)</Cults_ObeliskConstructed_Yellow.label>
   <Cults_ObeliskConstructed_Yellow.description>Таинственный вертикально стоящий блок камня. Он был специально благословлен жёлтой аурой.</Cults_ObeliskConstructed_Yellow.description>
   <Cults_ObeliskConstructed_Yellow_Blueprint.label>Обелиск (жёлтый) (проект)</Cults_ObeliskConstructed_Yellow_Blueprint.label>
-  <Cults_ObeliskConstructed_Yellow_Blueprint_Install.label>Обелиск (жёлтый) ((проект)</Cults_ObeliskConstructed_Yellow_Blueprint_Install.label>
+  <Cults_ObeliskConstructed_Yellow_Blueprint_Install.label>Обелиск (жёлтый) (проект)</Cults_ObeliskConstructed_Yellow_Blueprint_Install.label>
   <Cults_ObeliskConstructed_Yellow_Frame.label>Обелиск (жёлтый) (постройка)</Cults_ObeliskConstructed_Yellow_Frame.label>
 
 

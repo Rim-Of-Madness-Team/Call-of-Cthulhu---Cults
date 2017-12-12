@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+  <Cults_SleepTotem.label>тотем сна</Cults_SleepTotem.label>
+  <Cults_SleepTotem.description>Тотем, который привлекает к себе захватчиков и побуждает их к неизбежному трансу, где мечты поглощают мечтателей. Эффект достаточно ограничен, чтобы задержать злоумышленников достаточно долго, чтобы подвергнуть их другим опасностям.</Cults_SleepTotem.description>
+  <Cults_SleepTotem_Blueprint_Install.label>тотем сна (проект)</Cults_SleepTotem_Blueprint_Install.label>
+
   <Cults_FertilityTotem.label>Тотем плодородия</Cults_FertilityTotem.label>
   <Cults_FertilityTotem.description>Тотем, который увеличивает темпы роста посевов.</Cults_FertilityTotem.description>
   <Cults_FertilityTotem_Blueprint_Install.label>Тотем плодородия (проект)</Cults_FertilityTotem_Blueprint_Install.label>
