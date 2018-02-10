@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\mattw\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_CultOfCthulhu.205408715.00" t="ExcludeRecursive" />
+    <e p="D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Cults\Assemblies" t="ExcludeRecursive" />
+    <e p="D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Cults\Source" t="IncludeRecursive">
+      <e p="CultOfCthulhu.csproj" t="IncludeRecursive" />
+      <e p="CultOfCthulhu.sln" t="IncludeFlat" />
+      <e p="Cults_Screen_Credits.cs" t="Include" />
+      <e p="CultsDefOf.cs" t="Include" />
+      <e p="Graphic_Wild.cs" t="Include" />
+      <e p="HarmonyPatches.cs" t="Include" />
+      <e p="MapComponentInjector.cs" t="Include" />
+      <e p="MentalBreaks" t="Include">
+        <e p="JobGiver_Disillusioned.cs" t="Include" />
+        <e p="MentalState_Disillusioned.cs" t="Include" />
+        <e p="MentalStateWorker_Disillusioned.cs" t="Include" />
+      </e>
+      <e p="ModSettings.cs" t="Include" />
+      <e p="NewSystems" t="Include">
+        <e p="AntiCult" t="Include">
+          <e p="JobDriver_MidnightInquisition.cs" t="Include" />
+          <e p="MapComponent_LocalCultTracker_Inquisition.cs" t="Include" />
+        </e>
+        <e p="CosmicEntities" t="Include">
+          <e p="CosmicEntity.cs" t="Include" />
+          <e p="CosmicEntityDef.cs" t="Include" />
+          <e p="WorldComponent_CosmicDeities.cs" t="Include" />
+        </e>
+        <e p="Cult" t="Include">
+          <e p="Building_ForbiddenReserachCenter.cs" t="Include" />
+          <e p="Cult.cs" t="Include" />
+          <e p="CultInfluence.cs" t="Include" />
+          <e p="MapComponent_LocalCultTracker.cs" t="Include" />
+          <e p="Need_CultMindedness.cs" t="Include" />
+          <e p="RoomRoleWorker_Temple.cs" t="Include" />
+          <e p="Seed" t="Include">
+            <e p="Building_Monolith.cs" t="Include" />
+            <e p="IncidentWorker_CultSeed.cs" t="Include" />
+            <e p="IncidentWorker_CultSeed_NightmareMonolith.cs" t="Include" />
+            <e p="IncidentWorker_CultSeed_NightmareTree.cs" t="Include" />
+            <e p="JobDriver_Investigate.cs" t="Include" />
+            <e p="JobDriver_WriteTheBook.cs" t="Include" />
+            <e p="MapComponent_LocalCultTracker_Seed.cs" t="Include" />
+            <e p="Plant_TreeOfMadness.cs" t="Include" />
+            <e p="WorkGiver_Investigate.cs" t="Include" />
+            <e p="WorkGiver_InvestigateTree.cs" t="Include" />
+          </e>
+          <e p="WorldComponent_GlobalCultTracker.cs" t="Include" />
+        </e>
+        <e p="Fertility" t="Include">
+          <e p="Building_TotemFertility.cs" t="Include" />
+          <e p="MapComponent_FertilityMods.cs" t="Include" />
+        </e>
+        <e p="Interactions" t="Include">
+          <e p="InteractionWorker_DangerPreach.cs" t="Include" />
+          <e p="InteractionWorker_SafePreach.cs" t="Include" />
+          <e p="InteractionWorker_SpreadInsanityFailure.cs" t="Include" />
+        </e>
+        <e p="PawnFlyer" t="Include">
+          <e p="Command_LoadToTransporter.cs" t="Include" />
+          <e p="CompLaunchablePawn.cs" t="Include" />
+          <e p="CompProperties_LaunchablePawn.cs" t="Include" />
+          <e p="CompProperties_TransporterPawn.cs" t="Include" />
+          <e p="CompTransporterPawn.cs" t="Include" />
+          <e p="Dialog_LoadTransportersPawn.cs" t="Include" />
+          <e p="JobDriver_EnterTransporterPawn.cs" t="Include" />
+          <e p="JobGiver_EnterTransporterPawn.cs" t="Include" />
+          <e p="JobGiver_LoadTransportersPawn.cs" t="Include" />
+          <e p="LoadTransportersPawnJobUtility.cs" t="Include" />
+          <e p="LordJob_LoadAndEnterTransportersPawn.cs" t="Include" />
+          <e p="LordToil_LoadAndEnterTransportersPawn.cs" t="Include" />
+          <e p="PawnFlyer.cs" t="Include" />
+          <e p="PawnFlyerDef.cs" t="Include" />
+          <e p="PawnFlyersIncoming.cs" t="Include" />
+          <e p="PawnFlyersLanded.cs" t="Include" />
+          <e p="PawnFlyersLeaving.cs" t="Include" />
+          <e p="PawnFlyersTraveling.cs" t="Include" />
+          <e p="WorkGiver_LoadTransportersPawn.cs" t="Include" />
+        </e>
+        <e p="Psionics" t="Include">
+          <e p="CompPsionicUser.cs" t="Include" />
+          <e p="DamageWorker_PsionicBlast.cs" t="Include" />
+          <e p="DamageWorker_PsionicBurn.cs" t="Include" />
+          <e p="DamageWorker_PsionicShock.cs" t="Include" />
+        </e>
+        <e p="Reanimation" t="Include">
+          <e p="MapComponent_SacrificeTracker_Resurrection.cs" t="Include" />
+          <e p="ReanimatedPawn.cs" t="Include" />
+          <e p="ReanimatedPawnUtility.cs" t="Include" />
+        </e>
+        <e p="Sacrifice" t="Include">
+          <e p="Bill_Sacrifice.cs" t="Include" />
+          <e p="Building_SacrificialAltar.cs" t="Include" />
+          <e p="CompFavoredObject.cs" t="Include" />
+          <e p="CompProperties_FavoredObject.cs" t="Include" />
+          <e p="JobDriver_AttendSacrifice.cs" t="Include" />
+          <e p="JobDriver_GiveOffering.cs" t="Include" />
+          <e p="JobDriver_HoldSacrifice.cs" t="Include" />
+          <e p="JobDriver_ReflectOnOffering.cs" t="Include" />
+          <e p="JobDriver_ReflectOnResult.cs" t="Include" />
+          <e p="JobDriver_TiedDown.cs" t="Include" />
+          <e p="MapComponent_SacrificeTracker.cs" t="Include" />
+        </e>
+        <e p="SanityLoss" t="Include">
+          <e p="HediffComp_SanityLoss.cs" t="Include" />
+          <e p="Need_Sanity.cs" t="Include" />
+        </e>
+        <e p="Spells" t="Include">
+          <e p="Cthulhu" t="Include">
+            <e p="SpellWorker_AspectOfCthulhu.cs" t="Include" />
+            <e p="SpellWorker_Favor.cs" t="Include" />
+            <e p="SpellWorker_OrbitalInsanityWave.cs" t="Include" />
+            <e p="SpellWorker_PsionicGrowth.cs" t="Include" />
+            <e p="SpellWorker_SummonCthulhu.cs" t="Include" />
+            <e p="SpellWorker_TerrestrialInsanityWave.cs" t="Include" />
+          </e>
+          <e p="Dagon" t="Include">
+            <e p="Building_LandedShip.cs" t="Include" />
+            <e p="Building_SignOfDagon.cs" t="Include" />
+            <e p="Building_TreasureChest.cs" t="Include" />
+            <e p="SpellWorker_BountyOfTheSea.cs" t="Include" />
+            <e p="SpellWorker_DefendTheBrood.cs" t="Include" />
+            <e p="SpellWorker_Orthogenesis.cs" t="Include" />
+            <e p="SpellWorker_SunkenShip.cs" t="Include" />
+            <e p="SpellWorker_TreasuresOfTheDeep.cs" t="Include" />
+          </e>
+          <e p="Hastur" t="Include">
+            <e p="CompTargetEffect_CultMinded.cs" t="Include" />
+            <e p="JobGiver_DeepSleepCarcosa.cs" t="Include" />
+            <e p="MentalState_DeepSleep.cs" t="Include" />
+            <e p="SpellWorker_AbsorptionByCarcosa.cs" t="Include" />
+            <e p="SpellWorker_SummonByakhee.cs" t="Include" />
+            <e p="SpellWorker_TheKingInYellow.cs" t="Include" />
+            <e p="SpellWorker_UnspeakableOath.cs" t="Include" />
+            <e p="SpellWorker_VisionsOfCarcosa.cs" t="Include" />
+          </e>
+          <e p="Nyarlathotep" t="Include">
+            <e p="SpellWorker_ChaosTheory.cs" t="Include" />
+            <e p="SpellWorker_DarkEmissary.cs" t="Include" />
+            <e p="SpellWorker_ForbiddenKnowledge.cs" t="Include" />
+            <e p="SpellWorker_PilgrimageToKadath.cs" t="Include" />
+            <e p="SpellWorker_StarryWisdom.cs" t="Include" />
+          </e>
+          <e p="ShubNiggurath" t="Include">
+            <e p="Building_WombBetweenWorlds.cs" t="Include" />
+            <e p="CompTransmogrified.cs" t="Include" />
+            <e p="Hediff_Transmogrified.cs" t="Include" />
+            <e p="SpellWorker_FertilityRitual.cs" t="Include" />
+            <e p="SpellWorker_MotherOfGoats.cs" t="Include" />
+            <e p="SpellWorker_TransdimensionalConvergence.cs" t="Include" />
+            <e p="SpellWorker_TransmogrifyPets.cs" t="Include" />
+            <e p="SpellWorker_WombBetweenWorlds.cs" t="Include" />
+            <e p="ThingDef_Transmogrified.cs" t="Include" />
+          </e>
+          <e p="SpellWorker.cs" t="Include" />
+          <e p="SpellWorker_GameEndingEffect.cs" t="Include" />
+          <e p="TableOfFun" t="Include">
+            <e p="CultTableOfFun.cs" t="Include" />
+            <e p="GameCondition_AuroraEffect.cs" t="Include" />
+            <e p="JobDriver_PruneAndRepair.cs" t="Include" />
+            <e p="SpellWorker_AuroraEffect.cs" t="Include" />
+            <e p="SpellWorker_DebugSpawnCultPreacher.cs" t="Include" />
+            <e p="SpellWorker_EcstaticFrenzy.cs" t="Include" />
+            <e p="SpellWorker_FoodSpoilage.cs" t="Include" />
+            <e p="SpellWorker_NeedAHand.cs" t="Include" />
+            <e p="SpellWorker_NoLongerDomesticated.cs" t="Include" />
+            <e p="SpellWorker_RatsInTheWalls.cs" t="Include" />
+            <e p="SpellWorker_Reanimator.cs" t="Include" />
+            <e p="SpellWorker_Reincarnation.cs" t="Include" />
+            <e p="SpellWorker_StarVampireVisit.cs" t="Include" />
+            <e p="ThoughtWorker_AuroraEffect.cs" t="Include" />
+            <e p="WorkGiver_PruneAndRepair.cs" t="Include" />
+          </e>
+          <e p="Tsathoggua" t="Include">
+            <e p="Building_TotemSleep.cs" t="Include" />
+            <e p="CompTargetEffect_ElixerOfPower.cs" t="Include" />
+            <e p="SpellWorker_BlackIchor.cs" t="Include" />
+            <e p="SpellWorker_CallToDarkness.cs" t="Include" />
+            <e p="SpellWorker_ElixerOfPower.cs" t="Include" />
+            <e p="SpellWorker_FormlessSpawn.cs" t="Include" />
+            <e p="SpellWorker_SleeperOfNKai.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Worship" t="Include">
+          <e p="Building_SacrificialAltar_Worship.cs" t="Include" />
+          <e p="CompProperties_WorshipCaller.cs" t="Include" />
+          <e p="CompWorshipCaller.cs" t="Include" />
+          <e p="JobDriver_AttendWorship.cs" t="Include" />
+          <e p="JobDriver_HoldWorship.cs" t="Include" />
+          <e p="JobDriver_ReflectOnWorship.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+      <e p="Thing_Transmogrified.cs" t="Include" />
+      <e p="ThingWithComps_CultGrimoire.cs" t="Include" />
+      <e p="TraitDefHidden.cs" t="Include" />
+      <e p="UI" t="Include">
+        <e p="Buttons.cs" t="Include" />
+        <e p="Dialog_NameCult.cs" t="Include" />
+        <e p="Dialog_RenameCult.cs" t="Include" />
+        <e p="Dialog_RenameTemple.cs" t="Include" />
+        <e p="ITab_AltarAnimalSacrificeCardUtility.cs" t="Include" />
+        <e p="ITab_AltarCardUtility.cs" t="Include" />
+        <e p="ITab_AltarFoodSacrificeCardUtility.cs" t="Include" />
+        <e p="ITab_AltarHumanSacrificeCardUtility.cs" t="Include" />
+        <e p="ITab_AltarSacrifice.cs" t="Include" />
+        <e p="ITab_AltarSacrificesCardUtility.cs" t="Include" />
+        <e p="ITab_AltarWorship.cs" t="Include" />
+        <e p="ITab_AltarWorshipCardUtility.cs" t="Include" />
+      </e>
+      <e p="Unused" t="Include">
+        <e p="Building_BurstingTentacle.cs" t="Include" />
+        <e p="GameCondition_StarsAreRight.cs" t="Include" />
+        <e p="GameCondition_StarsAreWrong.cs" t="Include" />
+        <e p="IncidentWorker_MakeCultMapCondition.cs" t="Include" />
+      </e>
+      <e p="Utilities" t="Include">
+        <e p="CthulhuUtility.cs" t="Include" />
+        <e p="CultUtility.cs" t="Include" />
+      </e>
+      <e p="UtilityWorldObject.cs" t="Include" />
+    </e>
+  </component>
+</project>
