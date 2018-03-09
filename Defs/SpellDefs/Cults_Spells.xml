@@ -295,7 +295,7 @@
 		<description>When the oathtaker dies, they return to life once again to serve.</description>
 		<defName>Cults_SpellUnspeakableOath</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_UnspeakableOath</workerClass>
-        <letterLabel>and swear and an unbreakable oath on his unspoken name</letterLabel>
+        <letterLabel>to swear an unbreakable oath in his name</letterLabel>
         <letterText>realises that they are the only one who notices the masked stranger, slender in their yellow robes, and realises that their life is no longer their own</letterText>
 	</IncidentDef>
 

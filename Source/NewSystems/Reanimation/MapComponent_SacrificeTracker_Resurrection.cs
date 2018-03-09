@@ -86,42 +86,36 @@ namespace CultOfCthulhu
         public void HasturResurrection()
         {
             Pawn sourceCorpse = toBeResurrected.RandomElement();
+            toBeResurrected.Remove(sourceCorpse);
             IntVec3 spawnLoc = IntVec3.Invalid;
             Map map = null;
 
             if (sourceCorpse.Corpse != null)
             {
-                map = sourceCorpse.MapHeld;
-                spawnLoc = sourceCorpse.PositionHeld;
-                if (spawnLoc == IntVec3.Invalid) spawnLoc = sourceCorpse.Position;
-                if (spawnLoc == IntVec3.Invalid) spawnLoc = DropCellFinder.RandomDropSpot(map);
+                //Use B18's Resurrect Feature
+                ResurrectionUtility.Resurrect(sourceCorpse);
 
-                ReanimatedPawn newPawn = ReanimatedPawnUtility.DoGenerateZombiePawnFromSource(sourceCorpse, false, true);
-
-                //Hops / Other storage buildings
-                if (StoreUtility.StoringBuilding(sourceCorpse.Corpse) is Building building)
+                //Remove everything that conflicts with Psychopathic behavior
+                sourceCorpse.story.traits.allTraits.RemoveAll(
+                    x => (x.def.conflictingTraits is List<TraitDef> conflicts && !conflicts.NullOrEmpty() &&
+                          conflicts.Contains(TraitDefOf.Psychopath)) ||
+                         x.def.defName == "Cults_OathtakerHastur");
+                
+                //Remove a random trait and add Psychopath
+                if (sourceCorpse.story.traits.allTraits is List<Trait> allTraits && allTraits.Count > 1 &&
+                    allTraits.FirstOrDefault(x => x.def == TraitDefOf.Psychopath) == null)
                 {
-                    if (building is Building_Storage buildingS)
-                    {
-                        buildingS.Notify_LostThing(sourceCorpse);
-                    }
-
+                    sourceCorpse.story.traits.allTraits.RemoveLast();
+                    sourceCorpse.story.traits.GainTrait(new Trait(TraitDefOf.Psychopath, 0, true));   
                 }
-                if (sourceCorpse?.Corpse?.holdingOwner?.Owner is Building_Casket casket)
-                {
-                    casket.EjectContents();
-                    Cthulhu.Utility.DebugReport("Resurection:: Casket/grave/sarcophogi opened.");
-                }
+                
+                //Adds the "Reanimated" trait
+                sourceCorpse.story.traits.GainTrait(new Trait(TraitDef.Named("Cults_OathtakerHastur2"), 0, true));
 
+                //Message to the player
                 Messages.Message("ReanimatedOath".Translate(new object[] {
                     sourceCorpse.Name
-                }), MessageTypeDefOf.ThreatBig);
-                //Log.Message(newPawn.NameStringShort);
-                //Log.Message(spawnLoc.ToString());
-                //Log.Message(map.ToString());
-
-                GenSpawn.Spawn(newPawn, spawnLoc, map);
-                sourceCorpse.Destroy(0);
+                }), MessageTypeDefOf.PositiveEvent);
             }
         }
 
