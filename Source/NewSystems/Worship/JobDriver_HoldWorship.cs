@@ -61,7 +61,7 @@ namespace CultOfCthulhu
             //Commence fail checks!
             this.FailOnDestroyedOrNull(TargetIndex.A);
             
-            yield return Toils_Reserve.Reserve(AltarIndex, this.DropAltar.LyingSlotsCount);
+            yield return Toils_Reserve.Reserve(AltarIndex, Building_SacrificialAltar.LyingSlotsCount);
 
             yield return new Toil
             {

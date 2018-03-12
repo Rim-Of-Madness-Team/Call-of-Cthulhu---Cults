@@ -135,6 +135,12 @@ namespace CultOfCthulhu
         }
 
 
+        public static SacrificeCardTab Tab
+        {
+            get => tab;
+            set => tab = value;
+        }
+        
         protected static void FillCard(Rect cardRect, Building_SacrificialAltar altar)
         {
             if (tab == SacrificeCardTab.Offering)

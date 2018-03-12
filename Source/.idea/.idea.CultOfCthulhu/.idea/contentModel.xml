@@ -31,6 +31,7 @@
           <e p="Building_ForbiddenReserachCenter.cs" t="Include" />
           <e p="Cult.cs" t="Include" />
           <e p="CultInfluence.cs" t="Include" />
+          <e p="CultistExperience.cs" t="Include" />
           <e p="MapComponent_LocalCultTracker.cs" t="Include" />
           <e p="Need_CultMindedness.cs" t="Include" />
           <e p="RoomRoleWorker_Temple.cs" t="Include" />

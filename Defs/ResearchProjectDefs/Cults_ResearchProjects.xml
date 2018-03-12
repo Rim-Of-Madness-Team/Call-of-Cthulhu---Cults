@@ -92,6 +92,7 @@
 	<researchViewY>4</researchViewY>
   </ResearchProjectDef>
 
+
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Sacrifice</defName>
     <label>Altar of Sacrifice</label>
@@ -99,12 +100,25 @@
     <baseCost>250</baseCost>
 	<prerequisites>
 	<li>Forbidden_Altar</li>
-	<li>Forbidden_Studies</li>
 	</prerequisites>
 	<researchViewX>2</researchViewX>
 	<researchViewY>4</researchViewY>
   </ResearchProjectDef>
 
+    
+  <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
+    <defName>Forbidden_Reports</defName>
+    <label>Chronicling</label>
+    <description>Adds a Reports button to the altar that shows the most recent sacrifice's results in detail.</description>
+    <baseCost>500</baseCost>
+	<prerequisites>
+	<li>Forbidden_Sacrifice</li>
+	</prerequisites>
+	<researchViewX>3</researchViewX>
+	<researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+
+  
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">
     <defName>Forbidden_Human</defName>
     <label>Human Sacrifice</label>
@@ -112,8 +126,6 @@
     <baseCost>400</baseCost>
 	<prerequisites>
 	<li>Forbidden_Sacrifice</li>
-	<li>Forbidden_Altar</li>
-	<li>Forbidden_Studies</li>
 	</prerequisites>
 	<researchViewX>3</researchViewX>
 	<researchViewY>4</researchViewY>

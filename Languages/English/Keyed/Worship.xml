@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+
+<!-- 3/10/18 -->
+<CommandCultReport>View Last Report</CommandCultReport>
+<CommandCultReportDesc>Executioners leave a log of their last sacrifice.</CommandCultReportDesc>
+<CommandCultReportDisabled>No recent sacrifices have been recorded.</CommandCultReportDisabled>
+<Cults_InquisitionPlotBegins>{0} has begun plotting against the local cult, {1}</Cults_InquisitionPlotBegins>
+
+<!-- Chronicle of Events, August 13, 3500-->
+<Cults_LRHeading>Chronicle of Events, {0}</Cults_LRHeading>
+<Cults_LRSacrifice>Summary of {0} sacrifice to {1} for {2}.</Cults_LRSacrifice>
+<Cults_LRAttendance>{0} in attendance.</Cults_LRAttendance>
+<Cults_LRFactorsFavorable>Favorable Factors:</Cults_LRFactorsFavorable>
+<Cults_LRStarsAreRight>The stars were aligned to {0}'s liking.</Cults_LRStarsAreRight>
+<Cults_LRSpellDifficultyOne>The spell was not difficult.</Cults_LRSpellDifficultyOne>
+<Cults_LRAttireBonus>Some attendants wore appropriate apparel.</Cults_LRAttireBonus>
+<Cults_LRNoAttireBonus>No attendants wore appropriate apparel.</Cults_LRNoAttireBonus>
+<Cults_LRDaggerBonus>A sacrificial dagger was wielded.</Cults_LRDaggerBonus>
+<Cults_LRNoDaggerBonus>A sacrificial dagger was not wielded.</Cults_LRNoDaggerBonus>
+<Cults_LRPerfectBonus>All attendants wore appropriate apparel.</Cults_LRPerfectBonus>
+<Cults_LRNoPerfectBonus>Not all attendants wore appropriate apparel.</Cults_LRNoPerfectBonus>
+<Cults_LRDeityStatue>A statue of {0} was present.</Cults_LRDeityStatue>
+<Cults_LRNoDeityStatue>A statue of {0} was missing.</Cults_LRNoDeityStatue>
+<Cults_LRQualityStatue>A high quality statue stood nearby.</Cults_LRQualityStatue>
+<Cults_LRNoQualityStatue>A high quality statue was missing.</Cults_LRNoQualityStatue>
+<Cults_LRTempImpressNo>Unimpressive temple.</Cults_LRTempImpressNo>
+<Cults_LRTempImpressDecent>Somewhat-impressive temple.</Cults_LRTempImpressDecent>
+<Cults_LRTempImpress>Impressive temple.</Cults_LRTempImpress>
+<Cults_LRTempWealthNo>Poor temple.</Cults_LRTempWealthNo>
+<Cults_LRTempWealthDecent>Somewhat-wealthy temple.</Cults_LRTempWealthDecent>
+<Cults_LRTempWealth>Wealthy temple.</Cults_LRTempWealth>
+<Cults_LRTempSpaceNo>Cramped temple.</Cults_LRTempSpaceNo>
+<Cults_LRTempSpaceDecent>Somewhat-spacious temple.</Cults_LRTempSpaceDecent>
+<Cults_LRTempSpace>Spacious temple.</Cults_LRTempSpace>
+<Cults_LRTempBeautyNo>Ugly temple.</Cults_LRTempBeautyNo>
+<Cults_LRTempBeautyDecent>Somewhat-beautiful temple.</Cults_LRTempBeautyDecent>
+<Cults_LRTempBeauty>Beautiful temple.</Cults_LRTempBeauty>
+<Cults_LRTempOutdoorFavored>Outdoor temple favored by {0}.</Cults_LRTempOutdoorFavored>
+<Cults_LRTempNoOutdoorFavored>Outdoor temple not favored by {0}.</Cults_LRTempNoOutdoorFavored>
+<Cults_LRFactorsUnfavorable>Unfavorable Factors:</Cults_LRFactorsUnfavorable>
+<Cults_LRSpellDifficultyTwo>The spell was difficult.</Cults_LRSpellDifficultyTwo>
+<Cults_LRSpellDifficultyThree>The spell was intense.</Cults_LRSpellDifficultyThree>
+<Cults_LRSpellDifficultyFour>The spell was nearly impossible.</Cults_LRSpellDifficultyFour>
+<Cults_LRStarsAreWrong>The stars were aligned to {0}'s disliking.</Cults_LRStarsAreWrong>
+<Cults_LRNoAstralEvents>No special astral events took place.</Cults_LRNoAstralEvents>
+<Cults_LREclipseActive>An eclipse took place.</Cults_LREclipseActive>
+<Cults_LRNoEclipseActive>No eclipse took place.</Cults_LRNoEclipseActive>
+<Cults_LRAuroraActive>An aurora took place.</Cults_LRAuroraActive>
+<Cults_LRNoAuroraActive>No aurora took place.</Cults_LRNoAuroraActive>
+<Cults_LRExecFirstTime>Our executioner, {0}, had never sacrificed before.</Cults_LRExecFirstTime>
+<Cults_LRExecInex>Our inexperienced executioner, {0}, had performed less than 3 sacrifices. (Prior sacrifices: {1})</Cults_LRExecInex>
+<Cults_LRExecEven>Our somewhat-lacking executioner, {0}, had performed less than 10 sacrifices. (Prior sacrifices: {1})</Cults_LRExecEven>
+<Cults_LRExecExp>Our experienced executioner, {0}, had performed less than 24 sacrifices. (Prior sacrifices: {1})</Cults_LRExecExp>
+<Cults_LRExecVeryExp>Our expert executioner, {0} carried out the sacrifice. (Prior sacrifices: {1})</Cults_LRExecVeryExp>
+<Cults_LRExecBonus>{0} used extra finesse during the proceedings.</Cults_LRExecBonus>
+<Cults_LRCheck>Difficulty check:\n(Rolled 100-sided die for {0} + Favorables: {1}) vs (Base difficulty: {2} + Unfavorables: {3})</Cults_LRCheck>
+<Cults_LRResultSuccess>Result: Success</Cults_LRResultSuccess>
+<Cults_LRResultFailure>Result: Failure</Cults_LRResultFailure>
+
+
 <!-- 12/6/17 -->
 
 <Cults_SleepTotem_StateAsleep>State: Asleep</Cults_SleepTotem_StateAsleep>

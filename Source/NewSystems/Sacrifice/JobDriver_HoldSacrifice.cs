@@ -58,7 +58,7 @@ namespace CultOfCthulhu
             this.FailOnAggroMentalState(TargetIndex.A);
 
             yield return Toils_Reserve.Reserve(TakeeIndex, 1);
-            yield return Toils_Reserve.Reserve(AltarIndex, this.DropAltar.LyingSlotsCount);
+            yield return Toils_Reserve.Reserve(AltarIndex, Building_SacrificialAltar.LyingSlotsCount);
 
             yield return new Toil
             {

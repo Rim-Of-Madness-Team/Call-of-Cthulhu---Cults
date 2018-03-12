@@ -230,7 +230,7 @@
     <fillPercent>0.20</fillPercent>
     <designationHotKey>Misc8</designationHotKey>
     <defaultPlacingRot>North</defaultPlacingRot>
-	<rotatable>false</rotatable>
+	<rotatable>true</rotatable>
     <building>
       <isSittable>true</isSittable>
     </building>

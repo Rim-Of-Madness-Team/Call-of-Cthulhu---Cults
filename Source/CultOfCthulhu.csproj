@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NewSystems\AntiCult\MapComponent_LocalCultTracker_Inquisition.cs" />
+    <Compile Include="NewSystems\Cult\CultistExperience.cs" />
     <Compile Include="NewSystems\Cult\Seed\MapComponent_LocalCultTracker_Seed.cs" />
     <Compile Include="NewSystems\Cult\Seed\WorkGiver_Investigate.cs" />
     <Compile Include="NewSystems\Cult\Seed\WorkGiver_InvestigateTree.cs" />
