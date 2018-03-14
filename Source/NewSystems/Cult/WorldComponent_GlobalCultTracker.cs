@@ -58,7 +58,8 @@ namespace CultOfCthulhu
             ResearchProjectDef.Named("Forbidden_Altar"),
             ResearchProjectDef.Named("Forbidden_Sacrifice"),
             ResearchProjectDef.Named("Forbidden_Human"),
-            ResearchProjectDef.Named("Forbidden_Obelisks")
+            ResearchProjectDef.Named("Forbidden_Obelisks"),
+            ResearchProjectDef.Named("Forbidden_Reports")
         };
 
         public List<Cult> worldCults = null;

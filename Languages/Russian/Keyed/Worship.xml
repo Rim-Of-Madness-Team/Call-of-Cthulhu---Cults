@@ -1,6 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
+
+  <!-- 3/10/18 -->
+  <CommandCultReport>Просмотреть последний репорт</CommandCultReport>
+  <CommandCultReportDesc>Палачи оставляют журнал о своей последней жертве.</CommandCultReportDesc>
+  <CommandCultReportDisabled>Никаких новых жертв не было зафиксировано.</CommandCultReportDisabled>
+  <Cults_InquisitionPlotBegins>{0} начал заговор против местного культа, {1}</Cults_InquisitionPlotBegins>
+
+  <!-- Chronicle of Events, August 13, 3500-->
+  <Cults_LRHeading>Хроника Событий, {0}</Cults_LRHeading>
+  <Cults_LRSacrifice>Сводка {0} жертвы {1} для {2}.</Cults_LRSacrifice>
+  <Cults_LRAttendance>{0} присутствующих.</Cults_LRAttendance>
+  <Cults_LRFactorsFavorable>Благоприятные факторы:</Cults_LRFactorsFavorable>
+  <Cults_LRStarsAreRight>Звезды выровнялись в соответствии с {0}.</Cults_LRStarsAreRight>
+  <Cults_LRSpellDifficultyOne>Заклинание не было сложным.</Cults_LRSpellDifficultyOne>
+  <Cults_LRAttireBonus>Некоторые служители носили соответствующую одежду.</Cults_LRAttireBonus>
+  <Cults_LRNoAttireBonus>Ни один служитель не носил соответствующую одежду.</Cults_LRNoAttireBonus>
+  <Cults_LRDaggerBonus>Использовался жертвенный кинжал.</Cults_LRDaggerBonus>
+  <Cults_LRNoDaggerBonus>Жертвенный кинжал не был использован.</Cults_LRNoDaggerBonus>
+  <Cults_LRPerfectBonus>Все служители носили соответствующую одежду.</Cults_LRPerfectBonus>
+  <Cults_LRNoPerfectBonus>Ни один служитель не носил соответствующую одежду.</Cults_LRNoPerfectBonus>
+  <Cults_LRDeityStatue>Статуя {0} присутствовала.</Cults_LRDeityStatue>
+  <Cults_LRNoDeityStatue>Статуя {0} отсутствовала.</Cults_LRNoDeityStatue>
+  <Cults_LRQualityStatue>Рядом стояла статуя высокого качества.</Cults_LRQualityStatue>
+  <Cults_LRNoQualityStatue>Статуя высокого качества отсутствовала.</Cults_LRNoQualityStatue>
+  <Cults_LRTempImpressNo>Невпечатляющий храм.</Cults_LRTempImpressNo>
+  <Cults_LRTempImpressDecent>Несколько впечатляющий храм.</Cults_LRTempImpressDecent>
+  <Cults_LRTempImpress>Впечатляющий храм.</Cults_LRTempImpress>
+  <Cults_LRTempWealthNo>Бедный храм.</Cults_LRTempWealthNo>
+  <Cults_LRTempWealthDecent>Несколько богатый храм.</Cults_LRTempWealthDecent>
+  <Cults_LRTempWealth>Богатый храм.</Cults_LRTempWealth>
+  <Cults_LRTempSpaceNo>Тесный храм.</Cults_LRTempSpaceNo>
+  <Cults_LRTempSpaceDecent>Несколько просторный храм.</Cults_LRTempSpaceDecent>
+  <Cults_LRTempSpace>Просторный храм.</Cults_LRTempSpace>
+  <Cults_LRTempBeautyNo>Уродливый храм.</Cults_LRTempBeautyNo>
+  <Cults_LRTempBeautyDecent>Несколько красивый храм.</Cults_LRTempBeautyDecent>
+  <Cults_LRTempBeauty>Красивый храм.</Cults_LRTempBeauty>
+  <Cults_LRTempOutdoorFavored>Наружный храм благоволит {0}.</Cults_LRTempOutdoorFavored>
+  <Cults_LRTempNoOutdoorFavored>Наружный храм не одобряется {0}.</Cults_LRTempNoOutdoorFavored>
+  <Cults_LRFactorsUnfavorable>Неблагоприятные факторы:</Cults_LRFactorsUnfavorable>
+  <Cults_LRSpellDifficultyTwo>Заклинание было трудным.</Cults_LRSpellDifficultyTwo>
+  <Cults_LRSpellDifficultyThree>Заклинание было сильным.</Cults_LRSpellDifficultyThree>
+  <Cults_LRSpellDifficultyFour>Заклинание было практически неосуществимым.</Cults_LRSpellDifficultyFour>
+  <Cults_LRStarsAreWrong>Звезды выровнялись в соответствии с неприятностями {0}.</Cults_LRStarsAreWrong>
+  <Cults_LRNoAstralEvents>Особых астральных событий не было.</Cults_LRNoAstralEvents>
+  <Cults_LREclipseActive>Произошло затмение.</Cults_LREclipseActive>
+  <Cults_LRNoEclipseActive>Не было никакого затмения.</Cults_LRNoEclipseActive>
+  <Cults_LRAuroraActive>Сияние состоялось</Cults_LRAuroraActive>
+  <Cults_LRNoAuroraActive>Не было никакого сияния.</Cults_LRNoAuroraActive>
+  <Cults_LRExecFirstTime>Наш палач {0} никогда раньше не приносил жертвоприношение</Cults_LRExecFirstTime>
+  <Cults_LRExecInex>Наш неопытный палач {0} совершил менее 3 жертвоприношений. (Предыдущие жертвы: {1})</Cults_LRExecInex>
+  <Cults_LRExecEven>Наш не особо опытный палач {0} совершил менее 10 жертвоприношений. (Предыдущие жертвы: {1})</Cults_LRExecEven>
+  <Cults_LRExecExp>Наш опытный палач {0} совершил менее 24 жертвоприношений. (Предыдущие жертвы: {1})</Cults_LRExecExp>
+  <Cults_LRExecVeryExp>Наш эксперт-палач {0} совершал жертвоприношения. (Предыдущие жертвы: {1})</Cults_LRExecVeryExp>
+  <Cults_LRExecBonus>{0} использовал дополнительную изящность во время работы.</Cults_LRExecBonus>
+  <Cults_LRCheck>Проверка сложности:\n(Прокат 100-сторонняя матрица для {0} + Благоприятные: {1}) против (Базовая сложность: {2} + Неблагоприятные: {3})</Cults_LRCheck>
+  <Cults_LRResultSuccess>Результат: Успех</Cults_LRResultSuccess>
+  <Cults_LRResultFailure>Результат: Ошибка</Cults_LRResultFailure>
+
+
   <!-- 12/6/17 -->
 
   <Cults_SleepTotem_StateAsleep>Состояние: Спящий</Cults_SleepTotem_StateAsleep>

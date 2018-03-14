@@ -11,11 +11,11 @@
   <Cults_ByakheeRace.tools.3.label>правый коготь</Cults_ByakheeRace.tools.3.label>
   <Cults_ByakheeRace.tools.4.label>крылья</Cults_ByakheeRace.tools.4.label>
   <Cults_ByakheeRace_Leather.label>хитин бьякхи</Cults_ByakheeRace_Leather.label>
-  <Cults_ByakheeRace_Leather.description>итин бьякхи.</Cults_ByakheeRace_Leather.description>
-  <Cults_ByakheeRace_Leather.stuffProps.stuffAdjective>итин бьякхи</Cults_ByakheeRace_Leather.stuffProps.stuffAdjective>
+  <Cults_ByakheeRace_Leather.description>хитин бьякхи.</Cults_ByakheeRace_Leather.description>
+  <Cults_ByakheeRace_Leather.stuffProps.stuffAdjective>хитин бьякхи</Cults_ByakheeRace_Leather.stuffProps.stuffAdjective>
   <!-- Meat Amount: 0 -->
   <Cults_ByakheeRace_Corpse.label>Труп бьякхи</Cults_ByakheeRace_Corpse.label>
-  <Cults_ByakheeRace_Corpse.description>Труп бьякхи.</Cults_ByakheeRace_Corpse.description>
+  <Cults_ByakheeRace_Corpse.description>Труп бьякхи</Cults_ByakheeRace_Corpse.description>
 
 
 </LanguageData>

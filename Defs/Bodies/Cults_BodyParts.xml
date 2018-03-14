@@ -237,7 +237,7 @@
 
   <BodyPartDef>
     <defName>Internal_RightEar</defName>
-    <label>internal left ear</label>
+    <label>internal right ear</label>
     <hitPoints>10</hitPoints>
     <oldInjuryBaseChance>0.024</oldInjuryBaseChance>
     <skinCovered>false</skinCovered>

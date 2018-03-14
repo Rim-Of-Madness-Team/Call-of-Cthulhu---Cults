@@ -54,19 +54,9 @@
   <Cults_SpellTreasuresOfTheDeep.description>Принести потерянные сундуки с сокровищами, наполненными ценными ресурсами, такими как нефрит, серебро и золото с древних кораблей, затонувших в абиссальных морях.</Cults_SpellTreasuresOfTheDeep.description>
 
   <Cults_SpellDefendTheBrood.label>Защитить семью</Cults_SpellDefendTheBrood.label>
-  <Cults_SpellDefendTheBrood.letterText>слышит квакание на расстоянии. А потом еще один, а затем хор</Cults_SpellDefendTheBrood.letterText>
+  <Cults_SpellDefendTheBrood.letterText>слышит кваканье на расстоянии. А потом еще один, а затем хор</Cults_SpellDefendTheBrood.letterText>
   <Cults_SpellDefendTheBrood.letterLabel>и попросите его защитить своих</Cults_SpellDefendTheBrood.letterLabel>
   <Cults_SpellDefendTheBrood.description>Принести банду, для охраны вашей колонии. Рекомендуется использовать знак дагона перед тем, как наложить это заклинание.</Cults_SpellDefendTheBrood.description>
-
-
-  <!-- <IncidentDef ParentName="SpellDef">
-		<label>Relics of the Deep</label>
-		<description>Brings forth a greater assortment of valuable resources such as jade, silver, and gold along with legendary weapons and armor lost to the abyssal seas.</description>
-		<defName>Cults_SpellRecoverArtifacts</defName>
-		<workerClass>CultOfCthulhu.SpellWorker_RelicsoftheDeep</workerClass>
-        <letterLabel>out of desperation or greed, to deliver wealth from the sea</letterLabel>
-        <letterText>is granted a vision of great relics washing up from ethereal yet non-existent waves</letterText>
-	</IncidentDef> -->
 
   <Cults_SpellBountyOfTheSea.label>Щедрость моря</Cults_SpellBountyOfTheSea.label>
   <Cults_SpellBountyOfTheSea.letterText>слышит крушение, затем кричит, что приз доставлен</Cults_SpellBountyOfTheSea.letterText>
@@ -180,7 +170,7 @@
   <Cults_SpellSleeperOfNKai.description>Призывает неописуемо деформированного идола, который нападает на рейдеров.</Cults_SpellSleeperOfNKai.description>
 
   <Cults_SpellBlackIchor.label>чёрный ихор</Cults_SpellBlackIchor.label>
-  <Cults_SpellBlackIchor.letterText>слышит странные шепоты снизу, как неземные бассейны заполняются черным илом с земли</Cults_SpellBlackIchor.letterText>
+  <Cults_SpellBlackIchor.letterText>слышит странный шепот снизу, как неземные бассейны заполняются черным илом с земли</Cults_SpellBlackIchor.letterText>
   <Cults_SpellBlackIchor.letterLabel>и просит о помощи в удовлетворении собственных аппетитов</Cults_SpellBlackIchor.letterLabel>
   <Cults_SpellBlackIchor.description>Приносит сочный чёрный ихор, чтобы насытить обжорство ваших колонистов и улучшить их настроение.</Cults_SpellBlackIchor.description>
 

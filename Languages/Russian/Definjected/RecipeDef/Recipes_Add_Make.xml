@@ -26,9 +26,13 @@
   <Make_Apparel_ROMDagonRobes.description>Сделать культистское облачение (традиционное).</Make_Apparel_ROMDagonRobes.description>
   <Make_Apparel_ROMDagonRobes.jobString>Делает культистское облачение (традиционное).</Make_Apparel_ROMDagonRobes.jobString>
 
-  <Make_Apparel_ROMShubRobes.label>Сделать культистское облачение (друид)</Make_Apparel_ROMShubRobes.label>
+  <Make_Apparel_ROMShubRobes.label>сделать культистское облачение (друид)</Make_Apparel_ROMShubRobes.label>
   <Make_Apparel_ROMShubRobes.description>Сделать культистское облачение (друид).</Make_Apparel_ROMShubRobes.description>
   <Make_Apparel_ROMShubRobes.jobString>Делает культистское облачение (друид).</Make_Apparel_ROMShubRobes.jobString>
+
+  <Make_Apparel_ROMHasturRobes.label>сделать культистское облачение (жёлтое)</Make_Apparel_ROMHasturRobes.label>
+  <Make_Apparel_ROMHasturRobes.description>Сделать культистское облачение (жёлтое).</Make_Apparel_ROMHasturRobes.description>
+  <Make_Apparel_ROMHasturRobes.jobString>делает культистское облачение (жёлтое).</Make_Apparel_ROMHasturRobes.jobString>
 
 
   <!-- Recipe Users: ElectricTailoringBench, HandTailoringBench, CraftingSpot -->
@@ -43,6 +47,10 @@
   <Make_Apparel_CultistHood.label>Сделать капюшон культиста (скрывающий)</Make_Apparel_CultistHood.label>
   <Make_Apparel_CultistHood.description>Сделать капюшон культиста (скрывающий).</Make_Apparel_CultistHood.description>
   <Make_Apparel_CultistHood.jobString>Делает капюшон культиста (скрывающий).</Make_Apparel_CultistHood.jobString>
+
+  <Make_Apparel_HasturHood.label>сделать капюшон культиста (жёлтый)</Make_Apparel_HasturHood.label>
+  <Make_Apparel_HasturHood.description>Сделать капюшон культиста (жёлтый).</Make_Apparel_HasturHood.description>
+  <Make_Apparel_HasturHood.jobString>делает капюшон культиста (жёлтый).</Make_Apparel_HasturHood.jobString>
 
   <Make_Apparel_CthulhuMaskHood.label>Сделать капюшон культиста (маска ктулху)</Make_Apparel_CthulhuMaskHood.label>
   <Make_Apparel_CthulhuMaskHood.description>Сделать капюшон культиста (маска ктулху).</Make_Apparel_CthulhuMaskHood.description>

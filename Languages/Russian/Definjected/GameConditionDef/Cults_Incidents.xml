@@ -2,7 +2,7 @@
 <LanguageData>
 
   <CultgameCondition_StarsAreWrong.label>звезды ошибаются</CultgameCondition_StarsAreWrong.label>
-  <CultgameCondition_StarsAreWrong.description>Непривязанные к правильному порядку упорядоченной системы, кажется сами звезды, жалят наши глаза с ненавистным презрением. Жертвы не рекомендуется в течение этого периода.</CultgameCondition_StarsAreWrong.description>
+  <CultgameCondition_StarsAreWrong.description>Не привязанные к правильному порядку упорядоченной системы, кажется сами звезды, жалят наши глаза с ненавистным презрением. Жертвы не рекомендуется в течение этого периода.</CultgameCondition_StarsAreWrong.description>
   <CultgameCondition_StarsAreWrong.endMessage>Звезды, как мы их знаем, вернулись</CultgameCondition_StarsAreWrong.endMessage>
 
   <CultgameCondition_StarsAreRight.label>звезды правы</CultgameCondition_StarsAreRight.label>

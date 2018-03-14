@@ -25,6 +25,9 @@
   <Forbidden_Sacrifice.label>Алтарь жертвоприношения</Forbidden_Sacrifice.label>
   <Forbidden_Sacrifice.description>Позволяет вам модернизировать алтарь в алтарь жертвоприношения, чтобы показать большую признательность потусторонним существам.</Forbidden_Sacrifice.description>
 
+  <Forbidden_Reports.label>хроника</Forbidden_Reports.label>
+  <Forbidden_Reports.description>Добавляет кнопку «Отчет» к алтарю, в которой подробно отображаются самые последние результаты жертвоприношений.</Forbidden_Reports.description>
+
   <Forbidden_Human.label>Человеческая жертва</Forbidden_Human.label>
   <Forbidden_Human.description>Позволяет вам модернизировать алтарь в алтарь человеческих жертвоприношений, позволяя получать впечатляющие выгоды от космических существ.</Forbidden_Human.description>
 

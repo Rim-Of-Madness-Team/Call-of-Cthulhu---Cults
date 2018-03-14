@@ -6,7 +6,7 @@
   <FoundedCult.rulePack.rulesStrings.1>image->[pawn_nameFull] формирование культа [circumstance_group]</FoundedCult.rulePack.rulesStrings.1>
   <FoundedCult.rulePack.rulesStrings.2>image->[pawn_nameFull] предсказание культа [circumstance_group]</FoundedCult.rulePack.rulesStrings.2>
   <FoundedCult.rulePack.rulesStrings.3>image->[pawn_nameFull] основание культа [circumstance_group]</FoundedCult.rulePack.rulesStrings.3>
-  <FoundedCult.rulePack.rulesStrings.4>circumstance_phrase->в переди [terrainfeature]</FoundedCult.rulePack.rulesStrings.4>
+  <FoundedCult.rulePack.rulesStrings.4>circumstance_phrase->впереди [terrainfeature]</FoundedCult.rulePack.rulesStrings.4>
   <FoundedCult.rulePack.rulesStrings.5>circumstance_phrase->с невероятной мудростью</FoundedCult.rulePack.rulesStrings.5>
   <FoundedCult.rulePack.rulesStrings.6>circumstance_phrase->в полном отчаянии</FoundedCult.rulePack.rulesStrings.6>
   <FoundedCult.rulePack.rulesStrings.7>circumstance_phrase->с невиданными богами, но наблюдая</FoundedCult.rulePack.rulesStrings.7>
@@ -27,7 +27,7 @@
   <ObservedNightmareTree.rulePack.rulesStrings.6>desc_sentence->[pawn_pronoun] судорожно трясёт.</ObservedNightmareTree.rulePack.rulesStrings.6>
 
   <ObservedNightmareMonolith.label>Наблюдение монолита</ObservedNightmareMonolith.label>
-  <ObservedNightmareMonolith.rulePack.rulesStrings.0>tale_noun->[pawn_nameShortDef] наблюдать за молонитом</ObservedNightmareMonolith.rulePack.rulesStrings.0>
+  <ObservedNightmareMonolith.rulePack.rulesStrings.0>tale_noun->[pawn_nameShortDef] наблюдать за монолитом</ObservedNightmareMonolith.rulePack.rulesStrings.0>
   <ObservedNightmareMonolith.rulePack.rulesStrings.1>image->[pawn_nameFull] уставился(ась) на потусторонний монолит, который тянется в облака [circumstance_group]</ObservedNightmareMonolith.rulePack.rulesStrings.1>
   <ObservedNightmareMonolith.rulePack.rulesStrings.2>circumstance_phrase->в абсолютной растерянности</ObservedNightmareMonolith.rulePack.rulesStrings.2>
   <ObservedNightmareMonolith.rulePack.rulesStrings.3>circumstance_phrase->в полном ужасе</ObservedNightmareMonolith.rulePack.rulesStrings.3>

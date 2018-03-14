@@ -36,6 +36,12 @@
   <Apparel_ROMShubRobes.label>Культистское облачение (друид)</Apparel_ROMShubRobes.label>
   <Apparel_ROMShubRobes.description>Эти лесные священнические одежды, украшенные святыми веточками, для обращения к богам, таким как Шуб-Ниггурат.</Apparel_ROMShubRobes.description>
 
+
+  <!-- Yellow Cultist Vestments -->
+
+  <Apparel_ROMHasturRobes.label>Культистское облачение (жёлтое)</Apparel_ROMHasturRobes.label>
+  <Apparel_ROMHasturRobes.description>Эти робы были окрашены в жёлтый цвет, скрывая оригинальные материалы, используемые в его пошиве. Очень благоволит Хастур.</Apparel_ROMHasturRobes.description>
+
   <Apparel_SailorUniform.label>Матросская униформа</Apparel_SailorUniform.label>
   <Apparel_SailorUniform.description>Для моряков.</Apparel_SailorUniform.description>
 
@@ -44,6 +50,9 @@
 
   <Apparel_CultistHood.label>Капюшон культиста (скрывающий)</Apparel_CultistHood.label>
   <Apparel_CultistHood.description>Для скрытных колонистов.</Apparel_CultistHood.description>
+
+  <Apparel_HasturHood.label>Капюшон культиста (жёлтый)</Apparel_HasturHood.label>
+  <Apparel_HasturHood.description>Из под этого капюшона исходит неземной, болезненный желтый оттенок.</Apparel_HasturHood.description>
 
   <Apparel_CthulhuMaskHood.label>Капюшон культиста (маска ктулху)</Apparel_CthulhuMaskHood.label>
   <Apparel_CthulhuMaskHood.description>Эта маска предназначена исключительно для того, чтобы выглядеть более приятным для вашего божества. С её помощью ваши песнопения и их коварный шепот кажутся более сильными.</Apparel_CthulhuMaskHood.description>
