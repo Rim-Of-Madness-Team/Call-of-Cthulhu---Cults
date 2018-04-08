@@ -973,12 +973,12 @@ namespace CultOfCthulhu
 
             Messages.Message("WorshipFinished".Translate(factionBase.Label), TargetInfo.Invalid, MessageTypeDefOf.PositiveEvent);
         }
-        public static void OfferingComplete(Pawn offerer, Building_SacrificialAltar altar, CosmicEntity deity)
+        public static void OfferingComplete(Pawn offerer, Building_SacrificialAltar altar, CosmicEntity deity, List<Thing> offering)
         {
             //altar.ChangeState(Building_SacrificialAltar.State.worshipping, Building_SacrificialAltar.WorshipState.finishing);
 
             altar.ChangeState(Building_SacrificialAltar.State.offering, Building_SacrificialAltar.OfferingState.finished);
-            deity.ReceiveOffering(offerer, altar);
+            deity.ReceiveOffering(offerer, altar, offering);
 
 
             float CultistMod = Rand.Range(0.01f, 0.02f);

@@ -24,11 +24,15 @@ namespace CultOfCthulhu
         public void GetChildHolders(List<IThingHolder> outChildren)
         {
             ThingOwnerUtility.AppendThingHoldersFromThings(outChildren, this.GetDirectlyHeldThings());
+            if (this.contents != null)
+            {
+                outChildren.Add(this.contents);
+            }
         }
 
         public ThingOwner GetDirectlyHeldThings()
         {
-            return this.contents.innerContainer;
+            return null;
         }
 
         private ActiveDropPodInfo contents;
@@ -81,7 +85,7 @@ namespace CultOfCthulhu
         {
             if (drawLoc.InBounds(Map))
             {
-                this.pawnFlyer.Drawer.DrawAt(drawLoc);
+                this.pawnFlyer?.Drawer?.DrawAt(drawLoc);
             }
         }
 
@@ -96,7 +100,7 @@ namespace CultOfCthulhu
 
         public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
-            this.contents.innerContainer.ClearAndDestroyContents(DestroyMode.Vanish);
+            this.contents?.innerContainer?.ClearAndDestroyContents(DestroyMode.Vanish);
             Map map = base.Map;
             base.Destroy(mode);
             if (mode == DestroyMode.KillFinalize)

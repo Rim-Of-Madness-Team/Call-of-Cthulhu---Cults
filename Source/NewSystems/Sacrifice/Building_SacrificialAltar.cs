@@ -416,6 +416,7 @@ namespace CultOfCthulhu
                     }
                     else if (offerer.CurJob.def != CultsDefOf.Cults_GiveOffering)
                     {
+                        Cthulhu.Utility.DebugReport(offerer.CurJob.def.defName);
                         CultUtility.AbortCongregation(this, "Offerer is not performing the task at hand.");
                         return;
                     }
@@ -1023,7 +1024,7 @@ namespace CultOfCthulhu
                 playerForced = true,
                 targetA = this,
                 targetQueueB = new List<LocalTargetInfo>(determinedOfferings.Count),
-                targetC = Position,
+                targetC = PositionHeld,
                 countQueue = new List<int>(determinedOfferings.Count)
             };
             for (var i = 0; i < determinedOfferings.Count; i++)

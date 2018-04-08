@@ -229,38 +229,19 @@ namespace CultOfCthulhu
             AffectFavor(math);
         }
 
-        public void ReceiveOffering(Pawn offerer, Building_SacrificialAltar altar)
+        public void ReceiveOffering(Pawn offerer, Building_SacrificialAltar altar, List<Thing> offerings)
         {
             StringBuilder s = new StringBuilder();
             s.Append("Offering Report");
             s.AppendLine();
             s.Append("===============");
-
-            foreach (IntVec3 arg_37_0 in altar.CellsAround)
+            
+            foreach (Thing offering in offerings)
             {
-                Thing offering = null;
-                Thing discoveredAltar = null;
-                List<Thing> thingList = arg_37_0.GetThingList(offerer.Map);
-                for (int i = 0; i < thingList.Count; i++)
-                {
-                    Thing current = thingList[i];
-                    if (current.def.defName.Contains("Altar"))
-                    {
-                        discoveredAltar = current;
-                    }
-                    if (IsOffering(current, altar))
-                    {
-                        offering = current;
-                    }
-                }
-                if (offering != null)
-                {
-                    s.AppendLine();
-                    s.Append(offering.stackCount + " " + offering.ToString() + ": $" + offering.MarketValue.ToString() + " each. Total: $" + (offering.MarketValue * (float)offering.stackCount).ToString());
-                    ConsumeOfferings(offering);
-                }
+                s.AppendLine();
+                s.Append(offering.stackCount + " " + offering.ToString() + ": $" + offering.MarketValue.ToString() + " each. Total: $" + (offering.MarketValue * (float)offering.stackCount).ToString());
+                ConsumeOfferings(offering);
             }
-
             Cthulhu.Utility.DebugReport(s.ToString());
         }
 

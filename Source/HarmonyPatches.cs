@@ -142,8 +142,6 @@ namespace CultOfCthulhu
             {
                 if (comp.ActiveCells.Contains(loc))
                 {
-                    //Log.Message("3");
-
                     __result *= 2;
                 }
             }

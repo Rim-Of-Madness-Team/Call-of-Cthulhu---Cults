@@ -20,6 +20,8 @@ namespace CultOfCthulhu
 
         public const TargetIndex IngredientPlaceCellInd = TargetIndex.C;
 
+        public List<Thing> offerings = null;
+
         public float workLeft;
 
         public int billStartTick;
@@ -53,17 +55,14 @@ namespace CultOfCthulhu
 
         public override string GetReport()
         {
-            if (this.pawn.jobs.curJob.RecipeDef != null)
-            {
-                return base.ReportStringProcessed(this.pawn.jobs.curJob.RecipeDef.jobString);
-            }
-            return base.GetReport();
+            return this.pawn.jobs.curJob.RecipeDef != null ? base.ReportStringProcessed(this.pawn.jobs.curJob.RecipeDef.jobString) : base.GetReport();
         }
 
         public override void ExposeData()
         {
             base.ExposeData();
             Scribe_Values.Look<float>(ref this.workLeft, "workLeft", 0f, false);
+            Scribe_Collections.Look(ref this.offerings, "offerings", LookMode.Reference);
             Scribe_Values.Look<int>(ref this.billStartTick, "billStartTick", 0, false);
             Scribe_Values.Look<int>(ref this.ticksSpentDoingRecipeWork, "ticksSpentDoingRecipeWork", 0, false);
         }
@@ -71,7 +70,6 @@ namespace CultOfCthulhu
         [DebuggerHidden]
         protected override IEnumerable<Toil> MakeNewToils()
         {
-
             this.AddEndCondition(delegate
             {
                 Thing thing = this.GetActor().jobs.curJob.GetTarget(TargetIndex.A).Thing;
@@ -98,9 +96,14 @@ namespace CultOfCthulhu
             //    }
             //    return false;
             //});
+            //yield return ToilLogMessage("Pass 0 - Start");
+
             Toil toil = Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
+            yield return new Toil {initAction = delegate {offerings = new List<Thing>();}};
             yield return Toils_Reserve.Reserve(TargetIndex.A, 1);
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 2");}};
             yield return Toils_Reserve.ReserveQueue(TargetIndex.B, 1);
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 3");}};
             yield return new Toil
             {
                 initAction = delegate
@@ -115,19 +118,36 @@ namespace CultOfCthulhu
                     }
                 }
             };
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 4");}};
             yield return Toils_Jump.JumpIf(toil, () => this.job.GetTargetQueue(TargetIndex.B).NullOrEmpty<LocalTargetInfo>());
-            Toil toil2 = Toils_JobTransforms.ExtractNextTargetFromQueue(TargetIndex.B);
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 5");}};
+            Toil toil2 = Toils_JobTransforms.ExtractNextTargetFromQueue(TargetIndex.B, false);
             yield return toil2;
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 6");}};            
             Toil toil3 = Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOnSomeonePhysicallyInteracting(TargetIndex.B);
             yield return toil3;
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 7");}};
             yield return Toils_Haul.StartCarryThing(TargetIndex.B, true, false);
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 8");}};
             yield return JumpToCollectNextIntoHandsForBill(toil3, TargetIndex.B);
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell).FailOnDestroyedOrNull(TargetIndex.B);
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 9");}};
+            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnDestroyedOrNull(TargetIndex.B);
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 10");}};
             Toil toil4 = Toils_JobTransforms.SetTargetToIngredientPlaceCell(TargetIndex.A, TargetIndex.B, TargetIndex.C);
             yield return toil4;
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 11");}};
             yield return Toils_Haul.PlaceHauledThingInCell(TargetIndex.C, toil4, false);
+            //yield return new Toil {initAction = delegate {Log.Message("Pass 12");}};
+            yield return new Toil {initAction = delegate {
+                if (offerings.Count > 0)
+                {
+                    offerings.RemoveAll(x => x.DestroyedOrNull());
+                }
+                offerings.Add(TargetB.Thing);} 
+            };
             yield return Toils_Jump.JumpIfHaveTargetInQueue(TargetIndex.B, toil2);
             yield return toil;
+            //yield return ToilLogMessage("Pass 13");
             Toil chantingTime = new Toil();
             chantingTime.defaultCompleteMode = ToilCompleteMode.Delay;
             chantingTime.defaultDuration = CultUtility.ritualDuration;
@@ -140,15 +160,18 @@ namespace CultOfCthulhu
                     MoteMaker.MakeInteractionBubble(this.pawn, null, ThingDefOf.Mote_Speech, deitySymbol);
             };
             yield return chantingTime;
+            //yield return ToilLogMessage("Pass 14");
             //Toil 8: Execution of Prisoner
             yield return new Toil
             {
                 initAction = delegate
                 {
-                    CultUtility.OfferingComplete(this.pawn, DropAltar, DropAltar.currentOfferingDeity);
+                    CultUtility.OfferingComplete(this.pawn, DropAltar, DropAltar.currentOfferingDeity, offerings);
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };
+            //yield return ToilLogMessage("Pass 15 - Final");
+
             yield break;
 
             //this.AddEndCondition(delegate
@@ -223,6 +246,11 @@ namespace CultOfCthulhu
             ////    CultUtility.OfferingReady(this.pawn, DropAltar);
 
             ////});
+        }
+
+        private static Toil ToilLogMessage(string message)
+        {
+            return new Toil {initAction = delegate {Log.Message(message);}};
         }
 
         private static Toil JumpToCollectNextIntoHandsForBill(Toil gotoGetTargetToil, TargetIndex ind)

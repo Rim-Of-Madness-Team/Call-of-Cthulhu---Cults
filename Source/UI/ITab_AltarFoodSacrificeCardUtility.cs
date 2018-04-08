@@ -138,7 +138,7 @@ namespace CultOfCthulhu
             }
             else
             {
-                return altar.tempOfferingType.ToString();
+                return altar.tempOfferingType.ToString().CapitalizeFirst();
             }
         }
 
@@ -175,7 +175,7 @@ namespace CultOfCthulhu
             }
             else
             {
-                return altar.tempOfferingSize.ToString();
+                return altar.tempOfferingSize.ToString().CapitalizeFirst();
             }
         }
 
