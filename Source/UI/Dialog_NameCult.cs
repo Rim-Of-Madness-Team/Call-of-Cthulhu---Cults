@@ -64,7 +64,7 @@ namespace CultOfCthulhu
             {
                 Widgets.Label(new Rect(0f, 0f, rect.width, rect.height), "NameCultMessage".Translate(new object[]
                 {
-                this.suggestingPawn.NameStringShort
+                this.suggestingPawn.Name.ToStringShort
                 }));
             }
             else

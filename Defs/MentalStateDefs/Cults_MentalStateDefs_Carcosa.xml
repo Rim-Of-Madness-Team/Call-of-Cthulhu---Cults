@@ -2,12 +2,6 @@
 
 <Defs>
 
-  <MentalStateDef Abstract="True" Name="BaseMentalState">
-    <minTicksBeforeRecovery>10000</minTicksBeforeRecovery>
-    <recoveryMtbDays>0.3</recoveryMtbDays>
-  </MentalStateDef>
-
-
   <MentalStateDef ParentName="BaseMentalState">
     <defName>Cults_DeepSleepCarcosa</defName>
     <stateClass>CultOfCthulhu.MentalState_DeepSleepCarcosa</stateClass>

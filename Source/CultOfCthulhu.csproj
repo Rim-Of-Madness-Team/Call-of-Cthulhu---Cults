@@ -62,6 +62,7 @@
     <Compile Include="NewSystems\Cult\Seed\WorkGiver_Investigate.cs" />
     <Compile Include="NewSystems\Cult\Seed\WorkGiver_InvestigateTree.cs" />
     <Compile Include="NewSystems\Interactions\InteractionWorker_SpreadInsanityFailure.cs" />
+    <Compile Include="NewSystems\Psionics\CompPsionicUserExample.cs" />
     <Compile Include="NewSystems\Sacrifice\Bill_Sacrifice.cs" />
     <Compile Include="NewSystems\SanityLoss\Need_Sanity.cs" />
     <Compile Include="NewSystems\Spells\ShubNiggurath\Hediff_Transmogrified.cs" />

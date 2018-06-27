@@ -112,9 +112,9 @@ namespace CultOfCthulhu
             }
         }
 
-        public override void DeSpawn()
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
         {
-            base.DeSpawn();
+            base.DeSpawn(mode);
             //List<Lord> lords = Find.LordManager.lords;
             //for (int i = 0; i < lords.Count; i++)
             //{

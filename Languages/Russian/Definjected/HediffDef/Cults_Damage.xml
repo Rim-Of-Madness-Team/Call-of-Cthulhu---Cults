@@ -5,7 +5,7 @@
   <Cults_AcidBurn.comps.0.labelTendedWell>перевязан</Cults_AcidBurn.comps.0.labelTendedWell>
   <Cults_AcidBurn.comps.0.labelTendedWellInner>зашит</Cults_AcidBurn.comps.0.labelTendedWellInner>
   <Cults_AcidBurn.comps.0.labelSolidTendedWell>обработан</Cults_AcidBurn.comps.0.labelSolidTendedWell>
-  <Cults_AcidBurn.comps.2.oldLabel>шрам от ожога</Cults_AcidBurn.comps.2.oldLabel>
+  <Cults_AcidBurn.comps.2.permanentLabel>шрам от ожога</Cults_AcidBurn.comps.2.permanentLabel>
   <Cults_AcidBurn.injuryProps.destroyedLabel>сгорело</Cults_AcidBurn.injuryProps.destroyedLabel>
   <Cults_AcidBurn.injuryProps.destroyedOutLabel>сгорело</Cults_AcidBurn.injuryProps.destroyedOutLabel>
   <Cults_AcidBurn.labelNoun>кислотный ожог</Cults_AcidBurn.labelNoun>

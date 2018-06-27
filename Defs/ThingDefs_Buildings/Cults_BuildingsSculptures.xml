@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef ParentName="CultSculptureBase">
+    <ThingDef ParentName="SculptureBase">
     <defName>YigSculptureLarge</defName>
     <label>large serpent humanoid sculpture</label>
     <description>A person-sized piece of material in the shape of a snake man sculpted into an artistic form.</description>
@@ -28,7 +28,7 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="CultSculptureBase">
+  <ThingDef ParentName="SculptureBase">
     <defName>SculptureCthulhu</defName>
     <label>monstrous octopoid sculpture</label>
     <description>A car-sized piece of material sculpted into the stylised form of a giant bulbous head. Tentacles snake out from where a mouth would be and glare down in contempt.</description>
@@ -65,10 +65,10 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="CultSculptureBase">
+  <ThingDef ParentName="SculptureBase">
     <defName>SculptureDagon</defName>
     <label>monstrous fish-headed sculpture</label>
-    <description>A car-sized piece of material sculpted into the face of a deep one. Its eyes are large and toadish and stare out, blankly. The teeth are almost as long as your arm. If it were real, it could swallow you with one bite. </description>
+    <description>A car-sized piece of material sculpted into the face of a deep one. Its eyes are large and toadish and stare out, blankly. The teeth are almost as long as your arm. If it were real, it could swallow you with one bite.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Building/DagonSculpture/DagonSculpture</texPath>
@@ -101,7 +101,7 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="CultSculptureBase">
+  <ThingDef ParentName="SculptureBase">
     <defName>SculptureNyarlathotep</defName>
     <label>monstrous hooded sculpture</label>
     <description>A car-sized piece of material sculpted into the shape of a cloaked figure wreathed in shapes that seem ordered at first but is then betrayed by an underlying chaos.</description>
@@ -138,7 +138,7 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="CultSculptureBase">
+  <ThingDef ParentName="SculptureBase">
     <defName>SculptureShub</defName>
     <label>monstrous goat-like sculpture</label>
     <description>A car-sized piece of material sculpted into the stylised form of a goat's head. Behind which is a mass of vines or tentacles writhing around one another and menacing the onlooker.</description>
@@ -175,7 +175,7 @@
   </ThingDef>
 
   
-  <ThingDef ParentName="CultSculptureBase">
+  <ThingDef ParentName="SculptureBase">
     <defName>SculptureTsathoggua</defName>
     <label>monstrous abomination sculpture</label>
     <description>A car-sized piece of material sculpted into the stylised form of a giant bulbous head. This wide squat-shaped amalgation of a bat, toad, and other creatures creates a unique and yet unsettling visage that glares with a ravenous hunger.</description>
@@ -212,7 +212,7 @@
   </ThingDef>
 
     
-  <ThingDef ParentName="CultSculptureBase">
+  <ThingDef ParentName="SculptureBase">
     <defName>SculptureHastur</defName>
     <label>monstrous king sculpture</label>
     <description>A car-sized piece of material sculpted into the stylised form of a giant bulbous head. An ominous king stands before a kingdom, staring downwards.</description>

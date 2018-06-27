@@ -1,70 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef Name="ApparelBase" Abstract="True">
-    <thingClass>Apparel</thingClass>
-    <category>Item</category>
-    <selectable>True</selectable>
-    <pathCost>10</pathCost>
-    <useHitPoints>True</useHitPoints>
-    <graphicData>
-      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
-    </graphicData>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <DeteriorationRate>2</DeteriorationRate>
-      <SellPriceFactor>0.5</SellPriceFactor>
-    </statBases>
-    <altitudeLayer>Item</altitudeLayer>
-    <alwaysHaulable>True</alwaysHaulable>
-    <tickerType>Never</tickerType>
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>
-      <li>
-        <compClass>CompColorable</compClass>
-      </li>
-      <li>
-        <compClass>CompQuality</compClass>
-      </li>
-    </comps>
-  </ThingDef>
-
-
-
-  <ThingDef Name="ApparelMakeableBase" ParentName="ApparelBase" Abstract="True">
-    <recipeMaker>
-      <workSpeedStat>TailoringSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <effectWorking>Tailor</effectWorking>
-      <soundWorking>Recipe_Tailor</soundWorking>
-      <recipeUsers>
-        <li>ElectricTailoringBench</li>
-        <li>HandTailoringBench</li>
-        <li>CraftingSpot</li>
-      </recipeUsers>
-      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
-    </recipeMaker>
-    <tradeability>Sellable</tradeability>
-  </ThingDef>
-
-
-  <ThingDef Name="HatMakeableBase" ParentName="ApparelMakeableBase" Abstract="True">
-    <thingCategories>
-      <li>Headgear</li>
-    </thingCategories>
-    <tradeability>Sellable</tradeability>
-  </ThingDef>
-
-	<!-- =====No Shirts===== -->
-
-	<!-- =====Coats===== -->
-
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_CultistRobes</defName>
-		<description>For those with knowledge.
-		</description>
+		<description>For those with knowledge.</description>
 		<label>cultist robes</label>
 		<graphicData>
 			<texPath>Apparel/Display/CultistRobes</texPath>
@@ -155,8 +94,7 @@
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_ROMFurRobes</defName>
-		<description>Similar to other robes that cultists wear, however, these ones are specifically made for colder environments.
-		</description>
+		<description>Similar to other robes that cultists wear, however, these ones are specifically made for colder environments.</description>
 		<label>cultist robes (fur)</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/FurRobes/ROMFurRobes</texPath>
@@ -248,8 +186,7 @@
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_ROMWrapRobes</defName>
-		<description>This sacred wrap allows priests to preach with greater appeal by appearing as a simple or lowly creature. It also tends to allow for better preaching in locations that face greater threat from the sun and heat.
-		</description>
+		<description>This sacred wrap allows priests to preach with greater appeal by appearing as a simple or lowly creature. It also tends to allow for better preaching in locations that face greater threat from the sun and heat.</description>
 		<label>cultist vestments (wrap)</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/NyarlathotepRobes/ROMNyarlathotepRobes</texPath>
@@ -339,8 +276,7 @@
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_ROMCthulhuRobes</defName>
-		<description>Adorned with faux tentacles, this imposing robe is favored by priests of Nyarlathotep or Cthulhu.
-		</description>
+		<description>Adorned with faux tentacles, this imposing robe is favored by priests of Nyarlathotep or Cthulhu.</description>
 		<label>cultist vestments (tentacled)</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/CthulhuRobes/ROMCthulhuRobes</texPath>
@@ -431,8 +367,7 @@
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_ROMDagonRobes</defName>
-		<description>Impressive looking vestments preferred by orders of Dagon or Hastur.
-		</description>
+		<description>Impressive looking vestments preferred by orders of Dagon or Hastur.</description>
 		<label>cultist vestments (traditional)</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/DagonRobes/ROMDagonVestments</texPath>
@@ -523,8 +458,7 @@
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_ROMShubRobes</defName>
-		<description>These woodland priestly robes adorned with sacred twigs appeal to deities like Shub-Niggurath.
-		</description>
+		<description>These woodland priestly robes adorned with sacred twigs appeal to deities like Shub-Niggurath.</description>
 		<label>cultist vestments (druidic)</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/ShubRobes/ROMShubRobes</texPath>
@@ -707,8 +641,7 @@
 
 	<ThingDef ParentName="ApparelMakeableBase">
 		<defName>Apparel_SailorUniform</defName>
-		<description>For the sailors.
-		</description>
+		<description>For the sailors.</description>
 		<label>sailor uniform</label>
 		<graphicData>
 			<texPath>Apparel/Bodywear_Clothing/SailorsUniform/ROMSailorsUniform</texPath>

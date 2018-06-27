@@ -31,7 +31,7 @@
     <altitudeLayer>Item</altitudeLayer>
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Neolithic</techLevel>
     <thingCategories>
       <li>Artifacts</li>
     </thingCategories>
@@ -51,7 +51,7 @@
 	<defName>Cults_TheKingInYellow</defName>
     <thingClass>ThingWithComps</thingClass>
 	<label>The King in Yellow</label>
-	<description>The King in Yellow appears as a mysterious, glowing book. The contents of which are mundane during the first act of the play, however proceeding beyond the first act of the play causes madness and a cult-like obsession with an ancient symbol described simply as The Yellow Sign. </description>
+	<description>The King in Yellow appears as a mysterious, glowing book. The contents of which are mundane during the first act of the play, however proceeding beyond the first act of the play causes madness and a cult-like obsession with an ancient symbol described simply as The Yellow Sign.</description>
     <graphicData>
       <texPath>Item/Resource/TheKingInYellow/TheKingInYellow</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -78,7 +78,7 @@
     <altitudeLayer>Item</altitudeLayer>
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Neolithic</techLevel>
     <thingCategories>
       <li>Items</li>
     </thingCategories>

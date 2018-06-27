@@ -6,7 +6,7 @@
 	  <baseChance>0</baseChance>
 	  <letterDef>Cults_StandardMessage</letterDef>
 		<targetTypes>
-          <li>MapPlayerHome</li>
+          <li>Map_PlayerHome</li>
         </targetTypes>
 	</IncidentDef>
 

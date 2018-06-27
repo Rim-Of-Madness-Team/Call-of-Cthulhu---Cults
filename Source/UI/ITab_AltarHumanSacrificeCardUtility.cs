@@ -97,7 +97,7 @@ namespace CultOfCthulhu
         //    }
         //    else
         //    {
-        //        return altar.tempSacrifice.NameStringShort;
+        //        return altar.tempSacrifice.Name.ToStringShort;
         //    }
         //}
 
@@ -109,7 +109,7 @@ namespace CultOfCthulhu
         //    }
         //    else
         //    {
-        //        return altar.tempExecutioner.NameStringShort;
+        //        return altar.tempExecutioner.Name.ToStringShort;
         //    }
         //}
 

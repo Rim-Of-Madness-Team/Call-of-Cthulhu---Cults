@@ -128,13 +128,13 @@ namespace CultOfCthulhu
         public static string SacrificeLabel(Building_SacrificialAltar altar)
         {
             if (altar.tempSacrifice == null)return "None";
-            return altar.tempSacrifice.NameStringShort;
+            return altar.tempSacrifice.Name.ToStringShort;
         }
 
         public static string ExecutionerLabel(Building_SacrificialAltar altar)
         {
             if (altar.tempExecutioner == null) return "None";
-            return altar.tempExecutioner.NameStringShort;
+            return altar.tempExecutioner.Name.ToStringShort;
         }
 
         public static string DeityLabel(Building_SacrificialAltar altar, DeityType deityType)

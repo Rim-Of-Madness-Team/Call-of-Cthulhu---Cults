@@ -25,7 +25,7 @@ namespace CultOfCthulhu
 {
     public class SpellWorker_RatsInTheWalls : SpellWorker
     {
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
 
             //Cthulhu.Utility.DebugReport("

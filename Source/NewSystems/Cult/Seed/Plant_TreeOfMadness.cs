@@ -57,9 +57,9 @@ namespace CultOfCthulhu
             }
         }
 
-        public override void DeSpawn()
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
         {
-            base.DeSpawn();
+            base.DeSpawn(mode);
             if (this.sustainerAmbient != null)
             {
                 this.sustainerAmbient.End();
@@ -69,7 +69,7 @@ namespace CultOfCthulhu
 
         public Thought_Memory GiveObservedThought()
         {
-            if (this.StoringBuilding() == null)
+            if (this.StoringThing() == null)
             {
                 Thought_MemoryObservation thought_MemoryObservation;
                 thought_MemoryObservation = (Thought_MemoryObservation)ThoughtMaker.MakeThought(DefDatabase<ThoughtDef>.GetNamed("Cults_ObservedNightmareTree"));

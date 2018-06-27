@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="CultBenchBase">
+  <ThingDef ParentName="BenchBase">
     <defName>Cult_NightmareSacrificeAltar</defName>
     <label>corrupted altar</label>
     <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
@@ -69,7 +69,7 @@
     <designationHotKey>Misc2</designationHotKey>
   </ThingDef>
 
-  <ThingDef ParentName="CultBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Cults_BurstingTentacle</defName>
     <label>bursting tentacle</label>
     <description>OH GOD</description>
@@ -97,7 +97,7 @@
       <ChunkSlagSteel>6</ChunkSlagSteel>
     </killedLeavings>
     <costList>
-      <Component>20</Component>
+      <ComponentIndustrial>20</ComponentIndustrial>
       <Steel>80</Steel>
 	  <Plasteel>16</Plasteel>
     </costList>
@@ -107,7 +107,7 @@
     </building>
     <selectable>true</selectable>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 	<tickerType>Normal</tickerType>
     <repairEffect>ConstructMetal</repairEffect>
   </ThingDef>

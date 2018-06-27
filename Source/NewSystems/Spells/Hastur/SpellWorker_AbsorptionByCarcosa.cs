@@ -27,7 +27,7 @@ namespace CultOfCthulhu
     public class SpellWorker_AbsorptionByCarcosa : SpellWorker_GameEndingEffect
     {
 
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
 
             //Cthulhu.Utility.DebugReport("CanFire: " + this.def.defName);

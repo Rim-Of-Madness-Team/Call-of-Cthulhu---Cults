@@ -38,14 +38,14 @@ namespace CultOfCthulhu
         public static bool MouseoverReadoutOnGUI(MouseoverReadout __instance)
         {
             IntVec3 c = UI.MouseCell();
-            if (!c.InBounds(Find.VisibleMap) ||
+            if (!c.InBounds(Find.CurrentMap) ||
                 Event.current.type != EventType.Repaint ||
                 Find.MainTabsRoot.OpenTab != null)
             {
                 return false;
             }
             
-            if (Find.VisibleMap.GetComponent<MapComponent_FertilityMods>().Get is MapComponent_FertilityMods fert &&
+            if (Find.CurrentMap.GetComponent<MapComponent_FertilityMods>().Get is MapComponent_FertilityMods fert &&
                 fert.ActiveCells.Contains(c))
             {
                 //Original Variables
@@ -57,7 +57,7 @@ namespace CultOfCthulhu
 
                 float num = 0f;
                 Rect rect;
-                if (c.Fogged(Find.VisibleMap))
+                if (c.Fogged(Find.CurrentMap))
                 {
                     rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
                     Widgets.Label(rect, "Undiscovered".Translate());
@@ -65,19 +65,19 @@ namespace CultOfCthulhu
                     return false;
                 }
                 rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
-                int num2 = Mathf.RoundToInt(Find.VisibleMap.glowGrid.GameGlowAt(c) * 100f);
+                int num2 = Mathf.RoundToInt(Find.CurrentMap.glowGrid.GameGlowAt(c) * 100f);
                 string[] glowStrings = Traverse.Create(__instance).Field("glowStrings").GetValue<string[]>();
                 Widgets.Label(rect, glowStrings[num2]);
                 num += 19f;
                 rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
-                TerrainDef terrain = c.GetTerrain(Find.VisibleMap);
+                TerrainDef terrain = c.GetTerrain(Find.CurrentMap);
                 //string SpeedPercentString = Traverse.Create(__instance).Method("SpeedPercentString", (float)terrain.pathCost).GetValue<string>();
                 //TerrainDef cachedTerrain = Traverse.Create(__instance).Field("cachedTerrain").GetValue<TerrainDef>();
                 string cachedTerrainString = Traverse.Create(__instance).Field("cachedTerrainString").GetValue<string>();
 
                 //if (terrain != cachedTerrain)
                 //{
-                    float fertNum = Find.VisibleMap.fertilityGrid.FertilityAt(c);
+                    float fertNum = Find.CurrentMap.fertilityGrid.FertilityAt(c);
                     string str = ((double)fertNum <= 0.0001) ? string.Empty : (" " + "FertShort".Translate() + " " + fertNum.ToStringPercent());
                     cachedTerrainString = terrain.LabelCap + ((terrain.passability == Traversability.Impassable) ? null : (" (" + "WalkSpeed".Translate(new object[]
                     {
@@ -87,7 +87,7 @@ namespace CultOfCthulhu
                 //}
                 Widgets.Label(rect, cachedTerrainString);
                 num += 19f;
-                Zone zone = c.GetZone(Find.VisibleMap);
+                Zone zone = c.GetZone(Find.CurrentMap);
                 if (zone != null)
                 {
                     rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
@@ -95,7 +95,7 @@ namespace CultOfCthulhu
                     Widgets.Label(rect, label);
                     num += 19f;
                 }
-                float depth = Find.VisibleMap.snowGrid.GetDepth(c);
+                float depth = Find.CurrentMap.snowGrid.GetDepth(c);
                 if (depth > 0.03f)
                 {
                     rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);
@@ -107,7 +107,7 @@ namespace CultOfCthulhu
                     Widgets.Label(rect, label2);
                     num += 19f;
                 }
-                List<Thing> thingList = c.GetThingList(Find.VisibleMap);
+                List<Thing> thingList = c.GetThingList(Find.CurrentMap);
                 for (int i = 0; i < thingList.Count; i++)
                 {
                     Thing thing = thingList[i];
@@ -119,7 +119,7 @@ namespace CultOfCthulhu
                         num += 19f;
                     }
                 }
-                RoofDef roof = c.GetRoof(Find.VisibleMap);
+                RoofDef roof = c.GetRoof(Find.CurrentMap);
                 if (roof != null)
                 {
                     rect = new Rect(BotLeft.x, (float)UI.screenHeight - BotLeft.y - num, 999f, 999f);

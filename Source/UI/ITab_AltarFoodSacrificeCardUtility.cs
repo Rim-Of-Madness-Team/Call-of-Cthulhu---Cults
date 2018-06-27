@@ -150,7 +150,7 @@ namespace CultOfCthulhu
             }
             else
             {
-                return altar.tempOfferer.NameStringShort;
+                return altar.tempOfferer.Name.ToStringShort;
             }
         }
 

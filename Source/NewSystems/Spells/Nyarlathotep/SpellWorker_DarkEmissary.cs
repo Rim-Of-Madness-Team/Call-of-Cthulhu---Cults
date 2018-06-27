@@ -28,7 +28,7 @@ namespace CultOfCthulhu
     {
         private const float RelationWithColonistWeight = 20f;
 
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
             //Cthulhu.Utility.DebugReport("CanFire: " + this.def.defName);
             return true;

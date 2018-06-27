@@ -26,7 +26,7 @@ namespace CultOfCthulhu
 {
     public class SpellWorker_DebugSpawnCultPreacher : SpellWorker
     {
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
             //Cthulhu.Utility.DebugReport("CanFire: " + this.def.defName);
             return true;

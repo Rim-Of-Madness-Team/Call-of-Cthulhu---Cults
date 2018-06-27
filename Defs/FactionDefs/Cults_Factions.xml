@@ -46,7 +46,7 @@
 	</raidCommonalityFromPointsCurve>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <fixedName>Sailor</fixedName>
-    <techLevel>Spacer</techLevel>
+    <techLevel>Neolithic</techLevel>
     <backstoryCategory>Civil</backstoryCategory>
     <hidden>true</hidden>
     <hairTags>
@@ -63,7 +63,7 @@
 
     <pawnGroupMakers>
 	<li>
-		<kindDef>Normal</kindDef>
+		<kindDef>Combat</kindDef>
         <options>
 		  <Cults_Sailor>100</Cults_Sailor>
         </options>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\mattw\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_CultOfCthulhu.205408715.00" t="ExcludeRecursive" />
-    <e p="D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Cults\Assemblies" t="ExcludeRecursive" />
-    <e p="D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Cults\Source" t="IncludeRecursive">
+    <e p="C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Cults\Assemblies" t="ExcludeRecursive" />
+    <e p="C:\Program Files (x86)\Steam\steamapps\common\RimWorld\ModsWorkspace\Call-of-Cthulhu---Cults\Source" t="IncludeRecursive">
       <e p="CultOfCthulhu.csproj" t="IncludeRecursive" />
       <e p="CultOfCthulhu.sln" t="IncludeFlat" />
       <e p="Cults_Screen_Credits.cs" t="Include" />
@@ -81,6 +80,7 @@
         </e>
         <e p="Psionics" t="Include">
           <e p="CompPsionicUser.cs" t="Include" />
+          <e p="CompPsionicUserExample.cs" t="Include" />
           <e p="DamageWorker_PsionicBlast.cs" t="Include" />
           <e p="DamageWorker_PsionicBurn.cs" t="Include" />
           <e p="DamageWorker_PsionicShock.cs" t="Include" />
@@ -226,5 +226,6 @@
       </e>
       <e p="UtilityWorldObject.cs" t="Include" />
     </e>
-  </component>
+    <e p="C:\Users\mattw\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_CultOfCthulhu.-1143512431.00" t="ExcludeRecursive" />
+  </ComponentIndustrial>
 </project>

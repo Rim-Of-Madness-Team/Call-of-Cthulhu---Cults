@@ -11,7 +11,7 @@ namespace CultOfCthulhu
     {
         public override DamageWorker.DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
-            DamageWorker.DamageResult result = DamageResult.MakeNew();
+            DamageWorker.DamageResult result = new DamageResult();
             Pawn pawn = victim as Pawn;
             if (pawn != null)
             {
@@ -52,7 +52,7 @@ namespace CultOfCthulhu
                         else if (d20 <= 10)
                         {
                             MoteMaker.ThrowText(dinfo.Instigator.DrawPos, dinfo.Instigator.Map, "Success", 12.0f);
-                            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.WanderPsychotic, "psionic shock");
+                            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Wander_Psychotic, "psionic shock");
 
                             return result;
                         }

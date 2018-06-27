@@ -25,7 +25,7 @@
     </comps>
     <injuryProps>
       <painPerSeverity>0.0125</painPerSeverity>
-      <averagePainPerSeverityOld>0.00625</averagePainPerSeverityOld>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
       <bleedRate>0</bleedRate>
       <canMerge>true</canMerge>
       <destroyedLabel>imploded</destroyedLabel>

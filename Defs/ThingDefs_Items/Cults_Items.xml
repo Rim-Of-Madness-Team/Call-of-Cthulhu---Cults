@@ -1,43 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-
-  <ThingDef Name="BodyPartBase" Abstract="True">
-    <label>body part</label>
-    <thingClass>ThingWithComps</thingClass>
-    <category>Item</category>
-    <useHitPoints>true</useHitPoints>
-    <selectable>true</selectable>
-    <statBases>
-      <MaxHitPoints>50</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <altitudeLayer>Item</altitudeLayer>
-    <tickerType>Never</tickerType>
-    <alwaysHaulable>true</alwaysHaulable>
-    <isBodyPartOrImplant>true</isBodyPartOrImplant>
-    <tradeTags>
-      <li>BodyPartOrImplant</li>
-    </tradeTags>
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>
-    </comps>
-    <pathCost>10</pathCost>
-  </ThingDef>
-
-  <ThingDef ParentName="BodyPartBase" Name="BodyPartNaturalBase" Abstract="True">
-    <thingCategories>
-      <li>BodyPartsNatural</li>
-    </thingCategories>
-  </ThingDef>
-
-  <ThingDef ParentName="BodyPartBase" Name="BodyPartArtificialBase" Abstract="True">
-    <thingCategories>
-      <li>BodyPartsArtificial</li>
-    </thingCategories>
-  </ThingDef>
-
-
   <ThingDef ParentName="BodyPartArtificialBase">
     <defName>Cults_PsionicBrain</defName>
     <label>psionic lobe</label>

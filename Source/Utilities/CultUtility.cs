@@ -136,7 +136,7 @@ namespace CultOfCthulhu
         }
         public static bool TrySpawnWalkInCultist(Map map, CultistType type = CultistType.None, bool showMessage = true)
         {
-            if (map == null) map = Find.VisibleMap;
+            if (map == null) map = Find.CurrentMap;
             if (map == null) return false;
             IntVec3 loc;
             if (!CellFinder.TryFindRandomEdgeCellWith(c => map.reachability.CanReachColony(c), map, CellFinder.EdgeRoadChance_Neutral, out loc))

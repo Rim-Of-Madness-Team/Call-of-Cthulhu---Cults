@@ -625,7 +625,7 @@ namespace CultOfCthulhu
                     defaultLabel = "CommandCancelConstructionLabel".Translate(),
                     defaultDesc = "CommandCancelSacrifice".Translate(),
                     disabled = (currentFunction < Function.Level2),
-                    hotKey = KeyBindingDefOf.DesignatorCancel,
+                    hotKey = KeyBindingDefOf.Designator_Cancel,
                     icon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel")
                 };
                 yield return command_Cancel;
@@ -651,7 +651,7 @@ namespace CultOfCthulhu
                     action = CancelWorship,
                     defaultLabel = "CommandCancelConstructionLabel".Translate(),
                     defaultDesc = "CommandCancelWorship".Translate(),
-                    hotKey = KeyBindingDefOf.DesignatorCancel,
+                    hotKey = KeyBindingDefOf.Designator_Cancel,
                     icon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel")
                 };
                 yield return command_Cancel;
@@ -677,7 +677,7 @@ namespace CultOfCthulhu
                     action = CancelOffering,
                     defaultLabel = "CommandCancelConstructionLabel".Translate(),
                     defaultDesc = "CommandCancelOffering".Translate(),
-                    hotKey = KeyBindingDefOf.DesignatorCancel,
+                    hotKey = KeyBindingDefOf.Designator_Cancel,
                     icon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel")
                 };
                 yield return command_Cancel;

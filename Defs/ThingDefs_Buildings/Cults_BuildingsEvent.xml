@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef ParentName="CultBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Cults_SleepTotem</defName>
     <label>sleep totem</label>
     <description>Totem that draws invaders towards it and induces them into an inescapable trance, where dreams devour dreamers. The effect is limited enough to delay intruders long enough to expose them to other hazards.</description> 
@@ -28,14 +28,14 @@
         <glowColor>(217,217,208,0)</glowColor>
       </li>
     </comps>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <selectable>true</selectable>
     <fillPercent>0.20</fillPercent>
     <pathCost>8</pathCost>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
     <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
@@ -45,7 +45,7 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="CultBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Cults_FertilityTotem</defName>
     <label>fertility totem</label>
     <description>Totem that increases growth rate of crops for two quadrums.</description> 
@@ -72,14 +72,14 @@
         <glowColor>(217,217,208,0)</glowColor>
       </li>
     </comps>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <selectable>true</selectable>
     <fillPercent>0.20</fillPercent>
     <pathCost>8</pathCost>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
     <rotatable>false</rotatable>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
@@ -88,7 +88,7 @@
     </statBases>
   </ThingDef>
 
-  <ThingDef ParentName="CultBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Cults_SunkenShipChunk</defName>
     <label>sunken ship chunk</label>
     <description>A chunk of a naval craft. Can be deconstructed to discover treasures within.</description>
@@ -122,7 +122,7 @@
       <ChunkSlagSteel>6</ChunkSlagSteel>
     </killedLeavings>
     <costList>
-      <Component>60</Component>
+      <ComponentIndustrial>60</ComponentIndustrial>
       <Steel>400</Steel>
 	  <WoodLog>400</WoodLog>
 	  <Plasteel>20</Plasteel>
@@ -132,12 +132,12 @@
       <alwaysDeconstructible>true</alwaysDeconstructible>
     </building>
     <selectable>true</selectable>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <drawerType>MapMeshOnly</drawerType>
     <repairEffect>ConstructMetal</repairEffect>
   </ThingDef>
 
-  <ThingDef ParentName="CultBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Cults_TreasureChest</defName>
     <label>treasure chest</label>
     <thingClass>CultOfCthulhu.Building_TreasureChest</thingClass>
@@ -193,7 +193,7 @@
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
 
-  <ThingDef ParentName="CultBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Cults_TreasureChest_Relic</defName>
     <label>relic chest</label>
     <thingClass>CultOfCthulhu.Building_TreasureChest</thingClass>
@@ -236,7 +236,7 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="CultShipPartBase">
+  <ThingDef ParentName="ShipPartBase">
     <defName>Cults_LandedShip</defName>
     <label>landed marine ship</label>
     <description>A seaworthy ship plucked from the ocean by Dagon. It may contain exotic materials, computers, or even AI personas. Expect it to be surrounded by sailors stricken with madness.</description>
@@ -254,7 +254,7 @@
       <ChunkSlagSteel>10</ChunkSlagSteel>
     </killedLeavings>
     <costList>
-      <Component>120</Component>
+      <ComponentIndustrial>120</ComponentIndustrial>
       <Steel>600</Steel>
 	  <WoodLog>600</WoodLog>
 	  <Plasteel>60</Plasteel>
@@ -263,14 +263,14 @@
     <staticSunShadowHeight>0</staticSunShadowHeight>
   </ThingDef>
 
-  <ThingDef ParentName="CultBuildingBase">
+  <ThingDef ParentName="BuildingBase">
     <defName>Cults_MonolithNightmare</defName>
     <label>Monolith</label>
     <description>A mysterious upright standing block of stone. It has an insidious aura.</description>
     <thingClass>CultOfCthulhu.Building_Monolith</thingClass>
 	<stealable>false</stealable>
     <category>Building</category>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <graphicData>
       <texPath>Building/MonolithNightmare/MonolithNightmare</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -304,7 +304,7 @@
     </costList>
     <interactionCellOffset>(1,0,0)</interactionCellOffset>
     <hasInteractionCell>true</hasInteractionCell>
-    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
     <comps>

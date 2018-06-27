@@ -33,7 +33,7 @@ namespace CultOfCthulhu
                        select animal;
         }
 
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
 
             //Cthulhu.Utility.DebugReport("CanFire: " + this.def.defName);

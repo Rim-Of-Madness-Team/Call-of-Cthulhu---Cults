@@ -54,7 +54,7 @@
     </lifeStages>
   </PawnKindDef>
   <!-- RACE DEFS -->
-  <ThingDef Class="CultOfCthulhu.PawnFlyerDef" ParentName="BaseCultHorrorRace">
+  <ThingDef Class="CultOfCthulhu.PawnFlyerDef" ParentName="BaseCultHorrorRaceInit">
     <defName>Cults_ByakheeRace</defName>
     <thingClass>CultOfCthulhu.PawnFlyer</thingClass>	
     <label>byakhee</label>
@@ -124,8 +124,7 @@
       <leatherStatFactors>
         <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
         <ArmorRating_Blunt>2.0</ArmorRating_Blunt>
-        <ArmorRating_Heat>1.5</ArmorRating_Heat>
-        <ArmorRating_Electric>4.0</ArmorRating_Electric>
+        <ArmorRating_Heat>4.0</ArmorRating_Heat>
       </leatherStatFactors>
       <leatherMarketValueFactor>1.5</leatherMarketValueFactor>
       <leatherCommonalityFactor>0.01</leatherCommonalityFactor>

@@ -149,11 +149,11 @@ namespace CultOfCthulhu
             {
                 altar.tempPreacher = CultUtility.DetermineBestPreacher(altar.Map);
                 if (altar.tempPreacher == null) return "None";
-                return altar.tempPreacher.NameStringShort;
+                return altar.tempPreacher.Name.ToStringShort;
             }
             else
             {
-                return altar.tempPreacher.NameStringShort;
+                return altar.tempPreacher.Name.ToStringShort;
             }
         }
 

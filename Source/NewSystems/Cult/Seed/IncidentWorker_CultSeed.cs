@@ -9,9 +9,9 @@ namespace CultOfCthulhu
 {
     class IncidentWorker_CultSeed : IncidentWorker
     {
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
-            Map map = target as Map;
+            Map map = (Map)parms.target;
             MapComponent_LocalCultTracker tracker = GetTracker(map);
             if (tracker.CurrentSeedState > CultSeedState.NeedSeed) return false;
             else return true;

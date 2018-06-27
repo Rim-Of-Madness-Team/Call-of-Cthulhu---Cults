@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <DamageDef Name="PsionicInjuryBase" Abstract="True">
-    <workerClass>DamageWorker_AddInjury</workerClass>
-  </DamageDef>
-
-  <DamageDef ParentName="PsionicInjuryBase">
+  <DamageDef>
     <defName>Cults_Psionic</defName>
     <label>psionic attack</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>	
     <makesBlood>false</makesBlood>
     <harmsHealth>false</harmsHealth>	
     <deathMessage>{0}'s head exploded.</deathMessage>
     <hediff>Cults_Psionic</hediff>
     <impactSoundType>Electric</impactSoundType>
-    <armorCategory>Electric</armorCategory>
+    <armorCategory>Heat</armorCategory>
     <additionalHediffs>
       <li>
         <hediff>IntracranialPressureBuildup</hediff>
@@ -24,7 +21,7 @@
     <explosionCellMote>Mote_BlastFlame</explosionCellMote>
   </DamageDef>
   
-  <DamageDef ParentName="Cults_LocalInjuryBase">
+  <DamageDef>
     <defName>Cults_AcidBurn</defName>
     <workerClass>DamageWorker_AddInjury</workerClass>
     <label>acid burn</label>
@@ -35,8 +32,7 @@
     <deathMessage>{0} has melted to death.</deathMessage>
     <hediff>Cults_AcidBurn</hediff>
     <armorCategory>Heat</armorCategory>
-    <spreadOut>true</spreadOut>
-    <explosionDamage>10</explosionDamage>
+     
     <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
     <explosionCellMote>Mote_BlastFlame</explosionCellMote>
     <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
@@ -50,6 +46,9 @@
 		<defName>Cults_AcidBurn</defName>
 		<label>acid burn</label>
     <labelNoun>an acid burn</labelNoun>
+    <hediffClass>Hediff_Injury</hediffClass>
+    <tendable>true</tendable>
+    <displayWound>true</displayWound>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
@@ -59,13 +58,13 @@
       <li Class="HediffCompProperties_Infecter">
         <infectionChance>0.25</infectionChance>
       </li>
-      <li Class="HediffCompProperties_GetsOld">
-        <oldLabel>burn scar</oldLabel>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>burn scar</permanentLabel>
       </li>
     </comps>
 		<injuryProps>
       <painPerSeverity>0.02075</painPerSeverity>
-      <averagePainPerSeverityOld>0.00625</averagePainPerSeverityOld>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
       <canMerge>true</canMerge>
 			<destroyedLabel>Burned off</destroyedLabel>
 			<destroyedOutLabel>Burned out</destroyedOutLabel>
@@ -76,10 +75,14 @@
     <defName>Cults_AcidTouch</defName>
     <requiredCapacity>Cults_AcidTouch</requiredCapacity>
     <verb>
-      <verbClass>Verb_MeleeAttack</verbClass>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
       <meleeDamageDef>Cults_AcidBurn</meleeDamageDef>
     </verb>
-    <combatLogRules>Maneuver_Scratch</combatLogRules>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Scratch_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Scratch_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Scratch_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Scratch_MeleeDodge</combatLogRulesDodge>
   </ManeuverDef>
 	
 	
@@ -87,18 +90,5 @@
     <defName>Cults_AcidTouch</defName>
     <label>acid burning</label>
   </ToolCapacityDef>
-
-	
-	
-  <HediffDef Name="Cults_InjuryBase" Abstract="True">
-    <hediffClass>Hediff_Injury</hediffClass>
-    <tendable>true</tendable>
-    <displayWound>true</displayWound>
-  </HediffDef>
-  
-  
-  <DamageDef Name="Cults_LocalInjuryBase" Abstract="True">
-    <workerClass>DamageWorker_AddInjury</workerClass>
-  </DamageDef>
-  
+ 
 </Defs>

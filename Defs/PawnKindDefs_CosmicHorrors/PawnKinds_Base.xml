@@ -3,7 +3,7 @@
 
 <!-- Cosmic Horror Base -->
 
-  <ThingDef ParentName="BaseCultHorrorRaceInit" Name="BaseCultHorrorRace" Abstract="True">  
+  <ThingDef ParentName="BaseCultHorrorRaceInit" Name="BasePawn" Abstract="True">  
     <statBases>
       <Mass>75</Mass>	
       <PsychicSensitivity>0</PsychicSensitivity>
@@ -15,7 +15,7 @@
       <LeatherAmount>20</LeatherAmount>	  
     </statBases>
     <race>
-      <bloodDef>FilthBloodInsect</bloodDef>	
+      <bloodDef>Filth_BloodInsect</bloodDef>	
       <meatColor>(160,150,140)</meatColor>
       <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
       <useMeatFrom>Megaspider</useMeatFrom>	  
@@ -31,35 +31,5 @@
 	  </hediffGiverSets>
     </race>
   </ThingDef>  
-  
-<!-- Cosmic Horror Init -->  
- <ThingDef Name="BaseCultHorrorRaceInit" Abstract="True">
-    <thingClass>Pawn</thingClass>
-    <category>Pawn</category>
-    <selectable>true</selectable>
-    <tickerType>Normal</tickerType>
-    <altitudeLayer>Pawn</altitudeLayer>
-    <useHitPoints>false</useHitPoints>
-    <hasTooltip>true</hasTooltip>
-    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
-    <inspectorTabs>
-      <li>ITab_Pawn_Health</li>
-      <li>ITab_Pawn_Needs</li>
-      <li>ITab_Pawn_Character</li>
-      <li>ITab_Pawn_Training</li>
-      <li>ITab_Pawn_Gear</li>
-      <li>ITab_Pawn_Guest</li>
-	  <li>ITab_Pawn_Combat</li>
-      <li>ITab_Pawn_Prisoner</li>
-      <li>ITab_Pawn_Social</li>
-    </inspectorTabs>
-    <comps>
-      <li>
-        <compClass>CompAttachBase</compClass>
-      </li>
-    </comps>
-    <drawGUIOverlay>true</drawGUIOverlay>
-  </ThingDef>
-    
   
 </Defs>

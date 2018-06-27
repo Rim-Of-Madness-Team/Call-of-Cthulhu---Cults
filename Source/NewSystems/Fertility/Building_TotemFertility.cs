@@ -117,10 +117,10 @@ namespace CultOfCthulhu
 
         }
 
-        public override void DeSpawn()
+        public override void DeSpawn(DestroyMode mode = DestroyMode.Vanish)
         {
             Map map = this.Map;
-            base.DeSpawn();
+            base.DeSpawn(mode);
             List<IntVec3> temp = new List<IntVec3>();
             foreach (IntVec3 vec in GrowableCells)
             {

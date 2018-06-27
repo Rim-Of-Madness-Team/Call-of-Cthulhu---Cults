@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <HediffDef Name="Cults_DiseaseBase" Abstract="True">
-    <hediffClass>HediffWithComps</hediffClass>
-    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
-  </HediffDef>
-
-  <HediffDef ParentName="Cults_DiseaseBase">
+\
+  <HediffDef>
     <defName>Cults_SanityLoss</defName>
 	<label>sanity loss</label>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
     <initialSeverity>0.001</initialSeverity>
     <minSeverity>0.001</minSeverity>
     <maxSeverity>1.0</maxSeverity>
@@ -98,7 +95,7 @@
 		</capMods>
         <mentalStateGivers>
           <li>
-            <mentalState>WanderPsychotic</mentalState>
+            <mentalState>Wander_Psychotic</mentalState>
             <mtbDays>9</mtbDays>
           </li>
         </mentalStateGivers>
@@ -134,7 +131,7 @@
 		</capMods>
         <mentalStateGivers>
           <li>
-            <mentalState>WanderPsychotic</mentalState>
+            <mentalState>Wander_Psychotic</mentalState>
             <mtbDays>5.0</mtbDays>
           </li>
         </mentalStateGivers>

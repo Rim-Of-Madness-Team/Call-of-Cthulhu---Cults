@@ -21,7 +21,7 @@
       <li Class="HediffCompProperties_VerbGiver">
         <verbs>
           <li>
-            <verbClass>Verb_MeleeAttack</verbClass>
+            <verbClass>Verb_MeleeAttackDamage</verbClass>
             <defaultCooldownTime>1.5</defaultCooldownTime>
             <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
             <meleeDamageDef>Cults_Psionic</meleeDamageDef>
@@ -42,7 +42,7 @@
     </stages>
     <addedPartProps>
       <isBionic>true</isBionic>
-      <isSolid>true</isSolid>
+      <solid>true</solid>
       <partEfficiency>1.20</partEfficiency>
     </addedPartProps>
   </HediffDef>
@@ -55,7 +55,7 @@
       <li Class="HediffCompProperties_VerbGiver">
         <verbs>
           <li>
-            <verbClass>Verb_MeleeAttack</verbClass>
+            <verbClass>Verb_MeleeAttackDamage</verbClass>
             <defaultCooldownTime>2.0</defaultCooldownTime>
             <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
             <meleeDamageDef>Blunt</meleeDamageDef>
@@ -76,7 +76,7 @@
     </stages>
     <addedPartProps>
       <isBionic>false</isBionic>
-      <isSolid>true</isSolid>
+      <solid>true</solid>
       <partEfficiency>0.8</partEfficiency>
     </addedPartProps>
   </HediffDef>  
@@ -88,7 +88,7 @@
       <li Class="HediffCompProperties_VerbGiver">
         <verbs>
           <li>
-            <verbClass>Verb_MeleeAttack</verbClass>
+            <verbClass>Verb_MeleeAttackDamage</verbClass>
             <defaultCooldownTime>1.5</defaultCooldownTime>
             <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
             <meleeDamageDef>Blunt</meleeDamageDef>
@@ -109,7 +109,7 @@
     </stages>
     <addedPartProps>
       <isBionic>false</isBionic>
-      <isSolid>true</isSolid>
+      <solid>true</solid>
       <partEfficiency>1.25</partEfficiency>
     </addedPartProps>
   </HediffDef>
@@ -130,7 +130,7 @@
     </stages>
     <addedPartProps>
       <isBionic>false</isBionic>
-      <isSolid>true</isSolid>
+      <solid>true</solid>
       <partEfficiency>1.25</partEfficiency>
     </addedPartProps>
   </HediffDef>  
@@ -151,7 +151,7 @@
     </stages>
     <addedPartProps>
       <isBionic>true</isBionic>
-      <isSolid>true</isSolid>
+      <solid>true</solid>
       <partEfficiency>1.1</partEfficiency>
     </addedPartProps>
   </HediffDef>
@@ -189,7 +189,7 @@
     </stages>
     <addedPartProps>
       <isBionic>true</isBionic>
-      <isSolid>true</isSolid>
+      <solid>true</solid>
       <partEfficiency>1.1</partEfficiency>
     </addedPartProps>
   </HediffDef>

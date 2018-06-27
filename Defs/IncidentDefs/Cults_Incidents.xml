@@ -65,7 +65,7 @@
 		<defName>CultSeedIncident_TreeOfNightmares</defName>
 		<workerClass>CultOfCthulhu.IncidentWorker_CultSeed_NightmareTree</workerClass>
 		<targetTypes>
-          <li>MapPlayerHome</li>
+          <li>Map_PlayerHome</li>
         </targetTypes>
 		<letterLabel>Tree of Nightmares</letterLabel>
 		<letterText>It gazes through the souls of all that pass it.</letterText>
@@ -78,7 +78,7 @@
 		<defName>CultSeedIncident_NightmareMonolith</defName>
 		<workerClass>CultOfCthulhu.IncidentWorker_CultSeed_NightmareMonolith</workerClass>
         <targetTypes>
-          <li>MapPlayerHome</li>
+          <li>Map_PlayerHome</li>
         </targetTypes>
 		<letterLabel>Monolith</letterLabel>
 		<letterText>It gazes through the souls of all that pass it.</letterText>

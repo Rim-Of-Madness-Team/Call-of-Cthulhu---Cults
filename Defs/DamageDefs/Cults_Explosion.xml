@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<DamageDef ParentName="Cults_StunBase">
+	<DamageDef>
 		<defName>Cults_BlackEMP</defName>
 		<label>dark energy</label>
 		<externalViolence>true</externalViolence>
 		<deathMessage>{0} has been blasted to death.</deathMessage>
 		<harmsHealth>false</harmsHealth>
 		<impactSoundType>Electric</impactSoundType>
-		<armorCategory>Electric</armorCategory>
-		<explosionDamage>60</explosionDamage>
+		<armorCategory>Heat</armorCategory>
 		<explosionSnowMeltAmount>0</explosionSnowMeltAmount>
 		<explosionCellMote>Mote_BlastBlackEMP</explosionCellMote>
 		<explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
@@ -18,7 +17,7 @@
     <combatLogRules>Damage_Bomb</combatLogRules>
 	</DamageDef>
 	
-	  <ThingDef ParentName="Cults_MoteBase">
+	  <ThingDef>
     <defName>Mote_BlastBlackEMP</defName>
     <graphicData>
       <texPath>Mote/Cults_BlackEMP</texPath>

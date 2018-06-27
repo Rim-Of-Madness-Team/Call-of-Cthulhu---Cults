@@ -30,7 +30,7 @@ namespace CultOfCthulhu
         public static string message;
         public static float delay;
 
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
             return true;
         }

@@ -26,10 +26,10 @@ namespace CultOfCthulhu
 {
     public class SpellWorker_AuroraEffect : SpellWorker
     {
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
             //Cthulhu.Utility.DebugReport("CanFire: " + this.def.defName);
-            Map map = target as Map;
+            Map map = (Map)parms.target;
             return !map.GameConditionManager.ConditionIsActive(CultsDefOf.Cults_Aurora);
         }
         
@@ -42,7 +42,7 @@ namespace CultOfCthulhu
 
         protected void DoConditionAndLetter(int duration, IIncidentTarget target)
         {
-            Map map = target as Map;
+            Map map = (Map)parms.target;
             //Cthulhu.Utility.DebugReport("Generating Map Condition");
             GameCondition_AuroraEffect GameCondition = (GameCondition_AuroraEffect)GameConditionMaker.MakeCondition(CultsDefOf.Cults_Aurora, duration, 0);
             string text3 = "";

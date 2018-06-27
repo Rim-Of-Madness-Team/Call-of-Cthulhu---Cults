@@ -37,7 +37,7 @@ namespace CultOfCthulhu
                 return c;
         }
 
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
 
             //Cthulhu.Utility.DebugReport("

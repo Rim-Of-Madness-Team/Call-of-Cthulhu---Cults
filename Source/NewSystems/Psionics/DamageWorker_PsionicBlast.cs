@@ -59,7 +59,7 @@ namespace CultOfCthulhu
         public override DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
             PushEffect(victim, dinfo.Instigator, Rand.Range(5, 8), true);
-            return DamageResult.MakeNew();
+            return new DamageResult();
         }
     }
 }

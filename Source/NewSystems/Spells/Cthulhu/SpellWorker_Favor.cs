@@ -25,7 +25,7 @@ namespace CultOfCthulhu
 {
     public class SpellWorker_Favor : SpellWorker
     {
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
             return true;
         }

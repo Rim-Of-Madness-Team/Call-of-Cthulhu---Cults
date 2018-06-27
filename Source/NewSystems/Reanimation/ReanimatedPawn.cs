@@ -44,7 +44,7 @@ namespace CultOfCthulhu
             //}
         }
 
-        public override void PreApplyDamage(DamageInfo dinfo, out bool absorbed)
+        public override void PreApplyDamage(ref DamageInfo dinfo, out bool absorbed)
         {
             this.health.PreApplyDamage(dinfo, out absorbed);
             if (!base.Destroyed && (dinfo.Def == DamageDefOf.Cut || dinfo.Def == DamageDefOf.Stab))

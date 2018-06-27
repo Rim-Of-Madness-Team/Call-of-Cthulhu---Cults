@@ -36,7 +36,7 @@ namespace CultOfCthulhu
                 },
                 tickAction = delegate
                 {
-                    if (this.job.expiryInterval == -1 && this.job.def == JobDefOf.WaitCombat && !this.pawn.Drafted)
+                    if (this.job.expiryInterval == -1 && this.job.def == JobDefOf.Wait_Combat && !this.pawn.Drafted)
                     {
                         Log.Error(this.pawn + " in eternal WaitCombat without being drafted.");
                         this.ReadyForNextToil();
