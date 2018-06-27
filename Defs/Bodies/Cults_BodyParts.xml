@@ -373,6 +373,7 @@
     <permanentInjuryBaseChance>0</permanentInjuryBaseChance>
     <skinCovered>false</skinCovered>
     <solid>true</solid>
+    <bleedRate>0</bleedRate>
     <beautyRelated>true</beautyRelated>
     <tags>
       <li>EatingSource</li>
@@ -395,7 +396,7 @@
   </BodyPartDef>
   
   <BodyPartDef>
-    <defName>Cults_FrontalLobe</defName>
+    <defName>Cults_northalLobe</defName>
     <label>frontal lobe</label>
     <hitPoints>10</hitPoints>
     <permanentInjuryBaseChance>1</permanentInjuryBaseChance>

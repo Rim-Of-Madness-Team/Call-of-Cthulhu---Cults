@@ -41,12 +41,12 @@ namespace CultOfCthulhu
                 }
                 else
                 {
-                    this.suggestingPawn = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_FreeColonists.RandomElement<Pawn>();
+                    this.suggestingPawn = PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists.RandomElement<Pawn>();
 
                 }
             }
             this.forcePause = true;
-            this.closeOnEscapeKey = false;
+            //this.closeOnEscapeKey = false;
             this.absorbInputAroundWindow = true;
             this.map = map;
         }

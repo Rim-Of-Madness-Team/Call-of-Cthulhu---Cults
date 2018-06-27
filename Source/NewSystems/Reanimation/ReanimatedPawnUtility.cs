@@ -31,7 +31,7 @@ namespace CultOfCthulhu
         public static ReanimatedPawn DoGenerateZombiePawnFromSource(Pawn sourcePawn, bool isBerserk = true, bool oathOfHastur = false)
         {
             PawnKindDef pawnKindDef = PawnKindDef.Named("ReanimatedCorpse");
-            Faction factionDirect = isBerserk ? Find.FactionManager.FirstFactionOfDef(FactionDefOf.SpacerHostile) : Faction.OfPlayer;
+            Faction factionDirect = isBerserk ? Find.FactionManager.FirstFactionOfDef(FactionDefOf.AncientsHostile) : Faction.OfPlayer;
             ReanimatedPawn pawn = (ReanimatedPawn)ThingMaker.MakeThing(pawnKindDef.race, null);
             try
             {
@@ -157,7 +157,7 @@ namespace CultOfCthulhu
             if (sourcePawn == null) sourcePawn = pawn;
             Color newSkin = oathOfHastur ? new Color(1, 1, 1) : zombieSkin;
 
-            Graphic nakedBodyGraphic = GraphicGetter_NakedHumanlike.GetNakedBodyGraphic(sourcePawn.story.bodyType, ShaderDatabase.CutoutSkin, newSkin);
+            Graphic nakedBodyGraphic = GraphicDatabase.Get<Graphic_Multi>(sourcePawn.story.bodyType.bodyNakedGraphicPath, ShaderDatabase.CutoutSkin, Vector2.one, newSkin);
             Graphic headGraphic = GraphicDatabase.Get<Graphic_Multi>(sourcePawn.story.HeadGraphicPath, ShaderDatabase.CutoutSkin, Vector2.one, newSkin);
             Graphic hairGraphic = GraphicDatabase.Get<Graphic_Multi>(sourcePawn.story.hairDef.texPath, ShaderDatabase.Cutout, Vector2.one, sourcePawn.story.hairColor);
             pawn.Drawer.renderer.graphics.headGraphic = headGraphic;
@@ -208,7 +208,7 @@ namespace CultOfCthulhu
         public static Pawn GenerateZombiePawnFromSource(Pawn sourcePawn)
         {
             PawnKindDef pawnKindDef = PawnKindDef.Named("ReanimatedCorpse");
-            Faction factionDirect = Find.FactionManager.FirstFactionOfDef(FactionDefOf.SpacerHostile);
+            Faction factionDirect = Find.FactionManager.FirstFactionOfDef(FactionDefOf.AncientsHostile);
             Pawn pawn = (Pawn)ThingMaker.MakeThing(pawnKindDef.race, null);
             pawn.kindDef = pawnKindDef;
             pawn.SetFactionDirect(factionDirect);
@@ -266,7 +266,8 @@ namespace CultOfCthulhu
             GenerateZombieApparelFromSource(pawn, sourcePawn);
             PawnGenerationRequest con = new PawnGenerationRequest();
             PawnInventoryGenerator.GenerateInventoryFor(pawn, con);
-            Graphic nakedBodyGraphic = GraphicGetter_NakedHumanlike.GetNakedBodyGraphic(sourcePawn.story.bodyType, ShaderDatabase.CutoutSkin, new Color(0.37f, 0.48f, 0.35f, 1f));
+            //Graphic nakedBodyGraphic = GraphicGetter_NakedHumanlike.GetNakedBodyGraphic(sourcePawn.story.bodyType, ShaderDatabase.CutoutSkin, new Color(0.37f, 0.48f, 0.35f, 1f));
+            Graphic nakedBodyGraphic = GraphicDatabase.Get<Graphic_Multi>(sourcePawn.story.bodyType.bodyNakedGraphicPath, ShaderDatabase.CutoutSkin, Vector2.one, new Color(0.37f, 0.48f, 0.35f, 1f));
             Graphic headGraphic = GraphicDatabase.Get<Graphic_Multi>(sourcePawn.story.HeadGraphicPath, ShaderDatabase.CutoutSkin, Vector2.one, new Color(0.37f, 0.48f, 0.35f, 1f));
             Graphic hairGraphic = GraphicDatabase.Get<Graphic_Multi>(sourcePawn.story.hairDef.texPath, ShaderDatabase.Cutout, Vector2.one, sourcePawn.story.hairColor);
             pawn.Drawer.renderer.graphics.headGraphic = headGraphic;

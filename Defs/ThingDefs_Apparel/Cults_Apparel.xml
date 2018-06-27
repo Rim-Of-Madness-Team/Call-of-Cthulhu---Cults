@@ -18,12 +18,13 @@
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-			<MaxHitPoints>160</MaxHitPoints>
-			<WorkToMake>5000</WorkToMake>
-			<Mass>2.2</Mass>
-			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
-			<Insulation_Cold>-38</Insulation_Cold>
+		  <MaxHitPoints>200</MaxHitPoints>
+		  <WorkToMake>8000</WorkToMake>
+		  <Mass>2.2</Mass>
+		  <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+		  <StuffEffectMultiplierInsulation_Heat>0.6</StuffEffectMultiplierInsulation_Heat>
+		  <EquipDelay>0.5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<SocialImpact>0.15</SocialImpact>
@@ -109,13 +110,13 @@
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-            <Mass>3.25</Mass>
-			<MaxHitPoints>160</MaxHitPoints>
-			<WorkToMake>10000</WorkToMake>
-			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
-			<Insulation_Cold>-42</Insulation_Cold>
-			<Insulation_Heat>-5</Insulation_Heat>
+		  <MaxHitPoints>200</MaxHitPoints>
+		  <WorkToMake>10000</WorkToMake>
+		  <Mass>3.2</Mass>
+		  <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+		  <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+		  <EquipDelay>0.5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<SocialImpact>0.15</SocialImpact>
@@ -201,11 +202,13 @@
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-            <Mass>0.35</Mass>
-			<MaxHitPoints>160</MaxHitPoints>
-			<WorkToMake>22000</WorkToMake>
-			<Insulation_Cold>-30</Insulation_Cold>
-			<Insulation_Heat>15</Insulation_Heat>
+		  <MaxHitPoints>160</MaxHitPoints>
+		  <WorkToMake>7000</WorkToMake>
+		  <Mass>2.0</Mass>
+		  <StuffEffectMultiplierArmor>0.28</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+		  <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+		  <EquipDelay>0.5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<SocialImpact>0.3</SocialImpact>
@@ -291,12 +294,13 @@
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-			<MaxHitPoints>180</MaxHitPoints>
-			<WorkToMake>22000</WorkToMake>
-			<ArmorRating_Blunt>0.085</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.085</ArmorRating_Sharp>
-			<Insulation_Cold>-38</Insulation_Cold>
-			<Insulation_Heat>-4</Insulation_Heat>
+		  <MaxHitPoints>200</MaxHitPoints>
+		  <WorkToMake>20000</WorkToMake>
+		  <Mass>4.2</Mass>
+		  <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
+		  <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
+		  <EquipDelay>0.5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<SocialImpact>0.3</SocialImpact>
@@ -382,12 +386,13 @@
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-			<MaxHitPoints>160</MaxHitPoints>
-			<WorkToMake>22000</WorkToMake>
-			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
-			<Insulation_Cold>-38</Insulation_Cold>
-			<Insulation_Heat>-4</Insulation_Heat>
+		  <MaxHitPoints>200</MaxHitPoints>
+		  <WorkToMake>20000</WorkToMake>
+		  <Mass>2.2</Mass>
+		  <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
+		  <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
+		  <EquipDelay>0.5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<SocialImpact>0.3</SocialImpact>
@@ -473,12 +478,13 @@
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-			<MaxHitPoints>160</MaxHitPoints>
-			<WorkToMake>22000</WorkToMake>
-			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
-			<Insulation_Cold>-38</Insulation_Cold>
-			<Insulation_Heat>-4</Insulation_Heat>
+		  <MaxHitPoints>200</MaxHitPoints>
+		  <WorkToMake>20000</WorkToMake>
+		  <Mass>3.2</Mass>
+		  <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
+		  <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
+		  <EquipDelay>0.5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<SocialImpact>0.2</SocialImpact>
@@ -565,12 +571,13 @@
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-			<MaxHitPoints>160</MaxHitPoints>
-			<WorkToMake>22000</WorkToMake>
-			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
-			<Insulation_Cold>-38</Insulation_Cold>
-			<Insulation_Heat>-4</Insulation_Heat>
+		  <MaxHitPoints>200</MaxHitPoints>
+		  <WorkToMake>20000</WorkToMake>
+		  <Mass>2.2</Mass>
+		  <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
+		  <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
+		  <EquipDelay>0.5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<SocialImpact>0.2</SocialImpact>
@@ -656,10 +663,13 @@
 			<li>Apparel</li>
 		</thingCategories>
 		<statBases>
-			<MaxHitPoints>160</MaxHitPoints>
-			<WorkToMake>5000</WorkToMake>
-			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+		  <MaxHitPoints>160</MaxHitPoints>
+		  <WorkToMake>10000</WorkToMake>
+		  <Mass>2.2</Mass>
+		  <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+		  <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+		  <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+		  <EquipDelay>0.5</EquipDelay>
 		</statBases>
 		<equippedStatOffsets>
 			<SocialImpact>0.15</SocialImpact>
@@ -704,9 +714,11 @@
     </stuffCategories>
     <statBases>
       <WorkToMake>2000</WorkToMake>
-      <ArmorRating_Blunt>0.04</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
-      <Insulation_Heat>8</Insulation_Heat>
+      <Mass>0.12</Mass>
+      <StuffEffectMultiplierArmor>0.19</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.6</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.15</SocialImpact>
@@ -784,10 +796,12 @@
       <li>Leathery</li>
     </stuffCategories>
     <statBases>
-      <WorkToMake>2000</WorkToMake>
-      <ArmorRating_Blunt>0.04</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
-      <Insulation_Heat>8</Insulation_Heat>
+      <WorkToMake>6000</WorkToMake>
+      <Mass>0.12</Mass>
+      <StuffEffectMultiplierArmor>0.19</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.6</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.15</SocialImpact>
@@ -856,7 +870,7 @@
     <label>cultist hood (cthulhu mask)</label>
     <description>This mask is designed for the sole purpose of looking more pleasing to your deity. With it, your chants seem more potent and their insidious whispering is more constant.</description>
     <graphicData>
-      <texPath>Apparel/Hats/CthulhuMaskHood/CthulhuMaskHood_front</texPath>
+      <texPath>Apparel/Hats/CthulhuMaskHood/CthulhuMaskHood_north</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -866,10 +880,12 @@
       <li>Leathery</li>
     </stuffCategories>
     <statBases>
-      <WorkToMake>3000</WorkToMake>
-      <ArmorRating_Blunt>0.04</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
-      <Insulation_Heat>8</Insulation_Heat>
+      <WorkToMake>2400</WorkToMake>
+      <Mass>0.2</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.9</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.15</SocialImpact>
@@ -916,7 +932,7 @@
     <label>cultist hood (nyarlathotep)</label>
     <description>For worshippers of Nyarlathotep, this hood is designed for the sole purpose of looking more pleasing to your deity. With it, your chants seem more potent and their insidious whispering is more constant.</description>
     <graphicData>
-      <texPath>Apparel/Hats/NyMask/nymask_front</texPath>
+      <texPath>Apparel/Hats/NyMask/nymask_north</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>25</costStuffCount>
@@ -925,10 +941,12 @@
       <li>Leathery</li>
     </stuffCategories>
     <statBases>
-      <WorkToMake>3000</WorkToMake>
-      <ArmorRating_Blunt>0.04</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
-      <Insulation_Heat>8</Insulation_Heat>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>0.12</Mass>
+      <StuffEffectMultiplierArmor>0.19</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.6</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.15</SocialImpact>
@@ -976,7 +994,7 @@
     <label>cultist hood (dagon mitre)</label>
     <description>For worshippers of Dagon, this mitre cap is designed for the sole purpose of looking more pleasing to your deity. With it, your chants seem more potent and their insidious whispering is more constant.</description>
     <graphicData>
-      <texPath>Apparel/Hats/DagonHat/ROMDagonHat_front</texPath>
+      <texPath>Apparel/Hats/DagonHat/ROMDagonHat_north</texPath>
       <graphicClass>Graphic_Single</graphicClass>
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -987,9 +1005,11 @@
     </stuffCategories>
     <statBases>
       <WorkToMake>3000</WorkToMake>
-      <ArmorRating_Blunt>0.04</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
-      <Insulation_Heat>8</Insulation_Heat>
+      <Mass>0.25</Mass>
+      <StuffEffectMultiplierArmor>0.19</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.6</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.15</SocialImpact>
@@ -1037,7 +1057,8 @@
     <label>cultist hood (shub-niggurath mask)</label>
     <description>For worshippers of Shub-Niggurath, this mask is designed for the sole purpose of looking more pleasing to your deity. With it, your chants seem more potent and their insidious whispering is more constant.</description>
     <graphicData>
-      <texPath>Apparel/Hats/ShubMask/ROMShubMask_front</texPath>
+	  <Mass>0.5</Mass>
+      <texPath>Apparel/Hats/ShubMask/ROMShubMask_north</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
@@ -1047,10 +1068,12 @@
       <li>Leathery</li>
     </stuffCategories>
     <statBases>
-      <WorkToMake>3000</WorkToMake>
-      <ArmorRating_Blunt>0.04</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.04</ArmorRating_Sharp>
-      <Insulation_Heat>8</Insulation_Heat>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>0.12</Mass>
+      <StuffEffectMultiplierArmor>0.19</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.6</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.15</SocialImpact>
@@ -1106,10 +1129,12 @@
       <li>Leathery</li>
     </stuffCategories>
     <statBases>
-      <WorkToMake>1000</WorkToMake>
-      <ArmorRating_Blunt>0.02</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.02</ArmorRating_Sharp>
-      <Insulation_Heat>8</Insulation_Heat>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>0.12</Mass>
+      <StuffEffectMultiplierArmor>0.19</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.6</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.15</SocialImpact>
@@ -1182,10 +1207,12 @@
     </stuffCategories>
 		<costStuffCount>25</costStuffCount>
     <statBases>
-      <WorkToMake>1000</WorkToMake>
-      <ArmorRating_Blunt>0.02</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.02</ArmorRating_Sharp>
-      <Insulation_Heat>8</Insulation_Heat>
+      <WorkToMake>2000</WorkToMake>
+      <Mass>0.12</Mass>
+      <StuffEffectMultiplierArmor>0.19</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.50</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.50</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.6</EquipDelay>
     </statBases>
     <equippedStatOffsets>
       <SocialImpact>0.15</SocialImpact>

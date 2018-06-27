@@ -67,7 +67,7 @@ namespace CultOfCthulhu
             //Get a random cell.
             IntVec3 intVec = DropCellFinder.RandomDropSpot(map);
             //Set the faction of the dude.
-            Faction faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.Spacer
+            Faction faction = Find.FactionManager.FirstFactionOfDef(FactionDefOf.Ancients
                 );
             ////Chance of generating soldiers
             //for (int i = 0; i < (int)Rand.Range(0, 2); i++)
@@ -112,9 +112,9 @@ namespace CultOfCthulhu
                 text = "ForcedCrashCombatSuplier".Translate();
 
                 container.AddRange(ThingsToAdd(ThingDefOf.Silver, Rand.Range(40, 60))); //Orig 4000-6000
-                container.AddRange(ThingsToAdd(ThingDefOf.Component, Rand.Range(-1, 10))); //Original -1~10
+                container.AddRange(ThingsToAdd(ThingDefOf.ComponentSpacer, Rand.Range(-1, 10))); //Original -1~10
                 container.AddRange(ThingsToAdd(ThingDefOf.Shell_HighExplosive, Rand.Range(5, 10))); //Original 30-60
-                container.AddRange(ThingsToAdd(ThingDefOf.Medicine, Rand.Range(5, 15))); //Original 30-50
+                container.AddRange(ThingsToAdd(ThingDefOf.MedicineUltratech, Rand.Range(1, 3))); //Original 30-50
                 AddThingsToContainerByTag(container, "BodyPartOrImplant", Rand.Range(-8, 2)); //Original 0~5
                 AddThingsToContainerByTag(container, "Drugs", Rand.Range(-2, 2)); //Original 0~5
                 int randomInRange = Rand.Range(3, 6); //Orig 4~8 guns
@@ -123,7 +123,7 @@ namespace CultOfCthulhu
                 {
                     ThingDef def;
                     if (!(from t in DefDatabase<ThingDef>.AllDefs
-                          where t.IsRangedWeapon && t.tradeability == Tradeability.Stockable && t.techLevel <= TechLevel.Transcendent && t.BaseMarketValue <= 500
+                          where t.IsRangedWeapon && t.tradeability != Tradeability.None && t.techLevel <= TechLevel.Archotech && t.BaseMarketValue <= 500
                           select t).TryRandomElement(out def))
                     {
                         break;
@@ -144,7 +144,7 @@ namespace CultOfCthulhu
                 {
                     ThingDef def;
                     if (!(from t in DefDatabase<ThingDef>.AllDefs
-                          where t.IsRangedWeapon && t.tradeability == Tradeability.Stockable && t.techLevel <= TechLevel.Transcendent
+                          where t.IsRangedWeapon && t.tradeability != Tradeability.None && t.techLevel <= TechLevel.Archotech
                           select t).TryRandomElement(out def))
                     {
                         break;
@@ -165,7 +165,7 @@ namespace CultOfCthulhu
                 {
                     ThingDef def;
                     if (!(from t in DefDatabase<ThingDef>.AllDefs
-                          where t.IsApparel && t.tradeability == Tradeability.Stockable && t.techLevel <= TechLevel.Transcendent && (t.GetStatValueAbstract(StatDefOf.ArmorRating_Blunt, null) > 0.15f || t.GetStatValueAbstract(StatDefOf.ArmorRating_Sharp, null) > 0.15f)
+                          where t.IsApparel && t.tradeability != Tradeability.None && t.techLevel <= TechLevel.Archotech && (t.GetStatValueAbstract(StatDefOf.ArmorRating_Blunt, null) > 0.15f || t.GetStatValueAbstract(StatDefOf.ArmorRating_Sharp, null) > 0.15f)
                           select t).TryRandomElement(out def))
                     {
                         break;
@@ -187,7 +187,7 @@ namespace CultOfCthulhu
                 {
                     ThingDef def;
                     if (!(from t in DefDatabase<ThingDef>.AllDefs
-                          where t.IsApparel && t.tradeability == Tradeability.Stockable && t.techLevel <= TechLevel.Transcendent
+                          where t.IsApparel && t.tradeability != Tradeability.None && t.techLevel <= TechLevel.Archotech
                           select t).TryRandomElement(out def))
                     {
                         break;
@@ -211,7 +211,8 @@ namespace CultOfCthulhu
 
                 //Basic Stuff
                 container.AddRange(ThingsToAdd(ThingDefOf.Silver, Rand.Range(20, 100))); //Original 4000-6000
-                container.AddRange(ThingsToAdd(ThingDefOf.Component, Rand.Range(5, 15))); //Original 5-30
+                container.AddRange(ThingsToAdd(ThingDefOf.ComponentIndustrial, Rand.Range(5, 15))); //Original 5-30
+                container.AddRange(ThingsToAdd(ThingDefOf.ComponentSpacer, Rand.Range(-5, 5))); //Original 5-30
                 container.AddRange(ThingsToAdd(ThingDefOf.Steel, Rand.Range(20, 100))); //Original 800-1500
 
                 //Luxury Goods
@@ -224,7 +225,8 @@ namespace CultOfCthulhu
 
                 //Sensitive Materials
                 container.AddRange(ThingsToAdd(ThingDefOf.Cloth, Rand.Range(-20, 50))); //Original -200-600
-                container.AddRange(ThingsToAdd(ThingDefOf.Medicine, Rand.Range(1, 5))); //Original 10-30
+                container.AddRange(ThingsToAdd(ThingDefOf.MedicineIndustrial, Rand.Range(1, 5))); //Original 10-30
+                container.AddRange(ThingsToAdd(ThingDefOf.MedicineUltratech, Rand.Range(-10, 5))); //Original 10-30
                 AddThingsToContainerByTag(container, "Apparel", Rand.Range(4, 8)); //Original 10-20
                 container.AddRange(ThingsToAdd(ThingDefOf.WoodLog, Rand.Range(10, 60))); //Original 800-1500
 
@@ -253,12 +255,12 @@ namespace CultOfCthulhu
                 text = "ForcedCrashExotic".Translate();
                                
                 container.AddRange(ThingsToAdd(ThingDefOf.Silver, Rand.Range(50, 100))); //Original 1500-3000
-                container.AddRange(ThingsToAdd(ThingDefOf.Component, Rand.Range(6, 20))); //Original 6-20
+                container.AddRange(ThingsToAdd(ThingDefOf.ComponentIndustrial, Rand.Range(6, 20))); //Original 6-20
+                container.AddRange(ThingsToAdd(ThingDefOf.ComponentSpacer, Rand.Range(-20, 5))); //Original 6-20
                 container.AddRange(ThingsToAdd(ThingDefOf.Plasteel, Rand.Range(10, 30))); //Original 50-150
                 container.AddRange(ThingsToAdd(ThingDefOf.Gold, Rand.Range(10, 20))); //Original 100-300
                 container.AddRange(ThingsToAdd(CultsDefOf.Neutroamine, Rand.Range(5, 20))); //Original 25-100
                 container.AddRange(ThingsToAdd(CultsDefOf.Penoxycyline, Rand.Range(-25, 25))); //Original (0)
-                container.AddRange(ThingsToAdd(ThingDefOf.GlitterworldMedicine, Rand.Range(-10, 4))); //Original -5 - 4
                 container.AddRange(ThingsToAdd(ThingDef.Named("Telescope"), Rand.Range(-3, 2))); //Original -2 - 2
                 //AddThingsToContainerByTag(container, "Television", Rand.Range(-2, 2)); //Original -2~2
                 AddThingsToContainerByTag(container, "BodyPartOrImplant", Rand.Range(1, 2)); //Original 2~4
@@ -275,7 +277,8 @@ namespace CultOfCthulhu
 
             //Misc ship crash pieces.
             container.AddRange(ThingsToAdd(ThingDefOf.Steel, Rand.Range(20, 100)));
-            container.AddRange(ThingsToAdd(ThingDefOf.Component, Rand.Range(10, 20)));
+            container.AddRange(ThingsToAdd(ThingDefOf.ComponentIndustrial, Rand.Range(10, 20)));
+            container.AddRange(ThingsToAdd(ThingDefOf.ComponentSpacer, Rand.Range(-20, 5)));
             container.AddRange(ThingsToAdd(ThingDefOf.Steel, Rand.Range(20, 100)));
 
             //PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref text, ref label, pawn);

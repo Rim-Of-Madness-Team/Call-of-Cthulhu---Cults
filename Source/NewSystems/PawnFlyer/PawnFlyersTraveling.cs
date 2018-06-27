@@ -10,21 +10,15 @@ namespace CultOfCthulhu
     public class PawnFlyersTraveling : WorldObject
     {
         public PawnFlyer pawnFlyer;
-        
+
         private float TravelSpeed
         {
-            get
-            {
-                return PawnFlyerDef.flightSpeed;
-            }
+            get { return PawnFlyerDef.flightSpeed; }
         }
 
         private PawnFlyerDef PawnFlyerDef
         {
-            get
-            {
-                return pawnFlyer.def as PawnFlyerDef;
-            }
+            get { return pawnFlyer.def as PawnFlyerDef; }
         }
 
 
@@ -32,7 +26,7 @@ namespace CultOfCthulhu
 
         public IntVec3 destinationCell = IntVec3.Invalid;
 
-        public PawnsArriveMode arriveMode;
+        public PawnsArrivalModeDef arriveMode;
 
         public bool attackOnArrival;
 
@@ -48,26 +42,17 @@ namespace CultOfCthulhu
 
         private Vector3 Start
         {
-            get
-            {
-                return Find.WorldGrid.GetTileCenter(this.initialTile);
-            }
+            get { return Find.WorldGrid.GetTileCenter(this.initialTile); }
         }
 
         private Vector3 End
         {
-            get
-            {
-                return Find.WorldGrid.GetTileCenter(this.destinationTile);
-            }
+            get { return Find.WorldGrid.GetTileCenter(this.destinationTile); }
         }
 
         public override Vector3 DrawPos
         {
-            get
-            {
-                return Vector3.Slerp(this.Start, this.End, this.traveledPct);
-            }
+            get { return Vector3.Slerp(this.Start, this.End, this.traveledPct); }
         }
 
         private float TraveledPctStepPerTick
@@ -92,10 +77,7 @@ namespace CultOfCthulhu
         //There is always the byakhee
         private bool PodsHaveAnyPotentialCaravanOwner
         {
-            get
-            {
-                return true;
-            }
+            get { return true; }
         }
 
         public bool PodsHaveAnyFreeColonist
@@ -135,7 +117,7 @@ namespace CultOfCthulhu
                         }
                         else if (pawnFlyer != null)
                         {
-                            yield return (Pawn)pawnFlyer;
+                            yield return (Pawn) pawnFlyer;
                         }
                     }
                 }
@@ -153,7 +135,8 @@ namespace CultOfCthulhu
             Scribe_Collections.Look<ActiveDropPodInfo>(ref this.pods, "pods", LookMode.Deep, new object[0]);
             Scribe_Values.Look<int>(ref this.destinationTile, "destinationTile", 0, false);
             Scribe_Values.Look<IntVec3>(ref this.destinationCell, "destinationCell", default(IntVec3), false);
-            Scribe_Values.Look<PawnsArriveMode>(ref this.arriveMode, "arriveMode", PawnsArriveMode.Undecided, false);
+            Scribe_Values.Look<PawnsArrivalModeDef>(ref this.arriveMode, "arriveMode", PawnsArrivalModeDefOf.EdgeDrop,
+                false);
             Scribe_Values.Look<bool>(ref this.attackOnArrival, "attackOnArrival", false, false);
             Scribe_Values.Look<bool>(ref this.arrived, "arrived", false, false);
             Scribe_Values.Look<int>(ref this.initialTile, "initialTile", 0, false);
@@ -190,11 +173,12 @@ namespace CultOfCthulhu
                 {
                     if (!base.Spawned)
                     {
-                        Log.Warning("Passing pawn " + pawn + " to world, but the TravelingTransportPod is not spawned. This means that WorldPawns can discard this pawn which can cause bugs.");
+                        Log.Warning("Passing pawn " + pawn +
+                                    " to world, but the TravelingTransportPod is not spawned. This means that WorldPawns can discard this pawn which can cause bugs.");
                     }
                     if (justLeftTheMap)
                     {
-                        pawn.ExitMap(false);
+                        pawn.ExitMap(false, Rot4.Random);
                     }
                     else
                     {
@@ -205,18 +189,18 @@ namespace CultOfCthulhu
                 {
                     if (!base.Spawned)
                     {
-                        Log.Warning("Passing pawn " + pawnFlyer + " to world, but the TravelingTransportPod is not spawned. This means that WorldPawns can discard this pawn which can cause bugs.");
+                        Log.Warning("Passing pawn " + pawnFlyer +
+                                    " to world, but the TravelingTransportPod is not spawned. This means that WorldPawns can discard this pawn which can cause bugs.");
                     }
                     if (justLeftTheMap)
                     {
-                        pawnFlyer.ExitMap(false);
+                        pawnFlyer.ExitMap(false, Rot4.Random);
                     }
                     else
                     {
                         Find.WorldPawns.PassToWorld(pawnFlyer, PawnDiscardDecideMode.Decide);
                     }
                 }
-
             }
             contents.savePawnsWithReferenceMode = true;
         }
@@ -256,7 +240,6 @@ namespace CultOfCthulhu
             Map map = Current.Game.FindMap(this.destinationTile);
             if (map != null)
             {
-
                 this.SpawnDropPodsInMap(map, null);
             }
             else if (!this.PodsHaveAnyPotentialCaravanOwner)
@@ -274,13 +257,14 @@ namespace CultOfCthulhu
                     }
                     this.RemoveAllPods();
                     Find.WorldObjects.Remove(this);
-                    Messages.Message("MessageTransportPodsArrivedAndLost".Translate(), new GlobalTargetInfo(this.destinationTile), MessageTypeDefOf.NegativeEvent);
+                    Messages.Message("MessageTransportPodsArrivedAndLost".Translate(),
+                        new GlobalTargetInfo(this.destinationTile), MessageTypeDefOf.NegativeEvent);
                 }
             }
             else
             {
                 MapParent mapParent = Find.WorldObjects.MapParentAt(this.destinationTile);
-                if (mapParent != null && mapParent.TransportPodsCanLandAndGenerateMap && this.attackOnArrival)
+                if (mapParent != null && this.attackOnArrival)
                 {
                     LongEventHandler.QueueLongEvent(delegate
                     {
@@ -288,7 +272,8 @@ namespace CultOfCthulhu
                         string extraMessagePart = null;
                         if (!mapParent.Faction.HostileTo(Faction.OfPlayer))
                         {
-                            mapParent.Faction.SetHostileTo(Faction.OfPlayer, true);
+                            mapParent.Faction.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Hostile);
+                            //mapParent.Faction.SetHostileTo(Faction.OfPlayer, true);
                             extraMessagePart = "MessageTransportPodsArrived_BecameHostile".Translate(new object[]
                             {
                                 mapParent.Faction.Name
@@ -314,7 +299,7 @@ namespace CultOfCthulhu
             {
                 intVec = this.destinationCell;
             }
-            else if (this.arriveMode == PawnsArriveMode.CenterDrop)
+            else if (this.arriveMode == PawnsArrivalModeDefOf.CenterDrop)
             {
                 if (!DropCellFinder.TryFindRaidDropCenterClose(out intVec, map))
                 {
@@ -323,7 +308,7 @@ namespace CultOfCthulhu
             }
             else
             {
-                if (this.arriveMode != PawnsArriveMode.EdgeDrop && this.arriveMode != PawnsArriveMode.Undecided)
+                if (this.arriveMode != PawnsArrivalModeDefOf.EdgeDrop && this.arriveMode != PawnsArrivalModeDefOf.EdgeDrop)
                 {
                     Log.Warning("Unsupported arrive mode " + this.arriveMode);
                 }
@@ -333,8 +318,9 @@ namespace CultOfCthulhu
             {
                 Cthulhu.Utility.DebugReport("PawnFlyerIncoming Generation Started");
                 IntVec3 c;
-                DropCellFinder.TryFindDropSpotNear(intVec, map, out c, false, true);
-                PawnFlyersIncoming pawnFlyerIncoming = (PawnFlyersIncoming)ThingMaker.MakeThing(PawnFlyerDef.incomingDef, null);
+                DropCellFinder.TryFindDropSpotNear(intVec, map, out c, false, true, false);
+                PawnFlyersIncoming pawnFlyerIncoming =
+                    (PawnFlyersIncoming) ThingMaker.MakeThing(PawnFlyerDef.incomingDef, null);
                 pawnFlyerIncoming.pawnFlyer = this.pawnFlyer;
                 pawnFlyerIncoming.Contents = this.pods[i];
                 GenSpawn.Spawn(pawnFlyerIncoming, c, map);
@@ -374,7 +360,8 @@ namespace CultOfCthulhu
                     }
                     else
                     {
-                        Pawn pawn2 = CaravanInventoryUtility.FindPawnToMoveInventoryTo(tmpContainedThings[j], caravan.PawnsListForReading, null, null);
+                        Pawn pawn2 = CaravanInventoryUtility.FindPawnToMoveInventoryTo(tmpContainedThings[j],
+                            caravan.PawnsListForReading, null, null);
                         bool flag = false;
                         if (pawn2 != null)
                         {
@@ -389,7 +376,8 @@ namespace CultOfCthulhu
             }
             this.RemoveAllPods();
             Find.WorldObjects.Remove(this);
-            Messages.Message("MessageTransportPodsArrivedAndAddedToCaravan".Translate(), caravan, MessageTypeDefOf.PositiveEvent);
+            Messages.Message("MessageTransportPodsArrivedAndAddedToCaravan".Translate(), caravan,
+                MessageTypeDefOf.PositiveEvent);
         }
 
 
@@ -409,7 +397,7 @@ namespace CultOfCthulhu
                     }
                     else if (pawnFlyer != null)
                     {
-                        PawnFlyersTraveling.tmpPawns.Add((Pawn)pawnFlyer);
+                        PawnFlyersTraveling.tmpPawns.Add((Pawn) pawnFlyer);
                     }
                 }
             }
@@ -419,7 +407,7 @@ namespace CultOfCthulhu
                 startingTile = this.destinationTile;
             }
             Caravan o = CaravanMaker.MakeCaravan(PawnFlyersTraveling.tmpPawns, Faction.OfPlayer, startingTile, true);
-            o.AddPawn((Pawn)pawnFlyer, false);
+            o.AddPawn((Pawn) pawnFlyer, false);
             for (int k = 0; k < this.pods.Count; k++)
             {
                 ThingOwner innerContainer2 = this.pods[k].innerContainer;
@@ -427,7 +415,8 @@ namespace CultOfCthulhu
                 {
                     if (!(innerContainer2[l] is Pawn))
                     {
-                        Pawn pawn2 = CaravanInventoryUtility.FindPawnToMoveInventoryTo(innerContainer2[l], PawnFlyersTraveling.tmpPawns, null, null);
+                        Pawn pawn2 = CaravanInventoryUtility.FindPawnToMoveInventoryTo(innerContainer2[l],
+                            PawnFlyersTraveling.tmpPawns, null, null);
                         pawn2.inventory.innerContainer.TryAdd(innerContainer2[l], true);
                     }
                     else
@@ -463,7 +452,6 @@ namespace CultOfCthulhu
                     {
                         Find.WorldPawns.RemovePawn(pawnFlyer);
                     }
-
                 }
             }
         }

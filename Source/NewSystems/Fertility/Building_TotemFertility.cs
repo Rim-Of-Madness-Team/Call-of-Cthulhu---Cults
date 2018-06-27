@@ -97,7 +97,7 @@ namespace CultOfCthulhu
             { 
                 stringBuilder.Append("FertilityTotemTimer".Translate(new object[]
                 {
-                TicksUntilDisappearing.ToStringTicksToPeriodVagueMax()
+                TicksUntilDisappearing.ToStringTicksToPeriodVague()
                 }));
             }
             return stringBuilder.ToString().TrimEndNewlines();

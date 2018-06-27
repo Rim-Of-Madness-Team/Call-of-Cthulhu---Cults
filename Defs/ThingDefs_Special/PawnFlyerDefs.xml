@@ -5,7 +5,7 @@
   <ThingDef>
     <defName>ByakheeIncoming</defName>
     <label>flyer (incoming)</label>
-    <category>Skyfaller</category>
+     
 		<thingClass>CultOfCthulhu.PawnFlyersIncoming</thingClass>
 		<tickerType>Normal</tickerType>
     <graphicData>
@@ -24,7 +24,7 @@
   <ThingDef>
     <defName>ByakheeLeaving</defName>
     <label>flyer (leaving)</label>
-    <category>Skyfaller</category>
+     
 		<thingClass>CultOfCthulhu.PawnFlyersLeaving</thingClass>
 		<tickerType>Normal</tickerType>
     <graphicData>

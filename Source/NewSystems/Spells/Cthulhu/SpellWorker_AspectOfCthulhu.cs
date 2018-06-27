@@ -83,8 +83,7 @@ namespace CultOfCthulhu
                     bool isEye = false;
                     foreach (BodyPartRecord current in pawn.RaceProps.body.AllParts.InRandomOrder<BodyPartRecord>())
                     {
-                        if (current.def == BodyPartDefOf.LeftEye ||
-                            current.def == BodyPartDefOf.RightEye)
+                        if (current.def == BodyPartDefOf.Eye)
                         {
                             if (pawn.health.hediffSet.PartIsMissing(current))
                             {
@@ -95,12 +94,9 @@ namespace CultOfCthulhu
                             }
                         }
 
-                        if (current.def == BodyPartDefOf.LeftLeg ||
-                            current.def == BodyPartDefOf.RightLeg ||
-                            current.def == BodyPartDefOf.LeftArm ||
-                            current.def == BodyPartDefOf.RightArm ||
-                            current.def == BodyPartDefOf.LeftHand ||
-                            current.def == BodyPartDefOf.RightHand)
+                        if (current.def == BodyPartDefOf.Leg ||
+                            current.def == BodyPartDefOf.Arm ||
+                            current.def == BodyPartDefOf.Hand)
                         {
                             if (pawn.health.hediffSet.PartIsMissing(current))
                             {
@@ -112,20 +108,16 @@ namespace CultOfCthulhu
                     }
                     foreach (BodyPartRecord current in pawn.RaceProps.body.AllParts.InRandomOrder<BodyPartRecord>())
                     {
-                        if (current.def == BodyPartDefOf.LeftEye ||
-                            current.def == BodyPartDefOf.RightEye)
+                        if (current.def == BodyPartDefOf.Eye)
                         {
                             isEye = true;
                             tempRecord = current;
                             break;
                         }
 
-                        if (current.def == BodyPartDefOf.LeftLeg ||
-                            current.def == BodyPartDefOf.RightLeg ||
-                            current.def == BodyPartDefOf.LeftArm ||
-                            current.def == BodyPartDefOf.RightArm ||
-                            current.def == BodyPartDefOf.LeftHand ||
-                            current.def == BodyPartDefOf.RightHand)
+                        if (current.def == BodyPartDefOf.Leg ||
+                            current.def == BodyPartDefOf.Arm ||
+                            current.def == BodyPartDefOf.Hand)
                         {
                             tempRecord = current;
                             break;

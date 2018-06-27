@@ -7,7 +7,7 @@
     <description>Totem that draws invaders towards it and induces them into an inescapable trance, where dreams devour dreamers. The effect is limited enough to delay intruders long enough to expose them to other hazards.</description> 
     <thingClass>CultOfCthulhu.Building_TotemSleep</thingClass>
     <tickerType>Rare</tickerType>
-    <category>Building</category>
+    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <fertility>2.0</fertility>
     <specialDisplayRadius>5.8</specialDisplayRadius>
 	<graphicData>
@@ -51,7 +51,7 @@
     <description>Totem that increases growth rate of crops for two quadrums.</description> 
     <thingClass>CultOfCthulhu.Building_TotemFertility</thingClass>
     <tickerType>Normal</tickerType>
-    <category>Building</category>
+    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <fertility>2.0</fertility>
     <specialDisplayRadius>5.8</specialDisplayRadius>
 	<graphicData>
@@ -92,7 +92,7 @@
     <defName>Cults_SunkenShipChunk</defName>
     <label>sunken ship chunk</label>
     <description>A chunk of a naval craft. Can be deconstructed to discover treasures within.</description>
-    <category>Building</category>
+    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <graphicData>
       <texPath>Building/Exotic/SunkenShipChunk</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -269,7 +269,7 @@
     <description>A mysterious upright standing block of stone. It has an insidious aura.</description>
     <thingClass>CultOfCthulhu.Building_Monolith</thingClass>
 	<stealable>false</stealable>
-    <category>Building</category>
+    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <minifiedDef>MinifiedThing</minifiedDef>
     <graphicData>
       <texPath>Building/MonolithNightmare/MonolithNightmare</texPath>

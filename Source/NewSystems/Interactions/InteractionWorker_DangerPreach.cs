@@ -18,11 +18,11 @@ namespace CultOfCthulhu
         //Almost three times the chance
         private const float BaseSelectionWeight = 0.8f;
 
-        public override void Interacted(Pawn initiator, Pawn recipient, List<RulePackDef> extraSentencePacks)
+        public override void Interacted(Pawn initiator, Pawn recipient, List<RulePackDef> extraSentencePacks, out string letterText, out string letterLabel,
+            out LetterDef letterDef)
         {
-            base.Interacted(initiator, recipient, extraSentencePacks);
+            base.Interacted(initiator, recipient, extraSentencePacks, out letterText, out letterLabel, out letterDef);
             CultUtility.AffectCultMindedness(recipient, Rand.Range(CULTMINDED_EFFECT_MIN, CULTMINDED_EFFECT_MAX));
-
         }
 
         public override float RandomSelectionWeight(Pawn initiator, Pawn recipient)

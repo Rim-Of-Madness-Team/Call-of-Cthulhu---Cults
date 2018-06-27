@@ -99,7 +99,7 @@ namespace CultOfCthulhu
         //Industrial Level Legendary Weapons
         public bool HandlesWeaponDefs(ThingDef thingDef)
         {
-            return thingDef.IsRangedWeapon && thingDef.tradeability == Tradeability.Stockable && thingDef.techLevel <= TechLevel.Industrial;
+            return thingDef.IsRangedWeapon && thingDef.tradeability != Tradeability.None && thingDef.techLevel <= TechLevel.Industrial;
         }
 
         //Same as weapon generation code
@@ -122,7 +122,7 @@ namespace CultOfCthulhu
         //Industrial Level Legendary Armor
         private bool HandlesArmorDefs(ThingDef td)
         {
-            return td == ThingDefOf.Apparel_ShieldBelt || (td.tradeability == Tradeability.Stockable && td.techLevel <= TechLevel.Industrial && td.IsApparel && (td.GetStatValueAbstract(StatDefOf.ArmorRating_Blunt, null) > 0.15f || td.GetStatValueAbstract(StatDefOf.ArmorRating_Sharp, null) > 0.15f));
+            return td == ThingDefOf.Apparel_ShieldBelt || (td.tradeability != Tradeability.None && td.techLevel <= TechLevel.Industrial && td.IsApparel && (td.GetStatValueAbstract(StatDefOf.ArmorRating_Blunt, null) > 0.15f || td.GetStatValueAbstract(StatDefOf.ArmorRating_Sharp, null) > 0.15f));
         }
 
         public Thing ContainedThing

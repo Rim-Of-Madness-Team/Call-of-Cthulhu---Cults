@@ -3,7 +3,7 @@
 
 <!-- Cosmic Horror Base -->
 
-  <ThingDef ParentName="BaseCultHorrorRaceInit" Name="BasePawn" Abstract="True">  
+  <ThingDef Name="BaseCultHorrorRaceInit" ParentName="BasePawn" Abstract="True">  
     <statBases>
       <Mass>75</Mass>	
       <PsychicSensitivity>0</PsychicSensitivity>

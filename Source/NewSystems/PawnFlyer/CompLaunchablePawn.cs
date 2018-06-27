@@ -253,15 +253,17 @@ namespace CultOfCthulhu
             {
                 Map myMap = this.parent.Map;
                 Map map = mapParent.Map;
-                Current.Game.VisibleMap = map;
+                Current.Game.CurrentMap = map;
                 Targeter arg_139_0 = Find.Targeter;
-                Action actionWhenFinished = delegate
+
+                void ActionWhenFinished()
                 {
                     if (Find.Maps.Contains(myMap))
                     {
-                        Current.Game.VisibleMap = myMap;
+                        Current.Game.CurrentMap = myMap;
                     }
-                };
+                }
+
                 arg_139_0.BeginTargeting(TargetingParameters.ForDropPodsDestination(), delegate (LocalTargetInfo x)
                 {
                     if (!this.LoadingInProgressOrReadyToLaunch)
@@ -269,8 +271,8 @@ namespace CultOfCthulhu
                         Cthulhu.Utility.DebugReport("ChooseTarget Exited - LoadingInProgressOrReadyToLaunch");
                         return;
                     }
-                    this.TryLaunch(x.ToGlobalTargetInfo(map), PawnsArriveMode.Undecided, false);
-                }, null, actionWhenFinished, CompLaunchablePawn.TargeterMouseAttachment);
+                    this.TryLaunch(x.ToGlobalTargetInfo(map), PawnsArrivalModeDefOf.EdgeDrop, false);
+                }, null, ActionWhenFinished, CompLaunchablePawn.TargeterMouseAttachment);
                 return true;
             }
             if (target.WorldObject is FactionBase && target.WorldObject.Faction != Faction.OfPlayer)
@@ -288,7 +290,7 @@ namespace CultOfCthulhu
                         {
                             return;
                         }
-                        this.TryLaunch(target, PawnsArriveMode.Undecided, false);
+                        this.TryLaunch(target, PawnsArrivalModeDefOf.EdgeDrop, false);
                         CameraJumper.TryHideWorld();
                     }, MenuOptionPriority.Default, null, null, 0f, null, null));
                 }
@@ -298,7 +300,7 @@ namespace CultOfCthulhu
                     {
                         return;
                     }
-                    this.TryLaunch(target, PawnsArriveMode.EdgeDrop, true);
+                    this.TryLaunch(target, PawnsArrivalModeDefOf.EdgeDrop, true);
                     CameraJumper.TryHideWorld();
                 }, MenuOptionPriority.Default, null, null, 0f, null, null));
                 list.Add(new FloatMenuOption("DropInCenter".Translate(), delegate
@@ -307,7 +309,7 @@ namespace CultOfCthulhu
                     {
                         return;
                     }
-                    this.TryLaunch(target, PawnsArriveMode.CenterDrop, true);
+                    this.TryLaunch(target, PawnsArrivalModeDefOf.CenterDrop, true);
                     CameraJumper.TryHideWorld();
                 }, MenuOptionPriority.Default, null, null, 0f, null, null));
                 Find.WindowStack.Add(new FloatMenu(list));
@@ -318,11 +320,11 @@ namespace CultOfCthulhu
                 Messages.Message("MessageTransportPodsDestinationIsInvalid".Translate(), MessageTypeDefOf.RejectInput);
                 return false;
             }
-            //this.TryLaunch(target, PawnsArriveMode.Undecided, false);
+            //this.TryLaunch(target, PawnsArrivalModeDefOf.Undecided, false);
             //return true;
         }
 
-        private void TryLaunch(GlobalTargetInfo target, PawnsArriveMode arriveMode, bool attackOnArrival)
+        private void TryLaunch(GlobalTargetInfo target, PawnsArrivalModeDef arriveMode, bool attackOnArrival)
         {
 
             Cthulhu.Utility.DebugReport("TryLaunch Called");

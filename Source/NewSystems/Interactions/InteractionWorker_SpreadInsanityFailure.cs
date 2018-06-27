@@ -20,11 +20,6 @@ namespace CultOfCthulhu
         
         //Almost three times the chance
         private const float BaseSelectionWeight = 0.8f;
-        
-        public override void Interacted(Pawn initiator, Pawn recipient, List<RulePackDef> extraSentencePacks)
-        {
-            base.Interacted(initiator, recipient, extraSentencePacks);
-        }
 
         public override float RandomSelectionWeight(Pawn initiator, Pawn recipient)
         {

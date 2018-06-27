@@ -31,7 +31,7 @@ namespace CultOfCthulhu
                     this.pawn.Reserve(this.pawn.Position, this.job);// De ReserveDestinationFor(this.pawn, this.pawn.Position);
                     this.pawn.pather.StopDead();
                     JobDriver curDriver = this.pawn.jobs.curDriver;
-                    curDriver.layingDown = LayingDownState.LayingSurface;
+                    pawn.jobs.posture = PawnPosture.LayingOnGroundFaceUp;
                     curDriver.asleep = false;
                 },
                 tickAction = delegate

@@ -54,8 +54,8 @@ namespace CultOfCthulhu
         public CosmicEntity tempCurrentOfferingDeity;
         public CultUtility.SacrificeType tempOfferingType = CultUtility.SacrificeType.none;
         public CultUtility.OfferingSize tempOfferingSize = CultUtility.OfferingSize.none;
-        private List<ThingAmount> tempDeterminedOfferings = new List<ThingAmount>();
-        public List<ThingAmount> determinedOfferings = new List<ThingAmount>();
+        private List<ThingCount> tempDeterminedOfferings = new List<ThingCount>();
+        public List<ThingCount> determinedOfferings = new List<ThingCount>();
         private RecipeDef billRecipe = null;
 
         //Worship Related Variables
@@ -212,8 +212,7 @@ namespace CultOfCthulhu
             {
                 if (!(t is Pawn pawn)) continue;
                 if (pawn.CurJob == null) continue;
-                if (pawn.jobs.curDriver.layingDown == LayingDownState.LayingInBed ||
-                    pawn.jobs.curDriver.layingDown == LayingDownState.LayingSurface)
+                if (pawn.jobs.posture != PawnPosture.Standing)
                 {
                     return pawn;
                 }
@@ -701,7 +700,7 @@ namespace CultOfCthulhu
             {
                 yield return new Command_Toggle
                 {
-                    hotKey = KeyBindingDefOf.CommandTogglePower,
+                    hotKey = KeyBindingDefOf.Command_TogglePower,
                     icon = ContentFinder<Texture2D>.Get("UI/Icons/Commands/PruneAndRepair"),
                     defaultLabel = "PruneAndRepair".Translate(),
                     defaultDesc = "PruneAndRepairDesc".Translate(),
@@ -1029,8 +1028,8 @@ namespace CultOfCthulhu
             };
             for (var i = 0; i < determinedOfferings.Count; i++)
             {
-                job2.targetQueueB.Add(determinedOfferings[i].thing);
-                job2.countQueue.Add(determinedOfferings[i].count);
+                job2.targetQueueB.Add(determinedOfferings[i].Thing);
+                job2.countQueue.Add(determinedOfferings[i].Count);
             }
             job2.haulMode = HaulMode.ToCellNonStorage;
             job2.locomotionUrgency = LocomotionUrgency.Sprint;
@@ -1173,25 +1172,26 @@ namespace CultOfCthulhu
             {
                 if (availableWorshippers == null || availableWorshippers.Count == 0)
                 {
-                    availableWorshippers = new HashSet<Pawn>(Map.mapPawns.AllPawnsSpawned.FindAll(y => y is Pawn x &&
-                                                                                                       x.RaceProps.Humanlike &&
-                                                                                                       !x.IsPrisoner &&
-                                                                                                       x.Faction == Faction &&
-                                                                                                       x.RaceProps.intelligence == Intelligence.Humanlike &&
-                                                                                                       !x.Downed && !x.Dead &&
-                                                                                                       !x.InMentalState && !x.InAggroMentalState &&
-                                                                                                       x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
-                                                                                                       x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
-                                                                                                       x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
-                                                                                                       x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
-                                                                                                       x.CurJob.def != JobDefOf.Capture &&
-                                                                                                       x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
-                                                                                                       x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
-                                                                                                       x.CurJob.def != JobDefOf.TendPatient && //Saving lives is more important
-                                                                                                       x.CurJob.def != JobDefOf.BeatFire && //Fire?! This is more important
-                                                                                                       x.CurJob.def != JobDefOf.Lovin && //Not ready~~
-                                                                                                       x.CurJob.def != JobDefOf.LayDown && //They're resting
-                                                                                                       x.CurJob.def != JobDefOf.FleeAndCower //They're not cowering
+                    availableWorshippers = 
+                        new HashSet<Pawn>(Map.mapPawns.AllPawnsSpawned.FindAll(y => y is Pawn x &&
+                           x.RaceProps.Humanlike &&
+                           !x.IsPrisoner &&
+                           x.Faction == Faction &&
+                           x.RaceProps.intelligence == Intelligence.Humanlike &&
+                           !x.Downed && !x.Dead &&
+                           !x.InMentalState && !x.InAggroMentalState &&
+                           x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&
+                           x.CurJob.def != CultsDefOf.Cults_AttendSacrifice &&
+                           x.CurJob.def != CultsDefOf.Cults_ReflectOnWorship &&
+                           x.CurJob.def != CultsDefOf.Cults_AttendWorship &&
+                           x.CurJob.def != JobDefOf.Capture &&
+                           x.CurJob.def != JobDefOf.ExtinguishSelf && //Oh god help
+                           x.CurJob.def != JobDefOf.Rescue && //Saving lives is more important
+                           x.CurJob.def != JobDefOf.TendPatient && //Saving lives is more important
+                           x.CurJob.def != JobDefOf.BeatFire && //Fire?! This is more important
+                           x.CurJob.def != JobDefOf.Lovin && //Not ready~~
+                           x.CurJob.def != JobDefOf.LayDown && //They're resting
+                           x.CurJob.def != JobDefOf.FleeAndCower //They're not cowering
                     ).ChangeType<List<Pawn>>());
                 }
                 return availableWorshippers;
@@ -1222,7 +1222,7 @@ namespace CultOfCthulhu
 
         // RimWorld.WorkGiver_DoBill
         // Vanilla Code
-        private bool TryFindBestOfferingIngredients(RecipeDef recipe, Pawn pawn, Building_SacrificialAltar billGiver, List<ThingAmount> chosen)
+        private bool TryFindBestOfferingIngredients(RecipeDef recipe, Pawn pawn, Building_SacrificialAltar billGiver, List<ThingCount> chosen)
         {
             chosen.Clear();
             var relevantThings = new List<Thing>();
@@ -1311,7 +1311,7 @@ namespace CultOfCthulhu
                         Cthulhu.Utility.DebugReport(thing.ToString());
                         var num2 = recipe.IngredientValueGetter.ValuePerUnitOf(thing.def);
                         var num3 = Mathf.Min(Mathf.CeilToInt(num / num2), thing.stackCount);
-                        ThingAmount.AddToList(chosen, thing, num3);
+                        ThingCountUtility.AddToList(chosen, thing, num3);
                         num -= (float) num3 * num2;
                         if (num <= 0.0001f)
                             break;
@@ -1329,11 +1329,13 @@ namespace CultOfCthulhu
             RegionTraverser.BreadthFirstTraverse(validRegionAt, entryCondition, RegionProcessor, 99999);
             return foundAll;
         }
-        public bool TryDetermineOffering(CultUtility.SacrificeType type, CultUtility.OfferingSize size, Pawn pawn, Building_SacrificialAltar altar, out List<ThingAmount> result, out RecipeDef resultRecipe)
+        public bool TryDetermineOffering(CultUtility.SacrificeType type, CultUtility.OfferingSize size, Pawn pawn, 
+            Building_SacrificialAltar altar, out List<ThingCount> result, out RecipeDef resultRecipe)
+        
         {
             result = null;
             resultRecipe = null;
-            var list = new List<ThingAmount>();
+            var list = new List<ThingCount>();
             RecipeDef recipe = null;
 
             var recipeDefName = "OfferingOf";

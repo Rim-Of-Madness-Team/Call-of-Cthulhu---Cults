@@ -145,7 +145,7 @@ namespace CultOfCthulhu
             }
 
             Command_Toggle toggleDef = new Command_Toggle();
-            toggleDef.hotKey = KeyBindingDefOf.CommandTogglePower;
+            toggleDef.hotKey = KeyBindingDefOf.Command_TogglePower;
             toggleDef.icon = ContentFinder<Texture2D>.Get("UI/Icons/Commands/Mute", true);
             toggleDef.defaultLabel = "Mute".Translate();
             toggleDef.defaultDesc = "MuteDesc".Translate();

@@ -41,7 +41,7 @@
       </li>
     </stages>
     <addedPartProps>
-      <isBionic>true</isBionic>
+       
       <solid>true</solid>
       <partEfficiency>1.20</partEfficiency>
     </addedPartProps>
@@ -75,7 +75,7 @@
       </li>
     </stages>
     <addedPartProps>
-      <isBionic>false</isBionic>
+       
       <solid>true</solid>
       <partEfficiency>0.8</partEfficiency>
     </addedPartProps>
@@ -108,7 +108,7 @@
       </li>
     </stages>
     <addedPartProps>
-      <isBionic>false</isBionic>
+       
       <solid>true</solid>
       <partEfficiency>1.25</partEfficiency>
     </addedPartProps>
@@ -129,7 +129,7 @@
       </li>
     </stages>
     <addedPartProps>
-      <isBionic>false</isBionic>
+       
       <solid>true</solid>
       <partEfficiency>1.25</partEfficiency>
     </addedPartProps>
@@ -150,7 +150,7 @@
       </li>
     </stages>
     <addedPartProps>
-      <isBionic>true</isBionic>
+       
       <solid>true</solid>
       <partEfficiency>1.1</partEfficiency>
     </addedPartProps>
@@ -188,7 +188,7 @@
       </li>
     </stages>
     <addedPartProps>
-      <isBionic>true</isBionic>
+       
       <solid>true</solid>
       <partEfficiency>1.1</partEfficiency>
     </addedPartProps>

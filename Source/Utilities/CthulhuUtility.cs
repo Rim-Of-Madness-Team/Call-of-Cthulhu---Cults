@@ -245,7 +245,7 @@ namespace Cthulhu
             {
                 if (pawn.RaceProps.ageGenerationCurve != null)
                 {
-                    num2 = Mathf.RoundToInt(Rand.ByCurve(pawn.RaceProps.ageGenerationCurve, 200));
+                    num2 = Mathf.RoundToInt(Rand.ByCurve(pawn.RaceProps.ageGenerationCurve));
                 }
                 else if (pawn.RaceProps.IsMechanoid)
                 {
@@ -410,7 +410,7 @@ namespace Cthulhu
             {
                 for (int i = 0; i < current.def.tags.Count; i++)
                 {
-                    if (current.def.tags[i] == "BloodPumpingSource")
+                    if (current.def.tags[i].defName == "BloodPumpingSource")
                     {
                         return current;
                     }
@@ -425,7 +425,7 @@ namespace Cthulhu
             {
                 for (int i = 0; i < current.def.tags.Count; i++)
                 {
-                    if (current.def.tags[i] == "BloodPumpingSource")
+                    if (current.def.tags[i].defName == "BloodPumpingSource")
                     {
                         return current;
                     }
@@ -680,13 +680,14 @@ namespace Cthulhu
                     faction.RelationWith(playerFaction, false).goodwill = faction.PlayerGoodwill;
                 }
 
-                faction.RelationWith(playerFaction, false).goodwill = 100f;
-                faction.RelationWith(playerFaction, false).hostile = false;
+                faction.RelationWith(playerFaction, false).goodwill = 100;
+                faction.TrySetRelationKind(playerFaction, FactionRelationKind.Neutral);
             }
             else
             {
-                faction.RelationWith(playerFaction, false).goodwill = 0f;
-                faction.RelationWith(playerFaction, false).hostile = true;
+                faction.RelationWith(playerFaction, false).goodwill = 0;
+                faction.TrySetRelationKind(playerFaction, FactionRelationKind.Hostile);
+                //faction.RelationWith(playerFaction, false).hostile = true;
             }
         }
 

@@ -5,9 +5,11 @@
     <requiredResearchBuilding>Cults_ForbiddenKnowledgeCenter</requiredResearchBuilding>
 	<techLevel>Neolithic</techLevel>
 	<tab>Cults_ResearchTab</tab>
+  <!--
   <tags>
       <li>ta-ignore</li>
   </tags>
+  -->
   </ResearchProjectDef>
 
   <ResearchProjectDef ParentName="ForbiddenKnowledgeResearch">

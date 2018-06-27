@@ -10,7 +10,7 @@
       <texPath>Building/YigSculpture/yig_statue</texPath>
       <drawSize>(3,3)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
     <statBases>
@@ -37,7 +37,7 @@
       <texPath>Building/CthulhuSculpture/CthulhuSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
     <size>(3,2)</size>
@@ -74,7 +74,7 @@
       <texPath>Building/DagonSculpture/DagonSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
     <size>(3,2)</size>
@@ -110,7 +110,7 @@
       <texPath>Building/NyarlathotepSculpture/NyarlathotepSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
     <size>(3,2)</size>
@@ -147,7 +147,7 @@
       <texPath>Building/ShubSculpture/ShubSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
     <size>(3,2)</size>
@@ -184,7 +184,7 @@
       <texPath>Building/TsathogguaSculpture/TsathogguaSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
     <size>(3,2)</size>
@@ -221,7 +221,7 @@
       <texPath>Building/HasturSculpture/HasturSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedSculpture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
     <fillPercent>0.5</fillPercent>
     <rotatable>true</rotatable>
     <size>(3,2)</size>

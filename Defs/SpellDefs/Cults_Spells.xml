@@ -107,7 +107,7 @@
 	    <description>Brings a gang of deep ones to stand guard over your colony. Placement of the Sign of Dagon before casting this spell is recommended.</description>
 		<defName>Cults_SpellDefendTheBrood</defName>
 		<workerClass>CultOfCthulhu.SpellWorker_DefendTheBrood</workerClass>
-		<category>AllyArrival</category>
+		<category>AllyAssistance</category>
 		<baseChance>0</baseChance>
 		<pointsScaleable>true</pointsScaleable>
         <letterLabel>and ask that he protect his own</letterLabel>

@@ -101,13 +101,13 @@ namespace CultOfCthulhu
                 //HediffDef quiet = null;
                 //BodyPartDamageInfo value = new BodyPartDamageInfo(tempRecord, false, quiet);
                 //pawn(map).TakeDamage(new DamageInfo(DamageDefOf.Cut, Rand.Range(5, 8), null, new BodyPartDamageInfo?(value), null));
-                if (headRecord != null) pawn(map).TakeDamage(new DamageInfo(DamageDefOf.Cut, Rand.Range(5, 8), -1f, null, headRecord, null));
+                if (headRecord != null) pawn(map).TakeDamage(new DamageInfo(DamageDefOf.Cut, Rand.Range(5, 8), 1f, -1f, null, headRecord, null));
             }
             else if (rand > 10 && rand <= 50)
             {
                 //HediffDef quiet = null;
                 //BodyPartDamageInfo value = new BodyPartDamageInfo(tempRecord, false, quiet);
-                if (headRecord != null) pawn(map).TakeDamage(new DamageInfo(DamageDefOf.Blunt, Rand.Range(8, 10), -1f, null, headRecord, null));
+                if (headRecord != null) pawn(map).TakeDamage(new DamageInfo(DamageDefOf.Blunt, Rand.Range(8, 10), 1f, -1f, null, headRecord, null));
             }
             else if (rand <= 10)
             {
@@ -115,7 +115,7 @@ namespace CultOfCthulhu
                 //BodyPartDamageInfo value = new BodyPartDamageInfo(tempRecord, false, quiet);
                 if (headRecord != null)
                 {
-                    pawn(map).TakeDamage(new DamageInfo(DamageDefOf.Bite, Rand.Range(10, 12), -1f, null, headRecord, null));
+                    pawn(map).TakeDamage(new DamageInfo(DamageDefOf.Bite, Rand.Range(10, 12), -1f, 1f, null, headRecord, null));
                     pawn(map).health.AddHediff(HediffDefOf.WoundInfection, headRecord, null);
                 }
             }

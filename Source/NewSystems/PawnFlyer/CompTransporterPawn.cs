@@ -210,7 +210,7 @@ namespace CultOfCthulhu
                     icon = CompTransporterPawn.CancelLoadCommandTex,
                     action = delegate
                     {
-                        SoundDefOf.DesignateCancel.PlayOneShotOnCamera();
+                        SoundDefOf.Designate_Cancel.PlayOneShotOnCamera();
                         this.CancelLoad();
                     }
                 };
@@ -271,7 +271,7 @@ namespace CultOfCthulhu
             {
                 this.leftToLoad = new List<TransferableOneWay>();
             }
-            if (TransferableUtility.TransferableMatching<TransferableOneWay>(t.AnyThing, this.leftToLoad) != null)
+            if (TransferableUtility.TransferableMatching<TransferableOneWay>(t.AnyThing, this.leftToLoad, TransferAsOneMode.PodsOrCaravanPacking) != null)
             {
                 Log.Error("Transferable already exists.");
                 return;
@@ -357,7 +357,7 @@ namespace CultOfCthulhu
             {
                 return;
             }
-            TransferableOneWay transferableOneWay = TransferableUtility.TransferableMatching<TransferableOneWay>(t, this.leftToLoad);
+            TransferableOneWay transferableOneWay = TransferableUtility.TransferableMatching<TransferableOneWay>(t, this.leftToLoad, TransferAsOneMode.PodsOrCaravanPacking);
             if (transferableOneWay == null)
             {
                 return;

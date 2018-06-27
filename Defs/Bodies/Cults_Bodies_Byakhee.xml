@@ -24,7 +24,7 @@
           </groups>
         </li>
         <li>
-          <def>RibCage</def>
+          <def>Ribcage</def>
           <coverage>0.012</coverage>
           <depth>Inside</depth>
           <groups>
@@ -167,11 +167,13 @@
 				  </parts>	  
                 </li>				
 				<li>
-				  <def>LeftAntenna</def>
+				  <def>Antenna</def>
+<customLabel>right antenna</customLabel>
 				  <coverage>0.01</coverage>
 				</li>
 				<li>
-				  <def>RightAntenna</def>
+				  <def>Antenna</def>
+<customLabel>left antenna</customLabel>
 				  <coverage>0.01</coverage>
 				</li>
                 <li>

@@ -6,7 +6,7 @@
     <defName>Cults_DeepSleepCarcosa</defName>
     <stateClass>CultOfCthulhu.MentalState_DeepSleepCarcosa</stateClass>
     <label>deep sleep</label>
-    <category>Indulgent</category>
+    <category>Misc</category>
     <colonistsOnly>true</colonistsOnly>
     <minTicksBeforeRecovery>12500</minTicksBeforeRecovery>
     <recoveryMtbDays>0.5</recoveryMtbDays>

@@ -42,7 +42,7 @@ namespace CultOfCthulhu
 
         protected void DoConditionAndLetter(int duration, IIncidentTarget target)
         {
-            Map map = (Map)parms.target;
+            Map map = (Map)target;
             //Cthulhu.Utility.DebugReport("Generating Map Condition");
             GameCondition_AuroraEffect GameCondition = (GameCondition_AuroraEffect)GameConditionMaker.MakeCondition(CultsDefOf.Cults_Aurora, duration, 0);
             string text3 = "";

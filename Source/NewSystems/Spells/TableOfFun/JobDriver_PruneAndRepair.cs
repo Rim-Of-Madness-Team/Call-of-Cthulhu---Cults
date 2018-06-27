@@ -53,7 +53,7 @@ namespace CultOfCthulhu
             {
                 Pawn actor = this.pawn;
                 actor.skills.Learn(SkillDefOf.Construction, 0.5f, false);
-                actor.skills.Learn(SkillDefOf.Growing, 0.5f, false);
+                actor.skills.Learn(SkillDefOf.Plants, 0.5f, false);
                 float statValue = actor.GetStatValue(StatDefOf.ConstructionSpeed, true);
                 this.ticksToNextRepair -= statValue;
                 if (this.ticksToNextRepair <= 0f)

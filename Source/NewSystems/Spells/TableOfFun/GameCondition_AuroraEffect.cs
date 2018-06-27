@@ -41,7 +41,7 @@ namespace CultOfCthulhu
 
         private SkyColorSet AuroraSkyColors = new SkyColorSet(transition.ToColor, Color.white, new Color(0.6f, 0.6f, 0.6f), 0.8f);
 
-        public override float SkyTargetLerpFactor()
+        public override float SkyTargetLerpFactor(Map map)
         {
             return GameConditionUtility.LerpInOutValue((float)base.TicksPassed, (float)base.TicksLeft, (float)this.LerpTicks, 1f);
         }
@@ -49,52 +49,65 @@ namespace CultOfCthulhu
         public override void GameConditionTick()
         {
             base.GameConditionTick();
-
+            List<Map> affectedMaps = base.AffectedMaps;
             if (firstTick)
             {
-                foreach (Pawn pawn in Map.mapPawns.FreeColonistsAndPrisoners)
+                for (int i = 0; i < affectedMaps.Count; i++)
                 {
-                    pawn.needs.mood.thoughts.memories.TryGainMemory(CultsDefOf.Cults_SawAurora);
+                    foreach (Pawn pawn in affectedMaps[i].mapPawns.FreeColonistsAndPrisoners)
+                    {
+                        if (!pawn.Position.Roofed(affectedMaps[i]) && pawn.def.race.IsFlesh)
+                        {
+                            pawn.needs.mood.thoughts.memories.TryGainMemory(CultsDefOf.Cults_SawAurora);
+                        }
+                    }
                 }
                 firstTick = false;
             }
 
-            if (!switchTime)
+            for (int i = 0; i < affectedMaps.Count; i++)
             {
-                Red -= 0.03f;
-                Green += 0.03f;
-                transition.r = (int)Red;
-                transition.g = (int)Green;
-                AuroraSkyColors = new SkyColorSet(transition.ToColor, Color.white, new Color(0.6f, 0.6f, 0.6f), 0.8f);
-                SkyTarget();
-            }
-            if (switchTime)
-            {
-                Red += 0.03f;
-                Green -= 0.03f;
-                transition.r = (int)Red;
-                transition.g = (int)Green;
-                AuroraSkyColors = new SkyColorSet(transition.ToColor, Color.white, new Color(0.6f, 0.6f, 0.6f), 0.8f);
-                SkyTarget();
-            }
-
-            if (switchCount >= 0)
-            {
-                switchCount -= 1;
-            }
-            else
-            {
-                switchCount = switchTicks;
-                if (switchTime)
+                foreach (Pawn pawn in affectedMaps[i].mapPawns.FreeColonistsAndPrisoners)
                 {
-                    //Cthulhu.Utility.DebugReport("Switch");
-                    switchTime = false;
-                }
+            
+                    if (!switchTime)
+                    {
+                        Red -= 0.03f;
+                        Green += 0.03f;
+                        transition.r = (int)Red;
+                        transition.g = (int)Green;
+                        AuroraSkyColors = new SkyColorSet(transition.ToColor, Color.white, new Color(0.6f, 0.6f, 0.6f), 0.8f);
+                        SkyTarget(affectedMaps[i]);
+                    }
+                    if (switchTime)
+                    {
+                        Red += 0.03f;
+                        Green -= 0.03f;
+                        transition.r = (int)Red;
+                        transition.g = (int)Green;
+                        AuroraSkyColors = new SkyColorSet(transition.ToColor, Color.white, new Color(0.6f, 0.6f, 0.6f), 0.8f);
+                        SkyTarget(affectedMaps[i]);
+                    }
 
-                else
-                {
-                    //Cthulhu.Utility.DebugReport("Switch");
-                    switchTime = true;
+                    if (switchCount >= 0)
+                    {
+                        switchCount -= 1;
+                    }
+                    else
+                    {
+                        switchCount = switchTicks;
+                        if (switchTime)
+                        {
+                            //Cthulhu.Utility.DebugReport("Switch");
+                            switchTime = false;
+                        }
+
+                        else
+                        {
+                            //Cthulhu.Utility.DebugReport("Switch");
+                            switchTime = true;
+                        }
+                    }
                 }
             }
         }
@@ -104,13 +117,13 @@ namespace CultOfCthulhu
             get
             {
                 string temp = "";
-                if (Find.WorldGrid.LongLatOf(Map.Tile).y >= 74) temp = " " + "Borealis".Translate();
+                if (Find.WorldGrid.LongLatOf(Find.CurrentMap.Tile).y >= 74) temp = " " + "Borealis".Translate();
                 else temp = " " + "Australis".Translate();
                 return this.def.label + temp;
             }
         }
 
-        public override SkyTarget? SkyTarget()
+        public override SkyTarget? SkyTarget(Map map)
         {
             return new SkyTarget?(new SkyTarget(0.85f, this.AuroraSkyColors, 1f, 1f));
         }

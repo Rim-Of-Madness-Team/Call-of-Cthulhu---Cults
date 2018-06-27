@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------
 // These are basic usings. Always let them be here.
 // ----------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,15 +11,15 @@ using System.Text;
 // ----------------------------------------------------------------------
 // These are RimWorld-specific usings. Activate/Deactivate what you need:
 // ----------------------------------------------------------------------
-using UnityEngine;         // Always needed
+using UnityEngine; // Always needed
 //using VerseBase;         // Material/Graphics handling functions are found here
-using Verse;               // RimWorld universal objects are here (like 'Building')
-using Verse.AI;          // Needed when you do something with the AI
+using Verse; // RimWorld universal objects are here (like 'Building')
+using Verse.AI; // Needed when you do something with the AI
 using Verse.AI.Group;
-using Verse.Sound;       // Needed when you do something with Sound
-using Verse.Noise;       // Needed when you do something with Noises
-using RimWorld;            // RimWorld specific functions are found here (like 'Building_Battery')
-using RimWorld.Planet;   // RimWorld specific functions for world creation
+using Verse.Sound; // Needed when you do something with Sound
+using Verse.Noise; // Needed when you do something with Noises
+using RimWorld; // RimWorld specific functions are found here (like 'Building_Battery')
+using RimWorld.Planet; // RimWorld specific functions for world creation
 //using RimWorld.SquadAI;  // RimWorld specific functions for squad brains 
 
 namespace CultOfCthulhu
@@ -29,23 +30,18 @@ namespace CultOfCthulhu
         {
             return true;
         }
+
         private const TargetIndex TakeeIndex = TargetIndex.A;
         private const TargetIndex AltarIndex = TargetIndex.B;
 
         protected Pawn Takee
         {
-            get
-            {
-                return (Pawn)base.job.GetTarget(TargetIndex.A).Thing;
-            }
+            get { return (Pawn) base.job.GetTarget(TargetIndex.A).Thing; }
         }
 
         protected Building_SacrificialAltar DropAltar
         {
-            get
-            {
-                return (Building_SacrificialAltar)base.job.GetTarget(TargetIndex.B).Thing;
-            }
+            get { return (Building_SacrificialAltar) base.job.GetTarget(TargetIndex.B).Thing; }
         }
 
         [DebuggerHidden]
@@ -64,28 +60,33 @@ namespace CultOfCthulhu
             {
                 initAction = delegate
                 {
-                    DropAltar.ChangeState(Building_SacrificialAltar.State.sacrificing, Building_SacrificialAltar.SacrificeState.gathering);
+                    DropAltar.ChangeState(Building_SacrificialAltar.State.sacrificing,
+                        Building_SacrificialAltar.SacrificeState.gathering);
                 }
             };
 
             //Toil 1: Go to prisoner.
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch).FailOnDespawnedNullOrForbidden(TargetIndex.A).FailOnDespawnedNullOrForbidden(TargetIndex.B).FailOn(() => this.job.def == JobDefOf.Arrest && !this.Takee.CanBeArrestedBy(this.pawn)).FailOn(() => !this.pawn.CanReach(this.DropAltar, PathEndMode.OnCell, Danger.Deadly, false, TraverseMode.ByPawn)).FailOnSomeonePhysicallyInteracting(TargetIndex.A);
+            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.ClosestTouch)
+                .FailOnDespawnedNullOrForbidden(TargetIndex.A).FailOnDespawnedNullOrForbidden(TargetIndex.B)
+                .FailOn(() => this.job.def == JobDefOf.Arrest && !this.Takee.CanBeArrestedBy(this.pawn))
+                .FailOn(() =>
+                    !this.pawn.CanReach(this.DropAltar, PathEndMode.OnCell, Danger.Deadly, false, TraverseMode.ByPawn))
+                .FailOnSomeonePhysicallyInteracting(TargetIndex.A);
             yield return new Toil
             {
                 initAction = delegate
                 {
                     if (this.job.def.makeTargetPrisoner)
                     {
-                        Pawn pawn = (Pawn)this.job.targetA.Thing;
+                        Pawn pawn = (Pawn) this.job.targetA.Thing;
                         Lord lord = pawn.GetLord();
                         if (lord != null)
                         {
                             lord.Notify_PawnAttemptArrested(pawn);
                         }
-                        GenClamor.DoClamor(pawn, 10f, ClamorType.Harm);
+                        GenClamor.DoClamor(pawn, 10f, ClamorDefOf.Harm);
                         if (this.job.def == JobDefOf.Arrest && !pawn.CheckAcceptArrest(this.pawn))
                         {
-
                             this.pawn.jobs.EndCurrentJob(JobCondition.Incompletable);
                         }
                     }
@@ -113,7 +114,6 @@ namespace CultOfCthulhu
                         this.Takee.stances.CancelBusyStanceHard();
                         Job job = new Job(CultsDefOf.Cults_WaitTiedDown, DropAltar);
                         this.Takee.jobs.StartJob(job);
-
                     }
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
@@ -125,16 +125,16 @@ namespace CultOfCthulhu
             chantingTime.defaultDuration = CultUtility.ritualDuration;
             chantingTime.WithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
             chantingTime.PlaySustainerOrSound(CultsDefOf.RitualChanting);
-            Texture2D deitySymbol = ((CosmicEntityDef)DropAltar.SacrificeData.Entity.def).Symbol;
+            Texture2D deitySymbol = ((CosmicEntityDef) DropAltar.SacrificeData.Entity.def).Symbol;
             chantingTime.initAction = delegate
             {
                 if (deitySymbol != null)
-                MoteMaker.MakeInteractionBubble(this.pawn, null, ThingDefOf.Mote_Speech, deitySymbol);
+                    MoteMaker.MakeInteractionBubble(this.pawn, null, ThingDefOf.Mote_Speech, deitySymbol);
 
-                
 
                 //STATE - SACRIFICING
-                DropAltar.ChangeState(Building_SacrificialAltar.State.sacrificing, Building_SacrificialAltar.SacrificeState.sacrificing);
+                DropAltar.ChangeState(Building_SacrificialAltar.State.sacrificing,
+                    Building_SacrificialAltar.SacrificeState.sacrificing);
             };
 
             yield return chantingTime;
@@ -145,7 +145,8 @@ namespace CultOfCthulhu
                 initAction = delegate
                 {
                     //BodyPartDamageInfo value = new BodyPartDamageInfo(this.Takee.health.hediffSet.GetBrain(), false, quiet);
-                    this.Takee.TakeDamage(new DamageInfo(DamageDefOf.ExecutionCut, 99999, -1f, this.pawn, Cthulhu.Utility.GetHeart(this.Takee.health.hediffSet)));
+                    this.Takee.TakeDamage(new DamageInfo(DamageDefOf.ExecutionCut, 99999, 0f, -1f, this.pawn,
+                        Cthulhu.Utility.GetHeart(this.Takee.health.hediffSet)));
                     if (!this.Takee.Dead)
                     {
                         this.Takee.Kill(null);
@@ -169,7 +170,7 @@ namespace CultOfCthulhu
                 {
                     TaleRecorder.RecordTale(taleToAdd, new object[]
                     {
-                           this.pawn,
+                        this.pawn,
                     });
                 }
 
@@ -189,8 +190,6 @@ namespace CultOfCthulhu
                 }
                 */
             });
-
-
         }
     }
 }

@@ -213,9 +213,9 @@ namespace CultOfCthulhu
 
         public bool IsOffering(Thing thingToCheck, Building_SacrificialAltar altarDictionary)
         {
-            foreach (ThingAmount dictionary in altarDictionary.determinedOfferings)
+            foreach (ThingCount dictionary in altarDictionary.determinedOfferings)
             {
-                if (thingToCheck.def == dictionary.thing.def) return true;
+                if (thingToCheck.def == dictionary.Thing.def) return true;
             }
             return false;
         }
@@ -272,7 +272,7 @@ namespace CultOfCthulhu
                     s.AppendLine();
                     s.Append("Subtotal: " + result.ToString() + " Applied Pet-like Modifier");
                     tracker.ASMwasPet = true;
-                    if (sacrifice.playerSettings.master != null)
+                    if (sacrifice.playerSettings.Master != null)
                     {
                         result += sacrifice.MarketValue * 2; //Add even more sacrifice value to pets with masters
                         s.AppendLine();

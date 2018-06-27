@@ -68,14 +68,10 @@ namespace CultOfCthulhu
             BodyPartRecord tempRecord = null;
             foreach (BodyPartRecord current in pawn.RaceProps.body.AllParts.InRandomOrder<BodyPartRecord>())
                 {
-                    if (current.def == BodyPartDefOf.LeftLeg ||
-                        current.def == BodyPartDefOf.RightLeg ||
-                        current.def == BodyPartDefOf.LeftArm ||
-                        current.def == BodyPartDefOf.RightArm ||
-                        current.def == BodyPartDefOf.LeftHand ||
-                        current.def == BodyPartDefOf.RightHand ||
-                        current.def == BodyPartDefOf.RightEye ||
-                        current.def == BodyPartDefOf.LeftEye ||
+                    if (current.def == BodyPartDefOf.Leg ||
+                        current.def == BodyPartDefOf.Arm ||
+                        current.def == BodyPartDefOf.Hand ||
+                        current.def == BodyPartDefOf.Eye ||
                         current.def == BodyPartDefOf.Jaw)
                     {
                         if (pawn.health.hediffSet.PartIsMissing(current))
@@ -88,14 +84,10 @@ namespace CultOfCthulhu
                 }
                 foreach (BodyPartRecord current in pawn.RaceProps.body.AllParts.InRandomOrder<BodyPartRecord>())
                 {
-                    if (current.def == BodyPartDefOf.LeftLeg ||
-                        current.def == BodyPartDefOf.RightLeg ||
-                        current.def == BodyPartDefOf.LeftArm ||
-                        current.def == BodyPartDefOf.RightArm ||
-                        current.def == BodyPartDefOf.LeftHand ||
-                        current.def == BodyPartDefOf.RightHand ||
-                        current.def == BodyPartDefOf.RightEye ||
-                        current.def == BodyPartDefOf.LeftEye ||
+                    if (current.def == BodyPartDefOf.Leg ||
+                        current.def == BodyPartDefOf.Arm ||
+                        current.def == BodyPartDefOf.Hand ||
+                        current.def == BodyPartDefOf.Eye ||
                         current.def == BodyPartDefOf.Jaw)
                     {
                         tempRecord = current;

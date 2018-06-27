@@ -56,7 +56,7 @@ namespace CultOfCthulhu
                 {
                     ticksToSpawnCultSeed = OneDay + Rand.Range(-20000, +20000);
                     IncidentDef seed = seedIncidents.RandomElement<IncidentDef>();
-                    IncidentParms parms = StorytellerUtility.DefaultParmsNow(Find.Storyteller.def, seed.category, map);
+                    IncidentParms parms = StorytellerUtility.DefaultParmsNow(seed.category, map);
                     seed.Worker.TryExecute(parms);
                     return;
                 }

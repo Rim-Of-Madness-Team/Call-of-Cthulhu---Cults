@@ -8,7 +8,7 @@
     <label>formless spawn</label>
     <race>Cults_FormlessSpawnRace</race>
     <combatPower>160</combatPower>
-    <defaultFactionType>SpacerHostile</defaultFactionType>
+    <defaultFactionType>AncientsHostile</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
     <lifeStages>
       <li>
@@ -110,15 +110,7 @@
       <intelligence>Animal</intelligence>
       <thinkTreeMain>Animal</thinkTreeMain>
       <body>Cults_FormlessSpawnBody</body>
-      <leatherColor>(54,125,54)</leatherColor>
-      <leatherLabel>byakhee chitin</leatherLabel>
-      <leatherStatFactors>
-        <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
-        <ArmorRating_Blunt>2.0</ArmorRating_Blunt>
-        <ArmorRating_Heat>4.0</ArmorRating_Heat>
-      </leatherStatFactors>
-      <leatherMarketValueFactor>1.5</leatherMarketValueFactor>
-      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
+	  <leatherDef>CH_Leather_FormlessSpawn</leatherDef>
       <baseBodySize>2.0</baseBodySize>
       <baseHealthScale>4.0</baseHealthScale>
       <lifeExpectancy>600</lifeExpectancy>
@@ -166,6 +158,22 @@
     </recipes>
   </ThingDef>
 
+    <!--========== Formless Leather ============-->
+  <ThingDef ParentName="LeatherBase">
+    <defName>CH_Leather_FormlessSpawn</defName>
+    <description>.</description>
+    <label>formless matter</label>
+    <graphicData>
+      <color>(54,125,54)</color>
+      <colorTwo>(54,125,54)</colorTwo>
+    </graphicData>
+    <stuffProps>
+      <color>(54,125,54)</color>
+      <commonality>0.01</commonality>
+    </stuffProps>
+  </ThingDef>
+ 
+  
 <!-- Formless Spawn - Living Black Ichor -->
 <!-- 6 ROM_Tentacles, 8 eyes, 3 arms, 4 legs, 3 mouths, 8 shapeshifting organs? -->
   <BodyDef>

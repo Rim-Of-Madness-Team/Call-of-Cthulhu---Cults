@@ -171,7 +171,7 @@ namespace CultOfCthulhu
 
             if (this.CanSpawnPawns())
             {
-                text = text + "DarkYoungSpawnsIn".Translate() + ": " + (this.nextPawnSpawnTick - Find.TickManager.TicksGame).ToStringTicksToPeriodVagueMax();
+                text = text + "DarkYoungSpawnsIn".Translate() + ": " + (this.nextPawnSpawnTick - Find.TickManager.TicksGame).ToStringTicksToPeriodVague();
             }
             else
             {

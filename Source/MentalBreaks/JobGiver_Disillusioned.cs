@@ -14,7 +14,8 @@ namespace CultOfCthulhu
             this.wanderRadius = 7f;
             this.ticksBetweenWandersRange = new IntRange(300, 600);
             this.locomotionUrgency = LocomotionUrgency.Amble;
-            this.wanderDestValidator = ((Pawn pawn, IntVec3 loc) => WanderRoomUtility.IsValidWanderDest(pawn, loc, this.GetWanderRoot(pawn)));
+            this.wanderDestValidator = (WanderRoomUtility.IsValidWanderDest);
+            //this.wanderDestValidator = ((Pawn pawn, IntVec3 loc) => WanderRoomUtility.IsValidWanderDest(pawn, loc, this.GetWanderRoot(pawn)));
         }
         
         protected override IntVec3 GetWanderRoot(Pawn pawn)

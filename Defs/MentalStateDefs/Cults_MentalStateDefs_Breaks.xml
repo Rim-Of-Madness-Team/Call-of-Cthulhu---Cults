@@ -14,7 +14,7 @@
     <stateClass>CultOfCthulhu.MentalState_Disillusioned</stateClass>
     <workerClass>CultOfCthulhu.MentalStateWorker_Disillusioned</workerClass>	
     <label>disillusionment</label>
-    <category>Sad</category>
+    <category>Misc</category>
     <colonistsOnly>true</colonistsOnly>
     <minTicksBeforeRecovery>30000</minTicksBeforeRecovery>
     <recoveryMtbDays>0.3</recoveryMtbDays>

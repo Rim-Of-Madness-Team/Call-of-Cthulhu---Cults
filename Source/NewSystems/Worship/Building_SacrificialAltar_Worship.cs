@@ -253,5 +253,9 @@ namespace CultOfCthulhu
 
         #endregion Worship
 
+        public bool UsableForBillsAfterFueling()
+        {
+            return this.CurrentlyUsableForBills();
+        }
     }
 }

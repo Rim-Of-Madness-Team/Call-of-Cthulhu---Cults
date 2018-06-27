@@ -162,7 +162,7 @@ namespace CultOfCthulhu
                 }
                 if (base.Downed || this.health.Downed || this.health.InPainShock)
                 {
-                    DamageInfo damageInfo = new DamageInfo(DamageDefOf.Blunt, 9999, -1f, this, null, null);
+                    DamageInfo damageInfo = new DamageInfo(DamageDefOf.Blunt, 9999, 1f, -1f, this, null, null);
                     damageInfo.SetHitPart(this.health.hediffSet.GetBrain());
                     //damageInfo.SetPart(new BodyPartDamageInfo(this.health.hediffSet.GetBrain(), false, HediffDefOf.Cut));
                     base.TakeDamage(damageInfo);

@@ -70,7 +70,7 @@ namespace CultOfCthulhu
                         icon = CompTransporterPawn.CancelLoadCommandTex,
                         action = delegate
                         {
-                            SoundDefOf.DesignateCancel.PlayOneShotOnCamera();
+                            SoundDefOf.Designate_Cancel.PlayOneShotOnCamera();
                             compTransporterPawn.CancelLoad();
                         }
                     };

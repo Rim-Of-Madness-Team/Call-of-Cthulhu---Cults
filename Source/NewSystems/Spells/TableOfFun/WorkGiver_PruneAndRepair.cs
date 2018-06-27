@@ -39,9 +39,8 @@ namespace CultOfCthulhu
             return NightmareAltars(pawn);
         }
 
-        public override bool ShouldSkip(Pawn pawn)
+        public override bool ShouldSkip(Pawn pawn, bool forced = false)
         {
-
             return NightmareAltars(pawn).Count<Thing>() == 0;
         }
 

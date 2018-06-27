@@ -11,12 +11,12 @@ namespace CultOfCthulhu
 {
     public static class LoadTransportersPawnJobUtility
     {
-
         private static HashSet<Thing> neededThings = new HashSet<Thing>();
 
 
         // RimWorld.TransporterUtility
-        public static void GetTransportersInGroup(int transportersGroup, Map map, List<CompTransporterPawn> outTransporters)
+        public static void GetTransportersInGroup(int transportersGroup, Map map,
+            List<CompTransporterPawn> outTransporters)
         {
             outTransporters.Clear();
             if (transportersGroup < 0)
@@ -24,8 +24,8 @@ namespace CultOfCthulhu
                 return;
             }
             IEnumerable<Pawn> listSel = from Pawn pawns in map.mapPawns.AllPawnsSpawned
-                                        where pawns is PawnFlyer
-                                        select pawns;
+                where pawns is PawnFlyer
+                select pawns;
             List<Pawn> list = new List<Pawn>(listSel);
             for (int i = 0; i < list.Count; i++)
             {
@@ -39,21 +39,26 @@ namespace CultOfCthulhu
         }
 
 
-
         public static Job JobOnTransporter(Pawn p, CompTransporterPawn transporter)
         {
             Cthulhu.Utility.DebugReport("JobOnTransporter Called");
             Thing thing = LoadTransportersPawnJobUtility.FindThingToLoad(p, transporter);
             return new Job(JobDefOf.HaulToContainer, thing, transporter.parent)
             {
-                count = Mathf.Min(TransferableUtility.TransferableMatching<TransferableOneWay>(thing, transporter.leftToLoad).CountToTransfer, thing.stackCount),
+                count = Mathf.Min(
+                    TransferableUtility.TransferableMatching<TransferableOneWay>(thing, transporter.leftToLoad,
+                        TransferAsOneMode.PodsOrCaravanPacking).CountToTransfer, thing.stackCount),
                 ignoreForbidden = true
             };
         }
+
         // RimWorld.LoadTransportersJobUtility
         public static bool HasJobOnTransporter(Pawn pawn, CompTransporterPawn transporter)
         {
-            bool result = !transporter.parent.IsForbidden(pawn) && transporter.AnythingLeftToLoad && pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) && pawn.CanReserveAndReach(transporter.parent, PathEndMode.Touch, pawn.NormalMaxDanger(), 1) && LoadTransportersPawnJobUtility.FindThingToLoad(pawn, transporter) != null;
+            bool result = !transporter.parent.IsForbidden(pawn) && transporter.AnythingLeftToLoad &&
+                          pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation) &&
+                          pawn.CanReserveAndReach(transporter.parent, PathEndMode.Touch, pawn.NormalMaxDanger(), 1) &&
+                          LoadTransportersPawnJobUtility.FindThingToLoad(pawn, transporter) != null;
             Cthulhu.Utility.DebugReport(pawn.Label + " HasJobOnTransporter: " + result.ToString());
             return result;
         }
@@ -81,14 +86,18 @@ namespace CultOfCthulhu
             {
                 return null;
             }
-            Predicate<Thing> validator = (Thing x) => LoadTransportersPawnJobUtility.neededThings.Contains(x) && p.CanReserve(x, 1);
-            Thing thing = GenClosest.ClosestThingReachable(p.Position, p.Map, ThingRequest.ForGroup(ThingRequestGroup.HaulableEver), PathEndMode.Touch, TraverseParms.For(p, Danger.Deadly, TraverseMode.ByPawn, false), 9999f, validator);
+            Predicate<Thing> validator = (Thing x) =>
+                LoadTransportersPawnJobUtility.neededThings.Contains(x) && p.CanReserve(x, 1);
+            Thing thing = GenClosest.ClosestThingReachable(p.Position, p.Map,
+                ThingRequest.ForGroup(ThingRequestGroup.HaulableEver), PathEndMode.Touch,
+                TraverseParms.For(p, Danger.Deadly, TraverseMode.ByPawn, false), 9999f, validator);
             if (thing == null)
             {
                 foreach (Thing current in LoadTransportersPawnJobUtility.neededThings)
                 {
                     Pawn pawn = current as Pawn;
-                    if (pawn != null && (!pawn.IsColonist || pawn.Downed) && p.CanReserveAndReach(pawn, PathEndMode.Touch, Danger.Deadly, 1))
+                    if (pawn != null && (!pawn.IsColonist || pawn.Downed) &&
+                        p.CanReserveAndReach(pawn, PathEndMode.Touch, Danger.Deadly, 1))
                     {
                         Cthulhu.Utility.DebugReport("Pawn to load : " + pawn.Label);
                         return pawn;

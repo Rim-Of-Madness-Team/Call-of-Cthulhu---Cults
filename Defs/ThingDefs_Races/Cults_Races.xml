@@ -103,7 +103,7 @@
     <race>Cults_BlackGoat</race>
     <combatPower>50</combatPower>
     <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
-    <wildSpawn_EcoSystemWeight>0.7</wildSpawn_EcoSystemWeight>
+    <ecoSystemWeight>0.7</ecoSystemWeight>
     <wildSpawn_GroupSizeRange>
       <min>1</min>
       <max>3</max>
@@ -169,7 +169,7 @@
     <label>Reanimated</label>
     <race>ReanimatedCorpse</race>
     <combatPower>50</combatPower>
-    <defaultFactionType>SpacerHostile</defaultFactionType>
+    <defaultFactionType>AncientsHostile</defaultFactionType>
     <baseRecruitDifficulty>0.99</baseRecruitDifficulty>
     <backstoryCategory>Slave</backstoryCategory>
     <itemQuality>Shoddy</itemQuality>
@@ -332,7 +332,6 @@
           </race>
     <recipes>
       <li>InstallPowerClaw</li>
-      <li>InstallScytherBlade</li>
       <li>InstallBionicEye</li>
       <li>InstallBionicArm</li>
       <li>InstallBionicLeg</li>

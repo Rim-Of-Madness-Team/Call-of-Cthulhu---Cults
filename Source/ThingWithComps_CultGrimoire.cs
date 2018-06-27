@@ -47,7 +47,7 @@ namespace CultOfCthulhu
             }
             else
             {
-                command_Action.defaultIconColor = buildable.IconDrawColor;
+                command_Action.defaultIconColor = buildable.uiIconColor;
             }
             command_Action.hotKey = KeyBindingDefOf.Misc11;
             yield return command_Action;

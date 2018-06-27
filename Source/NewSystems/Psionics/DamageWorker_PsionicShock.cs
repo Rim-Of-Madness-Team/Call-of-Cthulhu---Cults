@@ -68,7 +68,7 @@ namespace CultOfCthulhu
                             MoteMaker.ThrowText(dinfo.Instigator.DrawPos, dinfo.Instigator.Map, "Success", 12.0f);
                             BodyPartRecord part = pawn.health.hediffSet.GetBrain();
                             if (part == null) Log.ErrorOnce("Cults :: Missing Brain", 6781923);
-                            pawn.TakeDamage(new DamageInfo(CultsDefOf.Cults_Psionic, Rand.Range(5, 8), -1, dinfo.Instigator, part));
+                            pawn.TakeDamage(new DamageInfo(CultsDefOf.Cults_Psionic, Rand.Range(5, 8), 1f, -1, dinfo.Instigator, part));
 
                             return result;
                         }
@@ -77,7 +77,7 @@ namespace CultOfCthulhu
                             MoteMaker.ThrowText(dinfo.Instigator.DrawPos, dinfo.Instigator.Map, "Critical Success", 12.0f);
                             BodyPartRecord part = pawn.health.hediffSet.GetBrain();
                             if (part == null) Log.ErrorOnce("Cults :: Missing Brain", 6781923);
-                            victim.TakeDamage(new DamageInfo(CultsDefOf.Cults_Psionic, 9999, -1, dinfo.Instigator, part));
+                            victim.TakeDamage(new DamageInfo(CultsDefOf.Cults_Psionic, 9999, 1f, -1, dinfo.Instigator, part));
 
                             return result;
                         }

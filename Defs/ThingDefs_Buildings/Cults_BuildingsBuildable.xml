@@ -34,7 +34,7 @@
     <label>alcove</label>
     <description>A recess in a wall.</description>
     <thingClass>Building</thingClass>
-    <category>Building</category>
+    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
     <fillPercent>0.2</fillPercent>
     <useHitPoints>true</useHitPoints>
@@ -88,7 +88,7 @@
     <label>alcove (torch)</label>
     <description>A recess in a wall with a torch hanging inside.</description>
     <thingClass>Building</thingClass>
-    <category>Building</category>
+    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <altitudeLayer>BuildingOnTop</altitudeLayer>
     <fillPercent>0.2</fillPercent>
     <useHitPoints>true</useHitPoints>
@@ -377,7 +377,7 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>10</Beauty>
-      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <JoyGainFactor>1</JoyGainFactor>
       <Mass>70</Mass>
     </statBases>
     <size>(3,1)</size>
@@ -447,7 +447,7 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>10</Beauty>
-      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <JoyGainFactor>1</JoyGainFactor>
       <Mass>70</Mass>
     </statBases>
     <size>(3,1)</size>
@@ -516,7 +516,7 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>10</Beauty>
-      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <JoyGainFactor>1</JoyGainFactor>
       <Mass>75</Mass>
     </statBases>
     <size>(3,1)</size>
@@ -563,7 +563,7 @@
 
   <ThingDef Name="ObeliskBase" ParentName="BuildingBase" Abstract="true">
     <thingClass>CultOfCthulhu.Building_Monolith</thingClass>
-    <category>Building</category>
+    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <minifiedDef>MinifiedThing</minifiedDef>
 	<stealable>false</stealable>
     <graphicData>
@@ -613,6 +613,7 @@
 
   <ThingDef ParentName="ObeliskBase">
     <defName>Cults_ObeliskConstructed_Red</defName>
+	    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <label>obelisk (red)</label>
     <description>A mysterious upright standing block of stone. It has been specially blessed with a red aura.</description>
     <comps>
@@ -625,6 +626,7 @@
 
   <ThingDef ParentName="ObeliskBase">
     <defName>Cults_ObeliskConstructed_Green</defName>
+	    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <label>obelisk (green)</label>
     <description>A mysterious upright standing block of stone. It has been specially blessed with a green aura.</description>
     <graphicData>
@@ -647,6 +649,7 @@
 
   <ThingDef ParentName="ObeliskBase">
     <defName>Cults_ObeliskConstructed_Blue</defName>
+	    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <label>obelisk (blue)</label>
     <description>A mysterious upright standing block of stone. It has been specially blessed with a blue aura.</description>
     <graphicData>
@@ -669,6 +672,7 @@
 
   <ThingDef ParentName="ObeliskBase">
     <defName>Cults_ObeliskConstructed_Yellow</defName>
+	    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <label>obelisk (yellow)</label>
     <description>A mysterious upright standing block of stone. It has been specially blessed with a yellow aura.</description>
     <graphicData>

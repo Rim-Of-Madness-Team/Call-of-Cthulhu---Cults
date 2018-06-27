@@ -36,7 +36,7 @@
       <MaxHitPoints>300</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>10</Beauty>
-      <EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+      <JoyGainFactor>1</JoyGainFactor>
       <Mass>120</Mass>
     </statBases>
     <size>(3,1)</size>
@@ -74,7 +74,7 @@
     <label>bursting tentacle</label>
     <description>OH GOD</description>
 	<thingClass>CultOfCthulhu.Building_BurstingTentacle</thingClass>
-    <category>Building</category>
+    <category>Building</category><thingCategories><li>Building</li></thingCategories>
     <graphicData>
       <texPath>Building/BurstingTentacle</texPath>
       <graphicClass>Graphic_Flicker</graphicClass>
@@ -146,7 +146,7 @@
         <damagePerTickRare>8</damagePerTickRare>
       </li>
       <li Class="CompProperties_SpawnerFilth">
-        <filthDef>FilthSlime</filthDef>
+        <filthDef>Filth_Slime</filthDef>
         <spawnCountOnSpawn>10</spawnCountOnSpawn>
         <spawnMtbHours>4</spawnMtbHours>
         <spawnRadius>5</spawnRadius>

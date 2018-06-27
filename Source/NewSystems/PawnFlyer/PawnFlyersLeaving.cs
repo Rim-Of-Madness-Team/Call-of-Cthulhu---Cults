@@ -30,7 +30,7 @@ namespace CultOfCthulhu
 
         public IntVec3 destinationCell = IntVec3.Invalid;
 
-        public PawnsArriveMode arriveMode;
+        public PawnsArrivalModeDef arriveMode;
 
         public bool attackOnArrival;
 
@@ -117,7 +117,7 @@ namespace CultOfCthulhu
             Scribe_Values.Look<int>(ref this.groupID, "groupID", 0, false);
             Scribe_Values.Look<int>(ref this.destinationTile, "destinationTile", 0, false);
             Scribe_Values.Look<IntVec3>(ref this.destinationCell, "destinationCell", default(IntVec3), false);
-            Scribe_Values.Look<PawnsArriveMode>(ref this.arriveMode, "arriveMode", PawnsArriveMode.Undecided, false);
+            Scribe_Values.Look<PawnsArrivalModeDef>(ref this.arriveMode, "arriveMode", PawnsArrivalModeDefOf.EdgeDrop, false);
             Scribe_Values.Look<bool>(ref this.attackOnArrival, "attackOnArrival", false, false);
             Scribe_Values.Look<int>(ref this.ticksSinceStart, "ticksSinceStart", 0, false);
             Scribe_Deep.Look<ActiveDropPodInfo>(ref this.contents, "contents", new object[]
