@@ -30,7 +30,6 @@
 	<building>
 		<soundAmbient>RitualChanting</soundAmbient>
 	</building>
-    <staticSunShadowHeight>1.2</staticSunShadowHeight>
   </ThingDef>
 
 

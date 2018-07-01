@@ -6,10 +6,11 @@
     <label>psionic lobe</label>
     <description>A mysterious tumorous growth that grants minor telekinetic and psychic powers.</description>
     <graphicData>
-      <texPath>Things/Item/BodyPart/ArtificialOrgan</texPath>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
+	  <Mass>1.0</Mass>
       <MarketValue>1500</MarketValue>
     </statBases>
     <techHediffsTags>
@@ -24,10 +25,11 @@
     <label>monstrous brain</label>
     <description>A mysterious tumorous growth that grants advanced intelligence.</description>
     <graphicData>
-      <texPath>Things/Item/BodyPart/ArtificialOrgan</texPath>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
+	  <Mass>1.0</Mass>
       <MarketValue>500</MarketValue>
     </statBases>
     <techHediffsTags>
@@ -42,10 +44,11 @@
     <label>monstrous body</label>
     <description>A modified body that changes the size of the pawn.</description>
     <graphicData>
-      <texPath>Things/Item/BodyPart/ArtificialOrgan</texPath>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
+	  <Mass>15.0</Mass>
       <MarketValue>500</MarketValue>
     </statBases>
     <techHediffsTags>
@@ -59,10 +62,11 @@
     <label>tentacle</label>
     <description>Mysterious appendage that writhes of its own accord forming unusual patterns in its movements.</description>
     <graphicData>
-      <texPath>Things/Item/BodyPart/ArtificialOrgan</texPath>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
+	  <Mass>2.0</Mass>
       <MarketValue>40</MarketValue>
     </statBases>
     <techHediffsTags>
@@ -76,10 +80,11 @@
     <label>cthulhid tentacle</label>
     <description>Mysterious appendage that writhes of its own accord forming unusual patterns in its movements.</description>
     <graphicData>
-      <texPath>Things/Item/BodyPart/ArtificialOrgan</texPath>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
+	  <Mass>1.8</Mass>
       <MarketValue>400</MarketValue>
     </statBases>
     <techHediffsTags>
@@ -94,10 +99,11 @@
     <label>horrifying eyestalk</label>
     <description>Mysterious eye-appendage that writhes of its own accord forming unusual patterns in its movements.</description>
     <graphicData>
-      <texPath>Things/Item/BodyPart/ArtificialOrgan</texPath>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
+	  <Mass>0.1</Mass>
       <MarketValue>400</MarketValue>
     </statBases>
     <techHediffsTags>

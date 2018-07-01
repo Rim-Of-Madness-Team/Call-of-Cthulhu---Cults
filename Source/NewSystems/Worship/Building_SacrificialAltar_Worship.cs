@@ -198,7 +198,7 @@ namespace CultOfCthulhu
                 return;
             }
 
-            FactionBase factionBase = (FactionBase)this.Map.info.parent;
+            Settlement factionBase = (Settlement)this.Map.info.parent;
 
             Messages.Message("WorshipGathering".Translate(new object[] {
                 factionBase.Label

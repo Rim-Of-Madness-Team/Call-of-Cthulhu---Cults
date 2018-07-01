@@ -1057,7 +1057,6 @@
     <label>cultist hood (shub-niggurath mask)</label>
     <description>For worshippers of Shub-Niggurath, this mask is designed for the sole purpose of looking more pleasing to your deity. With it, your chants seem more potent and their insidious whispering is more constant.</description>
     <graphicData>
-	  <Mass>0.5</Mass>
       <texPath>Apparel/Hats/ShubMask/ROMShubMask_north</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>

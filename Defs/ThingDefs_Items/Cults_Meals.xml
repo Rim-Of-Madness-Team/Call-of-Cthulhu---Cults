@@ -12,11 +12,11 @@
 	<tradeability>None</tradeability>
     <statBases>
       <MarketValue>0</MarketValue>
+	  <Nutrition>0.9</Nutrition>
     </statBases>
     <ingestible>
       <preferability>MealFine</preferability>
 			<tasteThought>AteFineMeal</tasteThought>
-			<nutrition>0.90</nutrition>
       <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
     </ingestible>

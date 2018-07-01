@@ -2,15 +2,10 @@
 
 <Defs>
 
-  <HediffDef Name="InjuryBase" Abstract="True">
-    <hediffClass>Hediff_Injury</hediffClass>
-    <displayWound>true</displayWound>
-  </HediffDef>
-
-
   <HediffDef ParentName="InjuryBase">
     <defName>Cults_Psionic</defName>
     <label>crush</label>
+    <hediffClass>Hediff_Injury</hediffClass>
     <displayWound>false</displayWound>
 	<tendable>true</tendable>
     <comps>

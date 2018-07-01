@@ -42,7 +42,7 @@
   </DamageDef>
   
   
-  	<HediffDef ParentName="Cults_InjuryBase">
+  	<HediffDef>
 		<defName>Cults_AcidBurn</defName>
 		<label>acid burn</label>
     <labelNoun>an acid burn</labelNoun>

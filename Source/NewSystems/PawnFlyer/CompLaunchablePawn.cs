@@ -275,7 +275,7 @@ namespace CultOfCthulhu
                 }, null, ActionWhenFinished, CompLaunchablePawn.TargeterMouseAttachment);
                 return true;
             }
-            if (target.WorldObject is FactionBase && target.WorldObject.Faction != Faction.OfPlayer)
+            if (target.WorldObject is Settlement && target.WorldObject.Faction != Faction.OfPlayer)
             {
                 Find.WorldTargeter.closeWorldTabWhenFinished = false;
                 List<FloatMenuOption> list = new List<FloatMenuOption>();

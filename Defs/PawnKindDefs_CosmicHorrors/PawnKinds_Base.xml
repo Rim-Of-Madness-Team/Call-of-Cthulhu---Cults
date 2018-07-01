@@ -23,9 +23,6 @@
       <manhunterOnTameFailChance>1</manhunterOnTameFailChance>	  
       <needsRest>true</needsRest>
       <hasGenders>true</hasGenders>
-      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-      <leatherInsulation>0.70</leatherInsulation>
-      <leatherMarketValueFactor>3</leatherMarketValueFactor>
 	  <hediffGiverSets>
 		<li>OrganicStandard</li>
 	  </hediffGiverSets>

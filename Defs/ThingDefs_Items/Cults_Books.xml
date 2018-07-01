@@ -4,8 +4,11 @@
   <ThingDef Name="Cults_Grimoire">
 	<defName>Cults_Grimoire</defName>
     <thingClass>CultOfCthulhu.ThingWithComps_CultGrimoire</thingClass>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
 	<label>grimoire of the occult</label>
-	<description></description>
+	<description>At first glance, the grimoire compells the viewer to halt their gait. Upon closer examination, the seals and clasps that hold the tome tightly closed become like a boggling puzzle to a starved intellectual. What secrets could it possess? No, ...what powers?</description>
     <graphicData>
       <texPath>Item/Resource/Grimoire/Grimoire</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -17,6 +20,7 @@
 	<selectable>true</selectable>	
     <drawGUIOverlay>true</drawGUIOverlay>
     <statBases>
+	  <Mass>1.5</Mass>
       <WorkToMake>2000</WorkToMake>
       <MarketValue>20</MarketValue>	
       <MaxHitPoints>20</MaxHitPoints>
@@ -32,9 +36,6 @@
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
     <techLevel>Neolithic</techLevel>
-    <thingCategories>
-      <li>Artifacts</li>
-    </thingCategories>
     <tradeTags>
       <li>Artifact</li>
     </tradeTags>
@@ -58,6 +59,9 @@
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>	
     <category>Item</category>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
     <pathCost>10</pathCost>
     <useHitPoints>true</useHitPoints>
 	<selectable>true</selectable>	
@@ -79,9 +83,6 @@
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
     <techLevel>Neolithic</techLevel>
-    <thingCategories>
-      <li>Items</li>
-    </thingCategories>
     <inspectorTabs>
       <li>ITab_Art</li>
     </inspectorTabs>	

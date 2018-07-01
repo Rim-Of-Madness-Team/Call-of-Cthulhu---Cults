@@ -2,7 +2,7 @@
 <Defs>
 
   
-  <ThingDef ParentName="ArtifactsConsumableBase">
+  <ThingDef ParentName="ArtifactBase">
     <defName>Cults_ElixerOfPower</defName>
     <label>elixer of power</label>
     <description>This stone flask is wrapped with golden inlays and a watchful eye made of a rare gemstone. When held, it feels like a heart is beating inside. When uncapped, all one sees is a black liquid. Inscriptions along the back seem to indicate that consuming this elixer would grant untold powers. The powers will fade in time, possibly within a season. During that time, one is treated to the taste of godlike power.</description>

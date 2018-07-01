@@ -1122,7 +1122,7 @@ namespace CultOfCthulhu
             MapComponent_SacrificeTracker.Get(Map).lastResult = CultUtility.SacrificeResult.none;
 
             //Send a message about the gathering
-            if (Map?.info?.parent is FactionBase factionBase)
+            if (Map?.info?.parent is Settlement factionBase)
             {
                 Messages.Message("SacrificeGathering".Translate(new object[] {
                     factionBase.Label

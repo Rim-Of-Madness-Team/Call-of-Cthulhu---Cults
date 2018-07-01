@@ -106,6 +106,7 @@
       </li>
     </tools>
     <race>
+	  <trainability>Advanced</trainability>
       <wildness>0.95</wildness>	
       <intelligence>Animal</intelligence>
       <thinkTreeMain>Animal</thinkTreeMain>

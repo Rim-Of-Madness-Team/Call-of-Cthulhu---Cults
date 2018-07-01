@@ -74,7 +74,7 @@
     <label>bursting tentacle</label>
     <description>OH GOD</description>
 	<thingClass>CultOfCthulhu.Building_BurstingTentacle</thingClass>
-    <category>Building</category><thingCategories><li>Building</li></thingCategories>
+    <category>Building</category>
     <graphicData>
       <texPath>Building/BurstingTentacle</texPath>
       <graphicClass>Graphic_Flicker</graphicClass>

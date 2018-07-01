@@ -1082,7 +1082,7 @@ namespace CultOfCthulhu
             float CultistMod = Rand.Range(0.01f, 0.02f);
             AffectCultMindedness(preacher, CultistMod);
 
-            FactionBase factionBase = (FactionBase) altar.Map.info.parent;
+            Settlement factionBase = (Settlement) altar.Map.info.parent;
 
             Messages.Message("WorshipFinished".Translate(factionBase.Label), TargetInfo.Invalid,
                 MessageTypeDefOf.PositiveEvent);
@@ -1108,7 +1108,7 @@ namespace CultOfCthulhu
                 offerer.jobs.TryTakeOrderedJob(job);
                 //offerer.jobs.EndCurrentJob(JobCondition.InterruptForced);
             }
-            FactionBase factionBase = (FactionBase) altar.Map.info.parent;
+            Settlement factionBase = (Settlement) altar.Map.info.parent;
 
             Messages.Message("WorshipFinished".Translate(factionBase.Label), TargetInfo.Invalid,
                 MessageTypeDefOf.PositiveEvent);

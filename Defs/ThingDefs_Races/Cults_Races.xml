@@ -64,9 +64,7 @@
       <baseHungerRate>0.15</baseHungerRate>
       <baseHealthScale>0.85</baseHealthScale>
       <foodType>OmnivoreRoughAnimal</foodType>
-      <leatherColor>(50,50,50)</leatherColor>
-      <leatherLabel>black goathide</leatherLabel>
-      <leatherInsulation>0.9</leatherInsulation>
+	  <leatherDef>CH_Leather_BlackGoathide</leatherDef>
       <wildness>0.55</wildness>
       <gestationPeriodDays>22.5</gestationPeriodDays>
       <lifeExpectancy>115</lifeExpectancy>
@@ -102,12 +100,12 @@
     <label>black goat</label>
     <race>Cults_BlackGoat</race>
     <combatPower>50</combatPower>
-    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+     
     <ecoSystemWeight>0.7</ecoSystemWeight>
-    <wildSpawn_GroupSizeRange>
+    <wildGroupSize>
       <min>1</min>
       <max>3</max>
-    </wildSpawn_GroupSizeRange>
+    </wildGroupSize>
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -268,9 +266,7 @@
       <intelligence>Humanlike</intelligence>
       <makesFootprints>true</makesFootprints>
       <lifeExpectancy>999</lifeExpectancy>
-      <leatherColor>(95,123,90)</leatherColor>
-      <leatherCommonalityFactor>0</leatherCommonalityFactor>
-      <leatherInsulation>0.95</leatherInsulation>
+      <leatherDef>CH_Leather_ReanimatedCorpse</leatherDef>
       <nameCategory>HumanStandard</nameCategory>
       <body>Human</body>
       <baseBodySize>1</baseBodySize>
