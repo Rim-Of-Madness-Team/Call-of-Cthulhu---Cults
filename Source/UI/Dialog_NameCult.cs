@@ -88,7 +88,7 @@ namespace CultOfCthulhu
                     }
                     else
                     {
-                        Log.Error("Missing home area map for map declarations!");
+                        throw new InvalidOperationException();
                     }
                 }
                 else

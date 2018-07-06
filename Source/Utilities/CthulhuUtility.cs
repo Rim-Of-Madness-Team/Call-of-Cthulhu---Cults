@@ -44,7 +44,8 @@ namespace Cthulhu
         public const float Extreme = 0.95f;
     }
 
-    static public class Utility
+    [StaticConstructorOnStartup]
+    public static class Utility
     {
         public enum SanLossSev { None = 0, Hidden, Initial, Minor, Major, Extreme };
         public const string SanityLossDef = "ROM_SanityLoss";
