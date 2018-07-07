@@ -19,7 +19,7 @@
     <race>Human</race>
     <combatPower>25</combatPower>
     <itemQuality>Poor</itemQuality>
-    <isFighter>false</isFighter>
+    <isFighter>true</isFighter>
     <gearHealthRange>
       <min>0.2</min>
       <max>2.0</max>
