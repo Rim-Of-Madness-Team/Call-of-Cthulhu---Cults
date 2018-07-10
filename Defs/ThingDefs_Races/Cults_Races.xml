@@ -12,6 +12,7 @@
     </statBases>
     <tools>
       <li>
+	    <id>ROM_BlackGoatLeftHoofTool</id>
         <label>left hoof</label>
         <capacities>
           <li>Blunt</li>
@@ -22,6 +23,7 @@
         <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
       </li>
       <li>
+	    <id>ROM_BlackGoatRightHoofTool</id>
         <label>right hoof</label>
         <capacities>
           <li>Blunt</li>
@@ -32,6 +34,8 @@
         <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
       </li>
       <li>
+	    <id>ROM_BlackGoatBiteTool</id>
+		<label>teeth</label>
         <capacities>
           <li>Bite</li>
         </capacities>
@@ -40,6 +44,7 @@
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
       </li>
       <li>
+	    <id>ROM_BlackGoatHeadTool</id>
         <label>head</label>
         <capacities>
           <li>Blunt</li>

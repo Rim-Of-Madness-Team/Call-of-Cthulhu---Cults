@@ -15,7 +15,7 @@
     <statBases>
       <WorkToMake>6000</WorkToMake>
 	  <Mass>0.5</Mass>
-      <Weapon_Bulk>0.2</Weapon_Bulk>
+      
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <stuffCategories>
