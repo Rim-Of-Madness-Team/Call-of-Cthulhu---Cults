@@ -4,9 +4,9 @@
 	 <IncidentDef>
 	  <defName>CultIncident_StarsAreWrong</defName>
 	  <label>stars are wrong</label>
-		<targetTypes>
+		<targetTags>
 		  <li>World</li>
-		</targetTypes>
+		</targetTags>
 	  <category>Misc</category>
 	  <workerClass>CultOfCthulhu.IncidentWorker_MakeCultgameCondition</workerClass>
 	  <gameCondition>CultgameCondition_StarsAreWrong</gameCondition>
@@ -32,9 +32,9 @@
 	 <IncidentDef>
 	  <defName>CultIncident_StarsAreRight</defName>
 	  <label>stars are right</label>
-    <targetTypes>
+    <targetTags>
       <li>World</li>
-    </targetTypes>
+    </targetTags>
 	  <category>Misc</category>
 	  <workerClass>CultOfCthulhu.IncidentWorker_MakeCultgameCondition</workerClass>
 	  <gameCondition>CultgameCondition_StarsAreRight</gameCondition>
@@ -64,9 +64,9 @@
 		<category>Misc</category>
 		<defName>CultSeedIncident_TreeOfNightmares</defName>
 		<workerClass>CultOfCthulhu.IncidentWorker_CultSeed_NightmareTree</workerClass>
-		<targetTypes>
+		<targetTags>
           <li>Map_PlayerHome</li>
-        </targetTypes>
+        </targetTags>
 		<letterLabel>Tree of Nightmares</letterLabel>
 		<letterText>It gazes through the souls of all that pass it.</letterText>
 	</IncidentDef> 
@@ -77,9 +77,9 @@
 		<category>Misc</category>
 		<defName>CultSeedIncident_NightmareMonolith</defName>
 		<workerClass>CultOfCthulhu.IncidentWorker_CultSeed_NightmareMonolith</workerClass>
-        <targetTypes>
+        <targetTags>
           <li>Map_PlayerHome</li>
-        </targetTypes>
+        </targetTags>
 		<letterLabel>Monolith</letterLabel>
 		<letterText>It gazes through the souls of all that pass it.</letterText>
 	</IncidentDef> 

@@ -25,7 +25,7 @@ namespace CultOfCthulhu
 {
     public class JobDriver_AttendSacrifice : JobDriver
     {
-        public override bool TryMakePreToilReservations()
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return true;
         }

@@ -8,17 +8,6 @@ using RimWorld.Planet;
 
 namespace CultOfCthulhu
 {
-    public static class DeityTracker
-    {
-        public static WorldComponent_CosmicDeities Get
-        {
-            get
-            {
-                return Find.World.GetComponent<WorldComponent_CosmicDeities>();
-            }
-        }
-    }
-
     public class WorldComponent_CosmicDeities : WorldComponent
     {
         public Dictionary<CosmicEntity, int> DeityCache = new Dictionary<CosmicEntity, int>();
@@ -101,7 +90,6 @@ namespace CultOfCthulhu
             //Cthulhu.Utility.DebugReport("Reveal Deity Check");
             ResearchProjectDef deityResearch = ResearchProjectDef.Named("Forbidden_Deities");
 
-
             if (deityResearch.IsFinished && undiscoveredEntities().Count > 0)
             {
                 foreach (CosmicEntity entity in undiscoveredEntities())
@@ -109,7 +97,15 @@ namespace CultOfCthulhu
                     entity.discovered = true;
                     Cthulhu.Utility.DebugReport("Change research should be called.");
                     Cthulhu.Utility.ChangeResearchProgress(deityResearch, 0f, true);
-                    Messages.Message(entity.Label + " was discovered amongst the strange symbols.", MessageTypeDefOf.PositiveEvent);
+                    var message = "Cults_DiscoveredDeityMessage".Translate(entity.Label);
+                    Messages.Message(message, MessageTypeDefOf.PositiveEvent);
+
+                    StringBuilder s = new StringBuilder();
+                    s.AppendLine(message);
+                    s.AppendLine();
+                    s.AppendLine(entity.Info());
+                    Find.LetterStack.ReceiveLetter("Cults_Discovered".Translate(), s.ToString(),
+                        LetterDefOf.NeutralEvent, null);
                     break;
                 }
             }

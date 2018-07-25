@@ -1,6 +1,7 @@
 ﻿// ----------------------------------------------------------------------
 // These are basic usings. Always let them be here.
 // ----------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,32 +11,34 @@ using System.Text;
 // ----------------------------------------------------------------------
 // These are RimWorld-specific usings. Activate/Deactivate what you need:
 // ----------------------------------------------------------------------
-using UnityEngine;         // Always needed
+using UnityEngine; // Always needed
 //using VerseBase;         // Material/Graphics handling functions are found here
-using Verse;               // RimWorld universal objects are here (like 'Building')
-using Verse.AI;          // Needed when you do something with the AI
+using Verse; // RimWorld universal objects are here (like 'Building')
+using Verse.AI; // Needed when you do something with the AI
 using Verse.AI.Group;
-using Verse.Sound;       // Needed when you do something with Sound
-using Verse.Noise;       // Needed when you do something with Noises
-using RimWorld;            // RimWorld specific functions are found here (like 'Building_Battery')
-using RimWorld.Planet;   // RimWorld specific functions for world creation
+using Verse.Sound; // Needed when you do something with Sound
+using Verse.Noise; // Needed when you do something with Noises
+using RimWorld; // RimWorld specific functions are found here (like 'Building_Battery')
+using RimWorld.Planet; // RimWorld specific functions for world creation
 //using RimWorld.SquadAI;  // RimWorld specific functions for squad brains 
 
 namespace CultOfCthulhu
 {
-
     public class CosmicEntity : Thing
     {
-        private const float MODIFIER_HUMAN  = 0.5f;
+        private const float MODIFIER_HUMAN = 0.5f;
         private const float MODIFIER_ANIMAL = 0.2f;
         private const float DIVIDER_HUMAN = 300f;
         private const float DIVIDER_FOOD = 700f;
 
         public List<IncidentDef> tier1Spells;
+
         //public IncidentDef tier2Spell;
         public List<IncidentDef> tier2Spells;
+
         //public IncidentDef tier3Spell;
         public List<IncidentDef> tier3Spells;
+
         public IncidentDef finalSpell;
         public List<ThingDef> favoredApparel = new List<ThingDef>();
         public bool discovered = false;
@@ -46,10 +49,10 @@ namespace CultOfCthulhu
         public float LastFavor => lastFavor;
 
         public float favorMax = 50f;
-        public float favorTier0Max { get { return (favorMax * 0.05f); } }
-        public float favorTier1Max { get { return (favorMax * 0.10f); } }
-        public float favorTier2Max { get { return (favorMax * 0.5f); } }
-        public float favorTier3Max { get { return (favorMax * 0.85f); } }
+        public float favorTier0Max => (favorMax * 0.05f);
+        public float favorTier1Max => (favorMax * 0.10f);
+        public float favorTier2Max => (favorMax * 0.5f);
+        public float favorTier3Max => (favorMax * 0.85f);
 
 
         public enum Tier : int
@@ -60,6 +63,10 @@ namespace CultOfCthulhu
             Three = 3,
             Final = 4
         };
+
+        public CosmicEntityDef Def => def as CosmicEntityDef;
+        public override string Label => Def.label;
+        public override string LabelCap => Def.label.CapitalizeFirst();
 
         public string TierString
         {
@@ -77,11 +84,9 @@ namespace CultOfCthulhu
                         return "TierStringThree".Translate();
                     case Tier.Final:
                         return "TierStringFinal".Translate();
-
                 }
                 return "";
             }
-
         }
 
         public Tier PlayerTier
@@ -113,7 +118,6 @@ namespace CultOfCthulhu
                         return favorTier3Max;
                     case Tier.Final:
                         return favorMax;
-
                 }
                 return favorMax;
             }
@@ -135,7 +139,6 @@ namespace CultOfCthulhu
                         return favorTier2Max;
                     case Tier.Final:
                         return favorTier2Max;
-
                 }
                 return favorMax;
             }
@@ -152,21 +155,15 @@ namespace CultOfCthulhu
                 return i;
             }
         }
-        
+
         public float PlayerFavor
         {
-            get
-            {
-                return this.favor;
-            }
+            get { return this.favor; }
         }
 
         public bool FavorsOutdoorWorship
         {
-            get
-            {
-                return ((CosmicEntityDef)this.def).favorsOutdoorWorship;
-            }
+            get { return ((CosmicEntityDef) this.def).favorsOutdoorWorship; }
         }
 
         public CosmicEntity()
@@ -176,7 +173,7 @@ namespace CultOfCthulhu
         public CosmicEntity(ThingDef newDef)
         {
             CosmicEntityDef currentDef = newDef as CosmicEntityDef;
-            if(currentDef != null)
+            if (currentDef != null)
             {
                 this.def = newDef;
                 this.tier1Spells = currentDef.tier1SpellDefs;
@@ -222,7 +219,7 @@ namespace CultOfCthulhu
 
         public void ConsumeOfferings(Thing offering)
         {
-            float tierModifier = (float)(((int)PlayerTier) + 1);
+            float tierModifier = (float) (((int) PlayerTier) + 1);
             float foodModifier = DIVIDER_FOOD;
             float math = (offering.MarketValue * offering.stackCount) / (foodModifier * tierModifier);
             offering.Destroy(0);
@@ -235,17 +232,19 @@ namespace CultOfCthulhu
             s.Append("Offering Report");
             s.AppendLine();
             s.Append("===============");
-            
+
             foreach (Thing offering in offerings)
             {
                 s.AppendLine();
-                s.Append(offering.stackCount + " " + offering.ToString() + ": $" + offering.MarketValue.ToString() + " each. Total: $" + (offering.MarketValue * (float)offering.stackCount).ToString());
+                s.Append(offering.stackCount + " " + offering.ToString() + ": $" + offering.MarketValue.ToString() +
+                         " each. Total: $" + (offering.MarketValue * (float) offering.stackCount).ToString());
                 ConsumeOfferings(offering);
             }
             Cthulhu.Utility.DebugReport(s.ToString());
         }
 
-        public float SacrificeBonus(Pawn sacrifice, Map map, bool favorSpell = false, bool starsAreRight = false, bool starsAreWrong = false)
+        public float SacrificeBonus(Pawn sacrifice, Map map, bool favorSpell = false, bool starsAreRight = false,
+            bool starsAreWrong = false)
         {
             StringBuilder s = new StringBuilder();
             s.Append("Sacrifice Bonus Calculation:");
@@ -279,7 +278,8 @@ namespace CultOfCthulhu
                         s.Append("Subtotal: " + result.ToString() + " Applied Bonded Modifier");
                         tracker.ASMwasBonded = true;
                     }
-                    if (tracker.lastUsedAltar.SacrificeData.Executioner.relations.DirectRelationExists(PawnRelationDefOf.Bond, sacrifice))
+                    if (tracker.lastUsedAltar.SacrificeData.Executioner.relations.DirectRelationExists(
+                        PawnRelationDefOf.Bond, sacrifice))
                     {
                         result += sacrifice.MarketValue * 2; //Even more sacrifice value for sacrificing one's own pet
                         s.AppendLine();
@@ -303,7 +303,8 @@ namespace CultOfCthulhu
                     s.AppendLine();
 
                     PawnRelationDef def = ex.GetMostImportantRelation(sacrifice);
-                    s.Append("Subtotal: " + result.ToString() + " Applied Family Member, " + def.label + " as Executioner Modifier");
+                    s.Append("Subtotal: " + result.ToString() + " Applied Family Member, " + def.label +
+                             " as Executioner Modifier");
                     tracker.HSMwasFamily = true;
                     tracker.lastRelation = def;
                 }
@@ -328,25 +329,33 @@ namespace CultOfCthulhu
             Cthulhu.Utility.DebugReport(s.ToString());
             return result;
         }
-        
-        public void ReceiveSacrifice(Pawn sacrifice, Map map, bool favorSpell = false, bool starsAreRight = false, bool starsAreWrong = false)
+
+        public void ReceiveSacrifice(Pawn sacrifice, Map map, bool favorSpell = false, bool starsAreRight = false,
+            bool starsAreWrong = false)
         {
             MapComponent_SacrificeTracker tracker = map.GetComponent<MapComponent_SacrificeTracker>();
-            float value = (sacrifice.MarketValue + SacrificeBonus(sacrifice, map, favorSpell, starsAreRight, starsAreWrong)) / DIVIDER_HUMAN;
+            float value =
+                (sacrifice.MarketValue + SacrificeBonus(sacrifice, map, favorSpell, starsAreRight, starsAreWrong)) /
+                DIVIDER_HUMAN;
             bool perfect = false;
             bool sacrificialDagger = false;
-            value += CultUtility.CongregationBonus(tracker.lastUsedAltar.SacrificeData.Congregation, this, out perfect, out sacrificialDagger);
+            value += CultUtility.CongregationBonus(tracker.lastUsedAltar.SacrificeData.Congregation, this, out perfect,
+                out sacrificialDagger);
             Cthulhu.Utility.DebugReport("Sacrifice Value: " + value.ToString());
             AffectFavor(value);
         }
+
         public void ReceiveWorship(Pawn preacher)
         {
             int preacherSoc = preacher.skills.GetSkill(SkillDefOf.Social).Level;
-            List<Pawn> congregation = CultTracker.Get.PlayerCult.members; //preacher.Map.GetComponent<MapComponent_LocalCultTracker>().LocalCultMembers;
+            List<Pawn>
+                congregation =
+                    CultTracker.Get.PlayerCult
+                        .members; //preacher.Map.GetComponent<MapComponent_LocalCultTracker>().LocalCultMembers;
             if (preacher == null) Log.Error("Preacher is null.");
             if (congregation == null) Log.Error("Congregation is null");
-            float value = (float)Math.Max(1, (preacherSoc));
-            if (value != 0) value /= (20 * ((float)((int)PlayerTier + 1)));
+            float value = (float) Math.Max(1, (preacherSoc));
+            if (value != 0) value /= (20 * ((float) ((int) PlayerTier + 1)));
             bool perfect = false;
             bool sacrificialDagger = false;
             value += CultUtility.CongregationBonus(congregation, this, out perfect, out sacrificialDagger);
@@ -361,10 +370,23 @@ namespace CultOfCthulhu
 
         public void AffectFavor(float favorChange)
         {
-            float newFavor = (float)Math.Round(favorChange, 2);
+            float newFavor = (float) Math.Round(favorChange, 2);
             float value = this.favor + newFavor;
-            Cthulhu.Utility.DebugReport(this.Label + "'s favor affected: " + newFavor.ToString() + " Total: " + value.ToString());
+            Cthulhu.Utility.DebugReport(this.Label + "'s favor affected: " + newFavor.ToString() + " Total: " +
+                                        value.ToString());
             favor = value;
+        }
+
+        public string Info()
+        {
+            StringBuilder s = new StringBuilder();
+            s.AppendLine("Box_Titles".Translate() + ": " + Def.Titles);
+            s.AppendLine();
+            s.AppendLine("Box_Domains".Translate() + ": " + Def.Domains);
+            s.AppendLine();
+            s.AppendLine("Box_Description".Translate() + ": ");
+            s.AppendLine(Def.DescriptionLong);
+            return s.ToString();
         }
 
         public string GetInfoText()
@@ -398,7 +420,6 @@ namespace CultOfCthulhu
 
         public void DebugDraw()
         {
-
         }
 
     }

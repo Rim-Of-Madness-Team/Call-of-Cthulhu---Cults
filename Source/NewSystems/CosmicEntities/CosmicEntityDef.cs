@@ -5,59 +5,17 @@ using System.Text;
 using Verse;
 using UnityEngine;
 using RimWorld;
-using System.Xml;
 
 namespace CultOfCthulhu
 {
-    public class FavoredThing
-    {
-        public string thingDef;
-        public float favor;
-        public FavoredThing()
-        {
-        }
-        
-        public FavoredThing(string thingDef, float favor)
-        {
-            this.thingDef = thingDef;
-            this.favor = favor;
-        }
-
-        public string Summary
-        {
-            get
-            {
-                return this.favor.ToStringPercent() + " favor " + ((this.thingDef == null) ? "null" : this.thingDef);
-            }
-        }
-
-        public void LoadDataFromXmlCustom(XmlNode xmlRoot)
-        {
-            //DirectXmlCrossRefLoader.RegisterObjectWantsCrossRef(this, "thingDef", xmlRoot.Name);
-            this.thingDef = (string)ParseHelper.FromString(xmlRoot.Name, typeof(string));
-            this.favor = (float)ParseHelper.FromString(xmlRoot.FirstChild.Value, typeof(float));
-        }
-        
-        public override string ToString()
-        {
-            return string.Concat(new object[]
-            {
-            "(",
-            (this.thingDef == null) ? "null" : this.thingDef,
-            " (",
-            this.favor.ToStringPercent(),
-            "% Favor)",
-            ")"
-            });
-        }
-        
-    }
-
-
     public class CosmicEntityDef : ThingDef
     {
         private string symbol;
         private string version = "0";
+        private string portrait = "";
+        private string titles = "";
+        private string domains = "";
+        private string descriptionLong = "";
 
         public List<IncidentDef> tier1SpellDefs = new List<IncidentDef>();
         public List<IncidentDef> tier2SpellDefs = new List<IncidentDef>();
@@ -73,6 +31,11 @@ namespace CultOfCthulhu
 
         [Unsaved]
         private Texture2D symbolTex;
+
+        public string Portrait => portrait;
+        public string Domains => domains;
+        public string DescriptionLong => descriptionLong;
+        public string Titles => titles;
 
         public Texture2D Symbol
         {

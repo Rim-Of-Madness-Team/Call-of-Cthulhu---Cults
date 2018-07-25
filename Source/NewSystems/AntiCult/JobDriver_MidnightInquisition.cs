@@ -25,7 +25,7 @@ namespace CultOfCthulhu
 {
     public class JobDriver_MidnightInquisition : JobDriver
     {
-        public override bool TryMakePreToilReservations()
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return true;
         }

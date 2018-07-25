@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CallOfCthulhu;
+using Harmony;
 using UnityEngine;
 using Verse;
 
@@ -401,6 +403,22 @@ namespace CultOfCthulhu
             OfferingDeity = 1,
             SacrificeDeity = 2
         }
+        
+        public static bool DeityInfoCardButton(float x, float y, CosmicEntity entity)
+        {
+            bool result;
+            if ((bool)AccessTools.Method(type: typeof(Widgets), name: "InfoCardButtonWorker").Invoke(obj: null, parameters: new object[] {x, y}))
+            {
+                Find.WindowStack.Add(new Dialog_CosmicEntityInfoBox(entity));
+                result = true;
+            }
+            else
+            {
+                result = false;
+            }
+            return result;
+        }
+        
         public static void OpenDeitySelectMenu(Building_SacrificialAltar altar, DeityType deityType)
         {
             List<FloatMenuOption> list = new List<FloatMenuOption>();
@@ -433,7 +451,8 @@ namespace CultOfCthulhu
                             break;
                     }
                 };
-                list.Add(new FloatMenuOption(localDeity.LabelCap, action, MenuOptionPriority.Default, null, null, 0f, null));
+                Func<Rect, bool> extraPartOnGUI = (Rect rect) => DeityInfoCardButton(rect.x + 5f, rect.y + (rect.height - 24f) / 2f, current);
+                list.Add(new FloatMenuOption(localDeity.LabelCap, action, MenuOptionPriority.Default, null, null, 29f, extraPartOnGUI));
             }
             Find.WindowStack.Add(new FloatMenu(list));
         }

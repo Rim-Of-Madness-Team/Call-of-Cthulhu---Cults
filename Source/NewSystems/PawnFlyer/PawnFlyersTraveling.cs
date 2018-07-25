@@ -318,7 +318,7 @@ namespace CultOfCthulhu
             {
                 Cthulhu.Utility.DebugReport("PawnFlyerIncoming Generation Started");
                 IntVec3 c;
-                DropCellFinder.TryFindDropSpotNear(intVec, map, out c, false, true, false);
+                DropCellFinder.TryFindDropSpotNear(intVec, map, out c, false, true);
                 PawnFlyersIncoming pawnFlyerIncoming =
                     (PawnFlyersIncoming) ThingMaker.MakeThing(PawnFlyerDef.incomingDef, null);
                 pawnFlyerIncoming.pawnFlyer = this.pawnFlyer;

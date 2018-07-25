@@ -77,10 +77,8 @@ namespace CultOfCthulhu
             float result = 0;
             float bigMod = Rand.Range(0.2f, 0.25f);
             float smallMod = Rand.Range(0.05f, 0.1f);
-            if (pawn == null) return result;
-            if (pawn.story == null) return result;
-            if (pawn.story.adulthood == null) return result;
-            if (pawn.story.childhood == null) return result;
+            if (pawn?.story?.adulthood == null || 
+                pawn?.story?.childhood == null) return result;
             string adultStory = pawn.story.adulthood.FullDescriptionFor(pawn);
             string childStory = pawn.story.childhood.FullDescriptionFor(pawn);
 
@@ -90,13 +88,7 @@ namespace CultOfCthulhu
             //         I do eat human flesh.
             //         I like to kill.
             //         I don't care about others.
-            foreach (Trait trait in pawn.story.traits.allTraits)
-            {
-                foreach (TraitDef def in immoralistTraits)
-                {
-                    if (trait.def == def) result += bigMod;
-                }
-            }
+            result = (from trait in pawn.story.traits.allTraits from def in immoralistTraits where trait.def == def select bigMod).Sum();
             //Cult inclined.
             //          Midworlders are more open to superstition.
             //          Abandoned children, looking for 'family.'

@@ -10,7 +10,7 @@ namespace CultOfCthulhu
 {
     public class JobDriver_PruneAndRepair : JobDriver
     {
-        public override bool TryMakePreToilReservations()
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return true;
         }

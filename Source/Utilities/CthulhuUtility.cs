@@ -44,7 +44,6 @@ namespace Cthulhu
         public const float Extreme = 0.95f;
     }
 
-    [StaticConstructorOnStartup]
     public static class Utility
     {
         public enum SanLossSev { None = 0, Hidden, Initial, Minor, Major, Extreme };
@@ -320,9 +319,9 @@ namespace Cthulhu
             CellFinder.TryFindRandomCellNear(nearLoc, map, maxDist, delegate (IntVec3 x)
             {
                 ///Check if the entire area is safe based on the size of the object definition.
-                foreach (IntVec3 current in GenAdj.OccupiedRect(x, Rot4.North, new IntVec2(def.size.x + 2, def.size.z + 2)))
+                foreach (IntVec3 current in GenAdj.OccupiedRect(x, Rot4.North, new IntVec2(def.size.x, def.size.z)))
                 {
-                    if (!current.InBounds(map) || current.Fogged(map) || !current.Standable(map) || (current.Roofed(map) && current.GetRoof(map).isThickRoof))
+                    if (!current.InBounds(map) || current.Fogged(map) || !current.Standable(map) || (current.Roofed(map)))
                     {
                         return false;
                     }

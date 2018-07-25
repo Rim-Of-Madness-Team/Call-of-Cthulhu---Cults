@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+<!-- 7/21/18 -->
+<Cults_Discovered>Entity Discovered</Cults_Discovered>
+<Box_Titles>&lt;b&gt;Titles&lt;/b&gt;</Box_Titles>
+<Box_Domains>&lt;b&gt;Domains&lt;/b&gt;</Box_Domains>
+<Box_Description>&lt;b&gt;Description&lt;/b&gt;</Box_Description>
+<Cults_DiscoveredDeityMessage>{0} was discovered amongst the strange symbols.</Cults_DiscoveredDeityMessage>
 
 <!-- 3/10/18 -->
 <CommandCultReport>View Last Report</CommandCultReport>

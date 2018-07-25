@@ -24,6 +24,9 @@
         <e p="CosmicEntities" t="Include">
           <e p="CosmicEntity.cs" t="Include" />
           <e p="CosmicEntityDef.cs" t="Include" />
+          <e p="DeityTracker.cs" t="Include" />
+          <e p="Dialog_CosmicEntityInfoBox.cs" t="Include" />
+          <e p="FavoredThing.cs" t="Include" />
           <e p="WorldComponent_CosmicDeities.cs" t="Include" />
         </e>
         <e p="Cult" t="Include">

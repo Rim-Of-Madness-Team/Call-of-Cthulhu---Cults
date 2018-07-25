@@ -5,9 +5,9 @@
 	  <category>Misc</category>
 	  <baseChance>0</baseChance>
 	  <letterDef>Cults_StandardMessage</letterDef>
-		<targetTypes>
+		<targetTags>
           <li>Map_PlayerHome</li>
-        </targetTypes>
+        </targetTags>
 	</IncidentDef>
 
 	<!-- Ideal Spells -->

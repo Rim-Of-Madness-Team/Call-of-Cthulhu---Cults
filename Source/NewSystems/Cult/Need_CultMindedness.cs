@@ -110,7 +110,7 @@ namespace CultOfCthulhu
             if (temp > 0.99f) temp = 0.99f;
             if (temp < 0.01f) temp = 0.01f;
 
-            if (this.pawn.Faction.def.defName == "ROM_TheAgency")
+            if (this.pawn?.Faction?.def?.defName == "ROM_TheAgency")
             {
                 Cthulhu.Utility.DebugReport(this.pawn.Name.ToStringFull + " is a member of the agency. Cult levels set to 1%.");
                 temp = 0.01f;
