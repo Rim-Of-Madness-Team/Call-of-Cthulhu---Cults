@@ -15,8 +15,7 @@
       <LeatherAmount>20</LeatherAmount>	  
     </statBases>
     <race>
-      <bloodDef>Filth_BloodInsect</bloodDef>	
-      <meatColor>(160,150,140)</meatColor>
+      <bloodDef>Filth_BloodInsect</bloodDef>
       <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
       <useMeatFrom>Megaspider</useMeatFrom>	  
       <manhunterOnDamageChance>1</manhunterOnDamageChance>
