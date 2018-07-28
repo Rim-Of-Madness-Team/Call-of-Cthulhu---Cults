@@ -8,7 +8,8 @@
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <backstoryCategory>Civil</backstoryCategory>
     <apparelTags>
-      <li>Outlander</li>
+      <li>IndustrialBasic</li>
+      <li>IndustrialAdvanced</li>
     </apparelTags>		
   </PawnKindDef>
   
@@ -24,9 +25,6 @@
       <min>0.2</min>
       <max>2.0</max>
     </gearHealthRange>
-	<apparelTags>
-		<li>Outlander</li>
-	</apparelTags>
 	<apparelRequired>
       <li>Apparel_SailorsCap</li>
       <li>Apparel_SailorUniform</li>
