@@ -124,7 +124,7 @@ namespace CultOfCthulhu
 
         public override void PostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
         {
-            if (dinfo.Def.externalViolence && dinfo.Instigator != null)
+            if (dinfo.Def.ExternalViolenceFor(dinfo.IntendedTarget) && dinfo.Instigator != null)
             {
                 if (this.ticksToSpawnInitialPawns > 0)
                 {
