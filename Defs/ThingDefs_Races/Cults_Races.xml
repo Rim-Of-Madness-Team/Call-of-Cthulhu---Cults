@@ -174,7 +174,7 @@
     <combatPower>50</combatPower>
     <defaultFactionType>AncientsHostile</defaultFactionType>
     <baseRecruitDifficulty>0.99</baseRecruitDifficulty>
-    <backstoryCategory>Slave</backstoryCategory>
+    <backstoryCategories><li>Slave</li></backstoryCategories>
     <itemQuality>Shoddy</itemQuality>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
     <maxGenerationAge>60</maxGenerationAge>

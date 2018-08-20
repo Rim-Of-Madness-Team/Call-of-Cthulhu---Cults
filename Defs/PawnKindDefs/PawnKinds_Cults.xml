@@ -6,7 +6,7 @@
     <chemicalAddictionChance>0.045</chemicalAddictionChance>
     <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-    <backstoryCategory>Civil</backstoryCategory>
+    <backstoryCategories><li>Civil</li></backstoryCategories>
     <apparelTags>
       <li>IndustrialBasic</li>
       <li>IndustrialAdvanced</li>

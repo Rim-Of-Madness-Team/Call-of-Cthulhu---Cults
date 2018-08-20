@@ -14,6 +14,7 @@
 	  <MeatAmount>25</MeatAmount>
       <LeatherAmount>20</LeatherAmount>	  
     </statBases>
+	  <techLevel>Animal</techLevel>
     <race>
       <bloodDef>Filth_BloodInsect</bloodDef>
       <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>

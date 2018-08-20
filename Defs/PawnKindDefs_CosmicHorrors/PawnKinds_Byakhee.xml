@@ -114,6 +114,7 @@
         <linkedBodyPartsGroup>Cults_Wings</linkedBodyPartsGroup>
       </li>
     </tools>
+	  <techLevel>Animal</techLevel>
     <race>
 	  <trainability>Advanced</trainability>
       <wildness>0.95</wildness>	

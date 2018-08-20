@@ -64,7 +64,7 @@
     </maxPawnCostPerTotalPointsCurve>
     <fixedName>Sailor</fixedName>
     <techLevel>Neolithic</techLevel>
-    <backstoryCategory>Civil</backstoryCategory>
+    <backstoryCategories><li>Civil</li></backstoryCategories>
     <hairTags>
       <li>Urban</li>
     </hairTags>

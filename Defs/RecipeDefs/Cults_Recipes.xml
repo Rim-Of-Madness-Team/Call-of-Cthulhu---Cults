@@ -3,7 +3,7 @@
 
   <RecipeDef Name="OfferingOfPlants_Meagre">
     <defName>OfferingOfPlants_Meagre</defName>
-    <label>offering</label>
+    <label>offering of plants (meagre)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -37,7 +37,7 @@
 
   <RecipeDef Name="OfferingOfPlants_Decent">
     <defName>OfferingOfPlants_Decent</defName>
-    <label>offering</label>
+    <label>offering of plants (decent)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -71,7 +71,7 @@
 
   <RecipeDef Name="OfferingOfPlants_Sizable">
     <defName>OfferingOfPlants_Sizable</defName>
-    <label>offering</label>
+    <label>offering of plants (sizable)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -105,7 +105,7 @@
 
   <RecipeDef Name="OfferingOfPlants_Worthy">
     <defName>OfferingOfPlants_Worthy</defName>
-    <label>offering</label>
+    <label>offering of plants (worthy)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -139,7 +139,7 @@
 
   <RecipeDef Name="OfferingOfPlants_Impressive">
     <defName>OfferingOfPlants_Impressive</defName>
-    <label>offering</label>
+    <label>offering of plants (impressive)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -173,7 +173,7 @@
 
   <RecipeDef Name="OfferingOfMeat_Meagre">
     <defName>OfferingOfMeat_Meagre</defName>
-    <label>offering</label>
+    <label>offering of meat (meagre)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -207,7 +207,7 @@
   
   <RecipeDef Name="OfferingOfMeat_Decent">
     <defName>OfferingOfMeat_Decent</defName>
-    <label>offering</label>
+    <label>offering of meat (decent)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -241,7 +241,7 @@
   
   <RecipeDef Name="OfferingOfMeat_Sizable">
     <defName>OfferingOfMeat_Sizable</defName>
-    <label>offering</label>
+    <label>offering of meat (sizable)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -275,7 +275,7 @@
   
   <RecipeDef Name="OfferingOfMeat_Worthy">
     <defName>OfferingOfMeat_Worthy</defName>
-    <label>offering</label>
+    <label>offering of meat (worthy)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -309,7 +309,7 @@
   
   <RecipeDef Name="OfferingOfMeat_Impressive">
     <defName>OfferingOfMeat_Impressive</defName>
-    <label>offering</label>
+    <label>offering of meat (impressive)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -343,7 +343,7 @@
   
   <RecipeDef Name="OfferingOfMeals_Meagre">
     <defName>OfferingOfMeals_Meagre</defName>
-    <label>offering</label>
+    <label>offering of meals (meagre)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -377,7 +377,7 @@
   
   <RecipeDef Name="OfferingOfMeals_Decent">
     <defName>OfferingOfMeals_Decent</defName>
-    <label>offering</label>
+    <label>offering of meals (decent)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -411,7 +411,7 @@
   
   <RecipeDef Name="OfferingOfMeals_Sizable">
     <defName>OfferingOfMeals_Sizable</defName>
-    <label>offering</label>
+    <label>offering of meals (sizable)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -445,7 +445,7 @@
   
   <RecipeDef Name="OfferingOfMeals_Worthy">
     <defName>OfferingOfMeals_Worthy</defName>
-    <label>offering</label>
+    <label>offering of meals (worthy)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
@@ -479,7 +479,7 @@
   
   <RecipeDef Name="OfferingOfMeals_Impressive">
     <defName>OfferingOfMeals_Impressive</defName>
-    <label>offering</label>
+    <label>offering of meals (impressive)</label>
     <description>.</description>
     <jobString>Offering.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
