@@ -8,18 +8,19 @@ using UnityEngine;
 using Verse;
 
 namespace Cthulhu
-{ 
+{
     [StaticConstructorOnStartup]
     public class MapComponentInjectorBehavior : MonoBehaviour
     {
-
         static MapComponentInjectorBehavior()
         {
             GameObject initializer = new UnityEngine.GameObject("JecrellMapCompInjector");
             initializer.AddComponent<MapComponentInjectorBehavior>();
-            UnityEngine.Object.DontDestroyOnLoad((UnityEngine.Object)initializer);
+            UnityEngine.Object.DontDestroyOnLoad((UnityEngine.Object) initializer);
             mapComponents = new List<Type>();
-            typeof(MapComponentInjectorBehavior).Assembly.GetTypes().Where((Type t) => t.IsClass && t.IsSubclassOf(typeof(MapComponent))).ToList().ForEach((Type t) => mapComponents.Add(t));
+            typeof(MapComponentInjectorBehavior).Assembly.GetTypes()
+                .Where((Type t) => t.IsClass && t.IsSubclassOf(typeof(MapComponent))).ToList()
+                .ForEach((Type t) => mapComponents.Add(t));
             //mapComponents.ForEach((Type t) => Log.Message(t.Name + "found for MapComponentInjector"));
         }
 
@@ -36,7 +37,6 @@ namespace Cthulhu
                 {
                     if (Find.TickManager.TicksGame > lastTicks + 10)
                     {
-
                         lastTicks = Find.TickManager.TicksGame;
                         reinjectTime -= Time.fixedDeltaTime;
                         if (reinjectTime <= 0)
@@ -44,15 +44,16 @@ namespace Cthulhu
                             reinjectTime = 0;
                             if (Find.Maps != null)
                             {
-                                Find.Maps.ForEach(delegate (Map map)
+                                Find.Maps.ForEach(delegate(Map map)
                                 {
-                                    if(map.components != null)
+                                    if (map.components != null)
                                     {
-                                        mapComponents.ForEach(delegate (Type t)
+                                        mapComponents.ForEach(delegate(Type t)
                                         {
                                             if (!map.components.Any((MapComponent mp) => mp.GetType() == t))
                                             {
-                                                MapComponent comp = (MapComponent)typeof(MapComponent).GetConstructor(Type.EmptyTypes).Invoke(new object[] { map });
+                                                MapComponent comp = (MapComponent) typeof(MapComponent)
+                                                    .GetConstructor(Type.EmptyTypes).Invoke(new object[] {map});
                                                 map.components.Add(comp);
                                             }
                                         });
@@ -63,8 +64,9 @@ namespace Cthulhu
                     }
                 }
             }
-            catch (Exception) { }
-
+            catch (Exception)
+            {
+            }
         }
     }
 }

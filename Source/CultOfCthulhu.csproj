@@ -221,7 +221,6 @@
     <Compile Include="UI\ITab_AltarSacrificesCardUtility.cs" />
     <Compile Include="UI\ITab_AltarWorship.cs" />
     <Compile Include="UI\ITab_AltarWorshipCardUtility.cs" />
-    <Compile Include="UtilityWorldObject.cs" />
     <Compile Include="NewSystems\CosmicEntities\WorldComponent_CosmicDeities.cs" />
     <Compile Include="NewSystems\Cult\WorldComponent_GlobalCultTracker.cs" />
     <Compile Include="NewSystems\Spells\TableOfFun\WorkGiver_PruneAndRepair.cs" />

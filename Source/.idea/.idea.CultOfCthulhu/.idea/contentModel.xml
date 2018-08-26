@@ -227,7 +227,6 @@
         <e p="CthulhuUtility.cs" t="Include" />
         <e p="CultUtility.cs" t="Include" />
       </e>
-      <e p="UtilityWorldObject.cs" t="Include" />
     </e>
     <e p="C:\Users\mattw\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_CultOfCthulhu.-1143512431.00" t="ExcludeRecursive" />
   </component>

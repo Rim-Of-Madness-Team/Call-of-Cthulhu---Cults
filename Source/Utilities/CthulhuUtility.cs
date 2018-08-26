@@ -32,7 +32,7 @@ namespace Cthulhu
     {
         public static string main = "Cthulhu";
         public static string mod = "Cults";
-        public static string Version => Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        //public static string Version => Assembly.GetExecutingAssembly().GetName().Version.ToString();
     }
 
     public static class SanityLossSeverity
@@ -724,7 +724,7 @@ namespace Cthulhu
             return;
         }
 
-        public static string Prefix => ModProps.main + " :: " + ModProps.mod + " " + ModProps.Version + " :: ";
+        public static string Prefix => ModProps.main + " :: " + ModProps.mod + " :: ";
 
         public static void DebugReport(string x)
         {

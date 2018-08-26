@@ -25,7 +25,7 @@
 		<requiredCapacities>
 			<li>Manipulation</li>
 		</requiredCapacities>
-		<canBeDoneByNonColonists>true</canBeDoneByNonColonists>
+		<nonColonistsCanDo>true</nonColonistsCanDo>
 	</WorkGiverDef>
 		
 		
@@ -43,7 +43,7 @@
 		<requiredCapacities>
 			<li>Manipulation</li>
 		</requiredCapacities>
-		<canBeDoneByNonColonists>false</canBeDoneByNonColonists>
+		<nonColonistsCanDo>false</nonColonistsCanDo>
 	</WorkGiverDef>
 	
 	
@@ -61,7 +61,7 @@
 		<requiredCapacities>
 			<li>Manipulation</li>
 		</requiredCapacities>
-		<canBeDoneByNonColonists>false</canBeDoneByNonColonists>
+		<nonColonistsCanDo>false</nonColonistsCanDo>
 	</WorkGiverDef>
 	
 </Defs>
