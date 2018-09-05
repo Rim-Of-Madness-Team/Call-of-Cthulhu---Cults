@@ -107,7 +107,7 @@
   
   
   <LetterLabelCultistJoin>신도 합류</LetterLabelCultistJoin>
-  <CultistJoin>NAME(이)라는 이름의 {0}(이)가 정착지에 합류중입니다. HECAP 당신의 종교에 마음을 빼앗겼습니다.</CultistJoin>
+  <CultistJoin>[PAWN_nameDef](이)라는 이름의 {0}(이)가 정착지에 합류중입니다. [PAWN_pronoun] 당신의 종교에 마음을 빼앗겼습니다.</CultistJoin>
 
 
   

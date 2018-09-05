@@ -211,7 +211,7 @@
 
 
   <LetterLabelCultistJoin>Cultist joins</LetterLabelCultistJoin>
-  <CultistJoin>A {0} named NAME has arrived and is joining the colony. HECAP is a {1} obsessed in joining your new cult.</CultistJoin>
+  <CultistJoin>A {0} named [PAWN_nameDef] has arrived and is joining the colony. [PAWN_pronoun] is a {1} obsessed in joining your new cult.</CultistJoin>
 
 
 

@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\Harmony1091\0Harmony.dll</HintPath>
+      <HintPath>..\..\JecsTools\Assemblies\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="AbilityUser">
       <HintPath>..\..\JecsTools\Assemblies\AbilityUser.dll</HintPath>
@@ -68,6 +68,14 @@
     <Compile Include="NewSystems\Psionics\CompPsionicUserExample.cs" />
     <Compile Include="NewSystems\Sacrifice\Bill_Sacrifice.cs" />
     <Compile Include="NewSystems\SanityLoss\Need_Sanity.cs" />
+    <Compile Include="NewSystems\Spells\Bast\Deathworkers\DeathActionWorker_BastGuardian.cs" />
+    <Compile Include="NewSystems\Spells\Bast\FelineAspectProperties.cs" />
+    <Compile Include="NewSystems\Spells\Bast\GuardianProperties.cs" />
+    <Compile Include="NewSystems\Spells\Bast\SpellWorker_FelineAspect.cs" />
+    <Compile Include="NewSystems\Spells\Bast\SpellWorker_Guardian.cs" />
+    <Compile Include="NewSystems\Spells\Bast\SpellWorker_Inspiration.cs" />
+    <Compile Include="NewSystems\Spells\Bast\SpellWorker_PassageToAaru.cs" />
+    <Compile Include="NewSystems\Spells\Bast\SpellWorker_Sanctuary.cs" />
     <Compile Include="NewSystems\Spells\ShubNiggurath\Hediff_Transmogrified.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\Building_TotemSleep.cs" />
     <Compile Include="NewSystems\Spells\Tsathoggua\CompTargetEffect_ElixerOfPower.cs" />

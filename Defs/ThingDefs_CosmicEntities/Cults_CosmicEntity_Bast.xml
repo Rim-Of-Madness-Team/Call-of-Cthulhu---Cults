@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<CultOfCthulhu.CosmicEntityDef>
+		<defName>Entity_Bast</defName>
+		<thingClass>CultOfCthulhu.CosmicEntity</thingClass>
+		<label>Bast</label>
+		<version>1</version>
+		<description>The Cat God is on the prowl.</description>
+		<symbol>Mote/Symbols/Bast</symbol>
+		<tier1SpellDefs>
+			<li>Cults_BastSpellFavor</li>
+			<li>Cults_BastSpellInspiration</li>
+			<li>Cults_BastSpellFelineAspect</li>
+		</tier1SpellDefs>
+		<tier2SpellDefs>
+			<li>Cults_BastSpellSummonGuardian</li>
+		</tier2SpellDefs>
+		<tier3SpellDefs>
+			<li>Cults_BastSpellSanctuary</li>
+		</tier3SpellDefs>
+		<finalSpellDef>Cults_BastSpellPassageToAaru</finalSpellDef>
+		<favoredApparel>
+			<li>Apparel_CultistHood</li>
+		</favoredApparel>
+	</CultOfCthulhu.CosmicEntityDef>
+</Defs>

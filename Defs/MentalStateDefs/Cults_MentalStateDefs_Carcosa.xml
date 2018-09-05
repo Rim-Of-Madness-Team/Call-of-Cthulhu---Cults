@@ -15,9 +15,9 @@
     <moodRecoveryThought>Cults_SawCarcosa</moodRecoveryThought>
     <blockNormalThoughts>false</blockNormalThoughts>
     <nameColor>(1.0, 1.0, 0.0)</nameColor>
-    <recoveryMessage>{0} has awoken from HIS deep sleep.</recoveryMessage>
+    <recoveryMessage>{0} has awoken from [PAWN_possessive] deep sleep.</recoveryMessage>
     <beginLetterLabel>deep sleep</beginLetterLabel>
-    <beginLetter>{0} is visiting the lost city of Carcosa in HIS dreams.</beginLetter>
+    <beginLetter>{0} is visiting the lost city of Carcosa in [PAWN_possessive] dreams.</beginLetter>
     <beginLetterDef>ThreatSmall</beginLetterDef>
     <baseInspectLine>Mental state: Deep Sleep</baseInspectLine>
     <allowBeatfire>false</allowBeatfire>

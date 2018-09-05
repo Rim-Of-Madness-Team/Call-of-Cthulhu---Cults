@@ -7,7 +7,7 @@
     <degreeDatas>
       <li>
         <label>Oathtaker</label>
-        <description>NAME has made an unbreakable contract. HECAP will return from the dead to serve the King in Yellow that rules the lost city of Carcosa.</description>
+        <description>[PAWN_nameDef] has made an unbreakable contract. [PAWN_pronoun] will return from the dead to serve the King in Yellow that rules the lost city of Carcosa.</description>
       </li>
     </degreeDatas>
   </TraitDef>
@@ -18,7 +18,7 @@
     <degreeDatas>
       <li>
         <label>Reanimated</label>
-        <description>NAME has risen from the dead to serve once again.</description>
+        <description>[PAWN_nameDef] has risen from the dead to serve once again.</description>
       </li>
     </degreeDatas>
   </TraitDef>

@@ -205,7 +205,7 @@
 
 
   <LetterLabelCultistJoin>Культист присоединяется</LetterLabelCultistJoin>
-  <CultistJoin>{0} с именем NAME прибыл и присоединился к колонии. HECAP - это {1}, одержимый присоединением к вашему новому культу.</CultistJoin>
+  <CultistJoin>{0} с именем [PAWN_nameDef] прибыл и присоединился к колонии. [PAWN_pronoun] - это {1}, одержимый присоединением к вашему новому культу.</CultistJoin>
 
 
 

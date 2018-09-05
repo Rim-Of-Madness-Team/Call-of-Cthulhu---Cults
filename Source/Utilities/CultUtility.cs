@@ -134,32 +134,39 @@ namespace CultOfCthulhu
 
         public static bool TrySpawnWalkInCultist(Map map, CultistType type = CultistType.None, bool showMessage = true)
         {
-            if (map == null) map = Find.CurrentMap;
-            if (map == null) return false;
-            IntVec3 loc;
-            if (!CellFinder.TryFindRandomEdgeCellWith(c => map.reachability.CanReachColony(c), map,
-                CellFinder.EdgeRoadChance_Neutral, out loc))
+            try
+            {
+                if (map == null) map = Find.CurrentMap;
+                if (map == null) return false;
+                IntVec3 loc;
+                if (!CellFinder.TryFindRandomEdgeCellWith(c => map.reachability.CanReachColony(c), map,
+                    CellFinder.EdgeRoadChance_Neutral, out loc))
+                {
+                    return false;
+                }
+                Pawn p = null;
+                if (!TryGenerateCultist(out p, map, type))
+                {
+                    //Log.Messag("Unable to generate cultist");
+                    return false;
+                }
+                if (p == null)
+                {
+                    //Log.Messag("Pawn is null");
+                    return false;
+                }
+                GenSpawn.Spawn(p, loc, map);
+                string text = "CultistJoin".Translate(p.kindDef.label, p.story.adulthood.title.ToLower());
+                text = text.AdjustedFor(p);
+                string label = "LetterLabelCultistJoin".Translate();
+                if (showMessage) Find.LetterStack.ReceiveLetter(label, text, CultsDefOf.Cults_StandardMessage);
+                PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref text, ref label, p);
+                return true;
+            }
+            catch (Exception e)
             {
                 return false;
             }
-            Pawn p = null;
-            if (!TryGenerateCultist(out p, map, type))
-            {
-                //Log.Messag("Unable to generate cultist");
-                return false;
-            }
-            if (p == null)
-            {
-                //Log.Messag("Pawn is null");
-                return false;
-            }
-            GenSpawn.Spawn(p, loc, map);
-            string text = "CultistJoin".Translate(p.kindDef.label, p.story.adulthood.title.ToLower());
-            text = text.AdjustedFor(p);
-            string label = "LetterLabelCultistJoin".Translate();
-            if (showMessage) Find.LetterStack.ReceiveLetter(label, text, CultsDefOf.Cults_StandardMessage);
-            PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref text, ref label, p);
-            return true;
         }
 
         public static bool TryGenerateCultist(out Pawn cultist, Map map, CultistType type = CultistType.None)

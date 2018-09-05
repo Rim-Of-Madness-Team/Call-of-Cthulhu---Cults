@@ -111,6 +111,18 @@
           <e p="Need_Sanity.cs" t="Include" />
         </e>
         <e p="Spells" t="Include">
+          <e p="Bast" t="Include">
+            <e p="Deathworkers" t="Include">
+              <e p="DeathActionWorker_BastGuardian.cs" t="Include" />
+            </e>
+            <e p="FelineAspectProperties.cs" t="Include" />
+            <e p="GuardianProperties.cs" t="Include" />
+            <e p="SpellWorker_FelineAspect.cs" t="Include" />
+            <e p="SpellWorker_Guardian.cs" t="Include" />
+            <e p="SpellWorker_Inspiration.cs" t="Include" />
+            <e p="SpellWorker_PassageToAaru.cs" t="Include" />
+            <e p="SpellWorker_Sanctuary.cs" t="Include" />
+          </e>
           <e p="Cthulhu" t="Include">
             <e p="SpellWorker_AspectOfCthulhu.cs" t="Include" />
             <e p="SpellWorker_Favor.cs" t="Include" />

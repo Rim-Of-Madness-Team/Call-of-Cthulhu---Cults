@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using CallOfCthulhu;
 
 // ----------------------------------------------------------------------
 // These are RimWorld-specific usings. Activate/Deactivate what you need:
@@ -20,6 +21,8 @@ using Verse.Noise;       // Needed when you do something with Noises
 using RimWorld;            // RimWorld specific functions are found here (like 'Building_Battery')
 using RimWorld.Planet;   // RimWorld specific functions for world creation
 using CultOfCthulhu;
+using Harmony;
+
 //using RimWorld.SquadAI;  // RimWorld specific functions for squad brains 
 
 namespace CultOfCthulhu
@@ -232,9 +235,25 @@ namespace CultOfCthulhu
                     altar.tempCurrentWorshipDeity = localDeity;
                     //altar.tempCurrentSpell = null;
                 };
-                list.Add(new FloatMenuOption(localDeity.LabelCap, action, MenuOptionPriority.Default, null, null, 0f, null));
+                Func<Rect, bool> extraPartOnGUI = (Rect rect) => DeityInfoCardButton(rect.x + 5f, rect.y + (rect.height - 24f) / 2f, current);
+                list.Add(new FloatMenuOption(localDeity.LabelCap, action, MenuOptionPriority.Default, null, null, 29f, extraPartOnGUI));
             }
             Find.WindowStack.Add(new FloatMenu(list));
+        }
+        
+        public static bool DeityInfoCardButton(float x, float y, CosmicEntity entity)
+        {
+            bool result;
+            if ((bool)AccessTools.Method(type: typeof(Widgets), name: "InfoCardButtonWorker").Invoke(obj: null, parameters: new object[] {x, y}))
+            {
+                Find.WindowStack.Add(new Dialog_CosmicEntityInfoBox(entity));
+                result = true;
+            }
+            else
+            {
+                result = false;
+            }
+            return result;
         }
 
     }

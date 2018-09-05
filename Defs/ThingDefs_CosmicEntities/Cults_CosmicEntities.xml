@@ -179,4 +179,33 @@
 	</favoredApparel>
 </CultOfCthulhu.CosmicEntityDef>
 
+<CultOfCthulhu.CosmicEntityDef>
+	<defName>Entity_Bast</defName>
+	<thingClass>CultOfCthulhu.CosmicEntity</thingClass>
+	<label>Bast</label>
+	<version>1</version>
+	<titles>Pasht, Bastet, Bubaste, Ubaste, Goddess of Cats, Daughter of Re, Chewer of Corpses</titles>
+	<portrait>Portraits/bast</portrait>
+	<domains>Cats, Egypt, Ghouls</domains>
+	<description>The Cat God is on the prowl.</description>
+	<descriptionLong>Bast is the Egyptian goddess of cats. All cats of the world follow the commands of Bast, and some say her influence has reached the far flung worlds of the Rim. In written texts, She is often affiliated with Sekhmet, the warrior goddess, as well as Mut, goddess of motherhood. Saracen sorcerers tell tales of ghouls that also worship Her and call Her the “the Chewer of Corpses”.</descriptionLong>
+	<symbol>Mote/Symbols/Bast</symbol>
+	<tier1SpellDefs>
+		<li>Cults_BastSpellFavor</li>
+		<li>Cults_BastSpellInspiration</li>
+		<li>Cults_BastSpellFelineAspect</li>
+	</tier1SpellDefs>
+	<tier2SpellDefs>
+		<li>Cults_BastSpellSummonGuardian</li>
+	</tier2SpellDefs>
+	<tier3SpellDefs>
+		<li>Cults_BastSpellSanctuary</li>
+	</tier3SpellDefs>
+	<finalSpellDef>Cults_BastSpellPassageToAaru</finalSpellDef>
+	<favoredApparel>
+		<li>Apparel_CultistHood</li>
+	</favoredApparel>
+</CultOfCthulhu.CosmicEntityDef>
+
+
 </Defs>
