@@ -2,7 +2,6 @@
 <Defs>
 
 
-  <!--========== Chthonian ============-->
   <ThingDef ParentName="LeatherBase">
     <defName>Cults_GuardianBast_Fur</defName>
     <description>Furry pelt of a guardian of Bast. Luxurious and extraordinarily durable. Used for the highest-quality crafts for its insulation and strength.</description>
@@ -92,7 +91,7 @@
 				<power>15</power>
 				<cooldownTime>1.65</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-				<commonality>0.2</commonality>
+				<chanceFactor>0.2</chanceFactor>
 			</li>
 		</tools>
 		<race>
@@ -145,7 +144,7 @@
 		<race>GuardianBast</race>
 		<combatPower>300</combatPower>
 				<canArriveManhunter>false</canArriveManhunter>
-    <wildSpawn_spawnWild>false</wildSpawn_spawnWild>
+		<ecoSystemWeight>0</ecoSystemWeight>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
