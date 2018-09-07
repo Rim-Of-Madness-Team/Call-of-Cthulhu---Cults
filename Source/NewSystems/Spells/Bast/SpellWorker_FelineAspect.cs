@@ -48,9 +48,12 @@ namespace BastCult
                     //To hands
                     foreach(BodyPartDef hand in felineProps.handDefs)
                     {
-                        BodyPartRecord record = executioner.RaceProps.body.AllParts.First(part => part.def == hand);
-                        if(record != null)
-                            executioner.health.AddHediff(felineProps.hediffToApplyToHands, record);
+                        List<BodyPartRecord> records = executioner.RaceProps.body.AllParts.FindAll(part => part.def == hand);
+                        if (records?.Count > 0)
+                        {
+                            foreach (var record in records)
+                                executioner.health.AddHediff(felineProps.hediffToApplyToHands, record);                            
+                        }
                     }
                 }
             }

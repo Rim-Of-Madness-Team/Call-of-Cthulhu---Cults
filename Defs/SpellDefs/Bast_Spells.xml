@@ -38,8 +38,7 @@
 				<hediffToApplyToBody>BastCatLikeAspect</hediffToApplyToBody>
 				<hediffToApplyToHands>BastClaws</hediffToApplyToHands>
 				<handDefs>
-					<li>LeftHand</li>
-					<li>RightHand</li>
+					<li>Hand</li>
 				</handDefs>
 			</li>
 		</modExtensions>

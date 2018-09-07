@@ -16,8 +16,7 @@
 			</li>
 		</comps>
 		<addedPartProps>
-			<isBionic>false</isBionic>
-			<isSolid>true</isSolid>
+			<solid>true</solid>
 			<partEfficiency>1.0</partEfficiency>
 		</addedPartProps>
 	</HediffDef>

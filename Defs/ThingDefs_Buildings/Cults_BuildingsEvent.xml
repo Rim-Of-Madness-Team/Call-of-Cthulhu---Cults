@@ -95,6 +95,7 @@
     <label>sunken ship chunk</label>
     <description>A chunk of a naval craft. Can be deconstructed to discover treasures within.</description>
     <category>Building</category>
+	<thingClass>Building</thingClass>
     <graphicData>
       <texPath>Building/Exotic/SunkenShipChunk</texPath>
       <graphicClass>Graphic_Random</graphicClass>

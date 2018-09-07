@@ -239,6 +239,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>Cults_PewLinkable</defName>
     <label>linkable pews</label>
+	<thingClass>Building</thingClass>
     <uiIconPath>Building/SimplePew/pew_menuicon</uiIconPath>
 	<graphicData>
 		<texPath>Building/SimplePew/pewlink</texPath>
@@ -286,6 +287,7 @@
     <label>forbidden knowledge center</label>
     <description>A simplistic table covered in strange symbols, notes, and a tome of forbidden knowledge. Researchers work here to uncover forces beyond. Prolonged usage will result in sanity loss, yet the rewards will be worthwhile.</description>
     <thingClass>CultOfCthulhu.Building_ForbiddenReserachCenter</thingClass>
+	<thingCategories><li>BuildingsMisc</li></thingCategories>
     <size>(3,2)</size>
     <stuffCategories>
       <li>Metallic</li>
@@ -347,6 +349,7 @@
     <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
     <description>A solid surface on which to elevate speeches of worship to extra-cosmic entities.</description>
     <tickerType>Rare</tickerType>
+	<thingCategories><li>BuildingsMisc</li></thingCategories>
     <graphicData>
       <texPath>Building/StandardAltar/StandardAltar</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -416,6 +419,7 @@
     <label>sacrificial altar</label>
     <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
     <description>A solid surface on which to sacrifice to beings both petty and powerful. Specially designed to channel and collect blood.</description>
+	<thingCategories><li>BuildingsMisc</li></thingCategories>
     <tickerType>Rare</tickerType>
     <graphicData>
       <texPath>Building/AnimalAltar/AnimalAltar</texPath>
@@ -486,6 +490,7 @@
     <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
     <description>A solid surface on which to sacrifice to beings both petty and powerful. Specially designed to channel and collect blood.</description>
     <tickerType>Rare</tickerType>
+	<thingCategories><li>BuildingsMisc</li></thingCategories>
     <graphicData>
       <texPath>Building/HumanAltar/HumanAltar</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
