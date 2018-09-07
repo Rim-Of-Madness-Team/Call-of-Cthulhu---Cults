@@ -245,7 +245,6 @@ namespace CultOfCthulhu
         
         public static MentalStateDef FireStartingSpree;
 
-        public static MentalStateDef WanderConfused;
         public static ResearchProjectDef Forbidden_Reports;
     }
 }
