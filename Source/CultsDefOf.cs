@@ -118,8 +118,6 @@ namespace CultOfCthulhu
 
         public static HediffDef Cults_PsionicBrain;
 
-        public static HediffDef Cults_MonstrousBrain;
-
         public static HediffDef Cults_MonstrousBody;
 
         public static HediffDef Cults_TentacleArm;
@@ -131,10 +129,6 @@ namespace CultOfCthulhu
         public static HediffDef Cults_SleepHediff;
 
         // =============== THOUGHTS ===============
-
-        // 1.18.0.0
-        public static ThoughtDef Cults_ObservedNightmareMonolith;
-        public static ThoughtDef Cults_ObservedNightmareMonolithCultist;
 
         // 1.2.2
         public static ThoughtDef Cults_OtherPrisonerWasSacrificed;
@@ -165,8 +159,6 @@ namespace CultOfCthulhu
 
         public static ThoughtDef Cults_ExecutedPet;
 
-        public static ThoughtDef Cults_ExecutedFriend;
-
         public static ThoughtDef Cults_SacrificedFamily;
 
         public static ThoughtDef Cults_SacrificedPet;
@@ -174,8 +166,6 @@ namespace CultOfCthulhu
         public static ThoughtDef Cults_SacrificedFriend;
 
         public static ThoughtDef Cults_SacrificedRival;
-
-        public static ThoughtDef Cults_WitnessedSacrificeBloodlust;
 
         // Worship
 
@@ -227,8 +217,6 @@ namespace CultOfCthulhu
 
         // ============== THINGS ==============
 
-        public static ThingDef Cults_ByakheeRace;
-
         public static ThingDef Cults_WombBetweenWorlds;
 
         public static ThingDef Cults_PlantTreeNightmare;
@@ -252,8 +240,6 @@ namespace CultOfCthulhu
         public static ThingDef BlocksMarble;
 
         public static ThingDef Neutroamine;
-
-        public static ThingDef Jade;
 
         public static PawnKindDef Rat;
         
