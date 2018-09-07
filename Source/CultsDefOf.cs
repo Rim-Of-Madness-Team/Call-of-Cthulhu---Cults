@@ -244,7 +244,7 @@ namespace CultOfCthulhu
         public static PawnKindDef Rat;
         
         public static MentalStateDef FireStartingSpree;
-
+ 
         public static ResearchProjectDef Forbidden_Reports;
     }
 }
