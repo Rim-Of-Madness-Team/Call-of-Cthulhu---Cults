@@ -870,7 +870,7 @@
     <label>cultist hood (cthulhu mask)</label>
     <description>This mask is designed for the sole purpose of looking more pleasing to your deity. With it, your chants seem more potent and their insidious whispering is more constant.</description>
     <graphicData>
-      <texPath>Apparel/Hats/CthulhuMaskHood/CthulhuMaskHood_north</texPath>
+      <texPath>Apparel/Hats/CthulhuMaskHood/CthulhuMaskHood_south</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
