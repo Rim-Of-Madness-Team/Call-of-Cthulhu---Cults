@@ -655,8 +655,8 @@ namespace CultOfCthulhu
 
             if (temple != null)
             {
-                List<Thing> sculptures = temple.ContainedAndAdjacentThings.FindAll(x =>
-                    x.def != null && x.def.minifiedDef != null && x.def.minifiedDef.defName == "MinifiedSculpture");
+                List<Thing> sculptures = temple.ContainedAndAdjacentThings.FindAll(x => x is ThingWithComps y &&
+                    y.TryGetComp<CompFavoredObject>() != null);
                 if (sculptures != null && sculptures.Count > 0)
                 {
                     foreach (Thing sculpture in sculptures)

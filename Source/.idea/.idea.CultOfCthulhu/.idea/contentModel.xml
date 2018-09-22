@@ -7,6 +7,7 @@
       <e p="CultOfCthulhu.sln" t="IncludeFlat" />
       <e p="Cults_Screen_Credits.cs" t="Include" />
       <e p="CultsDefOf.cs" t="Include" />
+      <e p="CultsFloatMenuPatch.cs" t="Include" />
       <e p="Graphic_Wild.cs" t="Include" />
       <e p="HarmonyPatches.cs" t="Include" />
       <e p="MapComponentInjector.cs" t="Include" />
@@ -240,6 +241,8 @@
         <e p="CultUtility.cs" t="Include" />
       </e>
     </e>
-    <e p="C:\Users\mattw\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_CultOfCthulhu.-1143512431.00" t="ExcludeRecursive" />
+    <e p="C:\Users\mattw\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\mattw\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\mattw\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_CultOfCthulhu.-1143512431.00" t="ExcludeRecursive" />
   </component>
 </project>

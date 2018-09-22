@@ -1,0 +1,7 @@
+Gameplay expansion for RimWorld.
+
+    You can now:
+        *found a cult
+        *worship monstrous deities
+        *make offerings and animal sacrifices
+        *make human sacrifices in return for powerful spells (over 20 in total, plus a dozen side effects)

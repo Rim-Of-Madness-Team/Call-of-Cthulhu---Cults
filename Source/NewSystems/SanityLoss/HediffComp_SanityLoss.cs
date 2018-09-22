@@ -7,13 +7,11 @@ using RimWorld;
 
 namespace CultOfCthulhu
 {
-    public class HediffComp_SanityLoss : HediffComp_SeverityPerDay
+    public class HediffComp_SanityLoss : HediffComp
     {
 
         public override void CompPostTick(ref float severityAdjustment)
         {
-
-            base.CompPostTick(ref severityAdjustment);
             if (base.Pawn != null)
             {
                 if (base.Pawn.RaceProps != null)

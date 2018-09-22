@@ -6,20 +6,18 @@
 	<label>sanity loss</label>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
-    <initialSeverity>0.001</initialSeverity>
-    <minSeverity>0.001</minSeverity>
+    <initialSeverity>0.1</initialSeverity>
+    <minSeverity>0.1</minSeverity>
     <maxSeverity>1.0</maxSeverity>
     <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
+      <li>
         <compClass>CultOfCthulhu.HediffComp_SanityLoss</compClass>
-        <severityPerDay>-0.20</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.2</severityPerDay>
       </li>
     </comps>	
     <stages>
-      <li>
-        <label>initial</label>
-		<becomeVisible>false</becomeVisible>
-      </li>
       <li>
         <label>initial</label>
 		<minSeverity>0.1</minSeverity>

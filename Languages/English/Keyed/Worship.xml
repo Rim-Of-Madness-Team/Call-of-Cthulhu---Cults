@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+<!-- 9/22/18 -->
+<Cults_TradeSanityForMadness>Go mad (clears sanity loss)</Cults_TradeSanityForMadness>
+<Cults_TradedSanityLossForMadness>{0} succumbed to a mental break, however, this has restored their sanity.</Cults_TradedSanityLossForMadness>
+
 <!-- 7/21/18 -->
 <Cults_Discovered>Entity Discovered</Cults_Discovered>
 <Box_Titles>&lt;b&gt;Titles&lt;/b&gt;</Box_Titles>

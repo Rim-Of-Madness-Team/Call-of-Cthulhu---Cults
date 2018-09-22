@@ -40,7 +40,7 @@ namespace CultOfCthulhu
                 ref this.settings.cultsStudySuccessfulCultsIsRepeatable);
             Widgets.CheckboxLabeled(
                 new Rect(inRect.x + offset, inRect.y + offset + spacer + offset + spacer, inRect.width - offset,
-                    height), "ShowDebugCode".Translate(), ref this.settings.cultsForcedInvestigation);
+                    height), "ShowDebugCode".Translate(), ref this.settings.cultsShowDebugCode);
             this.settings.Write();
         }
     }

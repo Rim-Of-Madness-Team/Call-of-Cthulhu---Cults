@@ -36,12 +36,16 @@
     <Reference Include="0Harmony">
       <HintPath>..\..\JecsTools\Assemblies\0Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="0JecsTools, Version=1.0.8.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\JecsTools\Assemblies\0JecsTools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="AbilityUser">
       <HintPath>..\..\JecsTools\Assemblies\AbilityUser.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -56,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CultsFloatMenuPatch.cs" />
     <Compile Include="NewSystems\AntiCult\MapComponent_LocalCultTracker_Inquisition.cs" />
     <Compile Include="NewSystems\CosmicEntities\DeityTracker.cs" />
     <Compile Include="NewSystems\CosmicEntities\Dialog_CosmicEntityInfoBox.cs" />
