@@ -64,6 +64,42 @@
     </comps>
   </ThingDef>
 
+  <ThingDef ParentName="SculptureBase">
+    <defName>SculptureBast</defName>
+    <label>monstrous feline sculpture</label>
+    <description>A car-sized piece of material sculpted into the stylised form of a massive egyptian cat. Glorious .</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Building/BastSculpture/shottyBastSculpture</texPath>
+      <drawSize>(4,4)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <size>(3,2)</size>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Beauty>140</Beauty>
+      <WorkToMake>90000</WorkToMake>
+      <Mass>80</Mass>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>320</costStuffCount>
+    <comps>
+	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+	  <deities>
+	  <li>
+	    <deityDef>Entity_Cthulhu</deityDef>
+	  </li>
+	  </deities>
+    </li>
+    </comps>
+  </ThingDef>
+
 
   <ThingDef ParentName="SculptureBase">
     <defName>SculptureDagon</defName>
