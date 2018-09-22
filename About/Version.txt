@@ -1,1 +1,1 @@
-t click to clear sanity at the cost of a mental break.\nFixed settings menu in Mod Settings.\n
+1.19.0.3
