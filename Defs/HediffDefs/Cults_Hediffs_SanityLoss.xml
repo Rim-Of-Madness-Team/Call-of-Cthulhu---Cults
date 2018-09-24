@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-\
+
   <HediffDef>
     <defName>Cults_SanityLoss</defName>
 	<label>sanity loss</label>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
     <initialSeverity>0.1</initialSeverity>
-    <minSeverity>0.1</minSeverity>
     <maxSeverity>1.0</maxSeverity>
     <comps>
       <li>
         <compClass>CultOfCthulhu.HediffComp_SanityLoss</compClass>
       </li>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.2</severityPerDay>
+        <severityPerDay>-0.05</severityPerDay>
       </li>
     </comps>	
     <stages>

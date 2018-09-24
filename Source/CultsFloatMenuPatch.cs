@@ -31,16 +31,24 @@ namespace CultOfCthulhu
                             opts = new List<FloatMenuOption>();
                             Action action = delegate
                             {
-                                Cthulhu.Utility.RemoveSanityLoss(pawn);
                                 var newMentalState = (Rand.Value > 0.05)
                                     ? DefDatabase<MentalStateDef>.AllDefs.InRandomOrder()
                                         .FirstOrDefault(x => x.IsAggro == false) : MentalStateDefOf.Berserk;
-                                Messages.Message("Cults_TradedSanityLossForMadness".Translate(pawn.LabelShort), pawn,
-                                    MessageTypeDefOf.ThreatSmall);
                                 Cthulhu.Utility.DebugReport("Selected mental state: " + newMentalState.label);
-                                pawn.mindState.mentalStateHandler.TryStartMentalState(newMentalState);
+                                if (pawn.Drafted) pawn.drafter.Drafted = false;
+                                pawn.ClearMind();
+                                pawn.pather.StopDead();
+                                if (!pawn.mindState.mentalStateHandler.TryStartMentalState(newMentalState))
+                                {
+                                    Messages.Message("ROM_TradedSanityLossForMadnessFailed".Translate(pawn.LabelShort), pawn,
+                                        MessageTypeDefOf.RejectInput);
+                                    return;
+                                }
+                                Messages.Message("ROM_TradedSanityLossForMadness".Translate(pawn.LabelShort), pawn,
+                                    MessageTypeDefOf.ThreatSmall);
+                                Cthulhu.Utility.RemoveSanityLoss(pawn);
                             };
-                            opts.Add(new FloatMenuOption("Cults_TradeSanityForMadness".Translate(), action,
+                            opts.Add(new FloatMenuOption("ROM_TradeSanityForMadness".Translate(), action,
                                 MenuOptionPriority.High, null, target, 0f, null, null));
                             return opts;
                         }
