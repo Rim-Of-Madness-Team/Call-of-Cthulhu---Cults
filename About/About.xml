@@ -3,7 +3,7 @@
   <name>Call of Cthulhu - Cults</name>
   <author>Jecrell</author>
   <targetVersion>0.19.0</targetVersion>
-  <description>1.19.0.7 (09-26-2018)
+  <description>1.19.0.8 (10-02-2018)
 
 Gameplay expansion for RimWorld.
 
@@ -11,5 +11,19 @@ Gameplay expansion for RimWorld.
         *found a cult
         *worship monstrous deities
         *make offerings and animal sacrifices
-        *make human sacrifices in return for powerful spells (over 20 in total, plus a dozen side effects)</description>
+        *make human sacrifices in return for powerful spells (over 20 in total, plus a dozen side effects)
+
+Thank you to my Patrons for supporting me in my efforts. Without you, none of this would be possible.
+
+These are the most excellent rim dwellers who support me: 
+Brachiaraidos, Cory Bonifay, CrankyPeanut, E_T, Finwej, Jan Koutsky, Jonathan, K. Bolden, Kiya Nicoll, Matt Harris, Paul Fenwick, Toc Anastar, Grendalloffen, Martin K. Bonde, Harvey Mclellan, Shane M. aka ShotgunFace, Bentley Alsup, Eric Idema, MasterScootie, GoSu, Josh McCabe, spook, Clifford Campbell, J, Michael Paugh, John Kanady, Luis Figueroa, Midgeman, Nate Haug, Richard Paul, SilentWeirdo, Audrin Navarro, Calhoun Cattell, Михаил Юрченко, Nemuri Hime, Calum, Keith Thoma, Dick Jones, Patrick, Tim Stillson, Nathan Getman, Sharp Spook, Emily Shaw, Populous25, Steven James, Zalson, Mark, Marcus Sireanu, Drachken, Nicholas Bateman, Baron Xot, Justin Andres, Luis Salvatierra, Christopher, TinyFloatingTurtle, George Chong Chuang Ming, John Boehr, Oliver White, roxxploxx, Robin Hager, That Guy, Allic, Karol Rybak, Austin Harbert, Yewty, Evan Hwang, Ryan Brock, Jonathan Holzinger, MC, Alexander, Alex Mederer, Kevin Reagan, Toss Antilles, Chelsea Archambeau, Aron Glasser, Dan Winn, Fredric Sundberg, Sarah Banks, ted stevens
+
+========================
+Changelog
+========================
+1.19.0.8 (10-02-2018)
+========================
+Sets the proper dessicated corpses for guardians of Bast
+
+</description>
 </ModMetaData>

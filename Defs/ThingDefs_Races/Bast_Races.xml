@@ -154,7 +154,7 @@
 					<shaderType>CutoutComplex</shaderType>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+					<texPath>Things/Pawn/Animal/Cat/Dessicated_Cat</texPath>
 					<drawSize>1.4</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
@@ -170,7 +170,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+					<texPath>Things/Pawn/Animal/Cat/Dessicated_Cat</texPath>
 					<drawSize>1.6</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
@@ -186,7 +186,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/Dessicated/CritterDessicatedMedium</texPath>
+					<texPath>Things/Pawn/Animal/Cat/Dessicated_Cat</texPath>
 					<drawSize>2.3</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>

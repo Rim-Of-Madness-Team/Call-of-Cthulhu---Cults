@@ -1,0 +1,4 @@
+1.19.0.8 (10-02-2018)
+========================
+Sets the proper dessicated corpses for guardians of Bast
+
