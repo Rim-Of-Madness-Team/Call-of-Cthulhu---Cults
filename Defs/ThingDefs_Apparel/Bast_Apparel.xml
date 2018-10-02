@@ -13,6 +13,7 @@
 		<costList>
 			<Cloth>75</Cloth>
 		</costList>
+		<generateCommonality>0.01</generateCommonality>
 		<thingCategories>
 			<li>Apparel</li>
 		</thingCategories>
@@ -83,6 +84,7 @@
 		<costList>
 			<Cloth>25</Cloth>
 		</costList>
+		<generateCommonality>0.01</generateCommonality>
     <statBases>
       <Mass>0.15</Mass>
       <WorkToMake>3000</WorkToMake>

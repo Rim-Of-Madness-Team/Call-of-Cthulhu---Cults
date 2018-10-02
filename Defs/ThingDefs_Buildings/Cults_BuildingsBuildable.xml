@@ -80,6 +80,13 @@
 	<placeWorkers>
 	  <li>JecsTools.PlaceWorker_OnTopOfWalls</li>
 	</placeWorkers>
+	<modExtensions>
+	  <li Class="JecsTools.BuildingExtension">
+	    <wipeCategories>
+		  <li>OnTopOfWalls</li>
+		</wipeCategories>
+	  </li>
+    </modExtensions>
   </ThingDef>
   
   
@@ -161,6 +168,13 @@
         <heatPushMaxTemperature>23</heatPushMaxTemperature>
       </li>
     </comps>	
+	<modExtensions>
+	  <li Class="JecsTools.BuildingExtension">
+	    <wipeCategories>
+		  <li>OnTopOfWalls</li>
+		</wipeCategories>
+	  </li>
+    </modExtensions>
   </ThingDef>
 
 

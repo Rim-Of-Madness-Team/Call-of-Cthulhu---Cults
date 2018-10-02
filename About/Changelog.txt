@@ -1,3 +1,7 @@
+1.19.0.9 (10-03-2018)
+========================
+Alcoves now properly overlay on top of walls from other mods. Cultist clothing now has reduced commonality.
+
 1.19.0.8 (10-02-2018)
 ========================
 Sets the proper dessicated corpses for guardians of Bast

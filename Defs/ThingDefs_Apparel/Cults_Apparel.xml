@@ -10,6 +10,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costStuffCount>80</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -102,6 +103,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costStuffCount>80</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -194,6 +196,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costStuffCount>70</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -286,6 +289,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costStuffCount>100</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -378,6 +382,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costStuffCount>80</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -470,6 +475,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costStuffCount>100</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -563,6 +569,7 @@
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<costStuffCount>100</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -655,6 +662,7 @@
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<costStuffCount>80</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
 		<stuffCategories>
 			<li>Fabric</li>
 			<li>Leathery</li>
@@ -708,6 +716,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>25</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -791,6 +800,7 @@
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>25</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -875,6 +885,7 @@
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>25</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -936,6 +947,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>25</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -999,6 +1011,7 @@
 	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>25</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -1062,6 +1075,7 @@
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>25</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -1123,6 +1137,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>25</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -1205,6 +1220,7 @@
       <li>Leathery</li>
     </stuffCategories>
 		<costStuffCount>25</costStuffCount>
+		<generateCommonality>0.01</generateCommonality>
     <statBases>
       <WorkToMake>2000</WorkToMake>
       <Mass>0.12</Mass>
