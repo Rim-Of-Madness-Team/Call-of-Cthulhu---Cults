@@ -5,6 +5,7 @@
     <defName>Cults_BlackGoat</defName>
     <label>black goat</label>
     <description>Black goats are mysterious creatures that live in almost any climate. Their diet is also unknown. Legends tell about them being the spawn of some obscene monstrosity known as the Black Goat Mother that exists outside of the reality we understand as our dimension.</description>
+    <tradeability>None</tradeability>
     <statBases>
       <MoveSpeed>4.4</MoveSpeed>
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
@@ -95,9 +96,6 @@
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
-    <tradeTags>
-      <li>BadassAnimal</li>
-    </tradeTags>
   </ThingDef>
 
   <PawnKindDef ParentName="AnimalKindBase">
@@ -206,6 +204,7 @@
     <label>reanimated corpse</label>
     <description>Whether due to scientific experimentation, occult interference, or comic fluke, these are poor souls for whom death has been abjured.</description>
     <uiIconPath>Things/Pawn/Humanlike/UI/IconHuman</uiIconPath>
+    <tradeability>None</tradeability>
     <statBases>
       <MarketValue>0</MarketValue>
       <MoveSpeed>3.5</MoveSpeed>

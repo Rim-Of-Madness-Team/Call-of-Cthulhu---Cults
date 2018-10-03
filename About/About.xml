@@ -3,7 +3,7 @@
   <name>Call of Cthulhu - Cults</name>
   <author>Jecrell</author>
   <targetVersion>0.19.0</targetVersion>
-  <description>1.19.0.9 (10-03-2018)
+  <description>1.19.0.10 (10-03-2018)
 
 Gameplay expansion for RimWorld.
 
@@ -21,6 +21,10 @@ Brachiaraidos, Cory Bonifay, CrankyPeanut, E_T, Finwej, Jan Koutsky, Jonathan, K
 ========================
 Changelog
 ========================
+1.19.0.10 (10-03-2018)
+========================
+Black Goats and other creatures added by Cults should no longer appear for sale with traders.
+
 1.19.0.9 (10-03-2018)
 ========================
 Alcoves now properly overlay on top of walls from other mods. Cultist clothing now has reduced commonality.

@@ -27,6 +27,7 @@
 		<defName>GuardianBast</defName>
 		<label>Guardian</label>
 		<description>A divine protector sent by Bast to protect you.</description>
+    <tradeability>None</tradeability>
 		<statBases>
 			<MoveSpeed>7</MoveSpeed>
 			<ComfyTemperatureMin>-125</ComfyTemperatureMin>
@@ -132,10 +133,6 @@
 			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
 		</race>
-		<tradeTags>
-			<li>StandardAnimal</li>
-			<li>BadassAnimal</li>
-		</tradeTags>
 	</ThingDef>
 
 	<PawnKindDef ParentName="AnimalKindBase">

@@ -1,3 +1,7 @@
+1.19.0.10 (10-03-2018)
+========================
+Black Goats and other creatures added by Cults should no longer appear for sale with traders.
+
 1.19.0.9 (10-03-2018)
 ========================
 Alcoves now properly overlay on top of walls from other mods. Cultist clothing now has reduced commonality.
