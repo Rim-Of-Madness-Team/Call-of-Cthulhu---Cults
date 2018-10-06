@@ -67,7 +67,7 @@
   <ThingDef ParentName="SculptureBase">
     <defName>SculptureBast</defName>
     <label>monstrous feline sculpture</label>
-    <description>A car-sized piece of material sculpted into the stylised form of a massive egyptian cat. Glorious .</description>
+    <description>A car-sized piece of material sculpted into the stylised form of a massive egyptian cat. Glorious.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <texPath>Building/BastSculpture/shottyBastSculpture</texPath>
@@ -93,7 +93,7 @@
 	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
 	  <deities>
 	  <li>
-	    <deityDef>Entity_Cthulhu</deityDef>
+	    <deityDef>Entity_Bast</deityDef>
 	  </li>
 	  </deities>
     </li>
