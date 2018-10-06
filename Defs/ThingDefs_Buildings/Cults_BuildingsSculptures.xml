@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef ParentName="SculptureBase">
+  <ThingDef ParentName="SculptureBase">
     <defName>YigSculptureLarge</defName>
     <label>large serpent humanoid sculpture</label>
     <description>A person-sized piece of material in the shape of a snake man sculpted into an artistic form.</description>
@@ -28,7 +28,29 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="SculptureBase">
+  <!-- Monstrous sculptures to cosmic entities. These are locked behind Forbidden_Sculptures research. -->
+
+  <ThingDef Name="MonstrousSculpture" ParentName="SculptureBase" Abstract="True">
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <fillPercent>0.5</fillPercent>
+    <rotatable>true</rotatable>
+    <size>(3,2)</size>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Beauty>140</Beauty>
+      <WorkToMake>90000</WorkToMake>
+      <Mass>80</Mass>
+    </statBases>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>320</costStuffCount>
+    <researchPrerequisites><li>Forbidden_Sculptures</li></researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureCthulhu</defName>
     <label>monstrous octopoid sculpture</label>
     <description>A car-sized piece of material sculpted into the stylised form of a giant bulbous head. Tentacles snake out from where a mouth would be and glare down in contempt.</description>
@@ -37,22 +59,6 @@
       <texPath>Building/CthulhuSculpture/CthulhuSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <fillPercent>0.5</fillPercent>
-    <rotatable>true</rotatable>
-    <size>(3,2)</size>
-    <statBases>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Beauty>140</Beauty>
-      <WorkToMake>90000</WorkToMake>
-      <Mass>80</Mass>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>320</costStuffCount>
     <comps>
 	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
 	  <deities>
@@ -64,7 +70,7 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="SculptureBase">
+  <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureBast</defName>
     <label>monstrous feline sculpture</label>
     <description>A car-sized piece of material sculpted into the stylised form of a massive egyptian cat. Glorious .</description>
@@ -73,22 +79,6 @@
       <texPath>Building/BastSculpture/shottyBastSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <fillPercent>0.5</fillPercent>
-    <rotatable>true</rotatable>
-    <size>(3,2)</size>
-    <statBases>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Beauty>140</Beauty>
-      <WorkToMake>90000</WorkToMake>
-      <Mass>80</Mass>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>320</costStuffCount>
     <comps>
 	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
 	  <deities>
@@ -101,7 +91,7 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="SculptureBase">
+  <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureDagon</defName>
     <label>monstrous fish-headed sculpture</label>
     <description>A car-sized piece of material sculpted into the face of a deep one. Its eyes are large and toadish and stare out, blankly. The teeth are almost as long as your arm. If it were real, it could swallow you with one bite.</description>
@@ -110,22 +100,6 @@
       <texPath>Building/DagonSculpture/DagonSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <fillPercent>0.5</fillPercent>
-    <rotatable>true</rotatable>
-    <size>(3,2)</size>
-    <statBases>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Beauty>140</Beauty>
-      <WorkToMake>90000</WorkToMake>
-      <Mass>80</Mass>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>320</costStuffCount>
     <comps>
 	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
 	  <deities>
@@ -137,7 +111,7 @@
     </comps>
   </ThingDef>
 
-  <ThingDef ParentName="SculptureBase">
+  <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureNyarlathotep</defName>
     <label>monstrous hooded sculpture</label>
     <description>A car-sized piece of material sculpted into the shape of a cloaked figure wreathed in shapes that seem ordered at first but is then betrayed by an underlying chaos.</description>
@@ -146,22 +120,6 @@
       <texPath>Building/NyarlathotepSculpture/NyarlathotepSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <fillPercent>0.5</fillPercent>
-    <rotatable>true</rotatable>
-    <size>(3,2)</size>
-    <statBases>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Beauty>140</Beauty>
-      <WorkToMake>90000</WorkToMake>
-      <Mass>80</Mass>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>320</costStuffCount>
     <comps>
 	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
 	  <deities>
@@ -174,7 +132,7 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="SculptureBase">
+  <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureShub</defName>
     <label>monstrous goat-like sculpture</label>
     <description>A car-sized piece of material sculpted into the stylised form of a goat's head. Behind which is a mass of vines or tentacles writhing around one another and menacing the onlooker.</description>
@@ -183,22 +141,6 @@
       <texPath>Building/ShubSculpture/ShubSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <fillPercent>0.5</fillPercent>
-    <rotatable>true</rotatable>
-    <size>(3,2)</size>
-    <statBases>
-      <MaxHitPoints>250</MaxHitPoints>
-      <Beauty>140</Beauty>
-      <WorkToMake>96000</WorkToMake>
-      <Mass>80</Mass>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>320</costStuffCount>
     <comps>
 	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
 	  <deities>
@@ -211,7 +153,7 @@
   </ThingDef>
 
   
-  <ThingDef ParentName="SculptureBase">
+  <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureTsathoggua</defName>
     <label>monstrous abomination sculpture</label>
     <description>A car-sized piece of material sculpted into the stylised form of a giant bulbous head. This wide squat-shaped amalgation of a bat, toad, and other creatures creates a unique and yet unsettling visage that glares with a ravenous hunger.</description>
@@ -220,22 +162,6 @@
       <texPath>Building/TsathogguaSculpture/TsathogguaSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <fillPercent>0.5</fillPercent>
-    <rotatable>true</rotatable>
-    <size>(3,2)</size>
-    <statBases>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Beauty>140</Beauty>
-      <WorkToMake>95000</WorkToMake>
-      <Mass>80</Mass>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>320</costStuffCount>
     <comps>
 	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
 	  <deities>
@@ -248,7 +174,7 @@
   </ThingDef>
 
     
-  <ThingDef ParentName="SculptureBase">
+  <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureHastur</defName>
     <label>monstrous king sculpture</label>
     <description>A car-sized piece of material sculpted into the stylised form of a giant bulbous head. An ominous king stands before a kingdom, staring downwards.</description>
@@ -257,22 +183,6 @@
       <texPath>Building/HasturSculpture/HasturSculpture</texPath>
       <drawSize>(4,4)</drawSize>
     </graphicData>
-    <minifiedDef>MinifiedThing</minifiedDef>
-    <fillPercent>0.5</fillPercent>
-    <rotatable>true</rotatable>
-    <size>(3,2)</size>
-    <statBases>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Beauty>140</Beauty>
-      <WorkToMake>95000</WorkToMake>
-      <Mass>80</Mass>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>320</costStuffCount>
     <comps>
 	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
 	  <deities>
@@ -283,7 +193,5 @@
     </li>
     </comps>
   </ThingDef>
-
-  
   
 </Defs>
