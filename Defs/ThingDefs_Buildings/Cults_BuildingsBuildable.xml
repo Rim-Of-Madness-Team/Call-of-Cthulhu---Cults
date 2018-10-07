@@ -284,6 +284,7 @@
     </stuffCategories>
     <costStuffCount>25</costStuffCount>
     <pathCost>30</pathCost>
+    <fillPercent>0.40</fillPercent>
     <designationCategory>Furniture</designationCategory>
     <placingDraggableDimensions>1</placingDraggableDimensions>
     <rotatable>false</rotatable>
