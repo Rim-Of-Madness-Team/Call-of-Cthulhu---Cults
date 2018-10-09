@@ -39,5 +39,40 @@
 	</operations>
   </Operation>
 
+  <Operation Class="PatchOperationFindMod">
+      <!-- What's better than a Guardian of Bast?  A Bionic Guardian of Bast! -->
+      <success>Always</success>
+      <mods>
+          <li>A Dog Said...</li>
+      </mods>
+      <match Class="PatchOperationAdd">
+          <xpath>
+              /Defs/RecipeDef[
+                @Name = "OldWoundsAnimal" or
+                defname = "InstallBionicAnimalStomach" or
+                defName = "InstallBionicAnimalKidney" or
+                defName = "InstallBionicAnimalLiver" or
+                defName = "InstallBionicAnimalLung" or
+                defName = "InstallBionicAnimalHeart" or
+                defName = "InstallAnimalBrainStimulator" or
+                defName = "InstallSpineAnimalBionic" or
+                defName = "InstallSpineAnimalSimple" or
+                defName = "InstallJawAnimalBionic" or
+                defName = "InstallJawAnimalSimple" or
+                defName = "InstallNoseAnimalSimple" or
+                defName = "InstallBionicEyeAnimal" or
+                defName = "InstallEarAnimalSimple" or
+                defName = "InstallEarAnimalBionic" or
+                defName = "InstallPegLegAnimal" or
+                defName = "InstallSimpleProstheticLegAnimal" or
+                defName = "InstallBionicLegAnimal" or
+                defName = "InstallSimpleProstheticTailAnimal"
+              ]/recipeUsers
+            </xpath>
+            <value>
+                <li>GuardianBast</li>
+            </value>
+        </match>
+    </Operation>
 
 </Patch>
