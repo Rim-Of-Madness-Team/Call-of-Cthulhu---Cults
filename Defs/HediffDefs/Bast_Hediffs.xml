@@ -2,22 +2,27 @@
 <Defs>
 	<HediffDef ParentName="AddedBodyPartBase">
 		<defName>BastClaws</defName>
-		<label>claws</label>
+                <label>claw</label>
+                <labelNoun>a clawed hand</labelNoun>
 		<comps>
-			<li Class="HediffCompProperties_VerbGiver">
-				<verbs>
-					<li>
-						<verbClass>Verb_MeleeAttack</verbClass>
-						<defaultCooldownTime>1.4</defaultCooldownTime>
-						<meleeDamageBaseAmount>15</meleeDamageBaseAmount>
-						<meleeDamageDef>Scratch</meleeDamageDef>
-					</li>
-				</verbs>
-			</li>
+                    <li Class="HediffCompProperties_VerbGiver">
+                        <tools>
+                            <li>
+                                <label>claw</label>
+                                <capacities>
+                                    <li>Scratch</li>
+                                </capacities>
+                                <power>15</power>
+                                <cooldownTime>1.4</cooldownTime>
+                                <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+                            </li>
+                        </tools>
+                    </li>
 		</comps>
-		<addedPartProps>
-			<solid>true</solid>
-			<partEfficiency>1.0</partEfficiency>
+                <addedPartProps>
+                    <isGoodWeapon>true</isGoodWeapon>
+                    <solid>true</solid>
+                    <partEfficiency>1.0</partEfficiency>
 		</addedPartProps>
 	</HediffDef>
 	
