@@ -923,7 +923,7 @@ namespace CultOfCthulhu
                 {
                     foreach (ThingWithComps eq in member.equipment.AllEquipmentListForReading)
                     {
-                        if (eq.def.defName == "")
+                        if (eq.def.defName == "MeleeWeapon_CultKris")
                         {
                             sacrificialDagger = true;
                             result += 0.005f;
