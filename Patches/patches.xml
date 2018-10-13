@@ -75,4 +75,12 @@
         </match>
     </Operation>
 
+  <Operation Class="PatchOperationAdd">
+      <!-- If the HP Lovecraft storyteller is loaded, make it so cats from that mod can also be transformed into Guardians of Bast. -->
+      <success>Always</success>
+      <xpath>Defs/IncidentDef[defName="Cults_BastSpellSummonGuardian"]/modExtensions/li[@Class="BastCult.GuardianProperties"]/eligiblePawnDefs</xpath>
+      <value><li>HPLovecraft_CatRace</li></value>
+  </Operation>
+
+
 </Patch>

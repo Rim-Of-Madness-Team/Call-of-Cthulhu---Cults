@@ -469,15 +469,15 @@ namespace CultOfCthulhu
             /////////////
             if (starsAreRight != null)
             {
-                s.AppendLine("Map Condition Difficulty: -20 Stars Are Right");
-                modifier += 20;
-                reportFavorables.AppendLine("-20 /-20: " +
+                s.AppendLine("Map Condition Difficulty: +20 Stars Are Right");
+                successModifier += 20;
+                reportFavorables.AppendLine("+20 / 20: " +
                                             "Cults_LRStarsAreRight".Translate(altar.SacrificeData.Entity.LabelCap));
             }
             else if (starsAreWrong != null)
             {
                 s.AppendLine("Map Condition Difficulty: +50 Stars Are Wrong");
-                successModifier += 50;
+                modifier += 50;
                 reportUnfavorables.AppendLine("+50 / 50: " +
                                               "Cults_LRStarsAreWrong".Translate(altar.SacrificeData.Entity.LabelCap));
             }
@@ -923,7 +923,7 @@ namespace CultOfCthulhu
                 {
                     foreach (ThingWithComps eq in member.equipment.AllEquipmentListForReading)
                     {
-                        if (eq.def.defName == "")
+                        if (eq.def.defName == "MeleeWeapon_CultKris")
                         {
                             sacrificialDagger = true;
                             result += 0.005f;
