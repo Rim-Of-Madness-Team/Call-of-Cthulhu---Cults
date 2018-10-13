@@ -84,7 +84,11 @@
 			  <li>
 			    <deityDef>Entity_Tsathoggua</deityDef>
 				<favorBonus>0.005</favorBonus>
-			  </li>
+                          </li>
+			  <li>
+			    <deityDef>Entity_Bast</deityDef>
+				<favorBonus>0.005</favorBonus>
+                          </li>
 			</deities>
 		  </li>
 		</comps>
@@ -178,6 +182,10 @@
 			    <deityDef>Entity_Tsathoggua</deityDef>
 				<favorBonus>0.005</favorBonus>
 			  </li>
+			  <li>
+			    <deityDef>Entity_Bast</deityDef>
+				<favorBonus>0.005</favorBonus>
+			  </li>
 			</deities>
 		  </li>
 		</comps>
@@ -269,6 +277,10 @@
 			  </li>
 			  <li>
 			    <deityDef>Entity_Tsathoggua</deityDef>
+				<favorBonus>0.006</favorBonus>
+			  </li>
+			  <li>
+			    <deityDef>Entity_Bast</deityDef>
 				<favorBonus>0.006</favorBonus>
 			  </li>
 			</deities>
@@ -775,6 +787,10 @@
 			    <deityDef>Entity_Tsathoggua</deityDef>
 				<favorBonus>0.005</favorBonus>
 			  </li>
+			  <li>
+			    <deityDef>Entity_Bast</deityDef>
+				<favorBonus>0.005</favorBonus>
+			  </li>
 			</deities>
 		  </li>
 		</comps>
@@ -857,6 +873,10 @@
 			  </li>
 			  <li>
 			    <deityDef>Entity_Tsathoggua</deityDef>
+				<favorBonus>0.0025</favorBonus>
+			  </li>
+			  <li>
+			    <deityDef>Entity_Bast</deityDef>
 				<favorBonus>0.0025</favorBonus>
 			  </li>
 			</deities>
@@ -1190,6 +1210,14 @@
 			  </li>
 			  <li>
 			    <deityDef>Entity_Dagon</deityDef>
+				<favorBonus>0.005</favorBonus>
+			  </li>
+			  <li>
+			    <deityDef>Entity_Tsathoggua</deityDef>
+				<favorBonus>0.005</favorBonus>
+			  </li>
+			  <li>
+			    <deityDef>Entity_Bast</deityDef>
 				<favorBonus>0.005</favorBonus>
 			  </li>
 			</deities>
