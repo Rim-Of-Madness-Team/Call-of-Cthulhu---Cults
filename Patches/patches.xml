@@ -39,13 +39,14 @@
 	</operations>
   </Operation>
 
-  <Operation Class="PatchOperationFindMod">
-      <!-- What's better than a Guardian of Bast?  A Bionic Guardian of Bast! -->
-      <success>Always</success>
-      <mods>
-          <li>A Dog Said...</li>
-      </mods>
-      <match Class="PatchOperationAdd">
+    <Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+	  <!--This ensures the patch will only be applied IF Giddy-Up is loaded-->
+	  <li Class="JecsTools.PatchOperationModLoaded">
+	    <modName>A Dog Said...</modName>
+	  </li>
+      <li Class="PatchOperationAdd">
           <xpath>
               /Defs/RecipeDef[
                 @Name = "OldWoundsAnimal" or
@@ -72,15 +73,26 @@
             <value>
                 <li>GuardianBast</li>
             </value>
-        </match>
+        </li>
+	  </operations>
     </Operation>
 
-  <Operation Class="PatchOperationAdd">
-      <!-- If the HP Lovecraft storyteller is loaded, make it so cats from that mod can also be transformed into Guardians of Bast. -->
-      <success>Always</success>
-      <xpath>Defs/IncidentDef[defName="Cults_BastSpellSummonGuardian"]/modExtensions/li[@Class="BastCult.GuardianProperties"]/eligiblePawnDefs</xpath>
-      <value><li>HPLovecraft_CatRace</li></value>
-  </Operation>
+	<Operation Class="PatchOperationSequence">
+	  <success>Always</success>
+	  <operations>
+	  <!--This ensures the patch will only be applied IF Giddy-Up is loaded-->
+	  <li Class="JecsTools.PatchOperationModLoaded">
+	    <modName>H.P. Lovecraft Storyteller - Remastered</modName>
+	  </li>
+	
+	  <li Class="PatchOperationAdd">
+        <!-- If the HP Lovecraft storyteller is loaded, make it so cats from that mod can also be transformed into Guardians of Bast. -->
+        <success>Always</success>
+        <xpath>Defs/IncidentDef[defName="Cults_BastSpellSummonGuardian"]/modExtensions/li[@Class="BastCult.GuardianProperties"]/eligiblePawnDefs</xpath>
+        <value><li>HPLovecraft_CatRace</li></value>
+	  </li>
+	  </operations>
+	</Operation>
 
 
 </Patch>

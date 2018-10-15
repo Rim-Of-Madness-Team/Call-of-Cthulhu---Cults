@@ -1,3 +1,7 @@
+1.19.0.11 (10-15-2018)
+========================
+Many fixes for Guardians of Bast.\nFeline Aspect claws now usable in combat.\nGuardians now compatible with ADS.\nBast and Tsathoggua support more apparel.\nLinkable pews now have 40 percent cover.\nStars right and wrong fixed.\nAnd many more!
+
 1.19.0.10 (10-03-2018)
 ========================
 Black Goats and other creatures added by Cults should no longer appear for sale with traders.
