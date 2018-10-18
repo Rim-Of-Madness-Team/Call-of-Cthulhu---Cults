@@ -95,7 +95,6 @@ namespace CultOfCthulhu
                         //Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Discard);
                 }
             }
-            AvoidGridMaker.RegenerateAvoidGridsFor(faction, Map);
             this.pointsLeft = 0f;
             SoundDefOf.PsychicPulseGlobal.PlayOneShotOnCamera();
             return;

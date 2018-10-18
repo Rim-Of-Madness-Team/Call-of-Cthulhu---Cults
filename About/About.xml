@@ -2,8 +2,8 @@
 <ModMetaData>
   <name>Call of Cthulhu - Cults</name>
   <author>Jecrell</author>
-  <targetVersion>0.19.0</targetVersion>
-  <description>1.19.0.11 (10-15-2018)
+  <targetVersion>1.0.2059</targetVersion>
+  <description>1.20.0.1 (10-18-2018)
 
 Gameplay expansion for RimWorld.
 
@@ -21,6 +21,14 @@ Lumberjack, Shibby Says, TheJagermeister, Cory Bonifay, Kiya Nicoll, Matt Harris
 ========================
 Changelog
 ========================
+1.20.0.1 (10-18-2018)
+========================
+Fixed a glaring issue with the Manifest.xml misidentifying the mod.
+
+1.20.0.0 (10-18-2018)
+========================
+Initial release for Cults for RimWorld 1.0.
+
 1.19.0.11 (10-15-2018)
 ========================
 Many fixes for Guardians of Bast.\nFeline Aspect claws now usable in combat.\nGuardians now compatible with ADS.\nBast and Tsathoggua support more apparel.\nLinkable pews now have 40 percent cover.\nStars right and wrong fixed.\nAnd many more!
