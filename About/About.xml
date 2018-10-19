@@ -3,8 +3,9 @@
   <name>Call of Cthulhu - Cults</name>
   <author>Jecrell</author>
   <targetVersion>1.0.2059</targetVersion>
-  <description>1.20.0.1 (10-18-2018)
+  <description>1.20.0.2 (10-19-2018)
 
+&lt;size=24&gt;Features&lt;/size&gt;
 Gameplay expansion for RimWorld.
 
     You can now:
@@ -12,6 +13,28 @@ Gameplay expansion for RimWorld.
         *worship monstrous deities
         *make offerings and animal sacrifices
         *make human sacrifices in return for powerful spells (over 20 in total, plus a dozen side effects)
+
+&lt;size=24&gt;Credits&lt;/size&gt;
+    Nackblad - Art for outfits for Cthulhu, Dagon, Nyarlathotep, Shub-niggurath cults.
+    Sera - Art for the King in Yellow
+    DianaWinters &amp; ChJees - Guardians, Bast Mask, Bast Apparel
+    1000101 - Concept for religious needs
+    Cpt. Ohu - Original code for altar congregations
+    Skullywag - Helpfulness on #modding
+    Mrofa - Code for two-colored hoods
+    Justin C - Reanimation Code
+    https://game-icons.net/ for various icons and templates
+
+&lt;size=12&gt;Deity Portraits&lt;/size&gt;
+    Cthulhu by Damien Mammoliti (https://www.artstation.com/damie_m)
+    Dagon by Jeff Remmer (http://www.templeofdagon.com/artists/jeff-remmer/)
+    Shub Niggurath by Art-Ogre (http://art-ogre.blogspot.com/)
+    Hastur by Aramos Studio (https://www.deviantart.com/aramosstudio)
+    Nyarlathotep by Walter Brocca (https://www.artstation.com/wall)
+    Bast by Omega Lioness (https://www.furaffinity.net/view/13646451/)
+    Tsathoggua used from Mythos ABC (https://www.amazon.com/Mythos-ABC-Mads-Brynnum-ebook/dp/B075WVTB1L)
+    
+Everyone on the modding Discord
 
 Thank you to my Patrons for supporting me in my efforts. Without you, none of this would be possible.
 
@@ -21,6 +44,10 @@ Lumberjack, Shibby Says, TheJagermeister, Cory Bonifay, Kiya Nicoll, Matt Harris
 ========================
 Changelog
 ========================
+1.20.0.2 (10-19-2018)
+========================
+Added more credits for artwork and portraits used in the mod for the main description.
+
 1.20.0.1 (10-18-2018)
 ========================
 Fixed a glaring issue with the Manifest.xml misidentifying the mod.

@@ -1,3 +1,4 @@
+<size=24>Features</size>
 Gameplay expansion for RimWorld.
 
     You can now:
@@ -5,3 +6,25 @@ Gameplay expansion for RimWorld.
         *worship monstrous deities
         *make offerings and animal sacrifices
         *make human sacrifices in return for powerful spells (over 20 in total, plus a dozen side effects)
+
+<size=24>Credits</size>
+    Nackblad - Art for outfits for Cthulhu, Dagon, Nyarlathotep, Shub-niggurath cults.
+    Sera - Art for the King in Yellow
+    DianaWinters & ChJees - Guardians, Bast Mask, Bast Apparel
+    1000101 - Concept for religious needs
+    Cpt. Ohu - Original code for altar congregations
+    Skullywag - Helpfulness on #modding
+    Mrofa - Code for two-colored hoods
+    Justin C - Reanimation Code
+    https://game-icons.net/ for various icons and templates
+
+<size=12>Deity Portraits</size>
+    Cthulhu by Damien Mammoliti (https://www.artstation.com/damie_m)
+    Dagon by Jeff Remmer (http://www.templeofdagon.com/artists/jeff-remmer/)
+    Shub Niggurath by Art-Ogre (http://art-ogre.blogspot.com/)
+    Hastur by Aramos Studio (https://www.deviantart.com/aramosstudio)
+    Nyarlathotep by Walter Brocca (https://www.artstation.com/wall)
+    Bast by Omega Lioness (https://www.furaffinity.net/view/13646451/)
+    Tsathoggua used from Mythos ABC (https://www.amazon.com/Mythos-ABC-Mads-Brynnum-ebook/dp/B075WVTB1L)
+    
+Everyone on the modding Discord
