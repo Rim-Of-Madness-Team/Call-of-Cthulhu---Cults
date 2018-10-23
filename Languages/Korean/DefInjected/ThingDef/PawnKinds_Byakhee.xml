@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_ByakheeRace.label>비야키</Cults_ByakheeRace.label>
+  <Cults_ByakheeRace.description>이 성스러운 포식자는 우주 공간을 "HUNE"이라고 알려진 특수한 기관을 통해 움직입니다. 비야키는 말로 표현할 수 없는 특별한 종입니다. 노란표식에 충실한 사람들로 인해 길들여져 있습니다.</Cults_ByakheeRace.description>
+  <Cults_ByakheeRace.tools.0.label>이빨</Cults_ByakheeRace.tools.0.label>
+  <Cults_ByakheeRace.tools.1.label>침</Cults_ByakheeRace.tools.1.label>
+  <Cults_ByakheeRace.tools.2.label>왼쪽 발톱</Cults_ByakheeRace.tools.2.label>
+  <Cults_ByakheeRace.tools.3.label>오른쪽 발톱</Cults_ByakheeRace.tools.3.label>
+  <Cults_ByakheeRace.tools.4.label>날개</Cults_ByakheeRace.tools.4.label>
+  <Cults_ByakheeRace_Leather.label>비야키 가죽</Cults_ByakheeRace_Leather.label>
+  <Cults_ByakheeRace_Leather.description>비야키 가죽</Cults_ByakheeRace_Leather.description>
+  <Cults_ByakheeRace_Leather.stuffProps.stuffAdjective>비야키 가죽</Cults_ByakheeRace_Leather.stuffProps.stuffAdjective>
+  <!-- Meat Amount: 0 -->
+  <Cults_ByakheeRace_Corpse.label>비야키 시체</Cults_ByakheeRace_Corpse.label>
+  <Cults_ByakheeRace_Corpse.description>비야키 시체</Cults_ByakheeRace_Corpse.description>
+
+  <CH_Leather_Byakhee.label>비야키 키틴</CH_Leather_Byakhee.label>
+  <CH_Leather_Byakhee.description>.</CH_Leather_Byakhee.description>
+  <CH_Leather_Byakhee.stuffProps.stuffAdjective>비야키 키틴</CH_Leather_Byakhee.stuffProps.stuffAdjective>
+
+  <CH_Leather_BlackGoathide.label>검은 염소 가죽</CH_Leather_BlackGoathide.label>
+  <CH_Leather_BlackGoathide.description>.</CH_Leather_BlackGoathide.description>
+  <CH_Leather_BlackGoathide.stuffProps.stuffAdjective>검은 염소 가죽</CH_Leather_BlackGoathide.stuffProps.stuffAdjective>
+
+  <CH_Leather_ReanimatedCorpse.label>되살아난 자의 가죽</CH_Leather_ReanimatedCorpse.label>
+  <CH_Leather_ReanimatedCorpse.description>.</CH_Leather_ReanimatedCorpse.description>
+  <CH_Leather_ReanimatedCorpse.stuffProps.stuffAdjective>되살아난 자의 가죽</CH_Leather_ReanimatedCorpse.stuffProps.stuffAdjective>
+
+</LanguageData>

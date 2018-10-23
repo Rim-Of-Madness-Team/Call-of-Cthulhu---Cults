@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_BlackGoat.label>검은 염소</Cults_BlackGoat.label>
+  <Cults_BlackGoat.description>검은 염소는 거의 모든 기후에 사는 불가사의한 생물입니다. 그들은 알려진 바가 거의 없습니다. 다만 현실의 바깥에 존재하는 검은 염소의 어머니로 알려진 외설적인 괴물의 자손으로써 전설로 이어져 내려오고 있습니다.</Cults_BlackGoat.description>
+  <Cults_BlackGoat.tools.0.label>왼쪽 발굽</Cults_BlackGoat.tools.0.label>
+  <Cults_BlackGoat.tools.1.label>오른쪽 발굽</Cults_BlackGoat.tools.1.label>
+  <Cults_BlackGoat.tools.2.label>이빨</Cults_BlackGoat.tools.2.label>
+  <Cults_BlackGoat.tools.3.label>머리</Cults_BlackGoat.tools.3.label>
+  <Cults_BlackGoat_Leather.label>검은 염소 가죽</Cults_BlackGoat_Leather.label>
+  <Cults_BlackGoat_Leather.description>검은 염소 가죽</Cults_BlackGoat_Leather.description>
+  <Cults_BlackGoat_Leather.stuffProps.stuffAdjective>검은 염소 가죽</Cults_BlackGoat_Leather.stuffProps.stuffAdjective>
+  <Cults_BlackGoat_Meat.label>검은 염소 고기</Cults_BlackGoat_Meat.label>
+  <Cults_BlackGoat_Meat.description>검은 염소 고기</Cults_BlackGoat_Meat.description>
+  <Cults_BlackGoat_Corpse.label>검은 염소 시체</Cults_BlackGoat_Corpse.label>
+  <Cults_BlackGoat_Corpse.description>검은 염소 시체</Cults_BlackGoat_Corpse.description>
+
+  <ReanimatedCorpse.label>되살아난 시체</ReanimatedCorpse.label>
+  <ReanimatedCorpse.description>과학적 실험, 신비로운 간섭, 또는 희극, 우연이라 할지라도, 이들은 죽음에 버려진 가련한 영혼입니다.</ReanimatedCorpse.description>
+  <ReanimatedCorpse.tools.0.label>왼쪽 주먹</ReanimatedCorpse.tools.0.label>
+  <ReanimatedCorpse.tools.1.label>오른쪽 주먹</ReanimatedCorpse.tools.1.label>
+  <ReanimatedCorpse.tools.2.label>머리</ReanimatedCorpse.tools.2.label>
+  <ReanimatedCorpse_Leather.label>되살아난 시체 가죽</ReanimatedCorpse_Leather.label>
+  <ReanimatedCorpse_Leather.description>되살아난 시체 가죽</ReanimatedCorpse_Leather.description>
+  <ReanimatedCorpse_Leather.stuffProps.stuffAdjective>되살아난 시체 가죽</ReanimatedCorpse_Leather.stuffProps.stuffAdjective>
+  <!-- Meat Amount: 0 -->
+  <ReanimatedCorpse_Corpse.label>되살아난 시체의 시체</ReanimatedCorpse_Corpse.label>
+  <ReanimatedCorpse_Corpse.description>되살아난 시체의 시체</ReanimatedCorpse_Corpse.description>
+
+</LanguageData>

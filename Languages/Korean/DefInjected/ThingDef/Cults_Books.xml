@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_Grimoire.label>신비한 마도서</Cults_Grimoire.label>
+  <Cults_Grimoire.description>일단 언뜻보게 된다면, 지나가던 사람도 발걸음을 멈추게 만듭니다. 자세히 살펴보면, 두꺼운 책을 단단하게 봉쇄한 자물쇠와 직인이 찍혀있고 학자들에게 궁금증을 유발합니다. 도대체 어떤 비밀을... 아니 어떤 힘을 가지고 있을까요?</Cults_Grimoire.description>
+
+  <Cults_TheKingInYellow.label>노란 옷의 왕</Cults_TheKingInYellow.label>
+  <Cults_TheKingInYellow.description>노란 옷의 왕의 일화가 연극 형태로 적힌 수수깨끼의 책입니다. 제 1극의 내용은 지극히 평범한 것이지만, 그 이후로 갈수록 광기에 미쳐 내용을 알 수 없게 되며, 알수 없는 무언가를 숭배하고 고대 기호에 집착하게 됩니다.</Cults_TheKingInYellow.description>
+  <Cults_TheKingInYellow.comps.2.useLabel>활성화</Cults_TheKingInYellow.comps.2.useLabel>
+
+</LanguageData>

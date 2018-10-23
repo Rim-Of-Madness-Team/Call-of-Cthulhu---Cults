@@ -1,3 +1,7 @@
+1.20.0.3 (10-23-2018)
+========================
+Updated Korean language by MisulOpja
+
 1.20.0.2 (10-19-2018)
 ========================
 Added more credits for artwork and portraits used in the mod for the main description.

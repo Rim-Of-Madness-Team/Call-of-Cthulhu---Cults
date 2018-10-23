@@ -1,7 +1,7 @@
-﻿Cthulhu
-Dagon
-Nyarlathotep
-Shub-Niggurath
-Yig
-Yog-Sothoth
-Azathoth
+﻿크툴루
+다곤
+니알라토프
+슈브-니그라스
+이그
+요그-소토스
+아자토스

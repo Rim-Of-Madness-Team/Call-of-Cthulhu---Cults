@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_PsionicBlastDamage.label>정신 폭발</Cults_PsionicBlastDamage.label>
+  <Cults_PsionicBlastDamage.deathMessage>{0}(이)가 살해당했습니다.</Cults_PsionicBlastDamage.deathMessage>
+
+  <Cults_PsionicShockDamage.label>정신 충격</Cults_PsionicShockDamage.label>
+  <Cults_PsionicShockDamage.deathMessage>{0}(이)가 살해당했습니다.</Cults_PsionicShockDamage.deathMessage>
+
+  <Cults_PsionicBurnDamage.label>정신 화상</Cults_PsionicBurnDamage.label>
+  <Cults_PsionicBurnDamage.deathMessage>{0}(이)가 살해당했습니다.</Cults_PsionicBurnDamage.deathMessage>
+
+</LanguageData>
