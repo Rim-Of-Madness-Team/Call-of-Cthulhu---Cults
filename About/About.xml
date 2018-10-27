@@ -3,7 +3,7 @@
   <name>Call of Cthulhu - Cults</name>
   <author>Jecrell</author>
   <targetVersion>1.0.2059</targetVersion>
-  <description>1.20.0.3 (10-23-2018)
+  <description>1.20.0.4 (10-27-2018)
 
 &lt;size=24&gt;Features&lt;/size&gt;
 Gameplay expansion for RimWorld.
@@ -44,6 +44,10 @@ Maaxar, Shibby Says, TheJagermeister, Cory Bonifay, Kiya Nicoll, Matt Harris, Pa
 ========================
 Changelog
 ========================
+1.20.0.4 (10-27-2018)
+========================
+Sanity loss recovery time boosted from 5 percent to 15 percent.
+
 1.20.0.3 (10-23-2018)
 ========================
 Updated Korean language by MisulOpja
