@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_FormlessSpawnRace.label>무형의 낙태아</Cults_FormlessSpawnRace.label>
+  <Cults_FormlessSpawnRace.description>땅속 깊은 곳에 자리를 잡고 차토구아 신전에서 휴식을 취하며 수호자로서의 역할을 합니다. 이들은 끈적끈적한 산성 물질으로 구성되어 있어서 높은 피해와 높은 저항력을 가진 가공할만한 적입니다.</Cults_FormlessSpawnRace.description>
+  <Cults_FormlessSpawnRace.tools.0.label>이빨</Cults_FormlessSpawnRace.tools.0.label>
+  <Cults_FormlessSpawnRace.tools.1.label>왼쪽 발톱</Cults_FormlessSpawnRace.tools.1.label>
+  <Cults_FormlessSpawnRace.tools.2.label>오른쪽 발톱</Cults_FormlessSpawnRace.tools.2.label>
+  <Cults_FormlessSpawnRace.tools.3.label>촉수</Cults_FormlessSpawnRace.tools.3.label>
+  <Cults_FormlessSpawnRace_Leather.label>무형의 낙태아 가죽</Cults_FormlessSpawnRace_Leather.label>
+  <Cults_FormlessSpawnRace_Leather.description>무형의 낙태아 가죽</Cults_FormlessSpawnRace_Leather.description>
+  <Cults_FormlessSpawnRace_Leather.stuffProps.stuffAdjective>무형의 낙태아 가죽</Cults_FormlessSpawnRace_Leather.stuffProps.stuffAdjective>
+  <!-- Meat Amount: 0 -->
+  <Cults_FormlessSpawnRace_Corpse.label>무형의 낙태아 시체</Cults_FormlessSpawnRace_Corpse.label>
+  <Cults_FormlessSpawnRace_Corpse.description>무형의 낙태아 시체</Cults_FormlessSpawnRace_Corpse.description>
+
+  <CH_Leather_FormlessSpawn.label>무형 물질</CH_Leather_FormlessSpawn.label>
+  <CH_Leather_FormlessSpawn.description>.</CH_Leather_FormlessSpawn.description>
+  <CH_Leather_FormlessSpawn.stuffProps.stuffAdjective>무형 물질</CH_Leather_FormlessSpawn.stuffProps.stuffAdjective>
+
+</LanguageData>

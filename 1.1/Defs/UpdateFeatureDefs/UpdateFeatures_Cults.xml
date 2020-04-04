@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <HugsLib.UpdateFeatureDef Abstract="true" Name="JecUpdateFeatureBase">
+        <modNameReadable>Call of Cthulhu - Cults</modNameReadable>
+        <modIdentifier>CultOfCthulhu</modIdentifier>
+        <linkUrl>https://ludeon.com/forums/index.php?topic=26078.0</linkUrl>
+    </HugsLib.UpdateFeatureDef>
+
+    <HugsLib.UpdateFeatureDef ParentName="JecUpdateFeatureBase">
+        <defName>CultOfCthulhu_1_2_1</defName>
+        <assemblyVersion>1.2.1</assemblyVersion>
+        <content>Added an options panel for HugsLib users. |Players using the Tech Advancing mod can now disable successful cults repeatable research.</content>
+    </HugsLib.UpdateFeatureDef>
+</Defs>

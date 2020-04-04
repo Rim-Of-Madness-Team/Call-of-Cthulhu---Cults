@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_Psionic.label>정신 공격</Cults_Psionic.label>
+  <Cults_Psionic.deathMessage>{0}(은)는 머리가 폭발했습니다.</Cults_Psionic.deathMessage>
+
+  <Cults_AcidBurn.label>산화상</Cults_AcidBurn.label>
+  <Cults_AcidBurn.deathMessage>{0}(은)는 녹으며 사망했습니다.</Cults_AcidBurn.deathMessage>
+
+</LanguageData>

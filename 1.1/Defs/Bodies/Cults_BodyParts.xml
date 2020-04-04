@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyPartGroupDef>
+    <defName>Cults_Wings</defName>
+    <label>both wings</label>
+  </BodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>Cults_Claws</defName>
+    <label>claws</label>
+  </BodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>Cults_Hooves</defName>
+    <label>hooves</label>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+    <defName>Cults_Tentacles</defName>
+    <label>mass of tentacles</label>
+  </BodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>Cults_Stinger</defName>
+    <label>stinger</label>
+  </BodyPartGroupDef>
+  
+  <BodyPartGroupDef>
+    <defName>Cults_Mind</defName>
+    <label>overwhelming mind</label>
+  </BodyPartGroupDef>
+
+  <!-- Byakhee -->
+    
+  <BodyPartDef>
+    <defName>Cults_Stinger</defName>
+    <label>stinger</label>
+    <hitPoints>15</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>false</alive>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_Hune</defName>
+    <label>hune</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <bleedRate>1.3</bleedRate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BreathingSource</li>
+    </tags>
+  </BodyPartDef>
+  
+  
+  <BodyPartDef>
+    <defName>Cults_AirSac</defName>
+    <label>air sac</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <bleedRate>1.3</bleedRate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BreathingSource</li>
+    </tags>
+  </BodyPartDef>
+  
+  
+  <!-- Cosmic Horror Parts -->
+  
+  <BodyPartDef>
+    <defName>Cults_LeftClaw</defName>
+	<label>left claw</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>	
+  </BodyPartDef>
+  <BodyPartDef>
+  
+  <defName>Cults_RightClaw</defName>
+    <label>right claw</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>    	
+    <tags>
+      <li>ManipulationLimbSegment</li>
+    </tags>	
+  </BodyPartDef>  
+
+  <BodyPartDef>
+    <defName>Cults_LeftFlipper</defName>
+    <label>left flipper</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Cults_RightFlipper</defName>
+    <label>right flipper</label>
+    <hitPoints>20</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+    
+  <BodyPartDef>
+    <defName>Cults_Leg</defName>
+    <label>leg</label>
+    <hitPoints>30</hitPoints>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+
+  
+  <BodyPartDef>
+    <defName>Cults_Hoof</defName>
+    <label>hoof</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>6</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <alive>false</alive>
+    <tags>
+      <li>MovingLimbSegment</li>
+    </tags>
+  </BodyPartDef>
+  
+  
+  <BodyPartDef>
+    <defName>Cults_Gills</defName>
+    <label>gills</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>BreathingPathway</li>
+    </tags>
+  </BodyPartDef>
+    
+  <BodyPartDef>
+    <defName>Cults_DorsalFin</defName>
+    <label>dorsal fin</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>0.6</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+  </BodyPartDef>
+    
+  
+  <BodyPartDef>
+    <defName>Cults_Tentacle</defName>
+    <label>tentacle</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+    <BodyPartDef>
+    <defName>Cults_TentacleFlight</defName>
+    <label>tentacle</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>8</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>ManipulationLimbCore</li>
+	  <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_LeftWing</defName>
+    <label>left wing</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_RightWing</defName>
+    <label>right wing</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_Nostril</defName>
+    <label>nostril</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Internal_LeftEar</defName>
+    <label>internal left ear</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0.024</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>Internal_RightEar</defName>
+    <label>internal right ear</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0.024</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>HearingSource</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_Maw</defName>
+    <label>maw</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+    </tags>
+  </BodyPartDef>  
+  
+  <BodyPartDef>
+    <defName>Cults_MawHuge</defName>
+    <label>massive maw</label>
+    <hitPoints>40</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <tags>
+      <li>EatingSource</li>
+      <li>TalkingSource</li>
+    </tags>
+  </BodyPartDef>
+  
+  
+  <BodyPartDef>
+    <defName>Cults_ShapeshiftingOrgan</defName>
+    <label>shapeshifting organ</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <tags>
+	  <li>HearingSource</li>
+      <li>MetabolismSource</li>
+      <li>BreathingSource</li>	  
+      <li>BloodFiltrationSource</li>	  
+      <li>BloodFiltrationKidney</li>
+      <li>BloodFiltrationLiver</li>	  
+      <li>EatingPathway</li>	  
+      <li>BloodPumpingSource</li>
+      <li>ConsciousnessSource</li>
+      <li>SightSource</li>
+      <li>ManipulationLimbCore</li>
+      <li>TalkingSource</li>
+    </tags>	
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+  
+    <BodyPartDef>
+    <defName>Cults_Kidney</defName>
+    <label>kidney</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <bleedRate>1.3</bleedRate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BloodFiltrationKidney</li>
+    </tags>
+    <spawnThingOnRemoved>Kidney</spawnThingOnRemoved>
+  </BodyPartDef>
+  
+    <BodyPartDef>
+    <defName>Cults_Lung</defName>
+    <label>lung</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <bleedRate>1.3</bleedRate>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>BreathingSource</li>
+    </tags>
+    <spawnThingOnRemoved>Lung</spawnThingOnRemoved>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_Eye</defName>
+    <label>eye</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>SightSource</li>
+    </tags>
+    <hitChanceFactors>
+      <li>
+        <key>Blunt</key>
+        <value>0</value>
+      </li>
+    </hitChanceFactors>
+  </BodyPartDef>
+
+    <BodyPartDef>
+    <defName>Cults_Feeler</defName>
+    <label>feeler</label>
+    <hitPoints>5</hitPoints>
+    <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
+    <skinCovered>true</skinCovered>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>SightSource</li>
+	  <li>HearingSource</li>	  
+    </tags>
+  </BodyPartDef>
+
+
+ <BodyPartDef>
+    <defName>Cults_SporeHead</defName>
+    <label>spore structure</label>
+    <hitPoints>30</hitPoints>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <tags>
+      <li>SightSource</li>
+	  <li>HearingSource</li>
+    </tags>	
+    <skinCovered>false</skinCovered>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_Sucker</defName>
+    <label>sucker</label>
+    <hitPoints>5</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <bleedRate>0</bleedRate>
+    <beautyRelated>true</beautyRelated>
+    <tags>
+      <li>EatingSource</li>
+    </tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_PsionicLobe</defName>
+    <label>psionic cortex</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <canSuggestAmputation>false</canSuggestAmputation>
+	<tags>
+      <li>ConsciousnessSource</li>
+      <li>TalkingSource</li>
+	  <li>HearingSource</li>
+      <li>SightSource</li>	  
+	</tags>
+  </BodyPartDef>
+  
+  <BodyPartDef>
+    <defName>Cults_northalLobe</defName>
+    <label>frontal lobe</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <canSuggestAmputation>false</canSuggestAmputation>
+	<tags>
+      <li>ConsciousnessSource</li>	
+	  <li>TalkingSource</li>	
+	</tags>
+  </BodyPartDef>
+ 
+  <BodyPartDef>
+    <defName>Cults_ParietalLobe</defName>
+    <label>parietal lobe</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <canSuggestAmputation>false</canSuggestAmputation>
+	<tags>
+      <li>ConsciousnessSource</li>		
+    </tags>	  
+  </BodyPartDef>
+ 
+  <BodyPartDef>
+    <defName>Cults_OccipitalLobe</defName>
+    <label>occipital lobe</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>	
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+ 
+  <BodyPartDef>
+    <defName>Cults_TemporalLobe</defName>
+    <label>temporal lobe</label>
+    <hitPoints>10</hitPoints>
+    <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>	
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+ 
+  <BodyPartDef>
+    <defName>Cults_BrainStem</defName>
+    <label>brain stem</label>
+    <hitPoints>30</hitPoints>
+    <permanentInjuryChanceFactor>1</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <tags>
+      <li>ConsciousnessSource</li>
+    </tags>
+    <canSuggestAmputation>false</canSuggestAmputation>
+  </BodyPartDef>
+ 
+   <BodyPartDef>
+    <defName>Cults_FlightOrgan</defName>
+    <label>flight organ</label>
+    <hitPoints>40</hitPoints>
+    <frostbiteVulnerability>0.5</frostbiteVulnerability>
+    <permanentInjuryChanceFactor>0.08</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <tags>
+	  <li>MovingLimbCore</li>
+    </tags>
+  </BodyPartDef>
+  
+</Defs>

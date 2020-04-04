@@ -200,9 +200,7 @@ namespace CultOfCthulhu
 
             Settlement factionBase = (Settlement)this.Map.info.parent;
 
-            Messages.Message("WorshipGathering".Translate(new object[] {
-                factionBase.Label
-        }), TargetInfo.Invalid, MessageTypeDefOf.NeutralEvent);
+            Messages.Message("WorshipGathering".Translate(factionBase.Label), TargetInfo.Invalid, MessageTypeDefOf.NeutralEvent);
             ChangeState(State.worshipping, WorshipState.started);
             //this.currentState = State.started;
             //Map.GetComponent<MapComponent_SacrificeTracker>().lastResult = CultUtility.SacrificeResult.none;

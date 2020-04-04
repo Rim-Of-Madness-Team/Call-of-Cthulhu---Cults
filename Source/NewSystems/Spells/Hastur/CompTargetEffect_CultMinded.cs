@@ -15,10 +15,9 @@ namespace CultOfCthulhu
             }
             Cthulhu.Utility.ApplySanityLoss(pawn, 0.9f);
             CultUtility.AffectCultMindedness(pawn, 0.99f, 0.99f);
-            Messages.Message("CompTargetEffectCultMinded".Translate(new object[]
-            {
+            Messages.Message("CompTargetEffectCultMinded".Translate(
                 pawn.Label
-            }), MessageTypeDefOf.NeutralEvent);
+            ), MessageTypeDefOf.NeutralEvent);
             //pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, false, false, null);
         }
     }

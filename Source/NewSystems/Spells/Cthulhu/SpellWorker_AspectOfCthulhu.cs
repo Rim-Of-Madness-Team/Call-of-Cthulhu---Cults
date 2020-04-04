@@ -135,7 +135,8 @@ namespace CultOfCthulhu
 
                     if (isEye) pawn.health.AddHediff(CultsDefOf.Cults_CthulhidEyestalk, tempRecord, null);
                     else pawn.health.AddHediff(CultsDefOf.Cults_CthulhidTentacle, tempRecord, null);
-                    Messages.Message("Cults_AspectOfCthulhuDesc".Translate(new object[] { pawn.LabelShort, tempRecord.def.label }), MessageTypeDefOf.PositiveEvent);
+                    Messages.Message("Cults_AspectOfCthulhuDesc".Translate(
+                        pawn.LabelShort, tempRecord.def.label), MessageTypeDefOf.PositiveEvent);
                     pawn.Map.GetComponent<MapComponent_SacrificeTracker>().lastLocation = pawn.Position;
                     foundPawn = true;
                 }

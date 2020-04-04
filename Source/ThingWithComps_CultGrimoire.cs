@@ -30,7 +30,7 @@ namespace CultOfCthulhu
             Command_Action command_Action = new Command_Action();
             command_Action.action = delegate
             {
-                SoundDefOf.SelectDesignator.PlayOneShotOnCamera();
+                SoundDefOf.ThingSelected.PlayOneShotOnCamera();
                 //des.SetStuffDef(stuff);
                 des.ProcessInput(new UnityEngine.Event());
                 Find.DesignatorManager.Select(des);

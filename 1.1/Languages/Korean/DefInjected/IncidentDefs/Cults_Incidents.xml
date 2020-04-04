@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <CultIncident_StarsAreWrong.label>부정한 별</CultIncident_StarsAreWrong.label>
+    <CultIncident_StarsAreWrong.letterLabel>별의 타락.</CultIncident_StarsAreWrong.letterLabel>
+    <CultIncident_StarsAreWrong.letterText>우주의 법칙에서 벗어난 별이 마치 경멸과 증오에 찬 모습으로 우리를 자극하는 것 같습니다. 이 기간 동안에는 희생의식을 진행하지 않는 것이 좋을 것 같습니다.</CultIncident_StarsAreWrong.letterText>
+
+    <CultIncident_StarsAreRight.label>질서의 별</CultIncident_StarsAreRight.label>
+    <CultIncident_StarsAreRight.letterLabel>올곧은 별</CultIncident_StarsAreRight.letterLabel>
+    <CultIncident_StarsAreRight.letterText>행성들이 정렬되기 시작합니다. 다른 세상의 '무엇'은 정착림들을 부르고 있는 것 같습니다.</CultIncident_StarsAreRight.letterText>
+
+    <CultSeedIncident_TreeOfNightmares.label>악몽의 나무(Tree Of Nightmare)</CultSeedIncident_TreeOfNightmares.label>
+    <CultSeedIncident_TreeOfNightmares.description>이게 뭐야?</CultSeedIncident_TreeOfNightmares.description>
+    <CultSeedIncident_TreeOfNightmares.letterLabel>악몽의 나무(Tree Of Nightmare)</CultSeedIncident_TreeOfNightmares.letterLabel>
+    <CultSeedIncident_TreeOfNightmares.letterText>그것은 영혼을 통하여 모든것을 꿰뚫어 보는 것 같습니다.</CultSeedIncident_TreeOfNightmares.letterText>
+
+    <CultSeedIncident_NightmareMonolith.label>모노리스(Monolith)</CultSeedIncident_NightmareMonolith.label>
+    <CultSeedIncident_NightmareMonolith.description>이게 뭐야?</CultSeedIncident_NightmareMonolith.description>
+    <CultSeedIncident_NightmareMonolith.letterLabel>모노리스(Monolith)</CultSeedIncident_NightmareMonolith.letterLabel>
+    <CultSeedIncident_NightmareMonolith.letterText>그것은 영혼을 통하여 모든것을 꿰뚫어 보는 것 같습니다.</CultSeedIncident_NightmareMonolith.letterText>
+
+</LanguageData>

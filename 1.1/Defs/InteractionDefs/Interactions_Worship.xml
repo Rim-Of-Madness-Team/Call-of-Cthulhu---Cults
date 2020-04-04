@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Random social interactions -->
+  
+  <InteractionDef>
+    <defName>Cults_SafePreach</defName>
+    <label>shared occult ideas</label>
+	
+    <workerClass>CultOfCthulhu.InteractionWorker_SafePreach</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/DeepTalk</symbol>
+	
+    <recipientThought>Cults_SafePreach</recipientThought>
+	
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>30</initiatorXpGainAmount>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->Shared beliefs with [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <logRulesRecipient>
+      <rulesStrings>
+        <li>r_logentry->Heard beliefs from [other_nameShortIndef].</li>
+      </rulesStrings>
+    </logRulesRecipient>
+  </InteractionDef>
+  
+  <InteractionDef>
+    <defName>Cults_DangerPreach</defName>
+    <label>shared occult ideas</label>
+    <workerClass>CultOfCthulhu.InteractionWorker_DangerPreach</workerClass>
+    <symbol>Things/Mote/SpeechSymbols/Insult</symbol>
+    <recipientThought>Cults_DangerPreach</recipientThought>
+    <socialFightBaseChance>0.07</socialFightBaseChance>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry->Offended [other_nameShortIndef]'s beliefs.</li>
+      </rulesStrings>
+    </logRulesInitiator>
+    <logRulesRecipient>
+      <rulesStrings>
+        <li>r_logentry->Was offended by [other_nameShortIndef]'s religious ideas.</li>
+      </rulesStrings>
+    </logRulesRecipient>
+  </InteractionDef>
+  
+</Defs>

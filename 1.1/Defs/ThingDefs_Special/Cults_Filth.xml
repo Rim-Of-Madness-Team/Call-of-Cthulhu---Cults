@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>Cults_FilthBlackSlime</defName>
+    <label>black slime</label>
+    <statBases>
+      <Beauty>-25</Beauty>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Filth/Spatter</texPath>
+      <color>(10, 10, 10, 170)</color>
+    </graphicData>
+    <filth>
+      <rainWashes>true</rainWashes>
+      <cleaningWorkToReduceThickness>70</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+    </filth>
+  </ThingDef>
+  
+  
+  <ThingDef ParentName="BaseFilth">
+    <defName>Cults_TransmogAura</defName>
+    <label>transmog aura</label>
+    <graphicData>
+      <texPath>Mote/Aura/TransmogAura</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <filth>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <placementMask>Terrain</placementMask>
+      <canFilthAttach>true</canFilthAttach>
+    </filth>
+  </ThingDef>
+
+  
+</Defs>

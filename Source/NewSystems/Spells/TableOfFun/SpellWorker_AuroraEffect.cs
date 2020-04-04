@@ -44,7 +44,7 @@ namespace CultOfCthulhu
         {
             Map map = (Map)target;
             //Cthulhu.Utility.DebugReport("Generating Map Condition");
-            GameCondition_AuroraEffect GameCondition = (GameCondition_AuroraEffect)GameConditionMaker.MakeCondition(CultsDefOf.Cults_Aurora, duration, 0);
+            GameCondition_AuroraEffect GameCondition = (GameCondition_AuroraEffect)GameConditionMaker.MakeCondition(CultsDefOf.Cults_Aurora, duration);
             string text3 = "";
             //Cthulhu.Utility.DebugReport("Getting coords.");
             Vector2 coords = Find.WorldGrid.LongLatOf(map.Tile);
@@ -57,10 +57,9 @@ namespace CultOfCthulhu
                 text3 = "Australis";
             }
             //Cthulhu.Utility.DebugReport("Getting label");
-            string textLabel = "LetterLabelAurora".Translate(new object[]
-            {
+            string textLabel = "LetterLabelAurora".Translate(
                 text3
-            });
+            );
             //Cthulhu.Utility.DebugReport("Registering Conditions");
             map.GameConditionManager.RegisterCondition(GameCondition);
             string textDesc = "LetterIncidentAurora".Translate();

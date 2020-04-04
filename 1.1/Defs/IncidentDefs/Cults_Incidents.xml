@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	 <IncidentDef>
+	  <defName>CultIncident_StarsAreWrong</defName>
+	  <label>stars are wrong</label>
+		<targetTags>
+		  <li>World</li>
+		</targetTags>
+	  <category>Misc</category>
+	  <workerClass>CultOfCthulhu.IncidentWorker_MakeCultgameCondition</workerClass>
+	  <gameCondition>CultgameCondition_StarsAreWrong</gameCondition>
+	  <letterLabel>The Stars Are Wrong</letterLabel>
+	  <letterText>Unbound to the proper order of the cosmos, the stars themselves seem to sting our eyes with a hateful scorn.</letterText>
+	  <letterDef>NegativeEvent</letterDef>
+	  <baseChance>3</baseChance>
+	  <minRefireDays>30</minRefireDays>
+	  <durationDays>
+	    <min>2.0</min>
+	    <max>3.0</max>
+	  </durationDays>
+	 </IncidentDef>
+    <gameConditionDef>
+      <defName>CultgameCondition_StarsAreWrong</defName>
+      <conditionClass>CultOfCthulhu.gameCondition_StarsAreWrong</conditionClass>
+      <label>stars are wrong</label>
+      <description>Unbound to the proper order of the cosmos, the stars themselves seem to sting our eyes with a hateful scorn. Sacrifices are discouraged during this period.</description>
+      <endMessage>The stars as we know them have returned</endMessage>
+      <canBePermanent>true</canBePermanent>
+    </gameConditionDef>
+
+	 <IncidentDef>
+	  <defName>CultIncident_StarsAreRight</defName>
+	  <label>stars are right</label>
+    <targetTags>
+      <li>World</li>
+    </targetTags>
+	  <category>Misc</category>
+	  <workerClass>CultOfCthulhu.IncidentWorker_MakeCultgameCondition</workerClass>
+	  <gameCondition>CultgameCondition_StarsAreRight</gameCondition>
+	  <letterLabel>The Stars Are Right</letterLabel>
+	  <letterText>The planets of the system have aligned. Otherworldly bodies seem to call to your colonists.</letterText>
+	  <letterDef>PositiveEvent</letterDef>
+	  <baseChance>3</baseChance>
+	  <minRefireDays>30</minRefireDays>
+	  <durationDays>
+	    <min>2.0</min>
+	    <max>3.0</max>
+	  </durationDays>
+	 </IncidentDef>
+    <gameConditionDef>
+      <defName>CultgameCondition_StarsAreRight</defName>
+      <conditionClass>CultOfCthulhu.gameCondition_StarsAreRight</conditionClass>
+      <label>stars are right</label>
+      <description>The planets of the system have auspiciously aligned. Plants and animals will flourish and cult sacrifices will receive bonuses.</description>
+      <endMessage>Celestial bodies are no longer in alignment.</endMessage>
+      <canBePermanent>true</canBePermanent>
+    </gameConditionDef>
+
+	<!-- Cult Seed Incidents -->
+    <IncidentDef>
+		<label>Tree of Nightmares</label>	
+		<description>What is this thing?</description>
+		<category>Misc</category>
+		<defName>CultSeedIncident_TreeOfNightmares</defName>
+		<workerClass>CultOfCthulhu.IncidentWorker_CultSeed_NightmareTree</workerClass>
+		<targetTags>
+          <li>Map_PlayerHome</li>
+        </targetTags>
+		<letterLabel>Tree of Nightmares</letterLabel>
+		<letterText>It gazes through the souls of all that pass it.</letterText>
+	</IncidentDef> 
+
+	<IncidentDef>
+		<label>Monolith</label>	
+		<description>What is this thing?</description>
+		<category>Misc</category>
+		<defName>CultSeedIncident_NightmareMonolith</defName>
+		<workerClass>CultOfCthulhu.IncidentWorker_CultSeed_NightmareMonolith</workerClass>
+        <targetTags>
+          <li>Map_PlayerHome</li>
+        </targetTags>
+		<letterLabel>Monolith</letterLabel>
+		<letterText>It gazes through the souls of all that pass it.</letterText>
+	</IncidentDef> 
+	
+</Defs>

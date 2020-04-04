@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <FoundedCult.label>Основан местный культ</FoundedCult.label>
+  <FoundedCult.rulePack.rulesStrings.0>tale_noun->[pawn_nameShortDef] создание культа</FoundedCult.rulePack.rulesStrings.0>
+  <FoundedCult.rulePack.rulesStrings.1>image->[pawn_nameFull] формирование культа [circumstance_group]</FoundedCult.rulePack.rulesStrings.1>
+  <FoundedCult.rulePack.rulesStrings.2>image->[pawn_nameFull] предсказание культа [circumstance_group]</FoundedCult.rulePack.rulesStrings.2>
+  <FoundedCult.rulePack.rulesStrings.3>image->[pawn_nameFull] основание культа [circumstance_group]</FoundedCult.rulePack.rulesStrings.3>
+  <FoundedCult.rulePack.rulesStrings.4>circumstance_phrase->впереди [terrainfeature]</FoundedCult.rulePack.rulesStrings.4>
+  <FoundedCult.rulePack.rulesStrings.5>circumstance_phrase->с невероятной мудростью</FoundedCult.rulePack.rulesStrings.5>
+  <FoundedCult.rulePack.rulesStrings.6>circumstance_phrase->в полном отчаянии</FoundedCult.rulePack.rulesStrings.6>
+  <FoundedCult.rulePack.rulesStrings.7>circumstance_phrase->с невиданными богами, но наблюдая</FoundedCult.rulePack.rulesStrings.7>
+  <FoundedCult.rulePack.rulesStrings.8>desc_sentence->[pawn_pronoun] страстно пишет на кожаном фолианте.</FoundedCult.rulePack.rulesStrings.8>
+  <FoundedCult.rulePack.rulesStrings.9>desc_sentence->[pawn_pronoun] имеет [pawn_possessive] закрытые глаза и произносит слова на неземных языках.</FoundedCult.rulePack.rulesStrings.9>
+  <FoundedCult.rulePack.rulesStrings.10>desc_sentence->[pawn_pronoun] улыбается с мрачной радостью.</FoundedCult.rulePack.rulesStrings.10>
+  <FoundedCult.rulePack.rulesStrings.11>desc_sentence->[pawn_pronoun] похоже, понятия не имеет, что [pawn_pronoun] делается.</FoundedCult.rulePack.rulesStrings.11>
+  <FoundedCult.rulePack.rulesStrings.12>desc_sentence->[pawn_pronoun] дрожит с [pawn_possessive] закрытыми глазами, боится [pawn_possessive] открыть.</FoundedCult.rulePack.rulesStrings.12>
+  <FoundedCult.rulePack.rulesStrings.13>desc_sentence->Рядом [animal] заперто, смотрит [pawn_objective] с мрачными и ненавистными глазами.</FoundedCult.rulePack.rulesStrings.13>
+
+  <ObservedNightmareTree.label>Наблюдение дерева ночных кошмаров</ObservedNightmareTree.label>
+  <ObservedNightmareTree.rulePack.rulesStrings.0>tale_noun->время [pawn_nameShortDef] наблюдать жуткое дерево</ObservedNightmareTree.rulePack.rulesStrings.0>
+  <ObservedNightmareTree.rulePack.rulesStrings.1>image->[pawn_nameFull] глядит в темные ветви другого потустороннего дерева, с вырезанными ужасающими символами [circumstance_group]</ObservedNightmareTree.rulePack.rulesStrings.1>
+  <ObservedNightmareTree.rulePack.rulesStrings.2>circumstance_phrase->в абсолютной растерянности</ObservedNightmareTree.rulePack.rulesStrings.2>
+  <ObservedNightmareTree.rulePack.rulesStrings.3>circumstance_phrase->в полном ужасе</ObservedNightmareTree.rulePack.rulesStrings.3>
+  <ObservedNightmareTree.rulePack.rulesStrings.4>desc_sentence->[pawn_pronoun] кажется совершенно не осведомлен о том, что вокруг [pawn_objective].</ObservedNightmareTree.rulePack.rulesStrings.4>
+  <ObservedNightmareTree.rulePack.rulesStrings.5>desc_sentence->[pawn_possessive] кажется само лицо неестественно перекосило.</ObservedNightmareTree.rulePack.rulesStrings.5>
+  <ObservedNightmareTree.rulePack.rulesStrings.6>desc_sentence->[pawn_pronoun] судорожно трясёт.</ObservedNightmareTree.rulePack.rulesStrings.6>
+
+  <ObservedNightmareMonolith.label>Наблюдение монолита</ObservedNightmareMonolith.label>
+  <ObservedNightmareMonolith.rulePack.rulesStrings.0>tale_noun->[pawn_nameShortDef] наблюдать за монолитом</ObservedNightmareMonolith.rulePack.rulesStrings.0>
+  <ObservedNightmareMonolith.rulePack.rulesStrings.1>image->[pawn_nameFull] уставился(ась) на потусторонний монолит, который тянется в облака [circumstance_group]</ObservedNightmareMonolith.rulePack.rulesStrings.1>
+  <ObservedNightmareMonolith.rulePack.rulesStrings.2>circumstance_phrase->в абсолютной растерянности</ObservedNightmareMonolith.rulePack.rulesStrings.2>
+  <ObservedNightmareMonolith.rulePack.rulesStrings.3>circumstance_phrase->в полном ужасе</ObservedNightmareMonolith.rulePack.rulesStrings.3>
+  <ObservedNightmareMonolith.rulePack.rulesStrings.4>desc_sentence->[pawn_pronoun] кажется совершенно не осведомлен о том, что вокруг [pawn_objective].</ObservedNightmareMonolith.rulePack.rulesStrings.4>
+  <ObservedNightmareMonolith.rulePack.rulesStrings.5>desc_sentence->[pawn_possessive] кажется само лицо неестественно перекосило.</ObservedNightmareMonolith.rulePack.rulesStrings.5>
+  <ObservedNightmareMonolith.rulePack.rulesStrings.6>desc_sentence->[pawn_pronoun] судорожно трясёт.</ObservedNightmareMonolith.rulePack.rulesStrings.6>
+
+  <HeldSermon.label>Проведение проповеди</HeldSermon.label>
+  <HeldSermon.rulePack.rulesStrings.0>tale_noun->[pawn_nameShortDef] провел(а) проповедь</HeldSermon.rulePack.rulesStrings.0>
+  <HeldSermon.rulePack.rulesStrings.1>image->[pawn_nameFull] стоял(а) за кафедрой, для проведения проповеди [circumstance_group]</HeldSermon.rulePack.rulesStrings.1>
+  <HeldSermon.rulePack.rulesStrings.2>circumstance_phrase->с абсолютной убежденностью</HeldSermon.rulePack.rulesStrings.2>
+  <HeldSermon.rulePack.rulesStrings.3>circumstance_phrase->дрожа от страха</HeldSermon.rulePack.rulesStrings.3>
+  <HeldSermon.rulePack.rulesStrings.4>desc_sentence->[pawn_pronoun] предвидя конец света.</HeldSermon.rulePack.rulesStrings.4>
+  <HeldSermon.rulePack.rulesStrings.5>desc_sentence->[pawn_possessive] с отвисшим ртом, безвольно, как другого мира щупальцами потянулся(ась) за [pawn_objective].</HeldSermon.rulePack.rulesStrings.5>
+  <HeldSermon.rulePack.rulesStrings.6>desc_sentence->[pawn_pronoun] будучи обманутым(ой) неописуемым существом, нависшим над храмом.</HeldSermon.rulePack.rulesStrings.6>
+
+
+</LanguageData>

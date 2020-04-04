@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Misc -->
+
+  <Cults_PruneAndRepair.reportString>обрезает и ремонтирует TarjetA.</Cults_PruneAndRepair.reportString>
+
+
+  <!-- PawnFlying -->
+
+  <Cults_EnterTransporterPawn.reportString>входит в TarjetA.</Cults_EnterTransporterPawn.reportString>
+
+
+  <!-- Special -->
+
+  <Cults_MidnightInquisition.reportString>Берет дело в свои руки.</Cults_MidnightInquisition.reportString>
+
+
+  <!-- Offerings -->
+
+  <Cults_GiveOffering.reportString>собирает пожертвования на TargetA.</Cults_GiveOffering.reportString>
+  <Cults_ReflectOnOffering.reportString>размышляет о пожертвовании</Cults_ReflectOnOffering.reportString>
+
+
+  <!-- Sacrifice -->
+
+  <Cults_HoldSacrifice.reportString>приносит жертву.</Cults_HoldSacrifice.reportString>
+  <Cults_AttendSacrifice.reportString>посещает жертву.</Cults_AttendSacrifice.reportString>
+  <Cults_ReflectOnResult.reportString>размышляет о результатах.</Cults_ReflectOnResult.reportString>
+  <Cults_WaitTiedDown.reportString>связанный.</Cults_WaitTiedDown.reportString>
+
+
+  <!-- Worship -->
+
+  <Cults_HoldWorship.reportString>проводит проповедь.</Cults_HoldWorship.reportString>
+  <Cults_AttendWorship.reportString>посещает проповедь.</Cults_AttendWorship.reportString>
+  <Cults_ReflectOnWorship.reportString>размышляет о поклонении.</Cults_ReflectOnWorship.reportString>
+
+
+  <!-- Let's go -->
+
+  <Cults_Investigate.reportString>расследует TargetB.</Cults_Investigate.reportString>
+  <Cults_WriteTheBook.reportString>пишет в бешенстве.</Cults_WriteTheBook.reportString>
+
+
+</LanguageData>

@@ -42,8 +42,6 @@ namespace CallOfCthulhu
 
 		private float creationRealTime = -1f;
 
-		private static Action cache;
-
 		public Dialog_CosmicEntityInfoBox(CosmicEntity entity)
 		{
 			this.text = entity.Info();

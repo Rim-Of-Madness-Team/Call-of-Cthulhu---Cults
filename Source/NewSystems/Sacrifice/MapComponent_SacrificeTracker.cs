@@ -52,7 +52,7 @@ namespace CultOfCthulhu
         public IncidentDef lastSideEffect = null;
         public IncidentDef lastSpell = null;
         public Building_SacrificialAltar lastUsedAltar = null; //Default
-        public CultUtility.SacrificeResult lastResult = CultUtility.SacrificeResult.none; // Default
+        public CultUtility.SacrificeResult lastResult = CultUtility.SacrificeResult.success; // Default is a success, so that in-case of a bug, it's a positive bug.
         public CultUtility.SacrificeType lastSacrificeType = CultUtility.SacrificeType.none;
         public CultUtility.OfferingSize lastOfferingSize = CultUtility.OfferingSize.none;
 
@@ -115,10 +115,7 @@ namespace CultOfCthulhu
             StringBuilder s = new StringBuilder();
             int ran = Rand.Range(1, 40);
             string message = "SacrificeFailMessage" + ran.ToString();
-            string messageObject = message.Translate(new object[]
-            {
-                    lastUsedAltar.SacrificeData.Executioner
-            });
+            string messageObject = message.Translate(lastUsedAltar.SacrificeData.Executioner);
             s.Append(messageObject);
             return s.ToString();
         }
@@ -144,13 +141,12 @@ namespace CultOfCthulhu
                     if (lastUsedAltar.SacrificeData.Executioner == null) Log.Error("Executioner null");
                     if (lastRelation == null) Log.Error("Null relation");
                     if (lastSacrificeName == null) Log.Error("Null name");
-                    string familyString = "HumanSacrificeWasFamily".Translate((new object[]
-                    {
+                    string familyString = "HumanSacrificeWasFamily".Translate(
                             lastUsedAltar.SacrificeData.Executioner.LabelShort,
                             lastUsedAltar.SacrificeData.Executioner.gender.GetPossessive(),
                             lastRelation.label,
                             lastSacrificeName
-                    }));
+                    );
                     s.Append(familyString + ". ");
                 }
 
@@ -206,20 +202,18 @@ namespace CultOfCthulhu
                 if (ASMwasPet) s.Append(" " + "AnimalSacrificeWasPet".Translate() + lastUsedAltar.SacrificeData.Entity.Label + ".");
                 if (ASMwasBonded)
                 {
-                    string bondString = "AnimalSacrificeWasBonded".Translate((new object[]
-                    {
+                    string bondString = "AnimalSacrificeWasBonded".Translate(
                             lastSacrificeName,
                             lastUsedAltar.SacrificeData.Executioner.LabelShort
-                    }));
+                    );
                     s.Append(" " + bondString +".");
                 }
                 if (ASMwasExcMaster)
                 {
-                    string bondString = "AnimalSacrificeWasExcMaster".Translate((new object[]
-                    {
+                    string bondString = "AnimalSacrificeWasExcMaster".Translate(
                             lastSacrificeName,
                             lastUsedAltar.SacrificeData.Executioner.LabelShort
-                    }));
+                    );
                     s.Append(" " + bondString + ".");
                 }
                 if (ASMwasBonded || ASMwasPet || ASMwasExcMaster)
@@ -270,7 +264,7 @@ namespace CultOfCthulhu
             Scribe_Defs.Look<IncidentDef>(ref this.lastSideEffect, "lastSideEffect");
             Scribe_Defs.Look<IncidentDef>(ref this.lastSpell, "lastSpell");
             Scribe_References.Look<Building_SacrificialAltar>(ref this.lastUsedAltar, "lastUsedAltar", false);
-            Scribe_Values.Look<CultUtility.SacrificeResult>(ref this.lastResult, "lastResult", CultUtility.SacrificeResult.none, false);
+            Scribe_Values.Look<CultUtility.SacrificeResult>(ref this.lastResult, "lastResult", CultUtility.SacrificeResult.success, false);
             Scribe_Values.Look<CultUtility.SacrificeType>(ref this.lastSacrificeType, "lastSacrificeType", CultUtility.SacrificeType.none, false);
             Scribe_Values.Look<CultUtility.OfferingSize>(ref this.lastOfferingSize, "lastOfferingSize", CultUtility.OfferingSize.none, false);
             base.ExposeData();

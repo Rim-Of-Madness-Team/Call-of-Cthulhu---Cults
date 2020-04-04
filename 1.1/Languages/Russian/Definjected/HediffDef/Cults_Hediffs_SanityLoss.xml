@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_SanityLoss.label>потеря здравомыслия</Cults_SanityLoss.label>
+  <Cults_SanityLoss.stages.0.label>напряженно-скрытая</Cults_SanityLoss.stages.0.label>
+  <Cults_SanityLoss.stages.1.label>начальная</Cults_SanityLoss.stages.1.label>
+  <Cults_SanityLoss.stages.2.label>незначительная</Cults_SanityLoss.stages.2.label>
+  <Cults_SanityLoss.stages.3.label>сильная</Cults_SanityLoss.stages.3.label>
+  <Cults_SanityLoss.stages.4.label>серьёзная</Cults_SanityLoss.stages.4.label>
+  <Cults_SanityLoss.stages.5.label>экстремальная</Cults_SanityLoss.stages.5.label>
+
+
+</LanguageData>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!--============= Cults Think Tree ============-->
+  
+  <ThinkTreeDef>
+    <defName>Cults_DeepSleepCarcosa</defName>
+    <insertTag>Humanlike_PostMentalState</insertTag>	
+	<insertPriority>104</insertPriority>
+    <thinkRoot Class="ThinkNode_Priority">
+      <subNodes>
+		<li Class="ThinkNode_ConditionalMentalState">
+			<state>Cults_DeepSleepCarcosa</state>
+			<subNodes>
+				<li Class="ThinkNode_Priority">
+					<subNodes>
+						<li Class="CultOfCthulhu.JobGiver_DeepSleepCarcosa">
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</li>
+		<li Class="ThinkNode_ConditionalMentalState">
+			<state>Cults_Disillusioned</state>
+			<subNodes>
+				<li Class="ThinkNode_Priority">
+					<subNodes>
+						<li Class="CultOfCthulhu.JobGiver_Disillusioned">
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</li>		
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+
+  
+</Defs>

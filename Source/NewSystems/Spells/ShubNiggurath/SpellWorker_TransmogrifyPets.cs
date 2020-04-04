@@ -74,10 +74,9 @@ namespace CultOfCthulhu
                 pawn = PetsToTransmogrify(map).RandomElement<Pawn>();
             }
 
-            Messages.Message("Cults_TransmogrifyAnimalsOnly".Translate(new object[]
-            {
+            Messages.Message("Cults_TransmogrifyAnimalsOnly".Translate(
                 pawn.LabelShort
-            }), MessageTypeDefOf.NeutralEvent);
+            ), MessageTypeDefOf.NeutralEvent);
 
 
             TargetingParameters parms = new TargetingParameters();
@@ -98,10 +97,8 @@ namespace CultOfCthulhu
                             compTrans.IsTransmogrified = true;
                             foundTarget = true;
                             Messages.Message("Cults_TransmogrifyMessage".Translate(
-                                new object[] //Cults_AspectOfCthulhu_TargetACharacter
-                                {
                                     pawn.LabelShort
-                                }), MessageTypeDefOf.PositiveEvent);
+                                ), MessageTypeDefOf.PositiveEvent);
                         }
                     }
                 }

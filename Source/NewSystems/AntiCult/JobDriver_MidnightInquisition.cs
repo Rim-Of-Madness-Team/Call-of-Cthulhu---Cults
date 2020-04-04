@@ -98,15 +98,14 @@ namespace CultOfCthulhu
                     if (!this.notifiedPlayer && PawnUtility.ShouldSendNotificationAbout(prey))
                     {
                         this.notifiedPlayer = true;
-                        if (Prefs.PauseOnUrgentLetter && !Find.TickManager.Paused)
+                        if (Prefs.AutomaticPauseMode > AutomaticPauseMode.Never && !Find.TickManager.Paused)
                         {
                             Find.TickManager.TogglePaused();
                         }
-                        Messages.Message("MessageAttackedByPredator".Translate(new object[]
-                        {
+                        Messages.Message("MessageAttackedByPredator".Translate(
                             prey.LabelShort,
-                            this.pawn.LabelShort,
-                        }).CapitalizeFirst(), prey, MessageTypeDefOf.ThreatBig);
+                            this.pawn.LabelShort
+                        ).CapitalizeFirst(), prey, MessageTypeDefOf.ThreatBig);
                     }
                     this.pawn.Map.attackTargetsCache.UpdateTarget(this.pawn);
                 }

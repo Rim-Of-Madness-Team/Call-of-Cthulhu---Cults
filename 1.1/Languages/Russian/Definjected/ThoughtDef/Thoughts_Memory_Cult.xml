@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Cult Seed Incidents -->
+
+  <Cults_ObservedNightmareTree.stages.0.label>Наблюдает жуткое древо</Cults_ObservedNightmareTree.stages.0.label>
+  <Cults_ObservedNightmareTree.stages.0.description>Это дерево... его раньше не было. Я в этом уверен(а).</Cults_ObservedNightmareTree.stages.0.description>
+
+  <Cults_ObservedNightmareTreeCultist.stages.0.label>Наблюдает святое дерево</Cults_ObservedNightmareTreeCultist.stages.0.label>
+  <Cults_ObservedNightmareTreeCultist.stages.0.description>Такие чудесные знаки должны быть сохранены.</Cults_ObservedNightmareTreeCultist.stages.0.description>
+
+  <Cults_ObservedNightmareMonolith.stages.0.label>Наблюдает монолит</Cults_ObservedNightmareMonolith.stages.0.label>
+  <Cults_ObservedNightmareMonolith.stages.0.description>Как он сюда попал? Что означают эти символы? Эта вещь меня пугает.</Cults_ObservedNightmareMonolith.stages.0.description>
+
+  <Cults_ObservedNightmareMonolithCultist.stages.0.label>Наблюдает монолит</Cults_ObservedNightmareMonolithCultist.stages.0.label>
+  <Cults_ObservedNightmareMonolithCultist.stages.0.description>Символы - это знаки богов. Мы должны их сохранить.</Cults_ObservedNightmareMonolithCultist.stages.0.description>
+
+
+  <!-- Cultist Status Thought Memories -->
+
+  <Cults_FoundedCult.stages.0.label>Основал(а) местный культ</Cults_FoundedCult.stages.0.label>
+
+  <Cults_FoundedCultMood.stages.0.label>Основал(а) культ</Cults_FoundedCultMood.stages.0.label>
+  <Cults_FoundedCultMood.stages.0.description>Я должен сказать всем. Теперь все ясно и они должны знать правду. Нас ждут великие дела.</Cults_FoundedCultMood.stages.0.description>
+
+  <Cults_JoinedCult.stages.0.label>Присоединился(ась) к местному культу</Cults_JoinedCult.stages.0.label>
+
+  <Cults_JoinedCultMood.stages.0.label>Присоединился(ась) к культу</Cults_JoinedCultMood.stages.0.label>
+  <Cults_JoinedCultMood.stages.0.description>Сейчас я часть чего-то большего.</Cults_JoinedCultMood.stages.0.description>
+
+  <Cults_MadeInvestigation.stages.0.label>Исследовал(а) странные вещи</Cults_MadeInvestigation.stages.0.label>
+
+  <Cults_MadeInvestigationMood.stages.0.label>Проведено исследование</Cults_MadeInvestigationMood.stages.0.label>
+  <Cults_MadeInvestigationMood.stages.0.description>ι нανє ℓσσкє∂ υρσи αℓℓ тнαт тнє υиινєяѕє нαѕ тσ нσℓ∂ σf нσяяσя, αи∂ єνєи тнє ѕкιєѕ σf ѕρяιиg αи∂ тнє fℓσωєяѕ σf ѕυммєя мυѕт єνєя αfтєяωαя∂ вє ρσιѕσи тσ мє.̤̤</Cults_MadeInvestigationMood.stages.0.description>
+
+  <Cults_BlackoutBook.stages.0.label>Приобрел(а) оккультный гримуар</Cults_BlackoutBook.stages.0.label>
+  <Cults_BlackoutBook.stages.0.description>Я отключился. Я не помню. Впоследствии, когда я побежал пальцами по книге, я почувствовал(а), что это называет мое имя. Я схожу с ума?</Cults_BlackoutBook.stages.0.description>
+
+
+</LanguageData>

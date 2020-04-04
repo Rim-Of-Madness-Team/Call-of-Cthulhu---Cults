@@ -866,10 +866,9 @@ namespace CultOfCthulhu
             }
             if (oldDefName == "") return;
             var newAltar = ReplaceAltarWith(oldDefName);
-            Messages.Message("PruningSuccessful".Translate(new object[]
-            {
+            Messages.Message("PruningSuccessful".Translate(
                 pruner.LabelShort
-            }), MessageTypeDefOf.PositiveEvent);
+            ), MessageTypeDefOf.PositiveEvent);
             newAltar.Map.reservationManager.ReleaseAllForTarget(newAltar);
         }
 
@@ -1125,9 +1124,7 @@ namespace CultOfCthulhu
             //Send a message about the gathering
             if (Map?.info?.parent is Settlement factionBase)
             {
-                Messages.Message("SacrificeGathering".Translate(new object[] {
-                    factionBase.Label
-                }), TargetInfo.Invalid, MessageTypeDefOf.NeutralEvent);   
+                Messages.Message("SacrificeGathering".Translate(factionBase.Label), TargetInfo.Invalid, MessageTypeDefOf.NeutralEvent);   
             }
 
             //Change the state

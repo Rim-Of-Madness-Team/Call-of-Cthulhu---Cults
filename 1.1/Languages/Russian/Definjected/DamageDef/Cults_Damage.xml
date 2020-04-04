@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_Psionic.label>псионическая атака</Cults_Psionic.label>
+  <Cults_Psionic.deathMessage>Голова {0} взорвалась.</Cults_Psionic.deathMessage>
+
+  <Cults_AcidBurn.label>кислотный ожог</Cults_AcidBurn.label>
+  <Cults_AcidBurn.deathMessage>{0} расплавился до смерти.</Cults_AcidBurn.deathMessage>
+
+
+</LanguageData>

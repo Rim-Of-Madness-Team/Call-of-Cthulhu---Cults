@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_PsionicBlastDamage.label>псионический взрыв</Cults_PsionicBlastDamage.label>
+  <Cults_PsionicBlastDamage.deathMessage>{0} был убит.</Cults_PsionicBlastDamage.deathMessage>
+
+  <Cults_PsionicShockDamage.label>псионический шок</Cults_PsionicShockDamage.label>
+  <Cults_PsionicShockDamage.deathMessage>{0} был убит.</Cults_PsionicShockDamage.deathMessage>
+
+  <Cults_PsionicBurnDamage.label>псионический ожог</Cults_PsionicBurnDamage.label>
+  <Cults_PsionicBurnDamage.deathMessage>{0} был убит.</Cults_PsionicBurnDamage.deathMessage>
+
+
+</LanguageData>

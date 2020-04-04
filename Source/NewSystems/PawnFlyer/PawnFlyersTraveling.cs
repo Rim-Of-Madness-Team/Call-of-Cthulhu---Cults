@@ -274,10 +274,9 @@ namespace CultOfCthulhu
                         {
                             mapParent.Faction.TrySetRelationKind(Faction.OfPlayer, FactionRelationKind.Hostile);
                             //mapParent.Faction.SetHostileTo(Faction.OfPlayer, true);
-                            extraMessagePart = "MessageTransportPodsArrived_BecameHostile".Translate(new object[]
-                            {
+                            extraMessagePart = "MessageTransportPodsArrived_BecameHostile".Translate(
                                 mapParent.Faction.Name
-                            }).CapitalizeFirst();
+                            ).CapitalizeFirst();
                         }
                         Find.TickManager.CurTimeSpeed = TimeSpeed.Paused;
                         this.SpawnDropPodsInMap(mapParent.Map, extraMessagePart);

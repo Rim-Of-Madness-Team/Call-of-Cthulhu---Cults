@@ -44,10 +44,9 @@ namespace CultOfCthulhu
                     {
                         if (compTransporterPawn.AnyInGroupHasAnythingLeftToLoad)
                         {
-                            Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmSendNotCompletelyLoadedPods".Translate(new object[]
-                            {
+                            Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmSendNotCompletelyLoadedPods".Translate(
                             compTransporterPawn.FirstThingLeftToLoadInGroup.LabelCap
-                            }), new Action(compLaunchablePawn.StartChoosingDestination), false, null));
+                            ), new Action(compLaunchablePawn.StartChoosingDestination), false, null));
                         }
                         else
                         {
@@ -89,10 +88,9 @@ namespace CultOfCthulhu
                         }
                     }
                 }
-                command_LoadToTransporter.defaultLabel = "CommandLoadTransporter".Translate(new object[]
-                {
+                command_LoadToTransporter.defaultLabel = "CommandLoadTransporter".Translate(
                 num.ToString()
-                });
+                );
                 command_LoadToTransporter.defaultDesc = "CommandLoadTransporterDesc".Translate();
                 command_LoadToTransporter.icon = CompTransporterPawn.LoadCommandTex;
                 command_LoadToTransporter.transComp = compTransporterPawn;

@@ -62,10 +62,9 @@ namespace CultOfCthulhu
             }
             if (suggestingPawn != null)
             {
-                Widgets.Label(new Rect(0f, 0f, rect.width, rect.height), "NameCultMessage".Translate(new object[]
-                {
+                Widgets.Label(new Rect(0f, 0f, rect.width, rect.height), "NameCultMessage".Translate(
                 this.suggestingPawn.Name.ToStringShort
-                }));
+                ));
             }
             else
             {
@@ -81,10 +80,9 @@ namespace CultOfCthulhu
                         CultTracker.Get.PlayerCult.name = this.curName;
                         //Faction.OfPlayer.Name = this.curName;
                         Find.WindowStack.TryRemove(this, true);
-                        Messages.Message("CultGainsName".Translate(new object[]
-                        {
+                        Messages.Message("CultGainsName".Translate(
                         this.curName
-                        }), MessageTypeDefOf.PositiveEvent);
+                        ), MessageTypeDefOf.PositiveEvent);
                     }
                     else
                     {

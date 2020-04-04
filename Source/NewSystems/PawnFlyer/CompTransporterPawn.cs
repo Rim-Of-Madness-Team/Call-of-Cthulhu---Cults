@@ -229,10 +229,9 @@ namespace CultOfCthulhu
                     }
                 }
             }
-            Command_LoadToTransporterPawn.defaultLabel = "CommandLoadTransporter".Translate(new object[]
-            {
+            Command_LoadToTransporterPawn.defaultLabel = "CommandLoadTransporter".Translate(
                 num.ToString()
-            });
+            );
             Command_LoadToTransporterPawn.defaultDesc = "CommandLoadTransporterDesc".Translate();
             Command_LoadToTransporterPawn.icon = CompTransporterPawn.LoadCommandTex;
             Command_LoadToTransporterPawn.transComp = this;

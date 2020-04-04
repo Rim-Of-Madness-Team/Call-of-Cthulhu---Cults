@@ -190,13 +190,12 @@ namespace CultOfCthulhu
                 StartedUse = true;
                 string stringToTranslate = "OccultCenterWarning" + warningLevel.ToString();
                 if (stringToTranslate == "OccultCenterWarningNone") return;
-                Messages.Message(stringToTranslate.Translate(new object[]
-                    {
+                Messages.Message(stringToTranslate.Translate(
                     InteractingPawn.Name.ToStringShort,
                     InteractingPawn.gender.GetPronoun(),
                     InteractingPawn.gender.GetObjective(),
-                    InteractingPawn.gender.GetPossessive(),
-                    }), MessageTypeDefOf.NeutralEvent);
+                    InteractingPawn.gender.GetPossessive()
+                    ), MessageTypeDefOf.NeutralEvent);
             }
         }
         private void SetWarningLevel(float sanityLevel)

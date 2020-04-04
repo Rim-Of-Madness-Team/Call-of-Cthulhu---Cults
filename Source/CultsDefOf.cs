@@ -34,9 +34,9 @@ namespace CultOfCthulhu
         public static ThingDef Cults_BlackIchorMeal;
         public static ThingDef Cults_SignOfDagon;
         public static DamageDef Cults_Psionic;
-        public static AbilityDef Cults_PsionicBlast;
-        public static AbilityDef Cults_PsionicShock;
-        public static AbilityDef Cults_PsionicBurn;
+        public static AbilityUser.AbilityDef Cults_PsionicBlast;
+        public static AbilityUser.AbilityDef Cults_PsionicShock;
+        public static AbilityUser.AbilityDef Cults_PsionicBurn;
         public static RoomRoleDef Cults_Temple;
         public static ThingDef Cults_ForbiddenKnowledgeCenter;
         public static LetterDef Cults_StandardMessage;

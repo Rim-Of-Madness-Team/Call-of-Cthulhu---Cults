@@ -88,8 +88,7 @@ namespace CultOfCthulhu
             Pawn sourceCorpse = toBeResurrected.RandomElement();
             toBeResurrected.Remove(sourceCorpse);
             IntVec3 spawnLoc = IntVec3.Invalid;
-            Map map = null;
-
+            
             if (sourceCorpse.Corpse != null)
             {
                 //Use B18's Resurrect Feature
@@ -113,9 +112,9 @@ namespace CultOfCthulhu
                 sourceCorpse.story.traits.GainTrait(new Trait(TraitDef.Named("Cults_OathtakerHastur2"), 0, true));
 
                 //Message to the player
-                Messages.Message("ReanimatedOath".Translate(new object[] {
-                    sourceCorpse.Name
-                }), MessageTypeDefOf.PositiveEvent);
+#pragma warning disable CS0618 // Type or member is obsolete
+                Messages.Message("ReanimatedOath".Translate(sourceCorpse.Name), MessageTypeDefOf.PositiveEvent);
+#pragma warning restore CS0618 // Type or member is obsolete
             }
         }
 

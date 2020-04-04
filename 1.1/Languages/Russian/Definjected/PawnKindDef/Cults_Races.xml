@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_BlackGoat.label>черный козёл</Cults_BlackGoat.label>
+  <Cults_BlackGoat.labelPlural>черные козлы</Cults_BlackGoat.labelPlural>
+
+
+  <!-- Zombie -->
+
+  <ReanimatedCorpse.label>Оживший труп</ReanimatedCorpse.label>
+  <ReanimatedCorpse.labelPlural>Оживший труп</ReanimatedCorpse.labelPlural>
+
+
+</LanguageData>

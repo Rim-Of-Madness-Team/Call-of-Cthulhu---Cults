@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_BastSpellFavor.label>호의</Cults_BastSpellFavor.label>
+  <Cults_BastSpellFavor.letterText>우주와 시공간을 초월한 존재가 연결되어 있음을 느꼈고</Cults_BastSpellFavor.letterText>
+  <Cults_BastSpellFavor.letterLabel>알아차림</Cults_BastSpellFavor.letterLabel>
+  <Cults_BastSpellFavor.description>이익을 바라지 않고 제물을 바칩니다.</Cults_BastSpellFavor.description>
+
+  <Cults_BastSpellInspiration.label>신의 열정</Cults_BastSpellInspiration.label>
+  <Cults_BastSpellInspiration.letterText>그리고 신도들이 영감을 받았습니다.</Cults_BastSpellInspiration.letterText>
+  <Cults_BastSpellInspiration.letterLabel>그리고 그녀의 존재를 느낌</Cults_BastSpellInspiration.letterLabel>
+  <Cults_BastSpellInspiration.description>바스트는 모두에게 영감을 주며 정착민들에게 미소를 지었습니다</Cults_BastSpellInspiration.description>
+
+  <Cults_BastSpellFelineAspect.label>묘상</Cults_BastSpellFelineAspect.label>
+  <Cults_BastSpellFelineAspect.letterText>손톱이 발톱으로 변하며 비정상적으로 민첨해짐을 느끼는 것을 볼 수 있었습니다</Cults_BastSpellFelineAspect.letterText>
+  <Cults_BastSpellFelineAspect.letterLabel>그리고 그녀의 존재를 느낌</Cults_BastSpellFelineAspect.letterLabel>
+  <Cults_BastSpellFelineAspect.description>설교자를 고양이 같은 발톱과 우아한 모습으로 변형시켰습니다.</Cults_BastSpellFelineAspect.description>
+
+  <Cults_BastSpellSummonGuardian.label>수호자 소환</Cults_BastSpellSummonGuardian.label>
+  <Cults_BastSpellSummonGuardian.letterText>애완동물이 빛의 섬광에 흡수되며 사나운 짐승으로 변형되는 것을 보았습니다</Cults_BastSpellSummonGuardian.letterText>
+  <Cults_BastSpellSummonGuardian.letterLabel>그리고 적들을 무찌르도록</Cults_BastSpellSummonGuardian.letterLabel>
+  <Cults_BastSpellSummonGuardian.description>귀여운 고양이들을 수호자로 변형시켰습니다.</Cults_BastSpellSummonGuardian.description>
+
+  <Cults_BastSpellSanctuary.label>성역</Cults_BastSpellSanctuary.label>
+  <Cults_BastSpellSanctuary.letterText>적들이 도망치는 동안 안도의 한숨을</Cults_BastSpellSanctuary.letterText>
+  <Cults_BastSpellSanctuary.letterLabel>적들이 도망을 쳐도 부질한 짓임을</Cults_BastSpellSanctuary.letterLabel>
+  <Cults_BastSpellSanctuary.description>많은 적세력으로부터 정착지를 보호합니다</Cults_BastSpellSanctuary.description>
+
+  <Cults_BastSpellPassageToAaru.label>아루로 가는 길</Cults_BastSpellPassageToAaru.label>
+  <Cults_BastSpellPassageToAaru.letterText>가면을 쓰고 자유</Cults_BastSpellPassageToAaru.letterText>
+  <Cults_BastSpellPassageToAaru.letterLabel>그리고 애원하며 부르짖으니 그녀가 작은 정착지를 바라보고는 자격이 있다고 생각했습니다</Cults_BastSpellPassageToAaru.letterLabel>
+  <Cults_BastSpellPassageToAaru.description>[Game Ending Spell]\n바스트는 이 작은 정착지가 아루로 갈 자격이 있다고 생각합니다.</Cults_BastSpellPassageToAaru.description>
+
+</LanguageData>

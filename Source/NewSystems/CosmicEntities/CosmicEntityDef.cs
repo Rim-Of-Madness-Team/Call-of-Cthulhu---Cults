@@ -10,7 +10,9 @@ namespace CultOfCthulhu
 {
     public class CosmicEntityDef : ThingDef
     {
-        private string symbol;
+#pragma warning disable IDE0044 // Add readonly modifier
+        private readonly string symbol;
+#pragma warning restore IDE0044 // Add readonly modifier
         private string version = "0";
         private string portrait = "";
         private string titles = "";

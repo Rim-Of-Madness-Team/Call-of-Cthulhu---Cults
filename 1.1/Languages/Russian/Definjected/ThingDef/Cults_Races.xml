@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_BlackGoat.label>черный козёл</Cults_BlackGoat.label>
+  <Cults_BlackGoat.description>Черные козы - таинственные существа, которые живут практически в любом климате. Их рацион также неизвестен. Легенды рассказывают о том, что они являются порождением какого-то непристойного чудовища, известного как Мать Черной Козы, которая существует за пределами реальности, которую мы понимаем как наше измерение.</Cults_BlackGoat.description>
+  <Cults_BlackGoat.tools.0.label>левый рог</Cults_BlackGoat.tools.0.label>
+  <Cults_BlackGoat.tools.1.label>правый рог</Cults_BlackGoat.tools.1.label>
+  <Cults_BlackGoat.tools.3.label>голова</Cults_BlackGoat.tools.3.label>
+  <Cults_BlackGoat_Leather.label>шкура черного козла</Cults_BlackGoat_Leather.label>
+  <Cults_BlackGoat_Leather.description>шкура черного козла.</Cults_BlackGoat_Leather.description>
+  <Cults_BlackGoat_Leather.stuffProps.stuffAdjective>шкура черного козла</Cults_BlackGoat_Leather.stuffProps.stuffAdjective>
+  <Cults_BlackGoat_Meat.label>Мясо черного козла</Cults_BlackGoat_Meat.label>
+  <Cults_BlackGoat_Meat.description>Мясо черного козла.</Cults_BlackGoat_Meat.description>
+  <Cults_BlackGoat_Corpse.label>Труп черного козла</Cults_BlackGoat_Corpse.label>
+  <Cults_BlackGoat_Corpse.description>Труп черного козла</Cults_BlackGoat_Corpse.description>
+
+
+  <!-- Zombie -->
+
+  <ReanimatedCorpse.label>Оживший труп</ReanimatedCorpse.label>
+  <ReanimatedCorpse.description>Будь то из-за научных экспериментов, оккультных вмешательств или комиксов, это бедные души, которых смерть отвергла.</ReanimatedCorpse.description>
+  <ReanimatedCorpse.tools.0.label>левый кулак</ReanimatedCorpse.tools.0.label>
+  <ReanimatedCorpse.tools.1.label>правый кулак</ReanimatedCorpse.tools.1.label>
+  <ReanimatedCorpse.tools.2.label>голова</ReanimatedCorpse.tools.2.label>
+  <ReanimatedCorpse_Leather.label>Кожа ожившего трупа</ReanimatedCorpse_Leather.label>
+  <ReanimatedCorpse_Leather.description>Кожа ожившего трупа.</ReanimatedCorpse_Leather.description>
+  <ReanimatedCorpse_Leather.stuffProps.stuffAdjective>Кожа ожившего трупа</ReanimatedCorpse_Leather.stuffProps.stuffAdjective>
+  <!-- Meat Amount: 0 -->
+  <ReanimatedCorpse_Corpse.label>Мертвый оживший труп</ReanimatedCorpse_Corpse.label>
+  <ReanimatedCorpse_Corpse.description>Мертвый оживший труп</ReanimatedCorpse_Corpse.description>
+
+
+</LanguageData>

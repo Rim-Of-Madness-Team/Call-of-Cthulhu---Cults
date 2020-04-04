@@ -37,18 +37,16 @@ namespace CultOfCthulhu
         #region Letters
         public void SendCultLetterDismantled()
         {
-            Find.LetterStack.ReceiveLetter("Cults_DismantledACultLabel".Translate(), "Cults_DismantledACultDesc".Translate(new object[]
-            {
+            Find.LetterStack.ReceiveLetter("Cults_DismantledACultLabel".Translate(), "Cults_DismantledACultDesc".Translate(
                 name
-            }), CultsDefOf.Cults_StandardMessage);
+            ), CultsDefOf.Cults_StandardMessage);
         }
 
         public void SendCultLetterFounded(Pawn newFounder)
         {
-            Find.LetterStack.ReceiveLetter("Cults_FoundedACultLabel".Translate(), "Cults_FoundedACultDesc".Translate(new object[]
-            {
+            Find.LetterStack.ReceiveLetter("Cults_FoundedACultLabel".Translate(), "Cults_FoundedACultDesc".Translate(
                 newFounder.LabelShort
-            }), CultsDefOf.Cults_StandardMessage);
+            ), CultsDefOf.Cults_StandardMessage);
             if (foundingCity != null)
             {
                 Find.WindowStack.Add(new Dialog_NameCult(foundingCity.Map));
@@ -132,11 +130,14 @@ namespace CultOfCthulhu
 
             //Does this member already exist as part of the cult?
             //If so, don't add them.
-            foreach (Pawn current in members)
+            if (members?.Count > 0)
             {
-                if (current == cultMember)
+                foreach (Pawn current in members)
                 {
-                    return;
+                    if (current == cultMember)
+                    {
+                        return;
+                    }
                 }
             }
 

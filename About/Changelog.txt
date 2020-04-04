@@ -1,3 +1,7 @@
+1.21.0.0 (04-03-2020)
+========================
+Update for RimWorld 1.1.
+
 1.20.0.4 (10-27-2018)
 ========================
 Sanity loss recovery time boosted from 5 percent to 15 percent.

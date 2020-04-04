@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LifeStageDef>
+    <defName>Cults_Spawn</defName>
+    <label>spawn</label>
+    <voxPitch>1.6</voxPitch>
+    <voxVolume>0.8</voxVolume>
+    <bodySizeFactor>0.50</bodySizeFactor>
+    <healthScaleFactor>0.50</healthScaleFactor>
+    <hungerRateFactor>0.4</hungerRateFactor>
+    <marketValueFactor>0.4</marketValueFactor>
+    <statFactors>
+      <MoveSpeed>0.75</MoveSpeed>
+    </statFactors>
+  </LifeStageDef>
+
+  <LifeStageDef>
+    <defName>Cults_FullyFormed</defName>
+    <label>fully formed</label>
+    <visible>false</visible>
+    <reproductive>true</reproductive>
+  </LifeStageDef>
+  
+  <LifeStageDef>
+    <defName>Cults_Ancient</defName>
+    <label>ancient</label>
+    <voxPitch>0.8</voxPitch>
+    <voxVolume>1.2</voxVolume>
+    <bodySizeFactor>1.20</bodySizeFactor>
+    <healthScaleFactor>1.20</healthScaleFactor>
+    <hungerRateFactor>1.2</hungerRateFactor>
+    <marketValueFactor>1.2</marketValueFactor>
+    <statFactors>
+      <MoveSpeed>1.25</MoveSpeed>
+    </statFactors>
+  </LifeStageDef>
+  
+  <LifeStageDef>
+    <defName>Cults_Eldritch</defName>
+    <label>eldritch</label>
+    <voxPitch>0.6</voxPitch>
+    <voxVolume>1.5</voxVolume>
+    <bodySizeFactor>1.50</bodySizeFactor>
+    <healthScaleFactor>1.50</healthScaleFactor>
+    <hungerRateFactor>1.5</hungerRateFactor>
+    <marketValueFactor>1.5</marketValueFactor>
+    <statFactors>
+      <MoveSpeed>1.30</MoveSpeed>
+    </statFactors>
+  </LifeStageDef>
+  
+  
+</Defs>

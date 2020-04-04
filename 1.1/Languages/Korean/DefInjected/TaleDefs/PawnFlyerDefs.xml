@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <RodeByakhee.label>비야키(Byakhee) 탑승</RodeByakhee.label>
+    <RodeByakhee.rulePack.rulesStrings.0>tale_noun-&gt;[pawn_nameShortDef]의 비야키(Byakhee) 비행</RodeByakhee.rulePack.rulesStrings.0>
+    <RodeByakhee.rulePack.rulesStrings.1>image-&gt;[pawn_nameFull](은)는 [circumstance_group]비야키(Byakhee)의 탑승한 모습</RodeByakhee.rulePack.rulesStrings.1>
+    <RodeByakhee.rulePack.rulesStrings.2>image-&gt;[pawn_nameFull](은)는 [circumstance_group] 비야키(Byakhee)를 타고 하늘을 향해 고속으로 상승하는 모습</RodeByakhee.rulePack.rulesStrings.2>
+    <RodeByakhee.rulePack.rulesStrings.3>image-&gt;[pawn_nameFull](은)는 [circumstance_group] 비야키(Byakhee)를 타고 구름을 해치며 비행을 하는 모습</RodeByakhee.rulePack.rulesStrings.3>
+    <RodeByakhee.rulePack.rulesStrings.4>image-&gt;[pawn_nameFull](은)는 [circumstance_group] 비야키(Byakhee)에 올라탄 모습</RodeByakhee.rulePack.rulesStrings.4>
+    <RodeByakhee.rulePack.rulesStrings.5>circumstance_phrase-&gt;[terrainfeature]에서</RodeByakhee.rulePack.rulesStrings.5>
+    <RodeByakhee.rulePack.rulesStrings.6>circumstance_phrase-&gt;위압적인 위엄을 보이며</RodeByakhee.rulePack.rulesStrings.6>
+    <RodeByakhee.rulePack.rulesStrings.7>circumstance_phrase-&gt;날개로 바람과 먼지를 일으키며</RodeByakhee.rulePack.rulesStrings.7>
+    <RodeByakhee.rulePack.rulesStrings.8>circumstance_phrase-&gt;괴상한 혀를 내밀며 괴성을 지르는</RodeByakhee.rulePack.rulesStrings.8>
+    <RodeByakhee.rulePack.rulesStrings.9>circumstance_phrase-&gt;멋드러지게 착륙한</RodeByakhee.rulePack.rulesStrings.9>
+    <RodeByakhee.rulePack.rulesStrings.10>desc_sentence-&gt;[pawn_pronoun] 고삐를 잡고 자세를 유지하는데 집중하고 있는 모습입니다.</RodeByakhee.rulePack.rulesStrings.10>
+    <RodeByakhee.rulePack.rulesStrings.11>desc_sentence-&gt;[pawn_pronoun] [pawn_possessive] 눈을 감고 두려움에 떨고있는 모습입니다.</RodeByakhee.rulePack.rulesStrings.11>
+    <RodeByakhee.rulePack.rulesStrings.12>desc_sentence-&gt;[pawn_pronoun] 의식을 잃고, [pawn_possessive] 혀는 자리를 잃고 침을 흘리며 밖에서 춤추고 있습니다.</RodeByakhee.rulePack.rulesStrings.12>
+    <RodeByakhee.rulePack.rulesStrings.13>desc_sentence-&gt;[pawn_pronoun] 웃고있지만 웃는게 아닌 것 같습니다.</RodeByakhee.rulePack.rulesStrings.13>
+    <RodeByakhee.rulePack.rulesStrings.14>desc_sentence-&gt;[pawn_pronoun] 자신이 무엇을 하고 있는지 전혀 모르고 있는 것 같습니다.</RodeByakhee.rulePack.rulesStrings.14>
+    <RodeByakhee.rulePack.rulesStrings.15>desc_sentence-&gt;[pawn_pronoun] [pawn_possessive] 눈을 감고, 무기력하게 묶여있습니다.</RodeByakhee.rulePack.rulesStrings.15>
+    <RodeByakhee.rulePack.rulesStrings.16>desc_sentence-&gt;비야키(Byakhee)는 마치 불타는 듯한 부자연스러운 모습에 어울리는 무자비한 눈매를 하고 있습니다.</RodeByakhee.rulePack.rulesStrings.16>
+    <RodeByakhee.rulePack.rulesStrings.17>desc_sentence-&gt;근처의 [animal](이)가 비야키(Byakhee)를 보고 깜짝 놀라는 모습입니다.</RodeByakhee.rulePack.rulesStrings.17>
+    <RodeByakhee.rulePack.rulesStrings.18>desc_sentence-&gt;[animal](은)는 비야키(Byahkee)를 피해 도망치는 모습입니다.</RodeByakhee.rulePack.rulesStrings.18>
+    <RodeByakhee.rulePack.rulesStrings.19>desc_sentence-&gt;이 묘사된 상황 뒤에는 [terrainfeature](이)가 있습니다. </RodeByakhee.rulePack.rulesStrings.19>
+    <RodeByakhee.rulePack.rulesStrings.20>desc_sentence-&gt;[outlander](는)은 멀리서 조용히 지켜보고 있습니다.</RodeByakhee.rulePack.rulesStrings.20>
+
+</LanguageData>

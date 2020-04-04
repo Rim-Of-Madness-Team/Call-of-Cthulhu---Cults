@@ -140,10 +140,9 @@ namespace CultOfCthulhu
                 {
                     if (this.AnyInGroupHasAnythingLeftToLoad)
                     {
-                        Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmSendNotCompletelyLoadedPods".Translate(new object[]
-                        {
+                        Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmSendNotCompletelyLoadedPods".Translate(
                             this.FirstThingLeftToLoadInGroup.LabelCap
-                        }), new Action(this.StartChoosingDestination), false, null));
+                        ), new Action(this.StartChoosingDestination), false, null));
                     }
                     else
                     {
@@ -167,10 +166,9 @@ namespace CultOfCthulhu
                     {
                         if (this.AnyInGroupHasAnythingLeftToLoad)
                         {
-                            Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmSendNotCompletelyLoadedPods".Translate(new object[]
-                            {
+                            Find.WindowStack.Add(Dialog_MessageBox.CreateConfirmation("ConfirmSendNotCompletelyLoadedPods".Translate(
                             this.FirstThingLeftToLoadInGroup.LabelCap
-                            }), new Action(this.StartChoosingDestination), false, null));
+                            ), new Action(this.StartChoosingDestination), false, null));
                         }
                         else
                         {
@@ -281,10 +279,9 @@ namespace CultOfCthulhu
                 List<FloatMenuOption> list = new List<FloatMenuOption>();
                 if (!target.WorldObject.Faction.HostileTo(Faction.OfPlayer))
                 {
-                    list.Add(new FloatMenuOption("VisitFactionBase".Translate(new object[]
-                    {
+                    list.Add(new FloatMenuOption("VisitFactionBase".Translate(
                         target.WorldObject.Label
-                    }), delegate
+                    ), delegate
                     {
                         if (!this.LoadingInProgressOrReadyToLaunch)
                         {

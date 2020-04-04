@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <LoadTransportersPawn.label>загрузить транспортер</LoadTransportersPawn.label>
+  <LoadTransportersPawn.verb>загрузить</LoadTransportersPawn.verb>
+  <LoadTransportersPawn.gerund>загружает</LoadTransportersPawn.gerund>
+
+  <PruneAndRepair.label>починить поврежденные вещи</PruneAndRepair.label>
+  <PruneAndRepair.verb>обрезка и ремонт</PruneAndRepair.verb>
+  <PruneAndRepair.gerund>обрезает и ремонтирует</PruneAndRepair.gerund>
+
+  <ROM_InvestigateMysteriousObject.label>расследовать</ROM_InvestigateMysteriousObject.label>
+  <ROM_InvestigateMysteriousObject.verb>расследовать</ROM_InvestigateMysteriousObject.verb>
+  <ROM_InvestigateMysteriousObject.gerund>расследует</ROM_InvestigateMysteriousObject.gerund>
+
+  <ROM_InvestigateMysteriousObjectTree.label>исследовать</ROM_InvestigateMysteriousObjectTree.label>
+  <ROM_InvestigateMysteriousObjectTree.verb>исследовать</ROM_InvestigateMysteriousObjectTree.verb>
+  <ROM_InvestigateMysteriousObjectTree.gerund>исследовать</ROM_InvestigateMysteriousObjectTree.gerund>
+
+
+</LanguageData>

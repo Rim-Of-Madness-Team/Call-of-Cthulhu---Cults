@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Harmony;
+using HarmonyLib;
 using Verse;
 using RimWorld;
 using UnityEngine;
@@ -12,31 +12,54 @@ namespace CultOfCthulhu
     [StaticConstructorOnStartup]
     static class HarmonyPatches
     {
+        public static bool DebugMode = false;
+
+        public static void DebugMessage(string s)
+        {
+            if (DebugMode) Log.Message(s);
+        }
+
         static HarmonyPatches()
         {
-            HarmonyInstance harmony = HarmonyInstance.Create("rimworld.jecrell.cthulhu.cults");
+            var harmony = new Harmony("rimworld.jecrell.cthulhu.cults");
             harmony.Patch(AccessTools.Method(typeof(ThingWithComps), nameof(ThingWithComps.InitializeComps)), null,
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(InitializeComps_PostFix)), null);
+            DebugMessage("ThingWithComps.InitializeComps_PostFix Passed");
+
             harmony.Patch(AccessTools.Property(typeof(Pawn), nameof(Pawn.BodySize)).GetGetMethod(), null,
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(get_BodySize_PostFix)));
+            DebugMessage("Pawn.BodySize.get_BodySize_PostFix Passed");
+
+
             harmony.Patch(AccessTools.Property(typeof(Pawn), nameof(Pawn.HealthScale)).GetGetMethod(), null,
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(get_HealthScale_PostFix)));
+            DebugMessage("Pawn.HealthScale.get_HealthScale_PostFix Passed");
+
             harmony.Patch(
                 AccessTools.Method(typeof(GenLabel), "BestKindLabel",
                     new[] {typeof(Pawn), typeof(bool), typeof(bool), typeof(bool), typeof(int)}), null,
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(BestKindLabel_PostFix)), null);
+            DebugMessage("GenLabel.BestKindLabel_PostFix Passed");
+
             harmony.Patch(AccessTools.Method(typeof(Pawn_DrawTracker), nameof(Pawn_DrawTracker.DrawAt)), null,
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(DrawAt_PostFix)), null);
+            DebugMessage("Pawn_DrawTracker.DrawAt_PostFix Passed");
+
             harmony.Patch(
                 AccessTools.Method(typeof(PawnUtility), nameof(PawnUtility.IsTravelingInTransportPodWorldObject)), null,
                 new HarmonyMethod(typeof(HarmonyPatches),
                     nameof(IsTravelingInTransportPodWorldObject_PostFix)));
+            DebugMessage("PawnUtility.IsTravelingInTransportPodWorldObject.IsTravelingInTransportPodWorldObject_PostFix Passed");
+
             harmony.Patch(AccessTools.Method(typeof(FertilityGrid), "CalculateFertilityAt"), null, new HarmonyMethod(
                 typeof(HarmonyPatches),
                 nameof(CalculateFertilityAt)));
+            DebugMessage("FertilityGrid.CalculateFertilityAt Passed");
+
             harmony.Patch(AccessTools.Method(typeof(MouseoverReadout), "MouseoverReadoutOnGUI"), new HarmonyMethod(
                 typeof(HarmonyPatches),
                 nameof(MouseoverReadoutOnGUI)), null);
+            DebugMessage("MouseoverReadout.MouseoverReadoutOnGUI Passed");
         }
 
         public static string SpeedPercentString(float extraPathTicks)
@@ -89,15 +112,12 @@ namespace CultOfCthulhu
                 //if (terrain != cachedTerrain)
                 //{
                 float fertNum = Find.CurrentMap.fertilityGrid.FertilityAt(c);
-                string str = ((double) fertNum <= 0.0001)
-                    ? string.Empty
+                string str = (fertNum <= 0.0001)
+                    ? TaggedString.Empty
                     : (" " + "FertShort".Translate() + " " + fertNum.ToStringPercent());
                 cachedTerrainString = terrain.LabelCap + ((terrain.passability == Traversability.Impassable)
                                           ? null
-                                          : (" (" + "WalkSpeed".Translate(new object[]
-                                          {
-                                              SpeedPercentString((float) terrain.pathCost)
-                                          }) + str + ")"));
+                                          : (" (" + "WalkSpeed".Translate(SpeedPercentString((float) terrain.pathCost) + str + ")")));
                 //cachedTerrain = terrain;
                 //}
                 Widgets.Label(rect, cachedTerrainString);
@@ -115,10 +135,10 @@ namespace CultOfCthulhu
                 {
                     rect = new Rect(BotLeft.x, (float) UI.screenHeight - BotLeft.y - num, 999f, 999f);
                     SnowCategory snowCategory = SnowUtility.GetSnowCategory(depth);
-                    string label2 = SnowUtility.GetDescription(snowCategory) + " (" + "WalkSpeed".Translate(new object[]
-                    {
-                        SpeedPercentString((float) SnowUtility.MovementTicksAddOn(snowCategory))
-                    }) + ")";
+                    string label2 = SnowUtility.GetDescription(snowCategory) + 
+                        " (" + 
+                        "WalkSpeed".Translate(SpeedPercentString((float) SnowUtility.MovementTicksAddOn(snowCategory))) + 
+                        ")";
                     Widgets.Label(rect, label2);
                     num += 19f;
                 }

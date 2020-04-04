@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LetterDef>
+    <defName>Cults_StandardMessage</defName>
+    <color>(129, 0, 0)</color>
+    <flashColor>(36, 151, 115)</flashColor>
+    <flashInterval>32</flashInterval>
+    <arriveSound>Cults_LetterArrive</arriveSound>
+  </LetterDef>
+
+</Defs>

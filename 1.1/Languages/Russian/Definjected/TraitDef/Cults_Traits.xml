@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_OathtakerHastur.degreeDatas.0.label>Берущий клятву</Cults_OathtakerHastur.degreeDatas.0.label>
+  <Cults_OathtakerHastur.degreeDatas.0.description>[PAWN_nameDef] заключает нерушимый контракт. [PAWN_pronoun] вернется из мертвых, чтобы служить королю в желтом, который управляет потерянным городом Каркоза.</Cults_OathtakerHastur.degreeDatas.0.description>
+
+  <Cults_OathtakerHastur2.degreeDatas.0.label>Реанимированный</Cults_OathtakerHastur2.degreeDatas.0.label>
+  <Cults_OathtakerHastur2.degreeDatas.0.description>[PAWN_nameDef] поднялось из мертвых, чтобы снова служить.</Cults_OathtakerHastur2.degreeDatas.0.description>
+
+
+</LanguageData>

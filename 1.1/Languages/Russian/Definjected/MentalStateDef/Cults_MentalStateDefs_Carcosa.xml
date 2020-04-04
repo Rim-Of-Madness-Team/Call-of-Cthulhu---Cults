@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_DeepSleepCarcosa.label>глубокий сон</Cults_DeepSleepCarcosa.label>
+  <Cults_DeepSleepCarcosa.beginLetter>{0} посещает потерянный город каркоза в своем сне.</Cults_DeepSleepCarcosa.beginLetter>
+  <Cults_DeepSleepCarcosa.beginLetterLabel>глубокий сон</Cults_DeepSleepCarcosa.beginLetterLabel>
+  <Cults_DeepSleepCarcosa.recoveryMessage>{0} проснулся(ась) от глубокого сна.</Cults_DeepSleepCarcosa.recoveryMessage>
+  <Cults_DeepSleepCarcosa.baseInspectLine>Психическое состояние: глубокий сон</Cults_DeepSleepCarcosa.baseInspectLine>
+
+
+</LanguageData>

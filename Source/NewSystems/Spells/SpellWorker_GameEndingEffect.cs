@@ -57,10 +57,9 @@ namespace CultOfCthulhu
             {
                 stringBuilder.AppendLine("Nobody".Translate().ToLower());
             }
-            string preCreditsMessage = GetEndScreenText().Translate(new object[]
-            {
+            string preCreditsMessage = GetEndScreenText().Translate(
                 stringBuilder.ToString()
-            });
+            );
             return preCreditsMessage;
         }
 

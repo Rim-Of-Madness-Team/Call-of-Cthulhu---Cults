@@ -95,10 +95,9 @@ namespace CultOfCthulhu
             }
             if (!(stringBuilder.ToString().Contains("installed")))
             { 
-                stringBuilder.Append("FertilityTotemTimer".Translate(new object[]
-                {
+                stringBuilder.Append("FertilityTotemTimer".Translate(
                 TicksUntilDisappearing.ToStringTicksToPeriodVague()
-                }));
+                ));
             }
             return stringBuilder.ToString().TrimEndNewlines();
         }

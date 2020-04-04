@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <MentalStateDef ParentName="BaseMentalState">
+    <defName>Cults_DeepSleepCarcosa</defName>
+    <stateClass>CultOfCthulhu.MentalState_DeepSleepCarcosa</stateClass>
+    <label>deep sleep</label>
+    <category>Misc</category>
+    <colonistsOnly>true</colonistsOnly>
+    <minTicksBeforeRecovery>12500</minTicksBeforeRecovery>
+    <recoveryMtbDays>0.5</recoveryMtbDays>
+    <maxTicksBeforeRecovery>15000</maxTicksBeforeRecovery>
+    <recoverFromSleep>false</recoverFromSleep>
+    <moodRecoveryThought>Cults_SawCarcosa</moodRecoveryThought>
+    <blockNormalThoughts>false</blockNormalThoughts>
+    <nameColor>(1.0, 1.0, 0.0)</nameColor>
+    <recoveryMessage>{0} has awoken from [PAWN_possessive] deep sleep.</recoveryMessage>
+    <beginLetterLabel>deep sleep</beginLetterLabel>
+    <beginLetter>{0} is visiting the lost city of Carcosa in [PAWN_possessive] dreams.</beginLetter>
+    <beginLetterDef>ThreatSmall</beginLetterDef>
+    <baseInspectLine>Mental state: Deep Sleep</baseInspectLine>
+    <allowBeatfire>false</allowBeatfire>
+  </MentalStateDef>
+
+	<ThoughtDef>
+		<defName>Cults_SawCarcosa</defName>
+		<durationDays>15.0</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>saw Carcosa</label>
+				<description>Twin suns sank behind waves of clouds, and in the distance, I witnessed the lost city of Carcosa.</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>  
+  
+</Defs>

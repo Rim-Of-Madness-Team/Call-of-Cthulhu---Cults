@@ -37,8 +37,7 @@ namespace BastCult
                 //Generate guardian
                 Pawn newGuardian = PawnGenerator.GeneratePawn(new PawnGenerationRequest(
                     guardianProps.guardianDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer, -1, true, false, false, false, false,
-                    true, 0f, false, true, true, false, false, false, false, null,
-                    null, null, closestCat.ageTracker.AgeBiologicalYears, closestCat.ageTracker.AgeChronologicalYears, closestCat.gender, null, null));
+                    true, 0f, false, true, true, false, false, false, false, false, 0, null, 0, null, null, null, null, null,closestCat.ageTracker.AgeBiologicalYears, closestCat.ageTracker.AgeChronologicalYears, closestCat.gender, null, null));
 
                 //Transfer over family trees and relations to guardian from old cat.
                 Pawn_RelationsTracker oldRelations = closestCat.relations;

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_GuardianBast_Fur.label>수호자 모피</Cults_GuardianBast_Fur.label>
+  <Cults_GuardianBast_Fur.description>바스트 수호자의 털을 잘라낸 모피입니다. 내구성이 뛰어나며 고급스럽습니다. 제작으로 사용하면 단열과 절연이 높은 품질로 만들 수 있습니다.</Cults_GuardianBast_Fur.description>
+  <Cults_GuardianBast_Fur.stuffProps.stuffAdjective>수호자 모피</Cults_GuardianBast_Fur.stuffProps.stuffAdjective>
+
+  <GuardianBast.label>수호자</GuardianBast.label>
+  <GuardianBast.description>보호를 위해 바스트가 보내준 수호자입니다.</GuardianBast.description>
+  <GuardianBast.tools.0.label>왼쪽 발톱</GuardianBast.tools.0.label>
+  <GuardianBast.tools.1.label>오른쪽 발톱</GuardianBast.tools.1.label>
+  <GuardianBast.tools.3.label>머리</GuardianBast.tools.3.label>
+  <GuardianBast_Leather.label>수호자 가죽</GuardianBast_Leather.label>
+  <GuardianBast_Leather.description>수호자 가죽</GuardianBast_Leather.description>
+  <GuardianBast_Leather.stuffProps.stuffAdjective>수호자 가죽</GuardianBast_Leather.stuffProps.stuffAdjective>
+  <GuardianBast_Meat.label>수호자 고기</GuardianBast_Meat.label>
+  <GuardianBast_Meat.description>수호자 고기</GuardianBast_Meat.description>
+  <GuardianBast_Corpse.label>수호자 시체</GuardianBast_Corpse.label>
+  <GuardianBast_Corpse.description>수호자 시체</GuardianBast_Corpse.description>
+
+</LanguageData>

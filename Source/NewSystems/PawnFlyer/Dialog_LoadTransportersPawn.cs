@@ -259,10 +259,9 @@ namespace CultOfCthulhu
             Rect rect = new Rect(0f, 0f, inRect.width, 35f);
             Text.Font = GameFont.Medium;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(rect, "LoadTransporters".Translate(new object[]
-            {
+            Widgets.Label(rect, "LoadTransporters".Translate(
                 this.TransportersLabel
-            }));
+            ));
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.UpperLeft;
             CaravanUIUtility.DrawCaravanInfo(
@@ -544,10 +543,9 @@ namespace CultOfCthulhu
             }
             if (pawns.Count > PawnCapacity)
             {
-                Messages.Message("OverPawnRiderLimit".Translate(new object[]
-                {
+                Messages.Message("OverPawnRiderLimit".Translate(
                     PawnCapacity.ToString()
-                }), MessageTypeDefOf.RejectInput);
+                ), MessageTypeDefOf.RejectInput);
                 return false;
             }
 
@@ -556,10 +554,9 @@ namespace CultOfCthulhu
                 TraverseParms.For(TraverseMode.PassDoors, Danger.Deadly, false)));
             if (pawn != null)
             {
-                Messages.Message("PawnCantReachTransporters".Translate(new object[]
-                {
+                Messages.Message("PawnCantReachTransporters".Translate(
                     pawn.LabelShort
-                }).CapitalizeFirst(), MessageTypeDefOf.RejectInput);
+                ).CapitalizeFirst(), MessageTypeDefOf.RejectInput);
                 return false;
             }
             Map map = this.transporters[0].parent.Map;
@@ -588,18 +585,16 @@ namespace CultOfCthulhu
                         {
                             if (countToTransfer == 1)
                             {
-                                Messages.Message("TransporterItemIsUnreachableSingle".Translate(new object[]
-                                {
+                                Messages.Message("TransporterItemIsUnreachableSingle".Translate(
                                     this.transferables[i].ThingDef.label
-                                }), MessageTypeDefOf.RejectInput);
+                                ), MessageTypeDefOf.RejectInput);
                             }
                             else
                             {
-                                Messages.Message("TransporterItemIsUnreachableMulti".Translate(new object[]
-                                {
+                                Messages.Message("TransporterItemIsUnreachableMulti".Translate(
                                     countToTransfer,
                                     this.transferables[i].ThingDef.label
-                                }), MessageTypeDefOf.RejectInput);
+                                ), MessageTypeDefOf.RejectInput);
                             }
                             return false;
                         }

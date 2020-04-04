@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MealCooked">
+    <defName>Cults_BlackIchorMeal</defName>
+    <label>black ichor</label>
+    <description>Ichor can be a liquid that runs through the veins of the gods. The true origin of this black ichor, however, is a mystery.\n\nIt is abysmal to behold, dark and black like a bottomless pit. Its texture is coagulated in places with the consistency of sausages hiding in very light sauces. The smell is not quite nauseating, as the smell bears just a hint of what one would find in a dark cave. Strangest of all is the taste. Once it touches the tongue, all of the irksome properties transform into a delightful honey-flavor, and the thickened portions taste of sweetmeats.\n\nThis thick soupy black ichor nourishes and invigorates followers of Tsathoggua at the cost of very little sanity loss.</description>
+    <graphicData>
+      <texPath>Item/Resource/BlackIchor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<tradeability>None</tradeability>
+    <statBases>
+      <MarketValue>0</MarketValue>
+	  <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, AnimalProduct, Meal</foodType>
+      <preferability>MealFine</preferability>
+			<tasteThought>AteFineMeal</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      
+    </ingestible>
+  </ThingDef>
+  
+</Defs>

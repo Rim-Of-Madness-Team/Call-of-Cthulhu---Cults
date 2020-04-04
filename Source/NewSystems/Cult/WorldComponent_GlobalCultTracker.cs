@@ -159,7 +159,7 @@ namespace CultOfCthulhu
             //If the cult already exists, show a message to initiate the pawn into the inquisitor faction.
             if (PlayerCult == null || !PlayerCult.active) return;
             Messages.Message(
-                "Cults_InquisitionPlotBegins".Translate(new object[] {antiCultist.LabelShort, PlayerCult.name}),
+                "Cults_InquisitionPlotBegins".Translate(antiCultist.LabelShort, PlayerCult.name),
                 MessageTypeDefOf.PositiveEvent);
         }
         #endregion stuff

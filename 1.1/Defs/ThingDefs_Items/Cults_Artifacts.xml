@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+  <ThingDef ParentName="ArtifactBase">
+    <defName>Cults_ElixerOfPower</defName>
+    <label>elixer of power</label>
+    <description>This stone flask is wrapped with golden inlays and a watchful eye made of a rare gemstone. When held, it feels like a heart is beating inside. When uncapped, all one sees is a black liquid. Inscriptions along the back seem to indicate that consuming this elixer would grant untold powers. The powers will fade in time, possibly within a season. During that time, one is treated to the taste of godlike power.</description>
+    <graphicData>
+      <texPath>Item/Artifact/BlackIchorElixer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <tradeNeverStack>true</tradeNeverStack>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+    </statBases>
+    <drawGUIOverlay>false</drawGUIOverlay>
+    <comps>
+      <li Class="CompProperties_Targetable">
+        <compClass>CompTargetable_SinglePawn</compClass>
+      </li>
+      <li>
+        <compClass>CultOfCthulhu.CompTargetEffect_ElixerOfPower</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  
+</Defs>

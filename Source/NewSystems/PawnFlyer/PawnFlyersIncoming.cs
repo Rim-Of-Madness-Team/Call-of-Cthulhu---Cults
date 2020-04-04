@@ -249,7 +249,7 @@ namespace CultOfCthulhu
                 {
                     for (int j = 0; j < 3; j++)
                     {
-                        FilthMaker.MakeFilth(base.Position, base.Map, roof.filthLeaving, 1);
+                        FilthMaker.TryMakeFilth(base.Position, base.Map, roof.filthLeaving, 1);
                     }
                 }
             }

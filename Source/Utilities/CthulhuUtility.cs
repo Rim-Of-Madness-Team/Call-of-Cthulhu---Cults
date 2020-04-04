@@ -110,7 +110,7 @@ namespace Cthulhu
             if (pawn == null) return false;
             if (pawn.Dead) return false;
             if (pawn.Downed && !allowDowned) return false;
-            if (pawn.story.WorkTagIsDisabled(WorkTags.Violent)) return false;
+            if (pawn.story.DisabledWorkTagsBackstoryAndTraits.HasFlag(WorkTags.Violent)) return false;
             return true;
         }
 

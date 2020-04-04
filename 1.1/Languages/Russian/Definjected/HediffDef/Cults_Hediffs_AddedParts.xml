@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Added body parts -->
+
+  <Cults_PsionicBrain.label>псионическая доля</Cults_PsionicBrain.label>
+  <Cults_TentacleArm.label>щупальце</Cults_TentacleArm.label>
+  <Cults_CthulhidTentacle.label>щупальце ктулху</Cults_CthulhidTentacle.label>
+  <Cults_CthulhidEyestalk.label>ужасающий говорящий глаз</Cults_CthulhidEyestalk.label>
+  <Cults_MonstrousBrain.label>чудовищный мозг</Cults_MonstrousBrain.label>
+
+  <Cults_MonstrousBody.label>ненормальное сердце</Cults_MonstrousBody.label>
+  <Cults_MonstrousBody.comps.0.tools.0.label>тело</Cults_MonstrousBody.comps.0.tools.0.label>
+
+
+</LanguageData>

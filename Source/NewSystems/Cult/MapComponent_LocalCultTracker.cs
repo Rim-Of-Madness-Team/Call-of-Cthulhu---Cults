@@ -18,7 +18,7 @@ namespace CultOfCthulhu
         public const int OneMinute = 3600;
         public const int OneDay = 60000;
         public const int ThreeDays = 180000;
-        
+
         //WorldComponent_GlobalCultTracker globalCultTracker = Find.World.GetComponent<WorldComponent_GlobalCultTracker>();
 
         public CultSeedState CurrentSeedState { get { return CultTracker.Get.currentSeedState; } set { CultTracker.Get.currentSeedState = value; } }
@@ -91,7 +91,7 @@ namespace CultOfCthulhu
                 return;
             }
             else
-            {   
+            {
                 if (!CultUtility.TrySpawnWalkInCultist(map, CultUtility.CultistType.Preacher))
                 {
                     //Log.Messag("Failed to spawn walk-in cultist");
@@ -115,9 +115,9 @@ namespace CultOfCthulhu
                         if (repeatableResearch.IsFinished)
                         {
                             Cthulhu.Utility.ChangeResearchProgress(repeatableResearch, 0f, true);
-                            Messages.Message("RepeatableResearch".Translate(new object[] {
+                            Messages.Message("RepeatableResearch".Translate(
                     repeatableResearch.LabelCap
-                }), MessageTypeDefOf.PositiveEvent);
+                ), MessageTypeDefOf.PositiveEvent);
                         }
                     }
                 }
@@ -128,57 +128,55 @@ namespace CultOfCthulhu
         public void NewCultistCheck()
         {
             if (CurrentSeedState < CultSeedState.FinishedWriting) return;
+
+            //Cult Tick (500 ticks)
             if (ticksToCheckCultists == 0) ticksToCheckCultists = Find.TickManager.TicksGame + 500;
-            if (ticksToCheckCultists < Find.TickManager.TicksGame)
+            if (ticksToCheckCultists >= Find.TickManager.TicksGame)
+                return;
+            ticksToCheckCultists = Find.TickManager.TicksGame + 500;
+            
+            List<Pawn> spawnedColonyMembers = new List<Pawn>(map.mapPawns.FreeColonistsAndPrisonersSpawned);
+            Cult playerCult = CultTracker.Get.PlayerCult;
+            if (spawnedColonyMembers == null || spawnedColonyMembers.Count == 0)
+                return;
+
+            foreach (Pawn colonist in spawnedColonyMembers)
             {
-                ticksToCheckCultists = Find.TickManager.TicksGame + 500;
-                IEnumerable<Pawn> spawnedColonyMembers = map.mapPawns.FreeColonistsAndPrisonersSpawned;
-                Cult playerCult = CultTracker.Get.PlayerCult;
-                if (spawnedColonyMembers != null)
+                if (colonist.needs.TryGetNeed<Need_CultMindedness>() is Need_CultMindedness cultMind)
                 {
-                    if (spawnedColonyMembers.Count<Pawn>() > 0)
+                    //Cult-Mindedness Above 70%? You will join the cult.
+                    if (cultMind.CurLevelPercentage > 0.7)
                     {
-                        foreach (Pawn colonist in map.mapPawns.FreeColonistsAndPrisonersSpawned)
+                        if (playerCult == null)
+                            playerCult = new Cult(colonist);
+                        playerCult.SetMember(colonist);
+                    }
+                    //Otherwise, you will be removed from the cult.
+                    else if (cultMind.CurInstantLevelPercentage > 0.3 &&
+                        cultMind.CurInstantLevelPercentage < 0.7)
+                    {
+                        if (playerCult != null)
                         {
-                            
-                            Need_CultMindedness cultMind = colonist.needs.TryGetNeed<Need_CultMindedness>();
-                            if (cultMind != null)
-                            {
-                                if (cultMind.CurLevelPercentage > 0.7)
-                                {
-                                    if (playerCult == null)
-                                    {
-                                        playerCult = new Cult(colonist);
-                                    }
-                                    playerCult.SetMember(colonist);
-                                }
-                                else if (cultMind.CurInstantLevelPercentage > 0.3 &&
-                                    cultMind.CurInstantLevelPercentage < 0.7)
-                                {
-                                    if (playerCult != null)
-                                    {
-                                        playerCult.RemoveMember(colonist);
-                                        CultTracker.Get.RemoveInquisitor(colonist);
-                                    }
-                                }
-                                else if (cultMind.CurInstantLevelPercentage < 0.3)
-                                {
-                                    CultTracker.Get.SetInquisitor(colonist);
-                                }
-                            }
-                            if (colonist.Dead)
-                            {
-                                playerCult.RemoveMember(colonist);
-                                //Log.Messag("9b");
-
-                                CultTracker.Get.RemoveInquisitor(colonist);
-                                continue;
-                            }
-                            //Log.Messag("10");
-
+                            playerCult.RemoveMember(colonist);
+                            CultTracker.Get.RemoveInquisitor(colonist);
                         }
                     }
+                    //Those with cult mindedness below 30% will be inquisitors.
+                    else if (cultMind.CurInstantLevelPercentage < 0.3)
+                    {
+                        CultTracker.Get.SetInquisitor(colonist);
+                    }
                 }
+                if (colonist.Dead)
+                {
+                    playerCult.RemoveMember(colonist);
+                    //Log.Messag("9b");
+
+                    CultTracker.Get.RemoveInquisitor(colonist);
+                    continue;
+                }
+                //Log.Messag("10");
+
             }
         }
 
@@ -186,7 +184,7 @@ namespace CultOfCthulhu
         {
             if (pawn == null) return false;
             if (target == null && targetRequired) return false;
-            
+
             if (ModSettings_Data.cultsForcedInvestigation == false && job != CultsDefOf.Cults_WriteTheBook) return false;
 
             //Toxic Fallout? Let's not force the colonist to do this job.

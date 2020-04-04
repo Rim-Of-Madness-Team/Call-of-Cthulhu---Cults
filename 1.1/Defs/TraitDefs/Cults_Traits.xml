@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef Class="CultOfCthulhu.TraitDefHidden">
+    <defName>Cults_OathtakerHastur</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Oathtaker</label>
+        <description>[PAWN_nameDef] has made an unbreakable contract. [PAWN_pronoun] will return from the dead to serve the King in Yellow that rules the lost city of Carcosa.</description>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef Class="CultOfCthulhu.TraitDefHidden">
+    <defName>Cults_OathtakerHastur2</defName>
+    <commonality>0</commonality>
+    <degreeDatas>
+      <li>
+        <label>Reanimated</label>
+        <description>[PAWN_nameDef] has risen from the dead to serve once again.</description>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  
+</Defs>

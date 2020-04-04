@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<Cults_BastNoCatOnMap>Bast found no eligible cats to transform.</Cults_BastNoCatOnMap>
+	<Cults_BastNoEnemiesOnMap>Bast deems it is not neccesary to ask for this favor right now.</Cults_BastNoEnemiesOnMap>
+	<Cults_BastSanctuaryEnemy>Bast's retribution</Cults_BastSanctuaryEnemy>
+	<Cults_BastGuardianTransformationLabel>{0} is a Bast Guardian</Cults_BastGuardianTransformationLabel>
+	<Cults_BastGuardianTransformationDescription>Bast transforms {0} into a mighty guardian!</Cults_BastGuardianTransformationDescription>
+	<Cults_BastGameOver>Your life as a colonist is no more. You now bask in the glory of Bast for eternity in A'aru.</Cults_BastGameOver>
+</LanguageData>

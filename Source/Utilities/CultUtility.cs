@@ -156,14 +156,16 @@ namespace CultOfCthulhu
                     return false;
                 }
                 GenSpawn.Spawn(p, loc, map);
-                string text = "CultistJoin".Translate(p.kindDef.label, p.story.adulthood.title.ToLower());
+                TaggedString text = "CultistJoin".Translate(p.kindDef.label, p.story.adulthood.title.ToLower());
                 text = text.AdjustedFor(p);
-                string label = "LetterLabelCultistJoin".Translate();
+                TaggedString label = "LetterLabelCultistJoin".Translate();
                 if (showMessage) Find.LetterStack.ReceiveLetter(label, text, CultsDefOf.Cults_StandardMessage);
                 PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref text, ref label, p);
                 return true;
             }
+#pragma warning disable CS0168 // Variable is declared but never used
             catch (Exception e)
+#pragma warning restore CS0168 // Variable is declared but never used
             {
                 return false;
             }
@@ -188,14 +190,13 @@ namespace CultOfCthulhu
                 {
                     p = null;
                     request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer,
-                        map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, false,
-                        false, null, null, null, null);
+                        map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, false);
                     p = PawnGenerator.GeneratePawn(request);
 
                     if (p.skills.GetSkill(SkillDefOf.Social).TotallyDisabled) continue;
                     if (p.skills.GetSkill(SkillDefOf.Social).Level >= 5)
                     {
-                        if (p.story.WorkTagIsDisabled(WorkTags.Social)) continue;
+                        if (p.story.DisabledWorkTagsBackstoryAndTraits.HasFlag((WorkTags.Social))) continue;
                         break;
                     }
                 }
@@ -204,8 +205,7 @@ namespace CultOfCthulhu
             else if (type == CultistType.DarkEmmisary)
             {
                 request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer,
-                    map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, false,
-                    false, null, null, null, null);
+                    map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, false);
                 p = PawnGenerator.GeneratePawn(request);
                 Thing tHood = ThingMaker.MakeThing(ThingDef.Named("Apparel_NyarlathotepHood"),
                     ThingDef.Named("DevilstrandCloth"));
@@ -219,8 +219,7 @@ namespace CultOfCthulhu
             else
             {
                 request = new PawnGenerationRequest(pawnKindDef, Faction.OfPlayer, PawnGenerationContext.NonPlayer,
-                    map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false, false,
-                    false, null, null, null, null);
+                    map.Tile, false, false, false, false, true, true, 20f, false, true, true, false, false);
                 p = PawnGenerator.GeneratePawn(request);
             }
             //We need psychopathic cannibals
@@ -368,8 +367,8 @@ namespace CultOfCthulhu
                                          ")");
                             if (diceRoll + successModifier >= baseDifficulty + failDifficulty) Success = true;
                             s.AppendLine("Success = " + Success.ToString().CapitalizeFirst());
-                            reportResult.AppendLine("Cults_LRCheck".Translate(new object[]
-                                {diceRoll, successModifier, baseDifficulty, failDifficulty}));
+                            reportResult.AppendLine("Cults_LRCheck".Translate(
+                                diceRoll, successModifier, baseDifficulty, failDifficulty));
                             reportResult.AppendLine(Success
                                 ? "Cults_LRResultSuccess".Translate()
                                 : "Cults_LRResultFailure".Translate());
@@ -420,31 +419,30 @@ namespace CultOfCthulhu
                 modifier += 5;
                 debugString.AppendLine("Executioner Difficulty: +10 Inexperienced executioner");
                 reportUnfavorables.AppendLine("+ 5 / 10: " +
-                                              "Cults_LRExecInex".Translate(new object[]
-                                                  {executioner.LabelShort, experience}));
+                                              "Cults_LRExecInex".Translate(
+                                                  executioner.LabelShort, experience));
             }
             else if (experience < 10)
             {
                 debugString.AppendLine("Executioner Success: +0 Somewhat-lacking executioner");
                 reportFavorables.AppendLine("+ 0 / 10: " +
-                                            "Cults_LRExecEven".Translate(new object[]
-                                                {executioner.LabelShort, experience}));
+                                            "Cults_LRExecEven".Translate(
+                                                executioner.LabelShort, experience));
             }
             else if (experience < 24)
             {
                 successModifierOut += 5;
                 debugString.AppendLine("Executioner Success: +5 Experienced executioner");
                 reportFavorables.AppendLine("+ 5 / 10: " +
-                                            "Cults_LRExecExp".Translate(new object[]
-                                                {executioner.LabelShort, experience}));
+                                            "Cults_LRExecExp".Translate(
+                                                executioner.LabelShort, experience));
             }
             else
             {
                 successModifierOut += 10;
                 debugString.AppendLine("Executioner Success: +10 Expert executioner");
                 reportFavorables.AppendLine("+10 / 10: " +
-                                            "Cults_LRExecVeryExp".Translate(new object[]
-                                                {executioner.LabelShort, experience}));
+                                            "Cults_LRExecVeryExp".Translate(executioner.LabelShort, experience));
                 var executionerBonus = new IntRange(0, 5).RandomInRange;
                 successModifierOut += executionerBonus;
                 debugString.AppendLine("Executioner Success: +" + executionerBonus + " Executioner finesse bonus");
@@ -462,8 +460,8 @@ namespace CultOfCthulhu
             successModifier = 0;
             var starsAreRight = altar.Map.GameConditionManager.GetActiveCondition<GameCondition_StarsAreRight>();
             var starsAreWrong = altar.Map.GameConditionManager.GetActiveCondition<GameCondition_StarsAreWrong>();
-            var eclipseActive = altar.Map.GameConditionManager.GetActiveCondition<GameCondition_Eclipse>();
-            var auroraActive = altar.Map.GameConditionManager.GetActiveCondition<GameCondition_Aurora>();
+            var eclipseActive = altar.Map.GameConditionManager.GetActiveCondition(GameConditionDefOf.Eclipse);
+            var auroraActive = altar.Map.GameConditionManager.GetActiveCondition(GameConditionDefOf.Aurora);
 
             //Astral events
             /////////////

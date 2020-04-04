@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cults_SleepTotem</defName>
+    <label>sleep totem</label>
+    <description>Totem that draws invaders towards it and induces them into an inescapable trance, where dreams devour dreamers. The effect is limited enough to delay intruders long enough to expose them to other hazards.</description> 
+    <thingClass>CultOfCthulhu.Building_TotemSleep</thingClass>
+    <tickerType>Rare</tickerType>
+    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <fertility>2.0</fertility>
+    <specialDisplayRadius>5.8</specialDisplayRadius>
+	<graphicData>
+      <texPath>Building/Exotic/SleepTotem/SleepTotem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <designationHotKey>Misc11</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>8</pathCost>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <rotatable>false</rotatable>
+    <statBases>
+	  <Mass>2.2</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToMake>170</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cults_FertilityTotem</defName>
+    <label>fertility totem</label>
+    <description>Totem that increases growth rate of crops for two quadrums.</description> 
+    <thingClass>CultOfCthulhu.Building_TotemFertility</thingClass>
+    <tickerType>Normal</tickerType>
+    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <fertility>2.0</fertility>
+    <specialDisplayRadius>5.8</specialDisplayRadius>
+	<graphicData>
+      <texPath>Building/Exotic/FertilityTotem/FertilityTotem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+    </graphicData>
+    <designationHotKey>Misc11</designationHotKey>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+    </comps>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <selectable>true</selectable>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>8</pathCost>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <rotatable>false</rotatable>
+    <statBases>
+	  <Mass>1.4</Mass>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToMake>170</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cults_SunkenShipChunk</defName>
+    <label>sunken ship chunk</label>
+    <description>A chunk of a naval craft. Can be deconstructed to discover treasures within.</description>
+    <category>Building</category>
+	<thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Building/Exotic/SunkenShipChunk</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <damageData>
+        <rect>(0.1,0.1,1.8,1.8)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(1.3,0.3,1.0)</volume>
+        <offset>(0,0,-0.13)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <pathCost>35</pathCost>
+    <blockWind>true</blockWind>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.50</fillPercent>
+    <size>(2,2)</size>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Beauty>-20</Beauty>
+      <WorkToMake>12000</WorkToMake>
+    </statBases>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <killedLeavings>
+      <ChunkSlagSteel>6</ChunkSlagSteel>
+    </killedLeavings>
+    <costList>
+      <ComponentIndustrial>60</ComponentIndustrial>
+      <Steel>400</Steel>
+	  <WoodLog>400</WoodLog>
+	  <Plasteel>20</Plasteel>
+    </costList>
+    <building>
+      <claimable>false</claimable>
+      <alwaysDeconstructible>true</alwaysDeconstructible>
+    </building>
+    <selectable>true</selectable>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <drawerType>MapMeshOnly</drawerType>
+    <repairEffect>ConstructMetal</repairEffect>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cults_TreasureChest</defName>
+    <label>treasure chest</label>
+    <thingClass>CultOfCthulhu.Building_TreasureChest</thingClass>
+    <graphicData>
+      <texPath>Building/Exotic/TreasureChest/TreasureChest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <WorkToMake>3200</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>A locked and sealed chest designed to keep goods and valuables safe from both man and nature.</description>
+    <size>(1,1)</size>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <Gold>5</Gold>
+      <Steel>4</Steel>
+    </costList>
+	<building>
+      <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>Weapons</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cults_TreasureChest_Relic</defName>
+    <label>relic chest</label>
+    <thingClass>CultOfCthulhu.Building_TreasureChest</thingClass>
+    <graphicData>
+      <texPath>Building/Exotic/RelicChest/RelicChest</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <blockWind>true</blockWind>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <WorkToMake>3200</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>A locked and sealed chest designed to keep goods and valuables safe from both man and nature.</description>
+    <size>(1,1)</size>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <costList>
+      <WoodLog>60</WoodLog>
+      <Gold>5</Gold>
+      <Steel>4</Steel>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+  </ThingDef>
+
+
+  <ThingDef ParentName="CrashedShipPartBase">
+    <defName>Cults_LandedShip</defName>
+    <label>landed marine ship</label>
+    <description>A seaworthy ship plucked from the ocean by Dagon. It may contain exotic materials, computers, or even AI personas. Expect it to be surrounded by sailors stricken with madness.</description>
+    <thingClass>CultOfCthulhu.Building_LandedShip</thingClass>
+    <graphicData>
+      <texPath>Building/Exotic/CompleteShip/CompleteShipB</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(12,5)</drawSize>
+	  <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <killedLeavings>
+      <ChunkSlagSteel>10</ChunkSlagSteel>
+    </killedLeavings>
+    <costList>
+      <ComponentIndustrial>120</ComponentIndustrial>
+      <Steel>600</Steel>
+	  <WoodLog>600</WoodLog>
+	  <Plasteel>60</Plasteel>
+      <Silver>220</Silver>
+    </costList>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cults_MonolithNightmare</defName>
+    <label>Obelisk</label>
+    <description>A mysterious pyramid-like block of stone. It has an insidious aura.</description>
+    <thingClass>CultOfCthulhu.Building_Monolith</thingClass>
+	<stealable>false</stealable>
+    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <graphicData>
+      <texPath>Building/MonolithNightmare/ObeliskNightmare</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(6.0,10.0)</drawSize>
+	  <shaderType>TransparentPostLight</shaderType>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+	<size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
+    <passability>Impassable</passability>
+    <pathCost>8</pathCost>
+    <staticSunShadowHeight>1.5</staticSunShadowHeight>
+    <constructEffect>ConstructWood</constructEffect>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+	  <Mass>100</Mass>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Flammability>0</Flammability>
+      <Beauty>10</Beauty>
+    </statBases>
+    <selectable>true</selectable>
+    <costList>
+      <BlocksSlate>200</BlocksSlate>
+    </costList>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+    </comps>
+	<building>
+		<soundAmbient>RitualChanting</soundAmbient>
+	</building>
+    <designationHotKey>Misc10</designationHotKey>
+  </ThingDef>
+
+
+ </Defs>

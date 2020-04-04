@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <Cults_SpellOrbitalInsanityWave.label>Орбитальная волна безумия</Cults_SpellOrbitalInsanityWave.label>
+  <Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.0>tale_noun->время, когда ктулху вызвал крушение корабля с небес</Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.0>
+  <Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.1>image->Ктулху, взгромоздившись на большой шпиль, бросает большой коготь за пределы и корабль начинает падать с неба</Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.1>
+  <Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.2>circumstance_phrase->в славном огненном шаре</Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.2>
+  <Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.3>circumstance_phrase->с катастрофической скоростью</Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.3>
+  <Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.4>desc_sentence->Спасательные капсулы открыты для кричащих людей, доведенных до абсолютного безумия.</Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.4>
+  <Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.5>desc_sentence->Кровь и неземные щупальца корчились среди раненых беглецов, разрывающих капсулы их пораженного безумием судна.</Cults_SpellOrbitalInsanityWave.rulePack.rulesStrings.5>
+
+  <Cults_SpellBountyOfTheSea.label>Щедрость моря</Cults_SpellBountyOfTheSea.label>
+  <Cults_SpellBountyOfTheSea.rulePack.rulesStrings.0>tale_noun->время, когда мореходное судно упало с небес</Cults_SpellBountyOfTheSea.rulePack.rulesStrings.0>
+  <Cults_SpellBountyOfTheSea.rulePack.rulesStrings.1>image->В небе открывается массивный портал, отражающий весь океан за ним, как весь корабль, полный живых душ, падает </Cults_SpellBountyOfTheSea.rulePack.rulesStrings.1>
+  <Cults_SpellBountyOfTheSea.rulePack.rulesStrings.2>circumstance_phrase->к ужасу всех присутствующих</Cults_SpellBountyOfTheSea.rulePack.rulesStrings.2>
+  <Cults_SpellBountyOfTheSea.rulePack.rulesStrings.3>circumstance_phrase->к радости зрителей</Cults_SpellBountyOfTheSea.rulePack.rulesStrings.3>
+  <Cults_SpellBountyOfTheSea.rulePack.rulesStrings.4>desc_sentence->Корабль погружается в землю, отправив сигнал множеству людей, сориентировать их.</Cults_SpellBountyOfTheSea.rulePack.rulesStrings.4>
+  <Cults_SpellBountyOfTheSea.rulePack.rulesStrings.5>desc_sentence->Внутри него находятся бесчисленные современные сокровища, охраняемые потревоженной палубной командой.</Cults_SpellBountyOfTheSea.rulePack.rulesStrings.5>
+
+  <Cults_SpellFertilityRitual.label>Ритуал плодородия</Cults_SpellFertilityRitual.label>
+  <Cults_SpellFertilityRitual.rulePack.rulesStrings.0>tale_noun->время когда Шуб-Ниггурат дал нам тотем плодородия</Cults_SpellFertilityRitual.rulePack.rulesStrings.0>
+  <Cults_SpellFertilityRitual.rulePack.rulesStrings.1>image->Мать Черной Козы корчится с тысячами щупалец</Cults_SpellFertilityRitual.rulePack.rulesStrings.1>
+  <Cults_SpellFertilityRitual.rulePack.rulesStrings.2>circumstance_phrase->и из её пасти расправляется отвратительный идол</Cults_SpellFertilityRitual.rulePack.rulesStrings.2>
+  <Cults_SpellFertilityRitual.rulePack.rulesStrings.3>circumstance_phrase->от земли, как тотем, растет из трупа жертвы на алтаре</Cults_SpellFertilityRitual.rulePack.rulesStrings.3>
+  <Cults_SpellFertilityRitual.rulePack.rulesStrings.4>desc_sentence->Тотем появился с неолитической резьбой.</Cults_SpellFertilityRitual.rulePack.rulesStrings.4>
+  <Cults_SpellFertilityRitual.rulePack.rulesStrings.5>desc_sentence->За выступающим козлиным черепом тотема лежит поле трупов, вздувающие землю в иле.</Cults_SpellFertilityRitual.rulePack.rulesStrings.5>
+  <Cults_SpellFertilityRitual.rulePack.rulesStrings.6>desc_sentence->Мать Черной Козы смотрит горящими глазами на палача.</Cults_SpellFertilityRitual.rulePack.rulesStrings.6>
+
+  <Cults_SpellMotherOfGoats.label>Мать коз</Cults_SpellMotherOfGoats.label>
+  <Cults_SpellMotherOfGoats.rulePack.rulesStrings.0>tale_noun->время, когда пришло стадо черных козлов</Cults_SpellMotherOfGoats.rulePack.rulesStrings.0>
+  <Cults_SpellMotherOfGoats.rulePack.rulesStrings.1>image->Мать Черной Козы корчится с тысячами щупалец </Cults_SpellMotherOfGoats.rulePack.rulesStrings.1>
+  <Cults_SpellMotherOfGoats.rulePack.rulesStrings.2>circumstance_phrase->на горизонте, бесчисленные черные козлы скачут галопом к колонии.</Cults_SpellMotherOfGoats.rulePack.rulesStrings.2>
+  <Cults_SpellMotherOfGoats.rulePack.rulesStrings.3>circumstance_phrase->из земли, как тысяча, ростков из ее придатков, полностью сформированные черные козлы</Cults_SpellMotherOfGoats.rulePack.rulesStrings.3>
+  <Cults_SpellMotherOfGoats.rulePack.rulesStrings.4>desc_sentence->Пасти козлов открываются, обнажив языки щупальца.</Cults_SpellMotherOfGoats.rulePack.rulesStrings.4>
+  <Cults_SpellMotherOfGoats.rulePack.rulesStrings.5>desc_sentence->Некоторые козы стоят на двух ногах.</Cults_SpellMotherOfGoats.rulePack.rulesStrings.5>
+  <Cults_SpellMotherOfGoats.rulePack.rulesStrings.6>desc_sentence->Мать Черной Козы смотрит горящими глазами, готовая командовать своими детьми.</Cults_SpellMotherOfGoats.rulePack.rulesStrings.6>
+
+  <Cults_SpellPsionicGrowth.label>Псионический рост</Cults_SpellPsionicGrowth.label>
+  <Cults_SpellPsionicGrowth.rulePack.rulesStrings.0>tale_noun->время [pawn_nameFull] был одарен психическими способностями</Cults_SpellPsionicGrowth.rulePack.rulesStrings.0>
+  <Cults_SpellPsionicGrowth.rulePack.rulesStrings.1>image->Ктулху, величественный и внушительный,  </Cults_SpellPsionicGrowth.rulePack.rulesStrings.1>
+  <Cults_SpellPsionicGrowth.rulePack.rulesStrings.2>circumstance_phrase->хватка [pawn_nameShortDef] с сияющим когтем</Cults_SpellPsionicGrowth.rulePack.rulesStrings.2>
+  <Cults_SpellPsionicGrowth.rulePack.rulesStrings.3>circumstance_phrase->разрезает череп [pawn_nameShortDef] с руками-щупальцами</Cults_SpellPsionicGrowth.rulePack.rulesStrings.3>
+  <Cults_SpellPsionicGrowth.rulePack.rulesStrings.4>desc_sentence->[pawn_nameShortDef]череп увеличен до такой степени, что голова [pawn_possessive] едва может поддерживать себя на плечах [pawn_possessive].</Cults_SpellPsionicGrowth.rulePack.rulesStrings.4>
+  <Cults_SpellPsionicGrowth.rulePack.rulesStrings.5>desc_sentence->За ним корчатся бесчисленные щупальца на заднем плане.</Cults_SpellPsionicGrowth.rulePack.rulesStrings.5>
+  <Cults_SpellPsionicGrowth.rulePack.rulesStrings.6>desc_sentence->Колоссальные базальтовые башни появляются за волной реальности, отделяющей Ктулху от этой сферы реальности.</Cults_SpellPsionicGrowth.rulePack.rulesStrings.6>
+
+  <Cults_SpellRatsInTheWalls.label>Крысы в стенах</Cults_SpellRatsInTheWalls.label>
+  <Cults_SpellRatsInTheWalls.rulePack.rulesStrings.0>tale_noun->время, когда крысы чудесным образом появились</Cults_SpellRatsInTheWalls.rulePack.rulesStrings.0>
+  <Cults_SpellRatsInTheWalls.rulePack.rulesStrings.1>image->тысячи крыс, выливающихся из стен</Cults_SpellRatsInTheWalls.rulePack.rulesStrings.1>
+  <Cults_SpellRatsInTheWalls.rulePack.rulesStrings.2>circumstance_phrase->с кроваво-красными глазами</Cults_SpellRatsInTheWalls.rulePack.rulesStrings.2>
+  <Cults_SpellRatsInTheWalls.rulePack.rulesStrings.3>circumstance_phrase->карабкаются с переплетенными хвостами</Cults_SpellRatsInTheWalls.rulePack.rulesStrings.3>
+  <Cults_SpellRatsInTheWalls.rulePack.rulesStrings.4>desc_sentence->Они грызут друг друга, когда сталкиваются.</Cults_SpellRatsInTheWalls.rulePack.rulesStrings.4>
+  <Cults_SpellRatsInTheWalls.rulePack.rulesStrings.5>desc_sentence->Еще больше выползают из под пола, во время хаотической сцены.</Cults_SpellRatsInTheWalls.rulePack.rulesStrings.5>
+  <Cults_SpellRatsInTheWalls.rulePack.rulesStrings.6>desc_sentence->Заостренные зубы блестят рядом с желтыми глазами изнутри расщелин пола и кусков стен.</Cults_SpellRatsInTheWalls.rulePack.rulesStrings.6>
+
+  <Cults_SpellReanimator.label>Реаниматор</Cults_SpellReanimator.label>
+  <Cults_SpellReanimator.rulePack.rulesStrings.0>tale_noun->время, когда [pawn_nameFull] восстало из мертвых</Cults_SpellReanimator.rulePack.rulesStrings.0>
+  <Cults_SpellReanimator.rulePack.rulesStrings.1>image->[pawn_nameFull] аудитория стоит в шоке</Cults_SpellReanimator.rulePack.rulesStrings.1>
+  <Cults_SpellReanimator.rulePack.rulesStrings.2>circumstance_phrase->несмотря на отсутствие [pawn_possessive] головы</Cults_SpellReanimator.rulePack.rulesStrings.2>
+  <Cults_SpellReanimator.rulePack.rulesStrings.3>circumstance_phrase->несмотря на смертельные раны</Cults_SpellReanimator.rulePack.rulesStrings.3>
+  <Cults_SpellReanimator.rulePack.rulesStrings.4>desc_sentence->[pawn_pronoun] неестественно улыбается с пустым взглядом на [pawn_possessive] глазах.</Cults_SpellReanimator.rulePack.rulesStrings.4>
+  <Cults_SpellReanimator.rulePack.rulesStrings.5>desc_sentence->[pawn_pronoun] указывает один палец на [pawn_possessive] палача.</Cults_SpellReanimator.rulePack.rulesStrings.5>
+  <Cults_SpellReanimator.rulePack.rulesStrings.6>desc_sentence->[pawn_pronoun] имеет окрашенную в зеленый кожу с узкими разрезами для радужки глаз.</Cults_SpellReanimator.rulePack.rulesStrings.6>
+
+  <Cults_SpellReincarnation.label>Реинкарнация</Cults_SpellReincarnation.label>
+  <Cults_SpellReincarnation.rulePack.rulesStrings.0>tale_noun->Время, когда[pawn_nameFull] превратился(ась) в дерево безумия</Cults_SpellReincarnation.rulePack.rulesStrings.0>
+  <Cults_SpellReincarnation.rulePack.rulesStrings.1>image->[pawn_nameFull]раскололся в основании дерева ночных кошмаров</Cults_SpellReincarnation.rulePack.rulesStrings.1>
+  <Cults_SpellReincarnation.rulePack.rulesStrings.2>circumstance_phrase-> подносит [pawn_possessive] лицо</Cults_SpellReincarnation.rulePack.rulesStrings.2>
+  <Cults_SpellReincarnation.rulePack.rulesStrings.3>circumstance_phrase-> подносит [pawn_possessive] части тела, усеянные по его ветвям</Cults_SpellReincarnation.rulePack.rulesStrings.3>
+  <Cults_SpellReincarnation.rulePack.rulesStrings.4>desc_sentence->Дерево стоит выше любого в регионе.</Cults_SpellReincarnation.rulePack.rulesStrings.4>
+  <Cults_SpellReincarnation.rulePack.rulesStrings.5>desc_sentence->Передняя часть дерева покрыта причудливой росписью, которая излучает сырую энергию.</Cults_SpellReincarnation.rulePack.rulesStrings.5>
+  <Cults_SpellReincarnation.rulePack.rulesStrings.6>desc_sentence->Ветви деревьев скручиваются в спирали, которые, похоже, изгибают пространство вокруг него.</Cults_SpellReincarnation.rulePack.rulesStrings.6>
+
+  <Cults_SpellStarryWisdom.label>Звездная мудрость</Cults_SpellStarryWisdom.label>
+  <Cults_SpellStarryWisdom.rulePack.rulesStrings.0>tale_noun->время, когда[pawn_nameFull] разум был тронут Ньярлатотепом</Cults_SpellStarryWisdom.rulePack.rulesStrings.0>
+  <Cults_SpellStarryWisdom.rulePack.rulesStrings.1>image->[pawn_nameFull] встает на колени перед фигурой </Cults_SpellStarryWisdom.rulePack.rulesStrings.1>
+  <Cults_SpellStarryWisdom.rulePack.rulesStrings.2>circumstance_phrase->одетый в регалии древних египетских фараонов</Cults_SpellStarryWisdom.rulePack.rulesStrings.2>
+  <Cults_SpellStarryWisdom.rulePack.rulesStrings.3>circumstance_phrase->с рогами козы</Cults_SpellStarryWisdom.rulePack.rulesStrings.3>
+  <Cults_SpellStarryWisdom.rulePack.rulesStrings.4>desc_sentence-Фигура кладет какой-то скипетр на лоб [pawn_nameShortDef].</Cults_SpellStarryWisdom.rulePack.rulesStrings.4>
+  <Cults_SpellStarryWisdom.rulePack.rulesStrings.5>desc_sentence->Фигура держит черную маску в одной руке.</Cults_SpellStarryWisdom.rulePack.rulesStrings.5>
+  <Cults_SpellStarryWisdom.rulePack.rulesStrings.6>desc_sentence->[pawn_nameShortDef] окружен нетерпеливыми зрителями.</Cults_SpellStarryWisdom.rulePack.rulesStrings.6>
+
+  <Cults_SpellStarVampireVisit.label>Визит звёздного вампира</Cults_SpellStarVampireVisit.label>
+  <Cults_SpellStarVampireVisit.rulePack.rulesStrings.0>tale_noun->время, когда звездный вампир перешел в наше измерение</Cults_SpellStarVampireVisit.rulePack.rulesStrings.0>
+  <Cults_SpellStarVampireVisit.rulePack.rulesStrings.1>image->Массивный портал открывается за алтарем, где звёздный вампир начал захватывать проповедника своими толстыми щупальцами</Cults_SpellStarVampireVisit.rulePack.rulesStrings.1>
+  <Cults_SpellStarVampireVisit.rulePack.rulesStrings.2>circumstance_phrase->к ужасу всех присутствующих</Cults_SpellStarVampireVisit.rulePack.rulesStrings.2>
+  <Cults_SpellStarVampireVisit.rulePack.rulesStrings.3>circumstance_phrase->к радости зрителей</Cults_SpellStarVampireVisit.rulePack.rulesStrings.3>
+  <Cults_SpellStarVampireVisit.rulePack.rulesStrings.4>desc_sentence->Звёздный вампир виден, только через кровь жертвы.</Cults_SpellStarVampireVisit.rulePack.rulesStrings.4>
+  <Cults_SpellStarVampireVisit.rulePack.rulesStrings.5>desc_sentence->Лицо жертвы скручивается в сторону пасти зверя и поднимает руку в знак протеста, в то время как другая схвачена сильными щупальцами.</Cults_SpellStarVampireVisit.rulePack.rulesStrings.5>
+  <Cults_SpellStarVampireVisit.rulePack.rulesStrings.6>desc_sentence->Один из зрителей, ошеломленный, пытается привлечь монстра во время суматохи.</Cults_SpellStarVampireVisit.rulePack.rulesStrings.6>
+
+  <Cults_SpellSunkenShip.label>Затонувший корабль</Cults_SpellSunkenShip.label>
+  <Cults_SpellSunkenShip.rulePack.rulesStrings.0>tale_noun->время, когда мореходное судно упало с небес</Cults_SpellSunkenShip.rulePack.rulesStrings.0>
+  <Cults_SpellSunkenShip.rulePack.rulesStrings.1>image->В небе открывается массивный портал, отражающий весь океан за ним, как падает кусок корабля</Cults_SpellSunkenShip.rulePack.rulesStrings.1>
+  <Cults_SpellSunkenShip.rulePack.rulesStrings.2>circumstance_phrase->к ужасу всех присутствующих</Cults_SpellSunkenShip.rulePack.rulesStrings.2>
+  <Cults_SpellSunkenShip.rulePack.rulesStrings.3>circumstance_phrase->к радости зрителей</Cults_SpellSunkenShip.rulePack.rulesStrings.3>
+  <Cults_SpellSunkenShip.rulePack.rulesStrings.4>desc_sentence->Древний обломок в размерах выглядит колоссальным.</Cults_SpellSunkenShip.rulePack.rulesStrings.4>
+  <Cults_SpellSunkenShip.rulePack.rulesStrings.5>desc_sentence->Внутри него находятся бесчисленные сверкающие драгоценные камни, сверкающие монеты и другие сокровища, потерянные в древнем прошлом.</Cults_SpellSunkenShip.rulePack.rulesStrings.5>
+  <Cults_SpellSunkenShip.rulePack.rulesStrings.6>desc_sentence->Перед обломком пересекаются два колоссальных якоря.</Cults_SpellSunkenShip.rulePack.rulesStrings.6>
+
+  <Cults_SpellSleeperOfNKai.label>спящий н'кай</Cults_SpellSleeperOfNKai.label>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.0>tale_noun->время, когда Цатоггу предоставил нам идола</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.0>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.1>image->Цатоггуа сидит в вечной неподвижности с аурой божественной лени </Cults_SpellSleeperOfNKai.rulePack.rulesStrings.1>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.2>circumstance_phrase->и от его ихора, сочившегося вверх от земли, появилась небольшая скульптура</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.2>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.3>circumstance_phrase->и усики бесформенных слуг несли маленького идола по его образу через землю</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.3>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.4>desc_sentence->Тотем появляется как приземистое, жирное жабоподобное существо с чертами летучей мыши и лени.</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.4>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.5>desc_sentence->За глазами тотема можно увидеть поле черепов под неподвижным богом.</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.5>
+  <Cults_SpellSleeperOfNKai.rulePack.rulesStrings.6>desc_sentence->Божественный Цатоггуа манит для больших жертвоприношений с зияющей пастью и ищущим языком.</Cults_SpellSleeperOfNKai.rulePack.rulesStrings.6>
+
+  <Cults_SpellBlackIchor.label>чёрный ихор</Cults_SpellBlackIchor.label>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.0>tale_noun->время, когда Цатоггуа выжал свой чёрный ихор в наше царство</Cults_SpellBlackIchor.rulePack.rulesStrings.0>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.1>image->Цатоггуа сидит в вечной неподвижности с аурой божественной лени </Cults_SpellBlackIchor.rulePack.rulesStrings.1>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.2>circumstance_phrase->и из его зияющей пасти, чёрный ихор свисает по его языку</Cults_SpellBlackIchor.rulePack.rulesStrings.2>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.3>circumstance_phrase->и из его когтей, плотно сжимающих раздавленные черепа, из щелей вытекает чёрный ихор</Cults_SpellBlackIchor.rulePack.rulesStrings.3>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.4>desc_sentence->Ихор пробегает по земле, как молния, поражающая мир, и наполняет нашу колонию пропитанием.</Cults_SpellBlackIchor.rulePack.rulesStrings.4>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.5>desc_sentence->Ихор создаёт неряшливый чёрный фонтан, объединяя полутвердый ил в съедобные комки.</Cults_SpellBlackIchor.rulePack.rulesStrings.5>
+  <Cults_SpellBlackIchor.rulePack.rulesStrings.6>desc_sentence->Божественный Цатоггуа ждет дальнейших жертвоприношений с выражением голода и божественной лени.</Cults_SpellBlackIchor.rulePack.rulesStrings.6>
+
+
+</LanguageData>

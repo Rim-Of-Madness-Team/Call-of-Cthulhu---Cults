@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+    <Forbidden_Studies.label>[종교] 이상한 기호 해독</Forbidden_Studies.label>
+    <Forbidden_Studies.description>추가 연구가 가능하도록 일부 언어를 해독합니다.</Forbidden_Studies.description>
+
+    <Forbidden_Deities.label>[종교] 초자연적 신학 연구</Forbidden_Deities.label>
+    <Forbidden_Deities.description>초자연적인 존재인 신을 찾기 위해 연구합니다. 계속 반복할 수 있습니다.</Forbidden_Deities.description>
+
+    <Forbidden_Lore.label>[종교] 이상적인 종파 연구</Forbidden_Lore.label>
+    <Forbidden_Lore.description>연구 과정에서 연구자의 사교육 및 사회 기술을 향상시키기 위한 교육 및 연구입니다.\n\n이 연구는 설교자가 되려고 하는 림에게 권장됩니다.</Forbidden_Lore.description>
+
+    <Forbidden_Attire.label>[종교] 종교 의상</Forbidden_Attire.label>
+    <Forbidden_Attire.description>종교 예복, 후드 및 다양한 가면을 디자인하고 제작할 수 잇습니다. 적절한 옷을 입으면 성공적인 희생의 기회가 증가합니다.</Forbidden_Attire.description>
+
+    <Forbidden_Sculptures.label>[종교] 조각품</Forbidden_Sculptures.label>
+    <Forbidden_Sculptures.description>외부의 존재에게 헌정하기 위핸 신비로운 조각품을 디자인하고 창작할 수 있습니다.</Forbidden_Sculptures.description>
+
+    <Forbidden_Obelisks.label>기념비(Obelisk) 건설</Forbidden_Obelisks.label>
+    <Forbidden_Obelisks.description>신비한 오벨리스크의 설계 및 제작이 가능해집니다.</Forbidden_Obelisks.description>
+
+    <Forbidden_Altar.label>[종교] 제단</Forbidden_Altar.label>
+    <Forbidden_Altar.description>이 세상 너머의 존재에 대한 의식을 행하는 에배 제단을 만들 수 있습니다.</Forbidden_Altar.description>
+
+    <Forbidden_Sacrifice.label>[종교] 희생 제단</Forbidden_Sacrifice.label>
+    <Forbidden_Sacrifice.description>외부의 존재에 대한 더 큰 감사를 표시하기 위해 제단을 희생 제단으로 업그레이드 할 수 있습니다.</Forbidden_Sacrifice.description>
+
+    <Forbidden_Human.label>[종교] 인간제물</Forbidden_Human.label>
+    <Forbidden_Human.description>제단을 인간을 바칠 수 있게 만들어, 우주적 존재들로부터 이상적인 이익을 얻을 수 있게 합니다.</Forbidden_Human.description>
+
+</LanguageData>

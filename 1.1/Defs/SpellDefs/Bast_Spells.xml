@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<IncidentDef ParentName="SpellDef">
+		<label>Favor</label>
+		<description>Make a sacrifice without any worldly gains.</description>
+		<defName>Cults_BastSpellFavor</defName>
+		<workerClass>CultOfCthulhu.SpellWorker_Favor</workerClass>
+		<letterLabel>to be noticed</letterLabel>
+		<letterText>felt a supernatural presence connect with them from beyond space and time</letterText>
+	</IncidentDef>
+
+	<!--
+████		██	   █████   ██████████
+██	██	  ██  ██   ██   █      ██
+████     ██    ██    ██        ██
+██  ██   ████████  █   ██      ██
+██████   ██    ██   █████      ██
+ -->
+
+	<IncidentDef ParentName="SpellDef">
+		<label>Divine Inspiration</label>
+		<description>Bast smiles upon your colonists, bestowing a random acts of inspiration upon them all</description>
+		<defName>Cults_BastSpellInspiration</defName>
+		<workerClass>BastCult.SpellWorker_Inspiration</workerClass>
+		<letterLabel>and feel her prescence</letterLabel>
+		<letterText>and the congregation feel inspired.</letterText>
+	</IncidentDef>
+
+	<IncidentDef ParentName="SpellDef">
+		<label>Feline Aspect</label>
+		<description>Trasforms your preacher with feline grace and claws.</description>
+		<defName>Cults_BastSpellFelineAspect</defName>
+		<workerClass>BastCult.SpellWorker_FelineAspect</workerClass>
+		<letterLabel>and feel her prescence</letterLabel>
+		<letterText>watches as their fingernails turn to claws and can now feel their newfound unnatural agility</letterText>
+		<modExtensions>
+			<li Class="BastCult.FelineAspectProperties">
+				<hediffToApplyToBody>BastCatLikeAspect</hediffToApplyToBody>
+				<hediffToApplyToHands>BastClaws</hediffToApplyToHands>
+				<handDefs>
+					<li>Hand</li>
+				</handDefs>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+	<IncidentDef ParentName="SpellDef">
+		<label>Summon Guardian</label>
+		<description>Transform a beloved feline into a guardian.</description>
+		<defName>Cults_BastSpellSummonGuardian</defName>
+		<workerClass>BastCult.SpellWorker_Guardian</workerClass>
+		<letterLabel>and have them smite your foes</letterLabel>
+		<letterText>sees that your pet is absorbed in a flash of lite and is transformed into a ferocious beast</letterText>
+		<modExtensions>
+			<li Class="BastCult.GuardianProperties">
+				<eligiblePawnDefs>
+					<li>Cat</li>
+					<li>Cougar</li>
+					<li>Panther</li>
+					<li>Lynx</li>
+				</eligiblePawnDefs>
+				<guardianDef>GuardianBast</guardianDef>
+			</li>
+		</modExtensions>
+	</IncidentDef>
+
+	<IncidentDef ParentName="SpellDef">
+		<label>Sanctuary</label>
+		<description>Protects your settlement from most hostiles</description>
+		<defName>Cults_BastSpellSanctuary</defName>
+		<workerClass>BastCult.SpellWorker_Sanctuary</workerClass>
+		<letterLabel>may your enemies flee in futility</letterLabel>
+		<letterText>sighs in relief as your enemies flee</letterText>
+	</IncidentDef>
+
+	<IncidentDef ParentName="SpellDef">
+		<label>Passage to A'aru</label>
+		<description>[Game Ending Spell]\nThe small settlement is deemed worthy by Bast to enter A'aru.</description>
+		<defName>Cults_BastSpellPassageToAaru</defName>
+		<workerClass>BastCult.SpellWorker_PassageToAaru</workerClass>
+		<letterLabel>and cry out in supplication that she may gaze upon your small settlement and deem you worthy</letterLabel>
+		<letterText>dons a mask and so is free</letterText>
+	</IncidentDef>
+</Defs>
