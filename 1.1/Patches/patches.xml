@@ -1,53 +1,51 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
   <Operation Class="PatchOperationSequence">
-	<success>Always</success>
-	<operations>
-	  <!--This ensures the patch will only be applied IF Giddy-Up is loaded-->
-	  <li Class="JecsTools.PatchOperationModLoaded">
-	    <modName>Giddy-up! Core</modName>
-	  </li>
-	  <li Class="PatchOperationAddModExtension">
-		<xpath>*/ThingDef[ defName = "Cults_ByakheeRace"]</xpath> 
-		<value>
-		  <li Class="GiddyUpCore.DrawingOffsetPatch">
-		    <northOffsetCSV>0,0,-1.25</northOffsetCSV>
-		    <southOffsetCSV>-0.05,-0.15,-0.75</southOffsetCSV>	
-		    <eastOffsetCSV>0.245,-0.15,-1.25</eastOffsetCSV>	
-		    <westOffsetCSV>-0.245,-0.15,-1.25</westOffsetCSV>	
-		  </li>
-		  <li Class="GiddyUpCore.AllowedLifeStagesPatch">
-		    <allowedLifeStagesCSV>1,2,3</allowedLifeStagesCSV>
-		  </li>
-		</value>
-	  </li>	  
-	  <li Class="PatchOperationAddModExtension">
-		<xpath>*/ThingDef[ defName = "Cults_FormlessSpawnRace"]</xpath> 
-		<value>
-		  <li Class="GiddyUpCore.DrawingOffsetPatch">
-			<northOffsetCSV>0,0,-1.25</northOffsetCSV>
-			<southOffsetCSV>0,0,-1.25</southOffsetCSV>	
-			<eastOffsetCSV>-0.5,0,-1.25</eastOffsetCSV>	
-			<westOffsetCSV>0.5,0,-1.25</westOffsetCSV>	
-		  </li>
-		  <li Class="GiddyUpCore.AllowedLifeStagesPatch">
-		    <allowedLifeStagesCSV>1,2,3</allowedLifeStagesCSV>
-		  </li>
-		</value>
-	  </li>
-	</operations>
+    <success>Always</success>
+    <operations>
+      <!--This ensures the patch will only be applied IF Giddy-Up is loaded-->
+      <li Class="JecsTools.PatchOperationModLoaded">
+        <modName>Giddy-up! Core</modName>
+      </li>
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "Cults_ByakheeRace"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.DrawingOffsetPatch">
+            <northOffsetCSV>0,0,-1.25</northOffsetCSV>
+            <southOffsetCSV>-0.05,-0.15,-0.75</southOffsetCSV>
+            <eastOffsetCSV>0.245,-0.15,-1.25</eastOffsetCSV>
+            <westOffsetCSV>-0.245,-0.15,-1.25</westOffsetCSV>
+          </li>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>1,2,3</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[ defName = "Cults_FormlessSpawnRace"]</xpath>
+        <value>
+          <li Class="GiddyUpCore.DrawingOffsetPatch">
+            <northOffsetCSV>0,0,-1.25</northOffsetCSV>
+            <southOffsetCSV>0,0,-1.25</southOffsetCSV>
+            <eastOffsetCSV>-0.5,0,-1.25</eastOffsetCSV>
+            <westOffsetCSV>0.5,0,-1.25</westOffsetCSV>
+          </li>
+          <li Class="GiddyUpCore.AllowedLifeStagesPatch">
+            <allowedLifeStagesCSV>1,2,3</allowedLifeStagesCSV>
+          </li>
+        </value>
+      </li>
+    </operations>
   </Operation>
-
-    <Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	  <!--This ensures the patch will only be applied IF Giddy-Up is loaded-->
-	  <li Class="JecsTools.PatchOperationModLoaded">
-	    <modName>A Dog Said...</modName>
-	  </li>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <!--This ensures the patch will only be applied IF Giddy-Up is loaded-->
+      <li Class="JecsTools.PatchOperationModLoaded">
+        <modName>A Dog Said...</modName>
+      </li>
       <li Class="PatchOperationAdd">
-          <xpath>
+        <xpath>
               /Defs/RecipeDef[
                 @Name = "OldWoundsAnimal" or
                 defname = "InstallBionicAnimalStomach" or
@@ -70,29 +68,27 @@
                 defName = "InstallSimpleProstheticTailAnimal"
               ]/recipeUsers
             </xpath>
-            <value>
-                <li>GuardianBast</li>
-            </value>
-        </li>
-	  </operations>
-    </Operation>
-
-	<Operation Class="PatchOperationSequence">
-	  <success>Always</success>
-	  <operations>
-	  <!--This ensures the patch will only be applied IF Giddy-Up is loaded-->
-	  <li Class="JecsTools.PatchOperationModLoaded">
-	    <modName>H.P. Lovecraft Storyteller - Remastered</modName>
-	  </li>
-	
-	  <li Class="PatchOperationAdd">
+        <value>
+          <li>GuardianBast</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <!--This ensures the patch will only be applied IF Giddy-Up is loaded-->
+      <li Class="JecsTools.PatchOperationModLoaded">
+        <modName>H.P. Lovecraft Storyteller - Remastered</modName>
+      </li>
+      <li Class="PatchOperationAdd">
         <!-- If the HP Lovecraft storyteller is loaded, make it so cats from that mod can also be transformed into Guardians of Bast. -->
         <success>Always</success>
         <xpath>Defs/IncidentDef[defName="Cults_BastSpellSummonGuardian"]/modExtensions/li[@Class="BastCult.GuardianProperties"]/eligiblePawnDefs</xpath>
-        <value><li>HPLovecraft_CatRace</li></value>
-	  </li>
-	  </operations>
-	</Operation>
-
-
+        <value>
+          <li>HPLovecraft_CatRace</li>
+        </value>
+      </li>
+    </operations>
+  </Operation>
 </Patch>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="SculptureBase">
     <defName>YigSculptureLarge</defName>
     <label>large serpent humanoid sculpture</label>
@@ -26,10 +25,7 @@
     </stuffCategories>
     <costStuffCount>145</costStuffCount>
   </ThingDef>
-
-
   <!-- Monstrous sculptures to cosmic entities. These are locked behind Forbidden_Sculptures research. -->
-
   <ThingDef Name="MonstrousSculpture" ParentName="SculptureBase" Abstract="True">
     <minifiedDef>MinifiedThing</minifiedDef>
     <fillPercent>0.5</fillPercent>
@@ -47,9 +43,10 @@
       <li>Stony</li>
     </stuffCategories>
     <costStuffCount>320</costStuffCount>
-    <researchPrerequisites><li>Forbidden_Sculptures</li></researchPrerequisites>
+    <researchPrerequisites>
+      <li>Forbidden_Sculptures</li>
+    </researchPrerequisites>
   </ThingDef>
-
   <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureCthulhu</defName>
     <label>monstrous octopoid sculpture</label>
@@ -60,16 +57,15 @@
       <drawSize>(4,4)</drawSize>
     </graphicData>
     <comps>
-	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-	  <deities>
-	  <li>
-	    <deityDef>Entity_Cthulhu</deityDef>
-	  </li>
-	  </deities>
-    </li>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+          </li>
+        </deities>
+      </li>
     </comps>
   </ThingDef>
-
   <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureBast</defName>
     <label>monstrous feline sculpture</label>
@@ -80,17 +76,15 @@
       <drawSize>(4,4)</drawSize>
     </graphicData>
     <comps>
-	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-	  <deities>
-	  <li>
-	    <deityDef>Entity_Bast</deityDef>
-	  </li>
-	  </deities>
-    </li>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Bast</deityDef>
+          </li>
+        </deities>
+      </li>
     </comps>
   </ThingDef>
-
-
   <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureDagon</defName>
     <label>monstrous fish-headed sculpture</label>
@@ -101,16 +95,15 @@
       <drawSize>(4,4)</drawSize>
     </graphicData>
     <comps>
-	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-	  <deities>
-	  <li>
-	    <deityDef>Entity_Dagon</deityDef>
-	  </li>
-	  </deities>
-    </li>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+          </li>
+        </deities>
+      </li>
     </comps>
   </ThingDef>
-
   <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureNyarlathotep</defName>
     <label>monstrous hooded sculpture</label>
@@ -121,17 +114,15 @@
       <drawSize>(4,4)</drawSize>
     </graphicData>
     <comps>
-	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-	  <deities>
-	  <li>
-	    <deityDef>Entity_Nyarlathotep</deityDef>
-	  </li>
-	  </deities>
-    </li>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+          </li>
+        </deities>
+      </li>
     </comps>
   </ThingDef>
-
-
   <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureShub</defName>
     <label>monstrous goat-like sculpture</label>
@@ -142,17 +133,15 @@
       <drawSize>(4,4)</drawSize>
     </graphicData>
     <comps>
-	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-	  <deities>
-	  <li>
-	    <deityDef>Entity_Shub</deityDef>
-	  </li>
-	  </deities>
-    </li>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+          </li>
+        </deities>
+      </li>
     </comps>
   </ThingDef>
-
-  
   <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureTsathoggua</defName>
     <label>monstrous abomination sculpture</label>
@@ -163,17 +152,15 @@
       <drawSize>(4,4)</drawSize>
     </graphicData>
     <comps>
-	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-	  <deities>
-	  <li>
-	    <deityDef>Entity_Tsathoggua</deityDef>
-	  </li>
-	  </deities>
-    </li>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+          </li>
+        </deities>
+      </li>
     </comps>
   </ThingDef>
-
-    
   <ThingDef ParentName="MonstrousSculpture">
     <defName>SculptureHastur</defName>
     <label>monstrous king sculpture</label>
@@ -184,14 +171,13 @@
       <drawSize>(4,4)</drawSize>
     </graphicData>
     <comps>
-	  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-	  <deities>
-	  <li>
-	    <deityDef>Entity_Hastur</deityDef>
-	  </li>
-	  </deities>
-    </li>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+          </li>
+        </deities>
+      </li>
     </comps>
   </ThingDef>
-  
 </Defs>

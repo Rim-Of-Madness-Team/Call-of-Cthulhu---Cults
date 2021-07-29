@@ -1,40 +1,61 @@
-1.21.0.0 (04-03-2020)
-========================
-Update for RimWorld 1.1.
+# Changelog for CallofCthulhuCults
 
-1.20.0.4 (10-27-2018)
-========================
-Sanity loss recovery time boosted from 5 percent to 15 percent.
+1.0.21.0 - Should now skip diety check if all dietys are discovered
 
-1.20.0.3 (10-23-2018)
-========================
-Updated Korean language by MisulOpja
 
-1.20.0.2 (10-19-2018)
-========================
-Added more credits for artwork and portraits used in the mod for the main description.
+1.0.20.0 - refactored the code and optimized the RevealDeityCheck
 
-1.20.0.1 (10-18-2018)
-========================
-Fixed a glaring issue with the Manifest.xml misidentifying the mod.
 
-1.20.0.0 (10-18-2018)
-========================
-Initial release for Cults for RimWorld 1.0.
+1.0.19.0 - Pawns that cannot move, speak or hear should not loose/gain cult-mindedness
 
-1.19.0.11 (10-15-2018)
-========================
-Many fixes for Guardians of Bast.\nFeline Aspect claws now usable in combat.\nGuardians now compatible with ADS.\nBast and Tsathoggua support more apparel.\nLinkable pews now have 40 percent cover.\nStars right and wrong fixed.\nAnd many more!
 
-1.19.0.10 (10-03-2018)
-========================
-Black Goats and other creatures added by Cults should no longer appear for sale with traders.
+1.0.18.0 - Added support for [SYR] Trait Value
 
-1.19.0.9 (10-03-2018)
-========================
-Alcoves now properly overlay on top of walls from other mods. Cultist clothing now has reduced commonality.
 
-1.19.0.8 (10-02-2018)
-========================
-Sets the proper dessicated corpses for guardians of Bast
+1.0.17.0 - You can now also build the darker monoliths
+
+
+1.0.16.0 - The monstrous sculptures should now require corresponding research to make
+
+
+1.0.15.0 - Cultists Robes and Hoods should now be centered
+
+
+1.0.14.0 - Stars right/wrong incidents should now have corrects tooltips and lettertypes
+
+
+1.0.13.0 - Fixed the mote from the Elexir of Power not despawning
+
+
+1.0.12.0 - Fixed spell-tales to use [circumstance_group], thanks coaron!
+
+
+1.0.11.0 - Small fix for new-cultist check if there is no cult
+
+
+1.0.10.0 - All checks regarding valid pawns for cult-stuff should now use the same criterias.
+
+
+1.0.9.0 - Should now reset worship-status every half-day
+
+
+1.0.8.0 - Added better sermon-schedule
+
+
+1.0.7.0 - Reupload without xml-changes
+
+
+1.0.6.0 - Had errors, reverted
+
+
+1.0.4.0 - Alcoves should now be buildable on modded walls
+
+
+1.0.3.0 - Removed the production-tag on altars. Can now be used in thronerooms
+
+
+1.0.2.0 - Added support for Combat Extended
+
+
+1.0.1.0 - Updated to 1.2
 

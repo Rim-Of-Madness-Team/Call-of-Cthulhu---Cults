@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-<!--
+  <!--
 	<NeedDef>
        <defName>Cults_SanityMeter</defName>
         <needClass>CultOfCthulhu.Need_SanityMeter</needClass>
@@ -13,17 +13,15 @@
         <freezeWhileSleeping>true</freezeWhileSleeping>	
 	</NeedDef>
 	-->
-	
-    <NeedDef>
-        <defName>CultMindedness</defName>
-        <needClass>CultOfCthulhu.Need_CultMindedness</needClass>
-        <label>Cult Mindedness</label>
-        <description>Cult Mindedness shows how accepting your colonist is of cult-like activities.\n\nIf this meter crosses the major threshold, the colonist will be initiated as a cultist.\n\nIf this meter crosses the minor threshold, this pawn may become hostile towards cultists or cultist activities.</description>
-        <minIntelligence>Humanlike</minIntelligence>
-        <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
-        <listPriority>5</listPriority>
-        <major>false</major>
-        <freezeWhileSleeping>true</freezeWhileSleeping>
-    </NeedDef>
-
+  <NeedDef>
+    <defName>CultMindedness</defName>
+    <needClass>CultOfCthulhu.Need_CultMindedness</needClass>
+    <label>Cult Mindedness</label>
+    <description>Cult Mindedness shows how accepting your colonist is of cult-like activities.\n\nIf this meter crosses the major threshold, the colonist will be initiated as a cultist.\n\nIf this meter crosses the minor threshold, this pawn may become hostile towards cultists or cultist activities.</description>
+    <minIntelligence>Humanlike</minIntelligence>
+    <colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+    <listPriority>5</listPriority>
+    <major>false</major>
+    <freezeWhileSleeping>true</freezeWhileSleeping>
+  </NeedDef>
 </Defs>

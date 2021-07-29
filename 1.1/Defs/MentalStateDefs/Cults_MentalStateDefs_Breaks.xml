@@ -1,18 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <MentalBreakDef>
     <defName>Cults_Disillusioned</defName>
     <mentalState>Cults_Disillusioned</mentalState>
     <baseCommonality>0.75</baseCommonality>
     <intensity>Minor</intensity>
   </MentalBreakDef>
-
   <MentalStateDef ParentName="BaseMentalState">
-    <defName>Cults_Disillusioned</defName>	
+    <defName>Cults_Disillusioned</defName>
     <stateClass>CultOfCthulhu.MentalState_Disillusioned</stateClass>
-    <workerClass>CultOfCthulhu.MentalStateWorker_Disillusioned</workerClass>	
+    <workerClass>CultOfCthulhu.MentalStateWorker_Disillusioned</workerClass>
     <label>disillusionment</label>
     <category>Misc</category>
     <colonistsOnly>true</colonistsOnly>
@@ -30,7 +27,6 @@
     <baseInspectLine>Mental state: Disillusionment</baseInspectLine>
     <allowBeatfire>false</allowBeatfire>
   </MentalStateDef>
-
   <!--
 	<ThoughtDef>
 		<defName>Cults_SawCarcosa</defName>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <TraitDef Class="CultOfCthulhu.TraitDefHidden">
     <defName>Cults_OathtakerHastur</defName>
     <commonality>0</commonality>
@@ -11,7 +10,6 @@
       </li>
     </degreeDatas>
   </TraitDef>
-
   <TraitDef Class="CultOfCthulhu.TraitDefHidden">
     <defName>Cults_OathtakerHastur2</defName>
     <commonality>0</commonality>
@@ -22,5 +20,4 @@
       </li>
     </degreeDatas>
   </TraitDef>
-  
 </Defs>

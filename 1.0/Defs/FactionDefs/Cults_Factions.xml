@@ -1,27 +1,24 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-
   <FactionDef Name="ROMC_HiddenFaction" Abstract="True">
     <permanentEnemy>true</permanentEnemy>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
-	<raidCommonalityFromPointsCurve>
-		<points>
-			<li>(0, 0)</li>
-		</points>
-	</raidCommonalityFromPointsCurve>
-    <humanlikeFaction>false</humanlikeFaction>  
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 0)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <humanlikeFaction>false</humanlikeFaction>
     <hidden>true</hidden>
     <autoFlee>false</autoFlee>
     <canUseAvoidGrid>true</canUseAvoidGrid>
-	<techLevel>Animal</techLevel>
+    <techLevel>Animal</techLevel>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
     <allowedArrivalTemperatureRange>
       <min>-255</min>
       <max>255</max>
     </allowedArrivalTemperatureRange>
   </FactionDef>
-
   <FactionDef ParentName="ROMC_HiddenFaction">
     <defName>ROM_DeepOneAlt</defName>
     <label>insects</label>
@@ -29,15 +26,15 @@
     <pawnsPlural>insects</pawnsPlural>
     <fixedName>insects</fixedName>
     <pawnGroupMakers>
-	<li>
-	  <kindDef>Combat</kindDef>
+      <li>
+        <kindDef>Combat</kindDef>
         <options>
-		  <Megaspider>100</Megaspider>		  
-		  <Spelopede>100</Spelopede>		  
-		  <Megascarab>100</Megascarab>	  
+          <Megaspider>100</Megaspider>
+          <Spelopede>100</Spelopede>
+          <Megascarab>100</Megascarab>
         </options>
       </li>
-    </pawnGroupMakers> 
+    </pawnGroupMakers>
     <maxPawnCostPerTotalPointsCurve>
       <points>
         <li>(400,200)</li>
@@ -46,14 +43,13 @@
       </points>
     </maxPawnCostPerTotalPointsCurve>
   </FactionDef>
-  
   <FactionDef ParentName="ROMC_HiddenFaction">
     <defName>Cults_Sailors</defName>
     <label>sailors</label>
     <description>People working on the high seas that have washed upon the shores.</description>
     <pawnsPlural>sailors</pawnsPlural>
-	<humanlikeFaction>true</humanlikeFaction>  
-	<maxPawnCostPerTotalPointsCurve>
+    <humanlikeFaction>true</humanlikeFaction>
+    <maxPawnCostPerTotalPointsCurve>
       <points>
         <li>(0,35)</li>
         <li>(70, 50)</li>
@@ -64,18 +60,19 @@
     </maxPawnCostPerTotalPointsCurve>
     <fixedName>Sailor</fixedName>
     <techLevel>Neolithic</techLevel>
-    <backstoryCategories><li>Civil</li></backstoryCategories>
+    <backstoryCategories>
+      <li>Civil</li>
+    </backstoryCategories>
     <hairTags>
       <li>Urban</li>
     </hairTags>
     <pawnGroupMakers>
-	  <li>
-		<kindDef>Combat</kindDef>
+      <li>
+        <kindDef>Combat</kindDef>
         <options>
-		  <Cults_Sailor>100</Cults_Sailor>
+          <Cults_Sailor>100</Cults_Sailor>
         </options>
       </li>
-    </pawnGroupMakers>	
+    </pawnGroupMakers>
   </FactionDef>
-  
 </Defs>

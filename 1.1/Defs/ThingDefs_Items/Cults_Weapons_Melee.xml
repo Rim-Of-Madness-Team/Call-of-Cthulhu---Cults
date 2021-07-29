@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="BaseMeleeWeapon_Sharp">
     <defName>MeleeWeapon_CultKris</defName>
     <label>cult kris</label>
     <description>One of humankind's oldest tools, the knife is both an everyday tool and a deadly weapon. This particular knife is designed and sanctified for the ritualistic carving of flesh.</description>
-	 
     <graphicData>
       <texPath>Weapon/CultKris/CultKris</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -14,8 +11,7 @@
     <costStuffCount>40</costStuffCount>
     <statBases>
       <WorkToMake>6000</WorkToMake>
-	  <Mass>0.5</Mass>
-      
+      <Mass>0.5</Mass>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <stuffCategories>
@@ -46,8 +42,6 @@
         <power>10.7</power>
         <cooldownTime>1.6</cooldownTime>
       </li>
-    </tools>	
+    </tools>
   </ThingDef>
-
-
 </Defs>

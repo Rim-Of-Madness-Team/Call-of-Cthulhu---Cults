@@ -1,96 +1,81 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
-<!-- 9/22/18 -->
-<ROM_TradeSanityForMadness>Go mad (clears sanity loss)</ROM_TradeSanityForMadness>
-<ROM_TradedSanityLossForMadness>{0} succumbed to a mental break, however, this has restored their sanity.</ROM_TradedSanityLossForMadness>
-<ROM_TradedSanityLossForMadnessFailed>{0} failed to enter a mental break. Try again?</ROM_TradedSanityLossForMadnessFailed>
-
-<!-- 7/21/18 -->
-<Cults_Discovered>Entity Discovered</Cults_Discovered>
-<Box_Titles>&lt;b&gt;Titles&lt;/b&gt;</Box_Titles>
-<Box_Domains>&lt;b&gt;Domains&lt;/b&gt;</Box_Domains>
-<Box_Description>&lt;b&gt;Description&lt;/b&gt;</Box_Description>
-<Cults_DiscoveredDeityMessage>{0} was discovered amongst the strange symbols.</Cults_DiscoveredDeityMessage>
-
-<!-- 3/10/18 -->
-<CommandCultReport>View Last Report</CommandCultReport>
-<CommandCultReportDesc>Executioners leave a log of their last sacrifice.</CommandCultReportDesc>
-<CommandCultReportDisabled>No recent sacrifices have been recorded.</CommandCultReportDisabled>
-<Cults_InquisitionPlotBegins>{0} has begun plotting against the local cult, {1}</Cults_InquisitionPlotBegins>
-
-<!-- Chronicle of Events, August 13, 3500-->
-<Cults_LRHeading>Chronicle of Events, {0}</Cults_LRHeading>
-<Cults_LRSacrifice>Summary of {0} sacrifice to {1} for {2}.</Cults_LRSacrifice>
-<Cults_LRAttendance>{0} in attendance.</Cults_LRAttendance>
-<Cults_LRFactorsFavorable>Favorable Factors:</Cults_LRFactorsFavorable>
-<Cults_LRStarsAreRight>The stars were aligned to {0}'s liking.</Cults_LRStarsAreRight>
-<Cults_LRSpellDifficultyOne>The spell was not difficult.</Cults_LRSpellDifficultyOne>
-<Cults_LRAttireBonus>Some attendants wore appropriate apparel.</Cults_LRAttireBonus>
-<Cults_LRNoAttireBonus>No attendants wore appropriate apparel.</Cults_LRNoAttireBonus>
-<Cults_LRDaggerBonus>A sacrificial dagger was wielded.</Cults_LRDaggerBonus>
-<Cults_LRNoDaggerBonus>A sacrificial dagger was not wielded.</Cults_LRNoDaggerBonus>
-<Cults_LRPerfectBonus>All attendants wore appropriate apparel.</Cults_LRPerfectBonus>
-<Cults_LRNoPerfectBonus>Not all attendants wore appropriate apparel.</Cults_LRNoPerfectBonus>
-<Cults_LRDeityStatue>A statue of {0} was present.</Cults_LRDeityStatue>
-<Cults_LRNoDeityStatue>A statue of {0} was missing.</Cults_LRNoDeityStatue>
-<Cults_LRQualityStatue>A high quality statue stood nearby.</Cults_LRQualityStatue>
-<Cults_LRNoQualityStatue>A high quality statue was missing.</Cults_LRNoQualityStatue>
-<Cults_LRTempImpressNo>Unimpressive temple.</Cults_LRTempImpressNo>
-<Cults_LRTempImpressDecent>Somewhat-impressive temple.</Cults_LRTempImpressDecent>
-<Cults_LRTempImpress>Impressive temple.</Cults_LRTempImpress>
-<Cults_LRTempWealthNo>Poor temple.</Cults_LRTempWealthNo>
-<Cults_LRTempWealthDecent>Somewhat-wealthy temple.</Cults_LRTempWealthDecent>
-<Cults_LRTempWealth>Wealthy temple.</Cults_LRTempWealth>
-<Cults_LRTempSpaceNo>Cramped temple.</Cults_LRTempSpaceNo>
-<Cults_LRTempSpaceDecent>Somewhat-spacious temple.</Cults_LRTempSpaceDecent>
-<Cults_LRTempSpace>Spacious temple.</Cults_LRTempSpace>
-<Cults_LRTempBeautyNo>Ugly temple.</Cults_LRTempBeautyNo>
-<Cults_LRTempBeautyDecent>Somewhat-beautiful temple.</Cults_LRTempBeautyDecent>
-<Cults_LRTempBeauty>Beautiful temple.</Cults_LRTempBeauty>
-<Cults_LRTempOutdoorFavored>Outdoor temple favored by {0}.</Cults_LRTempOutdoorFavored>
-<Cults_LRTempNoOutdoorFavored>Outdoor temple not favored by {0}.</Cults_LRTempNoOutdoorFavored>
-<Cults_LRFactorsUnfavorable>Unfavorable Factors:</Cults_LRFactorsUnfavorable>
-<Cults_LRSpellDifficultyTwo>The spell was difficult.</Cults_LRSpellDifficultyTwo>
-<Cults_LRSpellDifficultyThree>The spell was intense.</Cults_LRSpellDifficultyThree>
-<Cults_LRSpellDifficultyFour>The spell was nearly impossible.</Cults_LRSpellDifficultyFour>
-<Cults_LRStarsAreWrong>The stars were aligned to {0}'s disliking.</Cults_LRStarsAreWrong>
-<Cults_LRNoAstralEvents>No special astral events took place.</Cults_LRNoAstralEvents>
-<Cults_LREclipseActive>An eclipse took place.</Cults_LREclipseActive>
-<Cults_LRNoEclipseActive>No eclipse took place.</Cults_LRNoEclipseActive>
-<Cults_LRAuroraActive>An aurora took place.</Cults_LRAuroraActive>
-<Cults_LRNoAuroraActive>No aurora took place.</Cults_LRNoAuroraActive>
-<Cults_LRExecFirstTime>Our executioner, {0}, had never sacrificed before.</Cults_LRExecFirstTime>
-<Cults_LRExecInex>Our inexperienced executioner, {0}, had performed less than 3 sacrifices. (Prior sacrifices: {1})</Cults_LRExecInex>
-<Cults_LRExecEven>Our somewhat-lacking executioner, {0}, had performed less than 10 sacrifices. (Prior sacrifices: {1})</Cults_LRExecEven>
-<Cults_LRExecExp>Our experienced executioner, {0}, had performed less than 24 sacrifices. (Prior sacrifices: {1})</Cults_LRExecExp>
-<Cults_LRExecVeryExp>Our expert executioner, {0} carried out the sacrifice. (Prior sacrifices: {1})</Cults_LRExecVeryExp>
-<Cults_LRExecBonus>{0} used extra finesse during the proceedings.</Cults_LRExecBonus>
-<Cults_LRCheck>Difficulty check:\n(Rolled 100-sided die for {0} + Favorables: {1}) vs (Base difficulty: {2} + Unfavorables: {3})</Cults_LRCheck>
-<Cults_LRResultSuccess>Result: Success</Cults_LRResultSuccess>
-<Cults_LRResultFailure>Result: Failure</Cults_LRResultFailure>
-
-
-<!-- 12/6/17 -->
-
-<Cults_SleepTotem_StateAsleep>State: Asleep</Cults_SleepTotem_StateAsleep>
-<Cults_SleepTotem_StateDrowsy>State: Drowsy</Cults_SleepTotem_StateDrowsy>
-<Cults_SleepTotem_StateAwake>State: Awake</Cults_SleepTotem_StateAwake>
-
-<Cults_SleepTotem_FullyAwakensIn>Fully awakens in {0}</Cults_SleepTotem_FullyAwakensIn>
-
-<Cults_SleepTotem_Spawns>An idol of sleep forms from black ichor oozed upwards from the world below.</Cults_SleepTotem_Spawns>
-
-<Cults_BlackIchor_Spawns>Black ichor oozes out from the altar.</Cults_BlackIchor_Spawns>
-
-<Cults_ElixerOfPower_Spawns>An ornate flask solidifies from the altar.</Cults_ElixerOfPower_Spawns>
-
-<GameOverCallToDarkness>As the congregation continue their chant for what seems ages, the smell of earth begins to fill the air. Then without a sound, the earth splits apart.\n\nSluggishly, the temple begins to sloppily slide, carried along black muck -- ever downwards. With greater depth comes a loss of light and the sky above. The walls of earth begin to give way to thick stones and loose bones. A great time passes. They reach their final destination, nested in a mound of skeletons, and the only light is reflected from thousands of ravenous eyes. When the congregation lights a torch, the eyes scatter and leave only the cyclopian, unmoving visage of the Great Old One, Tsathoggua himself.\n\nThe silence breaks when black ichor wraps around the cultists from above and below, silent screams bubble inside thickened liquid. After a few moments the bubbles cease and silence again fills the void. In time, their now motionless forms will rise again, and the cult will continue to serve --\n\n--just not as they had imagined.</GameOverCallToDarkness>
-
-
+  <!-- 9/22/18 -->
+  <ROM_TradeSanityForMadness>Go mad (clears sanity loss)</ROM_TradeSanityForMadness>
+  <ROM_TradedSanityLossForMadness>{0} succumbed to a mental break, however, this has restored their sanity.</ROM_TradedSanityLossForMadness>
+  <ROM_TradedSanityLossForMadnessFailed>{0} failed to enter a mental break. Try again?</ROM_TradedSanityLossForMadnessFailed>
+  <!-- 7/21/18 -->
+  <Cults_Discovered>Entity Discovered</Cults_Discovered>
+  <Box_Titles>&lt;b&gt;Titles&lt;/b&gt;</Box_Titles>
+  <Box_Domains>&lt;b&gt;Domains&lt;/b&gt;</Box_Domains>
+  <Box_Description>&lt;b&gt;Description&lt;/b&gt;</Box_Description>
+  <Cults_DiscoveredDeityMessage>{0} was discovered amongst the strange symbols.</Cults_DiscoveredDeityMessage>
+  <!-- 3/10/18 -->
+  <CommandCultReport>View Last Report</CommandCultReport>
+  <CommandCultReportDesc>Executioners leave a log of their last sacrifice.</CommandCultReportDesc>
+  <CommandCultReportDisabled>No recent sacrifices have been recorded.</CommandCultReportDisabled>
+  <Cults_InquisitionPlotBegins>{0} has begun plotting against the local cult, {1}</Cults_InquisitionPlotBegins>
+  <!-- Chronicle of Events, August 13, 3500-->
+  <Cults_LRHeading>Chronicle of Events, {0}</Cults_LRHeading>
+  <Cults_LRSacrifice>Summary of {0} sacrifice to {1} for {2}.</Cults_LRSacrifice>
+  <Cults_LRAttendance>{0} in attendance.</Cults_LRAttendance>
+  <Cults_LRFactorsFavorable>Favorable Factors:</Cults_LRFactorsFavorable>
+  <Cults_LRStarsAreRight>The stars were aligned to {0}'s liking.</Cults_LRStarsAreRight>
+  <Cults_LRSpellDifficultyOne>The spell was not difficult.</Cults_LRSpellDifficultyOne>
+  <Cults_LRAttireBonus>Some attendants wore appropriate apparel.</Cults_LRAttireBonus>
+  <Cults_LRNoAttireBonus>No attendants wore appropriate apparel.</Cults_LRNoAttireBonus>
+  <Cults_LRDaggerBonus>A sacrificial dagger was wielded.</Cults_LRDaggerBonus>
+  <Cults_LRNoDaggerBonus>A sacrificial dagger was not wielded.</Cults_LRNoDaggerBonus>
+  <Cults_LRPerfectBonus>All attendants wore appropriate apparel.</Cults_LRPerfectBonus>
+  <Cults_LRNoPerfectBonus>Not all attendants wore appropriate apparel.</Cults_LRNoPerfectBonus>
+  <Cults_LRDeityStatue>A statue of {0} was present.</Cults_LRDeityStatue>
+  <Cults_LRNoDeityStatue>A statue of {0} was missing.</Cults_LRNoDeityStatue>
+  <Cults_LRQualityStatue>A high quality statue stood nearby.</Cults_LRQualityStatue>
+  <Cults_LRNoQualityStatue>A high quality statue was missing.</Cults_LRNoQualityStatue>
+  <Cults_LRTempImpressNo>Unimpressive temple.</Cults_LRTempImpressNo>
+  <Cults_LRTempImpressDecent>Somewhat-impressive temple.</Cults_LRTempImpressDecent>
+  <Cults_LRTempImpress>Impressive temple.</Cults_LRTempImpress>
+  <Cults_LRTempWealthNo>Poor temple.</Cults_LRTempWealthNo>
+  <Cults_LRTempWealthDecent>Somewhat-wealthy temple.</Cults_LRTempWealthDecent>
+  <Cults_LRTempWealth>Wealthy temple.</Cults_LRTempWealth>
+  <Cults_LRTempSpaceNo>Cramped temple.</Cults_LRTempSpaceNo>
+  <Cults_LRTempSpaceDecent>Somewhat-spacious temple.</Cults_LRTempSpaceDecent>
+  <Cults_LRTempSpace>Spacious temple.</Cults_LRTempSpace>
+  <Cults_LRTempBeautyNo>Ugly temple.</Cults_LRTempBeautyNo>
+  <Cults_LRTempBeautyDecent>Somewhat-beautiful temple.</Cults_LRTempBeautyDecent>
+  <Cults_LRTempBeauty>Beautiful temple.</Cults_LRTempBeauty>
+  <Cults_LRTempOutdoorFavored>Outdoor temple favored by {0}.</Cults_LRTempOutdoorFavored>
+  <Cults_LRTempNoOutdoorFavored>Outdoor temple not favored by {0}.</Cults_LRTempNoOutdoorFavored>
+  <Cults_LRFactorsUnfavorable>Unfavorable Factors:</Cults_LRFactorsUnfavorable>
+  <Cults_LRSpellDifficultyTwo>The spell was difficult.</Cults_LRSpellDifficultyTwo>
+  <Cults_LRSpellDifficultyThree>The spell was intense.</Cults_LRSpellDifficultyThree>
+  <Cults_LRSpellDifficultyFour>The spell was nearly impossible.</Cults_LRSpellDifficultyFour>
+  <Cults_LRStarsAreWrong>The stars were aligned to {0}'s disliking.</Cults_LRStarsAreWrong>
+  <Cults_LRNoAstralEvents>No special astral events took place.</Cults_LRNoAstralEvents>
+  <Cults_LREclipseActive>An eclipse took place.</Cults_LREclipseActive>
+  <Cults_LRNoEclipseActive>No eclipse took place.</Cults_LRNoEclipseActive>
+  <Cults_LRAuroraActive>An aurora took place.</Cults_LRAuroraActive>
+  <Cults_LRNoAuroraActive>No aurora took place.</Cults_LRNoAuroraActive>
+  <Cults_LRExecFirstTime>Our executioner, {0}, had never sacrificed before.</Cults_LRExecFirstTime>
+  <Cults_LRExecInex>Our inexperienced executioner, {0}, had performed less than 3 sacrifices. (Prior sacrifices: {1})</Cults_LRExecInex>
+  <Cults_LRExecEven>Our somewhat-lacking executioner, {0}, had performed less than 10 sacrifices. (Prior sacrifices: {1})</Cults_LRExecEven>
+  <Cults_LRExecExp>Our experienced executioner, {0}, had performed less than 24 sacrifices. (Prior sacrifices: {1})</Cults_LRExecExp>
+  <Cults_LRExecVeryExp>Our expert executioner, {0} carried out the sacrifice. (Prior sacrifices: {1})</Cults_LRExecVeryExp>
+  <Cults_LRExecBonus>{0} used extra finesse during the proceedings.</Cults_LRExecBonus>
+  <Cults_LRCheck>Difficulty check:\n(Rolled 100-sided die for {0} + Favorables: {1}) vs (Base difficulty: {2} + Unfavorables: {3})</Cults_LRCheck>
+  <Cults_LRResultSuccess>Result: Success</Cults_LRResultSuccess>
+  <Cults_LRResultFailure>Result: Failure</Cults_LRResultFailure>
+  <!-- 12/6/17 -->
+  <Cults_SleepTotem_StateAsleep>State: Asleep</Cults_SleepTotem_StateAsleep>
+  <Cults_SleepTotem_StateDrowsy>State: Drowsy</Cults_SleepTotem_StateDrowsy>
+  <Cults_SleepTotem_StateAwake>State: Awake</Cults_SleepTotem_StateAwake>
+  <Cults_SleepTotem_FullyAwakensIn>Fully awakens in {0}</Cults_SleepTotem_FullyAwakensIn>
+  <Cults_SleepTotem_Spawns>An idol of sleep forms from black ichor oozed upwards from the world below.</Cults_SleepTotem_Spawns>
+  <Cults_BlackIchor_Spawns>Black ichor oozes out from the altar.</Cults_BlackIchor_Spawns>
+  <Cults_ElixerOfPower_Spawns>An ornate flask solidifies from the altar.</Cults_ElixerOfPower_Spawns>
+  <GameOverCallToDarkness>As the congregation continue their chant for what seems ages, the smell of earth begins to fill the air. Then without a sound, the earth splits apart.\n\nSluggishly, the temple begins to sloppily slide, carried along black muck -- ever downwards. With greater depth comes a loss of light and the sky above. The walls of earth begin to give way to thick stones and loose bones. A great time passes. They reach their final destination, nested in a mound of skeletons, and the only light is reflected from thousands of ravenous eyes. When the congregation lights a torch, the eyes scatter and leave only the cyclopian, unmoving visage of the Great Old One, Tsathoggua himself.\n\nThe silence breaks when black ichor wraps around the cultists from above and below, silent screams bubble inside thickened liquid. After a few moments the bubbles cease and silence again fills the void. In time, their now motionless forms will rise again, and the cult will continue to serve --\n\n--just not as they had imagined.</GameOverCallToDarkness>
   <!-- 11/10/17 -->
   <Cults_AspectOfCthulhuDesc>{0}'s {1} has been replaced with an otherworldly tentacle appendage.</Cults_AspectOfCthulhuDesc>
-  
   <Cults_AspectOfCthulhu_TargetACharacter>Target an organism to endow with Cthulhu's gifts.</Cults_AspectOfCthulhu_TargetACharacter>
   <Cults_TransmogrifyAnimalsOnly>Target an animal to transmogrify.</Cults_TransmogrifyAnimalsOnly>
   <Cults_Trans_HI_Body>Body Size: +{0}</Cults_Trans_HI_Body>
@@ -104,13 +89,10 @@
   <Cults_ritualMixedSuccess>mixed success.</Cults_ritualMixedSuccess>
   <Cults_ritualFailure>failure.</Cults_ritualFailure>
   <Cults_ritualCompleteFailure>complete failure.</Cults_ritualCompleteFailure>
-  
   <Cults_Investigate>Investigate</Cults_Investigate>
-
   <!-- 7/3/17 -->
   <Cults_TransmogrifiedLetter>Transmogrified</Cults_TransmogrifiedLetter>
   <Cults_TransmogrifiedLetterDesc>Tapping into powers unknown, {0} no longer seems quite the same and now holds strange vigor and size not seen before in its kind. {0} twitches with old and restless power.</Cults_TransmogrifiedLetterDesc>
-
   <!-- 6/24/17 -->
   <Cults_Morning>morning</Cults_Morning>
   <Cults_Evening>evening</Cults_Evening>
@@ -124,12 +106,9 @@
   <Cults_AlreadyGatheringForASermon>Your enclave is already gathering for a sermon.</Cults_AlreadyGatheringForASermon>
   <Cults_CancellingSermon>Cancelling sermon.</Cults_CancellingSermon>
   <Cults_NoWorshipWithoutDeity>Cannot worship without a deity selected</Cults_NoWorshipWithoutDeity>
-
   <!-- 1.17.3.1 -->
   <Cults_NewDarkYoung>A new-born dark young has crawled forth from the womb between worlds.</Cults_NewDarkYoung>
-
-<!-- 1.17.0 New Versioning System-->
-
+  <!-- 1.17.0 New Versioning System-->
   <Cults_NoPlayerCultAvailable>No Player Cult Available</Cults_NoPlayerCultAvailable>
   <Cults_Monstrous>Monstrous {0}</Cults_Monstrous>
   <Cults_TransmogrifyMessage>{0}'s form has been enhanced.</Cults_TransmogrifyMessage>
@@ -150,56 +129,35 @@
   <Cults_DiscoveredCultDesc>We have discovered {0}.\n\nThey are a cult from {1} founded by {2} and currenty led by {3}.</Cults_DiscoveredCultDesc>
   <Cults_InitialExposureLabel>Occult Beginnings</Cults_InitialExposureLabel>
   <Cults_InitialExposureDesc>Stirred with new possibilities, your colonists have caught some interest in recent occult events.\n\nTheir beliefs can be tracked in their Needs menu. This belief will slowly decrease over time. Using occult research, you can strengthen the cult and the beliefs of your colonists until they found a cult of their own.</Cults_InitialExposureDesc>
-
-<!-- 1.2.8 Old versioning system -->
-
+  <!-- 1.2.8 Old versioning system -->
   <Altar>Altar</Altar>
   <ForcedInvestigation>Forced Investigation</ForcedInvestigation>
   <ForcedInvestigationDesc>If enabled, your best researcher will jump at the chance to research cult objects.</ForcedInvestigationDesc>
   <IsUnavailable> is unavailable.</IsUnavailable>
-
-<!-- 1.2.4 -->
-
+  <!-- 1.2.4 -->
   <ShowDebugCode>Show Debug Code</ShowDebugCode>
   <ShowDebugCodeDesc>In developer mode, this shows the debug code for cults. This displays additional information on calculations and processes as the mod goes on.</ShowDebugCodeDesc>
-
-<!-- 1.2.1 -->
-
+  <!-- 1.2.1 -->
   <CallOfCthulhuCults>Call of Cthulhu - Cults</CallOfCthulhuCults>
   <StudySuccessfulCultsIsRepeatableDesc>Enables repeatable research. When disabled, this allows players to use mods like tech GHXX's Tech Advancing.</StudySuccessfulCultsIsRepeatableDesc>
   <StudySuccessfulCultsIsRepeatable>Repeatable Study Successful Cults Research</StudySuccessfulCultsIsRepeatable>
   <RepeatableResearch>{0} can now be researched again to reinforce cult-mindedness.</RepeatableResearch>
-
-<!-- 1.2 -->
+  <!-- 1.2 -->
   <WorshipCancelledCorruptionWarning>Scheduled worship cancelled due to a corrupted altar.</WorshipCancelledCorruptionWarning>
-
   <PruningSuccessful>Pruning and repairs were successfully completed.</PruningSuccessful>
-
   <PruneAndRepair>Prune and Repair</PruneAndRepair>
-
   <PruneAndRepairDesc>Toggle this so that a colonist can root out the corrupted tree from the foundation, cut it into pieces, and repair the altar.</PruneAndRepairDesc>
-
   <UpgradeCongregationWarning>Cannot upgrade while congregating.</UpgradeCongregationWarning>
-
   <UpgradeSuccessful>Upgrade Successful</UpgradeSuccessful>
-
   <CorruptedAltarWarning>Your altar has become corrupted. Consider repairing it.</CorruptedAltarWarning>
-
   <OverPawnRiderLimit>Too many riders! The maximum is {0}.</OverPawnRiderLimit>
-
   <ReanimatedOath>{0} has fulfilled their oath and has risen again as a servant of Hastur.</ReanimatedOath>
-
   <CompTargetEffectCultMinded>{0} was brainwashed with cult-like madness.</CompTargetEffectCultMinded>
-
   <GameOverAbsorptionByCarcosa>Your colony's curtain has fallen. These colonists were first to exit the stage of this world:\n\n{0}</GameOverAbsorptionByCarcosa>
-
-
-<!-- 1.1e -->
-
+  <!-- 1.1e -->
   <SacrificeGathering>{0} gathers for a sacrifice.</SacrificeGathering>
   <WorshipGathering>{0} gathers for a sermon.</WorshipGathering>
   <WorshipFinished>{0} finished worshipping.</WorshipFinished>
-
   <!-- Cult Inception -->
   <CultBookLabel>Grimoire Completed</CultBookLabel>
   <CultSeed_NightmareTreeLabel>Investigating</CultSeed_NightmareTreeLabel>
@@ -210,16 +168,10 @@
   <OccultCenterWarningTwo>As {0} researches, {1} feels like someone is watching {2}.</OccultCenterWarningTwo>
   <OccultCenterWarningThree>As {0} researches, {1} feels greatly distressed.</OccultCenterWarningThree>
   <OccultCenterWarningFour>During research, {0} has begun uttering unnatural sounds instead of speech.</OccultCenterWarningFour>
-
   <Mute>Mute</Mute>
   <MuteDesc>Stops/starts the ambient noise.</MuteDesc>
-
-
   <LetterLabelCultistJoin>Cultist joins</LetterLabelCultistJoin>
   <CultistJoin>A {0} named [PAWN_nameDef] has arrived and is joining the colony. [PAWN_pronoun] is a {1} obsessed in joining your new cult.</CultistJoin>
-
-
-
   <!-- Offering -->
   <Offering>Offering</Offering>
   <OfferingDesc>The offerer will gather any unforbiden food of this type.</OfferingDesc>
@@ -238,8 +190,6 @@
   <CommandOffering>Make An Offering</CommandOffering>
   <CommandOfferingDesc>Offer up valuable supplies in hope of gaining attention of forces beyond this world.</CommandOfferingDesc>
   <CommandCancelOffering>Cancel Offering</CommandCancelOffering>
-
-
   <!-- Sacrifice -->
   <TabSacrifice>Sacrifice</TabSacrifice>
   <Executioner>Executioner</Executioner>
@@ -257,7 +207,6 @@
   <AnimalSacrificeWasBonded>{0} had shared a bond with {1} during its lifetime, adding to its sacrificial value.</AnimalSacrificeWasBonded>
   <AnimalSacrificeWasExcMaster>Furthermore, {0}'s master, {1} carried out the sacrifice</AnimalSacrificeWasExcMaster>
   <GreedilyReceived>This sacrifice gratified </GreedilyReceived>
-
   <CommandUpgrade>Upgrade Altar</CommandUpgrade>
   <UpgradeLevel2>Upgraded altar. Now we can carry out animal sacrifices in the name of the powers that be.</UpgradeLevel2>
   <UpgradeLevel3>Upgraded altar. Now we can conduct human sacrifices in the name of the powers that be.</UpgradeLevel3>
@@ -273,9 +222,7 @@
   <FertilityTotemTimer>Fertilizing (Ends in {0})</FertilityTotemTimer>
   <Reanimated>Reanimated</Reanimated>
   <DarkYoungSpawnsIn>Dark Young Spawns in</DarkYoungSpawnsIn>
-
   <SacrificeIntro>Your colonists have gathered a sacrifice for</SacrificeIntro>
-
   <!-- Worship -->
   <TabWorship>Worship</TabWorship>
   <RenameTemple>Rename Temple</RenameTemple>
@@ -304,65 +251,47 @@
   <EveningSermons>Evening Sermons</EveningSermons>
   <EveningSermonsDesc>Host services between the hours of 6 and 10 o'clock at night.</EveningSermonsDesc>
   <CommandCancelWorship>Cancel the sermon.</CommandCancelWorship>
-
   <!-- Cult Naming -->
-
-  <NameCultMessage>A cult has begun to form in your colony. {0} thinks that you should give this cult a name.\n\nWhat should it be called?</NameCultMessage> <NameCultMessageNullHandler>A cult has begun to form in your colony.\n\nWhat should it be called?</NameCultMessageNullHandler>
+  <NameCultMessage>A cult has begun to form in your colony. {0} thinks that you should give this cult a name.\n\nWhat should it be called?</NameCultMessage>
+  <NameCultMessageNullHandler>A cult has begun to form in your colony.\n\nWhat should it be called?</NameCultMessageNullHandler>
   <CultGainsName>The local cult is now known as {0}. It can be renamed at a local altar.</CultGainsName>
-
   <!-- Sacrifice Result Strings -->
   <SacrificeLabelsuccess>Success</SacrificeLabelsuccess>
   <SacrificeLabelmixedsuccess>Mixed Success</SacrificeLabelmixedsuccess>
   <SacrificeLabelfailure>Failure</SacrificeLabelfailure>
   <SacrificeLabelcriticalfailure>Petty Failure</SacrificeLabelcriticalfailure>
-
-  <!-- Orbital Insanity Wave --> <LetterLabelForcedCrashCombatSuplier>Combat Supplier Crashlands</LetterLabelForcedCrashCombatSuplier>
+  <!-- Orbital Insanity Wave -->
+  <LetterLabelForcedCrashCombatSuplier>Combat Supplier Crashlands</LetterLabelForcedCrashCombatSuplier>
   <ForcedCrashCombatSuplier>Driven to insanity, the pilot of a trade ship crashlands nearby.</ForcedCrashCombatSuplier>
-
   <LetterLabelForcedCrashExotic>Exotic Ship Crashlands</LetterLabelForcedCrashExotic>
   <ForcedCrashExotic>Driven to insanity, the pilot of a trade ship crashlands nearby.</ForcedCrashExotic>
-
   <LetterLabelForcedCrashBulkGoods>Bulk Goods Ship Crashlands</LetterLabelForcedCrashBulkGoods>
   <ForcedCrashBulkGoods>Driven to insanity, the pilot of a trade ship crashlands nearby.</ForcedCrashBulkGoods>
-
   <DeepOnesArrive>Deep Ones Arrive</DeepOnesArrive>
   <DeepOnesArriveDesc>From the depths of the sea, the deep ones have emerged to defend your enclave from external threats.</DeepOnesArriveDesc>
-
-
-
   <!-- Aurora -->
   <LetterLabelAurora>Aurora {0}</LetterLabelAurora>
   <Borealis>Borealis</Borealis>
   <Australis>Australis</Australis>
   <LetterIncidentAurora>Every colonist is in awe of the aurora.\n\nFor a few days, some people's mood will be quite improved.</LetterIncidentAurora>
-
   <!-- Messages -->
-
-
   <MessageSunkenShipChunkDrop>A chunk of a sunken ship has mysteriously emerged nearby.</MessageSunkenShipChunkDrop>
-
   <!-- Game Over-->
-	<CoercionRole>Design, art</CoercionRole>
-	<DrynynRole>Design, writing</DrynynRole>
-	<erdelfRole>programming</erdelfRole>
-	<JareixRole>Design, art</JareixRole>
-	<JecrellRole>Direction, art, writing, programming</JecrellRole>
-	<JunkyardJoeRole>Design, writing, concept art</JunkyardJoeRole>
-	<spoonshortageRole>art</spoonshortageRole>
-	<SticksNTricksRole>art, design</SticksNTricksRole>
-	<PlymouthRole>art</PlymouthRole>
-	<SeraRole>art</SeraRole>
-	<NackbladRole>Design, art</NackbladRole>
-	<PatreonProducer>Producer</PatreonProducer>
-	<PatreonSupporter>Patreon Supporter</PatreonSupporter>
-
-	<GameOverSummonCthulhu>At the crescendo of the ritual you feel a great power rising. Your chants increase in fervor and almost seem to multiply in number - as if you can hear petitioners from countless other worlds echo your own chant.\n\nIn retrospect you cannot recall quite when you were successful. Time, space, your own sense of self, ceased to be of significance. But you know now that the great one has arisen! Cthulhu is now no longer slumbering in his great city of R'lyeh. As a being beyond the simply material his presence and form is manifold. Will you be deemed faithful enough to be worthy of glimpsing his physical embodiment before your mind is ripped asunder?\n\nEven now you struggle to maintain any level of lucidity as the laws by which the universe operates lapse into fantasy.\n\nYou've summoned Cthulhu! These colonists were first to be destroyed after his coming:\n\n{0}</GameOverSummonCthulhu>
-
-    <GameOverOrthogenesis>The changes were slow and subtle at first. A loss of hair, a slight enlarging of the eyes, a growing greyish pallor of the skin. Some were more advanced than others and had small gill like slits appear. It was clear your genetic destiny wasn’t aligned with the rest of mankind's.\n\nNow you hear the distant croaking of your newfound kindred. That sound that once made the night frightful, now feels familiar and welcoming. They are calling you home. You look at your belongings but decide to leave them behind. You won’t need them where you are going.\n\nWith the blessing of the great Father and Mother, who rule beneath the waves, you are now to join your brethren.\n\nThese colonists were lost to the waves:\n\n{0}</GameOverOrthogenesis>
-
-    <GameOverTransdimensionalConvergence>I make the signs, I speak the words\nthat openeth the door!\nCome forth I say, I turn the Key,\nNow ! walk the Earth once more !\n\nYou call her from the void.You call her away from the side of the Not-to-Be-Named-One. \n\nIn the skies above you see a mist burst though, as if through a crack in the sky. Tendrils of a cloud-like substance reach down, which gives birth to eyes, teeth and limbs in a melange of biological excess.\n\nYou've opened the way for Shub Niggurath to take over your universe. These colonists were first to be destroyed after her coming\n\n{0}</GameOverTransdimensionalConvergence>
-
-    <GameOverPilgrimageToKadath>For the last few weeks the dreams have been getting stronger and more vivid. The real world began to pale in comparison. You would close your eyes to see its magnificent marble spires and silver fountains - the dream city of Kadath. There were those that thought that these visions were not real or that they were a lure for some trap. Even if that were true, you know you would still have sought it out.\n\nAnd now Nyarlathotep has come to guide you to this paradise.\n\nNyarlathotep forced your colonists to sleep and visit Kadath. Therein, these colonists viewed Azathoth before promptly being destroyed from the madness that followed:\n\n{0}</GameOverPilgrimageToKadath>
-
-
+  <CoercionRole>Design, art</CoercionRole>
+  <DrynynRole>Design, writing</DrynynRole>
+  <erdelfRole>programming</erdelfRole>
+  <JareixRole>Design, art</JareixRole>
+  <JecrellRole>Direction, art, writing, programming</JecrellRole>
+  <JunkyardJoeRole>Design, writing, concept art</JunkyardJoeRole>
+  <spoonshortageRole>art</spoonshortageRole>
+  <SticksNTricksRole>art, design</SticksNTricksRole>
+  <PlymouthRole>art</PlymouthRole>
+  <SeraRole>art</SeraRole>
+  <NackbladRole>Design, art</NackbladRole>
+  <PatreonProducer>Producer</PatreonProducer>
+  <PatreonSupporter>Patreon Supporter</PatreonSupporter>
+  <GameOverSummonCthulhu>At the crescendo of the ritual you feel a great power rising. Your chants increase in fervor and almost seem to multiply in number - as if you can hear petitioners from countless other worlds echo your own chant.\n\nIn retrospect you cannot recall quite when you were successful. Time, space, your own sense of self, ceased to be of significance. But you know now that the great one has arisen! Cthulhu is now no longer slumbering in his great city of R'lyeh. As a being beyond the simply material his presence and form is manifold. Will you be deemed faithful enough to be worthy of glimpsing his physical embodiment before your mind is ripped asunder?\n\nEven now you struggle to maintain any level of lucidity as the laws by which the universe operates lapse into fantasy.\n\nYou've summoned Cthulhu! These colonists were first to be destroyed after his coming:\n\n{0}</GameOverSummonCthulhu>
+  <GameOverOrthogenesis>The changes were slow and subtle at first. A loss of hair, a slight enlarging of the eyes, a growing greyish pallor of the skin. Some were more advanced than others and had small gill like slits appear. It was clear your genetic destiny wasn’t aligned with the rest of mankind's.\n\nNow you hear the distant croaking of your newfound kindred. That sound that once made the night frightful, now feels familiar and welcoming. They are calling you home. You look at your belongings but decide to leave them behind. You won’t need them where you are going.\n\nWith the blessing of the great Father and Mother, who rule beneath the waves, you are now to join your brethren.\n\nThese colonists were lost to the waves:\n\n{0}</GameOverOrthogenesis>
+  <GameOverTransdimensionalConvergence>I make the signs, I speak the words\nthat openeth the door!\nCome forth I say, I turn the Key,\nNow ! walk the Earth once more !\n\nYou call her from the void.You call her away from the side of the Not-to-Be-Named-One. \n\nIn the skies above you see a mist burst though, as if through a crack in the sky. Tendrils of a cloud-like substance reach down, which gives birth to eyes, teeth and limbs in a melange of biological excess.\n\nYou've opened the way for Shub Niggurath to take over your universe. These colonists were first to be destroyed after her coming\n\n{0}</GameOverTransdimensionalConvergence>
+  <GameOverPilgrimageToKadath>For the last few weeks the dreams have been getting stronger and more vivid. The real world began to pale in comparison. You would close your eyes to see its magnificent marble spires and silver fountains - the dream city of Kadath. There were those that thought that these visions were not real or that they were a lure for some trap. Even if that were true, you know you would still have sought it out.\n\nAnd now Nyarlathotep has come to guide you to this paradise.\n\nNyarlathotep forced your colonists to sleep and visit Kadath. Therein, these colonists viewed Azathoth before promptly being destroyed from the madness that followed:\n\n{0}</GameOverPilgrimageToKadath>
 </LanguageData>

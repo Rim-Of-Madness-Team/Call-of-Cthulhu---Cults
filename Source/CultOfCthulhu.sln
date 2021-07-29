@@ -1,22 +1,33 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CultOfCthulhu", "CultOfCthulhu.csproj", "{A36BEEB2-7379-475B-B537-827E34571962}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CultOfCthulhu", "CultOfCthulhu\CultOfCthulhu.csproj", "{A36BEEB2-7379-475B-B537-827E34571962}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2BAC86FF-8A72-4C85-9B61-56AC73F7DF53}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		RW1.3|Any CPU = RW1.3|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A36BEEB2-7379-475B-B537-827E34571962}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A36BEEB2-7379-475B-B537-827E34571962}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A36BEEB2-7379-475B-B537-827E34571962}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A36BEEB2-7379-475B-B537-827E34571962}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A36BEEB2-7379-475B-B537-827E34571962}.RW1.3|Any CPU.ActiveCfg = RW1.3|Any CPU
+		{A36BEEB2-7379-475B-B537-827E34571962}.RW1.3|Any CPU.Build.0 = RW1.3|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C401EBC6-31C9-43D3-8D0E-97A6290367E5}
 	EndGlobalSection
 EndGlobal

@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-  
   <ThingDef ParentName="ArtifactBase">
     <defName>Cults_ElixerOfPower</defName>
     <label>elixer of power</label>
@@ -28,5 +26,4 @@
       </li>
     </comps>
   </ThingDef>
-  
 </Defs>

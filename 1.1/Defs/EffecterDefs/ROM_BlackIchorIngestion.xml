@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <EffecterDef>
     <defName>ROM_EatBlackIchor</defName>
     <children>
@@ -16,5 +15,4 @@
       </li>
     </children>
   </EffecterDef>
-
 </Defs>

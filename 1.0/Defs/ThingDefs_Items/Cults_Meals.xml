@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="MealRottable">
     <defName>Cults_BlackIchorMeal</defName>
     <label>black ichor</label>
@@ -9,17 +8,16 @@
       <texPath>Item/Resource/BlackIchor</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-	<tradeability>None</tradeability>
+    <tradeability>None</tradeability>
     <statBases>
       <MarketValue>0</MarketValue>
-	  <Nutrition>0.9</Nutrition>
+      <Nutrition>0.9</Nutrition>
     </statBases>
     <ingestible>
       <preferability>MealFine</preferability>
-			<tasteThought>AteFineMeal</tasteThought>
+      <tasteThought>AteFineMeal</tasteThought>
       <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
     </ingestible>
   </ThingDef>
-  
 </Defs>

@@ -1,15 +1,13 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <!-- Cult social interactions -->
-
   <ThoughtDef>
     <defName>Cults_SafePreach</defName>
     <thoughtClass>Thought_MemorySocial</thoughtClass>
     <durationDays>20</durationDays>
-	<stackLimit>300</stackLimit>
+    <stackLimit>300</stackLimit>
     <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
-	<stackedEffectMultiplier>0.85</stackedEffectMultiplier>	
+    <stackedEffectMultiplier>0.85</stackedEffectMultiplier>
     <stages>
       <li>
         <label>shared beliefs</label>
@@ -17,14 +15,13 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>Cults_DangerPreach</defName>
     <thoughtClass>Thought_MemorySocial</thoughtClass>
     <durationDays>20</durationDays>
-	<stackLimit>300</stackLimit>
+    <stackLimit>300</stackLimit>
     <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
-	<stackedEffectMultiplier>0.95</stackedEffectMultiplier>
+    <stackedEffectMultiplier>0.95</stackedEffectMultiplier>
     <stages>
       <li>
         <label>offended beliefs</label>
@@ -32,11 +29,10 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>Cults_MidnightInquisitionThought</defName>
     <durationDays>10</durationDays>
-	<nullifyingTraits>
+    <nullifyingTraits>
       <li>Psychopath</li>
       <li>Bloodlust</li>
     </nullifyingTraits>
@@ -49,5 +45,4 @@
       </li>
     </stages>
   </ThoughtDef>
-  
 </Defs>

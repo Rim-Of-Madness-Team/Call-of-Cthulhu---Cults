@@ -1,24 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <SoundDef>
-    <defName>Cults_LetterArrive</defName>  
-    <eventNames />  
-    <maxSimultaneous>1</maxSimultaneous>  
+    <defName>Cults_LetterArrive</defName>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
     <subSounds>
       <li>
-        <onCamera>True</onCamera>      
+        <onCamera>True</onCamera>
         <grains>
           <li Class="AudioGrain_Clip">
             <clipPath>Messages/CultsStandardMsg</clipPath>
           </li>
-        </grains>      
+        </grains>
         <volumeRange>
-          <min>45</min>        
+          <min>45</min>
           <max>45</max>
         </volumeRange>
       </li>
     </subSounds>
   </SoundDef>
-  
 </Defs>

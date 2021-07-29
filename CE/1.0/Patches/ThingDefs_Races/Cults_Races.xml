@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="CombatExtended.PatchOperationFindMod">
+        <modName>Call of Cthulhu - Cults</modName>
+      </li>
+      <!-- Basilisk_Race -->
+      <li Class="PatchOperationAddModExtension">
+        <xpath>*/ThingDef[defName="Cults_BlackGoat"]</xpath>
+        <value>
+          <li Class="CombatExtended.RacePropertiesExtensionCE">
+            <bodyShape>Quadruped</bodyShape>
+          </li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>*/ThingDef[defName="Cults_BlackGoat"]/statBases</xpath>
+        <value>
+          <MeleeDodgeChance>0.1</MeleeDodgeChance>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>*/ThingDef[defName="Cults_BlackGoat"]/tools</xpath>
+        <value>
+          <tools>
+            <li Class="CombatExtended.ToolCE">
+              <label>left hoof</label>
+              <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+              </capacities>
+              <power>7</power>
+              <cooldownTime>1.65</cooldownTime>
+              <linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
+              <armorPenetration>0.15</armorPenetration>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+              <label>right hoof</label>
+              <capacities>
+                <li>Blunt</li>
+                <li>Poke</li>
+              </capacities>
+              <power>7</power>
+              <cooldownTime>1.65</cooldownTime>
+              <linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
+              <armorPenetration>0.15</armorPenetration>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+              <label>head</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>3</power>
+              <cooldownTime>1.65</cooldownTime>
+              <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+              <armorPenetration>0.15</armorPenetration>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+              <capacities>
+                <li>Bite</li>
+              </capacities>
+              <power>4</power>
+              <cooldownTime>1.65</cooldownTime>
+              <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+              <armorPenetration>0.2</armorPenetration>
+            </li>
+          </tools>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

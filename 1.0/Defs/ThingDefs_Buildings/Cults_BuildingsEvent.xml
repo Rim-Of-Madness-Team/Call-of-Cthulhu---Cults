@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="BuildingBase">
     <defName>Cults_SleepTotem</defName>
     <label>sleep totem</label>
-    <description>Totem that draws invaders towards it and induces them into an inescapable trance, where dreams devour dreamers. The effect is limited enough to delay intruders long enough to expose them to other hazards.</description> 
+    <description>Totem that draws invaders towards it and induces them into an inescapable trance, where dreams devour dreamers. The effect is limited enough to delay intruders long enough to expose them to other hazards.</description>
     <thingClass>CultOfCthulhu.Building_TotemSleep</thingClass>
     <tickerType>Rare</tickerType>
-    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <category>Building</category>
+    <thingCategories>
+      <li>Buildings</li>
+    </thingCategories>
     <fertility>2.0</fertility>
     <specialDisplayRadius>5.8</specialDisplayRadius>
-	<graphicData>
+    <graphicData>
       <texPath>Building/Exotic/SleepTotem/SleepTotem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
@@ -38,24 +40,25 @@
     <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
     <rotatable>false</rotatable>
     <statBases>
-	  <Mass>2.2</Mass>
+      <Mass>2.2</Mass>
       <MaxHitPoints>50</MaxHitPoints>
       <WorkToMake>170</WorkToMake>
       <Flammability>1.0</Flammability>
     </statBases>
   </ThingDef>
-
-
   <ThingDef ParentName="BuildingBase">
     <defName>Cults_FertilityTotem</defName>
     <label>fertility totem</label>
-    <description>Totem that increases growth rate of crops for two quadrums.</description> 
+    <description>Totem that increases growth rate of crops for two quadrums.</description>
     <thingClass>CultOfCthulhu.Building_TotemFertility</thingClass>
     <tickerType>Normal</tickerType>
-    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <category>Building</category>
+    <thingCategories>
+      <li>Buildings</li>
+    </thingCategories>
     <fertility>2.0</fertility>
     <specialDisplayRadius>5.8</specialDisplayRadius>
-	<graphicData>
+    <graphicData>
       <texPath>Building/Exotic/FertilityTotem/FertilityTotem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
@@ -83,19 +86,18 @@
     <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
     <rotatable>false</rotatable>
     <statBases>
-	  <Mass>1.4</Mass>
+      <Mass>1.4</Mass>
       <MaxHitPoints>50</MaxHitPoints>
       <WorkToMake>170</WorkToMake>
       <Flammability>1.0</Flammability>
     </statBases>
   </ThingDef>
-
   <ThingDef ParentName="BuildingBase">
     <defName>Cults_SunkenShipChunk</defName>
     <label>sunken ship chunk</label>
     <description>A chunk of a naval craft. Can be deconstructed to discover treasures within.</description>
     <category>Building</category>
-	<thingClass>Building</thingClass>
+    <thingClass>Building</thingClass>
     <graphicData>
       <texPath>Building/Exotic/SunkenShipChunk</texPath>
       <graphicClass>Graphic_Random</graphicClass>
@@ -127,8 +129,8 @@
     <costList>
       <ComponentIndustrial>60</ComponentIndustrial>
       <Steel>400</Steel>
-	  <WoodLog>400</WoodLog>
-	  <Plasteel>20</Plasteel>
+      <WoodLog>400</WoodLog>
+      <Plasteel>20</Plasteel>
     </costList>
     <building>
       <claimable>false</claimable>
@@ -139,7 +141,6 @@
     <drawerType>MapMeshOnly</drawerType>
     <repairEffect>ConstructMetal</repairEffect>
   </ThingDef>
-
   <ThingDef ParentName="BuildingBase">
     <defName>Cults_TreasureChest</defName>
     <label>treasure chest</label>
@@ -147,7 +148,7 @@
     <graphicData>
       <texPath>Building/Exotic/TreasureChest/TreasureChest</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <shadowData>
+      <shadowData>
         <volume>(0.3, 0.6, 0.3)</volume>
         <offset>(0,0,-0.1)</offset>
       </shadowData>
@@ -172,7 +173,7 @@
       <Gold>5</Gold>
       <Steel>4</Steel>
     </costList>
-	<building>
+    <building>
       <ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
       <defaultStorageSettings>
         <priority>Important</priority>
@@ -191,11 +192,10 @@
         <explosiveRadius>2.66</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
       </li>
-      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Breakdownable" />
     </comps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
-
   <ThingDef ParentName="BuildingBase">
     <defName>Cults_TreasureChest_Relic</defName>
     <label>relic chest</label>
@@ -203,7 +203,7 @@
     <graphicData>
       <texPath>Building/Exotic/RelicChest/RelicChest</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <shadowData>
+      <shadowData>
         <volume>(0.3, 0.6, 0.3)</volume>
         <offset>(0,0,-0.1)</offset>
       </shadowData>
@@ -233,12 +233,10 @@
         <explosiveRadius>2.66</explosiveRadius>
         <explosiveDamageType>Flame</explosiveDamageType>
       </li>
-      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Breakdownable" />
     </comps>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
-
-
   <ThingDef ParentName="ShipPartBase">
     <defName>Cults_LandedShip</defName>
     <label>landed marine ship</label>
@@ -248,7 +246,7 @@
       <texPath>Building/Exotic/CompleteShip/CompleteShipB</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(12,5)</drawSize>
-	  <shadowData>
+      <shadowData>
         <volume>(0.3, 0.6, 0.3)</volume>
         <offset>(0,0,-0.1)</offset>
       </shadowData>
@@ -259,32 +257,34 @@
     <costList>
       <ComponentIndustrial>120</ComponentIndustrial>
       <Steel>600</Steel>
-	  <WoodLog>600</WoodLog>
-	  <Plasteel>60</Plasteel>
+      <WoodLog>600</WoodLog>
+      <Plasteel>60</Plasteel>
       <Silver>220</Silver>
     </costList>
     <staticSunShadowHeight>0</staticSunShadowHeight>
   </ThingDef>
-
   <ThingDef ParentName="BuildingBase">
     <defName>Cults_MonolithNightmare</defName>
     <label>Monolith</label>
     <description>A mysterious upright standing block of stone. It has an insidious aura.</description>
     <thingClass>CultOfCthulhu.Building_Monolith</thingClass>
-	<stealable>false</stealable>
-    <category>Building</category><thingCategories><li>Buildings</li></thingCategories>
+    <stealable>false</stealable>
+    <category>Building</category>
+    <thingCategories>
+      <li>Buildings</li>
+    </thingCategories>
     <minifiedDef>MinifiedThing</minifiedDef>
     <graphicData>
       <texPath>Building/MonolithNightmare/MonolithNightmare</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawRotated>false</drawRotated>
       <drawSize>(6.0,10.0)</drawSize>
-	  <shaderType>TransparentPostLight</shaderType>
+      <shaderType>TransparentPostLight</shaderType>
       <damageData>
         <rect>(0.35,0.35,0.3,0.3)</rect>
       </damageData>
     </graphicData>
-	<size>(1,1)</size>
+    <size>(1,1)</size>
     <rotatable>false</rotatable>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <castEdgeShadows>true</castEdgeShadows>
@@ -296,7 +296,7 @@
     <drawerType>RealtimeOnly</drawerType>
     <fillPercent>0.15</fillPercent>
     <statBases>
-	  <Mass>100</Mass>
+      <Mass>100</Mass>
       <MaxHitPoints>80</MaxHitPoints>
       <WorkToMake>200</WorkToMake>
       <Flammability>0</Flammability>
@@ -317,11 +317,9 @@
         <glowColor>(252,187,113,0)</glowColor>
       </li>
     </comps>
-	<building>
-		<soundAmbient>RitualChanting</soundAmbient>
-	</building>
+    <building>
+      <soundAmbient>RitualChanting</soundAmbient>
+    </building>
     <designationHotKey>Misc10</designationHotKey>
   </ThingDef>
-
-
- </Defs>
+</Defs>

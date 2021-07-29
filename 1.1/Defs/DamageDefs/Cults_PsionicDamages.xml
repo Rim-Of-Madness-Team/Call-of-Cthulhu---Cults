@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <DamageDef>
     <defName>Cults_PsionicBlastDamage</defName>
     <label>psionic blast</label>
@@ -10,7 +9,6 @@
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
   </DamageDef>
-  
   <DamageDef>
     <defName>Cults_PsionicShockDamage</defName>
     <label>psionic shock</label>
@@ -20,7 +18,6 @@
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
   </DamageDef>
-  
   <DamageDef>
     <defName>Cults_PsionicBurnDamage</defName>
     <label>psionic burn</label>
@@ -30,5 +27,4 @@
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
   </DamageDef>
-  
 </Defs>

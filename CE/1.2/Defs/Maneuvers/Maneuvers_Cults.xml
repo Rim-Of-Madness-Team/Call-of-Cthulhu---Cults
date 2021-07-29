@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ManeuverDef>
+    <defName>Cults_Psionic</defName>
+    <requiredCapacity>Cults_Psionic</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttack</verbClass>
+      <meleeDamageDef>Cults_Psionic</meleeDamageDef>
+    </verb>
+  </ManeuverDef>
+</Defs>

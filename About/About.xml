@@ -1,12 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <packageId>rimofmadness.callofcthulhu.cults</packageId>
   <name>Call of Cthulhu - Cults</name>
+  <packageId>rimofmadness.CallofCthulhuCults</packageId>
   <author>Jecrell</author>
   <url>https://discord.gg/AaVFA7V</url>
   <supportedVersions>
     <li>1.0</li>
     <li>1.1</li>
+    <li>1.2</li>
+    <li>1.3</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -18,93 +20,88 @@
     <li>
       <packageId>jecrell.jecstools</packageId>
       <displayName>JecsTools</displayName>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/932008009</steamWorkshopUrl>
-      <downloadUrl>https://patreon.com/jecrell</downloadUrl>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2195729899</steamWorkshopUrl>
     </li>
   </modDependencies>
   <loadAfter>
+    <li>brrainz.harmony</li>
     <li>jecrell.jecstools</li>
+    <li>CETeam.CombatExtended</li>
+    <li>syrchalis.traitvalue</li>
   </loadAfter>
-  <description>1.21.0.0 (04-03-2020)
+  <description>
 
-&lt;size=24&gt;Features&lt;/size&gt;
-Gameplay expansion for RimWorld.
 
-    You can now:
-        *found a cult
-        *worship monstrous deities
-        *make offerings and animal sacrifices
-        *make human sacrifices in return for powerful spells (over 20 in total, plus a dozen side effects)
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
 
-&lt;size=24&gt;Credits&lt;/size&gt;
-    Nackblad - Art for outfits for Cthulhu, Dagon, Nyarlathotep, Shub-niggurath cults.
-    Sera - Art for the King in Yellow
-    DianaWinters &amp; ChJees - Guardians, Bast Mask, Bast Apparel
-    1000101 - Concept for religious needs
-    Cpt. Ohu - Original code for altar congregations
-    Skullywag - Helpfulness on #modding
-    Mrofa - Code for two-colored hoods
-    Justin C - Reanimation Code
-    https://game-icons.net/ for various icons and templates
+[table]
+	[tr]
+		[td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+		[td][url=https://github.com/emipa606/CallofCthulhuCults][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+	[/tr]
+[/table]
+	
+[img]https://i.imgur.com/NOW7jU1.png[/img]
 
-&lt;size=12&gt;Deity Portraits&lt;/size&gt;
-    Cthulhu by Damien Mammoliti (https://www.artstation.com/damie_m)
-    Dagon by Jeff Remmer (http://www.templeofdagon.com/artists/jeff-remmer/)
-    Shub Niggurath by Art-Ogre (http://art-ogre.blogspot.com/)
-    Hastur by Aramos Studio (https://www.deviantart.com/aramosstudio)
-    Nyarlathotep by Walter Brocca (https://www.artstation.com/wall)
-    Bast by Omega Lioness (https://www.furaffinity.net/view/13646451/)
-    Tsathoggua used from Mythos ABC (https://www.amazon.com/Mythos-ABC-Mads-Brynnum-ebook/dp/B075WVTB1L)
-    
-Everyone on the modding Discord
+[h1]Gameplay expansion for RimWorld.[/h1]
+[b]You can now...[/b]
+[list]
+[*]	found a cult.
+[*]	worship monstrous deities.
+[*]	make offerings and animal sacrifices.
+[*]	make human sacrifices in return for powerful spells (6 deitys and 30 spells in total, plus a dozen side effects).
+[/list]
 
-Thank you to my Patrons for supporting me in my efforts. Without you, none of this would be possible.
 
-These are the most excellent rim dwellers who support me: 
-Cade Perkinson, Jay Sacane, John Pahl, Tankok1998 also known as the Shermanlover, Vahl Kilmer, Zsolt Biró, Genaeve, JD2.0, Olteanu Laurentiu, Penelope Charli Whitman, Charlie Garnham, Steven Pretswell, Sultan Saltlick, RainerWingel, Daniel Paseka, Kyben, Charles Morris, Chris Seieroe, Robin Gleeson, Lea Stannard, Teres, David Silberstein, Kiya Nicoll, Matt Harris, Paul Fenwick, Michael Whitehead, Robert Alessi, Elodie, Gothi, Audrin Navarro, Михаил Юрченко, Calum, Tim Stillson, Populous25, Don Homer, Adam Bliss, Maaxar, Christopher, TinyFloatingTurtle, John Kanady, Midgeman, Nathan Getman, Sharp Spook, LionsFate, Cristina Shaver, Mark, George Chong Chuang Ming, Oliver White, roxxploxx, Emily Shaw, Justin Andres, Robin Hager, Kevin Reagan, Austin Harbert, Marcus Regan, E_T, Alex Mederer, Alexander, Toss Antilles
 
-========================
-Changelog
-========================
-1.21.0.0 (04-03-2020)
-========================
-Update for RimWorld 1.1.
+[h1]This mod supports these languages: [/h1] 
+English, Korean 한국어 (밀수업자), and Russian русский язык (kr33man)
 
-1.20.0.4 (10-27-2018)
-========================
-Sanity loss recovery time boosted from 5 percent to 15 percent.
+[h1]::::: NOTICE :::::
+::::: THIS MOD NOW REQUIRES JECSTOOLS ::::::
+Download[/h1]
+http://steamcommunity.com/sharedfiles/filedetails/?id=932008009
 
-1.20.0.3 (10-23-2018)
-========================
-Updated Korean language by MisulOpja
+[h1]Recommended mods[/h1]
+[list]
+[*]	Cosmic Horrors (for summoning actual monsters)
+[*]	Industrial Age (for great lighting)
+[*]     Realistic Darkness (for great darkness)
+[/list]
+	
+[h1]How do I start a cult?[/h1]
+	1) Load the mod.
+	2) Play for a few days in-game.
+	3) One of your pawns will investigate something horrendous.
+	4) Build the forbidden research center.
+	5) Research the strange symbols until someone founds the cult.
+	6) Good luck.
 
-1.20.0.2 (10-19-2018)
-========================
-Added more credits for artwork and portraits used in the mod for the main description.
+	
+[h1]Tips:[/h1]
+[list]
+[*] Cult-mindedness is a new feature under 'needs' that keeps track of how likely colonists are to become cultists.
+[*] Better apparel means greater worship results and higher success rates for your sacrifices.
+[*] Beware! If too many colonists are plotting against the cult, they might take matters into their own hands.
+[/list]	
 
-1.20.0.1 (10-18-2018)
-========================
-Fixed a glaring issue with the Manifest.xml misidentifying the mod.
 
-1.20.0.0 (10-18-2018)
-========================
-Initial release for Cults for RimWorld 1.0.
+[h1]Additions and changes by Mlie:[/h1]
+[*] Added support for Combat Extended
+[*] Removed the production-tag on altars so they can be used in thronerooms
+[*] Added an option to make sermons voluntary, making pawns complete some types of jobs before joining
+[*] Improved the sermon scheduling with some inspiration from the excellent mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1565942758]Colony Leadership[/url] Now you can select what days to do sermons and also when they should start in the day.
+[*] Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2451324814][SYR] Trait Value[/url]
 
-1.19.0.11 (10-15-2018)
-========================
-Many fixes for Guardians of Bast.\nFeline Aspect claws now usable in combat.\nGuardians now compatible with ADS.\nBast and Tsathoggua support more apparel.\nLinkable pews now have 40 percent cover.\nStars right and wrong fixed.\nAnd many more!
 
-1.19.0.10 (10-03-2018)
-========================
-Black Goats and other creatures added by Cults should no longer appear for sale with traders.
+[h1]Special Thanks:[/h1]
 
-1.19.0.9 (10-03-2018)
-========================
-Alcoves now properly overlay on top of walls from other mods. Cultist clothing now has reduced commonality.
-
-1.19.0.8 (10-02-2018)
-========================
-Sets the proper dessicated corpses for guardians of Bast
+	1000101 - Religious needs
+	Cpt. Ohu - Altar congregations
+	Skullywag - Helpfulness on #modding
+	Mrofa - Code for two-colored hoods
+	Justin C - Reanimation Code
+	Everyone on the modding Discord
 
 </description>
 </ModMetaData>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="TreeBase">
+    <defName>Cults_PlantTreeNightmare</defName>
+    <thingClass>CultOfCthulhu.Plant_TreeOfMadness</thingClass>
+    <label>eerie tree</label>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <passability>Impassable</passability>
+    <drawerType>RealtimeOnly</drawerType>
+    <description>An ominous tree with an indescibable aura. Approaching this tree causes most colonists a great deal of anxiety. Drawing closer, colonists swear they can hear voices speaking in strange tongues.</description>
+    <graphicData>
+      <texPath>Building/NightmareTree/NightmareTree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawRotated>false</drawRotated>
+      <drawSize>(6.0,10.0)</drawSize>
+    </graphicData>
+    <statBases>
+      <Beauty>5</Beauty>
+      <MeditationFocusStrength MayRequire="Ludeon.RimWorld.Royalty">0.28</MeditationFocusStrength>
+      <Flammability>0</Flammability>
+      <MaxHitPoints>400</MaxHitPoints>
+      <MeditationPlantGrowthOffset>0</MeditationPlantGrowthOffset>
+    </statBases>
+    <ingestible />
+    <preventSkyfallersLandingOn>true</preventSkyfallersLandingOn>
+    <plant>
+      <growDays>25</growDays>
+      <visualSizeRange>
+        3.5~4.5
+      </visualSizeRange>
+      <sowMinSkill>0</sowMinSkill>
+      <sowTags Inherit="False"/>
+      <dieIfNoSunlight>False</dieIfNoSunlight>
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <lifespanDaysPerGrowDays>0</lifespanDaysPerGrowDays>
+      <fertilityMin>0.0</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <sowResearchPrerequisites Inherit="False" />
+      <allowAutoCut>false</allowAutoCut>
+      <harvestWork>1000</harvestWork>
+      <harvestYield>50</harvestYield>
+    </plant>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3.75</glowRadius>
+        <glowColor>(185,100,100,0)</glowColor>
+      </li>
+      <li Class="CompProperties_GiveThoughtToAllMapPawnsOnDestroy">
+        <thought>Cults_HeardNightmareTreeDeathScream</thought>
+        <message>The eerie tree has been dispatched and emitted a disturbing psychic scream.</message>
+      </li>
+      <li Class="CompProperties_PlaySoundOnDestroy">
+        <sound>AnimaTreeScream</sound>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>2000</ticksPerHeal>
+      </li>
+      <li Class="CompProperties_SpawnSubplant">
+        <compClass>CompSpawnSubplant</compClass>
+        <subplant>Cults_Plant_ThornBush</subplant>
+        <spawnSound>AnimaTreeProgress</spawnSound>
+      </li>
+    </comps>
+    <building>
+      <soundAmbient>RitualChanting</soundAmbient>
+    </building>
+  </ThingDef>
+
+
+  <ThingDef ParentName="PlantBaseNonEdible">
+    <defName>Cults_Plant_ThornBush</defName>
+    <label>ground thorns</label>
+    <description>Sharp thorns infused with luminous microorganisms. These thorns appear to be growing around the base of the eerie tree when one focuses on its haunting aura. It seems to reflect some kind of strengthening of the tree's psychic power.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Flammability>1.3</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/Cults_Plant_ThornBush</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <fertilityMin>0.02</fertilityMin>
+      <fertilitySensitivity>0</fertilitySensitivity>
+      <sowMinSkill>0</sowMinSkill>
+      <growDays>1</growDays>
+      <lifespanDaysPerGrowDays>60</lifespanDaysPerGrowDays>
+      <harvestWork>40</harvestWork>
+      <maxMeshCount>9</maxMeshCount>
+      <visualSizeRange>0.3~0.45</visualSizeRange>
+      <topWindExposure>0.4</topWindExposure>
+      <wildOrder>1</wildOrder>
+      <dieFromToxicFallout>False</dieFromToxicFallout>
+      <allowAutoCut>false</allowAutoCut>
+    </plant>
+  </ThingDef>
+
+
+</Defs>

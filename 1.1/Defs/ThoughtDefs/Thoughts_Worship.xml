@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<!-- 1.2.2 Prisoner Sacrifice Thought -->
+  <!-- 1.2.2 Prisoner Sacrifice Thought -->
   <ThoughtDef>
     <defName>Cults_OtherPrisonerWasSacrificed</defName>
     <durationDays>7.5</durationDays>
@@ -18,9 +17,7 @@
       </li>
     </stages>
   </ThoughtDef>
-
-<!-- Sentimental Sacrifices -->
-
+  <!-- Sentimental Sacrifices -->
   <ThoughtDef>
     <defName>Cults_ExecutedFamily</defName>
     <durationDays>30</durationDays>
@@ -37,7 +34,6 @@
       </li>
     </stages>
   </ThoughtDef>
-
   <ThoughtDef>
     <defName>Cults_ExecutedPet</defName>
     <durationDays>20</durationDays>
@@ -53,8 +49,7 @@
         <baseMoodEffect>-15</baseMoodEffect>
       </li>
     </stages>
-  </ThoughtDef>  
-  
+  </ThoughtDef>
   <ThoughtDef>
     <defName>Cults_ExecutedFriend</defName>
     <durationDays>20</durationDays>
@@ -70,8 +65,7 @@
         <baseMoodEffect>-10</baseMoodEffect>
       </li>
     </stages>
-  </ThoughtDef>  
-
+  </ThoughtDef>
   <ThoughtDef>
     <defName>Cults_SacrificedFamily</defName>
     <durationDays>10</durationDays>
@@ -88,7 +82,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>Cults_SacrificedFriend</defName>
     <durationDays>14</durationDays>
@@ -105,7 +98,6 @@
       </li>
     </stages>
   </ThoughtDef>
-     
   <ThoughtDef>
     <defName>Cults_SacrificedPet</defName>
     <durationDays>20</durationDays>
@@ -121,8 +113,7 @@
         <baseMoodEffect>-15</baseMoodEffect>
       </li>
     </stages>
-  </ThoughtDef>  
-  
+  </ThoughtDef>
   <ThoughtDef>
     <defName>Cults_SacrificedRival</defName>
     <durationDays>15</durationDays>
@@ -139,28 +130,25 @@
       </li>
     </stages>
   </ThoughtDef>
-
-	<ThoughtDef>
-		<defName>Cults_WitnessedSacrificeBloodlust</defName>
-		<icon>Things/Mote/ThoughtSymbol/Skull</icon>
-		<showBubble>true</showBubble>
-		<durationDays>4</durationDays>
-		<stackedEffectMultiplier>0.4</stackedEffectMultiplier>
-		<stackLimit>5</stackLimit>
-		<requiredTraits>
-			<li>Bloodlust</li>
-		</requiredTraits>
-		<stages>
-			<li>
-				<label>witnessed sacrifice</label>
-				<description>Let the blood flow! Ia! Ia!</description>
-				<baseMoodEffect>12</baseMoodEffect>
-			</li>
-		</stages>
-	</ThoughtDef>  
-
-<!-- Sacrificial Thoughts -->
-
+  <ThoughtDef>
+    <defName>Cults_WitnessedSacrificeBloodlust</defName>
+    <icon>Things/Mote/ThoughtSymbol/Skull</icon>
+    <showBubble>true</showBubble>
+    <durationDays>4</durationDays>
+    <stackedEffectMultiplier>0.4</stackedEffectMultiplier>
+    <stackLimit>5</stackLimit>
+    <requiredTraits>
+      <li>Bloodlust</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>witnessed sacrifice</label>
+        <description>Let the blood flow! Ia! Ia!</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- Sacrificial Thoughts -->
   <ThoughtDef>
     <defName>Cults_AttendedSuccessfulSacrifice</defName>
     <durationDays>2</durationDays>
@@ -173,7 +161,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>Cults_AttendedFailedSacrifice</defName>
     <durationDays>2</durationDays>
@@ -185,8 +172,7 @@
         <baseMoodEffect>-5</baseMoodEffect>
       </li>
     </stages>
-  </ThoughtDef> 
-  
+  </ThoughtDef>
   <ThoughtDef>
     <defName>Cults_InnocentAttendedSuccessfulSacrifice</defName>
     <durationDays>3</durationDays>
@@ -199,7 +185,6 @@
       </li>
     </stages>
   </ThoughtDef>
-
   <ThoughtDef>
     <defName>Cults_InnocentAttendedFailedSacrifice</defName>
     <durationDays>3</durationDays>
@@ -212,9 +197,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
- <!-- Sermons --> 
-  
+  <!-- Sermons -->
   <ThoughtDef>
     <defName>Cults_HeldSermon</defName>
     <durationDays>0.5</durationDays>
@@ -227,7 +210,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>Cults_AttendedIncredibleSermonAsCultist</defName>
     <durationDays>0.5</durationDays>
@@ -240,8 +222,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-    <ThoughtDef>
+  <ThoughtDef>
     <defName>Cults_AttendedGreatSermonAsCultist</defName>
     <durationDays>0.5</durationDays>
     <stackLimit>1</stackLimit>
@@ -253,8 +234,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-    <ThoughtDef>
+  <ThoughtDef>
     <defName>Cults_AttendedGoodSermonAsCultist</defName>
     <durationDays>0.5</durationDays>
     <stackLimit>1</stackLimit>
@@ -266,8 +246,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-    <ThoughtDef>
+  <ThoughtDef>
     <defName>Cults_AttendedDecentSermonAsCultist</defName>
     <durationDays>0.5</durationDays>
     <stackLimit>1</stackLimit>
@@ -279,8 +258,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-    <ThoughtDef>
+  <ThoughtDef>
     <defName>Cults_AttendedAwfulSermonAsCultist</defName>
     <durationDays>0.5</durationDays>
     <stackLimit>1</stackLimit>
@@ -292,10 +270,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-
-  
-    <ThoughtDef>
+  <ThoughtDef>
     <defName>Cults_AttendedIncredibleSermonAsInnocent</defName>
     <durationDays>0.5</durationDays>
     <stackLimit>1</stackLimit>
@@ -307,8 +282,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-    <ThoughtDef>
+  <ThoughtDef>
     <defName>Cults_AttendedGreatSermonAsInnocent</defName>
     <durationDays>0.5</durationDays>
     <stackLimit>1</stackLimit>
@@ -320,8 +294,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-    <ThoughtDef>
+  <ThoughtDef>
     <defName>Cults_AttendedGoodSermonAsInnocent</defName>
     <durationDays>0.5</durationDays>
     <stackLimit>1</stackLimit>
@@ -333,8 +306,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-    <ThoughtDef>
+  <ThoughtDef>
     <defName>Cults_AttendedDecentSermonAsInnocent</defName>
     <durationDays>0.5</durationDays>
     <stackLimit>1</stackLimit>
@@ -346,8 +318,7 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-    <ThoughtDef>
+  <ThoughtDef>
     <defName>Cults_AttendedAwfulSermonAsInnocent</defName>
     <durationDays>0.5</durationDays>
     <stackLimit>1</stackLimit>
@@ -359,19 +330,22 @@
       </li>
     </stages>
   </ThoughtDef>
-    
-<!-- Impressive Temple -->
-
+  <!-- Impressive Temple -->
   <ThoughtDef>
     <defName>Cults_PrayedInImpressiveTemple</defName>
     <durationDays>0.25</durationDays>
     <stackLimit>3</stackLimit>
     <stages>
-      <li IsNull="True" /> <!-- awful -->
-      <li IsNull="True" /> <!-- repulsive -->
-      <li IsNull="True" /> <!-- dull -->
-      <li IsNull="True" /> <!-- mediocre -->
-      <li IsNull="True" /> <!-- interesting -->
+      <li IsNull="True" />
+      <!-- awful -->
+      <li IsNull="True" />
+      <!-- repulsive -->
+      <li IsNull="True" />
+      <!-- dull -->
+      <li IsNull="True" />
+      <!-- mediocre -->
+      <li IsNull="True" />
+      <!-- interesting -->
       <li>
         <label>impressive temple</label>
         <description>I spent some time in an impressive temple.</description>
@@ -408,10 +382,8 @@
         <baseMoodEffect>8</baseMoodEffect>
       </li>
     </stages>
-  </ThoughtDef>	
-	
-<!-- Misc Thought Defs -->
-  
+  </ThoughtDef>
+  <!-- Misc Thought Defs -->
   <ThoughtDef>
     <defName>Cults_SawAurora</defName>
     <durationDays>1.5</durationDays>
@@ -424,6 +396,4 @@
       </li>
     </stages>
   </ThoughtDef>
-
-
 </Defs>

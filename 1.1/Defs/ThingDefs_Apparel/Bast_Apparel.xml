@@ -1,77 +1,73 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-	<!-- =====No Shirts===== -->
-
-	<ThingDef ParentName="ApparelMakeableBase">
-		<defName>Apparel_BastRobes</defName>
-		<description>This sacred wrap allows priests to preach with greater appeal by appealing to Bast. It also tends to allow for better preaching in locations that face greater threat from the sun and heat.</description>
-		<label>cultist vestments (bast)</label>
-		<graphicData>
-			<texPath>Apparel/BastRobes</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<costList>
-			<Cloth>75</Cloth>
-		</costList>
-		<generateCommonality>0.01</generateCommonality>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<statBases>
-            <Mass>0.35</Mass>
-			<MaxHitPoints>160</MaxHitPoints>
-			<WorkToMake>22000</WorkToMake>
-			<Insulation_Cold>30</Insulation_Cold>
-			<Insulation_Heat>15</Insulation_Heat>
-		</statBases>
-		<equippedStatOffsets>
-			<SocialImpact>0.3</SocialImpact>
-			<ResearchSpeed>0.05</ResearchSpeed>
-		</equippedStatOffsets>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Apparel/BastRobes</wornGraphicPath>
-			<layers>
-				<li>Shell</li>
-			</layers>
-
-			<tags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</defaultOutfitTags>
-		</apparel>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Bast</deityDef>
-				<favorBonus>0.025</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<colorGenerator Class="ColorGenerator_Single">
-    <color>RGBA(1.0,1.0,1.0,1.0)</color>
-</colorGenerator>
-	</ThingDef>
-
-	<!-- =======Hats======== -->
-	
+  <!-- =====No Shirts===== -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_BastRobes</defName>
+    <description>This sacred wrap allows priests to preach with greater appeal by appealing to Bast. It also tends to allow for better preaching in locations that face greater threat from the sun and heat.</description>
+    <label>cultist vestments (bast)</label>
+    <graphicData>
+      <texPath>Apparel/BastRobes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Cloth>75</Cloth>
+    </costList>
+    <generateCommonality>0.01</generateCommonality>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <Mass>0.35</Mass>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToMake>22000</WorkToMake>
+      <Insulation_Cold>30</Insulation_Cold>
+      <Insulation_Heat>15</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.3</SocialImpact>
+      <ResearchSpeed>0.05</ResearchSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/BastRobes</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Bast</deityDef>
+            <favorBonus>0.025</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_Single">
+      <color>RGBA(1.0,1.0,1.0,1.0)</color>
+    </colorGenerator>
+  </ThingDef>
+  <!-- =======Hats======== -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_BastMask</defName>
     <label>cultist hood (bast mask)</label>
@@ -81,10 +77,10 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
-		<costList>
-			<Cloth>25</Cloth>
-		</costList>
-		<generateCommonality>0.01</generateCommonality>
+    <costList>
+      <Cloth>25</Cloth>
+    </costList>
+    <generateCommonality>0.01</generateCommonality>
     <statBases>
       <Mass>0.15</Mass>
       <WorkToMake>3000</WorkToMake>
@@ -103,7 +99,6 @@
       <layers>
         <li>Overhead</li>
       </layers>
-
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -111,28 +106,26 @@
         <li>CallOfCthulhu_FrenziedCultist</li>
       </defaultOutfitTags>
     </apparel>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Bast</deityDef>
-				<favorBonus>0.025</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
-		<colorGenerator Class="ColorGenerator_Single">
-    <color>RGBA(1.0,1.0,1.0,1.0)</color>
-</colorGenerator>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Bast</deityDef>
+            <favorBonus>0.025</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_Single">
+      <color>RGBA(1.0,1.0,1.0,1.0)</color>
+    </colorGenerator>
   </ThingDef>
-
 </Defs>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <LifeStageDef>
     <defName>Cults_Spawn</defName>
     <label>spawn</label>
@@ -14,14 +13,12 @@
       <MoveSpeed>0.75</MoveSpeed>
     </statFactors>
   </LifeStageDef>
-
   <LifeStageDef>
     <defName>Cults_FullyFormed</defName>
     <label>fully formed</label>
     <visible>false</visible>
     <reproductive>true</reproductive>
   </LifeStageDef>
-  
   <LifeStageDef>
     <defName>Cults_Ancient</defName>
     <label>ancient</label>
@@ -35,7 +32,6 @@
       <MoveSpeed>1.25</MoveSpeed>
     </statFactors>
   </LifeStageDef>
-  
   <LifeStageDef>
     <defName>Cults_Eldritch</defName>
     <label>eldritch</label>
@@ -49,6 +45,4 @@
       <MoveSpeed>1.30</MoveSpeed>
     </statFactors>
   </LifeStageDef>
-  
-  
 </Defs>

@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  
   <RulePackDef>
     <defName>NamerCults</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->Order of [deity]</li>
-		<li>name->Church of [ideal]</li>
-        <li>name->Esoteric Order of [deity]</li>
-		<li>name->Gatekeepers of [deity]</li>
-		<li>name->Temple of [deity]</li>
-		<li>name->Children of [ideal]</li>
+        <li>name-&gt;Order of [deity]</li>
+        <li>name-&gt;Church of [ideal]</li>
+        <li>name-&gt;Esoteric Order of [deity]</li>
+        <li>name-&gt;Gatekeepers of [deity]</li>
+        <li>name-&gt;Temple of [deity]</li>
+        <li>name-&gt;Children of [ideal]</li>
       </rulesStrings>
-	  <rulesRaw>
-		<li Class="Rule_File">
-		<keyword>deity</keyword>
-		<path>NameBanks/Names_Deities</path>
-		</li>
-		<li Class="Rule_File">
-		<keyword>ideal</keyword>
-		<path>NameBanks/Names_Ideals</path>
-		</li>
-	  </rulesRaw>	  
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>deity</keyword>
+          <path>NameBanks/Names_Deities</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>ideal</keyword>
+          <path>NameBanks/Names_Ideals</path>
+        </li>
+      </rulesRaw>
     </rulePack>
   </RulePackDef>
-
 </Defs>

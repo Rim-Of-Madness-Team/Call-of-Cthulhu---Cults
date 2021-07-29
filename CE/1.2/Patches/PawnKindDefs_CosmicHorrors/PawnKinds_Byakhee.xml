@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <!-- Basilisk_Race -->
+      <li Class="PatchOperationAddModExtension">
+        <xpath>Defs/ThingDef[defName="Cults_ByakheeRace"]</xpath>
+        <value>
+          <li Class="CombatExtended.RacePropertiesExtensionCE">
+            <bodyShape>Birdlike</bodyShape>
+          </li>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Cults_ByakheeRace"]/statBases</xpath>
+        <value>
+          <MeleeDodgeChance>0.46</MeleeDodgeChance>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="Cults_ByakheeRace"]/tools</xpath>
+        <value>
+          <tools>
+            <li Class="CombatExtended.ToolCE">
+              <label>left claw</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>10</power>
+              <cooldownTime>1.5</cooldownTime>
+              <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+              <armorPenetrationSharp>40</armorPenetrationSharp>
+              <armorPenetrationBlunt>20</armorPenetrationBlunt>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+              <label>right claw</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>10</power>
+              <cooldownTime>1.5</cooldownTime>
+              <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+              <armorPenetrationSharp>40</armorPenetrationSharp>
+              <armorPenetrationBlunt>20</armorPenetrationBlunt>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+              <label>wings</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>15</power>
+              <cooldownTime>3</cooldownTime>
+              <linkedBodyPartsGroup>Cults_Wings</linkedBodyPartsGroup>
+              <armorPenetrationBlunt>20</armorPenetrationBlunt>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+              <label>teeth</label>
+              <capacities>
+                <li>ToxicBite</li>
+              </capacities>
+              <power>20</power>
+              <cooldownTime>2.5</cooldownTime>
+              <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+              <armorPenetrationSharp>45</armorPenetrationSharp>
+              <armorPenetrationBlunt>25</armorPenetrationBlunt>
+            </li>
+            <li Class="CombatExtended.ToolCE">
+              <label>stinger</label>
+              <capacities>
+                <li>ToxicBite</li>
+              </capacities>
+              <power>24</power>
+              <cooldownTime>2.5</cooldownTime>
+              <linkedBodyPartsGroup>Cults_Stinger</linkedBodyPartsGroup>
+              <armorPenetrationSharp>60</armorPenetrationSharp>
+              <armorPenetrationBlunt>40</armorPenetrationBlunt>
+            </li>
+          </tools>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

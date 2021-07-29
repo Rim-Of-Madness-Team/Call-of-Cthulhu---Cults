@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <MentalStateDef ParentName="BaseMentalState">
     <defName>Cults_DeepSleepCarcosa</defName>
     <stateClass>CultOfCthulhu.MentalState_DeepSleepCarcosa</stateClass>
@@ -22,19 +20,17 @@
     <baseInspectLine>Mental state: Deep Sleep</baseInspectLine>
     <allowBeatfire>false</allowBeatfire>
   </MentalStateDef>
-
-	<ThoughtDef>
-		<defName>Cults_SawCarcosa</defName>
-		<durationDays>15.0</durationDays>
-		<stackLimit>5</stackLimit>
-		<stackedEffectMultiplier>0.25</stackedEffectMultiplier>
-		<stages>
-			<li>
-				<label>saw Carcosa</label>
-				<description>Twin suns sank behind waves of clouds, and in the distance, I witnessed the lost city of Carcosa.</description>
-				<baseMoodEffect>15</baseMoodEffect>
-			</li>
-		</stages>
-	</ThoughtDef>  
-  
+  <ThoughtDef>
+    <defName>Cults_SawCarcosa</defName>
+    <durationDays>15.0</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>saw Carcosa</label>
+        <description>Twin suns sank behind waves of clouds, and in the distance, I witnessed the lost city of Carcosa.</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 </Defs>

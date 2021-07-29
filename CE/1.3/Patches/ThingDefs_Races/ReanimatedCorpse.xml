@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[@Name="BaseReanimatedCorpse"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+    <value>
+      <li>CombatExtended.ITab_Inventory</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[@Name="BaseReanimatedCorpse"]/comps</xpath>
+    <value>
+      <li Class="CombatExtended.CompProperties_Inventory" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="ReanimatedCorpse"]</xpath>
+    <value>
+      <li Class="CombatExtended.RacePropertiesExtensionCE">
+        <bodyShape>Humanoid</bodyShape>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="ReanimatedCorpse"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>left fist</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>13</power>
+          <cooldownTime>1.6</cooldownTime>
+          <surpriseAttack>
+            <extraMeleeDamages>
+              <li>
+                <def>Stun</def>
+                <amount>23</amount>
+              </li>
+            </extraMeleeDamages>
+          </surpriseAttack>
+          <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+          <armorPenetrationBlunt>0.250</armorPenetrationBlunt>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>right fist</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>13</power>
+          <cooldownTime>1.6</cooldownTime>
+          <surpriseAttack>
+            <extraMeleeDamages>
+              <li>
+                <def>Stun</def>
+                <amount>23</amount>
+              </li>
+            </extraMeleeDamages>
+          </surpriseAttack>
+          <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+          <armorPenetrationBlunt>0.250</armorPenetrationBlunt>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationTest">
+        <xpath>Defs/ThingDef[defName="ReanimatedCorpse"]/comps</xpath>
+        <success>Invert</success>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="ReanimatedCorpse"]</xpath>
+        <value>
+          <comps />
+        </value>
+      </li>
+    </operations>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="ReanimatedCorpse"]/comps</xpath>
+    <value>
+      <li>
+        <compClass>CombatExtended.CompPawnGizmo</compClass>
+      </li>
+      <li Class="CombatExtended.CompProperties_Suppressable" />
+    </value>
+  </Operation>
+</Patch>

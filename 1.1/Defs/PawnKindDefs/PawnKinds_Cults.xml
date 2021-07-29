@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <PawnKindDef Name="SailorBase" Abstract="True">
     <defaultFactionType>Cults_Sailors</defaultFactionType>
     <chemicalAddictionChance>0.045</chemicalAddictionChance>
     <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
     <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-    <backstoryCategories><li>Civil</li></backstoryCategories>
+    <backstoryCategories>
+      <li>Civil</li>
+    </backstoryCategories>
     <apparelTags>
       <li>IndustrialBasic</li>
       <li>IndustrialAdvanced</li>
-    </apparelTags>		
+    </apparelTags>
   </PawnKindDef>
-  
-
   <PawnKindDef ParentName="SailorBase">
     <defName>Cults_Sailor</defName>
     <label>sailor</label>
@@ -25,7 +24,7 @@
       <min>0.2</min>
       <max>2.0</max>
     </gearHealthRange>
-	<apparelRequired>
+    <apparelRequired>
       <li>Apparel_SailorsCap</li>
       <li>Apparel_SailorUniform</li>
     </apparelRequired>
@@ -72,7 +71,4 @@
       </subOptionsChooseOne>
     </inventoryOptions>
   </PawnKindDef>
-  
-  
-  
 </Defs>

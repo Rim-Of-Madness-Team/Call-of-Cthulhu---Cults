@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <!--===================== Concepts taught through the learning readout, with no opportunity needed ===================-->
-
   <ConceptDef>
     <defName>ROM_SanityLossConcept</defName>
     <label>Sanity Loss</label>
@@ -13,5 +11,4 @@
 \n3. Write books or journals at a writer's table or typewriter to alleviate one's mind.
 \n\nNOTE: Typewriters and Writer's Tables are available in the RimWriter mod.</helpText>
   </ConceptDef>
-
 </Defs>

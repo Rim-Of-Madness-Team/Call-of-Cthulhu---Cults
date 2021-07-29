@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/TraitDef[defName = "Cults_OathtakerHastur"]</xpath>
+    <value>
+      <li Class="SyrTraitValue.TraitValueExtension">
+        <traitValues>
+          <li>0</li>
+        </traitValues>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/TraitDef[defName = "Cults_OathtakerHastur2"]</xpath>
+    <value>
+      <li Class="SyrTraitValue.TraitValueExtension">
+        <traitValues>
+          <li>0</li>
+        </traitValues>
+      </li>
+    </value>
+  </Operation>
+</Patch>

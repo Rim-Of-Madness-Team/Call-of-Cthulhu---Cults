@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <HediffDef ParentName="InjuryBase">
     <defName>Cults_Psionic</defName>
     <label>crush</label>
     <hediffClass>Hediff_Injury</hediffClass>
     <displayWound>false</displayWound>
-	<tendable>true</tendable>
+    <tendable>true</tendable>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>
@@ -26,7 +24,6 @@
       <destroyedLabel>imploded</destroyedLabel>
     </injuryProps>
   </HediffDef>
-
   <HediffDef>
     <defName>IntracranialPressureBuildup</defName>
     <hediffClass>HediffWithComps</hediffClass>
@@ -38,7 +35,7 @@
     <comps>
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.25</severityPerDay>
-      </li>	  
+      </li>
     </comps>
     <stages>
       <li>
@@ -71,8 +68,8 @@
             <partsToAffect>
               <li>Brain</li>
             </partsToAffect>
-		  </li>
-		</hediffGivers>
+          </li>
+        </hediffGivers>
       </li>
       <li>
         <label>moderate</label>
@@ -91,7 +88,7 @@
             <partsToAffect>
               <li>Brain</li>
             </partsToAffect>
-		  </li>		  
+          </li>
         </hediffGivers>
       </li>
       <li>
@@ -111,7 +108,7 @@
             <partsToAffect>
               <li>Brain</li>
             </partsToAffect>
-		  </li>		  
+          </li>
         </hediffGivers>
       </li>
       <li>
@@ -138,11 +135,9 @@
             <partsToAffect>
               <li>Brain</li>
             </partsToAffect>
-		  </li>		  
+          </li>
         </hediffGivers>
       </li>
     </stages>
   </HediffDef>
-
-
 </Defs>

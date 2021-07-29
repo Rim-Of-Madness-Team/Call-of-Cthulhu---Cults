@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="BodyPartArtificialBase">
     <defName>Cults_PsionicBrain</defName>
     <label>psionic lobe</label>
@@ -10,16 +9,14 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-	  <Mass>1.0</Mass>
+      <Mass>1.0</Mass>
       <MarketValue>1500</MarketValue>
     </statBases>
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <tradeability>Sellable</tradeability>	
+    <tradeability>Sellable</tradeability>
   </ThingDef>
-
-
   <ThingDef ParentName="BodyPartArtificialBase">
     <defName>Cults_MonstrousBrain</defName>
     <label>monstrous brain</label>
@@ -29,16 +26,14 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-	  <Mass>1.0</Mass>
+      <Mass>1.0</Mass>
       <MarketValue>500</MarketValue>
     </statBases>
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <tradeability>Sellable</tradeability>	
-  </ThingDef>  
-  
-
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
   <ThingDef ParentName="BodyPartArtificialBase">
     <defName>Cults_MonstrousBody</defName>
     <label>monstrous body</label>
@@ -48,15 +43,14 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-	  <Mass>15.0</Mass>
+      <Mass>15.0</Mass>
       <MarketValue>500</MarketValue>
     </statBases>
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <tradeability>Sellable</tradeability>	
-  </ThingDef>    
-
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
   <ThingDef ParentName="BodyPartArtificialBase">
     <defName>Cults_TentacleArm</defName>
     <label>tentacle</label>
@@ -66,15 +60,14 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-	  <Mass>2.0</Mass>
+      <Mass>2.0</Mass>
       <MarketValue>40</MarketValue>
     </statBases>
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <tradeability>Sellable</tradeability>	
-  </ThingDef>    
-
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
   <ThingDef ParentName="BodyPartArtificialBase">
     <defName>Cults_CthulhidTentacle</defName>
     <label>cthulhid tentacle</label>
@@ -84,16 +77,14 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-	  <Mass>1.8</Mass>
+      <Mass>1.8</Mass>
       <MarketValue>400</MarketValue>
     </statBases>
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <tradeability>Sellable</tradeability>	
-  </ThingDef>    
-  
-  
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
   <ThingDef ParentName="BodyPartArtificialBase">
     <defName>Cults_CthulhidEyestalk</defName>
     <label>horrifying eyestalk</label>
@@ -103,13 +94,12 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-	  <Mass>0.1</Mass>
+      <Mass>0.1</Mass>
       <MarketValue>400</MarketValue>
     </statBases>
     <techHediffsTags>
       <li>Advanced</li>
     </techHediffsTags>
-    <tradeability>Sellable</tradeability>	
-  </ThingDef>    
-  
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
 </Defs>

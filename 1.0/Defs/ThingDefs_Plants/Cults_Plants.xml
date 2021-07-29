@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="TreeBase">
     <defName>Cults_PlantTreeNightmare</defName>
     <thingClass>CultOfCthulhu.Plant_TreeOfMadness</thingClass>
     <label>eerie tree</label>
     <altitudeLayer>MoteOverhead</altitudeLayer>
-	<passability>Impassable</passability>
-	<description>An ominous tree with an indescibable aura. Approaching this tree causes most colonists a great deal of anxiety. Drawing closer, colonists swear they can hear voices speaking in strange tongues.</description>
+    <passability>Impassable</passability>
+    <description>An ominous tree with an indescibable aura. Approaching this tree causes most colonists a great deal of anxiety. Drawing closer, colonists swear they can hear voices speaking in strange tongues.</description>
     <graphicData>
       <texPath>Building/NightmareTree/NightmareTree</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>TransparentPostLight</shaderType>
+      <shaderType>TransparentPostLight</shaderType>
     </graphicData>
     <statBases>
       <Beauty>10</Beauty>
@@ -27,10 +26,8 @@
         <max>4.5</max>
       </visualSizeRange>
     </plant>
-	<building>
-		<soundAmbient>RitualChanting</soundAmbient>
-	</building>
+    <building>
+      <soundAmbient>RitualChanting</soundAmbient>
+    </building>
   </ThingDef>
-
-
-</Defs>  
+</Defs>

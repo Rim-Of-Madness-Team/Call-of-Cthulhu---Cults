@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="BenchBase">
     <defName>Cult_NightmareSacrificeAltar</defName>
     <label>corrupted altar</label>
@@ -19,7 +18,7 @@
         <cornerBR>Damage/Corner</cornerBR>
       </damageData>
     </graphicData>
-	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <defaultPlacingRot>South</defaultPlacingRot>
     <socialPropernessMatters>true</socialPropernessMatters>
     <stuffCategories>
@@ -47,19 +46,21 @@
     <surfaceType>Item</surfaceType>
     <inspectorTabs>
       <li>CultOfCthulhu.ITab_Sacrifice</li>
-	  <li>CultOfCthulhu.ITab_Worship</li>
+      <li>CultOfCthulhu.ITab_Worship</li>
     </inspectorTabs>
     <building>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-	<watchBuildingStandDistanceRange>
-		<min>1</min>
-		<max>9</max>
-	</watchBuildingStandDistanceRange>
-	<watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
+      <watchBuildingStandDistanceRange>
+        <min>1</min>
+        <max>9</max>
+      </watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
     </building>
-	<researchPrerequisites><li>Forbidden_Human</li></researchPrerequisites>
-<placeWorkers>
-        <li>PlaceWorker_WatchArea</li>
+    <researchPrerequisites>
+      <li>Forbidden_Human</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_WatchArea</li>
     </placeWorkers>
     <comps>
       <li>
@@ -68,12 +69,11 @@
     </comps>
     <designationHotKey>Misc2</designationHotKey>
   </ThingDef>
-
   <ThingDef ParentName="BuildingBase">
     <defName>Cults_BurstingTentacle</defName>
     <label>bursting tentacle</label>
     <description>OH GOD</description>
-	<thingClass>CultOfCthulhu.Building_BurstingTentacle</thingClass>
+    <thingClass>CultOfCthulhu.Building_BurstingTentacle</thingClass>
     <category>Building</category>
     <graphicData>
       <texPath>Building/BurstingTentacle</texPath>
@@ -99,7 +99,7 @@
     <costList>
       <ComponentIndustrial>20</ComponentIndustrial>
       <Steel>80</Steel>
-	  <Plasteel>16</Plasteel>
+      <Plasteel>16</Plasteel>
     </costList>
     <building>
       <claimable>false</claimable>
@@ -108,10 +108,9 @@
     <selectable>true</selectable>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-	<tickerType>Normal</tickerType>
+    <tickerType>Normal</tickerType>
     <repairEffect>ConstructMetal</repairEffect>
   </ThingDef>
-
   <ThingDef ParentName="BuildingNaturalBase">
     <defName>Cults_WombBetweenWorlds</defName>
     <label>Womb Between Worlds</label>
@@ -122,7 +121,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(6,12)</drawSize>
     </graphicData>
-	<size>(4,5)</size>
+    <size>(4,5)</size>
     <altitudeLayer>MoteOverhead</altitudeLayer>
     <rotatable>false</rotatable>
     <statBases>
@@ -153,6 +152,4 @@
       </li>
     </comps>
   </ThingDef>
-
-
- </Defs>
+</Defs>

@@ -1,9 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <HediffDef>
     <defName>Cults_SanityLoss</defName>
-	<label>sanity loss</label>
+    <label>sanity loss</label>
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
     <initialSeverity>0.1</initialSeverity>
@@ -15,12 +14,12 @@
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-0.15</severityPerDay>
       </li>
-    </comps>	
+    </comps>
     <stages>
       <li>
         <label>initial</label>
-		<minSeverity>0.1</minSeverity>
-		<painFactor>1.3</painFactor>
+        <minSeverity>0.1</minSeverity>
+        <painFactor>1.3</painFactor>
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
@@ -38,15 +37,15 @@
             <capacity>Manipulation</capacity>
             <offset>0.05</offset>
           </li>
-		 </capMods>
+        </capMods>
         <statOffsets>
           <MentalBreakThreshold>0.1</MentalBreakThreshold>
-        </statOffsets>		 		 
+        </statOffsets>
       </li>
-	  <li>
+      <li>
         <label>minor</label>
         <minSeverity>0.25</minSeverity>
-        <painFactor>1.5</painFactor>		
+        <painFactor>1.5</painFactor>
         <capMods>
           <li>
             <capacity>Consciousness</capacity>
@@ -64,15 +63,15 @@
             <capacity>Manipulation</capacity>
             <offset>0.10</offset>
           </li>
-		 </capMods>
+        </capMods>
         <statOffsets>
           <MentalBreakThreshold>0.25</MentalBreakThreshold>
-        </statOffsets>		 		 
+        </statOffsets>
       </li>
-	  <li>
-		<label>major</label>
-        <minSeverity>0.5</minSeverity>		
-		<capMods>
+      <li>
+        <label>major</label>
+        <minSeverity>0.5</minSeverity>
+        <capMods>
           <li>
             <capacity>Talking</capacity>
             <offset>-0.15</offset>
@@ -89,7 +88,7 @@
             <capacity>Manipulation</capacity>
             <offset>0.15</offset>
           </li>
-		</capMods>
+        </capMods>
         <mentalStateGivers>
           <li>
             <mentalState>Wander_Psychotic</mentalState>
@@ -98,13 +97,13 @@
         </mentalStateGivers>
         <statOffsets>
           <MentalBreakThreshold>0.4</MentalBreakThreshold>
-        </statOffsets>		 		
-	</li>	  
-	<li>
-		<label>severe</label>
-		<painFactor>0.5</painFactor>
-        <minSeverity>0.7</minSeverity>		
-		<capMods>
+        </statOffsets>
+      </li>
+      <li>
+        <label>severe</label>
+        <painFactor>0.5</painFactor>
+        <minSeverity>0.7</minSeverity>
+        <capMods>
           <li>
             <capacity>Consciousness</capacity>
             <setMax>0.8</setMax>
@@ -125,7 +124,7 @@
             <capacity>Manipulation</capacity>
             <offset>0.25</offset>
           </li>
-		</capMods>
+        </capMods>
         <mentalStateGivers>
           <li>
             <mentalState>Wander_Psychotic</mentalState>
@@ -134,13 +133,13 @@
         </mentalStateGivers>
         <statOffsets>
           <MentalBreakThreshold>0.6</MentalBreakThreshold>
-        </statOffsets>		 		
-	</li>
-	<li>
-		<label>extreme</label>
-		<painFactor>0.1</painFactor>
-        <minSeverity>0.95</minSeverity>		
-		<capMods>
+        </statOffsets>
+      </li>
+      <li>
+        <label>extreme</label>
+        <painFactor>0.1</painFactor>
+        <minSeverity>0.95</minSeverity>
+        <capMods>
           <li>
             <capacity>Consciousness</capacity>
             <setMax>0.5</setMax>
@@ -161,7 +160,7 @@
             <capacity>Manipulation</capacity>
             <offset>0.30</offset>
           </li>
-		</capMods>
+        </capMods>
         <mentalStateGivers>
           <li>
             <mentalState>Berserk</mentalState>
@@ -169,12 +168,11 @@
           </li>
         </mentalStateGivers>
         <lifeThreatening>true</lifeThreatening>
-        <deathMtbDays>10</deathMtbDays>		
+        <deathMtbDays>10</deathMtbDays>
         <statOffsets>
           <MentalBreakThreshold>0.8</MentalBreakThreshold>
-        </statOffsets>		 		
-	</li>
+        </statOffsets>
+      </li>
     </stages>
   </HediffDef>
-  
 </Defs>

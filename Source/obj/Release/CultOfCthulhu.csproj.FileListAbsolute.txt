@@ -1,4 +1,0 @@
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[DEV] Call of Cthulhu - Cults\Source\bin\Release\CultOfCthulhu.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[DEV] Call of Cthulhu - Cults\Source\bin\Release\CultOfCthulhu.pdb
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[DEV] Call of Cthulhu - Cults\Source\obj\Release\CultOfCthulhu.dll
-C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[DEV] Call of Cthulhu - Cults\Source\obj\Release\CultOfCthulhu.pdb

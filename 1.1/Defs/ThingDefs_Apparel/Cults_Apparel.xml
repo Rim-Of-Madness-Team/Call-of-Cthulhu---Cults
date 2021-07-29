@@ -1,724 +1,695 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-	<ThingDef ParentName="ApparelMakeableBase">
-		<defName>Apparel_CultistRobes</defName>
-		<description>For those with knowledge.</description>
-		<label>cultist robes</label>
-		<graphicData>
-			<texPath>Apparel/Display/CultistRobes</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<costStuffCount>80</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
-		<stuffCategories>
-			<li>Fabric</li>
-			<li>Leathery</li>
-		</stuffCategories>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<statBases>
-		  <MaxHitPoints>200</MaxHitPoints>
-		  <WorkToMake>8000</WorkToMake>
-		  <Mass>2.2</Mass>
-		  <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
-		  <StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
-		  <StuffEffectMultiplierInsulation_Heat>0.6</StuffEffectMultiplierInsulation_Heat>
-		  <EquipDelay>0.5</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<SocialImpact>0.15</SocialImpact>
-			<ResearchSpeed>0.05</ResearchSpeed>
-		</equippedStatOffsets>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Apparel/Bodywear_Clothing/CultistRobes/CultistRobes</wornGraphicPath>
-			<layers>
-				<li>Shell</li>
-			</layers>
-
-			<tags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</defaultOutfitTags>
-		</apparel>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Hastur</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Tsathoggua</deityDef>
-				<favorBonus>0.005</favorBonus>
-                          </li>
-			  <li>
-			    <deityDef>Entity_Bast</deityDef>
-				<favorBonus>0.005</favorBonus>
-                          </li>
-			</deities>
-		  </li>
-		</comps>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-	</ThingDef>
-
-
-<!-- Fur Cultist Robes -->
-
-	<ThingDef ParentName="ApparelMakeableBase">
-		<defName>Apparel_ROMFurRobes</defName>
-		<description>Similar to other robes that cultists wear, however, these ones are specifically made for colder environments.</description>
-		<label>cultist robes (fur)</label>
-		<graphicData>
-			<texPath>Apparel/Bodywear_Clothing/FurRobes/ROMFurRobes</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<costStuffCount>80</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
-		<stuffCategories>
-			<li>Fabric</li>
-			<li>Leathery</li>
-		</stuffCategories>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<statBases>
-		  <MaxHitPoints>200</MaxHitPoints>
-		  <WorkToMake>10000</WorkToMake>
-		  <Mass>3.2</Mass>
-		  <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
-		  <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
-		  <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
-		  <EquipDelay>0.5</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<SocialImpact>0.15</SocialImpact>
-			<ResearchSpeed>0.05</ResearchSpeed>
-		</equippedStatOffsets>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Apparel/Bodywear_Clothing/FurRobes/ROMFurRobes</wornGraphicPath>
-			<layers>
-				<li>Shell</li>
-			</layers>
-
-			<tags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</defaultOutfitTags>
-		</apparel>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Hastur</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Tsathoggua</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Bast</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-	</ThingDef>
-
-
-<!-- Toga Cultist Vestments -->
-
-	<ThingDef ParentName="ApparelMakeableBase">
-		<defName>Apparel_ROMWrapRobes</defName>
-		<description>This sacred wrap allows priests to preach with greater appeal by appearing as a simple or lowly creature. It also tends to allow for better preaching in locations that face greater threat from the sun and heat.</description>
-		<label>cultist vestments (wrap)</label>
-		<graphicData>
-			<texPath>Apparel/Bodywear_Clothing/NyarlathotepRobes/ROMNyarlathotepRobes</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<costStuffCount>70</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
-		<stuffCategories>
-			<li>Fabric</li>
-			<li>Leathery</li>
-		</stuffCategories>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<statBases>
-		  <MaxHitPoints>160</MaxHitPoints>
-		  <WorkToMake>7000</WorkToMake>
-		  <Mass>2.0</Mass>
-		  <StuffEffectMultiplierArmor>0.28</StuffEffectMultiplierArmor>
-		  <StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
-		  <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
-		  <EquipDelay>0.5</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<SocialImpact>0.3</SocialImpact>
-			<ResearchSpeed>0.05</ResearchSpeed>
-		</equippedStatOffsets>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Apparel/Bodywear_Clothing/NyarlathotepRobes/ROMNyarlathotepRobes</wornGraphicPath>
-			<layers>
-				<li>Shell</li>
-			</layers>
-
-			<tags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</defaultOutfitTags>
-		</apparel>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.006</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.006</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.006</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Hastur</deityDef>
-				<favorBonus>0.006</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.006</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Tsathoggua</deityDef>
-				<favorBonus>0.006</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Bast</deityDef>
-				<favorBonus>0.006</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-	</ThingDef>
-
-
-<!-- Tentacled Cultist Vestments -->
-
-	<ThingDef ParentName="ApparelMakeableBase">
-		<defName>Apparel_ROMCthulhuRobes</defName>
-		<description>Adorned with faux tentacles, this imposing robe is favored by priests of Nyarlathotep or Cthulhu.</description>
-		<label>cultist vestments (tentacled)</label>
-		<graphicData>
-			<texPath>Apparel/Bodywear_Clothing/CthulhuRobes/ROMCthulhuRobes</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<costStuffCount>100</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
-		<stuffCategories>
-			<li>Fabric</li>
-			<li>Leathery</li>
-		</stuffCategories>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<statBases>
-		  <MaxHitPoints>200</MaxHitPoints>
-		  <WorkToMake>20000</WorkToMake>
-		  <Mass>4.2</Mass>
-		  <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
-		  <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
-		  <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
-		  <EquipDelay>0.5</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<SocialImpact>0.3</SocialImpact>
-			<ResearchSpeed>0.05</ResearchSpeed>
-            <MoveSpeed>-0.045</MoveSpeed>
-		</equippedStatOffsets>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Apparel/Bodywear_Clothing/CthulhuRobes/ROMCthulhuRobes</wornGraphicPath>
-			<layers>
-				<li>Shell</li>
-			</layers>
-
-			<tags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</defaultOutfitTags>
-		</apparel>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.015</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.015</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Hastur</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Tsathoggua</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-	</ThingDef>
-
-<!-- Traditional Cultist Vestments -->
-
-	<ThingDef ParentName="ApparelMakeableBase">
-		<defName>Apparel_ROMDagonRobes</defName>
-		<description>Impressive looking vestments preferred by orders of Dagon or Hastur.</description>
-		<label>cultist vestments (traditional)</label>
-		<graphicData>
-			<texPath>Apparel/Bodywear_Clothing/DagonRobes/ROMDagonVestments</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<costStuffCount>80</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
-		<stuffCategories>
-			<li>Fabric</li>
-			<li>Leathery</li>
-		</stuffCategories>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<statBases>
-		  <MaxHitPoints>200</MaxHitPoints>
-		  <WorkToMake>20000</WorkToMake>
-		  <Mass>2.2</Mass>
-		  <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
-		  <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
-		  <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
-		  <EquipDelay>0.5</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<SocialImpact>0.3</SocialImpact>
-			<ResearchSpeed>0.05</ResearchSpeed>
-            <MoveSpeed>-0.04</MoveSpeed>
-		</equippedStatOffsets>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Apparel/Bodywear_Clothing/DagonRobes/ROMDagonVestments</wornGraphicPath>
-			<layers>
-				<li>Shell</li>
-			</layers>
-
-			<tags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</defaultOutfitTags>
-		</apparel>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Hastur</deityDef>
-				<favorBonus>0.015</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.015</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Tsathoggua</deityDef>
-				<favorBonus>0.015</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-	</ThingDef>
-
-<!-- Druidic Cultist Vestments -->
-
-	<ThingDef ParentName="ApparelMakeableBase">
-		<defName>Apparel_ROMShubRobes</defName>
-		<description>These woodland priestly robes adorned with sacred twigs appeal to deities like Shub-Niggurath.</description>
-		<label>cultist vestments (druidic)</label>
-		<graphicData>
-			<texPath>Apparel/Bodywear_Clothing/ShubRobes/ROMShubRobes</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<costStuffCount>100</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
-		<stuffCategories>
-			<li>Fabric</li>
-			<li>Leathery</li>
-		</stuffCategories>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<statBases>
-		  <MaxHitPoints>200</MaxHitPoints>
-		  <WorkToMake>20000</WorkToMake>
-		  <Mass>3.2</Mass>
-		  <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
-		  <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
-		  <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
-		  <EquipDelay>0.5</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<SocialImpact>0.2</SocialImpact>
-			<ResearchSpeed>0.05</ResearchSpeed>
-            <MoveSpeed>-0.03</MoveSpeed>
-		</equippedStatOffsets>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Apparel/Bodywear_Clothing/ShubRobes/ROMShubRobes</wornGraphicPath>
-			<layers>
-				<li>Shell</li>
-			</layers>
-
-			<tags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</defaultOutfitTags>
-		</apparel>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.015</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Hastur</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Tsathoggua</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-	</ThingDef>
-
-<!-- Yellow Cultist Vestments -->
-
-	<ThingDef ParentName="ApparelMakeableBase">
-		<defName>Apparel_ROMHasturRobes</defName>
-		<description>These robes have been heavily dyed yellow, hiding the original materials used in its tailoring. Heavily favored by Hastur.</description>
-		<label>cultist vestments (yellow)</label>
-		<graphicData>
-			<texPath>Apparel/Bodywear_Clothing/HasturRobe/HasturRobe</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>CutoutComplex</shaderType>
-		</graphicData>
-		<costStuffCount>100</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
-		<stuffCategories>
-			<li>Fabric</li>
-			<li>Leathery</li>
-		</stuffCategories>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<statBases>
-		  <MaxHitPoints>200</MaxHitPoints>
-		  <WorkToMake>20000</WorkToMake>
-		  <Mass>2.2</Mass>
-		  <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
-		  <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
-		  <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
-		  <EquipDelay>0.5</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<SocialImpact>0.2</SocialImpact>
-			<ResearchSpeed>0.05</ResearchSpeed>
-            <MoveSpeed>-0.03</MoveSpeed>
-		</equippedStatOffsets>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Apparel/Bodywear_Clothing/HasturRobe/HasturRobe</wornGraphicPath>
-			<layers>
-				<li>Shell</li>
-			</layers>
-
-			<tags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>CallOfCthulhu_FrenziedCultist</li>
-			</defaultOutfitTags>
-		</apparel>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.0015</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.0015</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.0015</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Hastur</deityDef>
-				<favorBonus>0.025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.0015</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Tsathoggua</deityDef>
-				<favorBonus>0.0015</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<colorGenerator Class="ColorGenerator_StandardApparel" />
-	</ThingDef>		
-	
-<!--==========================-->
-
-	<ThingDef ParentName="ApparelMakeableBase">
-		<defName>Apparel_SailorUniform</defName>
-		<description>For the sailors.</description>
-		<label>sailor uniform</label>
-		<graphicData>
-			<texPath>Apparel/Bodywear_Clothing/SailorsUniform/ROMSailorsUniform</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<costStuffCount>80</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
-		<stuffCategories>
-			<li>Fabric</li>
-			<li>Leathery</li>
-		</stuffCategories>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<statBases>
-		  <MaxHitPoints>160</MaxHitPoints>
-		  <WorkToMake>10000</WorkToMake>
-		  <Mass>2.2</Mass>
-		  <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
-		  <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
-		  <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
-		  <EquipDelay>0.5</EquipDelay>
-		</statBases>
-		<equippedStatOffsets>
-			<SocialImpact>0.15</SocialImpact>
-			<ResearchSpeed>0.05</ResearchSpeed>
-		</equippedStatOffsets>
-		<apparel>
-			<bodyPartGroups>
-				<li>Torso</li>
-				<li>Shoulders</li>
-				<li>Arms</li>
-				<li>Legs</li>
-			</bodyPartGroups>
-			<wornGraphicPath>Apparel/Bodywear_Clothing/SailorsUniform/ROMSailorsUniform</wornGraphicPath>
-			<layers>
-				<li>Shell</li>
-			</layers>
-
-			<tags>
-				<li>CallOfCthulhu_Sailor</li>
-			</tags>
-			<defaultOutfitTags>
-				<li>CallOfCthulhu_Sailor</li>
-			</defaultOutfitTags>
-		</apparel>
-	</ThingDef>
-
-	<!-- =======Hats======== -->
-
-
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_CultistRobes</defName>
+    <description>For those with knowledge.</description>
+    <label>cultist robes</label>
+    <graphicData>
+      <texPath>Apparel/Display/CultistRobes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>80</costStuffCount>
+    <generateCommonality>0.01</generateCommonality>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>2.2</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.6</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.6</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.15</SocialImpact>
+      <ResearchSpeed>0.05</ResearchSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Bodywear_Clothing/CultistRobes/CultistRobes</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Bast</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+  <!-- Fur Cultist Robes -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ROMFurRobes</defName>
+    <description>Similar to other robes that cultists wear, however, these ones are specifically made for colder environments.</description>
+    <label>cultist robes (fur)</label>
+    <graphicData>
+      <texPath>Apparel/Bodywear_Clothing/FurRobes/ROMFurRobes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>80</costStuffCount>
+    <generateCommonality>0.01</generateCommonality>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>3.2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.8</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.15</SocialImpact>
+      <ResearchSpeed>0.05</ResearchSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Bodywear_Clothing/FurRobes/ROMFurRobes</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Bast</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+  <!-- Toga Cultist Vestments -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ROMWrapRobes</defName>
+    <description>This sacred wrap allows priests to preach with greater appeal by appearing as a simple or lowly creature. It also tends to allow for better preaching in locations that face greater threat from the sun and heat.</description>
+    <label>cultist vestments (wrap)</label>
+    <graphicData>
+      <texPath>Apparel/Bodywear_Clothing/NyarlathotepRobes/ROMNyarlathotepRobes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>70</costStuffCount>
+    <generateCommonality>0.01</generateCommonality>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToMake>7000</WorkToMake>
+      <Mass>2.0</Mass>
+      <StuffEffectMultiplierArmor>0.28</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.8</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.3</SocialImpact>
+      <ResearchSpeed>0.05</ResearchSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Bodywear_Clothing/NyarlathotepRobes/ROMNyarlathotepRobes</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.006</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.006</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.006</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+            <favorBonus>0.006</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.006</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+            <favorBonus>0.006</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Bast</deityDef>
+            <favorBonus>0.006</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+  <!-- Tentacled Cultist Vestments -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ROMCthulhuRobes</defName>
+    <description>Adorned with faux tentacles, this imposing robe is favored by priests of Nyarlathotep or Cthulhu.</description>
+    <label>cultist vestments (tentacled)</label>
+    <graphicData>
+      <texPath>Apparel/Bodywear_Clothing/CthulhuRobes/ROMCthulhuRobes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>100</costStuffCount>
+    <generateCommonality>0.01</generateCommonality>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>4.2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.3</SocialImpact>
+      <ResearchSpeed>0.05</ResearchSpeed>
+      <MoveSpeed>-0.045</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Bodywear_Clothing/CthulhuRobes/ROMCthulhuRobes</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.015</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.015</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+  <!-- Traditional Cultist Vestments -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ROMDagonRobes</defName>
+    <description>Impressive looking vestments preferred by orders of Dagon or Hastur.</description>
+    <label>cultist vestments (traditional)</label>
+    <graphicData>
+      <texPath>Apparel/Bodywear_Clothing/DagonRobes/ROMDagonVestments</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>80</costStuffCount>
+    <generateCommonality>0.01</generateCommonality>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>2.2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.3</SocialImpact>
+      <ResearchSpeed>0.05</ResearchSpeed>
+      <MoveSpeed>-0.04</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Bodywear_Clothing/DagonRobes/ROMDagonVestments</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+            <favorBonus>0.015</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.015</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+            <favorBonus>0.015</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+  <!-- Druidic Cultist Vestments -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ROMShubRobes</defName>
+    <description>These woodland priestly robes adorned with sacred twigs appeal to deities like Shub-Niggurath.</description>
+    <label>cultist vestments (druidic)</label>
+    <graphicData>
+      <texPath>Apparel/Bodywear_Clothing/ShubRobes/ROMShubRobes</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>100</costStuffCount>
+    <generateCommonality>0.01</generateCommonality>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>3.2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.2</SocialImpact>
+      <ResearchSpeed>0.05</ResearchSpeed>
+      <MoveSpeed>-0.03</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Bodywear_Clothing/ShubRobes/ROMShubRobes</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.015</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+  <!-- Yellow Cultist Vestments -->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_ROMHasturRobes</defName>
+    <description>These robes have been heavily dyed yellow, hiding the original materials used in its tailoring. Heavily favored by Hastur.</description>
+    <label>cultist vestments (yellow)</label>
+    <graphicData>
+      <texPath>Apparel/Bodywear_Clothing/HasturRobe/HasturRobe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <costStuffCount>100</costStuffCount>
+    <generateCommonality>0.01</generateCommonality>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>20000</WorkToMake>
+      <Mass>2.2</Mass>
+      <StuffEffectMultiplierArmor>0.4</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.7</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.7</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.2</SocialImpact>
+      <ResearchSpeed>0.05</ResearchSpeed>
+      <MoveSpeed>-0.03</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Bodywear_Clothing/HasturRobe/HasturRobe</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>CallOfCthulhu_FrenziedCultist</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.0015</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.0015</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.0015</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+            <favorBonus>0.025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.0015</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+            <favorBonus>0.0015</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <colorGenerator Class="ColorGenerator_StandardApparel" />
+  </ThingDef>
+  <!--==========================-->
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>Apparel_SailorUniform</defName>
+    <description>For the sailors.</description>
+    <label>sailor uniform</label>
+    <graphicData>
+      <texPath>Apparel/Bodywear_Clothing/SailorsUniform/ROMSailorsUniform</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>80</costStuffCount>
+    <generateCommonality>0.01</generateCommonality>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>2.2</Mass>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>0.5</EquipDelay>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.15</SocialImpact>
+      <ResearchSpeed>0.05</ResearchSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Apparel/Bodywear_Clothing/SailorsUniform/ROMSailorsUniform</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>CallOfCthulhu_Sailor</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>CallOfCthulhu_Sailor</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <!-- =======Hats======== -->
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_CultistHood</defName>
     <label>cultist hood (shrouded)</label>
@@ -728,7 +699,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>25</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
+    <generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -752,7 +723,6 @@
       <layers>
         <li>Overhead</li>
       </layers>
-
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -760,52 +730,50 @@
         <li>CallOfCthulhu_FrenziedCultist</li>
       </defaultOutfitTags>
     </apparel>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Hastur</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Tsathoggua</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Bast</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Bast</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
-
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_HasturHood</defName>
     <label>cultist hood (yellow)</label>
@@ -813,10 +781,10 @@
     <graphicData>
       <texPath>Apparel/Hats/HasturHood/HasturHood</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>25</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
+    <generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -840,7 +808,6 @@
       <layers>
         <li>Overhead</li>
       </layers>
-
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -848,53 +815,50 @@
         <li>CallOfCthulhu_FrenziedCultist</li>
       </defaultOutfitTags>
     </apparel>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Hastur</deityDef>
-				<favorBonus>0.025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Tsathoggua</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Bast</deityDef>
-				<favorBonus>0.0025</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+            <favorBonus>0.025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Bast</deityDef>
+            <favorBonus>0.0025</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
     <colorGenerator Class="ColorGenerator_StandardApparel" />
   </ThingDef>
-
-  
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_CthulhuMaskHood</defName>
     <label>cultist hood (cthulhu mask)</label>
@@ -905,7 +869,7 @@
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>25</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
+    <generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -929,7 +893,6 @@
       <layers>
         <li>Overhead</li>
       </layers>
-
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -937,27 +900,25 @@
         <li>CallOfCthulhu_FrenziedCultist</li>
       </defaultOutfitTags>
     </apparel>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.025</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.025</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
   </ThingDef>
-
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_NyarlathotepHood</defName>
     <label>cultist hood (nyarlathotep)</label>
@@ -967,7 +928,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>25</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
+    <generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -991,7 +952,6 @@
       <layers>
         <li>Overhead</li>
       </layers>
-
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -999,28 +959,25 @@
         <li>CallOfCthulhu_FrenziedCultist</li>
       </defaultOutfitTags>
     </apparel>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.025</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.025</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
   </ThingDef>
-
-
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_DagonMitre</defName>
     <label>cultist hood (dagon mitre)</label>
@@ -1028,10 +985,10 @@
     <graphicData>
       <texPath>Apparel/Hats/DagonHat/ROMDagonHat_north</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-	  <shaderType>CutoutComplex</shaderType>
+      <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>25</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
+    <generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -1055,7 +1012,6 @@
       <layers>
         <li>Overhead</li>
       </layers>
-
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -1063,28 +1019,25 @@
         <li>CallOfCthulhu_FrenziedCultist</li>
       </defaultOutfitTags>
     </apparel>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.025</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.025</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
   </ThingDef>
-
-
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_ShubMask</defName>
     <label>cultist hood (shub-niggurath mask)</label>
@@ -1095,7 +1048,7 @@
       <shaderType>CutoutComplex</shaderType>
     </graphicData>
     <costStuffCount>25</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
+    <generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -1119,7 +1072,6 @@
       <layers>
         <li>Overhead</li>
       </layers>
-
       <tags>
         <li>CallOfCthulhu_FrenziedCultist</li>
       </tags>
@@ -1127,27 +1079,25 @@
         <li>CallOfCthulhu_FrenziedCultist</li>
       </defaultOutfitTags>
     </apparel>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.025</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-		<recipeMaker>
-			<recipeUsers>
-				<li>ElectricTailoringBench</li>
-				<li>HandTailoringBench</li>
-
-                <li>CraftingSpot</li>
-			</recipeUsers>
-			<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-		</recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.025</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
   </ThingDef>
-
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_StandardHood</defName>
     <label>cultist hood (simple)</label>
@@ -1157,7 +1107,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <costStuffCount>25</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
+    <generateCommonality>0.01</generateCommonality>
     <stuffCategories>
       <li>Fabric</li>
       <li>Leathery</li>
@@ -1181,60 +1131,56 @@
       <layers>
         <li>Overhead</li>
       </layers>
-
       <tags>
-		<li>CallOfCthulhu_TownsfolkPolice</li>
+        <li>CallOfCthulhu_TownsfolkPolice</li>
       </tags>
       <defaultOutfitTags>
-		<li>CallOfCthulhu_TownsfolkPolice</li>
+        <li>CallOfCthulhu_TownsfolkPolice</li>
       </defaultOutfitTags>
     </apparel>
-		<comps>
-		  <li Class="CultOfCthulhu.CompProperties_FavoredObject">
-		    <deities>
-			  <li>
-			    <deityDef>Entity_Nyarlathotep</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Cthulhu</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Shub</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Hastur</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Dagon</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Tsathoggua</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			  <li>
-			    <deityDef>Entity_Bast</deityDef>
-				<favorBonus>0.005</favorBonus>
-			  </li>
-			</deities>
-		  </li>
-		</comps>
-	<recipeMaker>
-		<recipeUsers>
-			<li>ElectricTailoringBench</li>
-			<li>HandTailoringBench</li>
-
-                <li>CraftingSpot</li>
-		</recipeUsers>
-		<researchPrerequisite>Forbidden_Attire</researchPrerequisite>
-	</recipeMaker>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_FavoredObject">
+        <deities>
+          <li>
+            <deityDef>Entity_Nyarlathotep</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Cthulhu</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Shub</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Hastur</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Dagon</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Tsathoggua</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+          <li>
+            <deityDef>Entity_Bast</deityDef>
+            <favorBonus>0.005</favorBonus>
+          </li>
+        </deities>
+      </li>
+    </comps>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Forbidden_Attire</researchPrerequisite>
+    </recipeMaker>
   </ThingDef>
-
-
   <ThingDef ParentName="HatMakeableBase">
     <defName>Apparel_SailorsCap</defName>
     <label>sailors cap</label>
@@ -1247,8 +1193,8 @@
       <li>Fabric</li>
       <li>Leathery</li>
     </stuffCategories>
-		<costStuffCount>25</costStuffCount>
-		<generateCommonality>0.01</generateCommonality>
+    <costStuffCount>25</costStuffCount>
+    <generateCommonality>0.01</generateCommonality>
     <statBases>
       <WorkToMake>2000</WorkToMake>
       <Mass>0.12</Mass>
@@ -1268,9 +1214,6 @@
       <layers>
         <li>Overhead</li>
       </layers>
-
     </apparel>
   </ThingDef>
-
-
 </Defs>

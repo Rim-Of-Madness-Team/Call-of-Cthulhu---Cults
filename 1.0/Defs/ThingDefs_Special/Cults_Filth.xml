@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef ParentName="BaseFilth">
     <defName>Cults_FilthBlackSlime</defName>
     <label>black slime</label>
@@ -18,8 +17,6 @@
       <canFilthAttach>true</canFilthAttach>
     </filth>
   </ThingDef>
-  
-  
   <ThingDef ParentName="BaseFilth">
     <defName>Cults_TransmogAura</defName>
     <label>transmog aura</label>
@@ -34,6 +31,4 @@
       <canFilthAttach>true</canFilthAttach>
     </filth>
   </ThingDef>
-
-  
 </Defs>

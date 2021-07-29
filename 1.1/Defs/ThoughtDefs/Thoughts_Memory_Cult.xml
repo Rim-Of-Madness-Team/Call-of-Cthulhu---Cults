@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <!-- Cult Seed Incidents -->
-  
   <ThoughtDef>
     <defName>Cults_ObservedNightmareTree</defName>
     <thoughtClass>Thought_MemoryObservation</thoughtClass>
@@ -17,7 +15,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>Cults_ObservedNightmareTreeCultist</defName>
     <thoughtClass>Thought_MemoryObservation</thoughtClass>
@@ -32,7 +29,6 @@
       </li>
     </stages>
   </ThoughtDef>
-
   <ThoughtDef>
     <defName>Cults_ObservedNightmareMonolith</defName>
     <thoughtClass>Thought_MemoryObservation</thoughtClass>
@@ -47,7 +43,6 @@
       </li>
     </stages>
   </ThoughtDef>
-
   <ThoughtDef>
     <defName>Cults_ObservedNightmareMonolithCultist</defName>
     <thoughtClass>Thought_MemoryObservation</thoughtClass>
@@ -62,9 +57,6 @@
       </li>
     </stages>
   </ThoughtDef>
-
-
-
   <!-- Cultist Status Thought Memories -->
   <ThoughtDef>
     <defName>Cults_FoundedCult</defName>
@@ -75,7 +67,7 @@
     <stages>
       <li>
         <label>founded the local cult</label>
-		<visible>false</visible>
+        <visible>false</visible>
       </li>
     </stages>
     <thoughtToMake>Cults_FoundedCultMood</thoughtToMake>
@@ -92,7 +84,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
   <ThoughtDef>
     <defName>Cults_JoinedCult</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -102,7 +93,7 @@
     <stages>
       <li>
         <label>joined the local cult</label>
-		<visible>false</visible>
+        <visible>false</visible>
       </li>
     </stages>
     <thoughtToMake>Cults_JoinedCultMood</thoughtToMake>
@@ -119,8 +110,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-  
   <ThoughtDef>
     <defName>Cults_MadeInvestigation</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -130,7 +119,7 @@
     <stages>
       <li>
         <label>investigated strange things</label>
-		<visible>false</visible>
+        <visible>false</visible>
       </li>
     </stages>
     <thoughtToMake>Cults_MadeInvestigationMood</thoughtToMake>
@@ -147,8 +136,6 @@
       </li>
     </stages>
   </ThoughtDef>
-  
-  
   <ThoughtDef>
     <defName>Cults_BlackoutBook</defName>
     <thoughtClass>Thought_Memory</thoughtClass>
@@ -158,11 +145,9 @@
     <stages>
       <li>
         <label>acquired occult grimoire</label>
-		<description>I blacked out. I don't remember. Afterwards, when I ran my fingers over the book, I could feel it calling my name. Am I going mad?</description>
+        <description>I blacked out. I don't remember. Afterwards, when I ran my fingers over the book, I could feel it calling my name. Am I going mad?</description>
         <baseMoodEffect>-10</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
-  
-  
 </Defs>

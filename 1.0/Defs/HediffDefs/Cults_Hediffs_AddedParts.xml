@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <HediffDef ParentName="ImplantHediffBase">
     <defName>Cults_PsionicBrain</defName>
     <label>psionic lobe</label>
@@ -13,28 +12,25 @@
             <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
             <meleeDamageDef>Cults_Psionic</meleeDamageDef>
           </li>
-        </verbs>  
+        </verbs>
       </li>
     </comps>
     <spawnThingOnRemoved>Cults_PsionicBrain</spawnThingOnRemoved>
     <stages>
       <li>
-          <capMods>
-            <li>
-              <capacity>Consciousness</capacity>
-              <offset>0.2</offset>
-            </li>
-          </capMods>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
     <addedPartProps>
-       
       <solid>true</solid>
       <partEfficiency>1.20</partEfficiency>
     </addedPartProps>
   </HediffDef>
-
-  
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>Cults_TentacleArm</defName>
     <label>tentacle</label>
@@ -47,27 +43,25 @@
             <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
             <meleeDamageDef>Blunt</meleeDamageDef>
           </li>
-        </verbs>  
+        </verbs>
       </li>
     </comps>
     <spawnThingOnRemoved>Cults_TentacleArm</spawnThingOnRemoved>
     <stages>
       <li>
-          <capMods>
-            <li>
-              <capacity>Manipulation</capacity>
-              <offset>-0.15</offset>
-            </li>
-          </capMods>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
     <addedPartProps>
-       
       <solid>true</solid>
       <partEfficiency>0.8</partEfficiency>
     </addedPartProps>
-  </HediffDef>  
-  
+  </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>Cults_CthulhidTentacle</defName>
     <label>cthulid tentacle</label>
@@ -80,76 +74,69 @@
             <meleeDamageBaseAmount>9</meleeDamageBaseAmount>
             <meleeDamageDef>Blunt</meleeDamageDef>
           </li>
-        </verbs>  
+        </verbs>
       </li>
     </comps>
     <spawnThingOnRemoved>Cults_CthulhidTentacle</spawnThingOnRemoved>
     <stages>
       <li>
-          <capMods>
-            <li>
-              <capacity>Manipulation</capacity>
-              <offset>0.25</offset>
-            </li>
-          </capMods>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.25</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
     <addedPartProps>
-       
       <solid>true</solid>
       <partEfficiency>1.25</partEfficiency>
     </addedPartProps>
   </HediffDef>
-  
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>Cults_CthulhidEyestalk</defName>
     <label>horrifying eyestalk</label>
     <spawnThingOnRemoved>Cults_CthulhidEyestalk</spawnThingOnRemoved>
     <stages>
       <li>
-          <capMods>
-            <li>
-              <capacity>Sight</capacity>
-              <offset>0.15</offset>
-            </li>
-          </capMods>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
     <addedPartProps>
-       
       <solid>true</solid>
       <partEfficiency>1.25</partEfficiency>
     </addedPartProps>
-  </HediffDef>  
-  
+  </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>Cults_MonstrousBrain</defName>
     <label>monstrous brain</label>
     <spawnThingOnRemoved>Cults_MonstrousBrain</spawnThingOnRemoved>
     <stages>
       <li>
-          <capMods>
-            <li>
-              <capacity>Manipulation</capacity>
-              <offset>0.2</offset>
-            </li>
-          </capMods>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.2</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
     <addedPartProps>
-       
       <solid>true</solid>
       <partEfficiency>1.1</partEfficiency>
     </addedPartProps>
   </HediffDef>
-
-  
   <HediffDef>
     <defName>Cults_MonstrousBody</defName>
     <label>monstrous body</label>
-        <hediffClass>CultOfCthulhu.Hediff_Transmogrified</hediffClass>
+    <hediffClass>CultOfCthulhu.Hediff_Transmogrified</hediffClass>
     <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
-	    <isBad>false</isBad>
+    <isBad>false</isBad>
     <comps>
       <li Class="HediffCompProperties_VerbGiver">
         <tools>
@@ -166,19 +153,17 @@
     </comps>
     <stages>
       <li>
-          <capMods>
-            <li>
-              <capacity>Manipulation</capacity>
-              <offset>0.15</offset>
-            </li>
-          </capMods>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.15</offset>
+          </li>
+        </capMods>
       </li>
     </stages>
     <addedPartProps>
-       
       <solid>true</solid>
       <partEfficiency>1.1</partEfficiency>
     </addedPartProps>
   </HediffDef>
-
 </Defs>

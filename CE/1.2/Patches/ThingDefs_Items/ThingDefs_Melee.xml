@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MeleeWeapon_CultKris"]/tools</xpath>
+    <value>
+      <tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>handle</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>6</power>
+          <cooldownTime>2.5</cooldownTime>
+          <armorPenetrationBlunt>0.250</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>blade</label>
+          <capacities>
+            <li>Cut</li>
+          </capacities>
+          <power>9</power>
+          <cooldownTime>1.6</cooldownTime>
+          <armorPenetrationBlunt>0.36</armorPenetrationBlunt>
+          <armorPenetrationSharp>0.32</armorPenetrationSharp>
+          <linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>point</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>10.7</power>
+          <cooldownTime>1.6</cooldownTime>
+          <armorPenetrationBlunt>0.25</armorPenetrationBlunt>
+          <armorPenetrationSharp>0.42</armorPenetrationSharp>
+          <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+        </li>
+      </tools>
+    </value>
+  </Operation>
+</Patch>

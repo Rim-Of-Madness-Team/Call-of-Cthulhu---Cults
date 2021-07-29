@@ -1,211 +1,200 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-<CultOfCthulhu.CosmicEntityDef>
-	<defName>Entity_Cthulhu</defName>
+  <CultOfCthulhu.CosmicEntityDef>
+    <defName>Entity_Cthulhu</defName>
     <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
-	<label>Cthulhu</label>
-	<version>6</version>
-	<portrait>Portraits/cthulhu</portrait>
-	<titles>High Priest of the Great Old Ones, The Great Dreamer, The Sleeper of R'lyeh, The Star Spawn</titles>
-	<domains>Insanity, Madness, Psionics, Dreams, Water</domains>
-	<description>He who waits dreaming.</description>
-	<descriptionLong>&quot;The Thing cannot be described - there is no language for such abysms of shrieking and immemorial lunacy, such eldritch contradictions of all matter, force, and cosmic order. A mountain walked or stumbled. If I say that my somewhat extravagant imagination yielded simultaneous pictures of an octopus, a dragon, and a human caricature, I shall not be unfaithful to the spirit of the thing. A pulpy, tentacled head surmounted a grotesque and scaly body with rudimentary wings; but it was the general outline of the whole which made it most shockingly frightful.&quot; ― H.P. Lovecraft, The Call of Cthulhu\n\nNeither alive nor dead, Cthulhu slumbers in His home of R'lyeh. When the stars are right, He will rise again to conquer the world. Should we aid Him, we not only benefit from psionic powers, the tome promises our destruction will be quick and merciful.</descriptionLong>
+    <label>Cthulhu</label>
+    <version>6</version>
+    <portrait>Portraits/cthulhu</portrait>
+    <titles>High Priest of the Great Old Ones, The Great Dreamer, The Sleeper of R'lyeh, The Star Spawn</titles>
+    <domains>Insanity, Madness, Psionics, Dreams, Water</domains>
+    <description>He who waits dreaming.</description>
+    <descriptionLong>"The Thing cannot be described - there is no language for such abysms of shrieking and immemorial lunacy, such eldritch contradictions of all matter, force, and cosmic order. A mountain walked or stumbled. If I say that my somewhat extravagant imagination yielded simultaneous pictures of an octopus, a dragon, and a human caricature, I shall not be unfaithful to the spirit of the thing. A pulpy, tentacled head surmounted a grotesque and scaly body with rudimentary wings; but it was the general outline of the whole which made it most shockingly frightful." ― H.P. Lovecraft, The Call of Cthulhu\n\nNeither alive nor dead, Cthulhu slumbers in His home of R'lyeh. When the stars are right, He will rise again to conquer the world. Should we aid Him, we not only benefit from psionic powers, the tome promises our destruction will be quick and merciful.</descriptionLong>
     <symbol>Mote/Symbols/Cthulhu</symbol>
-	<tier1SpellDefs>
-		<li>Cults_SpellFavor</li>
-		<li>Cults_SpellOrbitalInsanityWave</li>
-		<li>Cults_SpellAspectOfCthulhu</li>
-	</tier1SpellDefs>
-	<tier2SpellDefs>
-		<li>Cults_SpellPsionicGrowth</li>
-	</tier2SpellDefs>
-	<tier3SpellDefs>
-		<li>Cults_SpellTerrestrialInsanityWave</li>
-	</tier3SpellDefs>
-	<finalSpellDef>Cults_SpellAwakenCthulhu</finalSpellDef>
-	<favoredApparel>
-		<li>Apparel_CthulhuMaskHood</li>
-	</favoredApparel>
-</CultOfCthulhu.CosmicEntityDef>
-
-<CultOfCthulhu.CosmicEntityDef>
-	<defName>Entity_Dagon</defName>
+    <tier1SpellDefs>
+      <li>Cults_SpellFavor</li>
+      <li>Cults_SpellOrbitalInsanityWave</li>
+      <li>Cults_SpellAspectOfCthulhu</li>
+    </tier1SpellDefs>
+    <tier2SpellDefs>
+      <li>Cults_SpellPsionicGrowth</li>
+    </tier2SpellDefs>
+    <tier3SpellDefs>
+      <li>Cults_SpellTerrestrialInsanityWave</li>
+    </tier3SpellDefs>
+    <finalSpellDef>Cults_SpellAwakenCthulhu</finalSpellDef>
+    <favoredApparel>
+      <li>Apparel_CthulhuMaskHood</li>
+    </favoredApparel>
+  </CultOfCthulhu.CosmicEntityDef>
+  <CultOfCthulhu.CosmicEntityDef>
+    <defName>Entity_Dagon</defName>
     <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
-	<label>Dagon</label>
-	<version>6</version>
-	<portrait>Portraits/dagon</portrait>
-	<titles>Father Dagon, The Ur</titles>
-	<domains>Deep Ones, Water, Shipwrecks, </domains>
-	<description>The Ur - Deep One, grown large and powerful over the millennia.</description>
-	<descriptionLong>&quot;Then suddenly I saw it. With only a slight churning to mark its rise to the surface, the thing slid into view above the dark waters. Vast, Polyphemus-like, and loathsome, it darted like a stupendous monster of nightmares to the monolith, about which it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds. I think I went mad then.&quot; — H.P. Lovecraft (Dagon)\n\nThe greatest of the Deep Ones, Father Dagon. Deep Ones are immortal and continue to grow in size and monstrosity as they age. </descriptionLong>
+    <label>Dagon</label>
+    <version>6</version>
+    <portrait>Portraits/dagon</portrait>
+    <titles>Father Dagon, The Ur</titles>
+    <domains>Deep Ones, Water, Shipwrecks, </domains>
+    <description>The Ur - Deep One, grown large and powerful over the millennia.</description>
+    <descriptionLong>"Then suddenly I saw it. With only a slight churning to mark its rise to the surface, the thing slid into view above the dark waters. Vast, Polyphemus-like, and loathsome, it darted like a stupendous monster of nightmares to the monolith, about which it flung its gigantic scaly arms, the while it bowed its hideous head and gave vent to certain measured sounds. I think I went mad then." — H.P. Lovecraft (Dagon)\n\nThe greatest of the Deep Ones, Father Dagon. Deep Ones are immortal and continue to grow in size and monstrosity as they age. </descriptionLong>
     <symbol>Mote/Symbols/Dagon</symbol>
-	<tier1SpellDefs>
-		<li>Cults_SpellFavor</li>
-		<li>Cults_SpellSunkenShip</li>
-		<li>Cults_SpellTreasuresOfTheDeep</li>
-	</tier1SpellDefs>
-	<tier2SpellDefs>
-		<li>Cults_SpellDefendTheBrood</li>
-	</tier2SpellDefs>
-	<tier3SpellDefs>
-		<li>Cults_SpellBountyOfTheSea</li>
-	</tier3SpellDefs>
-	<finalSpellDef>Cults_SpellOrthogenesis</finalSpellDef>
-	<pleasingOfferings>
-	  <HumanMeat>1.5</HumanMeat>
-	</pleasingOfferings>
-	<displeasingOfferings>
-	  <ROM_RawCHFood_DeepOneMeat>10.0</ROM_RawCHFood_DeepOneMeat>
-	</displeasingOfferings>
-	<favoredWorshipperRaces>
-	  <Human>1.0</Human>
-	  <ROM_DeepOneHybrid>1.5</ROM_DeepOneHybrid>
-	  <ROM_DeepOne>2.0</ROM_DeepOne>
-	  <ROM_DeepOneGreat>2.0</ROM_DeepOneGreat>
-	</favoredWorshipperRaces>
-	<hereticWorshipperRaces/>	
-</CultOfCthulhu.CosmicEntityDef>
-
-
-<CultOfCthulhu.CosmicEntityDef>
-	<defName>Entity_Shub</defName>
+    <tier1SpellDefs>
+      <li>Cults_SpellFavor</li>
+      <li>Cults_SpellSunkenShip</li>
+      <li>Cults_SpellTreasuresOfTheDeep</li>
+    </tier1SpellDefs>
+    <tier2SpellDefs>
+      <li>Cults_SpellDefendTheBrood</li>
+    </tier2SpellDefs>
+    <tier3SpellDefs>
+      <li>Cults_SpellBountyOfTheSea</li>
+    </tier3SpellDefs>
+    <finalSpellDef>Cults_SpellOrthogenesis</finalSpellDef>
+    <pleasingOfferings>
+      <HumanMeat>1.5</HumanMeat>
+    </pleasingOfferings>
+    <displeasingOfferings>
+      <ROM_RawCHFood_DeepOneMeat>10.0</ROM_RawCHFood_DeepOneMeat>
+    </displeasingOfferings>
+    <favoredWorshipperRaces>
+      <Human>1.0</Human>
+      <ROM_DeepOneHybrid>1.5</ROM_DeepOneHybrid>
+      <ROM_DeepOne>2.0</ROM_DeepOne>
+      <ROM_DeepOneGreat>2.0</ROM_DeepOneGreat>
+    </favoredWorshipperRaces>
+    <hereticWorshipperRaces />
+  </CultOfCthulhu.CosmicEntityDef>
+  <CultOfCthulhu.CosmicEntityDef>
+    <defName>Entity_Shub</defName>
     <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
-	<label>Shub-Niggurath</label>
-	<version>7</version>
-	<portrait>Portraits/shubniggurath</portrait>
-	<titles>Black Goat of the Woods with a Thousand Young, Lord of the Wood</titles>
-	<domains>Dark Young, Fertility, Transformation</domains>
-	<description>The Black Goat of the Woods with a Thousand Young.</description>	
-	<descriptionLong>&quot;Ever Their praises, and abundance to the Black Goat of the Woods. Iä! Shub-Niggurath! Iä! Shub-Niggurath! The Black Goat of the Woods with a Thousand Young!&quot; — H.P. Lovecraft (The Whisperer In Darkness)\n\nShub-Niggurath is a perverse fertility deity. Small creatures are continually spat forth by the monstrosity, which are either consumed into the miasmatic form or escape to some monstrous life elsewhere.</descriptionLong>
-	<favorsOutdoorWorship>true</favorsOutdoorWorship>
+    <label>Shub-Niggurath</label>
+    <version>7</version>
+    <portrait>Portraits/shubniggurath</portrait>
+    <titles>Black Goat of the Woods with a Thousand Young, Lord of the Wood</titles>
+    <domains>Dark Young, Fertility, Transformation</domains>
+    <description>The Black Goat of the Woods with a Thousand Young.</description>
+    <descriptionLong>"Ever Their praises, and abundance to the Black Goat of the Woods. Iä! Shub-Niggurath! Iä! Shub-Niggurath! The Black Goat of the Woods with a Thousand Young!" — H.P. Lovecraft (The Whisperer In Darkness)\n\nShub-Niggurath is a perverse fertility deity. Small creatures are continually spat forth by the monstrosity, which are either consumed into the miasmatic form or escape to some monstrous life elsewhere.</descriptionLong>
+    <favorsOutdoorWorship>true</favorsOutdoorWorship>
     <symbol>Mote/Symbols/Shub</symbol>
-	<tier1SpellDefs>
-		<li>Cults_SpellFavor</li>
-		<li>Cults_SpellFertility</li>
-		<li>Cults_SpellMotherOfGoats</li>
-	</tier1SpellDefs>
-	<tier2SpellDefs>
-		<li>Cults_SpellTransmogrifyPets</li>
-	</tier2SpellDefs>
-	<tier3SpellDefs>
-		<li>Cults_SpellWombBetweenWorlds</li>
-	</tier3SpellDefs>
-	<finalSpellDef>Cults_SpellTransdimensionalConvergence</finalSpellDef>
-</CultOfCthulhu.CosmicEntityDef>
-
-
-<CultOfCthulhu.CosmicEntityDef>
-	<defName>Entity_Nyarlathotep</defName>
+    <tier1SpellDefs>
+      <li>Cults_SpellFavor</li>
+      <li>Cults_SpellFertility</li>
+      <li>Cults_SpellMotherOfGoats</li>
+    </tier1SpellDefs>
+    <tier2SpellDefs>
+      <li>Cults_SpellTransmogrifyPets</li>
+    </tier2SpellDefs>
+    <tier3SpellDefs>
+      <li>Cults_SpellWombBetweenWorlds</li>
+    </tier3SpellDefs>
+    <finalSpellDef>Cults_SpellTransdimensionalConvergence</finalSpellDef>
+  </CultOfCthulhu.CosmicEntityDef>
+  <CultOfCthulhu.CosmicEntityDef>
+    <defName>Entity_Nyarlathotep</defName>
     <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
-	<label>Nyarlathotep</label>
-	<version>6</version>
-	<portrait>Portraits/nyarlathotep</portrait>
-	<titles>The Crawling Chaos, The Faceless God, The Dweller in the Darkness, The Haunter in the Dark, the Bloody Tongue</titles>
-	<domains>Madness, Manipulation, Deception, Wishes</domains>
-	<description>The messenger, heart and soul of the Outer Gods.</description>
-	<descriptionLong>&quot;And it was then that Nyarlathotep came out of Egypt. Who he was, none could tell, but he was of the old native blood and looked like a Pharaoh. The fellahin knelt when they saw him, yet could not say why. He said he had risen up out of the blackness of twenty-seven centuries, and that he had heard messages from places not on this planet. Into the lands of civilisation came Nyarlathotep, swarthy, slender, and sinister, always buying strange instruments of glass and metal and combining them into instruments yet stranger. He spoke much of the sciences – of electricity and psychology –and gave exhibitions of power which sent his spectators away speechless, yet which swelled his fame to exceeding magnitude. Men advised one another to see Nyarlathotep, and shuddered. And where Nyarlathotep went, rest vanished; for the small hours were rent with the screams of a nightmare.&quot; - H.P. Lovecraft (Nyarlathotep).\n\nNyarlathotep is the will of the Outer Gods and often acts as a direct agent in mortal affairs, posing as a mortal itself, sometimes serving in the very same cults that worship Him. Yet, He is ultimately deceptive, manipulative, and a spreader of discord and madness.</descriptionLong>
+    <label>Nyarlathotep</label>
+    <version>6</version>
+    <portrait>Portraits/nyarlathotep</portrait>
+    <titles>The Crawling Chaos, The Faceless God, The Dweller in the Darkness, The Haunter in the Dark, the Bloody Tongue</titles>
+    <domains>Madness, Manipulation, Deception, Wishes</domains>
+    <description>The messenger, heart and soul of the Outer Gods.</description>
+    <descriptionLong>"And it was then that Nyarlathotep came out of Egypt. Who he was, none could tell, but he was of the old native blood and looked like a Pharaoh. The fellahin knelt when they saw him, yet could not say why. He said he had risen up out of the blackness of twenty-seven centuries, and that he had heard messages from places not on this planet. Into the lands of civilisation came Nyarlathotep, swarthy, slender, and sinister, always buying strange instruments of glass and metal and combining them into instruments yet stranger. He spoke much of the sciences – of electricity and psychology –and gave exhibitions of power which sent his spectators away speechless, yet which swelled his fame to exceeding magnitude. Men advised one another to see Nyarlathotep, and shuddered. And where Nyarlathotep went, rest vanished; for the small hours were rent with the screams of a nightmare." - H.P. Lovecraft (Nyarlathotep).\n\nNyarlathotep is the will of the Outer Gods and often acts as a direct agent in mortal affairs, posing as a mortal itself, sometimes serving in the very same cults that worship Him. Yet, He is ultimately deceptive, manipulative, and a spreader of discord and madness.</descriptionLong>
     <symbol>Mote/Symbols/Nyarlathotep</symbol>
-	<tier1SpellDefs>
-		<li>Cults_SpellFavor</li>
-		<li>Cults_SpellStarryWisdom</li>
-		<li>Cults_SpellForbiddenKnowledge</li>
-	</tier1SpellDefs>
-	<tier2SpellDefs>
-		<li>Cults_SpellChaosTheory</li>
-	</tier2SpellDefs>
-	<tier3SpellDefs>
-		<li>Cults_SpellDarkEmissary</li>
-	</tier3SpellDefs>
-	<finalSpellDef>Cults_SpellPilgrimageToKadath</finalSpellDef>
-	<favoredApparel>
-		<li>Apparel_NyarlathotepHood</li>
-	</favoredApparel>
-</CultOfCthulhu.CosmicEntityDef>
-
-<CultOfCthulhu.CosmicEntityDef>
-	<defName>Entity_Hastur</defName>
+    <tier1SpellDefs>
+      <li>Cults_SpellFavor</li>
+      <li>Cults_SpellStarryWisdom</li>
+      <li>Cults_SpellForbiddenKnowledge</li>
+    </tier1SpellDefs>
+    <tier2SpellDefs>
+      <li>Cults_SpellChaosTheory</li>
+    </tier2SpellDefs>
+    <tier3SpellDefs>
+      <li>Cults_SpellDarkEmissary</li>
+    </tier3SpellDefs>
+    <finalSpellDef>Cults_SpellPilgrimageToKadath</finalSpellDef>
+    <favoredApparel>
+      <li>Apparel_NyarlathotepHood</li>
+    </favoredApparel>
+  </CultOfCthulhu.CosmicEntityDef>
+  <CultOfCthulhu.CosmicEntityDef>
+    <defName>Entity_Hastur</defName>
     <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
-	<label>Hastur</label>
-	<version>2</version>
-	<portrait>Portraits/hastur</portrait>
-	<titles>The King in Yellow, The Unspeakable One, The Yellow Sign, The Feaster from Afar, The Pallid Mask</titles>
-	<domains>Insanity, Immortality, Theater, Yellow, Domination, Dreams</domains>
-	<description>From His Yellow Kingdom, the Unspeakable One watches.</description>
-	<descriptionLong>&quot;I snatched the thing from the hearth and crept shaking to my bedroom, where I read it and reread it, and wept and laughed and trembled with a horror which at times assails me yet. This is the thing that troubles me, for I cannot forget Carcosa, where black stars hang in the heavens, where the shadows of men's thoughts lengthen in the afternoon, when the the twin suns sink into the Lake of Hali, and my mind will bear forever the memory of the Pallid Mask.&quot;- Robert W. Chambers (The King in Yellow).\n\nThe Unspeakable One is enigmatic. He does not reveal His methods, however, He dominates individuals through the spread of His book, &lt;i&gt;The King in Yellow&lt;/i&gt;, and His symbol, &lt;i&gt;The Yellow Sign&lt;/i&gt;.</descriptionLong>
+    <label>Hastur</label>
+    <version>2</version>
+    <portrait>Portraits/hastur</portrait>
+    <titles>The King in Yellow, The Unspeakable One, The Yellow Sign, The Feaster from Afar, The Pallid Mask</titles>
+    <domains>Insanity, Immortality, Theater, Yellow, Domination, Dreams</domains>
+    <description>From His Yellow Kingdom, the Unspeakable One watches.</description>
+    <descriptionLong>"I snatched the thing from the hearth and crept shaking to my bedroom, where I read it and reread it, and wept and laughed and trembled with a horror which at times assails me yet. This is the thing that troubles me, for I cannot forget Carcosa, where black stars hang in the heavens, where the shadows of men's thoughts lengthen in the afternoon, when the the twin suns sink into the Lake of Hali, and my mind will bear forever the memory of the Pallid Mask."- Robert W. Chambers (The King in Yellow).\n\nThe Unspeakable One is enigmatic. He does not reveal His methods, however, He dominates individuals through the spread of His book, &lt;i&gt;The King in Yellow&lt;/i&gt;, and His symbol, &lt;i&gt;The Yellow Sign&lt;/i&gt;.</descriptionLong>
     <symbol>Mote/Symbols/Hastur</symbol>
-	<tier1SpellDefs>
-		<li>Cults_SpellFavor</li>
-		<li>Cults_SpellTheKingInYellow</li>
-		<li>Cults_SpellSummonByakhee</li>
-	</tier1SpellDefs>
-	<tier2SpellDefs>
-		<li>Cults_SpellVisionsOfCarcosa</li>
-	</tier2SpellDefs>
-	<tier3SpellDefs>
-		<li>Cults_SpellUnspeakableOath</li>
-	</tier3SpellDefs>
-	<finalSpellDef>Cults_SpellAbsorptionByCarcosa</finalSpellDef>
-	<favoredApparel>
-		<li>Apparel_CultistHood</li>
-	</favoredApparel>
-</CultOfCthulhu.CosmicEntityDef>
-
-<CultOfCthulhu.CosmicEntityDef>
-	<defName>Entity_Tsathoggua</defName>
+    <tier1SpellDefs>
+      <li>Cults_SpellFavor</li>
+      <li>Cults_SpellTheKingInYellow</li>
+      <li>Cults_SpellSummonByakhee</li>
+    </tier1SpellDefs>
+    <tier2SpellDefs>
+      <li>Cults_SpellVisionsOfCarcosa</li>
+    </tier2SpellDefs>
+    <tier3SpellDefs>
+      <li>Cults_SpellUnspeakableOath</li>
+    </tier3SpellDefs>
+    <finalSpellDef>Cults_SpellAbsorptionByCarcosa</finalSpellDef>
+    <favoredApparel>
+      <li>Apparel_CultistHood</li>
+    </favoredApparel>
+  </CultOfCthulhu.CosmicEntityDef>
+  <CultOfCthulhu.CosmicEntityDef>
+    <defName>Entity_Tsathoggua</defName>
     <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
-	<label>Tsathoggua</label>
-	<version>2</version>
-	<portrait>Portraits/tsathoggua</portrait>
-	<titles>Zhothaqquah, Sleeper of N'kai, The Sleeping God, The Toad-God</titles>
-	<domains>Caverns, Sloth, Gluttony, Sleep, Formless Spawn</domains>
-	<description>The ravenous toad-like god Tsathoggua lays in wait.</description>
-	<descriptionLong>&quot;[In] that secret cave in the bowels of Voormithadreth . . . abides from eldermost eons the god Tsathoggua. You shall know Tsathoggua by his great girth and his batlike furriness and the look of a sleepy black toad which he has eternally. He will rise not from his place, even in the ravening of hunger, but will wait in divine slothfulness for the sacrifice&quot; - Clark Ashton Smith (The Seven Geases).\n\nThe Sleeper of N'kai carries out His will through His cultist servants and formless spawn while He rests in divine slothfulness. Tsathoggua can make deals with mortals on occasion. During those rare opportunities, mortals can acquire his ichor and gain effortless power.</descriptionLong>
+    <label>Tsathoggua</label>
+    <version>2</version>
+    <portrait>Portraits/tsathoggua</portrait>
+    <titles>Zhothaqquah, Sleeper of N'kai, The Sleeping God, The Toad-God</titles>
+    <domains>Caverns, Sloth, Gluttony, Sleep, Formless Spawn</domains>
+    <description>The ravenous toad-like god Tsathoggua lays in wait.</description>
+    <descriptionLong>"[In] that secret cave in the bowels of Voormithadreth . . . abides from eldermost eons the god Tsathoggua. You shall know Tsathoggua by his great girth and his batlike furriness and the look of a sleepy black toad which he has eternally. He will rise not from his place, even in the ravening of hunger, but will wait in divine slothfulness for the sacrifice" - Clark Ashton Smith (The Seven Geases).\n\nThe Sleeper of N'kai carries out His will through His cultist servants and formless spawn while He rests in divine slothfulness. Tsathoggua can make deals with mortals on occasion. During those rare opportunities, mortals can acquire his ichor and gain effortless power.</descriptionLong>
     <symbol>Mote/Symbols/Tsathoggua</symbol>
-	<tier1SpellDefs>
-		<li>Cults_SpellFavor</li>
-		<li>Cults_SpellSleeperOfNKai</li>
-		<li>Cults_SpellBlackIchor</li>
-	</tier1SpellDefs>
-	<tier2SpellDefs>
-		<li>Cults_SpellFormlessSpawn</li>
-	</tier2SpellDefs>
-	<tier3SpellDefs>
-		<li>Cults_SpellElixerOfPower</li>
-	</tier3SpellDefs>
-	<finalSpellDef>Cults_SpellCallToDarkness</finalSpellDef>
-	<favoredApparel>
-		<li>Apparel_CultistHood</li>
-	</favoredApparel>
-</CultOfCthulhu.CosmicEntityDef>
-
-<CultOfCthulhu.CosmicEntityDef>
-	<defName>Entity_Bast</defName>
-	<thingClass>CultOfCthulhu.CosmicEntity</thingClass>
-	<label>Bast</label>
-	<version>1</version>
-	<titles>Pasht, Bastet, Bubaste, Ubaste, Goddess of Cats, Daughter of Re, Chewer of Corpses</titles>
-	<portrait>Portraits/bast</portrait>
-	<domains>Cats, Egypt, Ghouls</domains>
-	<description>The Cat God is on the prowl.</description>
-	<descriptionLong>Bast is the Egyptian goddess of cats. All cats of the world follow the commands of Bast, and some say her influence has reached the far flung worlds of the Rim. In written texts, She is often affiliated with Sekhmet, the warrior goddess, as well as Mut, goddess of motherhood. Saracen sorcerers tell tales of ghouls that also worship Her and call Her the “the Chewer of Corpses”.</descriptionLong>
-	<symbol>Mote/Symbols/Bast</symbol>
-	<tier1SpellDefs>
-		<li>Cults_BastSpellFavor</li>
-		<li>Cults_BastSpellInspiration</li>
-		<li>Cults_BastSpellFelineAspect</li>
-	</tier1SpellDefs>
-	<tier2SpellDefs>
-		<li>Cults_BastSpellSummonGuardian</li>
-	</tier2SpellDefs>
-	<tier3SpellDefs>
-		<li>Cults_BastSpellSanctuary</li>
-	</tier3SpellDefs>
-	<finalSpellDef>Cults_BastSpellPassageToAaru</finalSpellDef>
-	<favoredApparel>
-		<li>Apparel_CultistHood</li>
-	</favoredApparel>
-</CultOfCthulhu.CosmicEntityDef>
-
-
+    <tier1SpellDefs>
+      <li>Cults_SpellFavor</li>
+      <li>Cults_SpellSleeperOfNKai</li>
+      <li>Cults_SpellBlackIchor</li>
+    </tier1SpellDefs>
+    <tier2SpellDefs>
+      <li>Cults_SpellFormlessSpawn</li>
+    </tier2SpellDefs>
+    <tier3SpellDefs>
+      <li>Cults_SpellElixerOfPower</li>
+    </tier3SpellDefs>
+    <finalSpellDef>Cults_SpellCallToDarkness</finalSpellDef>
+    <favoredApparel>
+      <li>Apparel_CultistHood</li>
+    </favoredApparel>
+  </CultOfCthulhu.CosmicEntityDef>
+  <CultOfCthulhu.CosmicEntityDef>
+    <defName>Entity_Bast</defName>
+    <thingClass>CultOfCthulhu.CosmicEntity</thingClass>
+    <label>Bast</label>
+    <version>1</version>
+    <titles>Pasht, Bastet, Bubaste, Ubaste, Goddess of Cats, Daughter of Re, Chewer of Corpses</titles>
+    <portrait>Portraits/bast</portrait>
+    <domains>Cats, Egypt, Ghouls</domains>
+    <description>The Cat God is on the prowl.</description>
+    <descriptionLong>Bast is the Egyptian goddess of cats. All cats of the world follow the commands of Bast, and some say her influence has reached the far flung worlds of the Rim. In written texts, She is often affiliated with Sekhmet, the warrior goddess, as well as Mut, goddess of motherhood. Saracen sorcerers tell tales of ghouls that also worship Her and call Her the “the Chewer of Corpses”.</descriptionLong>
+    <symbol>Mote/Symbols/Bast</symbol>
+    <tier1SpellDefs>
+      <li>Cults_BastSpellFavor</li>
+      <li>Cults_BastSpellInspiration</li>
+      <li>Cults_BastSpellFelineAspect</li>
+    </tier1SpellDefs>
+    <tier2SpellDefs>
+      <li>Cults_BastSpellSummonGuardian</li>
+    </tier2SpellDefs>
+    <tier3SpellDefs>
+      <li>Cults_BastSpellSanctuary</li>
+    </tier3SpellDefs>
+    <finalSpellDef>Cults_BastSpellPassageToAaru</finalSpellDef>
+    <favoredApparel>
+      <li>Apparel_CultistHood</li>
+    </favoredApparel>
+  </CultOfCthulhu.CosmicEntityDef>
 </Defs>

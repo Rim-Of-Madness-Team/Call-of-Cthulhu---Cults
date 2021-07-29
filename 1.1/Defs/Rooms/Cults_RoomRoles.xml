@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <RoomRoleDef>
     <defName>Cults_Temple</defName>
     <label>temple</label>
@@ -13,5 +12,4 @@
       <li>Impressiveness</li>
     </relatedStats>
   </RoomRoleDef>
-
 </Defs>

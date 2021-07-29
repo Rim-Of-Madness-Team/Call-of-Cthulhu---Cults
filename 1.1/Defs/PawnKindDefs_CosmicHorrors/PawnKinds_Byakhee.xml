@@ -1,8 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
   <!-- BYAKHEE -->
   <!-- KIND DEFS -->
-
   <PawnKindDef>
     <defName>Cults_Byakhee</defName>
     <label>byakhee</label>
@@ -57,7 +56,7 @@
   <!-- RACE DEFS -->
   <ThingDef Class="CultOfCthulhu.PawnFlyerDef" ParentName="BaseCultHorrorRaceInit">
     <defName>Cults_ByakheeRace</defName>
-    <thingClass>CultOfCthulhu.PawnFlyer</thingClass>	
+    <thingClass>CultOfCthulhu.PawnFlyer</thingClass>
     <label>byakhee</label>
     <tradeability>None</tradeability>
     <description>Interstellar predators that can travel through the vacuum of space by means of an organ known as the "hune," Byakhee are said to be servants of Hastur the Unspeakable. Through this servitude, Byakhee have been observed being mounted by the faithful to the Yellow Sign.</description>
@@ -65,12 +64,12 @@
       <MoveSpeed>7.0</MoveSpeed>
       <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
-	  <MeatAmount>0</MeatAmount>
-	  <CarryingCapacity>150</CarryingCapacity>
-      <MarketValue>3000</MarketValue>	  
+      <MeatAmount>0</MeatAmount>
+      <CarryingCapacity>150</CarryingCapacity>
+      <MarketValue>3000</MarketValue>
     </statBases>
     <tools>
-	   <li>
+      <li>
         <label>teeth</label>
         <capacities>
           <li>ToxicBite</li>
@@ -79,7 +78,7 @@
         <cooldownTime>2.5</cooldownTime>
         <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
       </li>
-	  <li>
+      <li>
         <label>stinger</label>
         <capacities>
           <li>ToxicBite</li>
@@ -88,7 +87,7 @@
         <cooldownTime>2.5</cooldownTime>
         <linkedBodyPartsGroup>Cults_Stinger</linkedBodyPartsGroup>
       </li>
-	  <li>
+      <li>
         <label>left claw</label>
         <capacities>
           <li>Blunt</li>
@@ -97,7 +96,7 @@
         <cooldownTime>1.5</cooldownTime>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
       </li>
-	  <li>
+      <li>
         <label>right claw</label>
         <capacities>
           <li>Blunt</li>
@@ -106,7 +105,7 @@
         <cooldownTime>1.5</cooldownTime>
         <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
       </li>
-	  <li>
+      <li>
         <label>wings</label>
         <capacities>
           <li>Blunt</li>
@@ -116,10 +115,10 @@
         <linkedBodyPartsGroup>Cults_Wings</linkedBodyPartsGroup>
       </li>
     </tools>
-	  <techLevel>Animal</techLevel>
+    <techLevel>Animal</techLevel>
     <race>
-	  <trainability>Advanced</trainability>
-      <wildness>0.95</wildness>	
+      <trainability>Advanced</trainability>
+      <wildness>0.95</wildness>
       <intelligence>Animal</intelligence>
       <thinkTreeMain>Animal</thinkTreeMain>
       <body>ROM_Cults_ByakheeBody</body>
@@ -149,7 +148,7 @@
         </li>
       </lifeStageAges>
       <nameGenerator>NamerAnimalGenericMale</nameGenerator>
-      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>	  
+      <nameGeneratorFemale>NamerAnimalGenericFemale</nameGeneratorFemale>
       <soundCallIntervalRange>
         <min>1000</min>
         <max>2000</max>
@@ -159,27 +158,24 @@
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
     <comps>
-      <li Class="CultOfCthulhu.CompProperties_LaunchablePawn"/>
-      <li Class="CultOfCthulhu.CompProperties_TransporterPawn"/>
-    </comps>	
+      <li Class="CultOfCthulhu.CompProperties_LaunchablePawn" />
+      <li Class="CultOfCthulhu.CompProperties_TransporterPawn" />
+    </comps>
     <recipes>
       <li>Euthanize</li>
     </recipes>
-	
-	<flightSpeed>0.000035</flightSpeed>
-	<flightPawnLimit>2</flightPawnLimit>
-	<flyableDistance>30</flyableDistance>
-	<leavingDef>ByakheeLeaving</leavingDef>
-	<travelingDef>ByakheeTraveling</travelingDef>
-	<incomingDef>ByakheeIncoming</incomingDef>
-	<landedDef>ByakheeLanded</landedDef>
-	<takeOffSound>ByakheeTakeOff</takeOffSound>
-	<landingSound>ByakheeLanding</landingSound>
-	<dismountSound>Pawn_Mech_Centipede_Call</dismountSound>
-	<landedTale>RodeByakhee</landedTale>
+    <flightSpeed>0.000035</flightSpeed>
+    <flightPawnLimit>2</flightPawnLimit>
+    <flyableDistance>30</flyableDistance>
+    <leavingDef>ByakheeLeaving</leavingDef>
+    <travelingDef>ByakheeTraveling</travelingDef>
+    <incomingDef>ByakheeIncoming</incomingDef>
+    <landedDef>ByakheeLanded</landedDef>
+    <takeOffSound>ByakheeTakeOff</takeOffSound>
+    <landingSound>ByakheeLanding</landingSound>
+    <dismountSound>Pawn_Mech_Centipede_Call</dismountSound>
+    <landedTale>RodeByakhee</landedTale>
   </ThingDef>
-  
-  
   <!--
         <leatherColor></leatherColor>
       <leatherLabel>byakhee chitin</leatherLabel>
@@ -205,8 +201,7 @@
       <commonality>0.01</commonality>
     </stuffProps>
   </ThingDef>
-  
-   <!--========== blck goathide ============-->
+  <!--========== blck goathide ============-->
   <ThingDef ParentName="LeatherBase">
     <defName>CH_Leather_BlackGoathide</defName>
     <description>.</description>
@@ -220,9 +215,8 @@
       <commonality>0.01</commonality>
     </stuffProps>
   </ThingDef>
- 
-	<!-- Reanimated Corpse -->
-   <ThingDef ParentName="LeatherBase">
+  <!-- Reanimated Corpse -->
+  <ThingDef ParentName="LeatherBase">
     <defName>CH_Leather_ReanimatedCorpse</defName>
     <description>.</description>
     <label>reanimated leather</label>
@@ -235,6 +229,4 @@
       <commonality>0.0</commonality>
     </stuffProps>
   </ThingDef>
- 
-  
 </Defs>

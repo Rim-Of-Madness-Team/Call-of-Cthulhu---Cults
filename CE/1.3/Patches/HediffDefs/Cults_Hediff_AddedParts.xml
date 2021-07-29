@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="Cults_PsionicBrain"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/verbs</xpath>
+        <value>
+          <tools>
+            <li Class="CombatExtended.ToolCE">
+              <label>psionic lobe</label>
+              <capacities>
+                <li>Cults_Psionic</li>
+              </capacities>
+              <power>15</power>
+              <cooldownTime>1.5</cooldownTime>
+              <armorPenetrationSharp>30</armorPenetrationSharp>
+              <armorPenetrationBlunt>30</armorPenetrationBlunt>
+            </li>
+          </tools>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="Cults_TentacleArm"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/verbs</xpath>
+        <value>
+          <tools>
+            <li Class="CombatExtended.ToolCE">
+              <label>tentacle</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>5</power>
+              <cooldownTime>2.0</cooldownTime>
+              <armorPenetrationBlunt>12.960</armorPenetrationBlunt>
+            </li>
+          </tools>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="Cults_CthulhidTentacle"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/verbs</xpath>
+        <value>
+          <tools>
+            <li Class="CombatExtended.ToolCE">
+              <label>cthulid tentacle</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>9</power>
+              <cooldownTime>1.5</cooldownTime>
+              <armorPenetrationBlunt>18</armorPenetrationBlunt>
+            </li>
+          </tools>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/HediffDef[defName="Cults_MonstrousBody"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools</xpath>
+        <value>
+          <tools>
+            <li Class="CombatExtended.ToolCE">
+              <label>body</label>
+              <capacities>
+                <li>Blunt</li>
+              </capacities>
+              <power>8</power>
+              <cooldownTime>1.65</cooldownTime>
+              <armorPenetrationBlunt>25</armorPenetrationBlunt>
+            </li>
+          </tools>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

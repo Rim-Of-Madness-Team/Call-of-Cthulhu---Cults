@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <DamageDef>
     <defName>Cults_Psionic</defName>
     <label>psionic attack</label>
     <workerClass>DamageWorker_AddInjury</workerClass>
-    <externalViolence>true</externalViolence>	
+    <externalViolence>true</externalViolence>
     <makesBlood>false</makesBlood>
-    <harmsHealth>false</harmsHealth>	
+    <harmsHealth>false</harmsHealth>
     <deathMessage>{0}'s head exploded.</deathMessage>
     <hediff>Cults_Psionic</hediff>
     <impactSoundType>Electric</impactSoundType>
@@ -20,7 +19,6 @@
     </additionalHediffs>
     <explosionCellMote>Mote_BlastFlame</explosionCellMote>
   </DamageDef>
-  
   <DamageDef>
     <defName>Cults_AcidBurn</defName>
     <workerClass>DamageWorker_AddInjury</workerClass>
@@ -32,7 +30,6 @@
     <deathMessage>{0} has melted to death.</deathMessage>
     <hediff>Cults_AcidBurn</hediff>
     <armorCategory>Heat</armorCategory>
-     
     <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
     <explosionCellMote>Mote_BlastFlame</explosionCellMote>
     <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
@@ -40,11 +37,9 @@
     <soundExplosion>Explosion_Flame</soundExplosion>
     <combatLogRules>Damage_Flame</combatLogRules>
   </DamageDef>
-  
-  
-  	<HediffDef>
-		<defName>Cults_AcidBurn</defName>
-		<label>acid burn</label>
+  <HediffDef>
+    <defName>Cults_AcidBurn</defName>
+    <label>acid burn</label>
     <labelNoun>an acid burn</labelNoun>
     <hediffClass>Hediff_Injury</hediffClass>
     <tendable>true</tendable>
@@ -62,15 +57,14 @@
         <permanentLabel>burn scar</permanentLabel>
       </li>
     </comps>
-		<injuryProps>
+    <injuryProps>
       <painPerSeverity>0.02075</painPerSeverity>
       <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
       <canMerge>true</canMerge>
-			<destroyedLabel>Burned off</destroyedLabel>
-			<destroyedOutLabel>Burned out</destroyedOutLabel>
-		</injuryProps>
-	</HediffDef>
-	
+      <destroyedLabel>Burned off</destroyedLabel>
+      <destroyedOutLabel>Burned out</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
   <ManeuverDef>
     <defName>Cults_AcidTouch</defName>
     <requiredCapacity>Cults_AcidTouch</requiredCapacity>
@@ -84,11 +78,8 @@
     <combatLogRulesMiss>Maneuver_Scratch_MeleeMiss</combatLogRulesMiss>
     <combatLogRulesDodge>Maneuver_Scratch_MeleeDodge</combatLogRulesDodge>
   </ManeuverDef>
-	
-	
   <ToolCapacityDef>
     <defName>Cults_AcidTouch</defName>
     <label>acid burning</label>
   </ToolCapacityDef>
- 
 </Defs>

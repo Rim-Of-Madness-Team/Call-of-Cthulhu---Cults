@@ -1,16 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-  <identifier>CoC-Cults</identifier>
-  <version>1.21.0.0</version>
-  <dependencies>
-    <li>JecsTools</li>
-  </dependencies>
+  <identifier>CallofCthulhuCults</identifier>
+  <version>1.0.21.0</version>
+  <dependencies />
   <incompatibleWith />
   <loadBefore />
-  <loadAfter>
-    <li>HugsLib</li>
-    <li>JecsTools</li>
-  </loadAfter>
-  <manifestUri>https://raw.githubusercontent.com/Rim-Of-Madness-Team/Call-of-Cthulhu---Cults/master/About/Manifest.xml</manifestUri>
-  <downloadUri>https://github.com/Rim-Of-Madness-Team/Call-of-Cthulhu---Cults/releases</downloadUri>
+  <loadAfter />
+  <manifestUri>https://raw.githubusercontent.com/emipa606/CallofCthulhuCults/master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/emipa606/CallofCthulhuCults/releases</downloadUri>
 </Manifest>
