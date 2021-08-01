@@ -104,6 +104,11 @@ namespace CultOfCthulhu
 
         public void HasturResurrection()
         {
+            if (toBeResurrected?.FirstOrDefault() == null)
+            {
+                ticksUntilResurrection = -999;
+                return;
+            }
             var sourceCorpse = toBeResurrected.RandomElement();
             toBeResurrected.Remove(sourceCorpse);
             var unused = IntVec3.Invalid;
@@ -111,6 +116,19 @@ namespace CultOfCthulhu
             if (sourceCorpse.Corpse == null)
             {
                 return;
+            }
+
+            try
+            {
+                if (sourceCorpse?.Corpse?.holdingOwner is ThingOwner owner)
+                {
+                    Thing lastThing = null;
+                    owner.TryDrop(sourceCorpse.Corpse, ThingPlaceMode.Near, out lastThing);
+                }
+            }
+            catch
+            {
+
             }
 
             //Use B18's Resurrect Feature

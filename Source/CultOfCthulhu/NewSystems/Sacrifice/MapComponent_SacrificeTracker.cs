@@ -77,7 +77,7 @@ namespace CultOfCthulhu
         public override void ExposeData()
         {
             //Unspeakable Oath Spell
-            Scribe_Values.Look(ref ticksUntilResurrection, "ticksUntilResurrection", -999);
+            Scribe_Values.Look(ref ticksUntilResurrection, "ticksUntilResurrection");
             //Scribe_Collections.Look<Corpse>(ref this.toBeResurrected, "toBeResurrected", LookMode.Reference);
             Scribe_Collections.Look(ref unspeakableOathPawns, "unspeakableOathPawns", LookMode.Reference);
 

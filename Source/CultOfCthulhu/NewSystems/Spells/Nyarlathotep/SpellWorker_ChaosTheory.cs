@@ -49,6 +49,23 @@ namespace CultOfCthulhu
                    || pawn.story.DisabledWorkTagsBackstoryAndTraits.HasFlag(WorkTags.Violent);
         }
 
+        public void RemoveObstacleTraits(Pawn pawn)
+        {
+            var removeList = new List<TraitDef>();
+            foreach (var trait in pawn.story.traits.allTraits)
+            {
+                if (trait.GetDisabledWorkTypes()?.FirstOrDefault() != null)
+                {
+                    removeList.Add(trait.def);
+                }
+            }
+            foreach (var traitDef in removeList)
+            {
+                HarmonyPatches.DebugMessage("Removed " + traitDef.label);
+                pawn.story.traits.RemoveTrait(pawn.story.traits.GetTrait(traitDef));
+            }
+        }
+
         public bool HasIncapableSkills(Pawn pawn)
         {
             HarmonyPatches.DebugMessage("HasIncapableSkills called");
@@ -109,6 +126,10 @@ namespace CultOfCthulhu
 
             var pawn = map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar.SacrificeData.Executioner;
             HarmonyPatches.DebugMessage("Executioner selected");
+
+            HarmonyPatches.DebugMessage("Obstacle traits being removed:: ");
+            RemoveObstacleTraits(pawn);
+
             if (HasIncapableWorkTags(pawn))
             {
                 HarmonyPatches.DebugMessage($"{pawn.Label} has incapable worktags and must be remade.");

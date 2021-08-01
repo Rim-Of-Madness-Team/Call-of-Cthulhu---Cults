@@ -45,9 +45,8 @@
       <li Class="CompProperties_Forbiddable" />
     </comps>
   </ThingDef>
-  <ThingDef Name="Cults_TheKingInYellow">
+  <ThingDef ParentName="ApparelNoQualityBase" Name="Cults_TheKingInYellow">
     <defName>Cults_TheKingInYellow</defName>
-    <thingClass>ThingWithComps</thingClass>
     <label>The King in Yellow</label>
     <description>The King in Yellow appears as a mysterious, glowing book. The contents of which are mundane during the first act of the play, however proceeding beyond the first act of the play causes madness and a cult-like obsession with an ancient symbol described simply as The Yellow Sign.</description>
     <graphicData>
@@ -55,16 +54,10 @@
       <graphicClass>Graphic_Single</graphicClass>
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
-    <category>Item</category>
-    <thingCategories>
-      <li>Items</li>
-    </thingCategories>
-    <pathCost>10</pathCost>
-    <useHitPoints>true</useHitPoints>
-    <selectable>true</selectable>
-    <drawGUIOverlay>true</drawGUIOverlay>
+    <techLevel>Neolithic</techLevel>
     <statBases>
       <Mass>0.5</Mass>
+      <EquipDelay>2</EquipDelay>
       <WorkToMake>2000</WorkToMake>
       <MarketValue>20</MarketValue>
       <MaxHitPoints>20</MaxHitPoints>
@@ -72,40 +65,74 @@
       <DeteriorationRate>0</DeteriorationRate>
       <SellPriceFactor>0.25</SellPriceFactor>
     </statBases>
-    <costList>
-      <WoodLog>1</WoodLog>
-    </costList>
-    <tradeability>Sellable</tradeability>
-    <altitudeLayer>Item</altitudeLayer>
-    <alwaysHaulable>True</alwaysHaulable>
-    <tickerType>Never</tickerType>
-    <techLevel>Neolithic</techLevel>
-    <inspectorTabs>
-      <li>ITab_Art</li>
-    </inspectorTabs>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+	<apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <scoreOffset>4</scoreOffset>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <ignoredByNonViolent>false</ignoredByNonViolent>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+    </apparel>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <tradeNeverStack>true</tradeNeverStack>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+    <drawGUIOverlay>false</drawGUIOverlay>
+	<verbs>
+      <li>
+        <verbClass>Verb_CastTargetEffect</verbClass>
+        <label>The King in Yellow</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>true</targetable>
+        <onlyManualCast>True</onlyManualCast>
+        <range>3</range>
+        <warmupTime>5</warmupTime>
+        <targetParams>
+          <canTargetBuildings>false</canTargetBuildings>
+          <onlyTargetPsychicSensitive>true</onlyTargetPsychicSensitive>
+          <neverTargetIncapacitated>true</neverTargetIncapacitated>
+        </targetParams>
+        <soundCast>PsychicInsanityLanceCast</soundCast>
+      </li>
+    </verbs>
+
     <comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>1</maxCharges>
+        <destroyOnEmpty>true</destroyOnEmpty>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>charge</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li>
+        <compClass>CultOfCthulhu.CompTargetEffect_CultMinded</compClass>
+      </li>
+      <li Class="CompProperties_TargetEffect_FleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+      <li Class="CompProperties_TargetEffect_FleckConnecting">
+        <fleckDef>PsycastPsychicLine</fleckDef>
+      </li>
       <li Class="CompProperties_Glower">
         <glowRadius>10</glowRadius>
         <glowColor>(255,255,0,0)</glowColor>
       </li>
       <li Class="CompProperties_Forbiddable" />
-      <li Class="CompProperties_Usable">
-        <useJob>UseArtifact</useJob>
-        <useLabel>Activate</useLabel>
-      </li>
-      <li Class="CompProperties_UseEffect">
-        <compClass>CompUseEffect_Artifact</compClass>
-      </li>
-      <li Class="CompProperties_Targetable">
-        <compClass>CompTargetable_SinglePawn</compClass>
-        <psychicSensitiveTargetsOnly>true</psychicSensitiveTargetsOnly>
-      </li>
-      <li>
-        <compClass>CultOfCthulhu.CompTargetEffect_CultMinded</compClass>
-      </li>
-      <li>
-        <compClass>CompTargetEffect_GoodwillImpact</compClass>
-      </li>
     </comps>
+    <tradeability>Sellable</tradeability>
+    <alwaysHaulable>True</alwaysHaulable>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
   </ThingDef>
 </Defs>

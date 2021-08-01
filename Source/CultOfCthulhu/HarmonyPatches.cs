@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using RimWorld;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace CultOfCthulhu
     [StaticConstructorOnStartup]
     internal static class HarmonyPatches
     {
-        private static readonly bool DebugMode = false;
+        public static readonly bool DebugMode = false;
 
         static HarmonyPatches()
         {
@@ -59,6 +60,29 @@ namespace CultOfCthulhu
                 typeof(HarmonyPatches),
                 nameof(MeditationTick_PostFix)));
             DebugMessage("JobDriver.MeditationTick Passed");
+
+            harmony.Patch(AccessTools.Property(typeof(MapPawns),  nameof(MapPawns.AnyPawnBlockingMapRemoval)).GetGetMethod(), null, new HarmonyMethod(
+                typeof(HarmonyPatches),
+                nameof(AnyPawnBlockingMapRemoval_ByakheePatch)));
+            DebugMessage("MapPawns.AnyPawnBlockingMapRemoval Passed");
+        }
+
+        public static void AnyPawnBlockingMapRemoval_ByakheePatch(MapPawns __instance, ref bool __result)
+        {
+            if (__result == false)
+            {
+                Faction ofPlayer = Faction.OfPlayer;
+                if (__instance?.AllPawnsSpawned?.FirstOrDefault(x => x?.Faction == ofPlayer && x?.def?.defName == "Cults_ByakheeRace") is Pawn byakhee)
+                {
+                    __result = true;
+                }
+
+                Map map = Traverse.Create(__instance).Field("map").GetValue<Map>();
+                if (map?.listerThings?.ThingsOfDef(ThingDef.Named("ByakheeLeaving"))?.FirstOrDefault() != null)
+                {
+                    __result = true;
+                }
+            }
         }
 
         public static void MeditationTick_PostFix(JobDriver_Meditate __instance)

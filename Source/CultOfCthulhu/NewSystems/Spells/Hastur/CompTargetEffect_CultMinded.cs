@@ -20,6 +20,7 @@ namespace CultOfCthulhu
                 pawn.Label
             ), MessageTypeDefOf.NeutralEvent);
             //pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, null, false, false, null);
+            Find.BattleLog.Add(new BattleLogEntry_ItemUsed(user, target, this.parent.def, RulePackDefOf.Event_ItemUsed));
         }
     }
 }

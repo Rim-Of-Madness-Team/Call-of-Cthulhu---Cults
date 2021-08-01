@@ -1,0 +1,60 @@
+
+[h1]Gameplay expansion for RimWorld.[/h1]
+[b]You can now...[/b]
+[list]
+[*]	found a cult.
+[*]	worship monstrous deities.
+[*]	make offerings and animal sacrifices.
+[*]	make human sacrifices in return for powerful spells (6 deitys and 30 spells in total, plus a dozen side effects).
+[/list]
+
+
+
+[h1]This mod supports these languages: [/h1] 
+English, Korean 한국어 (밀수업자), and Russian русский язык (kr33man)
+
+[h1]::::: NOTICE :::::
+::::: THIS MOD NOW REQUIRES JECSTOOLS ::::::
+Download[/h1]
+http://steamcommunity.com/sharedfiles/filedetails/?id=932008009
+
+[h1]Recommended mods[/h1]
+[list]
+[*]	Cosmic Horrors (for summoning actual monsters)
+[*]	Industrial Age (for great lighting)
+[*]     Realistic Darkness (for great darkness)
+[/list]
+	
+[h1]How do I start a cult?[/h1]
+	1) Load the mod.
+	2) Play for a few days in-game.
+	3) One of your pawns will investigate something horrendous.
+	4) Build the forbidden research center.
+	5) Research the strange symbols until someone founds the cult.
+	6) Good luck.
+
+	
+[h1]Tips:[/h1]
+[list]
+[*] Cult-mindedness is a new feature under 'needs' that keeps track of how likely colonists are to become cultists.
+[*] Better apparel means greater worship results and higher success rates for your sacrifices.
+[*] Beware! If too many colonists are plotting against the cult, they might take matters into their own hands.
+[/list]	
+
+
+[h1]Additions and changes by Mlie:[/h1]
+[*] Added support for Combat Extended
+[*] Removed the production-tag on altars so they can be used in thronerooms
+[*] Added an option to make sermons voluntary, making pawns complete some types of jobs before joining
+[*] Improved the sermon scheduling with some inspiration from the excellent mod [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1565942758]Colony Leadership[/url] Now you can select what days to do sermons and also when they should start in the day.
+[*] Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2451324814][SYR] Trait Value[/url]
+
+
+[h1]Special Thanks:[/h1]
+
+	1000101 - Religious needs
+	Cpt. Ohu - Altar congregations
+	Skullywag - Helpfulness on #modding
+	Mrofa - Code for two-colored hoods
+	Justin C - Reanimation Code
+	Everyone on the modding Discord

@@ -3,7 +3,7 @@
   <!-- BYAKHEE -->
   <!-- KIND DEFS -->
   <PawnKindDef>
-    <defName>Cults_Byakhee</defName>
+    <defName>Cults_ByakheeRace</defName>
     <label>byakhee</label>
     <race>Cults_ByakheeRace</race>
     <combatPower>160</combatPower>
@@ -54,9 +54,9 @@
     </lifeStages>
   </PawnKindDef>
   <!-- RACE DEFS -->
-  <ThingDef ParentName="BaseCultHorrorRaceInit">
+  <ThingDef Class="CultOfCthulhu.PawnFlyerDef" ParentName="BaseCultHorrorRaceInit">
     <defName>Cults_ByakheeRace</defName>
-    <thingClass>CultOfCthulhu.PawnFlyer_New</thingClass>
+    <thingClass>CultOfCthulhu.PawnFlyer</thingClass>
     <label>byakhee</label>
     <tradeability>None</tradeability>
     <description>Interstellar predators that can travel through the vacuum of space by means of an organ known as the "hune," Byakhee are said to be servants of Hastur the Unspeakable. Through this servitude, Byakhee have been observed being mounted by the faithful to the Yellow Sign.</description>
@@ -117,6 +117,7 @@
     </tools>
     <techLevel>Animal</techLevel>
     <race>
+      <herdAnimal>true</herdAnimal>	
       <trainability>Advanced</trainability>
       <wildness>0.95</wildness>
       <intelligence>Animal</intelligence>
@@ -157,9 +158,24 @@
       <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
     </race>
+    <comps>
+      <li Class="CultOfCthulhu.CompProperties_LaunchablePawn" />
+      <li Class="CultOfCthulhu.CompProperties_TransporterPawn" />
+    </comps>
     <recipes>
       <li>Euthanize</li>
     </recipes>
+    <flightSpeed>0.000035</flightSpeed>
+    <flightPawnLimit>2</flightPawnLimit>
+    <flyableDistance>30</flyableDistance>
+    <leavingDef>ByakheeLeaving</leavingDef>
+    <travelingDef>ByakheeTraveling</travelingDef>
+    <incomingDef>ByakheeIncoming</incomingDef>
+    <landedDef>ByakheeLanded</landedDef>
+    <takeOffSound>ByakheeTakeOff</takeOffSound>
+    <landingSound>ByakheeLanding</landingSound>
+    <dismountSound>Pawn_Mech_Centipede_Call</dismountSound>
+    <landedTale>RodeByakhee</landedTale>
   </ThingDef>
   <!--
         <leatherColor></leatherColor>
@@ -172,4 +188,5 @@
       <leatherMarketValueFactor>1.5</leatherMarketValueFactor>
       <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
   -->
+  <!--========== Byakhee Leather ============-->
 </Defs>

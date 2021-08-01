@@ -1,7 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
-  <ThingDef>
+
+  <ThingDef ParentName="SkyfallerBase">
     <defName>ByakheeIncoming</defName>
+    <label>byakhee (incoming)</label>
+    <thingClass>DropPodIncoming</thingClass>
+    <graphicData>
+      <texPath>Pawn/Byakhee/Byakhee</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>5.0</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.8, 0.6)</volume>
+      </shadowData>
+    </graphicData>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPod_Fall</anticipationSound>
+      <anticipationSoundTicks>100</anticipationSoundTicks>
+      <motesPerCell>0</motesPerCell>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>ByakheeLeaving</defName>
+    <label>byakhee (leaving)</label>
+    <thingClass>FlyShipLeaving</thingClass>
+    <graphicData>
+      <texPath>Pawn/Byakhee/Byakhee</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>5.0</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.8, 0.6)</volume>
+      </shadowData>
+    </graphicData>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <reversed>true</reversed>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPod_Leaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+      <ticksToImpactRange><min>-40</min><max>-15</max></ticksToImpactRange>
+    </skyfaller>
+  </ThingDef>
+
+  
+  <WorldObjectDef>
+    <defName>ByakheeTraveling</defName>
+    <label>byakhee</label>
+    <description>Byakhee in flight.</description>
+    <worldObjectClass>TravelingTransportPods</worldObjectClass>
+    <texture>WorldObjects/ByakheeFlying</texture>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>WorldObjects/ByakheeFlying</expandingIconTexture>
+    <expandingIconPriority>60</expandingIconPriority>
+    <expandMore>true</expandMore>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+  </WorldObjectDef>
+
+
+  <ThingDef>
+    <defName>ByakheeIncoming_old</defName>
     <label>flyer (incoming)</label>
     <thingClass>CultOfCthulhu.PawnFlyersIncoming</thingClass>
     <tickerType>Normal</tickerType>
@@ -18,7 +80,7 @@
     <drawOffscreen>true</drawOffscreen>
   </ThingDef>
   <ThingDef>
-    <defName>ByakheeLeaving</defName>
+    <defName>ByakheeLeaving_old</defName>
     <label>flyer (leaving)</label>
     <thingClass>CultOfCthulhu.PawnFlyersLeaving</thingClass>
     <tickerType>Normal</tickerType>
@@ -35,7 +97,7 @@
     <drawOffscreen>true</drawOffscreen>
   </ThingDef>
   <WorldObjectDef>
-    <defName>ByakheeTraveling</defName>
+    <defName>ByakheeTraveling_old</defName>
     <label>flyer (traveling)</label>
     <description>Byakhee in flight.</description>
     <worldObjectClass>CultOfCthulhu.PawnFlyersTraveling</worldObjectClass>

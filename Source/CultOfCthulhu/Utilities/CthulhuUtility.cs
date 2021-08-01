@@ -10,6 +10,7 @@ using RimWorld;
 using UnityEngine;
 using Verse;
 using Verse.AI;
+using CultOfCthulhu;
 
 // ----------------------------------------------------------------------
 // These are RimWorld-specific usings. Activate/Deactivate what you need:
@@ -922,9 +923,13 @@ namespace Cthulhu
 
         public static void DebugReport(string x)
         {
-            if (Prefs.DevMode && DebugSettings.godMode)
+            if (HarmonyPatches.DebugMode)
             {
-                Log.Message(Prefix + x);
+
+                if (Prefs.DevMode && DebugSettings.godMode)
+                {
+                    Log.Message(Prefix + x);
+                }
             }
         }
 
