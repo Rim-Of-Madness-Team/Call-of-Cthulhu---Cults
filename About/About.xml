@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Call of Cthulhu - Cults</name>
   <packageId>rimofmadness.CallofCthulhuCults</packageId>
@@ -29,7 +29,8 @@
     <li>CETeam.CombatExtended</li>
     <li>syrchalis.traitvalue</li>
   </loadAfter>
-  <description>
+  <description>1.0.23.1 (08-01-2021)
+
 
 [h1]Gameplay expansion for RimWorld.[/h1]
 [b]You can now...[/b]
@@ -90,6 +91,22 @@ http://steamcommunity.com/sharedfiles/filedetails/?id=932008009
 	Mrofa - Code for two-colored hoods
 	Justin C - Reanimation Code
 	Everyone on the modding Discord
+
+Thank you to my Patrons for supporting me in my efforts. Without you, none of this would be possible.
+
+These are the most excellent rim dwellers who support me: 
+Michael Cailler, Jigsawjohn , Daniel Schott, Penelope Charli Whitman, Jerome Gonschorek, Genaeve , RainerWingel , Lea Stannard, David Silberstein, 수현 남, Matt Harris, Kiya Nicoll, Paul Fenwick, Matthew Isom, Elodie , Михаил Юрченко, Charlie Garnham, Populous25 , Landon Cash, Marcus Sireanu, Maaxar , logan sheppard-organ, TinyATuin, Don Homer, Sharp Spook, roxxploxx , Dan Jones, Kaz, Justin Andres, Alex Mederer, Justin , iknowdude00, E_T , Alexander , Ken Birdwell, Michael Cailler, Jigsawjohn , Daniel Schott, Penelope Charli Whitman, Jerome Gonschorek, Genaeve , RainerWingel , Lea Stannard, David Silberstein, 수현 남, Matt Harris, Kiya Nicoll, Paul Fenwick, Matthew Isom, Elodie , Михаил Юрченко, Charlie Garnham, Populous25 , Landon Cash, Marcus Sireanu, Maaxar , logan sheppard-organ, TinyATuin, Don Homer, Sharp Spook, roxxploxx , Dan Jones, Kaz, Justin Andres, Alex Mederer, Justin , iknowdude00, E_T , Alexander , Ken Birdwell
+
+========================
+Changelog
+========================
+1.0.23.1 (08-01-2021)
+========================
+Added missing Cthulhu mask to Ideo-Role apparel lists
+
+1.0.23.0 (08-01-2021)
+========================
+Adds Ideology features. New meme - Cult of the Old Ones enables sacrifices for any ideology and unlocks cultist apparel. Adds Necronomicon relic. Fixes Byakhee race error message.
 
 1.0.22.0 (07-31-2021)
 ========================
@@ -155,8 +172,6 @@ Updated for RimWorld 1.3. Fixes for several Hastur and Nyarlothotep spells.
 
 
 1.0.1.0 - Updated to 1.2
-
-
 
 </description>
 </ModMetaData>

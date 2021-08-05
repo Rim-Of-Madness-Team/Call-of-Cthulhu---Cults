@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <MemeDef>
+    <defName>ROM_CultOfTheOldOnes</defName>
+    <label>Cult of the Old Ones</label>
+    <description>Don your robes and delve into the occult. Convert non-believers. Once they know, none may abandon the forbidden knowledge. Commit ritual sacrifices in the name of the Old Ones.</description>
+    <iconPath>ROMC_CultOfTheOldOnes</iconPath>
+    <groupDef>Misc</groupDef>
+    <impact>1</impact>
+    <renderOrder>80</renderOrder>
+    <consumableBuildings>
+      <li>Effigy</li>
+    </consumableBuildings>
+    <requireOne>
+      <li>
+        <li>Apostasy_Abhorrent</li>
+      </li>
+    </requireOne>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->eldritch</li>
+        <li>memeAdjective->ancient</li>
+        <li>memeAdjective->esoteric</li>
+        <li>memeAdjective->unspeakable</li>
+        <li>memeAdjective->nameless</li>
+        <li>memeAdjective->forbidden</li>
+        <li>memeAdjective->occult</li>
+        <li>memeAdjective->mad</li>
+        <li>memeCreed->cult</li>
+        <li>memeCreed->order</li>
+        <li>memeCreed->sect</li>
+        <li>memeCreed->den</li>
+        <li>memeCreed->chamber</li>
+        <li>memeCreed->circle</li>
+        <li>memeHyphenPrefix->eldritch</li>
+        <li>memeHyphenPrefix->forbidden</li>
+        <li>memeConcept->occult</li>
+        <li>memeConcept->sacrifice</li>
+        <li>memeConcept->forbidden knowledge</li>
+        <li>memeConcept->old ones</li>
+        <li>memeConcept->outer gods</li>
+        <li>memeLeaderNoun->Dreamlord of Cthulhu</li>
+        <li>memeLeaderNoun->Prophet of the Old Ones</li>
+        <li>memeLeaderNoun->Speaker of the Old Ones</li>
+        <li>memeLeaderNoun->Avatar of Nyarlathotep</li>
+        <li>memeLeaderNoun->Dark Young Shepherd of Shub Niggurath</li>
+        <li>memeLeaderNoun->Progeny of Yog-Sothoth</li>
+        <li>memeLeaderNoun->Progeny of Father Dagon</li>
+        <li>memeLeaderNoun->Herald of Yomagn’tho</li>
+        <li>memeLeaderNoun->Serpentmaster of Yig</li>
+        <li>memeLeaderNoun->Dreamlord of Carcosa</li>
+        <li>memeLeaderNoun->Whisperer of Tsathoggua</li>
+        <li>memeLeaderAdjective->Grand</li>
+        <li>memeLeaderAdjective->High</li>
+        <li>memeMoralist->Gatekeeper</li>
+        <li>memeMoralist->Lorekeeper</li>
+        <li>memeMoralist->Necromancer</li>
+        <li>memeMoralist->Demonologist</li>
+      </rulesStrings>
+    </generalRules>
+    <symbolPacks>
+      <li>
+        <ideoName>Occultism</ideoName>
+        <theme>occult</theme>
+        <adjective>occultist</adjective>
+        <member>cultist</member>
+      </li>
+    </symbolPacks>
+    <thingStyleCategories>
+      <li>
+        <category>Morbid</category>
+        <priority>1</priority>
+      </li>
+    </thingStyleCategories>
+    <ritualsToMake>1</ritualsToMake>
+    <replaceRitualsWithTags><li>CelebratedDate</li></replaceRitualsWithTags>
+    <replacementPatterns><li>SacrificePrisoner</li><li>SacrificeAnimal</li></replacementPatterns>
+    <requiredRituals>
+      <li>
+          <precept>Festival</precept>
+          <pattern>SacrificePrisoner</pattern>
+      </li>
+      <li>
+          <precept>Conversion</precept>
+          <pattern>Conversion</pattern>
+      </li>
+    </requiredRituals>
+    <agreeableTraits>
+      <li>Abrasive</li>
+      <li>Psychopath</li>
+      <li>Pyromaniac</li>
+      <li>Cannibal</li>
+      <li>CreepyBreathing</li>
+    </agreeableTraits>
+    <disagreeableTraits>
+      <li>Kind</li>
+    </disagreeableTraits>
+  </MemeDef>
+
+</Defs>

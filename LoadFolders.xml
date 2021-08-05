@@ -21,6 +21,7 @@
     <li>1.3</li>
     <li IfModActive="CETeam.CombatExtended">CE/1.3</li>
     <li IfModActive="Ludeon.RimWorld.Royalty">Royalty/1.3</li>
+    <li IfModActive="Ludeon.RimWorld.Ideology">Ideology/1.3</li>
     <li IfModActive="syrchalis.traitvalue">SYRTraitValue</li>
   </v1.3>
 </loadFolders>
