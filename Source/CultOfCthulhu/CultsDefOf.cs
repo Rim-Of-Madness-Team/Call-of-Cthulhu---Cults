@@ -19,12 +19,12 @@ using AbilityDef = AbilityUser.AbilityDef;
 // RimWorld specific functions are found here (like 'Building_Battery')
 // RimWorld specific functions for world creation
 
-//using RimWorld.SquadAI;  // RimWorld specific functions for squad brains 
+//using RimWorld.SquadAI;  // RimWorld specific functions for squad brains
 
 namespace CultOfCthulhu
 {
     [DefOf]
-    public class CultsDefOf
+    public static class CultsDefOf
     {
         // ============= UNSORTED ============
 
@@ -100,7 +100,7 @@ namespace CultOfCthulhu
 
         public static PawnKindDef Cults_BlackGoat;
 
-        public static PawnKindDef Cults_Byakhee;
+        public static PawnKindDef Cults_ByakheeRace;
 
         public static PawnKindDef Cults_FormlessSpawn;
 

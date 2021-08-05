@@ -11,12 +11,12 @@ namespace CultOfCthulhu
         {
             get
             {
-                if (AbilityUser?.health?.hediffSet == null)
+                if (Pawn?.health?.hediffSet == null)
                 {
                     return false;
                 }
 
-                if (AbilityUser.health.hediffSet.HasHediff(CultsDefOf.Cults_PsionicBrain))
+                if (Pawn.health.hediffSet.HasHediff(CultsDefOf.Cults_PsionicBrain))
                 {
                     return true;
                 }
@@ -32,17 +32,17 @@ namespace CultOfCthulhu
 
         public void PostInitializeTick()
         {
-            if (AbilityUser == null)
+            if (Pawn == null)
             {
                 return;
             }
 
-            if (!AbilityUser.Spawned)
+            if (!Pawn.Spawned)
             {
                 return;
             }
 
-            if (AbilityUser.story == null)
+            if (Pawn.story == null)
             {
                 return;
             }
@@ -56,12 +56,12 @@ namespace CultOfCthulhu
 
         public override void CompTick()
         {
-            if (AbilityUser == null)
+            if (Pawn == null)
             {
                 return;
             }
 
-            if (!AbilityUser.Spawned)
+            if (!Pawn.Spawned)
             {
                 return;
             }

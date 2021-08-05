@@ -26,9 +26,7 @@
       <WorkToBuild>1600</WorkToBuild>
       <Flammability>0.5</Flammability>
     </statBases>
-    <costList>
-      <Steel>0</Steel>
-    </costList>
+    <costList/>
     <comps>
       <li Class="CompProperties_Transporter">
         <restEffectiveness>0.8</restEffectiveness>
