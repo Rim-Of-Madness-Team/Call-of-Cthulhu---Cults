@@ -7,7 +7,6 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <DebugType>None</DebugType>
     <LangVersion>latest</LangVersion>
-    <Configurations>Debug;Release;RW1.3</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
@@ -31,4 +30,3 @@
     </Reference>
   </ItemGroup>
 </Project>
-

@@ -219,7 +219,7 @@ namespace CultOfCthulhu
             Text.Font = GameFont.Small;
         }
 
-        private void DrawBarThreshold(Rect barRect, float threshPct)
+        private new void DrawBarThreshold(Rect barRect, float threshPct)
         {
             var num = (float) (barRect.width <= 60f ? 1 : 2);
             var position = new Rect(barRect.x + (barRect.width * threshPct) - (num - 1f),
