@@ -3,7 +3,7 @@
   <!-- BYAKHEE -->
   <!-- KIND DEFS -->
   <PawnKindDef>
-    <defName>Cults_Byakhee</defName>
+    <defName>Cults_ByakheeRace</defName>
     <label>byakhee</label>
     <race>Cults_ByakheeRace</race>
     <combatPower>160</combatPower>

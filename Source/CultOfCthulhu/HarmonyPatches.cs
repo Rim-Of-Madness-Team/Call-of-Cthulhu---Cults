@@ -65,7 +65,68 @@ namespace CultOfCthulhu
                 typeof(HarmonyPatches),
                 nameof(AnyPawnBlockingMapRemoval_ByakheePatch)));
             DebugMessage("MapPawns.AnyPawnBlockingMapRemoval Passed");
+
+            //harmony.Patch(AccessTools.Method(typeof(RitualObligationTargetWorker_IdeoBuildingOrRitualSpot), nameof(RitualObligationTargetWorker_IdeoBuildingOrRitualSpot.GetTargets)), null, new HarmonyMethod(
+            //    typeof(HarmonyPatches),
+            //    nameof(AltersForIdeology)));
+            //DebugMessage("RitualObligationTargetWorker_IdeoBuildingOrRitualSpot.GetTargets");
+
+
+            //harmony.Patch(AccessTools.Method(typeof(RitualObligationTargetWorker_Altar), nameof(RitualObligationTargetWorker_Altar.GetTargets)), null, new HarmonyMethod(
+            //    typeof(HarmonyPatches),
+            //    nameof(AltersForIdeology)));
+            //DebugMessage("RitualObligationTargetWorker_Altar.GetTargets");
+
+            //harmony.Patch(AccessTools.Method(typeof(RitualObligationTargetWorker_AnyRitualSpotOrAltar), nameof(RitualObligationTargetWorker_AnyRitualSpotOrAltar.GetTargets)), null, new HarmonyMethod(
+            //    typeof(HarmonyPatches),
+            //    nameof(AltersForIdeology)));
+            //DebugMessage("RitualObligationTargetWorker_AnyRitualSpotOrAltar.GetTargets");
+
+            //harmony.Patch(AccessTools.Method(typeof(RitualObligationTargetWorker_AnyRitualSpotIdeogramOrAltar), nameof(RitualObligationTargetWorker_AnyRitualSpotIdeogramOrAltar.GetTargets)), null, new HarmonyMethod(
+            //    typeof(HarmonyPatches),
+            //    nameof(AltersForIdeology)));
+            //DebugMessage("RitualObligationTargetWorker_AnyRitualSpotIdeogramOrAltar.GetTargets");
+
+            //harmony.Patch(AccessTools.Method(typeof(RitualObligationTargetWorker_AnyGatherSpotOrAltar), nameof(RitualObligationTargetWorker_AnyGatherSpotOrAltar.GetTargets)), null, new HarmonyMethod(
+            //    typeof(HarmonyPatches),
+            //    nameof(AltersForIdeology)));
+            //DebugMessage("RitualObligationTargetWorker_AnyGatherSpotOrAltar.GetTargets");
+
+            //harmony.Patch(AccessTools.Method(typeof(Precept_Ritual), nameof(Precept_Ritual.ShouldShowGizmo)), null, new HarmonyMethod(
+            //    typeof(HarmonyPatches),
+            //    nameof(ShowRitualCommandsForCultistAltars)));
+            //DebugMessage("Precept_Ritual.ShouldShowGizmo");
+
         }
+
+        public static void ShowRitualCommandsForCultistAltars(Precept_Ritual __instance, TargetInfo target, ref bool __result)
+        {
+            if (__instance.activeObligations != null)
+            {
+                if (target.Thing.def.isAltar) 
+                {
+                    __result = true;
+                }
+            }
+        }
+
+        public static void AltersForIdeology(RitualObligation obligation, Map map, ref IEnumerable<TargetInfo> __result)
+        {
+            if (!ModLister.CheckIdeology("Altar target"))
+            {
+                return;
+            }
+            if (map?.listerBuildings?.AllBuildingsColonistOfClass<CultOfCthulhu.Building_SacrificialAltar>()?.FirstOrDefault() == null)
+            {
+                return;
+            }
+            foreach (var t in map.listerBuildings.AllBuildingsColonistOfClass<CultOfCthulhu.Building_SacrificialAltar>().ToList())
+            {
+                __result = __result.Concat(t);
+            }
+
+        }
+
 
         public static void AnyPawnBlockingMapRemoval_ByakheePatch(MapPawns __instance, ref bool __result)
         {

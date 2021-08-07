@@ -401,21 +401,30 @@
       <li>CultOfCthulhu.ITab_Sacrifice</li>
       <li>CultOfCthulhu.ITab_Worship</li>
     </inspectorTabs>
+    <isAltar>true</isAltar>
+    <placeWorkers>
+      <li>PlaceWorker_WatchArea</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_RitualFocusNoArrow</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <ritualFocus>
+      <spectateDistance>2</spectateDistance>
+      <allowedSpectateSides>Up</allowedSpectateSides>
+    </ritualFocus>
     <building>
+      <buildingTags Inherit="False">
+        <li>RitualFocus</li>
+      </buildingTags>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <watchBuildingStandDistanceRange>
         <min>1</min>
         <max>9</max>
       </watchBuildingStandDistanceRange>
       <watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
-      <buildingTags Inherit="False" />
     </building>
     <researchPrerequisites>
       <li>Forbidden_Altar</li>
     </researchPrerequisites>
-    <placeWorkers>
-      <li>PlaceWorker_WatchArea</li>
-    </placeWorkers>
     <comps>
       <li>
         <compClass>CompQuality</compClass>
@@ -475,21 +484,30 @@
       <li>CultOfCthulhu.ITab_Sacrifice</li>
       <li>CultOfCthulhu.ITab_Worship</li>
     </inspectorTabs>
+    <isAltar>true</isAltar>
+    <placeWorkers>
+      <li>PlaceWorker_WatchArea</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_RitualFocusNoArrow</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <ritualFocus>
+      <spectateDistance>2</spectateDistance>
+      <allowedSpectateSides>Up</allowedSpectateSides>
+    </ritualFocus>
     <building>
+      <buildingTags Inherit="False">
+        <li>RitualFocus</li>
+      </buildingTags>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <watchBuildingStandDistanceRange>
         <min>1</min>
         <max>9</max>
       </watchBuildingStandDistanceRange>
       <watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
-      <buildingTags Inherit="False" />
     </building>
     <researchPrerequisites>
       <li>Forbidden_Sacrifice</li>
     </researchPrerequisites>
-    <placeWorkers>
-      <li>PlaceWorker_WatchArea</li>
-    </placeWorkers>
     <comps>
       <li>
         <compClass>CompQuality</compClass>
@@ -548,22 +566,31 @@
     <inspectorTabs>
       <li>CultOfCthulhu.ITab_Sacrifice</li>
       <li>CultOfCthulhu.ITab_Worship</li>
-    </inspectorTabs>
+    </inspectorTabs>    
+    <isAltar>true</isAltar>
+    <placeWorkers>
+      <li>PlaceWorker_WatchArea</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_RitualFocusNoArrow</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <ritualFocus>
+      <spectateDistance>2</spectateDistance>
+      <allowedSpectateSides>Up</allowedSpectateSides>
+    </ritualFocus>
     <building>
+      <buildingTags Inherit="False">
+        <li>RitualFocus</li>
+      </buildingTags>
       <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
       <watchBuildingStandDistanceRange>
         <min>1</min>
         <max>9</max>
       </watchBuildingStandDistanceRange>
       <watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
-      <buildingTags Inherit="False" />
     </building>
     <researchPrerequisites>
       <li>Forbidden_Human</li>
     </researchPrerequisites>
-    <placeWorkers>
-      <li>PlaceWorker_WatchArea</li>
-    </placeWorkers>
     <comps>
       <li>
         <compClass>CompQuality</compClass>

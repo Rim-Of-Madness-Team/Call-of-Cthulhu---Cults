@@ -1,3 +1,7 @@
+1.0.23.2 (08-06-2021)
+========================
+Issue prevented 1.2 files from loading. Warning messages removed at start.
+
 1.0.23.1 (08-01-2021)
 ========================
 Added missing Cthulhu mask to Ideo-Role apparel lists
