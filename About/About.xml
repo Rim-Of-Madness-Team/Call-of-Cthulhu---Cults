@@ -29,7 +29,7 @@
     <li>CETeam.CombatExtended</li>
     <li>syrchalis.traitvalue</li>
   </loadAfter>
-  <description>1.0.23.2 (08-06-2021)
+  <description>1.0.23.3 (08-14-2021)
 
 
 [h1]Gameplay expansion for RimWorld.[/h1]
@@ -100,6 +100,10 @@ Michael Cailler, Jigsawjohn , Daniel Schott, Penelope Charli Whitman, Jerome Gon
 ========================
 Changelog
 ========================
+1.0.23.3 (08-14-2021)
+========================
+Slaves now attend worship and can become cultists
+
 1.0.23.2 (08-06-2021)
 ========================
 Issue prevented 1.2 files from loading. Warning messages removed at start.
