@@ -107,6 +107,14 @@ namespace CultOfCthulhu
                 false, false, false);
         }
 
+        public static List<Pawn> GetCultMindedAffectablePawns(Map map)
+        {
+            var spawnedColonyMembers = new List<Pawn>(map.mapPawns.FreeColonistsSpawned);
+            var spawnedPrisonersAndSlaves = new List<Pawn>(map.mapPawns.SlavesAndPrisonersOfColonySpawned);
+            spawnedColonyMembers.AddRange(spawnedPrisonersAndSlaves);
+            return spawnedColonyMembers;
+        }
+
         public static float GetBaseCultistModifier(Pawn pawn)
         {
             float result = 0;
@@ -953,7 +961,7 @@ namespace CultOfCthulhu
                     continue;
                 }
 
-                if (!member.IsColonist)
+                if (!member.IsColonist && !member.IsSlaveOfColony)
                 {
                     count++;
                     continue;
@@ -1903,6 +1911,12 @@ namespace CultOfCthulhu
             return result;
         }
 
+
+        public static bool ShouldAttendeeKeepAttendingWorship(Pawn p)
+        {
+            return !p.Downed && (p.needs == null || !p.needs.food.Starving) && p.health.hediffSet.BleedRateTotal <= 0f && (p.needs.rest == null || p.needs.rest.CurCategory < RestCategory.Exhausted) && !p.health.hediffSet.HasTendableNonInjuryNonMissingPartHediff(false) && p.Awake() && !p.InAggroMentalState && !p.IsPrisoner;
+        }
+
         //Checkyoself
         public static void GiveAttendWorshipJob(Building_SacrificialAltar altar, Pawn attendee)
         {
@@ -1912,7 +1926,7 @@ namespace CultOfCthulhu
                 return;
             }
 
-            if (!GatheringsUtility.ShouldGuestKeepAttendingGathering(attendee))
+            if (!ShouldAttendeeKeepAttendingWorship(attendee))
             {
                 return;
             }

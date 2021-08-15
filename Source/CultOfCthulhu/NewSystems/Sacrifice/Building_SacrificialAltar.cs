@@ -219,12 +219,13 @@ namespace CultOfCthulhu
             {
                 if (availableWorshippers == null || availableWorshippers.Count == 0)
                 {
+                    
                     availableWorshippers =
                         new HashSet<Pawn>(Map.mapPawns.AllPawnsSpawned.FindAll(y => y is Pawn x &&
                                 x.RaceProps.Humanlike &&
-                                !x.IsPrisoner &&
-                                x.Faction == Faction &&
+                                x.Faction == Faction.OfPlayerSilentFail &&
                                 x.RaceProps.intelligence == Intelligence.Humanlike &&
+                                !x.IsPrisoner &&
                                 !x.Downed && !x.Dead &&
                                 !x.InMentalState && !x.InAggroMentalState &&
                                 x.CurJob.def != CultsDefOf.Cults_MidnightInquisition &&

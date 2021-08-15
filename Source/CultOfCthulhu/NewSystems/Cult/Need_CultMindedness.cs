@@ -69,7 +69,7 @@ namespace CultOfCthulhu
                 return;
             }
 
-            if (!pawn.IsPrisonerOfColony && !pawn.IsColonist)
+            if (!pawn.IsPrisonerOfColony && !pawn.IsColonist && !pawn.IsSlaveOfColony)
             {
                 return;
             }

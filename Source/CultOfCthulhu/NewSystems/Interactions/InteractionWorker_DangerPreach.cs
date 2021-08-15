@@ -28,12 +28,12 @@ namespace CultOfCthulhu
         public override float RandomSelectionWeight(Pawn initiator, Pawn recipient)
         {
             //We need two individuals that are part of the colony
-            if (!initiator.IsColonist || !initiator.IsPrisoner)
+            if (!initiator.IsColonist || !initiator.IsPrisonerOfColony || !initiator.IsSlaveOfColony)
             {
                 return 0f;
             }
 
-            if (!recipient.IsColonist || !recipient.IsPrisoner)
+            if (!recipient.IsColonist || !recipient.IsPrisonerOfColony || !initiator.IsSlaveOfColony )
             {
                 return 0f;
             }

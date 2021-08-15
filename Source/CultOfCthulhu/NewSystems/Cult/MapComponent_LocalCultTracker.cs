@@ -193,7 +193,7 @@ namespace CultOfCthulhu
 
             ticksToCheckCultists = Find.TickManager.TicksGame + 500;
 
-            var spawnedColonyMembers = new List<Pawn>(map.mapPawns.FreeColonistsAndPrisonersSpawned);
+            var spawnedColonyMembers = CultUtility.GetCultMindedAffectablePawns(map);
             var playerCult = CultTracker.Get.PlayerCult;
             if (spawnedColonyMembers.Count == 0)
             {
@@ -203,7 +203,8 @@ namespace CultOfCthulhu
             foreach (var colonist in spawnedColonyMembers)
             {
                 if (!colonist.RaceProps.Humanlike ||
-                    colonist.IsPrisoner ||
+                    (colonist.IsPrisonerOfColony &&
+                    !colonist.IsSlaveOfColony) ||
                     colonist.RaceProps.intelligence != Intelligence.Humanlike ||
                     colonist.Dead)
                 {

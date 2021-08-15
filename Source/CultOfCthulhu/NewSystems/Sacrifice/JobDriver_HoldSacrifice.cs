@@ -164,7 +164,7 @@ namespace CultOfCthulhu
             {
                 //It's a day to remember
                 var taleToAdd = TaleDef.Named("HeldSermon");
-                if ((pawn.IsColonist || pawn.HostFaction == Faction.OfPlayer) && taleToAdd != null)
+                if ((pawn.IsColonist || pawn.IsSlaveOfColony || pawn.HostFaction == Faction.OfPlayer) && taleToAdd != null)
                 {
                     TaleRecorder.RecordTale(taleToAdd, pawn);
                 }

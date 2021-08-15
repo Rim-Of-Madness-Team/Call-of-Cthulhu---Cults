@@ -709,7 +709,7 @@ namespace Cthulhu
         public static void ApplyTaleDef(string defName, Pawn pawn)
         {
             var taleToAdd = TaleDef.Named(defName);
-            if ((pawn.IsColonist || pawn.HostFaction == Faction.OfPlayer) && taleToAdd != null)
+            if ((pawn.IsColonist || pawn.IsSlaveOfColony || pawn.HostFaction == Faction.OfPlayer) && taleToAdd != null)
             {
                 TaleRecorder.RecordTale(taleToAdd, pawn);
             }
