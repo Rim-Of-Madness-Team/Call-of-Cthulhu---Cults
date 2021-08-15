@@ -25,6 +25,7 @@
     <label>Guardian</label>
     <description>A divine protector sent by Bast to protect you.</description>
     <tradeability>None</tradeability>
+	<tradeTags/>
     <statBases>
       <MoveSpeed>7</MoveSpeed>
       <ComfyTemperatureMin>-125</ComfyTemperatureMin>

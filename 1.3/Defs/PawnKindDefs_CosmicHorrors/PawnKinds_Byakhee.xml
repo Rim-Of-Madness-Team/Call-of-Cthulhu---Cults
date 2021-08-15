@@ -59,6 +59,7 @@
     <thingClass>CultOfCthulhu.PawnFlyer</thingClass>
     <label>byakhee</label>
     <tradeability>None</tradeability>
+	<tradeTags/>
     <description>Interstellar predators that can travel through the vacuum of space by means of an organ known as the "hune," Byakhee are said to be servants of Hastur the Unspeakable. Through this servitude, Byakhee have been observed being mounted by the faithful to the Yellow Sign.</description>
     <statBases>
       <MoveSpeed>7.0</MoveSpeed>

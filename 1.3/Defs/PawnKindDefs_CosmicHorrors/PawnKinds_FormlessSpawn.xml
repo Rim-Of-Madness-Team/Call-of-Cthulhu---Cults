@@ -59,6 +59,7 @@
     <thingClass>Pawn</thingClass>
     <label>formless spawn</label>
     <tradeability>None</tradeability>
+	<tradeTags/>
     <description>Deep beneath the earth, formless spawn rest in basins in Tsathoggua temples and act as guardians of the holy grounds. They are formed of goo capable of acidic digestion of matter, and thus are formidable foes with high resistance and high damage.</description>
     <statBases>
       <MoveSpeed>6.0</MoveSpeed>

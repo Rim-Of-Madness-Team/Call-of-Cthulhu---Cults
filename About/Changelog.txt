@@ -1,3 +1,7 @@
+1.0.23.4 (08-14-2021)
+========================
+Adds in empty trade tags list to prevent issues with debug incident list menus
+
 1.0.23.3 (08-14-2021)
 ========================
 Slaves now attend worship and can become cultists
