@@ -1914,7 +1914,7 @@ namespace CultOfCthulhu
 
         public static bool ShouldAttendeeKeepAttendingWorship(Pawn p)
         {
-            return !p.Downed && (p.needs == null || !p.needs.food.Starving) && p.health.hediffSet.BleedRateTotal <= 0f && (p.needs.rest == null || p.needs.rest.CurCategory < RestCategory.Exhausted) && !p.health.hediffSet.HasTendableNonInjuryNonMissingPartHediff(false) && p.Awake() && !p.InAggroMentalState && !p.IsPrisoner;
+            return !p.Downed && (p?.needs == null || p?.needs?.food?.Starving != true) && p?.health?.hediffSet?.BleedRateTotal <= 0f && (p?.needs?.rest == null || p?.needs?.rest?.CurCategory < RestCategory.Exhausted) && p?.health?.hediffSet?.HasTendableNonInjuryNonMissingPartHediff(false) != true && p?.Awake() == true && p?.InAggroMentalState != true && p?.IsPrisoner != true;
         }
 
         //Checkyoself

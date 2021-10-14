@@ -286,9 +286,7 @@ namespace CultOfCthulhu
 
         public void GetWorshipGroup(IEnumerable<IntVec3> inRangeCells, bool forced = false)
         {
-            _ = Faction;
-            _ = this.GetRoom();
-
+            
             if (AvailableWorshippers == null || AvailableWorshippers.Count <= 0)
             {
                 return;

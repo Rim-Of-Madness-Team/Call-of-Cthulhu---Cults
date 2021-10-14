@@ -29,7 +29,7 @@
     <li>CETeam.CombatExtended</li>
     <li>syrchalis.traitvalue</li>
   </loadAfter>
-  <description>1.0.23.4 (08-14-2021)
+  <description>1.0.23.5 (10-14-2021)
 
 
 [h1]Gameplay expansion for RimWorld.[/h1]
@@ -100,6 +100,10 @@ Michael Cailler, Jigsawjohn , Daniel Schott, Penelope Charli Whitman, Jerome Gon
 ========================
 Changelog
 ========================
+1.0.23.5 (10-14-2021)
+========================
+Fixes issue with vampires and potentially other non-standard humanoid pawn attendance for worship and sacrifices
+
 1.0.23.4 (08-14-2021)
 ========================
 Adds in empty trade tags list to prevent issues with debug incident list menus
