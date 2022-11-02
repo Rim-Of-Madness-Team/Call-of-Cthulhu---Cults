@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="Cults_Grimoire">
+    <defName>Cults_Grimoire</defName>
+    <thingClass>CultOfCthulhu.ThingWithComps_CultGrimoire</thingClass>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <label>grimoire of the occult</label>
+    <description>At first glance, the grimoire compells the viewer to halt their gait. Upon closer examination, the seals and clasps that hold the tome tightly closed become like a boggling puzzle to a starved intellectual. What secrets could it possess? No, ...what powers?</description>
+    <graphicData>
+      <texPath>Item/Resource/Grimoire/Grimoire</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <category>Item</category>
+    <pathCost>10</pathCost>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <Mass>1.5</Mass>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>20</MarketValue>
+      <MaxHitPoints>20</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <SellPriceFactor>0.25</SellPriceFactor>
+    </statBases>
+    <costList>
+      <WoodLog>1</WoodLog>
+    </costList>
+    <tradeNeverStack>true</tradeNeverStack>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Neolithic</techLevel>
+    <tradeTags>
+      <li>Artifact</li>
+    </tradeTags>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ApparelNoQualityBase" Name="Cults_TheKingInYellow">
+    <defName>Cults_TheKingInYellow</defName>
+    <label>The King in Yellow</label>
+    <description>The King in Yellow appears as a mysterious, glowing book. The contents of which are mundane during the first act of the play, however proceeding beyond the first act of the play causes madness and a cult-like obsession with an ancient symbol described simply as The Yellow Sign.</description>
+    <graphicData>
+      <texPath>Item/Resource/TheKingInYellow/TheKingInYellow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <Mass>0.5</Mass>
+      <EquipDelay>2</EquipDelay>
+      <WorkToMake>2000</WorkToMake>
+      <MarketValue>20</MarketValue>
+      <MaxHitPoints>20</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <SellPriceFactor>0.25</SellPriceFactor>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <thingCategories>
+      <li>ApparelUtility</li>
+    </thingCategories>
+	<apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <scoreOffset>4</scoreOffset>
+      <careIfWornByCorpse>false</careIfWornByCorpse>
+      <careIfDamaged>false</careIfDamaged>
+      <ignoredByNonViolent>false</ignoredByNonViolent>
+      <wearPerDay>0</wearPerDay>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Belt</li>
+      </layers>
+    </apparel>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <tradeNeverStack>true</tradeNeverStack>
+    <smeltable>false</smeltable>
+    <burnableByRecipe>false</burnableByRecipe>
+    <drawGUIOverlay>false</drawGUIOverlay>
+	<verbs>
+      <li>
+        <verbClass>Verb_CastTargetEffect</verbClass>
+        <label>The King in Yellow</label>
+        <hasStandardCommand>true</hasStandardCommand>
+        <targetable>true</targetable>
+        <onlyManualCast>True</onlyManualCast>
+        <range>3</range>
+        <warmupTime>5</warmupTime>
+        <targetParams>
+          <canTargetBuildings>false</canTargetBuildings>
+          <onlyTargetPsychicSensitive>true</onlyTargetPsychicSensitive>
+          <neverTargetIncapacitated>true</neverTargetIncapacitated>
+        </targetParams>
+        <soundCast>PsychicInsanityLanceCast</soundCast>
+      </li>
+    </verbs>
+
+    <comps>
+      <li Class="CompProperties_Reloadable">
+        <maxCharges>1</maxCharges>
+        <destroyOnEmpty>true</destroyOnEmpty>
+        <hotKey>Misc4</hotKey>
+        <chargeNoun>charge</chargeNoun>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+      </li>
+      <li>
+        <compClass>CultOfCthulhu.CompTargetEffect_CultMinded</compClass>
+      </li>
+      <li Class="CompProperties_TargetEffect_FleckOnTarget">
+        <fleckDef>PsycastPsychicEffect</fleckDef>
+      </li>
+      <li Class="CompProperties_TargetEffect_FleckConnecting">
+        <fleckDef>PsycastPsychicLine</fleckDef>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(255,255,0,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <tradeability>Sellable</tradeability>
+    <alwaysHaulable>True</alwaysHaulable>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+</Defs>

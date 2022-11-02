@@ -1,0 +1,826 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--
+    <ThingDef ParentName="BuildingBase">
+    <defName>ThreeTileMarriageSpot</defName>
+    <label>marriage spot 3x1</label>
+    <description>Designates a spot where marriage ceremonies will take place. Spectators can watch from either side. This one is designed for temples.</description>
+    <thingClass>Building_MarriageSpot</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/MarriageSpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <statBases>
+      <WorkToBuild>0</WorkToBuild>
+    </statBases>
+    <useHitPoints>False</useHitPoints>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<size>(3,1)</size>
+    <designationCategory>Misc</designationCategory>
+    <passability>Standable</passability>
+    <building>
+      <sowTag>SupportPlantsOnly</sowTag>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+    </building>
+    <designationHotKey>Misc10</designationHotKey>
+  </ThingDef>
+  -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cults_Alcove</defName>
+    <label>alcove</label>
+    <description>A recess in a wall.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <fillPercent>0.2</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <clearBuildingArea>false</clearBuildingArea>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <holdsRoof>false</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <drawerType>RealtimeOnly</drawerType>
+    <building>
+      <isEdifice>false</isEdifice>
+      <isInert>false</isInert>
+      <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>250</WorkToBuild>
+    </statBases>
+    <graphicData>
+      <texPath>Walls/Details/Alcove</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>1.5</drawSize>
+      <damageData>
+        <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Walls/Details/Alcove_MenuIcon</uiIconPath>
+    <costStuffCount>25</costStuffCount>
+    <designationHotKey>Misc1</designationHotKey>
+    <placeWorkers>
+      <li>JecsTools.PlaceWorker_OnTopOfWalls</li>
+    </placeWorkers>
+    <modExtensions>
+      <li Class="JecsTools.BuildingExtension">
+        <wipeCategories>
+          <li>OnTopOfWalls</li>
+        </wipeCategories>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cults_AlcoveTorch</defName>
+    <label>alcove (torch)</label>
+    <description>A recess in a wall with a torch hanging inside.</description>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <fillPercent>0.2</fillPercent>
+    <useHitPoints>true</useHitPoints>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <rotatable>true</rotatable>
+    <clearBuildingArea>false</clearBuildingArea>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <holdsRoof>false</holdsRoof>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>false</blockLight>
+    <drawerType>RealtimeOnly</drawerType>
+    <building>
+      <isEdifice>false</isEdifice>
+      <isInert>false</isInert>
+      <canPlaceOverWall>true</canPlaceOverWall>
+    </building>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToBuild>250</WorkToBuild>
+    </statBases>
+    <graphicData>
+      <texPath>Walls/Details/AlcoveTorch</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>1.5</drawSize>
+      <damageData>
+        <!--  no damage marks because they don't move with the door
+        <rect>(0,0.12,1,0.76)</rect>-->
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Walls/Details/AlcoveTorch_MenuIcon</uiIconPath>
+    <costStuffCount>25</costStuffCount>
+    <costList>
+      <WoodLog>20</WoodLog>
+    </costList>
+    <designationHotKey>Misc1</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+      <li>JecsTools.PlaceWorker_OnTopOfWalls</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Refuelable">
+        <fuelConsumptionRate>2.2</fuelConsumptionRate>
+        <fuelCapacity>20.0</fuelCapacity>
+        <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
+        <fuelFilter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </fuelFilter>
+        <destroyOnNoFuel>false</destroyOnNoFuel>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>6</glowRadius>
+        <glowColor>(252,187,113,0)</glowColor>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>3.5</heatPerSecond>
+        <heatPushMaxTemperature>23</heatPushMaxTemperature>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="JecsTools.BuildingExtension">
+        <wipeCategories>
+          <li>OnTopOfWalls</li>
+        </wipeCategories>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cults_SignOfDagon</defName>
+    <label>sign of Dagon</label>
+    <description>Designates a spot where the guardians of the deep may roam. It's recommended to keep these magic circles outside of the colony. Once they arrive, the guardians will defend the spot the circle originated at until their death. Avoid bringing colonists near their circle.</description>
+    <thingClass>CultOfCthulhu.Building_SignOfDagon</thingClass>
+    <graphicData>
+      <texPath>Building/SignOfDagon/ROMSignOfDagon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <statBases>
+      <WorkToBuild>50</WorkToBuild>
+    </statBases>
+    <useHitPoints>False</useHitPoints>
+    <size>(3,3)</size>
+    <designationCategory>Misc</designationCategory>
+    <passability>Standable</passability>
+    <building>
+      <sowTag>SupportPlantsOnly</sowTag>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+    </building>
+    <researchPrerequisites>
+      <li>Forbidden_Studies</li>
+    </researchPrerequisites>
+    <designationHotKey>Misc10</designationHotKey>
+  </ThingDef>
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>Cults_PrayerPillow</defName>
+    <label>prayer pillow</label>
+    <graphicData>
+      <texPath>Building/CultPrayerPillow/CultPrayerPillow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+      <shadowData>
+        <volume>(0.4, 0.4, 0.4)</volume>
+      </shadowData>
+      <damageData>
+        <rectN>(0,0,1,0.703125)</rectN>
+        <rectS>(0.09375,0,0.84375,1)</rectS>
+        <rectE>(0,0,0.84375,0.625)</rectE>
+        <rectW>(0.15625,0,0.84375,0.625)</rectW>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToBuild>3000</WorkToBuild>
+      <Mass>1</Mass>
+      <Flammability>1.5</Flammability>
+      <Beauty>1</Beauty>
+      <Comfort>0.7</Comfort>
+    </statBases>
+    <description>A small, soft, comfy seat. Great for meditation.</description>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <pathCost>15</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <designationHotKey>Misc8</designationHotKey>
+    <defaultPlacingRot>North</defaultPlacingRot>
+    <rotatable>true</rotatable>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Cults_PewLinkable</defName>
+    <label>linkable pews</label>
+    <thingClass>Building</thingClass>
+    <uiIconPath>Building/SimplePew/pew_menuicon</uiIconPath>
+    <graphicData>
+      <texPath>Building/SimplePew/pewlink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom2</li>
+      </linkFlags>
+      <shadowData>
+        <volume>(0.3, 0.3, 0.6)</volume>
+      </shadowData>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToBuild>1200</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <Beauty>4</Beauty>
+      <Comfort>0.7</Comfort>
+    </statBases>
+    <description>A linkable bench designed for worshippers to sit and observe rituals.</description>
+    <size>(1,1)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>25</costStuffCount>
+    <pathCost>30</pathCost>
+    <fillPercent>0.40</fillPercent>
+    <designationCategory>Furniture</designationCategory>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <building>
+      <isSittable>true</isSittable>
+    </building>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>Cults_ForbiddenKnowledgeCenter</defName>
+    <label>forbidden knowledge center</label>
+    <description>A simplistic table covered in strange symbols, notes, and a tome of forbidden knowledge. Researchers work here to uncover forces beyond. Prolonged usage will result in sanity loss, yet the rewards will be worthwhile.</description>
+    <thingClass>CultOfCthulhu.Building_ForbiddenReserachCenter</thingClass>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <size>(3,2)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <resourcesFractionWhenDeconstructed>1.0</resourcesFractionWhenDeconstructed>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <costStuffCount>100</costStuffCount>
+    <costList>
+      <Cults_Grimoire>1</Cults_Grimoire>
+    </costList>
+    <graphicData>
+      <texPath>Building/FRC/ResearchBenchForbidden</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4,4)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToBuild>2800</WorkToBuild>
+      <Flammability>1.0</Flammability>
+      <ResearchSpeedFactor>0.6</ResearchSpeedFactor>
+      <Mass>90</Mass>
+    </statBases>
+    <fillPercent>0.5</fillPercent>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Misc</designationCategory>
+    <surfaceType>Item</surfaceType>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+  </ThingDef>
+  <!--
+   █████  ██   ████████  █████  ██████
+  ██   ██ ██      ██    ██   ██ ██   ██
+  ███████ ██      ██    ███████ ██████
+  ██   ██ ██      ██    ██   ██ ██   ██
+  ██   ██ ███████ ██    ██   ██ ██   ██
+-->
+  <ThingDef ParentName="BenchBase">
+    <defName>Cult_SacrificialAltar</defName>
+    <label>cult altar</label>
+    <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
+    <description>A solid surface on which to elevate speeches of worship to extra-cosmic entities.</description>
+    <tickerType>Rare</tickerType>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Building/StandardAltar/StandardAltar</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.0,2.0)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>125</costStuffCount>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>12500</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>10</Beauty>
+      <JoyGainFactor>1</JoyGainFactor>
+      <Mass>70</Mass>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Misc</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>CultOfCthulhu.ITab_Sacrifice</li>
+      <li>CultOfCthulhu.ITab_Worship</li>
+    </inspectorTabs>
+    <isAltar>true</isAltar>
+    <placeWorkers>
+      <li>PlaceWorker_WatchArea</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_RitualFocusNoArrow</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <ritualFocus>
+      <spectateDistance>2</spectateDistance>
+      <allowedSpectateSides>Up</allowedSpectateSides>
+    </ritualFocus>
+    <building>
+      <buildingTags Inherit="False">
+        <li>RitualFocus</li>
+      </buildingTags>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <watchBuildingStandDistanceRange>
+        <min>1</min>
+        <max>9</max>
+      </watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
+    </building>
+    <researchPrerequisites>
+      <li>Forbidden_Altar</li>
+    </researchPrerequisites>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <designationHotKey>Misc2</designationHotKey>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>Cult_AnimalSacrificeAltar</defName>
+    <label>sacrificial altar</label>
+    <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
+    <description>A solid surface on which to sacrifice to beings both petty and powerful. Specially designed to channel and collect blood.</description>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <tickerType>Rare</tickerType>
+    <graphicData>
+      <texPath>Building/AnimalAltar/AnimalAltar</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.0,2.0)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>125</costStuffCount>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>12500</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>10</Beauty>
+      <JoyGainFactor>1</JoyGainFactor>
+      <Mass>70</Mass>
+    </statBases>
+    <size>(3,1)</size>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>CultOfCthulhu.ITab_Sacrifice</li>
+      <li>CultOfCthulhu.ITab_Worship</li>
+    </inspectorTabs>
+    <isAltar>true</isAltar>
+    <placeWorkers>
+      <li>PlaceWorker_WatchArea</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_RitualFocusNoArrow</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <ritualFocus>
+      <spectateDistance>2</spectateDistance>
+      <allowedSpectateSides>Up</allowedSpectateSides>
+    </ritualFocus>
+    <building>
+      <buildingTags Inherit="False">
+        <li>RitualFocus</li>
+      </buildingTags>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <watchBuildingStandDistanceRange>
+        <min>1</min>
+        <max>9</max>
+      </watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
+    </building>
+    <researchPrerequisites>
+      <li>Forbidden_Sacrifice</li>
+    </researchPrerequisites>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <designationHotKey>Misc2</designationHotKey>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>Cult_HumanSacrificeAltar</defName>
+    <label>sacrificial altar</label>
+    <thingClass>CultOfCthulhu.Building_SacrificialAltar</thingClass>
+    <description>A solid surface on which to sacrifice to beings both petty and powerful. Specially designed to channel and collect blood.</description>
+    <tickerType>Rare</tickerType>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Building/HumanAltar/HumanAltar</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(4.0,2.0)</drawSize>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>125</costStuffCount>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>12500</WorkToBuild>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>10</Beauty>
+      <JoyGainFactor>1</JoyGainFactor>
+      <Mass>75</Mass>
+    </statBases>
+    <size>(3,1)</size>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>CultOfCthulhu.ITab_Sacrifice</li>
+      <li>CultOfCthulhu.ITab_Worship</li>
+    </inspectorTabs>    
+    <isAltar>true</isAltar>
+    <placeWorkers>
+      <li>PlaceWorker_WatchArea</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_RitualFocusNoArrow</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <ritualFocus>
+      <spectateDistance>2</spectateDistance>
+      <allowedSpectateSides>Up</allowedSpectateSides>
+    </ritualFocus>
+    <building>
+      <buildingTags Inherit="False">
+        <li>RitualFocus</li>
+      </buildingTags>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <watchBuildingStandDistanceRange>
+        <min>1</min>
+        <max>9</max>
+      </watchBuildingStandDistanceRange>
+      <watchBuildingStandRectWidth>9</watchBuildingStandRectWidth>
+    </building>
+    <researchPrerequisites>
+      <li>Forbidden_Human</li>
+    </researchPrerequisites>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <designationHotKey>Misc2</designationHotKey>
+  </ThingDef>
+  <!--
+  ██      ██ ████████ ██   ██ ███████
+  ██      ██    ██    ██   ██ ██
+  ██      ██    ██    ███████ ███████
+  ██      ██    ██    ██   ██      ██
+  ███████ ██    ██    ██   ██ ███████
+-->
+  <!-- BUILDABLE OBELISKS -->
+  <ThingDef Name="ObeliskBase" ParentName="BuildingBase" Abstract="true">
+    <thingClass>CultOfCthulhu.Building_Monolith</thingClass>
+    <category>Building</category>
+    <thingCategories>
+      <li>Buildings</li>
+    </thingCategories>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <stealable>false</stealable>
+    <graphicData>
+      <texPath>Building/ObeliskConstructed/ObeliskConstructed_Red</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(6.0,10.0)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Building/ObeliskConstructed/ObeliskConstructed_UI</uiIconPath>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
+    <passability>Impassable</passability>
+    <pathCost>8</pathCost>
+    <staticSunShadowHeight>1.5</staticSunShadowHeight>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>160</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Flammability>0</Flammability>
+      <Beauty>10</Beauty>
+      <Mass>80</Mass>
+    </statBases>
+    <selectable>true</selectable>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>300</costStuffCount>
+    <hasInteractionCell>false</hasInteractionCell>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <resourcesFractionWhenDeconstructed>0.5</resourcesFractionWhenDeconstructed>
+    <researchPrerequisites>
+      <li>Forbidden_Obelisks</li>
+    </researchPrerequisites>
+    <building>
+      <soundAmbient>RitualChanting</soundAmbient>
+    </building>
+    <designationHotKey>Misc10</designationHotKey>
+    <designationCategory>Misc</designationCategory>
+  </ThingDef>
+  <ThingDef ParentName="ObeliskBase">
+    <defName>Cults_ObeliskConstructed_Red</defName>
+    <category>Building</category>
+    <label>bright obelisk (red)</label>
+    <description>A mysterious upright standing block of stone. It has been specially blessed with a red aura.</description>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(200,0,0,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ObeliskBase">
+    <defName>Cults_ObeliskConstructed_Green</defName>
+    <label>bright obelisk (green)</label>
+    <description>A mysterious upright standing block of stone. It has been specially blessed with a green aura.</description>
+    <graphicData>
+      <texPath>Building/ObeliskConstructed/ObeliskConstructed_Green</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(6.0,10.0)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(0,200,0,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ObeliskBase">
+    <defName>Cults_ObeliskConstructed_Blue</defName>
+    <label>bright obelisk (blue)</label>
+    <description>A mysterious upright standing block of stone. It has been specially blessed with a blue aura.</description>
+    <graphicData>
+      <texPath>Building/ObeliskConstructed/ObeliskConstructed_Blue</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(6.0,10.0)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(0,0,200,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ObeliskBase">
+    <defName>Cults_ObeliskConstructed_Yellow</defName>
+    <label>bright obelisk (yellow)</label>
+    <description>A mysterious upright standing block of stone. It has been specially blessed with a yellow aura.</description>
+    <graphicData>
+      <texPath>Building/ObeliskConstructed/ObeliskConstructed_Yellow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(6.0,10.0)</drawSize>
+      <shaderType>CutoutComplex</shaderType>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(200,200,0,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ObeliskBase">
+    <defName>Cults_ObeliskConstructed_DarkRed</defName>
+    <label>dark obelisk (red)</label>
+    <description>A mysterious upright standing block of stone. It has been specially blessed with a dark red aura.</description>
+    <uiIconPath>Building/MonolithNightmare/ObeliskNightmare_UI</uiIconPath>
+    <graphicData>
+      <texPath>Building/MonolithNightmare/ObeliskNightmare</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(6.0,10.0)</drawSize>
+      <shaderType>TransparentPostLight</shaderType>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(200,0,0,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ObeliskBase">
+    <defName>Cults_ObeliskConstructed_DarkGreen</defName>
+    <label>dark obelisk (green)</label>
+    <description>A mysterious upright standing block of stone. It has been specially blessed with a dark green aura.</description>
+    <uiIconPath>Building/MonolithNightmare/ObeliskNightmare_UI</uiIconPath>
+    <graphicData>
+      <texPath>Building/MonolithNightmare/ObeliskNightmare_Green</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(6.0,10.0)</drawSize>
+      <shaderType>TransparentPostLight</shaderType>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(0,200,0,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ObeliskBase">
+    <defName>Cults_ObeliskConstructed_DarkBlue</defName>
+    <label>dark obelisk (blue)</label>
+    <description>A mysterious upright standing block of stone. It has been specially blessed with a dark blue aura.</description>
+    <uiIconPath>Building/MonolithNightmare/ObeliskNightmare_UI</uiIconPath>
+    <graphicData>
+      <texPath>Building/MonolithNightmare/ObeliskNightmare_Blue</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(6.0,10.0)</drawSize>
+      <shaderType>TransparentPostLight</shaderType>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(0,0,200,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ObeliskBase">
+    <defName>Cults_ObeliskConstructed_DarkYellow</defName>
+    <label>dark obelisk (yellow)</label>
+    <description>A mysterious upright standing block of stone. It has been specially blessed with a dark yellow aura.</description>
+    <uiIconPath>Building/MonolithNightmare/ObeliskNightmare_UI</uiIconPath>
+    <graphicData>
+      <texPath>Building/MonolithNightmare/ObeliskNightmare_Yellow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawRotated>false</drawRotated>
+      <drawSize>(6.0,10.0)</drawSize>
+      <shaderType>TransparentPostLight</shaderType>
+      <damageData>
+        <rect>(0.35,0.35,0.3,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <comps>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(200,200,0,0)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

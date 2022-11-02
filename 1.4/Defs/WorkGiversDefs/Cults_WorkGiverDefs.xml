@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorkGiverDef>
+    <defName>LoadTransportersPawn</defName>
+    <label>load transporters</label>
+    <giverClass>CultOfCthulhu.WorkGiver_LoadTransportersPawn</giverClass>
+    <workType>Hauling</workType>
+    <verb>load</verb>
+    <gerund>loading</gerund>
+    <priorityInType>110</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+  <WorkGiverDef>
+    <defName>PruneAndRepair</defName>
+    <label>repair damaged things</label>
+    <giverClass>CultOfCthulhu.WorkGiver_PruneAndRepair</giverClass>
+    <workType>Construction</workType>
+    <priorityInType>81</priorityInType>
+    <verb>prune and repair</verb>
+    <gerund>pruning and repairing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <nonColonistsCanDo>true</nonColonistsCanDo>
+  </WorkGiverDef>
+  <WorkGiverDef>
+    <defName>ROM_InvestigateMysteriousObject</defName>
+    <label>investigate</label>
+    <giverClass>CultOfCthulhu.WorkGiver_Investigate</giverClass>
+    <workType>Research</workType>
+    <emergency>true</emergency>
+    <verb>investigate</verb>
+    <gerund>investigating</gerund>
+    <fixedBillGiverDefs>
+    </fixedBillGiverDefs>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <nonColonistsCanDo>false</nonColonistsCanDo>
+  </WorkGiverDef>
+  <WorkGiverDef>
+    <defName>ROM_InvestigateMysteriousObjectTree</defName>
+    <label>investigate</label>
+    <giverClass>CultOfCthulhu.WorkGiver_InvestigateTree</giverClass>
+    <workType>Research</workType>
+    <emergency>true</emergency>
+    <verb>investigate</verb>
+    <gerund>investigating</gerund>
+    <fixedBillGiverDefs>
+    </fixedBillGiverDefs>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <nonColonistsCanDo>false</nonColonistsCanDo>
+  </WorkGiverDef>
+</Defs>

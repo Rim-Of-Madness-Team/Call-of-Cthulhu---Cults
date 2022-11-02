@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="RelicInertBase">
+    <defName>ROM_RelicInertGrimoire</defName>
+    <label>grimoire</label>
+    <graphicData>
+      <texPath>Item/Resource/Grimoire/RelicGrimoire</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costStuffCount>100</costStuffCount>
+  </ThingDef>
+
+</Defs>

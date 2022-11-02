@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DamageDef>
+    <defName>Cults_BlackEMP</defName>
+    <label>dark energy</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been blasted to death.</deathMessage>
+    <harmsHealth>false</harmsHealth>
+    <impactSoundType>Electric</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+    <explosionCellMote>Mote_BlastBlackEMP</explosionCellMote>
+    <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+    <explosionInteriorMote>Mote_BlastBlackEMP</explosionInteriorMote>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+  </DamageDef>
+  <ThingDef ParentName="MoteBase">
+    <label>darkness</label>
+    <defName>Mote_BlastBlackEMP</defName>
+    <thingClass>MoteThrown</thingClass>
+    <graphicData>
+      <texPath>Mote/Cults_BlackEMP</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeInTime>0.03</fadeInTime>
+      <solidTime>0.03</solidTime>
+      <fadeOutTime>0.2</fadeOutTime>
+    </mote>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName = "Cults_PlantTreeNightmare"]/comps</xpath>
+        <value>
+          <li Class="CompProperties_Psylinkable">
+            <requiredSubplantCountPerPsylinkLevel>
+              <li>20</li>
+              <li>20</li>
+              <li>20</li>
+              <li>20</li>
+              <li>20</li>
+              <li>20</li>
+            </requiredSubplantCountPerPsylinkLevel>
+            <requiredFocus>Natural</requiredFocus>
+            <linkSound>AnimaTreeLink</linkSound>
+            <enoughPlantsLetterLabel>About: Eerie tree linking</enoughPlantsLetterLabel>
+            <enoughPlantsLetterText>The eerie tree now has {0} ground thorns around it. This is enough for a tribal person to begin their first linking ritual!\n\nThe linking ritual gives a level of psylink and the ability to use psychic powers. Upgrading to a higher level requires more grass at each level.\n\nThe ground thorns requirements for linking rituals to upgrade psycasters are:\n\n{1}\n\nNote: Only those with the nature focus type can meditate to or link with eerie trees. You can see a person's focus types by looking at their info card with the 'i' button.</enoughPlantsLetterText>
+          </li>        
+          <li Class="CompProperties_MeditationFocus">
+            <statDef>MeditationFocusStrength</statDef>
+            <focusTypes>
+              <li>Morbid</li>
+            </focusTypes>
+            <offsets>
+              <li Class="FocusStrengthOffset_BuildingDefs">
+                <defs>
+                  <Cult_HumanSacrificeAltar>0.03</Cult_HumanSacrificeAltar>
+                  <Cult_AnimalSacrificeAltar>0.02</Cult_AnimalSacrificeAltar>
+                  <Cult_SacrificialAltar>0.01</Cult_SacrificialAltar>
+                  <YigSculptureLarge>0.02</YigSculptureLarge>
+                  <SculptureCthulhu>0.03</SculptureCthulhu>
+                  <SculptureBast>0.03</SculptureBast>
+                  <SculptureDagon>0.03</SculptureDagon>
+                  <SculptureNyarlathotep>0.03</SculptureNyarlathotep>
+                  <SculptureShub>0.03</SculptureShub>
+                  <SculptureTsathoggua>0.03</SculptureTsathoggua>
+                  <SculptureHastur>0.03</SculptureHastur>
+                  <Cults_ObeliskConstructed_Red>0.01</Cults_ObeliskConstructed_Red>
+                  <Cults_ObeliskConstructed_Green>0.01</Cults_ObeliskConstructed_Green>
+                  <Cults_ObeliskConstructed_Blue>0.01</Cults_ObeliskConstructed_Blue>
+                  <Cults_ObeliskConstructed_Yellow>0.01</Cults_ObeliskConstructed_Yellow>
+                  <Cults_ObeliskConstructed_DarkRed>0.01</Cults_ObeliskConstructed_DarkRed>
+                  <Cults_ObeliskConstructed_DarkGreen>0.01</Cults_ObeliskConstructed_DarkGreen>
+                  <Cults_ObeliskConstructed_DarkBlue>0.01</Cults_ObeliskConstructed_DarkBlue>
+                  <Cults_ObeliskConstructed_DarkYellow>0.01</Cults_ObeliskConstructed_DarkYellow>
+                </defs>
+                <radius>9.9</radius>
+                <maxBuildings>4</maxBuildings>
+                <explanationKey>MeditationFocusPerAnimusStoneAndShrine</explanationKey>
+                <explanationKeyAbstract>MeditationFocusPerAnimusStoneAndShrineAbstract</explanationKeyAbstract>
+              </li>
+              <li Class="FocusStrengthOffset_NearbyGraves">
+                <defs>
+                  <li>Grave</li>
+                  <li>Sarcophagus</li>
+                </defs>
+                <offsetPerBuilding>0.01</offsetPerBuilding>
+                <radius>9.9</radius>
+                <maxBuildings>4</maxBuildings>
+                <focusPerFullGrave>0.01</focusPerFullGrave>
+                <explanationKey>MeditationFocusPerGrave</explanationKey>
+                <explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+              </li>
+            </offsets>
+          </li>
+          <li Class="CompProperties_ToggleDrawAffectedMeditationFoci" />
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

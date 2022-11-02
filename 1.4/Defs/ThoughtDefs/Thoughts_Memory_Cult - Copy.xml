@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Nightmare Tree-related Thoughts -->
+  <ThoughtDef>
+    <defName>Cults_ObservedNightmareTree</defName>
+    <thoughtClass>Thought_MemoryObservation</thoughtClass>
+    <durationDays>7</durationDays>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>observed eerie tree</label>
+        <description>That tree... it wasn't there before. I'm sure of it.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Cults_ObservedNightmareTreeCultist</defName>
+    <thoughtClass>Thought_MemoryObservation</thoughtClass>
+    <durationDays>7</durationDays>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>observed holy tree</label>
+        <description>Such wonderous markings must be preserved.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Cults_HeardNightmareTreeDeathScream</defName>
+    <durationDays>3</durationDays>
+    <stackLimit>3</stackLimit>
+    <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+    <stages>
+      <li>
+        <label>eerie tree scream</label>
+        <description>That tree howled out in pain. I felt it.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

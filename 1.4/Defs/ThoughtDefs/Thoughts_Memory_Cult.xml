@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Cult Seed Incidents -->
+  <ThoughtDef>
+    <defName>Cults_ObservedNightmareMonolith</defName>
+    <thoughtClass>Thought_MemoryObservation</thoughtClass>
+    <durationDays>7</durationDays>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>observed monolith</label>
+        <description>How did it get here? What do those symbols mean? That thing gives me the creeps.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Cults_ObservedNightmareMonolithCultist</defName>
+    <thoughtClass>Thought_MemoryObservation</thoughtClass>
+    <durationDays>7</durationDays>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>observed monolith</label>
+        <description>The symbols are a sign from the gods. We should preserve them.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!-- Cultist Status Thought Memories -->
+  <ThoughtDef>
+    <defName>Cults_FoundedCult</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>360</durationDays>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>founded the local cult</label>
+        <visible>false</visible>
+      </li>
+    </stages>
+    <thoughtToMake>Cults_FoundedCultMood</thoughtToMake>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Cults_FoundedCultMood</defName>
+    <durationDays>7.0</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>founded a cult</label>
+        <description>I have to tell everyone. Everything is so clear now, and they must know the truth. Great things await us.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Cults_JoinedCult</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>360</durationDays>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>joined the local cult</label>
+        <visible>false</visible>
+      </li>
+    </stages>
+    <thoughtToMake>Cults_JoinedCultMood</thoughtToMake>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Cults_JoinedCultMood</defName>
+    <durationDays>3.0</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>joined a cult</label>
+        <description>I'm part of something greater now.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Cults_MadeInvestigation</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>360</durationDays>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>investigated strange things</label>
+        <visible>false</visible>
+      </li>
+    </stages>
+    <thoughtToMake>Cults_MadeInvestigationMood</thoughtToMake>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Cults_MadeInvestigationMood</defName>
+    <durationDays>0.1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>performed investigation</label>
+        <description>ι нανє ℓσσкє∂ υρσи αℓℓ тнαт тнє υиινєяѕє нαѕ тσ нσℓ∂ σf нσяяσя, αи∂ єνєи тнє ѕкιєѕ σf ѕρяιиg αи∂ тнє fℓσωєяѕ σf ѕυммєя мυѕт єνєя αfтєяωαя∂ вє ρσιѕσи тσ мє.̤̤</description>
+        <baseMoodEffect>-41366</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>Cults_BlackoutBook</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>7</durationDays>
+    <stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>acquired occult grimoire</label>
+        <description>I blacked out. I don't remember. Afterwards, when I ran my fingers over the book, I could feel it calling my name. Am I going mad?</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

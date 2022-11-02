@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DamageDef>
+    <defName>Cults_PsionicBlastDamage</defName>
+    <label>psionic blast</label>
+    <workerClass>CultOfCthulhu.DamageWorker_PsionicBlast</workerClass>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <harmsHealth>false</harmsHealth>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+  </DamageDef>
+  <DamageDef>
+    <defName>Cults_PsionicShockDamage</defName>
+    <label>psionic shock</label>
+    <workerClass>CultOfCthulhu.DamageWorker_PsionicShock</workerClass>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <harmsHealth>false</harmsHealth>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+  </DamageDef>
+  <DamageDef>
+    <defName>Cults_PsionicBurnDamage</defName>
+    <label>psionic burn</label>
+    <workerClass>CultOfCthulhu.DamageWorker_PsionicBurn</workerClass>
+    <hasForcefulImpact>true</hasForcefulImpact>
+    <harmsHealth>false</harmsHealth>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+  </DamageDef>
+</Defs>
