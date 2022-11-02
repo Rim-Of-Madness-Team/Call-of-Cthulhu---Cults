@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is automatically imported in MSBuild 15+ (Visual Studio 2017+) via the Microsoft.Common.props import, so put all the common contents between all the csproj files here -->
+<Project>
+    <PropertyGroup>
+        <Configurations>RW1.4;RW1.4Unstable</Configurations>
+        <Configuration Condition=" '$(Configuration)' == '' ">RW1.4</Configuration>
+        <TargetFramework>net48</TargetFramework>
+        <NoStdLib>true</NoStdLib>
+        <LangVersion>10</LangVersion>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <Version>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)\..\About\Version.txt"))</Version>
+        <!--
+        For some reason, although SDK projects should default Deterministic to true, when importing this props file,
+        builds become non-deterministic unless Deterministic is explicitly set to true here.
+        -->
+        <Deterministic>true</Deterministic>
+    </PropertyGroup>
+    <PropertyGroup>
+        <!-- Always using "Release" build -->
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <DefineConstants>TRACE</DefineConstants>
+    </PropertyGroup>
+    <Choose>
+        <When Condition=" '$(Configuration)' == 'RW1.4' ">
+            <PropertyGroup>
+                <OutputPath>..\1.4\Assemblies\</OutputPath>
+            </PropertyGroup>
+
+            <ItemGroup>
+                <PackageReference Include="Lib.Harmony" Version="2.2.*" ExcludeAssets="runtime"/>
+            </ItemGroup>
+            <ItemGroup>
+                <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.*"/> <!-- only stable versions -->
+            </ItemGroup>
+
+            <!-- Note, all  'condition' hint paths will use the 'last' one in the list it finds -->
+            <!-- The order for these are: 
+                    - workshop (one directory up, two directories up) 
+                    - mod folder (one directory up, two directories up)
+            The reason for two directories up is that I (jecrell) normally mod in a seperate 'Workspace' directory
+            -->
+            <ItemGroup>
+                <Reference Include="DubsBadHygiene">
+                    <HintPath>..\..\..\..\..\workshop\content\294100\836308268\1.4\Assemblies\BadHygiene.dll</HintPath>
+                    <Private>false</Private>
+                </Reference>
+                
+                <Reference Include="JecsTools">
+                    <!-- Get a copy from the workshop directory if it exists... -->
+                    <HintPath>..\..\JecsTools\1.4\Assemblies\0JecsTools.dll</HintPath>
+                    <Private>false</Private>
+                </Reference>
+
+                <Reference Include="AbilityUser">
+                    <HintPath>..\..\JecsTools\1.4\Assemblies\AbilityUser.dll</HintPath>
+                    <Private>false</Private>
+                </Reference>
+
+                <Reference Include="CompAnimated">
+                    <HintPath>..\..\JecsTools\1.4\Assemblies\CompAnimated.dll</HintPath>
+                    <Private>false</Private>
+                </Reference>
+
+            </ItemGroup>
+        </When>
+    </Choose>
+
+</Project>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef Name="Cults_BodyPartProstheticBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <thingCategories>
+      <li>BodyPartsProsthetic</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(154,124,104)</color>
+    </graphicData>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+    </statBases>
+	<!-- Same as RW 1.4 but without a recipe maker //TODO Update for 1.5+
+    <recipeMaker>
+      <displayPriority>600</displayPriority>
+    </recipeMaker>
+	-->
+  </ThingDef>
+
+  <ThingDef ParentName="Cults_BodyPartProstheticBase">
+    <defName>Cults_PsionicBrain</defName>
+    <label>psionic lobe</label>
+    <description>A mysterious tumorous growth that grants minor telekinetic and psychic powers.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Steel>40</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>1.0</Mass>
+      <MarketValue>1500</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="Cults_BodyPartProstheticBase">
+    <defName>Cults_MonstrousBrain</defName>
+    <label>monstrous brain</label>
+    <description>A mysterious tumorous growth that grants advanced intelligence.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>1.0</Mass>
+      <MarketValue>500</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="Cults_BodyPartProstheticBase">
+    <defName>Cults_MonstrousBody</defName>
+    <label>monstrous body</label>
+    <description>A modified body that changes the size of the pawn.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>15.0</Mass>
+      <MarketValue>500</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="Cults_BodyPartProstheticBase">
+    <defName>Cults_TentacleArm</defName>
+    <label>tentacle</label>
+    <description>Mysterious appendage that writhes of its own accord forming unusual patterns in its movements.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>2.0</Mass>
+      <MarketValue>40</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="Cults_BodyPartProstheticBase">
+    <defName>Cults_CthulhidTentacle</defName>
+    <label>cthulhid tentacle</label>
+    <description>Mysterious appendage that writhes of its own accord forming unusual patterns in its movements.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>1.8</Mass>
+      <MarketValue>400</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+  <ThingDef ParentName="Cults_BodyPartProstheticBase">
+    <defName>Cults_CthulhidEyestalk</defName>
+    <label>horrifying eyestalk</label>
+    <description>Mysterious eye-appendage that writhes of its own accord forming unusual patterns in its movements.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.1</Mass>
+      <MarketValue>400</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <tradeability>Sellable</tradeability>
+  </ThingDef>
+</Defs>

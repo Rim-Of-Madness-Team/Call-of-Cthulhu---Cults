@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>ByakheeIncoming</defName>
+    <label>byakhee (incoming)</label>
+    <thingClass>DropPodIncoming</thingClass>
+    <graphicData>
+      <texPath>Pawn/Byakhee/Byakhee</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>5.0</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.8, 0.6)</volume>
+      </shadowData>
+    </graphicData>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPod_Fall</anticipationSound>
+      <anticipationSoundTicks>100</anticipationSoundTicks>
+      <motesPerCell>0</motesPerCell>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>ByakheeLeaving</defName>
+    <label>byakhee (leaving)</label>
+    <thingClass>FlyShipLeaving</thingClass>
+    <graphicData>
+      <texPath>Pawn/Byakhee/Byakhee</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>5.0</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.8, 0.6)</volume>
+      </shadowData>
+    </graphicData>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <reversed>true</reversed>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPod_Leaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+      <ticksToImpactRange><min>-40</min><max>-15</max></ticksToImpactRange>
+    </skyfaller>
+  </ThingDef>
+
+  
+  <WorldObjectDef>
+    <defName>ByakheeTraveling</defName>
+    <label>byakhee</label>
+    <description>Byakhee in flight.</description>
+    <worldObjectClass>TravelingTransportPods</worldObjectClass>
+    <texture>WorldObjects/ByakheeFlying</texture>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>WorldObjects/ByakheeFlying</expandingIconTexture>
+    <expandingIconPriority>60</expandingIconPriority>
+    <expandMore>true</expandMore>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+  </WorldObjectDef>
+
+
+  <ThingDef>
+    <defName>ByakheeIncoming_old</defName>
+    <label>flyer (incoming)</label>
+    <thingClass>CultOfCthulhu.PawnFlyersIncoming</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Pawn/Byakhee/Byakhee</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>5.0</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.8, 0.6)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+  <ThingDef>
+    <defName>ByakheeLeaving_old</defName>
+    <label>flyer (leaving)</label>
+    <thingClass>CultOfCthulhu.PawnFlyersLeaving</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Pawn/Byakhee/Byakhee</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>5.0</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.8, 0.6)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+  <WorldObjectDef>
+    <defName>ByakheeTraveling_old</defName>
+    <label>flyer (traveling)</label>
+    <description>Byakhee in flight.</description>
+    <worldObjectClass>CultOfCthulhu.PawnFlyersTraveling</worldObjectClass>
+    <texture>WorldObjects/ByakheeFlying</texture>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>WorldObjects/ByakheeFlying</expandingIconTexture>
+    <expandingIconPriority>6</expandingIconPriority>
+  </WorldObjectDef>
+  <ThingDef>
+    <defName>ByakheeLanded</defName>
+    <label>flyer (landed)</label>
+    <category>Item</category>
+    <thingClass>CultOfCthulhu.PawnFlyersLanded</thingClass>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Pawn/Byakhee/Byakhee</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>5.0</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.8, 0.6)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <blockWind>true</blockWind>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+  </ThingDef>
+  <TaleDef>
+    <defName>RodeByakhee</defName>
+    <label>rode byakhee</label>
+    <taleClass>Tale_SinglePawn</taleClass>
+    <type>Volatile</type>
+    <baseInterest>1.0</baseInterest>
+    <rulePack>
+      <rulesStrings>
+        <li>tale_noun-&gt;[pawn_nameShortDef]'s flight on a Byakhee</li>
+        <li>image-&gt;[pawn_nameFull] flying with a Byakhee [circumstance_group]</li>
+        <li>image-&gt;[pawn_nameFull] soaring through the skies upon a Byakhee [circumstance_group]</li>
+        <li>image-&gt;[pawn_nameFull] sailing through the clouds on a Byakhee [circumstance_group]</li>
+        <li>image-&gt;[pawn_nameFull] riding a Byakhee [circumstance_group]</li>
+        <li>circumstance_phrase-&gt;in front of a [terrainfeature]</li>
+        <li>circumstance_phrase-&gt;with incredible force</li>
+        <li>circumstance_phrase-&gt;in a plume of wind and dust</li>
+        <li>circumstance_phrase-&gt;with the Byakhee roaring with an alien tongue</li>
+        <li>circumstance_phrase-&gt;in a precision landing</li>
+        <li>desc_sentence-&gt;[pawn_pronoun] is concentrating intently on the reins</li>
+        <li>desc_sentence-&gt;[pawn_pronoun] has [pawn_possessive] eyes closed and looks afraid.</li>
+        <li>desc_sentence-&gt;[pawn_pronoun] is unconscious, [pawn_possessive] tongue lolling out, drool dripping.</li>
+        <li>desc_sentence-&gt;[pawn_pronoun] is smiling with grim joy.</li>
+        <li>desc_sentence-&gt;[pawn_pronoun] seems to have no idea what [pawn_pronoun] is doing.</li>
+        <li>desc_sentence-&gt;[pawn_pronoun] is strapped in with [pawn_possessive] eyes closed, totally helpless.</li>
+        <li>desc_sentence-&gt;The hune within the Byakhee burns with unnatural colors that match its heartless eyes.</li>
+        <li>desc_sentence-&gt;A nearby [animal] is looking up, startled.</li>
+        <li>desc_sentence-&gt;A [animal] is fleeing the Byakhee in fear.</li>
+        <li>desc_sentence-&gt;There is a [terrainfeature] in the background.</li>
+        <li>desc_sentence-&gt;A [outlander] watches silently from afar.</li>
+      </rulesStrings>
+    </rulePack>
+  </TaleDef>
+</Defs>

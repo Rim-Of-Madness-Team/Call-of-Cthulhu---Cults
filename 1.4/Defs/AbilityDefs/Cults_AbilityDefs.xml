@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ================================================================= -->
+  <!-- ================================================================= -->
+  <!-- ======================== PSIONIC POWERS ========================= -->
+  <!-- ================================================================= -->
+  <!-- ================================================================= -->
+  <!-- ===================== Projectiles =============================== -->
+  <ThingDef ParentName="BaseBullet" Name="Cults_PFlyingObject">
+    <defName>Cults_PFlyingObject</defName>
+    <thingClass>AbilityUser.FlyingObject</thingClass>
+    <label>flying object</label>
+    <graphicData>
+      <texPath>UI/Icons/Commands/PsionicBlast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <speed>10</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="Cults_PPsionicBlast">
+    <defName>Cults_PPsionicBlast</defName>
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <label>psionic blast</label>
+    <graphicData>
+      <texPath>UI/Icons/Commands/PsionicBlast</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Cults_PsionicBlastDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>9999</speed>
+    </projectile>
+    <HealFailChance>0.1</HealFailChance>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="Cults_PPsionicShock">
+    <defName>Cults_PPsionicShock</defName>
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <label>psionic blast</label>
+    <graphicData>
+      <texPath>UI/Icons/Commands/PsionicShock</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Cults_PsionicShockDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>9999</speed>
+    </projectile>
+    <HealFailChance>0.1</HealFailChance>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="Cults_PPsionicBurn">
+    <defName>Cults_PPsionicBurn</defName>
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <label>psionic burn</label>
+    <graphicData>
+      <texPath>UI/Icons/Commands/PsionicBurn</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Cults_PsionicBurnDamage</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>9999</speed>
+    </projectile>
+    <HealFailChance>0.1</HealFailChance>
+  </ThingDef>
+  <!-- ===================== Psionic Blast =============================== -->
+  <AbilityUser.AbilityDef ParentName="BaseAbility">
+    <defName>Cults_PsionicBlast</defName>
+    <label>Psionic Blast</label>
+    <uiIconPath>UI/Icons/Commands/PsionicBlast</uiIconPath>
+    <description>Pushes characters away by 8 tiles.</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Cults_PPsionicBlast</defaultProjectile>
+      <abilityDef>Cults_PsionicBlast</abilityDef>
+      <isViolent>false</isViolent>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>180.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>Cults_PsionicCastSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetItems>false</canTargetItems>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </AbilityUser.AbilityDef>
+  <AbilityUser.AbilityDef ParentName="BaseAbility">
+    <defName>Cults_PsionicShock</defName>
+    <label>Psionic Shock</label>
+    <uiIconPath>UI/Icons/Commands/PsionicShock</uiIconPath>
+    <description>Paralyzes the brain of the target. On a critical success, the shock causes the head of the target to explode.</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Cults_PPsionicShock</defaultProjectile>
+      <abilityDef>Cults_PsionicShock</abilityDef>
+      <isViolent>false</isViolent>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>200.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>Cults_PsionicCastSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetItems>false</canTargetItems>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </AbilityUser.AbilityDef>
+  <AbilityUser.AbilityDef ParentName="BaseAbility">
+    <defName>Cults_PsionicBurn</defName>
+    <label>Psionic Burn</label>
+    <uiIconPath>UI/Icons/Commands/PsionicBurn</uiIconPath>
+    <description>Starts a fire on the target.</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>Cults_PPsionicBurn</defaultProjectile>
+      <abilityDef>Cults_PsionicBurn</abilityDef>
+      <isViolent>false</isViolent>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>600.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>Cults_PsionicCastSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <extraDamages>
+        <li>
+          <damage>8</damage>
+          <damageDef>Flame</damageDef>
+          <chance>0.5</chance>
+        </li>
+      </extraDamages>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetItems>false</canTargetItems>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </AbilityUser.AbilityDef>
+</Defs>

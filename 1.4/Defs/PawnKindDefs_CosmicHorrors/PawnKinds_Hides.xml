@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="LeatherBase">
+    <defName>CH_Leather_Byakhee</defName>
+    <description>.</description>
+    <label>byakhee chitin</label>
+    <graphicData>
+      <color>(54,125,54)</color>
+      <colorTwo>(54,125,54)</colorTwo>
+    </graphicData>
+    <stuffProps>
+      <color>(54,125,54)</color>
+      <commonality>0.01</commonality>
+    </stuffProps>
+  </ThingDef>
+  <!--========== blck goathide ============-->
+  <ThingDef ParentName="LeatherBase">
+    <defName>CH_Leather_BlackGoathide</defName>
+    <description>.</description>
+    <label>black goathide</label>
+    <graphicData>
+      <color>(50,50,50)</color>
+      <colorTwo>(50,50,50)</colorTwo>
+    </graphicData>
+    <stuffProps>
+      <color>(50,50,50)</color>
+      <commonality>0.01</commonality>
+    </stuffProps>
+  </ThingDef>
+  <!-- Reanimated Corpse -->
+  <ThingDef ParentName="LeatherBase">
+    <defName>CH_Leather_ReanimatedCorpse</defName>
+    <description>.</description>
+    <label>reanimated leather</label>
+    <graphicData>
+      <color>(95,123,90)</color>
+      <colorTwo>(95,123,90)</colorTwo>
+    </graphicData>
+    <stuffProps>
+      <color>(95,123,90)</color>
+      <commonality>0.0</commonality>
+    </stuffProps>
+  </ThingDef>
+</Defs>

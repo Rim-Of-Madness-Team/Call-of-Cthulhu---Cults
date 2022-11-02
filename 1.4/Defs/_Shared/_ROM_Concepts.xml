@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--===================== Concepts taught through the learning readout, with no opportunity needed ===================-->
+  <ConceptDef>
+    <defName>ROM_SanityLossConcept</defName>
+    <label>Sanity Loss</label>
+    <priority>50</priority>
+    <helpText>In the Call of Cthulhu series of mods, you may encounter sanity loss when exposed to cosmic horrors or other otherworldly things. To alleviate sanity, one can...
+\n1. Wait a long time to restore sanity OR
+\n2. Right click the character to restore sanity at the cost of a mental break OR
+\n3. Write books or journals at a writer's table or typewriter to alleviate one's mind.
+\n\nNOTE: Typewriters and Writer's Tables are available in the RimWriter mod.</helpText>
+  </ConceptDef>
+</Defs>
