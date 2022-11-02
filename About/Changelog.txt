@@ -1,3 +1,7 @@
+1.0.24.0 (11-01-2022)
+========================
+Updated Call of Cthulhu - Cults for RimWorld 1.4
+
 1.0.23.5 (10-14-2021)
 ========================
 Fixes issue with vampires and potentially other non-standard humanoid pawn attendance for worship and sacrifices
