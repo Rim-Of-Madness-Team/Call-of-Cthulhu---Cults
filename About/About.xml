@@ -30,7 +30,7 @@
     <li>CETeam.CombatExtended</li>
     <li>syrchalis.traitvalue</li>
   </loadAfter>
-  <description>1.0.24.0 (11-01-2022)
+  <description>1.0.24.1 (11-13-2022)
 
 
 [h1]Gameplay expansion for RimWorld.[/h1]
@@ -101,6 +101,10 @@ Darcilyn Lynds (darci.andel), Luke Salinas, RainerWingel , Noisy Koi, Lea Stanna
 ========================
 Changelog
 ========================
+1.0.24.1 (11-13-2022)
+========================
+Fixed byakhee code (RW 1.4); Added translation text for byakhee to seperate it from transport pods
+
 1.0.24.0 (11-01-2022)
 ========================
 Updated Call of Cthulhu - Cults for RimWorld 1.4

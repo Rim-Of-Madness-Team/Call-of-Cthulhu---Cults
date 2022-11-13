@@ -1,3 +1,7 @@
+1.0.24.1 (11-13-2022)
+========================
+Fixed byakhee code (RW 1.4); Added translation text for byakhee to seperate it from transport pods
+
 1.0.24.0 (11-01-2022)
 ========================
 Updated Call of Cthulhu - Cults for RimWorld 1.4
