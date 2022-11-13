@@ -40,7 +40,7 @@ namespace CultOfCthulhu
                     continue;
                 }
 
-                Messages.Message(text: "MessageTransporterUnreachable".Translate(), lookTargets: compTransporterPawn.parent,
+                Messages.Message(text: "PawnFlyer_MessageUnreachable".Translate(), lookTargets: compTransporterPawn.parent,
                     def: MessageTypeDefOf.RejectInput);
                 return;
             }

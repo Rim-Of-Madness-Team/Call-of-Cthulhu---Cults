@@ -4,10 +4,10 @@
   <ThingDef ParentName="SkyfallerBase">
     <defName>ByakheeIncoming</defName>
     <label>byakhee (incoming)</label>
-    <thingClass>DropPodIncoming</thingClass>
+    <thingClass>CultOfCthulhu.PawnFlyersIncoming</thingClass>
     <graphicData>
-      <texPath>Pawn/Byakhee/Byakhee</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Pawn/Byakhee/Byakhee_east</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
       <drawSize>5.0</drawSize>
       <shadowData>
         <volume>(0.6, 0.8, 0.6)</volume>
@@ -26,10 +26,10 @@
   <ThingDef ParentName="SkyfallerBase">
     <defName>ByakheeLeaving</defName>
     <label>byakhee (leaving)</label>
-    <thingClass>FlyShipLeaving</thingClass>
+    <thingClass>CultOfCthulhu.PawnFlyersLeaving</thingClass>
     <graphicData>
-      <texPath>Pawn/Byakhee/Byakhee</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Pawn/Byakhee/Byakhee_west</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
       <drawSize>5.0</drawSize>
       <shadowData>
         <volume>(0.6, 0.8, 0.6)</volume>
@@ -51,7 +51,7 @@
     <defName>ByakheeTraveling</defName>
     <label>byakhee</label>
     <description>Byakhee in flight.</description>
-    <worldObjectClass>TravelingTransportPods</worldObjectClass>
+    <worldObjectClass>CultOfCthulhu.PawnFlyersTraveling</worldObjectClass>
     <texture>WorldObjects/ByakheeFlying</texture>
     <useDynamicDrawer>true</useDynamicDrawer>
     <expandingIcon>true</expandingIcon>
@@ -60,6 +60,29 @@
     <expandMore>true</expandMore>
     <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
   </WorldObjectDef>
+
+
+  <ThingDef ParentName="ActiveDropPod">
+    <defName>ByakheeDrop</defName>
+    <label>byakhee</label>
+    <thingClass>CultOfCthulhu.PawnFlyersCargo</thingClass>
+    <soundOpen>Pawn_Mech_Centipede_Call</soundOpen>
+    <graphicData>
+      <texPath>Pawn/Byakhee/Byakhee_east</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>5.0</drawSize>
+      <shadowData>
+        <volume>(0.6, 0.8, 0.6)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <blockWind>true</blockWind>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+  </ThingDef>
 
 
   <ThingDef>
@@ -111,7 +134,7 @@
     <defName>ByakheeLanded</defName>
     <label>flyer (landed)</label>
     <category>Item</category>
-    <thingClass>CultOfCthulhu.PawnFlyersLanded</thingClass>
+    <thingClass>CultOfCthulhu.PawnFlyersCargo</thingClass>
     <scatterableOnMapGen>false</scatterableOnMapGen>
     <tickerType>Normal</tickerType>
     <graphicData>

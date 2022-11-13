@@ -15,8 +15,6 @@ namespace CultOfCthulhu
 
         public ThingDef incomingDef;
 
-        public ThingDef landedDef;
-
         public TaleDef landedTale;
 
         public SoundDef landingSound;

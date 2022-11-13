@@ -33,6 +33,8 @@ namespace CultOfCthulhu
         private ThingOwner innerContainer;
 
         public List<TransferableOneWay> leftToLoad;
+        
+        private CompShuttle cachedCompShuttle;
 
         public CompTransporterPawn()
         {
@@ -189,10 +191,10 @@ namespace CultOfCthulhu
                 }
             }
 
-            Command_LoadToTransporterPawn.defaultLabel = "CommandLoadTransporter".Translate(
+            Command_LoadToTransporterPawn.defaultLabel = "PawnFlyer_CommandLoad".Translate(
                 arg1: num.ToString()
             );
-            Command_LoadToTransporterPawn.defaultDesc = "CommandLoadTransporterDesc".Translate();
+            Command_LoadToTransporterPawn.defaultDesc = "PawnFlyer_CommandLoadDesc".Translate();
             Command_LoadToTransporterPawn.icon = LoadCommandTex;
             Command_LoadToTransporterPawn.transComp = this;
             var launchable = Launchable;
@@ -306,6 +308,7 @@ namespace CultOfCthulhu
             {
                 map.lordManager.RemoveLord(oldLord: lord);
             }
+            
         }
 
         public void CleanUpLoadingVars(Map map)
@@ -365,6 +368,18 @@ namespace CultOfCthulhu
             var list = TransportersInGroup(map: Map);
             var num = list.IndexOf(item: this);
             CameraJumper.TryJumpAndSelect(target: list[index: (num + 1) % list.Count].parent);
+        }
+        
+        public CompShuttle Shuttle
+        {
+            get
+            {
+                if (this.cachedCompShuttle == null)
+                {
+                    this.cachedCompShuttle = this.parent.GetComp<CompShuttle>();
+                }
+                return this.cachedCompShuttle;
+            }
         }
     }
 }

@@ -172,7 +172,6 @@
     <leavingDef>ByakheeLeaving</leavingDef>
     <travelingDef>ByakheeTraveling</travelingDef>
     <incomingDef>ByakheeIncoming</incomingDef>
-    <landedDef>ByakheeLanded</landedDef>
     <takeOffSound>ByakheeTakeOff</takeOffSound>
     <landingSound>ByakheeLanding</landingSound>
     <dismountSound>Pawn_Mech_Centipede_Call</dismountSound>

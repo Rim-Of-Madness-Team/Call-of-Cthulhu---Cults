@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+<!-- 11/13/22 -->
+  <PawnFlyer_CommandTakeOffGroup>Fly</PawnFlyer_CommandTakeOffGroup>
+  <CommandLaunchGroupDesc>Take off and fly to a destination.</CommandLaunchGroupDesc>
+  <PawnFlyer_LetterLandedInEnemyBase>{0} arrived at {1}.</PawnFlyer_LetterLandedInEnemyBase>
+  <PawnFlyer_MessageUnreachable>Some flyers are unreachable.</PawnFlyer_MessageUnreachable>
+  <PawnFlyer_CommandLaunchGroupFailUnderRoof>Some flyers are under a roof.</PawnFlyer_CommandLaunchGroupFailUnderRoof>
+  <PawnFlyer_ConfirmSendNotCompletelyLoaded>Flight group isn't completely loaded. {1_labelShort} is missing. Take off anyway?</PawnFlyer_ConfirmSendNotCompletelyLoaded>
+  <PawnFlyer_ReadyForTakeOff>Ready for take off.</PawnFlyer_ReadyForTakeOff>
+  <PawnFlyer_NotReadyForTakeOff>Not ready for take off</PawnFlyer_NotReadyForTakeOff>
+  <PawnFlyer_MessageArrived>Your flight group have arrived.</PawnFlyer_MessageArrived>
+  <PawnFlyer_MessageArrivedAndLost>Your flight group have arrived, but since there were no colonists inside, everything has been lost.</PawnFlyer_MessageArrivedAndLost>
+  <PawnFlyer_MessageArrivedAndAddedToCaravan>Your flight group has arrived. The contents have been added to {0}.</PawnFlyer_MessageArrivedAndAddedToCaravan>
+  <PawnFlyer_LetterLandedInEnemyBase>Your flight group has arrived at {0}.</PawnFlyer_LetterLandedInEnemyBase>
+  <PawnFlyer_LandAtEdge>Land at edge</PawnFlyer_LandAtEdge>
+  <PawnFlyer_LandInCenter>Land in center</PawnFlyer_LandInCenter>
+  <PawnFlyer_AttackAndLandAtEdge>Attack {0}: Land at edge</PawnFlyer_AttackAndLandAtEdge>
+  <PawnFlyer_AttackAndLandInCenter>Attack {0}: Land in center</PawnFlyer_AttackAndLandInCenter>
+  <PawnFlyer_TooBigMassUsage>The assigned people and items are too heavy for the flight group.</PawnFlyer_TooBigMassUsage>
+  <PawnFlyer_PawnCantReach>{1_labelShort} can't reach the flight group.</PawnFlyer_PawnCantReach>
+  <PawnFlyer_ItemIsUnreachableSingle>There is no path between the flight group and the {0}.</PawnFlyer_ItemIsUnreachableSingle>
+  <PawnFlyer_ItemIsUnreachableMulti>There is no path between the flight group and {0}x {1}.</PawnFlyer_ItemIsUnreachableMulti>
+  <PawnFlyer_CommandLoad>Load flight group of {0}</PawnFlyer_CommandLoad>
+  <PawnFlyer_CommandLoadDesc>Defines the selected flyer(s) as a flight group. Opens the loading dialog so you can decide who and what cargo should be loaded.</PawnFlyer_CommandLoadDesc>
+  <PawnFlyer_MessageLoadingProcessStarted>Assigned items and passengers will now be loaded into the flight group.</PawnFlyer_MessageLoadingProcessStarted>
+  <
+  
+
+</LanguageData>

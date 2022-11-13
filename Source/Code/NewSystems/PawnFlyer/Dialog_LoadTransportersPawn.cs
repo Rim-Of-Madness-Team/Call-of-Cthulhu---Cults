@@ -482,7 +482,7 @@ namespace CultOfCthulhu
                 }
             }
 
-            Messages.Message(text: "MessageTransportersLoadingProcessStarted".Translate(), lookTargets: transporters[index: 0].parent,
+            Messages.Message(text: "PawnFlyer_MessageLoadingProcessStarted".Translate(), lookTargets: transporters[index: 0].parent,
                 def: MessageTypeDefOf.PositiveEvent);
             return true;
         }
@@ -555,13 +555,13 @@ namespace CultOfCthulhu
             if (MassUsage > MassCapacity)
             {
                 FlashMass();
-                Messages.Message(text: "TooBigTransportersMassUsage".Translate(), def: MessageTypeDefOf.RejectInput);
+                Messages.Message(text: "PawnFlyer_TooBigMassUsage".Translate(), def: MessageTypeDefOf.RejectInput);
                 return false;
             }
 
             if (pawns.Count > PawnCapacity)
             {
-                Messages.Message(text: "OverPawnRiderLimit".Translate(
+                Messages.Message(text: "OverPawnRiderLimit".Translate( //Translation: ok
                     arg1: PawnCapacity.ToString()
                 ), def: MessageTypeDefOf.RejectInput);
                 return false;
@@ -572,7 +572,7 @@ namespace CultOfCthulhu
                 traverseParams: TraverseParms.For(mode: TraverseMode.PassDoors)));
             if (pawn != null)
             {
-                Messages.Message(text: "PawnCantReachTransporters".Translate(
+                Messages.Message(text: "PawnFlyer_PawnCantReach".Translate(
                     arg1: pawn.LabelShort
                 ).CapitalizeFirst(), def: MessageTypeDefOf.RejectInput);
                 return false;
@@ -615,13 +615,13 @@ namespace CultOfCthulhu
 
                 if (countToTransfer == 1)
                 {
-                    Messages.Message(text: "TransporterItemIsUnreachableSingle".Translate(
+                    Messages.Message(text: "PawnFlyer_ItemIsUnreachableSingle".Translate(
                         arg1: transferableOneWay.ThingDef.label
                     ), def: MessageTypeDefOf.RejectInput);
                 }
                 else
                 {
-                    Messages.Message(text: "TransporterItemIsUnreachableMulti".Translate(
+                    Messages.Message(text: "PawnFlyer_ItemIsUnreachableMulti".Translate(
                         arg1: countToTransfer,
                         arg2: transferableOneWay.ThingDef.label
                     ), def: MessageTypeDefOf.RejectInput);

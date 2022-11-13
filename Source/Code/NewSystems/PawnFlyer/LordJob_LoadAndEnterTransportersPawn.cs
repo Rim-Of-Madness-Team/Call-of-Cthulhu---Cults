@@ -33,7 +33,6 @@ namespace CultOfCthulhu
             stateGraph.AddToil(toil: lordToil_End);
             var transition = new Transition(firstSource: lordToil_LoadAndEnterTransporters, target: lordToil_End);
             transition.AddTrigger(trigger: new Trigger_PawnLost());
-            //transition.AddPreAction(new TransitionAction_Message("MessageFailedToLoadTransportersBecauseColonistLost".Translate(), MessageTypeDefOf.NegativeEvent));
             transition.AddPreAction(action: new TransitionAction_Custom(action: CancelLoadingProcess));
             stateGraph.AddTransition(transition: transition);
             return stateGraph;
