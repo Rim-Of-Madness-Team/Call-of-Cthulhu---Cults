@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using CallOfCthulhu;
 using HarmonyLib;
+using Multiplayer.API;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -273,6 +274,7 @@ namespace CultOfCthulhu
             Find.WindowStack.Add(window: new FloatMenu(options: list));
         }
 
+        [SyncMethod]
         private static string PreacherLabel(Building_SacrificialAltar altar)
         {
             if (altar.tempPreacher != null)
@@ -319,18 +321,24 @@ namespace CultOfCthulhu
 
                 var localCol = current;
 
-                void Action()
-                {
-                    //Map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar = altar;
-                    altar.tempPreacher = localCol;
-                }
-
-                list.Add(item: new FloatMenuOption(label: localCol.LabelShort, action: Action));
+                //void Action()
+                ////{
+                ////    //Map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar = altar;
+                ////    altar.tempPreacher = localCol;
+                ////}
+                //Line below was added to make delegate action a private static void for syncmethod.
+                Action selectAction = () => PreacherSelectMenuAction(altar: altar, localCol: localCol);
+                list.Add(item: new FloatMenuOption(label: localCol.LabelShort, action: selectAction));
             }
 
             Find.WindowStack.Add(window: new FloatMenu(options: list));
         }
-
+        [SyncMethod]
+        private static void PreacherSelectMenuAction(Building_SacrificialAltar altar, Pawn localCol)
+        {
+            //Map.GetComponent<MapComponent_SacrificeTracker>().lastUsedAltar = altar;
+            altar.tempPreacher = localCol;
+        }
 
         public static void OpenDeitySelectMenu(Building_SacrificialAltar altar)
         {
